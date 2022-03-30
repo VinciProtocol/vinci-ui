@@ -1,4 +1,4 @@
-# Vinci protocol interface :ghost
+# Vinci protocol interface
 
 An open source interface for the decentralized liquidity protocol Vinci
 
