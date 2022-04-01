@@ -1,0 +1,190 @@
+import type { FC } from 'react'
+import { useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
+import { grey } from '@mui/material/colors'
+import { styled } from '@mui/material/styles'
+import { useTheme } from '@mui/material/styles'
+import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
+import Paper from '@mui/material/Paper'
+import Slider from '@mui/material/Slider'
+import Grid from '@mui/material/Grid'
+import Tooltip from '@mui/material/Tooltip'
+import { useContractNFT } from 'domains'
+
+import { useApp } from 'app/App'
+import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
+import { NFTIcon } from 'app/web3/TokenIcon'
+import NumberDisplay from 'components/math/NumberDisplay'
+
+import type { NFTInfoProps } from './types'
+import type BigNumber from 'bignumber.js'
+
+const HealthFactor: FC<{ value: BigNumber }> = ({ value }) => {
+  const theme = useTheme()
+  const color = useMemo(() => {
+    if (!value) return theme.palette.info.main
+    if (value.lt(1.1)) return theme.palette.error.main
+    if (value.lt(1.3)) return theme.palette.warning.main
+    return theme.palette.success.main
+  }, [theme.palette.error.main, theme.palette.info.main, theme.palette.success.main, theme.palette.warning.main, value])
+  return (
+    <Typography variant="h6" color={color}>
+      <NumberDisplay value={value} />
+    </Typography>
+  )
+}
+
+const NFTInfo: FC<NFTInfoProps> = () => {
+  const {
+    format: { number: NF },
+  } = useApp()
+  const { t } = useTranslation()
+  const ROOT = useMemoEmpty(() =>
+    styled(Paper)(({ theme }) => ({
+      padding: theme.spacing(2),
+    }))
+  )
+  const Title = useMemoEmpty(() => styled(Stack)``)
+  const BorrowLimit = useMemoEmpty(() =>
+    styled(Stack)(({ theme }) => ({
+      paddingTop: theme.spacing(4),
+    }))
+  )
+  const InfoList = useMemoEmpty(() => styled(Stack)``)
+
+  const { nft } = useContractNFT()
+
+  return (
+    <ROOT variant="card" sx={{ borderRadius: '10px', minHeight: '530px' }}>
+      <Stack spacing={2}>
+        <Title spacing={1} direction="row">
+          <NFTIcon collection={nft.collection} sx={{ width: '50px', height: '50px' }} />
+          <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
+            {nft.name}
+          </Typography>
+        </Title>
+        <BorrowLimit>
+          <Slider
+            value={nft.borrowLimitUtilization || 0}
+            valueLabelFormat={(value) => {
+              return NF.format(value, NF.options('percent'))
+            }}
+            max={1}
+            valueLabelDisplay="on"
+          />
+          <Grid container>
+            <Grid item xs>
+              <Typography variant="subtitle2" color={grey[500]}>
+                {t('borrow-detail:borrowInfo.borrowLimit')}
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant="subtitle2" color={grey[500]}>
+                <NumberDisplay value={nft.borrowLimit} type="ETH" />
+              </Typography>
+            </Grid>
+          </Grid>
+        </BorrowLimit>
+        <InfoList spacing={1.5}>
+          <Grid container>
+            <Grid item xs>
+              <Tooltip title={t('borrow-detail:tips.healthFactor')} placement="bottom-end">
+                <Typography variant="subtitle1">{t('borrow-detail:borrowInfo.healthFactor')}</Typography>
+              </Tooltip>
+            </Grid>
+            <Grid item>
+              <HealthFactor value={nft.healthFactor} />
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs>
+              <Tooltip title={t('borrow-detail:tips.floorPrice')} placement="bottom-end">
+                <Typography variant="subtitle1">{t('borrow-detail:borrowInfo.currentFloorPrice')}</Typography>
+              </Tooltip>
+            </Grid>
+            <Grid item>
+              <Typography variant="subtitle1">
+                <NumberDisplay value={nft.currentFloorPrice} type="ETH" />
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs>
+              <Tooltip title={t('borrow-detail:tips.liquidationPrice')} placement="bottom-end">
+                <Typography variant="subtitle1">{t('borrow-detail:borrowInfo.liquidationFloorPrice')}</Typography>
+              </Tooltip>
+            </Grid>
+            <Grid item>
+              <Typography variant="subtitle1">
+                <NumberDisplay value={nft.liquidationPrice} type="ETH" />
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs>
+              <Tooltip title={t('borrow-detail:tips.collateralValue')} placement="bottom-end">
+                <Typography variant="subtitle1">{t('borrow-detail:borrowInfo.collateralValue')}</Typography>
+              </Tooltip>
+            </Grid>
+            <Grid item>
+              <Typography variant="subtitle1">
+                <NumberDisplay value={nft.collateralValue} type="ETH" />
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs>
+              <Tooltip title={t('borrow-detail:tips.totalBorrowed')} placement="bottom-end">
+                <Typography variant="subtitle1">{t('borrow-detail:borrowInfo.totalBorrowed')}</Typography>
+              </Tooltip>
+            </Grid>
+            <Grid item>
+              <Typography variant="subtitle1">
+                <NumberDisplay value={nft.borrowBalance} type="ETH" />
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs>
+              <Tooltip title={t('borrow-detail:tips.availableToBorrow')} placement="bottom-end">
+                <Typography variant="subtitle1">{t('borrow-detail:borrowInfo.availableToBorrow')}</Typography>
+              </Tooltip>
+            </Grid>
+            <Grid item>
+              <Typography variant="subtitle1">
+                <NumberDisplay value={nft.totalUserAvailableToBorrow} type="ETH" />
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs>
+              <Tooltip title={t('borrow-detail:tips.ltv')} placement="bottom-end">
+                <Typography variant="subtitle1">{t('borrow-detail:borrowInfo.ltv')}</Typography>
+              </Tooltip>
+            </Grid>
+            <Grid item>
+              <Typography variant="subtitle1">
+                <NumberDisplay value={nft.baseLTVasCollateral} options="percent" />
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs>
+              <Tooltip title={t('borrow-detail:tips.liquidationFee')} placement="bottom-end">
+                <Typography variant="subtitle1">{t('borrow-detail:borrowInfo.liquidationFee')}</Typography>
+              </Tooltip>
+            </Grid>
+            <Grid item>
+              <Typography variant="subtitle1">
+                <NumberDisplay value={nft.liquidationFee} options="percent" />
+              </Typography>
+            </Grid>
+          </Grid>
+        </InfoList>
+      </Stack>
+    </ROOT>
+  )
+}
+
+export default NFTInfo
