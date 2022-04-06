@@ -1,0 +1,14 @@
+const locale = {
+  marketplace: {
+    title: 'Liquidation Marketplace',
+    all: 'All',
+    underLiquidation: 'Under Liquidation',
+    auction: 'Auction',
+    valuation: 'Valuation',
+    timeLeft: 'Time left',
+    price: 'Price',
+    auctionPrice: 'Auction Price',
+  },
+}
+
+export default locale
