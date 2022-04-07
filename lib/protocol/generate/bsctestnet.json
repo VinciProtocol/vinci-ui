@@ -1,0 +1,38 @@
+{
+  "LendingPoolAddressesProviderRegistry": "0x5a18a58fb5e797f951c1cee4baa41a471ddad1f9",
+  "PS": "0x26e6b5b6a1fedf41207c2ddd59ac33b104e9906d",
+  "ReserveLogic": "0x591572ee7d015384f775c19eff266e5ba1b8c0f4",
+  "NFTVaultLogic": "0xc343dc1be2edb27b70d61d7bec1e30ab37943ce8",
+  "GenericLogic": "0x3320bdae92f1165824638619a6901b70d1099be9",
+  "ValidationLogic": "0x3ba736a1cbf13bba089ee65c1375497f04dcf151",
+  "PriceOracle": "0xac9e96f4cb73041196d57dc2cc9e6fa56fb4cfbd",
+  "WBNB": "0xae13d989dac2f0debff460ac112a837c89baa7cd",
+  "AaveOracle": "0xd04fb9405f1d8c0cca9c766a18cf9e83bf3b7310",
+  "LendingRateOracle": "0x17f5314910e08da3fe8bedfeadc6d21dab4041dc",
+  "WETHGateway": "0x79285a7a89bef9b673db4441471cc09dbb87fb2c",
+  "AaveTreasuryImpl": "0xfcf7df7a45362541ccf2f3001a0848f37ad31442",
+  "AaveTreasury": "0x228d5d789dad7a4fae375ad25f429228dec374e7",
+  "WalletBalanceProvider": "0x093de46d517f3805c7bbe3b2a048f99fbae85967",
+  "UiPoolDataProvider": "0x2dea877395657353a92e1ba44dd7177c901cdedd",
+  "markets": {
+    "VinciPS": {
+      "LendingPoolAddressesProvider": "0xcc390d6c8dd06e8d4c8cf4bae941900c290cadae",
+      "LendingPoolImpl": "0x376fe35dbbecfaae8f11ff5773da41da85041413",
+      "LendingPool": "0x931e3f1f6ecee8c5fffe4b379aad5e27089db423",
+      "LendingPoolConfiguratorImpl": "0x17dd416f90a5e667ec44e0b0826b392ecab2ffc6",
+      "LendingPoolConfigurator": "0xbf1db3d53d469541f5fac692476b4d9e3abeef21",
+      "StableAndVariableTokensHelper": "0x84818d175f153285790f9243e966263690f70c1d",
+      "VTokensAndRatesHelper": "0x98c9681083188da93532573e83d56945da0f167b",
+      "VToken": "0x6ad1c8d1b69c74c92bb3a045494357660f653d4e",
+      "StableDebtToken": "0x484eb773ead35035329ffa8b3f2b59ee2196d7fc",
+      "VariableDebtToken": "0x8cb84f0a49b4cbb037ef96e73dee1c0174a52f05",
+      "NToken": "0x5dc21572f161641d58b4e832108daa2207e5ce61",
+      "AaveProtocolDataProvider": "0x031da53bf016f4f2fa1df0ac7f6e0de277f4c1fe",
+      "rateStrategyWBNB": "0xe8d398e21b9ffe36f1e0f2e395c8b605f7add262",
+      "PSEligibilityImpl": "0xdde5ba4cf2fd28f4cc9fa131474e05d40448d9aa",
+      "PSEligibility": "0x7c043b0d5c0b2d25cc26855d098c7ae2906d3c91",
+      "LendingPoolCollateralManagerImpl": "0x0010423872f9f38a140309154ab84f3477cb7b43",
+      "LendingPoolCollateralManager": "0x0010423872f9f38a140309154ab84f3477cb7b43"
+    }
+  }
+}

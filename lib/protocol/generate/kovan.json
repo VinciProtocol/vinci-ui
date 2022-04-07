@@ -1,0 +1,52 @@
+{
+  "LendingPoolAddressesProviderRegistry": "0xdd2d9d8b7fc64c94d3c33a23dfe6b41a1212c915",
+  "DAI": "0xff795577d9ac8bd7d90ee22b6c1703490b6512fd",
+  "WETH": "0x530f15271ff37087f8ff55d9b409328175365327",
+  "BAYC": "0x0d863a67b9e40a5ceeefa82ab5155cd41b2d2ade",
+  "MAYC": "0x5c8b3055b9f7fbefb3f71ca6a8754de6973646e0",
+  "ReserveLogic": "0x49cf5c1aa0619ea6f328a9c6dab36d9ed409defe",
+  "NFTVaultLogic": "0x24ef12dd3e85d9395b82b020dac1dbde6dbb02f2",
+  "GenericLogic": "0x55243c52b5826c884f83ec1a5786435e9ad071aa",
+  "ValidationLogic": "0x206db225e49bb2d4db3fe0e2c537734ab8ee4423",
+  "AaveOracle": "0x0e820f8648a27323acd8f62402ad47a95545a8ad",
+  "LendingRateOracle": "0xb8ac13db510442319500786c17c6582352d741f4",
+  "WalletBalanceProvider": "0xa6ebcb9c5a36496c74aa55fda481b74121e7b171",
+  "UiPoolDataProvider": "0xcd11273cd0a03c7db7cbab510a243b8ab9b2b777",
+  "WETHGateway": "0x4b8d36ee514b691e23643fdad43fbff59f2cb99c",
+  "markets": {
+    "VinciBAYC": {
+      "LendingPoolAddressesProvider": "0xf8b3481dd0fa240f1e1eefaa949f05f6c5d9ee3f",
+      "LendingPoolImpl": "0xcd1aece0f54b1f434106ad68520d0c430320a0af",
+      "LendingPool": "0x2a463410f349ace648a245f6ffa7d8d66520ed51",
+      "LendingPoolConfiguratorImpl": "0xedd19e82aeda3da98b7ef7488e0e4bb87ae7f671",
+      "LendingPoolConfigurator": "0x647c7ebe14568c854066544f0b48030b1b4628ff",
+      "ATokensAndRatesHelper": "0xd43ef000b8decea4d831e9d5fbed2bdd3c834a04",
+      "AToken": "0x5a000b285176fff009ff4b8dcdbf7b899dfc29ba",
+      "StableDebtToken": "0x51a01eb9189326ccc738ba5be945136789316138",
+      "VariableDebtToken": "0x5b1207c0db96a80b7f4a9ee8f68aaa0b38a9800d",
+      "StableAndVariableTokensHelper": "0x6f07097833a87553a4058ad0067c769058f96d23",
+      "NToken": "0xaafccd68e957c1cd98e25c36f746bb2e2a1e1845",
+      "AaveProtocolDataProvider": "0xa49682eb938db27d21c199dbd6ce683c969905a0",
+      "rateStrategyWETH": "0xa6b3da5566b0b5ddf5207e537c9fd1a4641f5449",
+      "LendingPoolCollateralManagerImpl": "0x678e3b610bc1a58732fc756e6763295d706b0645",
+      "LendingPoolCollateralManager": "0x678e3b610bc1a58732fc756e6763295d706b0645"
+    },
+    "VinciMAYC": {
+      "LendingPoolAddressesProvider": "0xf9ef0fa98e7b827e74c23bd503682f79a4997fd1",
+      "LendingPoolImpl": "0x7c7955abd4deae8d1071dc9a8c84d3bac68940a1",
+      "LendingPool": "0xab76e265ee1d4995f94ecb307d818f6def00721e",
+      "LendingPoolConfiguratorImpl": "0x192468a49f88f5fbb178a55d110b12cd22d7f64d",
+      "LendingPoolConfigurator": "0x031c19babfd5bbc56f2dbfe575d39e8614581151",
+      "ATokensAndRatesHelper": "0xbf6b4866ce651b68608a23cf05c74ce3658f802f",
+      "AToken": "0xa2ea611933605e43510aa309ce317f3c259b5887",
+      "StableDebtToken": "0x692d821b504ade13c3a10cb635fc7e4a47f62ded",
+      "VariableDebtToken": "0xe31b90a0d0f16a637efaa1c844457a02afb6da59",
+      "StableAndVariableTokensHelper": "0xe336a2f2c21c388ef2a77424d404c188be4afd9c",
+      "NToken": "0xde523018688366ca3417a30be4cfa7024bbdda46",
+      "AaveProtocolDataProvider": "0x754a322e84c9a6af51898f5fc1968b8cf337db6d",
+      "rateStrategyWETH": "0xf46f4c5148a189add7178ad1eebc0a65f0ad3afa",
+      "LendingPoolCollateralManagerImpl": "0x7335eacdfe5f0e3ea41543749965e6fe420489d4",
+      "LendingPoolCollateralManager": "0x7335eacdfe5f0e3ea41543749965e6fe420489d4"
+    }
+  }
+}
