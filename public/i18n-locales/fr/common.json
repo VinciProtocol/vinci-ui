@@ -1,0 +1,46 @@
+{
+  "wallet": {
+    "btn": {
+      "cancel": "Annuler",
+      "disconnected": "Déconnecter",
+      "deposit": "Verser",
+      "withdraw": "Retirer",
+      "borrow": "Emprunter",
+      "repay": "Rembourser",
+      "details": "Des détails",
+      "approve": "Approuver"
+    },
+    "disconnected": {
+      "title": "Connecter le portefeuille",
+      "subTitle": "Pour commencer à utiliser Vinci"
+    },
+    "connected": {
+      "title": "Lié",
+      "subTitle": "Connecté avec"
+    },
+    "connecting": {
+      "title": "Déverrouiller le portefeuille",
+      "subTitle": "Vous devrez peut-être cliquer sur l'extension."
+    },
+    "error": {
+      "title": "Connecter le portefeuille",
+      "subTitle": "Pour commencer à utiliser Vinci",
+      "ChainUnknownError": "Mauvais réseau",
+      "ConnectionRejectedError": "Refusé de connecter le portefeuille"
+    },
+    "tips": {
+      "accept": "En me connectant, j'accepte",
+      "term": "Conditions d'utilisation de Vinci"
+    }
+  },
+  "menu": {
+    "Markets": "Marchés",
+    "Dashboard": "Mon tableau de bord",
+    "Lend": "Prêter",
+    "Borrow": "Emprunter",
+    "BorrowDetail": "Détail de l'emprunt",
+    "Stake": "Miser",
+    "Liquidation": "Marché des liquidations",
+    "App": "Application"
+  }
+}

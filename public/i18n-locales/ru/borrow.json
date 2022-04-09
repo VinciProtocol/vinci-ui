@@ -1,0 +1,10 @@
+{
+  "NFTCollateralCollections": {
+    "title": "Коллекции обеспечения NFT",
+    "collection": "Коллекция",
+    "currentFloorPrice": "Текущая минимальная цена",
+    "totalCollateralledValue": "Общая залоговая стоимость",
+    "totalBorrowed": "Всего заимствовано",
+    "availableToBorrow": "Доступно для заимствования"
+  }
+}

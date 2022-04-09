@@ -1,0 +1,28 @@
+{
+  "common": {
+    "noOpenPosition": "오픈 포지션 없음"
+  },
+  "stats": {
+    "supplyBalance": "총 공급",
+    "netAPY": "순 APY",
+    "norrowBalance": "총 차입금"
+  },
+  "loans": {
+    "title": "내 대출",
+    "collection": "수집",
+    "currentFloorPrice": "현재 하한가",
+    "collateralValue": "담보 가치",
+    "borrowBalance": "차입 잔액",
+    "liquidationPrice": "청산가격",
+    "healthFactor": "건강 요인",
+    "functionButtons": "동작"
+  },
+  "supplies": {
+    "title": "내 용품",
+    "symbol": "자산",
+    "APY": "APY",
+    "underlyingBalance": "공급 균형",
+    "walletBalance": "지갑 잔액",
+    "functionButtons": "동작"
+  }
+}

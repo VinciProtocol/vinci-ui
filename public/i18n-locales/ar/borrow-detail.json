@@ -1,0 +1,47 @@
+{
+  "goBack": "عد",
+  "borrowInfo": {
+    "borrowLimit": "حد الاقتراض",
+    "healthFactor": "عامل الصحة:",
+    "currentFloorPrice": "السعر الأدنى الحالي:",
+    "liquidationFloorPrice": "سعر أرضية التصفية:",
+    "collateralValue": "القيمة الضمنية:",
+    "totalBorrowed": "إجمالي المقترضين:",
+    "availableToBorrow": "متاح للاستعارة:",
+    "ltv": "القرض بالقيمة:",
+    "liquidationFee": "رسوم التصفية:"
+  },
+  "NFTBorrowPool": {
+    "title": "تجمعات الإقراض",
+    "symbol": "أصل",
+    "borrowAPY": "استعارة APY",
+    "basedOnYourCollateral": "بناءً على ضماناتك",
+    "borrowBalance": "اقترضت",
+    "functionButtons": "عمل",
+    "ratio": "نسبة",
+    "walletBalance": "رصيد المحفظة",
+    "availableToBorrow": "افايلال للاقتراض",
+    "availableToRepay": "افايلال على السداد"
+  },
+  "NFT": {
+    "tabs": {
+      "wallet": "NFTs المحفظة",
+      "deposit": "NFTs المودعة"
+    },
+    "totalValuation": "إجمالي التقييم:",
+    "valuation": "تقييم",
+    "approveAll": "الموافقة على الكل",
+    "depositSelected": "الإيداع المحدد",
+    "withdrawSelected": "سحب المحدد"
+  },
+  "tips": {
+    "healthFactor": "يمثل عامل الصحة سلامة قرضك المستمد من نسبة قيمة الضمان NFT مقابل المبلغ المقترض. احتفظ بها أعلى من 1 لتجنب التصفية.",
+    "floorPrice": "السعر الأدنى هو أقل سعر لعناصر المجموعة ، وليس متوسط سعر العنصر ، ويتم تحديثه في الوقت الفعلي.",
+    "liquidationPrice": "السعر الأدنى للضمان الذي سيتم عنده تصفية مركزك.",
+    "collateralValue": "قيمة الضمان NFT المودعة في مركزك.",
+    "totalBorrowed": "مجموع المقترض حاليا في مركزك.",
+    "availableToBorrow": "قيمة القرض القابلة للاقتراض بالنظر إلى الضمان المودع.",
+    "ltv": "تحدد نسبة القرض إلى القيمة (LTV) الحد الأقصى لمبلغ أصول القرض التي يمكن اقتراضها بضمان NFT محدد.",
+    "liquidationFee": "هذا هو الخصم الذي يحصل عليه المصفي عند شراء ضمانات NFT للتصفية."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "goBack": "돌아가기",
+  "borrowInfo": {
+    "borrowLimit": "대출 한도",
+    "healthFactor": "건강 요인:",
+    "currentFloorPrice": "현재 가격 하한선:",
+    "liquidationFloorPrice": "청산 가격:",
+    "collateralValue": "담보 가치:",
+    "totalBorrowed": "총 대출:",
+    "availableToBorrow": "대여 가능:",
+    "ltv": "가치에 대한 대출:",
+    "liquidationFee": "청산 수수료:"
+  },
+  "NFTBorrowPool": {
+    "title": "대출 풀",
+    "symbol": "유산",
+    "borrowAPY": "APY를 빌리다",
+    "basedOnYourCollateral": "귀하의 담보를 기반으로",
+    "borrowBalance": "당신의 빌린",
+    "functionButtons": "동작",
+    "ratio": "비율",
+    "walletBalance": "지갑 잔액",
+    "availableToBorrow": "대출 가능",
+    "availableToRepay": "상환 가능"
+  },
+  "NFT": {
+    "tabs": {
+      "wallet": "지갑 NFT",
+      "deposit": "예치된 NFT"
+    },
+    "totalValuation": "총 평가:",
+    "valuation": "평가",
+    "approveAll": "모두 승인",
+    "depositSelected": "선택한 예금",
+    "withdrawSelected": "선택 취소"
+  },
+  "tips": {
+    "healthFactor": "건강 요소는 NFT 담보 가치 대 차입 금액의 비율에서 파생된 대출의 안전성을 나타냅니다. 청산을 피하기 위해 1 이상으로 유지하십시오.",
+    "floorPrice": "하한가는 평균 아이템 가격이 아닌 수집 아이템의 최저 가격이며 실시간으로 업데이트됩니다.",
+    "liquidationPrice": "귀하의 포지션이 청산될 담보 하한가입니다.",
+    "collateralValue": "귀하의 포지션에 예치된 NFT 담보의 가치.",
+    "totalBorrowed": "현재 귀하의 위치에서 빌린 총액.",
+    "availableToBorrow": "예치된 담보에 따라 차입할 수 있는 대출 가치.",
+    "ltv": "LTV(Loan to Value) 비율은 특정 NFT 담보로 빌릴 수 있는 대출 자산의 최대 금액을 정의합니다.",
+    "liquidationFee": "이것은 청산인이 청산 플래그가 지정된 NFT 담보를 구매할 때 받는 할인입니다."
+  }
+}

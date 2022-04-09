@@ -1,0 +1,46 @@
+{
+  "wallet": {
+    "btn": {
+      "cancel": "취소",
+      "disconnected": "연결 해제",
+      "deposit": "보증금",
+      "withdraw": "철회하다",
+      "borrow": "빌리다",
+      "repay": "갚다",
+      "details": "세부",
+      "approve": "승인하다"
+    },
+    "disconnected": {
+      "title": "지갑 연결",
+      "subTitle": "Vinci 사용을 시작하려면"
+    },
+    "connected": {
+      "title": "연결됨",
+      "subTitle": "연관된"
+    },
+    "connecting": {
+      "title": "지갑 잠금 해제",
+      "subTitle": "확장을 클릭해야 할 수도 있습니다."
+    },
+    "error": {
+      "title": "지갑 연결",
+      "subTitle": "Vinci 사용을 시작하려면",
+      "ChainUnknownError": "잘못된 네트워크",
+      "ConnectionRejectedError": "지갑 연결 거부"
+    },
+    "tips": {
+      "accept": "연결하여 수락합니다.",
+      "term": "Vinci의 서비스 약관"
+    }
+  },
+  "menu": {
+    "Markets": "시장",
+    "Dashboard": "내 대시 보드",
+    "Lend": "빌려주 다",
+    "Borrow": "빌리다",
+    "BorrowDetail": "세부 정보를 빌리다",
+    "Stake": "말뚝",
+    "Liquidation": "청산 시장",
+    "App": "앱"
+  }
+}

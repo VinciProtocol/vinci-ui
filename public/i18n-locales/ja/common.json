@@ -1,0 +1,46 @@
+{
+  "wallet": {
+    "btn": {
+      "cancel": "キャンセル",
+      "disconnected": "切断する",
+      "deposit": "保証金",
+      "withdraw": "撤退",
+      "borrow": "借りる",
+      "repay": "返済",
+      "details": "詳細",
+      "approve": "承認"
+    },
+    "disconnected": {
+      "title": "ウォレットを接続する",
+      "subTitle": "Vinciの使用を開始するには"
+    },
+    "connected": {
+      "title": "接続済み",
+      "subTitle": "つながっている"
+    },
+    "connecting": {
+      "title": "ウォレットのロックを解除",
+      "subTitle": "拡張機能をクリックする必要がある場合があります。"
+    },
+    "error": {
+      "title": "ウォレットを接続する",
+      "subTitle": "Vinciの使用を開始するには",
+      "ChainUnknownError": "間違ったネットワーク",
+      "ConnectionRejectedError": "ウォレットの接続を拒否しました"
+    },
+    "tips": {
+      "accept": "接続することで、私は受け入れます",
+      "term": "ヴィンチの利用規約"
+    }
+  },
+  "menu": {
+    "Markets": "市場",
+    "Dashboard": "マイダッシュボード",
+    "Lend": "貸す",
+    "Borrow": "借りる",
+    "BorrowDetail": "詳細を借りる",
+    "Stake": "ステーク",
+    "Liquidation": "清算マーケットプレイス",
+    "App": "アプリ"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "stakingPools": {
+    "title": "Apostar",
+    "subTitle": "Stake VCI o LP Token para asegurar el protocolo",
+    "symbol": "Activos",
+    "totalStaked": "Total apostado",
+    "reward": "Recompensas de VCI",
+    "APR": "APR de apuesta",
+    "yourStaked": "tu apuesta",
+    "earned": "VCI ganado"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "TVL": {
+    "totalValueLocked": "Gesamtwert gesperrt"
+  },
+  "lendingPools": {
+    "title": "Kreditpools",
+    "symbol": "Vermögenswerte",
+    "APY": "APY einzahlen",
+    "totalSupply": "Gesamtversorgung",
+    "totalBorrowed": "Insgesamt geliehen",
+    "utilization": "Nutzung",
+    "walletBalance": "Wallet-Guthaben",
+    "functionButtons": "Aktion",
+    "deposited": "Eingezahlt",
+    "ratio": "Verhältnis",
+    "available": "Zur Auszahlung verfügbar",
+    "collectionTip": "Ihr Vermögen wird nur an die NFT-Inhaber von {{name}} verliehen",
+    "insufficientLiquidity": "Unzureichende Liquidität"
+  }
+}

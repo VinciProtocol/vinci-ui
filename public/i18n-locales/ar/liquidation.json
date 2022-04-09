@@ -1,0 +1,12 @@
+{
+  "marketplace": {
+    "title": "سوق التصفية",
+    "all": "الجميع",
+    "underLiquidation": "تحت التصفية",
+    "auction": "مزاد علني",
+    "valuation": "تقييم",
+    "timeLeft": "الوقت المتبقي",
+    "price": "السعر",
+    "auctionPrice": "سعر المزاد"
+  }
+}

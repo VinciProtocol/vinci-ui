@@ -1,0 +1,28 @@
+{
+  "common": {
+    "noOpenPosition": "ไม่มีตำแหน่งที่เปิดอยู่"
+  },
+  "stats": {
+    "supplyBalance": "อุปทานทั้งหมด",
+    "netAPY": "Net APY",
+    "norrowBalance": "ยืมทั้งหมด"
+  },
+  "loans": {
+    "title": "สินเชื่อของฉัน",
+    "collection": "ของสะสม",
+    "currentFloorPrice": "ราคาพื้นปัจจุบัน",
+    "collateralValue": "มูลค่าหลักประกัน",
+    "borrowBalance": "ยอดคงเหลือที่ยืม",
+    "liquidationPrice": "ราคาการชำระบัญชี",
+    "healthFactor": "ปัจจัยด้านสุขภาพ",
+    "functionButtons": "หนังบู๊"
+  },
+  "supplies": {
+    "title": "อุปกรณ์ของฉัน",
+    "symbol": "ทรัพย์สิน",
+    "APY": "APY",
+    "underlyingBalance": "อุปทานคงเหลือ",
+    "walletBalance": "ยอดคงเหลือในกระเป๋าเงิน",
+    "functionButtons": "หนังบู๊"
+  }
+}

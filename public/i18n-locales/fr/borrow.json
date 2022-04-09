@@ -1,0 +1,10 @@
+{
+  "NFTCollateralCollections": {
+    "title": "Collections de garantie NFT",
+    "collection": "Collection",
+    "currentFloorPrice": "Prix plancher actuel",
+    "totalCollateralledValue": "Valeur totale de la garantie",
+    "totalBorrowed": "Total emprunté",
+    "availableToBorrow": "Disponible à emprunter"
+  }
+}

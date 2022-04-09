@@ -1,0 +1,28 @@
+{
+  "common": {
+    "noOpenPosition": "لا يوجد موقف مفتوح"
+  },
+  "stats": {
+    "supplyBalance": "إجمالي العرض",
+    "netAPY": "صافي APY",
+    "norrowBalance": "إجمالي المقترض"
+  },
+  "loans": {
+    "title": "قروضي",
+    "collection": "مجموعة",
+    "currentFloorPrice": "سعر الطابق الحالي",
+    "collateralValue": "مضمونة القيمة",
+    "borrowBalance": "الرصيد المقترض",
+    "liquidationPrice": "سعر التصفية",
+    "healthFactor": "عامل الصحة",
+    "functionButtons": "عمل"
+  },
+  "supplies": {
+    "title": "المستلزمات الخاصة بي",
+    "symbol": "أصول",
+    "APY": "APY",
+    "underlyingBalance": "ميزان العرض",
+    "walletBalance": "رصيد المحفظة",
+    "functionButtons": "عمل"
+  }
+}

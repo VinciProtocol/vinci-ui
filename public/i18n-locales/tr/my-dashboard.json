@@ -1,0 +1,28 @@
+{
+  "common": {
+    "noOpenPosition": "Açık Pozisyon Yok"
+  },
+  "stats": {
+    "supplyBalance": "Toplam Arz",
+    "netAPY": "net APY",
+    "norrowBalance": "Toplam Borç"
+  },
+  "loans": {
+    "title": "Kredilerim",
+    "collection": "Toplamak",
+    "currentFloorPrice": "Güncel Taban Fiyatı",
+    "collateralValue": "Teminatlı Değer",
+    "borrowBalance": "Borç Bakiyesi",
+    "liquidationPrice": "Tasfiye Fiyatı",
+    "healthFactor": "Sağlık Faktörü",
+    "functionButtons": "Aksiyon"
+  },
+  "supplies": {
+    "title": "Malzemelerim",
+    "symbol": "Varlıklar",
+    "APY": "APY",
+    "underlyingBalance": "Arz Dengesi",
+    "walletBalance": "Cüzdan Bakiyesi",
+    "functionButtons": "Aksiyon"
+  }
+}

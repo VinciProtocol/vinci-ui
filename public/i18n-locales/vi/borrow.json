@@ -1,0 +1,10 @@
+{
+  "NFTCollateralCollections": {
+    "title": "Bộ sưu tập tài sản thế chấp NFT",
+    "collection": "Bộ sưu tập",
+    "currentFloorPrice": "Giá sàn hiện tại",
+    "totalCollateralledValue": "Tổng giá trị tài sản đảm bảo",
+    "totalBorrowed": "Tổng số tiền đã vay",
+    "availableToBorrow": "Có sẵn để vay"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "TVL": {
+    "totalValueLocked": "มูลค่ารวมที่ถูกล็อค"
+  },
+  "lendingPools": {
+    "title": "แหล่งเงินกู้",
+    "symbol": "ทรัพย์สิน",
+    "APY": "ฝาก APY",
+    "totalSupply": "อุปทานทั้งหมด",
+    "totalBorrowed": "ยืมทั้งหมด",
+    "utilization": "การใช้ประโยชน์",
+    "walletBalance": "ยอดคงเหลือในกระเป๋าเงิน",
+    "functionButtons": "หนังบู๊",
+    "deposited": "ฝาก",
+    "ratio": "อัตราส่วน",
+    "available": "ถอนได้",
+    "collectionTip": "ทรัพย์สินของคุณจะให้ยืมเฉพาะผู้ถือ NFT {{name}} เท่านั้น",
+    "insufficientLiquidity": "สภาพคล่องไม่เพียงพอ"
+  }
+}

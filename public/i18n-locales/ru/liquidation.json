@@ -1,0 +1,12 @@
+{
+  "marketplace": {
+    "title": "Ликвидация",
+    "all": "Все",
+    "underLiquidation": "В стадии ликвидации",
+    "auction": "Аукцион",
+    "valuation": "оценка",
+    "timeLeft": "Время вышло",
+    "price": "Цена",
+    "auctionPrice": "Аукционная цена"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "TVL": {
+    "totalValueLocked": "总价值锁定"
+  },
+  "lendingPools": {
+    "title": "借贷池",
+    "symbol": "资产",
+    "APY": "存款APY",
+    "totalSupply": "总供应量",
+    "totalBorrowed": "借款总额",
+    "utilization": "利用率",
+    "walletBalance": "钱包余额",
+    "functionButtons": "行动",
+    "deposited": "存款",
+    "ratio": "比率",
+    "available": "可以提现",
+    "collectionTip": "您的资产将仅借给 {{name}} 个 NFT 持有者",
+    "insufficientLiquidity": "流动性不足"
+  }
+}

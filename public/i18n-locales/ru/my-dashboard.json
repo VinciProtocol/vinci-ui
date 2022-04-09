@@ -1,0 +1,28 @@
+{
+  "common": {
+    "noOpenPosition": "Нет открытой позиции"
+  },
+  "stats": {
+    "supplyBalance": "Общее предложение",
+    "netAPY": "Чистая APY",
+    "norrowBalance": "Всего заимствовано"
+  },
+  "loans": {
+    "title": "Мои кредиты",
+    "collection": "Коллекция",
+    "currentFloorPrice": "Текущая минимальная цена",
+    "collateralValue": "Заложенная стоимость",
+    "borrowBalance": "Заемный баланс",
+    "liquidationPrice": "Цена ликвидации",
+    "healthFactor": "Фактор здоровья",
+    "functionButtons": "Действие"
+  },
+  "supplies": {
+    "title": "Мои поставки",
+    "symbol": "Ресурсы",
+    "APY": "APY",
+    "underlyingBalance": "Баланс поставок",
+    "walletBalance": "Баланс кошелька",
+    "functionButtons": "Действие"
+  }
+}

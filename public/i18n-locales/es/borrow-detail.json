@@ -1,0 +1,47 @@
+{
+  "goBack": "Regresa",
+  "borrowInfo": {
+    "borrowLimit": "Límite de préstamo",
+    "healthFactor": "Factor de salud:",
+    "currentFloorPrice": "Precio mínimo actual:",
+    "liquidationFloorPrice": "Precio piso de liquidación:",
+    "collateralValue": "Valor colateral:",
+    "totalBorrowed": "Total prestado:",
+    "availableToBorrow": "Disponible para préstamo:",
+    "ltv": "Préstamo a valor:",
+    "liquidationFee": "Tarifa de liquidación:"
+  },
+  "NFTBorrowPool": {
+    "title": "Fondos de préstamos",
+    "symbol": "Activo",
+    "borrowAPY": "préstamo APY",
+    "basedOnYourCollateral": "Basado en su garantía",
+    "borrowBalance": "su prestado",
+    "functionButtons": "Acción",
+    "ratio": "Proporción",
+    "walletBalance": "Saldo de la billetera",
+    "availableToBorrow": "Disponible para pedir prestado",
+    "availableToRepay": "Disponible para pagar"
+  },
+  "NFT": {
+    "tabs": {
+      "wallet": "Monedero NFT",
+      "deposit": "NFT depositados"
+    },
+    "totalValuation": "Valoración total:",
+    "valuation": "Valuación",
+    "approveAll": "Aprobar todo",
+    "depositSelected": "Depósito seleccionado",
+    "withdrawSelected": "Retirar seleccionados"
+  },
+  "tips": {
+    "healthFactor": "El factor de salud representa la seguridad de su préstamo derivada de la proporción del valor de la garantía NFT frente a la cantidad prestada. Manténgalo por encima de 1 para evitar la liquidación.",
+    "floorPrice": "El precio mínimo es el precio más bajo para los artículos de colección, en lugar del precio promedio del artículo, y se actualiza en tiempo real.",
+    "liquidationPrice": "Precio mínimo del colateral al que se liquidará su posición.",
+    "collateralValue": "Valor de la garantía NFT depositada en su posición.",
+    "totalBorrowed": "Actualmente total prestado en su posición.",
+    "availableToBorrow": "Valor del préstamo prestable dada la garantía depositada.",
+    "ltv": "La relación Préstamo a valor (LTV) define la cantidad máxima de activos de préstamo que se pueden tomar prestados con una garantía NFT específica.",
+    "liquidationFee": "Este es el descuento que obtiene un liquidador al comprar garantías NFT marcadas para liquidación."
+  }
+}

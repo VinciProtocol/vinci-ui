@@ -1,0 +1,46 @@
+{
+  "wallet": {
+    "btn": {
+      "cancel": "Annulla",
+      "disconnected": "Disconnetti",
+      "deposit": "Depositare",
+      "withdraw": "Ritirare",
+      "borrow": "Prestito",
+      "repay": "Rimborsare",
+      "details": "Dettagli",
+      "approve": "Approvare"
+    },
+    "disconnected": {
+      "title": "Collega il portafoglio",
+      "subTitle": "Per iniziare a usare Vinci"
+    },
+    "connected": {
+      "title": "Collegato",
+      "subTitle": "Connesso con"
+    },
+    "connecting": {
+      "title": "Sblocca il portafoglio",
+      "subTitle": "Potrebbe essere necessario fare clic sull'estensione."
+    },
+    "error": {
+      "title": "Collega il portafoglio",
+      "subTitle": "Per iniziare a usare Vinci",
+      "ChainUnknownError": "Rete sbagliata",
+      "ConnectionRejectedError": "Rifiutato per connettere il portafoglio"
+    },
+    "tips": {
+      "accept": "Collegandomi, accetto",
+      "term": "Termini di servizio di Vinci"
+    }
+  },
+  "menu": {
+    "Markets": "Mercati",
+    "Dashboard": "la mia scrivania",
+    "Lend": "Prestare",
+    "Borrow": "Prestito",
+    "BorrowDetail": "Dettaglio del prestito",
+    "Stake": "Palo",
+    "Liquidation": "Mercato della liquidazione",
+    "App": "App"
+  }
+}

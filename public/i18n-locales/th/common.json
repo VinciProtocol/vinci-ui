@@ -1,0 +1,46 @@
+{
+  "wallet": {
+    "btn": {
+      "cancel": "ยกเลิก",
+      "disconnected": "ตัดการเชื่อมต่อ",
+      "deposit": "เงินฝาก",
+      "withdraw": "ถอน",
+      "borrow": "ยืม",
+      "repay": "ชำระคืน",
+      "details": "รายละเอียด",
+      "approve": "อนุมัติ"
+    },
+    "disconnected": {
+      "title": "เชื่อมต่อกระเป๋าสตางค์",
+      "subTitle": "เพื่อเริ่มใช้ Vinci"
+    },
+    "connected": {
+      "title": "เชื่อมต่อแล้ว",
+      "subTitle": "เชื่อมต่อกับ"
+    },
+    "connecting": {
+      "title": "ปลดล็อคกระเป๋าสตางค์",
+      "subTitle": "คุณอาจต้องคลิกส่วนขยาย"
+    },
+    "error": {
+      "title": "เชื่อมต่อกระเป๋าสตางค์",
+      "subTitle": "เพื่อเริ่มใช้ Vinci",
+      "ChainUnknownError": "ผิดเครือข่าย",
+      "ConnectionRejectedError": "ปฏิเสธที่จะเชื่อมต่อกระเป๋าเงิน"
+    },
+    "tips": {
+      "accept": "โดยการเชื่อมต่อฉันยอมรับ",
+      "term": "ข้อกำหนดในการให้บริการของ Vinci"
+    }
+  },
+  "menu": {
+    "Markets": "ตลาด",
+    "Dashboard": "แดชบอร์ดของฉัน",
+    "Lend": "ให้ยืม",
+    "Borrow": "ยืม",
+    "BorrowDetail": "รายละเอียดการยืม",
+    "Stake": "เดิมพัน",
+    "Liquidation": "ตลาดการชำระบัญชี",
+    "App": "แอป"
+  }
+}

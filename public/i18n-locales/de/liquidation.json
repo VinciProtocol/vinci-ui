@@ -1,0 +1,12 @@
+{
+  "marketplace": {
+    "title": "Liquidationsmarktplatz",
+    "all": "Alle",
+    "underLiquidation": "In Liquidation",
+    "auction": "Versteigerung",
+    "valuation": "Bewertung",
+    "timeLeft": "Übrige Zeit",
+    "price": "Preis",
+    "auctionPrice": "Auktionspreis"
+  }
+}

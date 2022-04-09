@@ -1,0 +1,20 @@
+{
+  "TVL": {
+    "totalValueLocked": "Tổng giá trị đã khóa"
+  },
+  "lendingPools": {
+    "title": "Hồ cho vay",
+    "symbol": "Tài sản",
+    "APY": "Gửi tiền APY",
+    "totalSupply": "Tổng cung",
+    "totalBorrowed": "Tổng số tiền đã vay",
+    "utilization": "Sử dụng",
+    "walletBalance": "Số dư trên Wallet",
+    "functionButtons": "Hoạt động",
+    "deposited": "Đã ký gửi",
+    "ratio": "Tỉ lệ",
+    "available": "Có sẵn để rút",
+    "collectionTip": "Tài sản của bạn sẽ chỉ được cho vay đối với những người nắm giữ {{name}} NFT",
+    "insufficientLiquidity": "Không đủ thanh khoản"
+  }
+}

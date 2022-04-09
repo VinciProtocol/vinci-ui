@@ -1,0 +1,10 @@
+{
+  "NFTCollateralCollections": {
+    "title": "مجموعات الضمان NFT",
+    "collection": "مجموعة",
+    "currentFloorPrice": "سعر الطابق الحالي",
+    "totalCollateralledValue": "إجمالي قيمة الضمان",
+    "totalBorrowed": "إجمالي المقترض",
+    "availableToBorrow": "متاح للاستعارة"
+  }
+}

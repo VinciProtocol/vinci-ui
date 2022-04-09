@@ -1,0 +1,46 @@
+{
+  "wallet": {
+    "btn": {
+      "cancel": "Cancelar",
+      "disconnected": "desconectar",
+      "deposit": "Depósito",
+      "withdraw": "Retirar",
+      "borrow": "Pedir emprestado",
+      "repay": "Reembolsar",
+      "details": "Detalhes",
+      "approve": "Aprovar"
+    },
+    "disconnected": {
+      "title": "Conectar Carteira",
+      "subTitle": "Para começar a usar o Vinci"
+    },
+    "connected": {
+      "title": "Conectado",
+      "subTitle": "Conectado com"
+    },
+    "connecting": {
+      "title": "Desbloquear carteira",
+      "subTitle": "Pode ser necessário clicar na extensão."
+    },
+    "error": {
+      "title": "Conectar Carteira",
+      "subTitle": "Para começar a usar o Vinci",
+      "ChainUnknownError": "Rede errada",
+      "ConnectionRejectedError": "Rejeitado para conectar a carteira"
+    },
+    "tips": {
+      "accept": "Ao conectar, eu aceito",
+      "term": "Termos de serviço da Vinci"
+    }
+  },
+  "menu": {
+    "Markets": "Mercados",
+    "Dashboard": "Meu painel",
+    "Lend": "Emprestar",
+    "Borrow": "Pedir emprestado",
+    "BorrowDetail": "Detalhe do empréstimo",
+    "Stake": "Estaca",
+    "Liquidation": "Mercado de liquidação",
+    "App": "Aplicativo"
+  }
+}

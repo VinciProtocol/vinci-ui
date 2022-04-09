@@ -1,0 +1,12 @@
+{
+  "stakingPools": {
+    "title": "Palo",
+    "subTitle": "Puntare VCI o LP Token per proteggere il protocollo",
+    "symbol": "Risorse",
+    "totalStaked": "Totale puntato",
+    "reward": "Premi VCI",
+    "APR": "Staking aprile",
+    "yourStaked": "La tua puntata",
+    "earned": "Guadagnato VCI"
+  }
+}

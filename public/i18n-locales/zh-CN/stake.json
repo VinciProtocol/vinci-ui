@@ -1,0 +1,12 @@
+{
+  "stakingPools": {
+    "title": "赌注",
+    "subTitle": "质押 VCI 或 LP 代币以保护协议",
+    "symbol": "资产",
+    "totalStaked": "总质押",
+    "reward": "VCI 奖励",
+    "APR": "质押 APR",
+    "yourStaked": "您的质押",
+    "earned": "获得的 VCI"
+  }
+}

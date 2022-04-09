@@ -1,0 +1,12 @@
+{
+  "marketplace": {
+    "title": "청산 시장",
+    "all": "모두",
+    "underLiquidation": "청산중",
+    "auction": "경매",
+    "valuation": "평가",
+    "timeLeft": "남은 시간",
+    "price": "가격",
+    "auctionPrice": "경매 가격"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "stakingPools": {
+    "title": "حصة",
+    "subTitle": "قم بعمل Stake VCI أو LP Token لتأمين البروتوكول",
+    "symbol": "أصول",
+    "totalStaked": "مجموع الرهانات",
+    "reward": "مكافآت VCI",
+    "APR": "Staking APR",
+    "yourStaked": "الخاص بك ستكد",
+    "earned": "تم الحصول على VCI"
+  }
+}

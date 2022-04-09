@@ -1,0 +1,47 @@
+{
+  "goBack": "Geri dön",
+  "borrowInfo": {
+    "borrowLimit": "Borç Limiti",
+    "healthFactor": "Sağlık faktörü:",
+    "currentFloorPrice": "Mevcut taban fiyat:",
+    "liquidationFloorPrice": "Tasfiye taban fiyatı:",
+    "collateralValue": "Teminat değeri:",
+    "totalBorrowed": "Toplam ödünç alınan:",
+    "availableToBorrow": "Ödünç alınabilir:",
+    "ltv": "Değer için kredi:",
+    "liquidationFee": "Tasfiye ücreti:"
+  },
+  "NFTBorrowPool": {
+    "title": "Kredi Havuzları",
+    "symbol": "Varlık",
+    "borrowAPY": "APY'yi ödünç al",
+    "basedOnYourCollateral": "Teminatınıza göre",
+    "borrowBalance": "ödünç aldığın",
+    "functionButtons": "Aksiyon",
+    "ratio": "Oran",
+    "walletBalance": "Cüzdan bakiyesi",
+    "availableToBorrow": "Ödünç almak için müsait",
+    "availableToRepay": "Geri ödeme için kullanılabilir"
+  },
+  "NFT": {
+    "tabs": {
+      "wallet": "Cüzdan NFT'leri",
+      "deposit": "Yatırılan NFT'ler"
+    },
+    "totalValuation": "Toplam Değerleme:",
+    "valuation": "Değerleme",
+    "approveAll": "Tümünü Onayla",
+    "depositSelected": "Depozito Seçildi",
+    "withdrawSelected": "Seçileni Geri Çek"
+  },
+  "tips": {
+    "healthFactor": "Sağlık faktörü, NFT teminat değerinin ödünç alınan miktara oranından elde edilen kredinizin güvenliğini temsil eder. Tasfiyeyi önlemek için 1'in üzerinde tutun.",
+    "floorPrice": "Taban fiyat, koleksiyon ürünleri için ortalama ürün fiyatından ziyade en düşük fiyattır ve gerçek zamanlı olarak güncellenir.",
+    "liquidationPrice": "Pozisyonunuzun tasfiye edileceği teminat taban fiyatı.",
+    "collateralValue": "Pozisyonunuza yatırılan NFT teminatının değeri.",
+    "totalBorrowed": "Şu anda pozisyonunuzdaki toplam ödünç alınmış.",
+    "availableToBorrow": "Teminat verilen ödünç alınabilir kredi değeri.",
+    "ltv": "Kredi / Değer (LTV) oranı, belirli bir NFT teminatıyla ödünç alınabilecek maksimum kredi varlık miktarını tanımlar.",
+    "liquidationFee": "Bu, tasfiye için işaretlenmiş NFT teminatını satın alırken bir tasfiye memurunun aldığı indirimdir."
+  }
+}

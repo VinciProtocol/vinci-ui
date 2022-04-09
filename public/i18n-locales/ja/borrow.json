@@ -1,0 +1,10 @@
+{
+  "NFTCollateralCollections": {
+    "title": "NFT担保コレクション",
+    "collection": "コレクション",
+    "currentFloorPrice": "現在の最低料金",
+    "totalCollateralledValue": "総担保価値",
+    "totalBorrowed": "総借入額",
+    "availableToBorrow": "借りることができます"
+  }
+}

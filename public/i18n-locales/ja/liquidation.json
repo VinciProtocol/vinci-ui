@@ -1,0 +1,12 @@
+{
+  "marketplace": {
+    "title": "清算マーケットプレイス",
+    "all": "全て",
+    "underLiquidation": "清算中",
+    "auction": "競売",
+    "valuation": "評価",
+    "timeLeft": "残り時間",
+    "price": "価格",
+    "auctionPrice": "オークション価格"
+  }
+}

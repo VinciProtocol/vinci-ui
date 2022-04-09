@@ -1,0 +1,12 @@
+{
+  "stakingPools": {
+    "title": "말뚝",
+    "subTitle": "프로토콜을 보호하기 위해 VCI 또는 LP 토큰을 스테이킹합니다.",
+    "symbol": "자산",
+    "totalStaked": "총 스테이킹",
+    "reward": "VCI 보상",
+    "APR": "스테이킹 APR",
+    "yourStaked": "당신의 스테이킹",
+    "earned": "VCI 획득"
+  }
+}

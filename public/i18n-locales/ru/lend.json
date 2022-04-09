@@ -1,0 +1,20 @@
+{
+  "TVL": {
+    "totalValueLocked": "Общая стоимость заблокирована"
+  },
+  "lendingPools": {
+    "title": "Кредитные пулы",
+    "symbol": "Ресурсы",
+    "APY": "Депозит APY",
+    "totalSupply": "Общее предложение",
+    "totalBorrowed": "Всего заимствовано",
+    "utilization": "Использование",
+    "walletBalance": "Баланс кошелька",
+    "functionButtons": "Действие",
+    "deposited": "Депонированный",
+    "ratio": "Соотношение",
+    "available": "Доступно для снятия",
+    "collectionTip": "Ваши активы будут предоставлены только держателям {{name}} NFT.",
+    "insufficientLiquidity": "Недостаточная ликвидность"
+  }
+}

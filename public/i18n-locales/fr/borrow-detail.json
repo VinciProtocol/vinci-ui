@@ -1,0 +1,47 @@
+{
+  "goBack": "Retourner",
+  "borrowInfo": {
+    "borrowLimit": "Limite d'emprunt",
+    "healthFactor": "Facteur de santé :",
+    "currentFloorPrice": "Prix plancher actuel :",
+    "liquidationFloorPrice": "Prix plancher de liquidation :",
+    "collateralValue": "Valeur collatérale :",
+    "totalBorrowed": "Total emprunté :",
+    "availableToBorrow": "Disponible à emprunter :",
+    "ltv": "Prêt à la valeur:",
+    "liquidationFee": "Frais de liquidation :"
+  },
+  "NFTBorrowPool": {
+    "title": "Pools de prêt",
+    "symbol": "Actif",
+    "borrowAPY": "Emprunter APY",
+    "basedOnYourCollateral": "En fonction de votre garantie",
+    "borrowBalance": "Votre emprunt",
+    "functionButtons": "action",
+    "ratio": "Rapport",
+    "walletBalance": "Solde du portefeuille",
+    "availableToBorrow": "Disponible pour emprunter",
+    "availableToRepay": "Disponible pour rembourser"
+  },
+  "NFT": {
+    "tabs": {
+      "wallet": "NFT de portefeuille",
+      "deposit": "NFT déposés"
+    },
+    "totalValuation": "Valorisation totale :",
+    "valuation": "Évaluation",
+    "approveAll": "Tout approuver",
+    "depositSelected": "Dépôt sélectionné",
+    "withdrawSelected": "Retirer la sélection"
+  },
+  "tips": {
+    "healthFactor": "Le facteur de santé représente la sécurité de votre prêt dérivée de la proportion de la valeur de la garantie NFT par rapport au montant emprunté. Gardez-le au-dessus de 1 pour éviter la liquidation.",
+    "floorPrice": "Le prix plancher est le prix le plus bas pour les articles de collection, plutôt que le prix moyen des articles, et est mis à jour en temps réel.",
+    "liquidationPrice": "Prix plancher du collatéral auquel votre position sera liquidée.",
+    "collateralValue": "Valeur de la garantie NFT déposée dans votre position.",
+    "totalBorrowed": "Total actuellement emprunté dans votre position.",
+    "availableToBorrow": "Valeur du prêt empruntable compte tenu de la garantie déposée.",
+    "ltv": "Le ratio Loan to Value (LTV) définit le montant maximum d'actifs de prêt qui peuvent être empruntés avec une garantie NFT spécifique.",
+    "liquidationFee": "Il s'agit de la remise qu'un liquidateur obtient lors de l'achat de garanties NFT signalées pour liquidation."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "marketplace": {
+    "title": "ตลาดการชำระบัญชี",
+    "all": "ทั้งหมด",
+    "underLiquidation": "อยู่ระหว่างการชำระบัญชี",
+    "auction": "ประมูล",
+    "valuation": "การประเมินค่า",
+    "timeLeft": "เวลาเหลือ",
+    "price": "ราคา",
+    "auctionPrice": "ราคาประมูล"
+  }
+}

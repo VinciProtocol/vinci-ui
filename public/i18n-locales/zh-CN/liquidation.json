@@ -1,0 +1,12 @@
+{
+  "marketplace": {
+    "title": "清算市场",
+    "all": "全部",
+    "underLiquidation": "清算中",
+    "auction": "拍卖",
+    "valuation": "估值",
+    "timeLeft": "剩余时间",
+    "price": "价钱",
+    "auctionPrice": "拍卖价格"
+  }
+}

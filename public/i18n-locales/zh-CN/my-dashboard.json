@@ -1,0 +1,28 @@
+{
+  "common": {
+    "noOpenPosition": "无空缺职位"
+  },
+  "stats": {
+    "supplyBalance": "总供应量",
+    "netAPY": "净APY",
+    "norrowBalance": "借款总额"
+  },
+  "loans": {
+    "title": "我的贷款",
+    "collection": "收藏",
+    "currentFloorPrice": "当前底价",
+    "collateralValue": "抵押价值",
+    "borrowBalance": "借入余额",
+    "liquidationPrice": "清算价格",
+    "healthFactor": "健康因素",
+    "functionButtons": "行动"
+  },
+  "supplies": {
+    "title": "我的用品",
+    "symbol": "资产",
+    "APY": "APY",
+    "underlyingBalance": "供应平衡",
+    "walletBalance": "钱包余额",
+    "functionButtons": "行动"
+  }
+}

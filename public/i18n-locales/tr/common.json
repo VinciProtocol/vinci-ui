@@ -1,0 +1,46 @@
+{
+  "wallet": {
+    "btn": {
+      "cancel": "İptal",
+      "disconnected": "bağlantıyı kes",
+      "deposit": "Depozito",
+      "withdraw": "Geri çekilmek",
+      "borrow": "Ödünç almak",
+      "repay": "geri ödeme",
+      "details": "Detaylar",
+      "approve": "Onaylamak"
+    },
+    "disconnected": {
+      "title": "Cüzdanı Bağla",
+      "subTitle": "Vinci'yi kullanmaya başlamak için"
+    },
+    "connected": {
+      "title": "bağlı",
+      "subTitle": "ile bağlantılı"
+    },
+    "connecting": {
+      "title": "Cüzdan Kilidini Aç",
+      "subTitle": "Uzantıyı tıklamanız gerekebilir."
+    },
+    "error": {
+      "title": "Cüzdanı Bağla",
+      "subTitle": "Vinci'yi kullanmaya başlamak için",
+      "ChainUnknownError": "Yanlış Ağ",
+      "ConnectionRejectedError": "Cüzdanı bağlamak için reddedildi"
+    },
+    "tips": {
+      "accept": "Bağlanarak kabul ediyorum",
+      "term": "Vinci'nin Hizmet Şartları"
+    }
+  },
+  "menu": {
+    "Markets": "Piyasalar",
+    "Dashboard": "Gösterge Panelim",
+    "Lend": "Ödünç vermek",
+    "Borrow": "Ödünç almak",
+    "BorrowDetail": "Borç Detayı",
+    "Stake": "Bahis",
+    "Liquidation": "Tasfiye Pazarı",
+    "App": "Uygulama"
+  }
+}

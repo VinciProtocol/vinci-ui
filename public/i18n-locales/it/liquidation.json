@@ -1,0 +1,12 @@
+{
+  "marketplace": {
+    "title": "Mercato della liquidazione",
+    "all": "Tutti",
+    "underLiquidation": "In liquidazione",
+    "auction": "Asta",
+    "valuation": "Valutazione",
+    "timeLeft": "Tempo rimasto",
+    "price": "Prezzo",
+    "auctionPrice": "Prezzo d'asta"
+  }
+}

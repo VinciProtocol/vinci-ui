@@ -1,0 +1,12 @@
+{
+  "stakingPools": {
+    "title": "Miser",
+    "subTitle": "Stake VCI ou LP Token pour sécuriser le protocole",
+    "symbol": "Actifs",
+    "totalStaked": "Total jalonné",
+    "reward": "Récompenses VCI",
+    "APR": "APR de jalonnement",
+    "yourStaked": "Votre jalonné",
+    "earned": "VCI gagné"
+  }
+}

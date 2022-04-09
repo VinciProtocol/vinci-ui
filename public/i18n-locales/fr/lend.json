@@ -1,0 +1,20 @@
+{
+  "TVL": {
+    "totalValueLocked": "Valeur totale verrouillée"
+  },
+  "lendingPools": {
+    "title": "Pools de prêt",
+    "symbol": "Actifs",
+    "APY": "Dépôt APY",
+    "totalSupply": "Approvisionnement total",
+    "totalBorrowed": "Total emprunté",
+    "utilization": "Utilisation",
+    "walletBalance": "Solde du portefeuille",
+    "functionButtons": "action",
+    "deposited": "Déposé",
+    "ratio": "Rapport",
+    "available": "Disponible pour retirer",
+    "collectionTip": "Vos actifs ne seront prêtés qu'aux détenteurs de {{name}} NFT",
+    "insufficientLiquidity": "Liquidité insuffisante"
+  }
+}

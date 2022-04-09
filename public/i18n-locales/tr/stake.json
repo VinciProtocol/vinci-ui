@@ -1,0 +1,12 @@
+{
+  "stakingPools": {
+    "title": "Bahis",
+    "subTitle": "Protokolü güvence altına almak için VCI veya LP Token'ı riske atın",
+    "symbol": "Varlıklar",
+    "totalStaked": "Toplam Bahis",
+    "reward": "VCI Ödülleri",
+    "APR": "Stake APR",
+    "yourStaked": "senin Stake ettiğin",
+    "earned": "Kazanılan VCI"
+  }
+}

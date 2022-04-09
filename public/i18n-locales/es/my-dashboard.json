@@ -1,0 +1,28 @@
+{
+  "common": {
+    "noOpenPosition": "Sin posición abierta"
+  },
+  "stats": {
+    "supplyBalance": "Suministro Total",
+    "netAPY": "APY neto",
+    "norrowBalance": "prestado total"
+  },
+  "loans": {
+    "title": "Mis préstamos",
+    "collection": "Colección",
+    "currentFloorPrice": "Precio mínimo actual",
+    "collateralValue": "Valor garantizado",
+    "borrowBalance": "Saldo prestado",
+    "liquidationPrice": "Precio de liquidación",
+    "healthFactor": "factor de salud",
+    "functionButtons": "Acción"
+  },
+  "supplies": {
+    "title": "Mis Suministros",
+    "symbol": "Activos",
+    "APY": "APY",
+    "underlyingBalance": "Saldo de suministro",
+    "walletBalance": "Saldo de la cartera",
+    "functionButtons": "Acción"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "stakingPools": {
+    "title": "Cổ phần",
+    "subTitle": "Đặt VCI hoặc Mã thông báo LP để bảo mật giao thức",
+    "symbol": "Tài sản",
+    "totalStaked": "Tổng số tiền đặt cọc",
+    "reward": "Phần thưởng VCI",
+    "APR": "APR cố định",
+    "yourStaked": "Tiền đặt cọc của bạn",
+    "earned": "VCI đã kiếm được"
+  }
+}

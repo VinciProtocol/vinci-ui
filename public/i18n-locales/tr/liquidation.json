@@ -1,0 +1,12 @@
+{
+  "marketplace": {
+    "title": "Tasfiye Pazarı",
+    "all": "Tüm",
+    "underLiquidation": "Tasfiye Altında",
+    "auction": "Açık arttırma",
+    "valuation": "Değerleme",
+    "timeLeft": "Kalan zaman",
+    "price": "Fiyat",
+    "auctionPrice": "Müzayede Fiyatı"
+  }
+}

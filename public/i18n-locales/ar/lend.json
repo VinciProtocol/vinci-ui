@@ -1,0 +1,20 @@
+{
+  "TVL": {
+    "totalValueLocked": "إجمالي القيمة مؤمن"
+  },
+  "lendingPools": {
+    "title": "تجمعات الإقراض",
+    "symbol": "أصول",
+    "APY": "إيداع APY",
+    "totalSupply": "إجمالي العرض",
+    "totalBorrowed": "إجمالي المقترض",
+    "utilization": "استغلال",
+    "walletBalance": "رصيد المحفظة",
+    "functionButtons": "عمل",
+    "deposited": "المودعة",
+    "ratio": "نسبة",
+    "available": "متاح للسحب",
+    "collectionTip": "سيتم إقراض أصولك فقط لأصحاب {{name}} NFT",
+    "insufficientLiquidity": "سيولة غير كافية"
+  }
+}

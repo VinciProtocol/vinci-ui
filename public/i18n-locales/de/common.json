@@ -1,0 +1,46 @@
+{
+  "wallet": {
+    "btn": {
+      "cancel": "Stornieren",
+      "disconnected": "Trennen",
+      "deposit": "Anzahlung",
+      "withdraw": "Zurückziehen",
+      "borrow": "Ausleihen",
+      "repay": "Zurückzahlen",
+      "details": "Einzelheiten",
+      "approve": "Genehmigen"
+    },
+    "disconnected": {
+      "title": "Brieftasche verbinden",
+      "subTitle": "Um mit der Verwendung von Vinci zu beginnen"
+    },
+    "connected": {
+      "title": "In Verbindung gebracht",
+      "subTitle": "Verbunden mit"
+    },
+    "connecting": {
+      "title": "Geldbörse entsperren",
+      "subTitle": "Möglicherweise müssen Sie auf die Erweiterung klicken."
+    },
+    "error": {
+      "title": "Brieftasche verbinden",
+      "subTitle": "Um mit der Verwendung von Vinci zu beginnen",
+      "ChainUnknownError": "Falsches Netzwerk",
+      "ConnectionRejectedError": "Wallet-Verbindung abgelehnt"
+    },
+    "tips": {
+      "accept": "Indem ich mich verbinde, akzeptiere ich",
+      "term": "Vincis Nutzungsbedingungen"
+    }
+  },
+  "menu": {
+    "Markets": "Märkte",
+    "Dashboard": "Mein Armaturenbrett",
+    "Lend": "Verleihen",
+    "Borrow": "Ausleihen",
+    "BorrowDetail": "Detail ausleihen",
+    "Stake": "Einatz",
+    "Liquidation": "Liquidationsmarktplatz",
+    "App": "App"
+  }
+}

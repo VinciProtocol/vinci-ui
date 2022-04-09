@@ -1,0 +1,28 @@
+{
+  "common": {
+    "noOpenPosition": "オープンポジションなし"
+  },
+  "stats": {
+    "supplyBalance": "総供給",
+    "netAPY": "ネットAPY",
+    "norrowBalance": "総借入額"
+  },
+  "loans": {
+    "title": "私のローン",
+    "collection": "コレクション",
+    "currentFloorPrice": "現在の最低料金",
+    "collateralValue": "担保付きの価値",
+    "borrowBalance": "借入残高",
+    "liquidationPrice": "清算価格",
+    "healthFactor": "健康要因",
+    "functionButtons": "アクション"
+  },
+  "supplies": {
+    "title": "私の物資",
+    "symbol": "資産",
+    "APY": "APY",
+    "underlyingBalance": "供給バランス",
+    "walletBalance": "ウォレットの残高",
+    "functionButtons": "アクション"
+  }
+}

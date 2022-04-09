@@ -1,0 +1,10 @@
+{
+  "NFTCollateralCollections": {
+    "title": "NFT 자료 수집",
+    "collection": "수집",
+    "currentFloorPrice": "현재 하한가",
+    "totalCollateralledValue": "총 담보 가치",
+    "totalBorrowed": "총 차입금",
+    "availableToBorrow": "대출 가능"
+  }
+}

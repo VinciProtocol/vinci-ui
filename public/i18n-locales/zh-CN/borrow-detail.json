@@ -1,0 +1,47 @@
+{
+  "goBack": "回去",
+  "borrowInfo": {
+    "borrowLimit": "借款限额",
+    "healthFactor": "健康因素：",
+    "currentFloorPrice": "当前底价：",
+    "liquidationFloorPrice": "强平底价：",
+    "collateralValue": "抵押价值：",
+    "totalBorrowed": "借款总额：",
+    "availableToBorrow": "可借：",
+    "ltv": "贷款价值：",
+    "liquidationFee": "清算费用："
+  },
+  "NFTBorrowPool": {
+    "title": "借贷池",
+    "symbol": "资产",
+    "borrowAPY": "借用APY",
+    "basedOnYourCollateral": "根据您的抵押品",
+    "borrowBalance": "你借来的",
+    "functionButtons": "行动",
+    "ratio": "比率",
+    "walletBalance": "钱包余额",
+    "availableToBorrow": "可借",
+    "availableToRepay": "可还款"
+  },
+  "NFT": {
+    "tabs": {
+      "wallet": "钱包 NFT",
+      "deposit": "已存入的 NFT"
+    },
+    "totalValuation": "总估值：",
+    "valuation": "估值",
+    "approveAll": "全部批准",
+    "depositSelected": "已选择存款",
+    "withdrawSelected": "撤回所选"
+  },
+  "tips": {
+    "healthFactor": "健康因素代表您的贷款的安全性，来自 NFT 抵押品价值与借入金额的比例。保持在1以上，以避免清算。",
+    "floorPrice": "底价是收藏品的最低价格，而不是商品的平均价格，并实时更新。",
+    "liquidationPrice": "您的头寸将被清算的抵押品底价。",
+    "collateralValue": "存放在您头寸中的 NFT 抵押品的价值。",
+    "totalBorrowed": "目前在您的职位上借入的总额。",
+    "availableToBorrow": "给定抵押品可借入的贷款价值。",
+    "ltv": "贷款价值 (LTV) 比率定义了可以使用特定 NFT 抵押品借入的最大贷款资产数量。",
+    "liquidationFee": "这是清算人在购买标记为清算的 NFT 抵押品时获得的折扣。"
+  }
+}

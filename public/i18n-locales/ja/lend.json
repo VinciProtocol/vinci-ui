@@ -1,0 +1,20 @@
+{
+  "TVL": {
+    "totalValueLocked": "合計値がロックされています"
+  },
+  "lendingPools": {
+    "title": "貸付プール",
+    "symbol": "資産",
+    "APY": "APYをデポジットする",
+    "totalSupply": "総供給",
+    "totalBorrowed": "総借入額",
+    "utilization": "利用",
+    "walletBalance": "ウォレットの残高",
+    "functionButtons": "アクション",
+    "deposited": "預け入れ",
+    "ratio": "比率",
+    "available": "撤退可能",
+    "collectionTip": "あなたの資産は{{name}}NFT保有者にのみ貸与されます",
+    "insufficientLiquidity": "不十分な流動性"
+  }
+}

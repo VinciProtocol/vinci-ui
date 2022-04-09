@@ -1,0 +1,46 @@
+{
+  "wallet": {
+    "btn": {
+      "cancel": "Hủy bỏ",
+      "disconnected": "Ngắt kết nối",
+      "deposit": "Gửi tiền",
+      "withdraw": "Rút",
+      "borrow": "Vay mượn",
+      "repay": "Trả lại",
+      "details": "Chi tiết",
+      "approve": "Chấp thuận"
+    },
+    "disconnected": {
+      "title": "Kết nối ví",
+      "subTitle": "Để bắt đầu sử dụng Vinci"
+    },
+    "connected": {
+      "title": "Đã kết nối",
+      "subTitle": "Kết nối với"
+    },
+    "connecting": {
+      "title": "Mở khóa ví",
+      "subTitle": "Bạn có thể cần phải nhấp vào phần mở rộng."
+    },
+    "error": {
+      "title": "Kết nối ví",
+      "subTitle": "Để bắt đầu sử dụng Vinci",
+      "ChainUnknownError": "Mạng sai",
+      "ConnectionRejectedError": "Bị từ chối kết nối ví"
+    },
+    "tips": {
+      "accept": "Bằng cách kết nối, tôi chấp nhận",
+      "term": "Điều khoản dịch vụ của Vinci"
+    }
+  },
+  "menu": {
+    "Markets": "Thị trường",
+    "Dashboard": "Bảng điều khiển của tôi",
+    "Lend": "Cho mượn",
+    "Borrow": "Vay mượn",
+    "BorrowDetail": "Chi tiết Vay",
+    "Stake": "Cổ phần",
+    "Liquidation": "Thị trường thanh lý",
+    "App": "Ứng dụng"
+  }
+}

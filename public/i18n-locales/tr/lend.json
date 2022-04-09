@@ -1,0 +1,20 @@
+{
+  "TVL": {
+    "totalValueLocked": "Toplam Değer Kilitli"
+  },
+  "lendingPools": {
+    "title": "Kredi Havuzları",
+    "symbol": "Varlıklar",
+    "APY": "APY yatırın",
+    "totalSupply": "Toplam Arz",
+    "totalBorrowed": "Toplam Borç",
+    "utilization": "kullanım",
+    "walletBalance": "Cüzdan Bakiyesi",
+    "functionButtons": "Aksiyon",
+    "deposited": "Yatırıldı",
+    "ratio": "Oran",
+    "available": "Çekilebilir",
+    "collectionTip": "Varlıklarınız yalnızca {{name}} NFT sahiplerine ödünç verilecek",
+    "insufficientLiquidity": "Yetersiz likidite"
+  }
+}

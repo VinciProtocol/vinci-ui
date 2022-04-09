@@ -1,0 +1,47 @@
+{
+  "goBack": "Geh zurück",
+  "borrowInfo": {
+    "borrowLimit": "Kreditlimit",
+    "healthFactor": "Gesundheitsfaktor:",
+    "currentFloorPrice": "Aktueller Mindestpreis:",
+    "liquidationFloorPrice": "Liquidationsuntergrenze:",
+    "collateralValue": "Wert der Sicherheit:",
+    "totalBorrowed": "Gesamt ausgeliehen:",
+    "availableToBorrow": "Ausleihbar:",
+    "ltv": "Beleihungswert:",
+    "liquidationFee": "Liquidationsgebühr:"
+  },
+  "NFTBorrowPool": {
+    "title": "Kreditpools",
+    "symbol": "Anlagegut",
+    "borrowAPY": "APY ausleihen",
+    "basedOnYourCollateral": "Basierend auf Ihren Sicherheiten",
+    "borrowBalance": "Ihr Geliehenes",
+    "functionButtons": "Aktion",
+    "ratio": "Verhältnis",
+    "walletBalance": "Wallet-Guthaben",
+    "availableToBorrow": "Ausleihbar",
+    "availableToRepay": "Zur Rückzahlung verfügbar"
+  },
+  "NFT": {
+    "tabs": {
+      "wallet": "Wallet-NFTs",
+      "deposit": "Hinterlegte NFTs"
+    },
+    "totalValuation": "Gesamtbewertung:",
+    "valuation": "Bewertung",
+    "approveAll": "Alle genehmigen",
+    "depositSelected": "Anzahlung ausgewählt",
+    "withdrawSelected": "Ausgewählte zurückziehen"
+  },
+  "tips": {
+    "healthFactor": "Der Gesundheitsfaktor stellt die Sicherheit Ihres Darlehens dar, abgeleitet aus dem Verhältnis des NFT-Sicherheitswerts zum geliehenen Betrag. Halten Sie es über 1, um eine Liquidation zu vermeiden.",
+    "floorPrice": "Der Mindestpreis ist der niedrigste Preis für Sammlungsartikel und nicht der durchschnittliche Artikelpreis und wird in Echtzeit aktualisiert.",
+    "liquidationPrice": "Sicherheiten-Mindestpreis, zu dem Ihre Position liquidiert wird.",
+    "collateralValue": "Wert der in Ihrer Position hinterlegten NFT-Sicherheiten.",
+    "totalBorrowed": "Derzeit insgesamt in Ihrer Position ausgeliehen.",
+    "availableToBorrow": "Ausleihbarer Beleihungswert angesichts der hinterlegten Sicherheiten.",
+    "ltv": "Das Loan to Value (LTV)-Verhältnis definiert die maximale Höhe des Kreditvermögens, das mit einer bestimmten NFT-Sicherheit ausgeliehen werden kann.",
+    "liquidationFee": "Dies ist der Rabatt, den ein Liquidator erhält, wenn er NFT-Sicherheiten kauft, die zur Liquidation gekennzeichnet sind."
+  }
+}

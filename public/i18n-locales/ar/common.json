@@ -1,0 +1,46 @@
+{
+  "wallet": {
+    "btn": {
+      "cancel": "يلغي",
+      "disconnected": "قطع الاتصال",
+      "deposit": "الوديعة",
+      "withdraw": "ينسحب",
+      "borrow": "اقتراض",
+      "repay": "السداد",
+      "details": "تفاصيل",
+      "approve": "يوافق"
+    },
+    "disconnected": {
+      "title": "ربط المحفظة",
+      "subTitle": "لبدء استخدام فينشي"
+    },
+    "connected": {
+      "title": "متصل",
+      "subTitle": "متصل مع"
+    },
+    "connecting": {
+      "title": "افتح المحفظة",
+      "subTitle": "قد تحتاج إلى النقر فوق الامتداد."
+    },
+    "error": {
+      "title": "ربط المحفظة",
+      "subTitle": "لبدء استخدام فينشي",
+      "ChainUnknownError": "شبكة خاطئة",
+      "ConnectionRejectedError": "رفض توصيل المحفظة"
+    },
+    "tips": {
+      "accept": "عن طريق الاتصال ، أوافق",
+      "term": "شروط خدمة ينشي"
+    }
+  },
+  "menu": {
+    "Markets": "الأسواق",
+    "Dashboard": "لوحة القيادة الخاصة بي",
+    "Lend": "أعار",
+    "Borrow": "اقتراض",
+    "BorrowDetail": "تفاصيل الاقتراض",
+    "Stake": "حصة",
+    "Liquidation": "سوق التصفية",
+    "App": "تطبيق"
+  }
+}

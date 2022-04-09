@@ -1,0 +1,28 @@
+{
+  "common": {
+    "noOpenPosition": "Không có vị trí mở"
+  },
+  "stats": {
+    "supplyBalance": "Tổng cung",
+    "netAPY": "APY ròng",
+    "norrowBalance": "Tổng số tiền đã vay"
+  },
+  "loans": {
+    "title": "Các khoản cho vay của tôi",
+    "collection": "Bộ sưu tập",
+    "currentFloorPrice": "Giá sàn hiện tại",
+    "collateralValue": "Giá trị được đối chiếu",
+    "borrowBalance": "Số dư đã vay",
+    "liquidationPrice": "Giá thanh lý",
+    "healthFactor": "Yếu tố sức khỏe",
+    "functionButtons": "Hoạt động"
+  },
+  "supplies": {
+    "title": "Nguồn cung cấp của tôi",
+    "symbol": "Tài sản",
+    "APY": "APY",
+    "underlyingBalance": "Cân bằng cung cấp",
+    "walletBalance": "Số dư trên Wallet",
+    "functionButtons": "Hoạt động"
+  }
+}

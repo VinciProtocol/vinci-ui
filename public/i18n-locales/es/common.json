@@ -1,0 +1,46 @@
+{
+  "wallet": {
+    "btn": {
+      "cancel": "Cancelar",
+      "disconnected": "Desconectar",
+      "deposit": "Depositar",
+      "withdraw": "Retirar",
+      "borrow": "Tomar prestado",
+      "repay": "Pagar",
+      "details": "Detalles",
+      "approve": "Aprobar"
+    },
+    "disconnected": {
+      "title": "Conectar billetera",
+      "subTitle": "Para empezar a usar Vinci"
+    },
+    "connected": {
+      "title": "Conectado",
+      "subTitle": "Conectado con"
+    },
+    "connecting": {
+      "title": "Desbloquear billetera",
+      "subTitle": "Es posible que deba hacer clic en la extensión."
+    },
+    "error": {
+      "title": "Conectar billetera",
+      "subTitle": "Para empezar a usar Vinci",
+      "ChainUnknownError": "Red incorrecta",
+      "ConnectionRejectedError": "Rechazado para conectar la billetera"
+    },
+    "tips": {
+      "accept": "Al conectarme, acepto",
+      "term": "Condiciones de servicio de Vinci"
+    }
+  },
+  "menu": {
+    "Markets": "Mercados",
+    "Dashboard": "Mi tablero",
+    "Lend": "Prestar",
+    "Borrow": "Tomar prestado",
+    "BorrowDetail": "Detalle de préstamo",
+    "Stake": "Apostar",
+    "Liquidation": "Mercado de liquidación",
+    "App": "aplicación"
+  }
+}

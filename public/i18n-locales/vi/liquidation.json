@@ -1,0 +1,12 @@
+{
+  "marketplace": {
+    "title": "Thị trường thanh lý",
+    "all": "Tất cả",
+    "underLiquidation": "Đang thanh lý",
+    "auction": "Bán đấu giá",
+    "valuation": "Định giá",
+    "timeLeft": "Thời gian còn lại",
+    "price": "Giá bán",
+    "auctionPrice": "Giá đấu giá"
+  }
+}

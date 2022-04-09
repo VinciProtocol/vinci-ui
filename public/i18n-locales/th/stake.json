@@ -1,0 +1,12 @@
+{
+  "stakingPools": {
+    "title": "เดิมพัน",
+    "subTitle": "เดิมพัน VCI หรือ LP Token เพื่อรักษาความปลอดภัยโปรโตคอล",
+    "symbol": "ทรัพย์สิน",
+    "totalStaked": "เดิมพันทั้งหมด",
+    "reward": "รางวัล VCI",
+    "APR": "Stake เมษายน",
+    "yourStaked": "เดิมพันของคุณ",
+    "earned": "VCI ที่ได้รับ"
+  }
+}

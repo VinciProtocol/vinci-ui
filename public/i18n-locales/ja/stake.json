@@ -1,0 +1,12 @@
+{
+  "stakingPools": {
+    "title": "ステーク",
+    "subTitle": "プロトコルを保護するためにVCIまたはLPトークンを賭けます",
+    "symbol": "資産",
+    "totalStaked": "合計賭け金",
+    "reward": "VCIリワード",
+    "APR": "ステーキングAPR",
+    "yourStaked": "あなたの賭け",
+    "earned": "VCI獲得"
+  }
+}

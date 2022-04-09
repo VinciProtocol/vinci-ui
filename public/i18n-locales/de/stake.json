@@ -1,0 +1,12 @@
+{
+  "stakingPools": {
+    "title": "Einatz",
+    "subTitle": "Setzen Sie VCI oder LP Token ein, um das Protokoll zu sichern",
+    "symbol": "Vermögenswerte",
+    "totalStaked": "Insgesamt eingesetzt",
+    "reward": "VCI-Prämien",
+    "APR": "Abstecken APR",
+    "yourStaked": "Ihr Einsatz",
+    "earned": "VCI verdient"
+  }
+}

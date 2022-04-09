@@ -1,0 +1,20 @@
+{
+  "TVL": {
+    "totalValueLocked": "잠긴 총 가치"
+  },
+  "lendingPools": {
+    "title": "대출 풀",
+    "symbol": "자산",
+    "APY": "보증금 APY",
+    "totalSupply": "총 공급",
+    "totalBorrowed": "총 차입금",
+    "utilization": "이용",
+    "walletBalance": "지갑 잔액",
+    "functionButtons": "동작",
+    "deposited": "예치",
+    "ratio": "비율",
+    "available": "출금 가능",
+    "collectionTip": "귀하의 자산은 {{name}} NFT 보유자에게만 대여됩니다.",
+    "insufficientLiquidity": "유동성 부족"
+  }
+}

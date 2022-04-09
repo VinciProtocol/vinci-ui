@@ -1,0 +1,47 @@
+{
+  "goBack": "Go Back",
+  "borrowInfo": {
+    "borrowLimit": "Borrow Limit",
+    "healthFactor": "Health factor:",
+    "currentFloorPrice": "Current floor price:",
+    "liquidationFloorPrice": "Liquidation floor price:",
+    "collateralValue": "Collateral value:",
+    "totalBorrowed": "Total borrowed:",
+    "availableToBorrow": "Available to borrow:",
+    "ltv": "Loan to value:",
+    "liquidationFee": "Liquidation fee:"
+  },
+  "NFTBorrowPool": {
+    "title": "Lending Pools",
+    "symbol": "Asset",
+    "borrowAPY": "Borrow APY",
+    "basedOnYourCollateral": "Based on your collateral",
+    "borrowBalance": "Your Borrowed",
+    "functionButtons": "Action",
+    "ratio": "Ratio",
+    "walletBalance": "Wallet balance",
+    "availableToBorrow": "Availale to borrow",
+    "availableToRepay": "Availale to repay"
+  },
+  "NFT": {
+    "tabs": {
+      "wallet": "Wallet NFTs",
+      "deposit": "Deposited NFTs"
+    },
+    "totalValuation": "Total Valuation:",
+    "valuation": "Valuation",
+    "approveAll": "Approve All",
+    "depositSelected": "Deposit Selected",
+    "withdrawSelected": "Withdraw Selected"
+  },
+  "tips": {
+    "healthFactor": "The health factor represents the safety of your loan derived from the proportion of NFT collateral value versus amount borrowed. Keep it above 1 to avoid liquidation.",
+    "floorPrice": "Floor price is the lowest price for collection items, rather than the average item price, and is updated in real-time.",
+    "liquidationPrice": "Collateral floor price at which your position will be liquidated.",
+    "collateralValue": "Value of the NFT collateral deposited in your position.",
+    "totalBorrowed": "Currently total borrowed in your position.",
+    "availableToBorrow": "Loan value borrowable given the collateral deposited.",
+    "ltv": "The Loan to Value (LTV) ratio defines the maximum amount of loan assets that can be borrowed with a specific NFT collateral.",
+    "liquidationFee": "This is the discount a liquidator gets when buying NFT collateral flagged for liquidation."
+  }
+}

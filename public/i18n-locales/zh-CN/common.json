@@ -1,0 +1,46 @@
+{
+  "wallet": {
+    "btn": {
+      "cancel": "取消",
+      "disconnected": "断开",
+      "deposit": "订金",
+      "withdraw": "提取",
+      "borrow": "借",
+      "repay": "偿还",
+      "details": "细节",
+      "approve": "批准"
+    },
+    "disconnected": {
+      "title": "连接钱包",
+      "subTitle": "开始使用 Vinci"
+    },
+    "connected": {
+      "title": "连接的",
+      "subTitle": "连接到"
+    },
+    "connecting": {
+      "title": "解锁钱包",
+      "subTitle": "您可能需要单击扩展程序。"
+    },
+    "error": {
+      "title": "连接钱包",
+      "subTitle": "开始使用 Vinci",
+      "ChainUnknownError": "错误的网络",
+      "ConnectionRejectedError": "拒绝连接钱包"
+    },
+    "tips": {
+      "accept": "通过连接，我接受",
+      "term": "芬奇的服务条款"
+    }
+  },
+  "menu": {
+    "Markets": "市场",
+    "Dashboard": "我的仪表板",
+    "Lend": "借出",
+    "Borrow": "借用",
+    "BorrowDetail": "借阅详情",
+    "Stake": "赌注",
+    "Liquidation": "清算市场",
+    "App": "应用程序"
+  }
+}

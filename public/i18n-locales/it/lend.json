@@ -1,0 +1,20 @@
+{
+  "TVL": {
+    "totalValueLocked": "Valore totale bloccato"
+  },
+  "lendingPools": {
+    "title": "Piscine di prestito",
+    "symbol": "Risorse",
+    "APY": "Deposito APY",
+    "totalSupply": "Fornitura totale",
+    "totalBorrowed": "Totale preso in prestito",
+    "utilization": "Utilizzo",
+    "walletBalance": "Saldo del portafoglio",
+    "functionButtons": "Azione",
+    "deposited": "Depositato",
+    "ratio": "Rapporto",
+    "available": "Disponibile a ritirare",
+    "collectionTip": "Le tue risorse saranno prestate solo ai titolari di NFT {{name}}",
+    "insufficientLiquidity": "Liquidità insufficiente"
+  }
+}
