@@ -35,7 +35,7 @@ export const createRequestSlice = <SliceState extends RequestSliceState, Returne
   request: AsyncThunk<Returned, ThunkArg, {}>
 ) => {
   const {
-    actions: { setStatus },
+    actions: { setStatus, setData },
     reducer,
   } = createSlice({
     name: path,
@@ -44,9 +44,9 @@ export const createRequestSlice = <SliceState extends RequestSliceState, Returne
       setStatus(state, action: PayloadAction<REQUEST_STATUS>) {
         state.status = action.payload
       },
-      // setData(state, action: PayloadAction<SliceState['data']>) {
-      //   state.data = action.payload
-      // },
+      setData(state, action: PayloadAction<SliceState['data']>) {
+        state.data = action.payload
+      },
     },
     extraReducers: (builder) => {
       builder
@@ -171,8 +171,12 @@ export const createRequestSlice = <SliceState extends RequestSliceState, Returne
   }
 
   const useRequestController = () => {
+    const dispatch = useAppDispatch()
     const polling = usePolling()
     const single = useSingle()
+    const clearData = useCallback(() => {
+      dispatch(setData(undefined))
+    }, [dispatch])
 
     const useAutoPolling = useCallback(
       (query: ThunkArg, DoNotPolling: (query: ThunkArg) => boolean, ms: number, delay = 500) => {
@@ -197,6 +201,7 @@ export const createRequestSlice = <SliceState extends RequestSliceState, Returne
       polling,
       single,
       usePolling: useAutoPolling,
+      clearData,
     })
     return returnValue
   }
