@@ -5,6 +5,7 @@ import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import BorrowDialog from 'app/Dialogs/BorrowDialog'
 import DepositDialog from 'app/Dialogs/DepositDialog'
 import ConnectDialog from 'app/wallet/ConnectDialog'
+import ChainDialog from 'app/wallet/ChainDialog'
 import fadeIn from 'utils/style/keyframes/fadeIn'
 
 const Main: FC = ({ children }) => {
@@ -16,6 +17,7 @@ const Main: FC = ({ children }) => {
   return (
     <Main>
       {children}
+      <ChainDialog />
       <ConnectDialog />
       <DepositDialog />
       <BorrowDialog />

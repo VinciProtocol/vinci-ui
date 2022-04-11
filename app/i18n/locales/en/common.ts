@@ -32,6 +32,10 @@ const locale = {
       accept: 'By connecting, I accept ',
       term: 'Vinci’s Terms of Service',
     },
+    chain: {
+      title: 'Select You Network',
+      subTitle: 'Your current network',
+    },
   },
   menu: {
     Markets: 'Markets',

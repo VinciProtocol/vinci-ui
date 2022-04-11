@@ -9,6 +9,7 @@ import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import Menu from './Menu'
 import Logo from './Logo'
 
+const ChainButton = dynamic(() => import('app/wallet/ChainButton'), { ssr: false })
 const ConnectButton = dynamic(() => import('app/wallet/ConnectButton'), { ssr: false })
 const LanguageMenu = dynamic(() => import('app/i18n/components/LanguageMenu'), { ssr: false })
 
@@ -22,7 +23,7 @@ const Header: FC = () => {
       ${({ theme }) => ({
         background: '#1C0200',
         padding: `0 ${theme.spacing(3)}`,
-        boxShadow: `0 -1px 20px ${theme.palette.primary.dark}`
+        boxShadow: `0 -1px 20px ${theme.palette.primary.dark}`,
       })}
     `
   )
@@ -38,6 +39,7 @@ const Header: FC = () => {
       <Menu />
       <RIGHT direction="row" spacing={2}>
         <ThemeButton />
+        <ChainButton />
         <ConnectButton />
         <LanguageMenu />
       </RIGHT>
