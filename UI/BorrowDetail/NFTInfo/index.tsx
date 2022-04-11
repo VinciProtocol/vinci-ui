@@ -81,7 +81,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
             </Grid>
             <Grid item>
               <Typography variant="subtitle2" color={grey[500]}>
-                <NumberDisplay value={nft.borrowLimit} type="ETH" />
+                <NumberDisplay value={nft.borrowLimit} type="network" />
               </Typography>
             </Grid>
           </Grid>
@@ -105,7 +105,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
             </Grid>
             <Grid item>
               <Typography variant="subtitle1">
-                <NumberDisplay value={nft.currentFloorPrice} type="ETH" />
+                <NumberDisplay value={nft.currentFloorPrice} type="network" />
               </Typography>
             </Grid>
           </Grid>
@@ -117,7 +117,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
             </Grid>
             <Grid item>
               <Typography variant="subtitle1">
-                <NumberDisplay value={nft.liquidationPrice} type="ETH" />
+                <NumberDisplay value={nft.liquidationPrice} type="network" />
               </Typography>
             </Grid>
           </Grid>
@@ -129,7 +129,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
             </Grid>
             <Grid item>
               <Typography variant="subtitle1">
-                <NumberDisplay value={nft.collateralValue} type="ETH" />
+                <NumberDisplay value={nft.collateralValue} type="network" />
               </Typography>
             </Grid>
           </Grid>
@@ -141,7 +141,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
             </Grid>
             <Grid item>
               <Typography variant="subtitle1">
-                <NumberDisplay value={nft.borrowBalance} type="ETH" />
+                <NumberDisplay value={nft.borrowBalance} type="network" />
               </Typography>
             </Grid>
           </Grid>
@@ -153,7 +153,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
             </Grid>
             <Grid item>
               <Typography variant="subtitle1">
-                <NumberDisplay value={nft.totalUserAvailableToBorrow} type="ETH" />
+                <NumberDisplay value={nft.totalUserAvailableToBorrow} type="network" />
               </Typography>
             </Grid>
           </Grid>

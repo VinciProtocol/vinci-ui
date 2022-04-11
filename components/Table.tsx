@@ -16,7 +16,7 @@ export const BalanceCellRenderer: TableCellRenderer = ({ rowData, cellData, data
     <TableCell component="div">
       <Stack spacing={1}>
         <Typography variant="body2">
-          <NumberDisplay value={cellData} type="BNB" />
+          <NumberDisplay value={cellData} type="network" />
         </Typography>
         <Typography component="p" variant="caption" color={grey[500]}>
           <NumberDisplay value={rowData[dataKey + 'InUSD']} options="USD" />
@@ -44,7 +44,7 @@ export const AvailableToBorrowCellRenderer: TableCellRenderer = ({ rowData, cell
     <TableCell component="div">
       <Stack spacing={1}>
         <Typography variant="body2">
-          <NumberDisplay value={cellData} type="BNB" />
+          <NumberDisplay value={cellData} type="network" />
         </Typography>
         <Typography component="p" variant="caption" color={grey[500]}>
           <InsufficientLiquidity
@@ -195,7 +195,7 @@ export const NumberCellRenderer: TableCellRenderer = ({ cellData }) => {
 export const ETHCellRenderer: TableCellRenderer = ({ cellData }) => {
   return (
     <TableCell align="center" component="div">
-      <NumberDisplay value={cellData} type="BNB" />
+      <NumberDisplay value={cellData} type="network" />
     </TableCell>
   )
 }

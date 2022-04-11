@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
@@ -33,7 +33,7 @@ const WalletTabpanel = withTabPanel(
     const {
       reservesData,
       lendingPool: { depositNFT },
-      erc721: { setApprovalForAll },
+      erc721: { setApprovalForAll, isApprovedForAll },
     } = useControllers()
     const { account } = useWallet()
 
@@ -66,6 +66,7 @@ const WalletTabpanel = withTabPanel(
 
     const setRef = useRef<Set<string>>(new Set())
     const [size, setSize] = useState(0)
+    const [disabled, setDisabled] = useState(false)
     const onCheckChange = useCallback((id: string, value: boolean) => {
       const s = setRef.current
       if (value) {
@@ -75,6 +76,18 @@ const WalletTabpanel = withTabPanel(
       }
       setSize(s.size)
     }, [])
+    const approveAllDisabled = useMemo(() => disabled, [disabled])
+
+    useEffect(() => {
+      if (!lendingPoolAddress || !underlyingAsset) return
+      isApprovedForAll({
+        user: account,
+        spender: lendingPoolAddress,
+        token: underlyingAsset,
+      }).then((data) => {
+        setDisabled(data)
+      })
+    }, [account, isApprovedForAll, lendingPoolAddress, underlyingAsset])
 
     return (
       <TabPanel>
@@ -82,22 +95,27 @@ const WalletTabpanel = withTabPanel(
           <Typography gutterBottom variant="subtitle2" component="div">
             <Stack spacing={2} direction="row">
               <span>{t('borrow-detail:NFT.totalValuation')}</span>
-              <NumberDisplay value={totalValuation} type="ETH" />
+              <NumberDisplay value={totalValuation} type="network" />
             </Stack>
           </Typography>
           <Stack spacing={2} direction="row">
             <Button
               variant="contained"
+              disabled={approveAllDisabled}
               onClick={() => {
-                setApprovalForAll.post(
-                  {
-                    user: account,
-                    spender: lendingPoolAddress,
-                    token: underlyingAsset,
-                    value: true,
-                  },
-                  { isOnlyApprove: true }
-                )
+                setApprovalForAll
+                  .post(
+                    {
+                      user: account,
+                      spender: lendingPoolAddress,
+                      token: underlyingAsset,
+                      value: true,
+                    },
+                    { isOnlyApprove: true }
+                  )
+                  .then(() => {
+                    setDisabled(true)
+                  })
               }}
             >
               {t('borrow-detail:NFT.approveAll')}
@@ -122,7 +140,8 @@ const WalletTabpanel = withTabPanel(
                     })(),
                   })
                   .then(() => {
-                    reservesData.restart()
+                    s.clear()
+                    setSize(0)
                   })
               }}
             >

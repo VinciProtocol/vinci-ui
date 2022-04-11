@@ -82,7 +82,7 @@ const DepositTabpanel = withTabPanel(
           <Typography gutterBottom variant="subtitle2" component="div">
             <Stack spacing={2} direction="row">
               <span>{t('borrow-detail:NFT.totalValuation')}</span>
-              <NumberDisplay value={totalValuation} type="ETH" />
+              <NumberDisplay value={totalValuation} type="network" />
             </Stack>
           </Typography>
 
@@ -107,7 +107,8 @@ const DepositTabpanel = withTabPanel(
                     })(),
                   })
                   .then(() => {
-                    reservesData.restart()
+                    s.clear()
+                    setSize(0)
                   })
               }}
             >

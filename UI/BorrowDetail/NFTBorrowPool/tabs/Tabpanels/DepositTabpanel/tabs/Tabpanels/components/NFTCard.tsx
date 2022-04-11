@@ -54,7 +54,7 @@ const NFTCard: FC<NFT & { action: { name: string; onClick: any }; currentFloorPr
           {t('borrow-detail:NFT.valuation')}
         </Typography>
         <Typography gutterBottom variant="body1" component="div">
-          <NumberDisplay value={currentFloorPrice} type="ETH" />
+          <NumberDisplay value={currentFloorPrice} type="network" />
         </Typography>
       </CardContent>
       <Divider />

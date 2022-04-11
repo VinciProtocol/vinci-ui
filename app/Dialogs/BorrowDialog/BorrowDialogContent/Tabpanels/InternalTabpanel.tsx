@@ -56,7 +56,7 @@ const InternalTabpanel = (props: UseTabpanelReturnValue) => {
                     {t('borrow-detail:NFTBorrowPool.borrowAPY')}
                   </Typography>
                   <Typography variant="body1">
-                    <NumberDisplay value={info.APY} options="percent" />
+                    <NumberDisplay value={info.borrowAPY} options="percent" />
                   </Typography>
                 </Stack>
               </Grid>

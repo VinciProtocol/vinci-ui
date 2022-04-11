@@ -1,5 +1,6 @@
 import { styled } from '@mui/material/styles'
 import { useApp } from 'app/App'
+import { useWallet } from 'app/wallet'
 import { TokenIcon } from 'app/web3/TokenIcon'
 import type { FC } from 'react'
 import { useMemo } from 'react'
@@ -9,7 +10,7 @@ import type { BigNumberValue } from 'utils/math/types'
 type NumberDisplayProps = {
   value: BigNumberValue
   options?: 'USD' | 'percent'
-  type?: 'ETH' | 'BNB'
+  type?: 'network'
 }
 
 const NumberSpan = styled('div')`
@@ -18,6 +19,8 @@ const NumberSpan = styled('div')`
 `
 
 const NumberDisplay: FC<NumberDisplayProps> = ({ value, options, type }) => {
+  const { network } = useWallet()
+
   const {
     format: { number: NF },
   } = useApp()
@@ -30,7 +33,7 @@ const NumberDisplay: FC<NumberDisplayProps> = ({ value, options, type }) => {
     return (
       <NumberSpan>
         <TokenIcon
-          tokenSymbol={type}
+          tokenSymbol={network?.symbol || 'BNB'}
           sx={{
             width: '0.875rem',
             height: '0.875rem',

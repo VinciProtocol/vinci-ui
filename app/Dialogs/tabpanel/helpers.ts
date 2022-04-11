@@ -67,7 +67,8 @@ export const createUseTabpanel = (props: {
     const inputSlider = useInputSlider({ balance })
     const { account: user } = useWallet()
 
-    const { reservesData, walletBalance1, walletNFT1 } = useControllers()
+    const { reservesData, walletBalance1, walletBalance2, walletBalance3, walletNFT1, walletNFT2, walletNFT3 } =
+      useControllers()
 
     const title = useMemo(
       () => ({
@@ -80,9 +81,10 @@ export const createUseTabpanel = (props: {
     const info = useMemo(
       () => ({
         APY: tableData.APY,
+        borrowAPY: tableData.borrowAPY,
         balanceInUSD,
       }),
-      [tableData.APY, balanceInUSD]
+      [tableData.APY, tableData.borrowAPY, balanceInUSD]
     )
 
     const { underlyingAsset, aTokenAddress, lendingPoolAddress, variableDebtTokenAddress } = tableData
@@ -115,9 +117,11 @@ export const createUseTabpanel = (props: {
               .then(() => {
                 reservesData.restart()
                 walletBalance1.restart()
-                // walletBalance2.restart()
+                walletBalance2.restart()
+                walletBalance3.restart()
                 walletNFT1.restart()
-                // walletNFT2.restart()
+                walletNFT2.restart()
+                walletNFT3.restart()
                 if (isApproved) inputSlider.input.clear()
               }),
         },
