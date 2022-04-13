@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+import { useMemo } from 'react'
 import { useCallback } from 'react'
 import { styled } from '@mui/material/styles'
 import DialogContent from '@mui/material/DialogContent'
@@ -8,6 +9,7 @@ import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { useWeb3React } from '@web3-react/core'
 import { switchEthereumChain } from 'lib/wallet/utils'
 import { ChainId } from 'app/web3/chain/types'
+import { getNetwork } from 'app/web3/network'
 
 const ChainDialogContent: FC = () => {
   const ROOT = useMemoEmpty(() =>
@@ -18,25 +20,28 @@ const ChainDialogContent: FC = () => {
       paddingBottom: theme.spacing(3),
     }))
   )
+
+  return (
+    <DialogContent>
+      <ROOT>
+        <ChainButton chainId={ChainId.bsc} />
+        <ChainButton chainId={ChainId.kovan} />
+      </ROOT>
+    </DialogContent>
+  )
+}
+
+const ChainButton: FC<{ chainId: ChainId }> = (props) => {
   const { library } = useWeb3React()
   const onSwitchEthereumChain = useCallback(
-    (chainId: any) => {
+    (chainId: ChainId) => {
       const provider = library || window.ethereum
       if (provider) return switchEthereumChain(provider, chainId)
     },
     [library]
   )
-
-  return (
-    <DialogContent>
-      <ROOT>
-        <Button onClick={() => onSwitchEthereumChain(ChainId.bsc)}>BSC</Button>
-        <Button onClick={() => onSwitchEthereumChain(ChainId.kovan)}>Koven Test</Button>
-        <Button onClick={() => onSwitchEthereumChain(ChainId.bsct)}>BSC Test</Button>
-        <Button onClick={() => onSwitchEthereumChain(ChainId.vinci)}>Vinci Stage Test</Button>
-      </ROOT>
-    </DialogContent>
-  )
+  const network = useMemo(() => getNetwork(props.chainId), [props.chainId])
+  return <Button onClick={() => onSwitchEthereumChain(props.chainId)}>{network.fullName}</Button>
 }
 
 export default ChainDialogContent

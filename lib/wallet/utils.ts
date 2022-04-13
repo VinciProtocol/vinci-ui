@@ -3,6 +3,7 @@ import { getChainInformation, getKnownChainsIds } from './chains'
 import type { ChainId } from 'app/web3/chain/types'
 import { BigNumber } from 'ethers'
 import { setItem, removeItem, getItem } from 'utils/cache/localStorage'
+import { getNetwork } from 'app/web3/network'
 
 function isUnwrappedRpcResult(response: unknown): response is {
   error?: string
@@ -91,11 +92,24 @@ export async function getAccountIsContract(ethereum: EthereumProvider, account: 
 }
 
 export async function switchEthereumChain(ethereum: EthereumProvider, chainId: ChainId) {
+  const id = BigNumber.from(chainId).toHexString()
   return ethereumRequest(ethereum, 'wallet_switchEthereumChain', [
     {
-      chainId: BigNumber.from(chainId).toHexString(),
+      chainId: id,
     },
-  ])
+  ]).catch((switchError) => {
+    if (switchError.code === 4902) {
+      const network = getNetwork(chainId)
+      if (!network) return Promise.reject(`${chainId} not support switch ethereum chain!`)
+      return ethereumRequest(ethereum, 'wallet_addEthereumChain', [
+        {
+          chainId: id,
+          chainName: network.fullName,
+          rpcUrls: [network.publicJsonRPCUrl],
+        },
+      ])
+    }
+  })
 }
 
 const ACCOUNT_KEY = 'LAST_ACTIVE_ACCOUNT'

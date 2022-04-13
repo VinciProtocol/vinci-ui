@@ -5,7 +5,6 @@ import Button from '@mui/material/Button'
 
 import Account from '../Account'
 import { useConnectButton } from './useConnectButton'
-import { isChainUnknownError } from 'lib/wallet/utils'
 
 export const ConnectButton: FC = () => {
   const { status } = useConnectButton()
@@ -17,7 +16,7 @@ export const ConnectButton: FC = () => {
       case 'disconnected':
         return <WalletDisconnected />
       case 'error':
-        return <WalletError />
+        return <WalletConnected />
       case 'connecting':
         return <WalletConnecting />
     }
@@ -45,25 +44,6 @@ const WalletDisconnected: FC = () => {
   )
 }
 
-const WalletError: FC = () => {
-  const { t } = useTranslation()
-  const { open, error, onSwitchEthereumChain } = useConnectButton()
-
-  return (
-    <>
-      {isChainUnknownError(error) ? (
-        <Button key="wallet-btn" variant="contained" color="error" onClick={onSwitchEthereumChain}>
-          {t(`wallet.error.${error.name}`)}
-        </Button>
-      ) : (
-        <Button key="wallet-btn" variant="linear" onClick={open}>
-          {t('wallet.disconnected.title')}
-        </Button>
-      )}
-    </>
-  )
-}
-
 const WalletConnecting: FC = () => {
   const { t } = useTranslation()
   const { open } = useConnectButton()
@@ -75,4 +55,3 @@ const WalletConnecting: FC = () => {
 }
 
 export default ConnectButton
-// background: linear-gradient(105.3deg, #1AE2FA 12.14%, #B94AFF 93.19%);
