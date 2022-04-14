@@ -61,7 +61,12 @@ export const useReservesDataFromAllPools = (props: ReservesDataProps) => {
         }
         return returnValue
       }),
-      currencyInfo: getString(currencyInfo, ['marketReferenceCurrencyUnit', 'marketReferenceCurrencyPriceInUsd', 'networkBaseTokenPriceDecimals', 'networkBaseTokenPriceInUsd']),
+      currencyInfo: getString(currencyInfo, [
+        'marketReferenceCurrencyUnit',
+        'marketReferenceCurrencyPriceInUsd',
+        'networkBaseTokenPriceDecimals',
+        'networkBaseTokenPriceInUsd',
+      ]),
       nftVaultsData: nftVaultsData.map((nftVault) => {
         const { name, symbol, usageAsCollateralEnabled, isActive, isFrozen } = nftVault
         return {
