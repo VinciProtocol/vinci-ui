@@ -2,6 +2,7 @@ import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { styled } from '@mui/material/styles'
 import DialogTitle from '@mui/material/DialogTitle'
+import { Typography } from '@mui/material'
 
 import { Title, SubTitle } from 'components/Styled'
 
@@ -26,9 +27,18 @@ const ChainDialogTitle: FC = () => {
   return (
     <DialogTitle>
       <ROOT>
-        <Title>{t(`wallet.chain.title`)}</Title>
+        <Title>{t('wallet.chain.title')}</Title>
         <SubTitle>
-          {t(`wallet.chain.subTitle`)} {network?.fullName}
+          {t('wallet.chain.subTitle')} 
+          {
+            network ? 
+            <Typography component='span' color='primary'>
+            {network.fullName}
+            </Typography> : 
+            <Typography component='span' color='error'>
+              {t('wallet.chain.error')}
+            </Typography>
+          }
         </SubTitle>
       </ROOT>
     </DialogTitle>

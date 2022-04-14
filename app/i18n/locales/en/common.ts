@@ -25,7 +25,7 @@ const locale = {
     error: {
       title: 'Connect Wallet',
       subTitle: 'To start using Vinci',
-      ChainUnknownError: 'Wrong Network',
+      ChainUnknownError: 'Switch Network',
       ConnectionRejectedError: 'Rejected to connect wallet',
     },
     tips: {
@@ -34,7 +34,8 @@ const locale = {
     },
     chain: {
       title: 'Select You Network',
-      subTitle: 'Your current network',
+      subTitle: 'Your current network: ',
+      error: 'Unsupported network',
     },
   },
   menu: {

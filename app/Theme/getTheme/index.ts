@@ -7,6 +7,7 @@ declare module '@mui/material/Button/Button' {
   interface ButtonPropsVariantOverrides {
     linear: true
     linearOutlined: true
+    transOutlined: true
   }
 }
 
@@ -127,6 +128,18 @@ export const getTheme = (options: ThemeOptions) => {
           {
             props: { variant: 'outlined' },
             style: {
+              ':hover': {
+                color: '#fff',
+                background: primary.main,
+              },
+            },
+          },
+          {
+            props: { variant: 'transOutlined' },
+            style: {
+              color: '#fff',
+              border: `1px solid ${primary.main}`,
+              background: 'rgba(249, 68, 50, 0.12)',
               ':hover': {
                 color: '#fff',
                 background: primary.main,

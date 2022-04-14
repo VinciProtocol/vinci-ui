@@ -38,9 +38,9 @@ const Header: FC = () => {
       <Logo />
       <Menu />
       <RIGHT direction="row" spacing={2}>
-        <ThemeButton />
         <ChainButton />
         <ConnectButton />
+        <ThemeButton />
         <LanguageMenu />
       </RIGHT>
     </ROOT>

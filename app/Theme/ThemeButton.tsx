@@ -2,7 +2,7 @@ import type { FC } from 'react'
 import { useCallback } from 'react'
 import IconButton from '@mui/material/IconButton'
 import LightModeIcon from '@mui/icons-material/LightMode'
-import Brightness4Icon from '@mui/icons-material/Brightness4'
+import DarkModeIcon from '@mui/icons-material/ModeNight'
 
 import { useBaseTheme } from '.'
 
@@ -15,13 +15,19 @@ const ThemeButton: FC = () => {
   switch (mode) {
     case 'light':
       return (
-        <IconButton color="primary" onClick={onClick}>
-          <Brightness4Icon />
+        <IconButton sx={{ 
+          color: 'primary.contrastText', 
+          '&:hover': { 
+            backgroundColor: 'rgba(255, 255, 255, 0.08)' 
+            },
+          }} 
+          onClick={onClick}>
+          <DarkModeIcon />
         </IconButton>
       )
     case 'dark':
       return (
-        <IconButton color="primary" onClick={onClick}>
+        <IconButton sx={{ color: 'primary.contrastText' }} onClick={onClick}>
           <LightModeIcon />
         </IconButton>
       )

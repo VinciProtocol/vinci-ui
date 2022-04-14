@@ -10,7 +10,7 @@ export const networks: Record<ChainId, NetworkConfig> = {
   },
   [ChainId.kovan]: {
     name: 'Kovan',
-    fullName: 'Kovan',
+    fullName: 'Kovan Testnet',
     symbol: 'ETH',
     // publicJsonRPCUrl: 'https://kovan.poa.network',
     publicJsonRPCUrl: 'https://kovan.infura.io/v3/e33605b8ebd345fa914bd4cdfdfb401d',
@@ -24,7 +24,7 @@ export const networks: Record<ChainId, NetworkConfig> = {
   },
   [ChainId.bsc]: {
     name: 'BSC',
-    fullName: 'BSC',
+    fullName: 'BNB Smart Chain',
     symbol: 'BNB',
     publicJsonRPCUrl: 'https://bsc-dataseed.binance.org/',
   },

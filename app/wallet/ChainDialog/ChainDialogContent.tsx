@@ -4,6 +4,7 @@ import { useCallback } from 'react'
 import { styled } from '@mui/material/styles'
 import DialogContent from '@mui/material/DialogContent'
 import Button from '@mui/material/Button'
+import ChainIcon from '../ChainIcon'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { useWeb3React } from '@web3-react/core'
@@ -15,9 +16,11 @@ const ChainDialogContent: FC = () => {
   const ROOT = useMemoEmpty(() =>
     styled('div')(({ theme }) => ({
       display: 'flex',
-      justifyContent: 'center',
+      justifyContent: 'space-around',
       paddingTop: theme.spacing(1),
       paddingBottom: theme.spacing(3),
+      paddingLeft: theme.spacing(6),
+      paddingRight: theme.spacing(6),
     }))
   )
 
@@ -41,7 +44,15 @@ const ChainButton: FC<{ chainId: ChainId }> = (props) => {
     [library]
   )
   const network = useMemo(() => getNetwork(props.chainId), [props.chainId])
-  return <Button onClick={() => onSwitchEthereumChain(props.chainId)}>{network.fullName}</Button>
+  return (
+    <Button
+      variant="outlined"
+      startIcon={<ChainIcon chainName={network.name} />}
+      onClick={() => onSwitchEthereumChain(props.chainId)}
+    >
+      {network.fullName}
+    </Button>
+  )
 }
 
 export default ChainDialogContent
