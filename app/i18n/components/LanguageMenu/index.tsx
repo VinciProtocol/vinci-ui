@@ -58,7 +58,7 @@ const LanguageMenu: FC<LanguageMenuProps> = () => {
       <Button
         sx={{
           color: 'primary.contrastText',
-          textTransform: 'uppercase'
+          textTransform: 'uppercase',
         }}
         id="language-button"
         aria-controls="language-menu"

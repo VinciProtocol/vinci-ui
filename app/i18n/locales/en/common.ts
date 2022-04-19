@@ -4,6 +4,7 @@ const locale = {
       cancel: 'Cancel',
       disconnected: 'Disconnect',
       deposit: 'Deposit',
+      depositNFT: 'Deposit NFT',
       withdraw: 'Withdraw',
       borrow: 'Borrow',
       repay: 'Repay',

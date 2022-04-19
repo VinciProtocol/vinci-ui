@@ -14,22 +14,12 @@ export const ChainButton: FC = () => {
   const content = useMemo(() => {
     if (!network)
       return (
-        <Button 
-          key="chain-btn" 
-          variant="transOutlined" 
-          color="error"
-          startIcon={<ChainErrorIcon />} 
-          onClick={open}
-        >
+        <Button key="chain-btn" variant="transOutlined" color="error" startIcon={<ChainErrorIcon />} onClick={open}>
           {t(`wallet.error.ChainUnknownError`)}
         </Button>
       )
     return (
-      <Button 
-        key="chain-btn" 
-        variant="transOutlined"
-        startIcon={<ChainIcon chainName={network.name} />}
-        onClick={open}>
+      <Button key="chain-btn" variant="transOutlined" startIcon={<ChainIcon chainName={network.name} />} onClick={open}>
         {network.fullName}
       </Button>
     )

@@ -23,7 +23,7 @@ const Header: FC = () => {
       ${({ theme }) => ({
         background: '#1C0200',
         padding: `0 ${theme.spacing(3)}`,
-        boxShadow: `0 -1px 20px ${theme.palette.primary.dark}`,
+        boxShadow: theme.palette.mode === 'dark' ? `0 -1px 20px ${theme.palette.secondary.dark}` : 'none',
       })}
     `
   )

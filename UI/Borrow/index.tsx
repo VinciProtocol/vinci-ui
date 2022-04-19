@@ -10,7 +10,7 @@ const Borrow: FC = () => {
   const Content = useMemoEmpty(() =>
     styled(Container)(({ theme }) => ({
       minHeight: 'calc(100vh - 256px)',
-      paddingTop: theme.spacing(4),
+      paddingTop: theme.spacing(8),
     }))
   )
 

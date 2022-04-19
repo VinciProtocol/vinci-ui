@@ -146,6 +146,15 @@ export const getTheme = (options: ThemeOptions) => {
               },
             },
           },
+          {
+            props: { variant: 'contained' },
+            style: {
+              boxShadow: 'none',
+              ':hover': {
+                boxShadow: 'none',
+              },
+            },
+          },
         ],
       },
       MuiAlert: {
@@ -223,9 +232,9 @@ export const getTheme = (options: ThemeOptions) => {
           tooltip: {
             background: primary.dark,
             fontSize: theme.typography.pxToRem(14),
-          }
+          },
         },
-      }
+      },
     },
   })
 }

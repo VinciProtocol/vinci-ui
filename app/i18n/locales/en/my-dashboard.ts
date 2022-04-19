@@ -10,9 +10,9 @@ const locale = {
   loans: {
     title: 'My Loans',
     collection: 'Collection',
-    currentFloorPrice: 'Current Floor Price',
-    collateralValue: 'Collateralled Value',
-    borrowBalance: 'Borrowed Balance',
+    currentFloorPrice: 'Floor Price',
+    collateralValue: 'Collateral Value',
+    borrowBalance: 'Your Borrowed',
     liquidationPrice: 'Liquidation Price',
     healthFactor: 'Health Factor',
     functionButtons: 'Action',

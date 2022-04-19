@@ -29,16 +29,16 @@ const ChainDialogTitle: FC = () => {
       <ROOT>
         <Title>{t('wallet.chain.title')}</Title>
         <SubTitle>
-          {t('wallet.chain.subTitle')} 
-          {
-            network ? 
-            <Typography component='span' color='primary'>
-            {network.fullName}
-            </Typography> : 
-            <Typography component='span' color='error'>
+          {t('wallet.chain.subTitle')}
+          {network ? (
+            <Typography component="span" color="primary">
+              {network.fullName}
+            </Typography>
+          ) : (
+            <Typography component="span" color="error">
               {t('wallet.chain.error')}
             </Typography>
-          }
+          )}
         </SubTitle>
       </ROOT>
     </DialogTitle>

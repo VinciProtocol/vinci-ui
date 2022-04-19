@@ -88,7 +88,7 @@ const DepositTabpanel = withTabPanel(
 
           <Stack spacing={2} direction="row">
             <Button
-              variant="contained"
+              variant="outlined"
               disabled={!size}
               onClick={() => {
                 const s = setRef.current

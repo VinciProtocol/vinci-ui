@@ -15,13 +15,15 @@ const ThemeButton: FC = () => {
   switch (mode) {
     case 'light':
       return (
-        <IconButton sx={{ 
-          color: 'primary.contrastText', 
-          '&:hover': { 
-            backgroundColor: 'rgba(255, 255, 255, 0.08)' 
+        <IconButton
+          sx={{
+            color: 'primary.contrastText',
+            '&:hover': {
+              backgroundColor: 'rgba(255, 255, 255, 0.08)',
             },
-          }} 
-          onClick={onClick}>
+          }}
+          onClick={onClick}
+        >
           <DarkModeIcon />
         </IconButton>
       )

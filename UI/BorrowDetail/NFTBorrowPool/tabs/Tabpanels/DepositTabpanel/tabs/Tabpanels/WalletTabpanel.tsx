@@ -100,7 +100,7 @@ const WalletTabpanel = withTabPanel(
           </Typography>
           <Stack spacing={2} direction="row">
             <Button
-              variant="contained"
+              variant="outlined"
               disabled={approveAllDisabled}
               onClick={() => {
                 setApprovalForAll
@@ -121,7 +121,7 @@ const WalletTabpanel = withTabPanel(
               {t('borrow-detail:NFT.approveAll')}
             </Button>
             <Button
-              variant="contained"
+              variant="outlined"
               disabled={!size}
               onClick={() => {
                 const s = setRef.current

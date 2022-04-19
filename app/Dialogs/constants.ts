@@ -1,5 +1,5 @@
 export enum TabValue {
-  'deposit' = 'deposit',
+  'deposit' = 'depositNFT',
   'withdraw' = 'withdraw',
   'borrow' = 'borrow',
   'repay' = 'repay',

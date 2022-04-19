@@ -1,8 +1,8 @@
 const locale = {
   NFTCollateralCollections: {
-    title: 'NFT Collateral Collections',
+    title: 'NFT Collections',
     collection: 'Collection',
-    currentFloorPrice: 'Current Floor Price',
+    currentFloorPrice: 'Floor Price',
     totalCollateralledValue: 'Total Collateral Value',
     totalBorrowed: 'Total Borrowed',
     availableToBorrow: 'Available to Borrow',
