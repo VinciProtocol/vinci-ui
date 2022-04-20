@@ -42,6 +42,4 @@ export const applyServerHMR = (i18n: any) => {
     if (props.changedFiles.length === 0) return
     updateTemplate(props).then(() => reloadServerTranslation(props))
   })
-
-  log(`HMRPlugin has started`)
 }

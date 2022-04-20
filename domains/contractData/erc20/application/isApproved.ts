@@ -14,7 +14,7 @@ export const useIsApproved = () => {
     const returnValue = generalAssets.map(
       ({ lendingPoolAddress, underlyingAsset }) => `${lendingPoolAddress}-${underlyingAsset}`
     )
-    if (__DEV__) console.log('[domains] [tokens]', returnValue)
+    if (__DEV__ && !__SERVER__) console.log('[domains] [tokens]', returnValue)
     return returnValue
   }, [generalAssets])
 
