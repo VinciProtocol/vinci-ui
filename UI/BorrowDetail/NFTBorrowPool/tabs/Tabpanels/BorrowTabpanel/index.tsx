@@ -1,4 +1,4 @@
-import { TabValue } from 'app/Dialogs/constants'
+import { NFTTabValue } from 'app/App/pages/borrowDetail'
 import { withTabPanel } from 'app/hoc/tabs/withTabPanel'
 import BasicTable from 'lib/table/BasicTable'
 import { useTable } from './useTable'
@@ -15,7 +15,7 @@ const BorrowTabpanel = withTabPanel(
     )
   },
   {
-    tabpanelKey: TabValue.borrow,
+    tabpanelKey: NFTTabValue.borrow,
   }
 )
 

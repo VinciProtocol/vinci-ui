@@ -1,11 +1,12 @@
 import { createUseTabs } from 'utils/tabs'
-import { TabValue } from 'app/Dialogs/constants'
+
 export enum NFTTabValue {
-  'deposit' = 'deposit',
+  'deposit' = 'depositNFT',
+  'borrow' = 'borrow',
   'wallet' = 'wallet',
 }
 const useNFTTabs = createUseTabs([NFTTabValue.wallet, NFTTabValue.deposit], 'borrow-detail:NFT.tabs.')
-const useBorrowPoolTabs = createUseTabs([TabValue.borrow, TabValue.deposit])
+const useBorrowPoolTabs = createUseTabs([NFTTabValue.borrow, NFTTabValue.deposit], 'borrow-detail:tabs.')
 export const useBorrowDetail = () => {
   const NTFTabs = useNFTTabs()
   const borrowPoolTabs = useBorrowPoolTabs()

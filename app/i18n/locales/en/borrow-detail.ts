@@ -23,10 +23,14 @@ const locale = {
     availableToBorrow: 'Availale to borrow',
     availableToRepay: 'Availale to repay',
   },
+  tabs: {
+    borrow: 'Borrow',
+    depositNFT: 'Deposit NFT',
+  },
   NFT: {
     tabs: {
-      wallet: 'Wallet NFTs',
-      deposit: 'Deposited NFTs',
+      wallet: 'Wallet NFT',
+      depositNFT: 'Deposited NFT',
     },
     totalValuation: 'Total Valuation:',
     valuation: 'Valuation',

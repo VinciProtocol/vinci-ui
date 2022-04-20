@@ -2,8 +2,8 @@ import { useMemo } from 'react'
 import { styled } from '@mui/material/styles'
 
 import { withTabPanel } from 'app/hoc/tabs/withTabPanel'
+import { NFTTabValue } from 'app/App/pages/borrowDetail'
 
-import { TabValue } from 'app/Dialogs/constants'
 import TabTitle from './tabs/TabTitle'
 import TabContent from './tabs/TabContent'
 
@@ -26,7 +26,7 @@ const DepositTabpanel = withTabPanel(
     )
   },
   {
-    tabpanelKey: TabValue.deposit,
+    tabpanelKey: NFTTabValue.deposit,
   }
 )
 
