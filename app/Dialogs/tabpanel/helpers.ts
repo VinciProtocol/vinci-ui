@@ -70,14 +70,17 @@ export const createUseTabpanel = (props: {
     const { reservesData, walletBalance1, walletBalance2, walletBalance3, walletNFT1, walletNFT2, walletNFT3 } =
       useControllers()
 
-    const title = useMemo(
-      () => ({
+    const title = useMemo(() => {
+      const BN4 = BigNumber.clone({
+        DECIMAL_PLACES: 4,
+      })
+      return {
         text,
         symbol: tableData.symbol,
-        balance: balance.isNaN() ? '-' : balance.toString(),
-      }),
-      [balance, tableData.symbol, text]
-    )
+        balance: balance.isNaN() ? '-' : new BN4(balance).div(1).toString(),
+      }
+    }, [balance, tableData.symbol, text])
+
     const info = useMemo(
       () => ({
         APY: tableData.APY,

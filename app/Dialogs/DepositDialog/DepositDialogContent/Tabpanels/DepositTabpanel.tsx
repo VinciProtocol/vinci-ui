@@ -1,4 +1,5 @@
 import { useDialogs } from 'domains'
+import { useTranslation } from 'next-i18next'
 import type { TabPanelBaseProps } from 'app/hoc/tabs/withTabPanel'
 import { withTabPanel } from 'app/hoc/tabs/withTabPanel'
 import { useControllers } from 'domains'
@@ -22,6 +23,7 @@ const tabpanelKey = TabValue.deposit
 export const DepositTabpanel = withTabPanel(
   (props: TabPanelBaseProps) => {
     const { lendingPool } = useControllers()
+    const { t } = useTranslation()
 
     const dialogs = useDialogs()
     const { tableData } = dialogs.deposit
@@ -41,7 +43,7 @@ export const DepositTabpanel = withTabPanel(
       dialog: dialogs.deposit,
       req: lendingPool.deposit,
       balanceInUSD,
-      text: 'Wallet balance',
+      text: t('lend:lendingPools.walletBalance'),
     })
 
     return <InternalTabpanel {...tab} />

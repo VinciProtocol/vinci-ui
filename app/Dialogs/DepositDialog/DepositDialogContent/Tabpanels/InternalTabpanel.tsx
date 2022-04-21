@@ -40,7 +40,7 @@ const InternalTabpanel = (props: UseTabpanelReturnValue) => {
     <ROOT>
       <Stack spacing={2}>
         <Stack spacing={1}>
-          <Typography variant="caption">
+          <Typography variant="body2">
             {title.text}: {title.balance} {title.symbol}
           </Typography>
           <NumberInput value={input.value} disabled={input.disabled} onChange={input.onChange} onMax={input.onMax} />
