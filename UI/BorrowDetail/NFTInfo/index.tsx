@@ -10,7 +10,9 @@ import Paper from '@mui/material/Paper'
 import Slider from '@mui/material/Slider'
 import Grid from '@mui/material/Grid'
 import Tooltip from '@mui/material/Tooltip'
-import { useContractNFT } from 'domains'
+import IconButton from '@mui/material/IconButton'
+import Image from 'next/image'
+import { useContractNFT, useMarket } from 'domains'
 
 import { useApp } from 'app/App'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
@@ -19,6 +21,7 @@ import NumberDisplay from 'components/math/NumberDisplay'
 
 import type { NFTInfoProps } from './types'
 import type BigNumber from 'bignumber.js'
+import { getNFTInfoByCollection } from 'app/web3/TokenIcon/nft-list'
 
 const HealthFactor: FC<{ value: BigNumber }> = ({ value }) => {
   const theme = useTheme()
@@ -45,7 +48,12 @@ const NFTInfo: FC<NFTInfoProps> = () => {
       padding: theme.spacing(2),
     }))
   )
-  const Title = useMemoEmpty(() => styled(Stack)``)
+  const Title = useMemoEmpty(
+    () => styled('div')`
+      display: flex;
+      justify-content: space-between;
+    `
+  )
   const BorrowLimit = useMemoEmpty(() =>
     styled(Stack)(({ theme }) => ({
       paddingTop: theme.spacing(4),
@@ -54,15 +62,28 @@ const NFTInfo: FC<NFTInfoProps> = () => {
   const InfoList = useMemoEmpty(() => styled(Stack)``)
 
   const { nft } = useContractNFT()
+  const M = useMarket()
+  const { market } = getNFTInfoByCollection(M.market, nft.collection)
 
   return (
     <ROOT variant="card" sx={{ borderRadius: '10px', minHeight: '530px' }}>
       <Stack spacing={2}>
-        <Title spacing={1} direction="row">
-          <NFTIcon collection={nft.collection} sx={{ width: '50px', height: '50px' }} />
-          <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
-            {nft.name}
-          </Typography>
+        <Title>
+          <Stack spacing={1} direction="row">
+            <NFTIcon collection={nft.collection} sx={{ width: '50px', height: '50px' }} />
+            <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
+              {nft.name}
+            </Typography>
+          </Stack>
+          {market && (
+            <IconButton
+              onClick={() => {
+                open(market.url, '_blank')
+              }}
+            >
+              <Image src={market.logo} alt={market.url} width={40} height={40} />
+            </IconButton>
+          )}
         </Title>
         <BorrowLimit>
           <Slider

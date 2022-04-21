@@ -6,6 +6,10 @@ export type NFTSetting = {
   collection: any
   underlyingAsset: any
   src: any
+  market: {
+    logo: any
+    url: string
+  }
 }
 
 type NFT_ID = string
