@@ -37,6 +37,18 @@ const locale = {
     approveAll: 'Approve All',
     depositSelected: 'Deposit Selected',
     withdrawSelected: 'Withdraw Selected',
+    deposit: {
+      noData: {
+        tip: `You don't have any NFTs collaterals.`,
+        btn: 'Deposit NFTs Now',
+      },
+    },
+    wallet: {
+      noData: {
+        tip: `You don't have any NFTs in the wallet.`,
+        btn: 'Buy NFTs Now',
+      },
+    },
   },
   tips: {
     healthFactor:

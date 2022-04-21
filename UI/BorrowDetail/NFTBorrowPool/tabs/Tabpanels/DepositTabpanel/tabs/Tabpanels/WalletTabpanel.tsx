@@ -1,7 +1,9 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import type { FC } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState, Fragment } from 'react'
 import { useTranslation } from 'next-i18next'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
+import Alert from '@mui/material/Alert'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import { useContractNFT } from 'domains'
@@ -157,6 +159,7 @@ const WalletTabpanel = withTabPanel(
               ))}
             </Stack>
           ))}
+          {!data.length && <NoData />}
         </Stack>
       </TabPanel>
     )
@@ -165,5 +168,23 @@ const WalletTabpanel = withTabPanel(
     tabpanelKey: NFTTabValue.wallet,
   }
 )
+
+const NoData: FC = () => {
+  const { t } = useTranslation()
+  const {
+    nft: { nftSetting },
+  } = useContractNFT()
+
+  return (
+    <Fragment>
+      <Alert severity="error">{t('borrow-detail:NFT.wallet.noData.tip')}</Alert>
+      <div>
+        <Button variant="contained" onClick={() => open(nftSetting.market.url, '_blank')}>
+          {t('borrow-detail:NFT.wallet.noData.btn')}
+        </Button>
+      </div>
+    </Fragment>
+  )
+}
 
 export default WalletTabpanel

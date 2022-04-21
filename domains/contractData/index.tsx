@@ -30,18 +30,17 @@ const useContractDataService = () => {
   const contractDataSource = useMemoLazy(() => {
     const returnValue = reservesDatas
       .map((reservesData) => {
-        const nftInfo = market.nfts[reservesData.nftVault.underlyingAsset]
-        if (!nftInfo) return
+        const nftSetting = market.nfts[reservesData.nftVault.underlyingAsset]
+        if (!nftSetting) return
         const userReservesData = userReservesDatas.find(({ id }) => reservesData.id === id)
         const walletBalance = walletBalanceData.find(({ id }) => reservesData.id === id)
         const walletNFT = walletNFTData.find(({ id }) => reservesData.id === id)
-        const lendingPoolAddress = nftInfo.LENDING_POOL
         return {
           reservesData,
           userReservesData,
           walletBalance,
           walletNFT,
-          lendingPoolAddress,
+          nftSetting,
         }
       })
       .filter((reservesData) => reservesData)
@@ -60,7 +59,7 @@ const useContractDataService = () => {
         userReservesData,
         walletBalance: walletBalances,
         walletNFT: walletNFTs,
-        lendingPoolAddress,
+        nftSetting,
       } = contractDataSource[i]
       const { currency, reserves, nftVault, id } = reservesData
       const collection = nftVault.symbol
@@ -172,7 +171,8 @@ const useContractDataService = () => {
           underlyingAsset,
           aTokenAddress,
           variableDebtTokenAddress,
-          lendingPoolAddress,
+          lendingPoolAddress: nftSetting.LENDING_POOL,
+          nftSetting,
           symbol,
           collection,
           collectionName,
@@ -241,7 +241,7 @@ const useContractDataService = () => {
         APY: valueToBigNumber(0),
         borrowAPY: valueToBigNumber(0),
       }
-      const { nftVault, userNFTVault, walletNFTs, nftPriceInUSD, lendingPoolAddress, currency } = list[0]
+      const { nftVault, userNFTVault, walletNFTs, nftPriceInUSD, lendingPoolAddress, nftSetting, currency } = list[0]
 
       const { currencyPriceInUSD } = currency
 
@@ -317,6 +317,7 @@ const useContractDataService = () => {
 
       const nft = {
         lendingPoolAddress,
+        nftSetting,
         borrowBalance: totalBorrowBalanceInUSD.div(currencyPriceInUSD),
         borrowBalanceInUSD: totalBorrowBalanceInUSD,
         baseLTVasCollateral,

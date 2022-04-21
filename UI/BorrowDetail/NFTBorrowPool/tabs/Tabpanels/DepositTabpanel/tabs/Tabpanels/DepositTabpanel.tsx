@@ -1,12 +1,15 @@
-import { useCallback, useMemo, useRef, useState } from 'react'
+import type { FC } from 'react'
+import { useCallback, useMemo, useRef, useState, Fragment } from 'react'
 import { useTranslation } from 'next-i18next'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
+import Alert from '@mui/material/Alert'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import { useContractNFT } from 'domains'
 import { useControllers } from 'domains'
 
+import { useApp } from 'app/App'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { useWallet } from 'app/wallet'
 import { NFTTabValue } from 'app/App/pages/borrowDetail'
@@ -124,6 +127,7 @@ const DepositTabpanel = withTabPanel(
               ))}
             </Stack>
           ))}
+          {!data.length && <NoData />}
         </Stack>
       </TabPanel>
     )
@@ -132,5 +136,31 @@ const DepositTabpanel = withTabPanel(
     tabpanelKey: NFTTabValue.deposit,
   }
 )
+
+const NoData: FC = () => {
+  const { t } = useTranslation()
+  const {
+    pages: {
+      borrowDetail: {
+        NTFTabs: { setTab },
+      },
+    },
+  } = useApp()
+  return (
+    <Fragment>
+      <Alert severity="error">{t('borrow-detail:NFT.deposit.noData.tip')}</Alert>
+      <div>
+        <Button
+          variant="contained"
+          onClick={() => {
+            setTab(NFTTabValue.wallet)
+          }}
+        >
+          {t('borrow-detail:NFT.deposit.noData.btn')}
+        </Button>
+      </div>
+    </Fragment>
+  )
+}
 
 export default DepositTabpanel
