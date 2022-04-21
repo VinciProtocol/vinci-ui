@@ -6,6 +6,11 @@ const locale = {
     totalCollateralledValue: 'Total Collateral Value',
     totalBorrowed: 'Total Borrowed',
     availableToBorrow: 'Available to Borrow',
+    functionButtons: 'Actions',
+    actions: {
+      depositNFT: 'Deposit NFT',
+      borrow: 'Borrow',
+    },
   },
 }
 

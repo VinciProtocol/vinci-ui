@@ -1,22 +1,68 @@
-import { useMemo } from 'react'
+import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useRouter } from 'next/router'
+import { useContractData } from 'domains'
+import type { TableCellRenderer } from 'react-virtualized'
 
+import Stack from '@mui/material/Stack'
+import Button from '@mui/material/Button'
+import TableCell from '@mui/material/TableCell'
+
+import { NFTTabValue } from 'app/App/pages/borrowDetail'
 import type { TableColumnsProps, VirtualizedTableProps } from 'lib/table/VirtualizedTable'
-
 import {
   collectionHeaderRenderer,
   collectionCellRenderer,
   BalanceCellRenderer,
   leftHeaderRenderer,
 } from 'components/Table'
-import { useContractData } from 'domains'
 
 export const useTable = (): VirtualizedTableProps => {
   const router = useRouter()
   const { t } = useTranslation()
 
   const { nftAssets } = useContractData()
+
+  const FunctionButtonsCellRenderer: TableCellRenderer = useCallback(
+    ({ rowData }) => {
+      return (
+        <TableCell component="div">
+          <Stack spacing={2} direction="row">
+            <Button
+              variant="outlined"
+              size="small"
+              onClick={(e) => {
+                e.stopPropagation()
+                e.nativeEvent.stopImmediatePropagation()
+                router.push({
+                  pathname: '/borrow/[id]',
+                  query: { id: rowData.underlyingAsset, tabpanelKey: NFTTabValue.deposit },
+                })
+              }}
+            >
+              {t('borrow:NFTCollateralCollections.actions.depositNFT')}
+            </Button>
+            <Button
+              variant="outlined"
+              size="small"
+              onClick={(e) => {
+                e.stopPropagation()
+                e.nativeEvent.stopImmediatePropagation()
+                router.push({
+                  pathname: '/borrow/[id]',
+                  query: { id: rowData.underlyingAsset, tabpanelKey: NFTTabValue.borrow },
+                })
+              }}
+            >
+              {t('borrow:NFTCollateralCollections.actions.borrow')}
+            </Button>
+          </Stack>
+        </TableCell>
+      )
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [t]
+  )
 
   const columns = useMemo(
     () =>
@@ -30,27 +76,33 @@ export const useTable = (): VirtualizedTableProps => {
           },
           {
             dataKey: 'currentFloorPrice',
-            width: 250,
+            width: 200,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: BalanceCellRenderer,
           },
           {
             dataKey: 'totalCollateralledValue',
-            width: 250,
+            width: 200,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: BalanceCellRenderer,
           },
           {
             dataKey: 'totalBorrowed',
-            width: 250,
+            width: 200,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: BalanceCellRenderer,
           },
           {
             dataKey: 'availableToBorrow',
-            width: 250,
+            width: 200,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: BalanceCellRenderer,
+          },
+          {
+            dataKey: 'functionButtons',
+            width: 250,
+            headerRenderer: leftHeaderRenderer,
+            cellRenderer: FunctionButtonsCellRenderer,
           },
         ] as TableColumnsProps[]
       ).map((column) => {
