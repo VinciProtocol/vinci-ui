@@ -103,7 +103,8 @@ export const createUseTabpanel = (props: {
         },
         confirm: {
           disabled: !user || !inputSlider.input.value || !parseFloat(inputSlider.input.value) || req.loading,
-          onClick: () =>
+          onClick: () => {
+            if (isApproved) close()
             req
               .post(
                 getPostProps({
@@ -126,7 +127,8 @@ export const createUseTabpanel = (props: {
                 walletNFT2.restart()
                 walletNFT3.restart()
                 if (isApproved) inputSlider.input.clear()
-              }),
+              })
+          },
         },
         text: isApproved ? tabpanelKey : 'approve',
       }
