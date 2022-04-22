@@ -190,6 +190,13 @@ export const NumberCellRenderer: TableCellRenderer = ({ cellData }) => {
     </TableCell>
   )
 }
+export const NumberDisplayCellRenderer: TableCellRenderer = ({ cellData }) => {
+  return (
+    <TableCell align="center" component="div">
+      <NumberDisplay value={cellData} options="number" />
+    </TableCell>
+  )
+}
 export const ETHCellRenderer: TableCellRenderer = ({ cellData }) => {
   return (
     <TableCell align="center" component="div">

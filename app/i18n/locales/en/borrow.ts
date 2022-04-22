@@ -4,6 +4,7 @@ const locale = {
     collection: 'Collection',
     currentFloorPrice: 'Floor Price',
     totalCollateralledValue: 'Total Collateral Value',
+    activeCollaterals: 'Active Collaterals',
     totalBorrowed: 'Total Borrowed',
     availableToBorrow: 'Available to Borrow',
     functionButtons: 'Actions',

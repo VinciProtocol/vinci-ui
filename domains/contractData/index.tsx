@@ -335,6 +335,7 @@ const useContractDataService = () => {
         currentFloorPrice: nftPriceInUSD.div(currencyPriceInUSD),
         currentFloorPriceInUSD: nftPriceInUSD,
         totalCollateralledValue: totalCollateralledValueInUSD.div(currencyPriceInUSD),
+        activeCollaterals: totalNumberOfCollateral,
         totalCollateralledValueInUSD,
         totalBorrowed: totalBorrowedInUSD.div(currencyPriceInUSD),
         totalBorrowedInUSD,

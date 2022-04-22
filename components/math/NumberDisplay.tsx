@@ -9,7 +9,7 @@ import type { BigNumberValue } from 'utils/math/types'
 
 type NumberDisplayProps = {
   value: BigNumberValue
-  options?: 'USD' | 'percent'
+  options?: 'number' | 'USD' | 'percent'
   type?: 'network'
 }
 

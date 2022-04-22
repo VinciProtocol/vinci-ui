@@ -15,6 +15,7 @@ import {
   NumberCellRenderer,
   leftHeaderRenderer,
   BalanceCellRenderer,
+  NumberDisplayCellRenderer,
 } from 'components/Table'
 import { TabValue } from 'app/Dialogs/constants'
 
@@ -61,10 +62,10 @@ export const useTable = (): VirtualizedTableProps => {
             cellRenderer: collectionCellRenderer,
           },
           {
-            dataKey: 'collateralValue',
-            width: 250,
+            dataKey: 'activeCollaterals',
+            width: 200,
             headerRenderer: leftHeaderRenderer,
-            cellRenderer: BalanceCellRenderer,
+            cellRenderer: NumberDisplayCellRenderer,
           },
           {
             dataKey: 'borrowBalance',

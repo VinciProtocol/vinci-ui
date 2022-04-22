@@ -29,13 +29,18 @@ export const useNumberFormat = () => {
   return returnValue
 }
 
-const getOptions = (fn: any, options = {}) => ({
+const getOptions = (fn: any, options: any) => ({
   ...fn(),
   ...options,
 })
 
-const numberFormatOptions = (type: 'USD' | 'percent', options?: Intl.NumberFormatOptions): Intl.NumberFormatOptions => {
+const numberFormatOptions = (
+  type: 'number' | 'USD' | 'percent',
+  options: Intl.NumberFormatOptions = {}
+): Intl.NumberFormatOptions => {
   switch (type) {
+    case 'number':
+      return options
     case 'USD':
       return getOptions(createUSDFormatOptions, options)
     case 'percent':
