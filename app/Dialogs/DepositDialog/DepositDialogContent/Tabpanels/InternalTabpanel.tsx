@@ -6,10 +6,11 @@ import Button from '@mui/material/Button'
 import Paper from '@mui/material/Paper'
 import Stack from '@mui/material/Stack'
 import Grid from '@mui/material/Grid'
-import Slider from '@mui/material/Slider'
 import Typography from '@mui/material/Typography'
 import { grey } from '@mui/material/colors'
 
+import RatioSlider from 'app/Dialogs/components/RatioSlider'
+import RatioSliderTitle from 'app/Dialogs/components/RatioSlider/RatioSliderTitle'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import type { UseTabpanelReturnValue } from 'app/Dialogs/tabpanel/helpers'
 import NumberDisplay from 'components/math/NumberDisplay'
@@ -74,8 +75,8 @@ const InternalTabpanel = (props: UseTabpanelReturnValue) => {
         </TabpanelPaper>
 
         <Stack spacing={1}>
-          <Typography variant="caption">{t('lend:lendingPools.ratio')}</Typography>
-          <Slider value={slider.value} disabled={slider.disabled} onChange={slider.onChange} />
+          <RatioSliderTitle slider={slider} title={t('lend:lendingPools.ratio')} />
+          <RatioSlider slider={slider} />
         </Stack>
 
         <Stack spacing={2} direction="row">
