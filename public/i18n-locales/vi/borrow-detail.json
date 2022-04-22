@@ -20,19 +20,35 @@
     "functionButtons": "Hoạt động",
     "ratio": "Tỉ lệ",
     "walletBalance": "Số dư trên ví",
-    "availableToBorrow": "Có sẵn để mượn",
+    "availableToBorrow": "Có sẵn để vay",
     "availableToRepay": "Có sẵn để hoàn trả"
+  },
+  "tabs": {
+    "borrow": "Vay",
+    "depositNFT": "Gửi tiền NFT"
   },
   "NFT": {
     "tabs": {
       "wallet": "Ví NFT",
-      "deposit": "NFT đã ký gửi"
+      "depositNFT": "NFT đã ký gửi"
     },
     "totalValuation": "Tổng định giá:",
     "valuation": "Định giá",
     "approveAll": "Phê duyệt tất cả",
     "depositSelected": "Gửi tiền đã chọn",
-    "withdrawSelected": "Rút tiền đã chọn"
+    "withdrawSelected": "Rút tiền đã chọn",
+    "deposit": {
+      "noData": {
+        "tip": "Bạn không có bất kỳ tài sản thế chấp NFTs nào.",
+        "btn": "Gửi tiền NFT ngay"
+      }
+    },
+    "wallet": {
+      "noData": {
+        "tip": "Bạn không có bất kỳ NFT nào trong ví.",
+        "btn": "Mua NFT ngay"
+      }
+    }
   },
   "tips": {
     "healthFactor": "Yếu tố sức khỏe thể hiện mức độ an toàn cho khoản vay của bạn dựa trên tỷ lệ giữa giá trị tài sản thế chấp NFT so với số tiền đã vay. Giữ nó trên 1 để tránh thanh lý.",

@@ -1,5 +1,5 @@
 {
-  "goBack": "Geri dön",
+  "goBack": "Geri gitmek",
   "borrowInfo": {
     "borrowLimit": "Borç Limiti",
     "healthFactor": "Sağlık faktörü:",
@@ -23,16 +23,32 @@
     "availableToBorrow": "Ödünç almak için müsait",
     "availableToRepay": "Geri ödeme için kullanılabilir"
   },
+  "tabs": {
+    "borrow": "Borç almak",
+    "depositNFT": "Para Yatırma NFT"
+  },
   "NFT": {
     "tabs": {
-      "wallet": "Cüzdan NFT'leri",
-      "deposit": "Yatırılan NFT'ler"
+      "wallet": "Cüzdan NFT",
+      "depositNFT": "Yatırılan NFT"
     },
     "totalValuation": "Toplam Değerleme:",
     "valuation": "Değerleme",
     "approveAll": "Tümünü Onayla",
     "depositSelected": "Depozito Seçildi",
-    "withdrawSelected": "Seçileni Geri Çek"
+    "withdrawSelected": "Seçileni Geri Çek",
+    "deposit": {
+      "noData": {
+        "tip": "Herhangi bir NFT teminatınız yok.",
+        "btn": "NFT'leri Şimdi Yatırın"
+      }
+    },
+    "wallet": {
+      "noData": {
+        "tip": "Cüzdanınızda hiç NFT yok.",
+        "btn": "Şimdi NFT Satın Alın"
+      }
+    }
   },
   "tips": {
     "healthFactor": "Sağlık faktörü, NFT teminat değerinin ödünç alınan miktara oranından elde edilen kredinizin güvenliğini temsil eder. Tasfiyeyi önlemek için 1'in üzerinde tutun.",

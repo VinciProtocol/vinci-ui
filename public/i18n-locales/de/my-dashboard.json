@@ -10,12 +10,13 @@
   "loans": {
     "title": "Meine Darlehen",
     "collection": "Sammlung",
-    "currentFloorPrice": "Aktueller Mindestpreis",
-    "collateralValue": "Besicherter Wert",
-    "borrowBalance": "Geliehenes Guthaben",
+    "currentFloorPrice": "Bodenpreis",
+    "collateralValue": "Sicherheitenwert",
+    "activeCollaterals": "Aktive Sicherheiten",
+    "borrowBalance": "Ihr Geliehenes",
     "liquidationPrice": "Liquidationspreis",
     "healthFactor": "Gesundheitsfaktor",
-    "functionButtons": "Aktion"
+    "functionButtons": "Handlung"
   },
   "supplies": {
     "title": "Meine Vorräte",
@@ -23,6 +24,6 @@
     "APY": "APY",
     "underlyingBalance": "Versorgungsbilanz",
     "walletBalance": "Wallet-Guthaben",
-    "functionButtons": "Aktion"
+    "functionButtons": "Handlung"
   }
 }

@@ -15,7 +15,7 @@
       "subTitle": "Pour commencer à utiliser Vinci"
     },
     "connected": {
-      "title": "Lié",
+      "title": "Connecté",
       "subTitle": "Connecté avec"
     },
     "connecting": {
@@ -25,12 +25,17 @@
     "error": {
       "title": "Connecter le portefeuille",
       "subTitle": "Pour commencer à utiliser Vinci",
-      "ChainUnknownError": "Mauvais réseau",
+      "ChainUnknownError": "Changer de réseau",
       "ConnectionRejectedError": "Refusé de connecter le portefeuille"
     },
     "tips": {
       "accept": "En me connectant, j'accepte",
       "term": "Conditions d'utilisation de Vinci"
+    },
+    "chain": {
+      "title": "Sélectionnez votre réseau",
+      "subTitle": "Votre réseau actuel :",
+      "error": "Réseau non pris en charge"
     }
   },
   "menu": {

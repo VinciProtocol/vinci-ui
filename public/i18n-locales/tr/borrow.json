@@ -1,10 +1,16 @@
 {
   "NFTCollateralCollections": {
-    "title": "NFT Teminat Koleksiyonları",
+    "title": "NFT Koleksiyonları",
     "collection": "Toplamak",
-    "currentFloorPrice": "Güncel Taban Fiyatı",
+    "currentFloorPrice": "Kat Fiyatı",
     "totalCollateralledValue": "Toplam Teminat Değeri",
+    "activeCollaterals": "Aktif Teminatlar",
     "totalBorrowed": "Toplam Borç",
-    "availableToBorrow": "Ödünç Alınabilir"
+    "availableToBorrow": "Ödünç Alınabilir",
+    "functionButtons": "Hareketler",
+    "actions": {
+      "depositNFT": "Para Yatırma NFT",
+      "borrow": "Borç almak"
+    }
   }
 }

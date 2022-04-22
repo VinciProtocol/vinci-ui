@@ -1,10 +1,16 @@
 {
   "NFTCollateralCollections": {
-    "title": "NFT-Sicherheitensammlungen",
+    "title": "NFT-Sammlungen",
     "collection": "Sammlung",
-    "currentFloorPrice": "Aktueller Mindestpreis",
+    "currentFloorPrice": "Bodenpreis",
     "totalCollateralledValue": "Gesamter Sicherheitenwert",
+    "activeCollaterals": "Aktive Sicherheiten",
     "totalBorrowed": "Insgesamt geliehen",
-    "availableToBorrow": "Zum Ausleihen verfügbar"
+    "availableToBorrow": "Zum Ausleihen verfügbar",
+    "functionButtons": "Aktionen",
+    "actions": {
+      "depositNFT": "Hinterlegen Sie NFT",
+      "borrow": "Ausleihen"
+    }
   }
 }

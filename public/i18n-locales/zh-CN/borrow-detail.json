@@ -23,16 +23,32 @@
     "availableToBorrow": "可借",
     "availableToRepay": "可还款"
   },
+  "tabs": {
+    "borrow": "借",
+    "depositNFT": "充值 NFT"
+  },
   "NFT": {
     "tabs": {
       "wallet": "钱包 NFT",
-      "deposit": "已存入的 NFT"
+      "depositNFT": "存入 NFT"
     },
     "totalValuation": "总估值：",
     "valuation": "估值",
     "approveAll": "全部批准",
     "depositSelected": "已选择存款",
-    "withdrawSelected": "撤回所选"
+    "withdrawSelected": "撤回所选",
+    "deposit": {
+      "noData": {
+        "tip": "你没有任何 NFT 抵押品。",
+        "btn": "立即存入 NFT"
+      }
+    },
+    "wallet": {
+      "noData": {
+        "tip": "你的钱包里没有任何 NFT。",
+        "btn": "立即购买 NFT"
+      }
+    }
   },
   "tips": {
     "healthFactor": "健康因素代表您的贷款的安全性，来自 NFT 抵押品价值与借入金额的比例。保持在1以上，以避免清算。",

@@ -1,10 +1,16 @@
 {
   "NFTCollateralCollections": {
-    "title": "คอลเลกชันหลักประกัน NFT",
+    "title": "คอลเลกชัน NFT",
     "collection": "ของสะสม",
-    "currentFloorPrice": "ราคาพื้นปัจจุบัน",
+    "currentFloorPrice": "ราคาพื้น",
     "totalCollateralledValue": "มูลค่าหลักประกันทั้งหมด",
+    "activeCollaterals": "หลักประกันที่ใช้งานอยู่",
     "totalBorrowed": "ยืมทั้งหมด",
-    "availableToBorrow": "พร้อมให้ยืม"
+    "availableToBorrow": "พร้อมให้ยืม",
+    "functionButtons": "การกระทำ",
+    "actions": {
+      "depositNFT": "ฝาก NFT",
+      "borrow": "ยืม"
+    }
   }
 }

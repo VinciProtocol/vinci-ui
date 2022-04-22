@@ -10,9 +10,10 @@
   "loans": {
     "title": "Các khoản cho vay của tôi",
     "collection": "Bộ sưu tập",
-    "currentFloorPrice": "Giá sàn hiện tại",
-    "collateralValue": "Giá trị được đối chiếu",
-    "borrowBalance": "Số dư đã vay",
+    "currentFloorPrice": "Giá sàn",
+    "collateralValue": "Giá trị tài sản đảm bảo",
+    "activeCollaterals": "Tài sản thế chấp đang hoạt động",
+    "borrowBalance": "Bạn đã vay",
     "liquidationPrice": "Giá thanh lý",
     "healthFactor": "Yếu tố sức khỏe",
     "functionButtons": "Hoạt động"

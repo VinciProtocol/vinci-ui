@@ -10,9 +10,10 @@
   "loans": {
     "title": "我的贷款",
     "collection": "收藏",
-    "currentFloorPrice": "当前底价",
-    "collateralValue": "抵押价值",
-    "borrowBalance": "借入余额",
+    "currentFloorPrice": "底价",
+    "collateralValue": "抵押品价值",
+    "activeCollaterals": "主动抵押品",
+    "borrowBalance": "你借来的",
     "liquidationPrice": "清算价格",
     "healthFactor": "健康因素",
     "functionButtons": "行动"

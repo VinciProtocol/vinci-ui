@@ -1,7 +1,7 @@
 {
   "wallet": {
     "btn": {
-      "cancel": "Stornieren",
+      "cancel": "Absagen",
       "disconnected": "Trennen",
       "deposit": "Anzahlung",
       "withdraw": "Zurückziehen",
@@ -25,12 +25,17 @@
     "error": {
       "title": "Brieftasche verbinden",
       "subTitle": "Um mit der Verwendung von Vinci zu beginnen",
-      "ChainUnknownError": "Falsches Netzwerk",
+      "ChainUnknownError": "Netzwerk wechseln",
       "ConnectionRejectedError": "Wallet-Verbindung abgelehnt"
     },
     "tips": {
       "accept": "Indem ich mich verbinde, akzeptiere ich",
       "term": "Vincis Nutzungsbedingungen"
+    },
+    "chain": {
+      "title": "Wählen Sie Ihr Netzwerk aus",
+      "subTitle": "Ihr aktuelles Netzwerk:",
+      "error": "Nicht unterstütztes Netzwerk"
     }
   },
   "menu": {

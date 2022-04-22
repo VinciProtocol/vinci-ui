@@ -13,26 +13,42 @@
   },
   "NFTBorrowPool": {
     "title": "Kreditpools",
-    "symbol": "Anlagegut",
+    "symbol": "Anlage",
     "borrowAPY": "APY ausleihen",
     "basedOnYourCollateral": "Basierend auf Ihren Sicherheiten",
     "borrowBalance": "Ihr Geliehenes",
-    "functionButtons": "Aktion",
+    "functionButtons": "Handlung",
     "ratio": "Verhältnis",
     "walletBalance": "Wallet-Guthaben",
     "availableToBorrow": "Ausleihbar",
     "availableToRepay": "Zur Rückzahlung verfügbar"
   },
+  "tabs": {
+    "borrow": "Ausleihen",
+    "depositNFT": "Hinterlegen Sie NFT"
+  },
   "NFT": {
     "tabs": {
-      "wallet": "Wallet-NFTs",
-      "deposit": "Hinterlegte NFTs"
+      "wallet": "Brieftasche NFT",
+      "depositNFT": "Hinterlegte NFT"
     },
     "totalValuation": "Gesamtbewertung:",
     "valuation": "Bewertung",
     "approveAll": "Alle genehmigen",
     "depositSelected": "Anzahlung ausgewählt",
-    "withdrawSelected": "Ausgewählte zurückziehen"
+    "withdrawSelected": "Ausgewählte zurückziehen",
+    "deposit": {
+      "noData": {
+        "tip": "Sie haben keine NFTs-Sicherheiten.",
+        "btn": "Zahlen Sie jetzt NFTs ein"
+      }
+    },
+    "wallet": {
+      "noData": {
+        "tip": "Sie haben keine NFTs in der Brieftasche.",
+        "btn": "Kaufen Sie jetzt NFTs"
+      }
+    }
   },
   "tips": {
     "healthFactor": "Der Gesundheitsfaktor stellt die Sicherheit Ihres Darlehens dar, abgeleitet aus dem Verhältnis des NFT-Sicherheitswerts zum geliehenen Betrag. Halten Sie es über 1, um eine Liquidation zu vermeiden.",

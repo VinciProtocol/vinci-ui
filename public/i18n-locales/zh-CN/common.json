@@ -25,12 +25,17 @@
     "error": {
       "title": "连接钱包",
       "subTitle": "开始使用 Vinci",
-      "ChainUnknownError": "错误的网络",
+      "ChainUnknownError": "交换网络",
       "ConnectionRejectedError": "拒绝连接钱包"
     },
     "tips": {
       "accept": "通过连接，我接受",
       "term": "芬奇的服务条款"
+    },
+    "chain": {
+      "title": "选择你的网络",
+      "subTitle": "您当前的网络：",
+      "error": "不支持的网络"
     }
   },
   "menu": {

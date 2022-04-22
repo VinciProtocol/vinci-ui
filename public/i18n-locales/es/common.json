@@ -3,7 +3,7 @@
     "btn": {
       "cancel": "Cancelar",
       "disconnected": "Desconectar",
-      "deposit": "Depositar",
+      "deposit": "Depósito",
       "withdraw": "Retirar",
       "borrow": "Tomar prestado",
       "repay": "Pagar",
@@ -25,12 +25,17 @@
     "error": {
       "title": "Conectar billetera",
       "subTitle": "Para empezar a usar Vinci",
-      "ChainUnknownError": "Red incorrecta",
+      "ChainUnknownError": "Cambiar red",
       "ConnectionRejectedError": "Rechazado para conectar la billetera"
     },
     "tips": {
       "accept": "Al conectarme, acepto",
       "term": "Condiciones de servicio de Vinci"
+    },
+    "chain": {
+      "title": "Seleccione su red",
+      "subTitle": "Su red actual:",
+      "error": "Red no compatible"
     }
   },
   "menu": {

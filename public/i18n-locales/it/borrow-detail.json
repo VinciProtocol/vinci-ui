@@ -13,7 +13,7 @@
   },
   "NFTBorrowPool": {
     "title": "Piscine di prestito",
-    "symbol": "Risorsa",
+    "symbol": "Bene",
     "borrowAPY": "Prendi in prestito APY",
     "basedOnYourCollateral": "Sulla base della tua garanzia",
     "borrowBalance": "Il tuo preso in prestito",
@@ -23,24 +23,40 @@
     "availableToBorrow": "Disponibile a prendere in prestito",
     "availableToRepay": "Disponibile a rimborsare"
   },
+  "tabs": {
+    "borrow": "Prestito",
+    "depositNFT": "Deposito NFT"
+  },
   "NFT": {
     "tabs": {
-      "wallet": "NFT di portafoglio",
-      "deposit": "NFT depositati"
+      "wallet": "Portafoglio NFT",
+      "depositNFT": "NFT depositato"
     },
     "totalValuation": "Valutazione totale:",
     "valuation": "Valutazione",
     "approveAll": "Approva tutto",
     "depositSelected": "Deposito selezionato",
-    "withdrawSelected": "Ritiro selezionato"
+    "withdrawSelected": "Ritiro selezionato",
+    "deposit": {
+      "noData": {
+        "tip": "Non hai alcuna garanzia NFT.",
+        "btn": "Deposita NFT ora"
+      }
+    },
+    "wallet": {
+      "noData": {
+        "tip": "Non hai NFT nel portafoglio.",
+        "btn": "Acquista ora NFT"
+      }
+    }
   },
   "tips": {
     "healthFactor": "Il fattore salute rappresenta la sicurezza del tuo prestito derivata dalla proporzione del valore della garanzia NFT rispetto all'importo preso in prestito. Mantienilo sopra 1 per evitare la liquidazione.",
-    "floorPrice": "Il prezzo iniziale è il prezzo più basso per gli articoli da collezione, anziché il prezzo medio degli articoli, e viene aggiornato in tempo reale.",
-    "liquidationPrice": "Prezzo minimo del collaterale al quale la tua posizione verrà liquidata.",
+    "floorPrice": "Il prezzo iniziale è il prezzo più basso per gli articoli della collezione, anziché il prezzo medio degli articoli, e viene aggiornato in tempo reale.",
+    "liquidationPrice": "Prezzo minimo del collaterale al quale la tua posizione sarà liquidata.",
     "collateralValue": "Valore della garanzia NFT depositata nella tua posizione.",
     "totalBorrowed": "Attualmente totale preso in prestito nella tua posizione.",
-    "availableToBorrow": "Valore del prestito prendibile in prestito data la garanzia depositata.",
+    "availableToBorrow": "Valore del prestito prestabile data la garanzia depositata.",
     "ltv": "Il rapporto Loan to Value (LTV) definisce l'importo massimo delle attività di prestito che possono essere prese in prestito con una specifica garanzia NFT.",
     "liquidationFee": "Questo è lo sconto che un liquidatore ottiene quando acquista una garanzia NFT segnalata per la liquidazione."
   }

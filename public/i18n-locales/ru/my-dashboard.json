@@ -10,9 +10,10 @@
   "loans": {
     "title": "Мои кредиты",
     "collection": "Коллекция",
-    "currentFloorPrice": "Текущая минимальная цена",
-    "collateralValue": "Заложенная стоимость",
-    "borrowBalance": "Заемный баланс",
+    "currentFloorPrice": "Минимальная цена",
+    "collateralValue": "Залоговая стоимость",
+    "activeCollaterals": "Активные залога",
+    "borrowBalance": "Ваш заимствованный",
     "liquidationPrice": "Цена ликвидации",
     "healthFactor": "Фактор здоровья",
     "functionButtons": "Действие"

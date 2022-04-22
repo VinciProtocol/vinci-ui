@@ -1,10 +1,16 @@
 {
   "NFTCollateralCollections": {
-    "title": "Bộ sưu tập tài sản thế chấp NFT",
+    "title": "Bộ sưu tập NFT",
     "collection": "Bộ sưu tập",
-    "currentFloorPrice": "Giá sàn hiện tại",
+    "currentFloorPrice": "Giá sàn",
     "totalCollateralledValue": "Tổng giá trị tài sản đảm bảo",
+    "activeCollaterals": "Tài sản thế chấp đang hoạt động",
     "totalBorrowed": "Tổng số tiền đã vay",
-    "availableToBorrow": "Có sẵn để vay"
+    "availableToBorrow": "Có sẵn để vay",
+    "functionButtons": "Hành động",
+    "actions": {
+      "depositNFT": "Gửi tiền NFT",
+      "borrow": "Vay"
+    }
   }
 }

@@ -1,10 +1,16 @@
 {
   "NFTCollateralCollections": {
-    "title": "NFT 자료 수집",
+    "title": "NFT 컬렉션",
     "collection": "수집",
-    "currentFloorPrice": "현재 하한가",
+    "currentFloorPrice": "가격 하한선",
     "totalCollateralledValue": "총 담보 가치",
+    "activeCollaterals": "활성 담보",
     "totalBorrowed": "총 차입금",
-    "availableToBorrow": "대출 가능"
+    "availableToBorrow": "대출 가능",
+    "functionButtons": "행위",
+    "actions": {
+      "depositNFT": "NFT 입금",
+      "borrow": "빌리다"
+    }
   }
 }

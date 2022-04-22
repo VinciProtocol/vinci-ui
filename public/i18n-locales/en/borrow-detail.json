@@ -23,16 +23,32 @@
     "availableToBorrow": "Availale to borrow",
     "availableToRepay": "Availale to repay"
   },
+  "tabs": {
+    "borrow": "Borrow",
+    "depositNFT": "Deposit NFT"
+  },
   "NFT": {
     "tabs": {
-      "wallet": "Wallet NFTs",
-      "deposit": "Deposited NFTs"
+      "wallet": "Wallet NFT",
+      "depositNFT": "Deposited NFT"
     },
     "totalValuation": "Total Valuation:",
     "valuation": "Valuation",
     "approveAll": "Approve All",
     "depositSelected": "Deposit Selected",
-    "withdrawSelected": "Withdraw Selected"
+    "withdrawSelected": "Withdraw Selected",
+    "deposit": {
+      "noData": {
+        "tip": "You don't have any NFTs collaterals.",
+        "btn": "Deposit NFTs Now"
+      }
+    },
+    "wallet": {
+      "noData": {
+        "tip": "You don't have any NFTs in the wallet.",
+        "btn": "Buy NFTs Now"
+      }
+    }
   },
   "tips": {
     "healthFactor": "The health factor represents the safety of your loan derived from the proportion of NFT collateral value versus amount borrowed. Keep it above 1 to avoid liquidation.",

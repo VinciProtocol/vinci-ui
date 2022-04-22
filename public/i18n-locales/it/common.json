@@ -25,12 +25,17 @@
     "error": {
       "title": "Collega il portafoglio",
       "subTitle": "Per iniziare a usare Vinci",
-      "ChainUnknownError": "Rete sbagliata",
+      "ChainUnknownError": "Cambia rete",
       "ConnectionRejectedError": "Rifiutato per connettere il portafoglio"
     },
     "tips": {
       "accept": "Collegandomi, accetto",
       "term": "Termini di servizio di Vinci"
+    },
+    "chain": {
+      "title": "Seleziona la tua rete",
+      "subTitle": "La tua rete attuale:",
+      "error": "Rete non supportata"
     }
   },
   "menu": {

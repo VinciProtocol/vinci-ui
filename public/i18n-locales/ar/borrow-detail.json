@@ -1,5 +1,5 @@
 {
-  "goBack": "عد",
+  "goBack": "عُد",
   "borrowInfo": {
     "borrowLimit": "حد الاقتراض",
     "healthFactor": "عامل الصحة:",
@@ -23,21 +23,37 @@
     "availableToBorrow": "افايلال للاقتراض",
     "availableToRepay": "افايلال على السداد"
   },
+  "tabs": {
+    "borrow": "يستعير",
+    "depositNFT": "إيداع NFT"
+  },
   "NFT": {
     "tabs": {
-      "wallet": "NFTs المحفظة",
-      "deposit": "NFTs المودعة"
+      "wallet": "محفظة NFT",
+      "depositNFT": "إيداع NFT"
     },
     "totalValuation": "إجمالي التقييم:",
     "valuation": "تقييم",
     "approveAll": "الموافقة على الكل",
     "depositSelected": "الإيداع المحدد",
-    "withdrawSelected": "سحب المحدد"
+    "withdrawSelected": "سحب المحدد",
+    "deposit": {
+      "noData": {
+        "tip": "ليس لديك أي ضمانات NFT.",
+        "btn": "إيداع NFTs الآن"
+      }
+    },
+    "wallet": {
+      "noData": {
+        "tip": "ليس لديك أي NFTs في المحفظة.",
+        "btn": "شراء NFTs الآن"
+      }
+    }
   },
   "tips": {
     "healthFactor": "يمثل عامل الصحة سلامة قرضك المستمد من نسبة قيمة الضمان NFT مقابل المبلغ المقترض. احتفظ بها أعلى من 1 لتجنب التصفية.",
     "floorPrice": "السعر الأدنى هو أقل سعر لعناصر المجموعة ، وليس متوسط سعر العنصر ، ويتم تحديثه في الوقت الفعلي.",
-    "liquidationPrice": "السعر الأدنى للضمان الذي سيتم عنده تصفية مركزك.",
+    "liquidationPrice": "السعر الأدنى للضمانات الذي سيتم عنده تصفية مركزك.",
     "collateralValue": "قيمة الضمان NFT المودعة في مركزك.",
     "totalBorrowed": "مجموع المقترض حاليا في مركزك.",
     "availableToBorrow": "قيمة القرض القابلة للاقتراض بالنظر إلى الضمان المودع.",

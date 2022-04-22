@@ -17,22 +17,38 @@
     "borrowAPY": "Emprunter APY",
     "basedOnYourCollateral": "En fonction de votre garantie",
     "borrowBalance": "Votre emprunt",
-    "functionButtons": "action",
+    "functionButtons": "Action",
     "ratio": "Rapport",
     "walletBalance": "Solde du portefeuille",
     "availableToBorrow": "Disponible pour emprunter",
     "availableToRepay": "Disponible pour rembourser"
   },
+  "tabs": {
+    "borrow": "Emprunter",
+    "depositNFT": "Dépôt NFT"
+  },
   "NFT": {
     "tabs": {
-      "wallet": "NFT de portefeuille",
-      "deposit": "NFT déposés"
+      "wallet": "Portefeuille NFT",
+      "depositNFT": "NFT déposé"
     },
     "totalValuation": "Valorisation totale :",
     "valuation": "Évaluation",
     "approveAll": "Tout approuver",
     "depositSelected": "Dépôt sélectionné",
-    "withdrawSelected": "Retirer la sélection"
+    "withdrawSelected": "Retirer la sélection",
+    "deposit": {
+      "noData": {
+        "tip": "Vous n'avez aucune garantie NFT.",
+        "btn": "Déposez des NFT maintenant"
+      }
+    },
+    "wallet": {
+      "noData": {
+        "tip": "Vous n'avez pas de NFT dans le portefeuille.",
+        "btn": "Achetez des NFT maintenant"
+      }
+    }
   },
   "tips": {
     "healthFactor": "Le facteur de santé représente la sécurité de votre prêt dérivée de la proportion de la valeur de la garantie NFT par rapport au montant emprunté. Gardez-le au-dessus de 1 pour éviter la liquidation.",

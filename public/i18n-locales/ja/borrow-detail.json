@@ -23,16 +23,32 @@
     "availableToBorrow": "借りる利用可能",
     "availableToRepay": "返済するために利用可能"
   },
+  "tabs": {
+    "borrow": "かりて",
+    "depositNFT": "NFTをデポジットする"
+  },
   "NFT": {
     "tabs": {
       "wallet": "ウォレットNFT",
-      "deposit": "デポジットされたNFT"
+      "depositNFT": "デポジットされたNFT"
     },
     "totalValuation": "総評価：",
     "valuation": "評価",
     "approveAll": "すべて承認する",
     "depositSelected": "選択された預金",
-    "withdrawSelected": "選択した撤回"
+    "withdrawSelected": "選択した撤回",
+    "deposit": {
+      "noData": {
+        "tip": "NFTの担保はありません。",
+        "btn": "今すぐNFTを入金する"
+      }
+    },
+    "wallet": {
+      "noData": {
+        "tip": "ウォレットにNFTがありません。",
+        "btn": "今すぐNFTを購入する"
+      }
+    }
   },
   "tips": {
     "healthFactor": "健全性係数は、NFT担保価値と借入額の比率から導き出されるローンの安全性を表します。清算を避けるために1より上に保ってください。",

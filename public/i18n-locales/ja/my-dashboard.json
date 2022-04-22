@@ -10,9 +10,10 @@
   "loans": {
     "title": "私のローン",
     "collection": "コレクション",
-    "currentFloorPrice": "現在の最低料金",
-    "collateralValue": "担保付きの価値",
-    "borrowBalance": "借入残高",
+    "currentFloorPrice": "最低料金",
+    "collateralValue": "担保価値",
+    "activeCollaterals": "アクティブな担保",
+    "borrowBalance": "あなたの借りた",
     "liquidationPrice": "清算価格",
     "healthFactor": "健康要因",
     "functionButtons": "アクション"

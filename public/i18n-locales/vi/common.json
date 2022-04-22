@@ -5,9 +5,9 @@
       "disconnected": "Ngắt kết nối",
       "deposit": "Gửi tiền",
       "withdraw": "Rút",
-      "borrow": "Vay mượn",
+      "borrow": "Vay",
       "repay": "Trả lại",
-      "details": "Chi tiết",
+      "details": "Thông tin chi tiết",
       "approve": "Chấp thuận"
     },
     "disconnected": {
@@ -25,19 +25,24 @@
     "error": {
       "title": "Kết nối ví",
       "subTitle": "Để bắt đầu sử dụng Vinci",
-      "ChainUnknownError": "Mạng sai",
+      "ChainUnknownError": "Chuyển mạng",
       "ConnectionRejectedError": "Bị từ chối kết nối ví"
     },
     "tips": {
       "accept": "Bằng cách kết nối, tôi chấp nhận",
       "term": "Điều khoản dịch vụ của Vinci"
+    },
+    "chain": {
+      "title": "Chọn mạng của bạn",
+      "subTitle": "Mạng hiện tại của bạn:",
+      "error": "Mạng không được hỗ trợ"
     }
   },
   "menu": {
     "Markets": "Thị trường",
     "Dashboard": "Bảng điều khiển của tôi",
-    "Lend": "Cho mượn",
-    "Borrow": "Vay mượn",
+    "Lend": "Mượn",
+    "Borrow": "Vay",
     "BorrowDetail": "Chi tiết Vay",
     "Stake": "Cổ phần",
     "Liquidation": "Thị trường thanh lý",

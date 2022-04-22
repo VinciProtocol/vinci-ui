@@ -10,9 +10,10 @@
   "loans": {
     "title": "สินเชื่อของฉัน",
     "collection": "ของสะสม",
-    "currentFloorPrice": "ราคาพื้นปัจจุบัน",
+    "currentFloorPrice": "ราคาพื้น",
     "collateralValue": "มูลค่าหลักประกัน",
-    "borrowBalance": "ยอดคงเหลือที่ยืม",
+    "activeCollaterals": "หลักประกันที่ใช้งานอยู่",
+    "borrowBalance": "ยืมของคุณ",
     "liquidationPrice": "ราคาการชำระบัญชี",
     "healthFactor": "ปัจจัยด้านสุขภาพ",
     "functionButtons": "หนังบู๊"

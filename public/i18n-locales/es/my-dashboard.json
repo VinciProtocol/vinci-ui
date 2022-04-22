@@ -9,10 +9,11 @@
   },
   "loans": {
     "title": "Mis préstamos",
-    "collection": "Colección",
-    "currentFloorPrice": "Precio mínimo actual",
-    "collateralValue": "Valor garantizado",
-    "borrowBalance": "Saldo prestado",
+    "collection": "Recopilación",
+    "currentFloorPrice": "Precio mínimo",
+    "collateralValue": "Valor colateral",
+    "activeCollaterals": "Garantías activas",
+    "borrowBalance": "su prestado",
     "liquidationPrice": "Precio de liquidación",
     "healthFactor": "factor de salud",
     "functionButtons": "Acción"

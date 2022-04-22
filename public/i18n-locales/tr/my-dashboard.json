@@ -10,9 +10,10 @@
   "loans": {
     "title": "Kredilerim",
     "collection": "Toplamak",
-    "currentFloorPrice": "Güncel Taban Fiyatı",
-    "collateralValue": "Teminatlı Değer",
-    "borrowBalance": "Borç Bakiyesi",
+    "currentFloorPrice": "Kat Fiyatı",
+    "collateralValue": "Teminat Değeri",
+    "activeCollaterals": "Aktif Teminatlar",
+    "borrowBalance": "ödünç aldığın",
     "liquidationPrice": "Tasfiye Fiyatı",
     "healthFactor": "Sağlık Faktörü",
     "functionButtons": "Aksiyon"

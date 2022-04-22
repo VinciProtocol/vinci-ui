@@ -1,10 +1,16 @@
 {
   "NFTCollateralCollections": {
-    "title": "NFT 抵押品集合",
+    "title": "NFT 集合",
     "collection": "收藏",
-    "currentFloorPrice": "当前底价",
+    "currentFloorPrice": "底价",
     "totalCollateralledValue": "总抵押品价值",
+    "activeCollaterals": "主动抵押品",
     "totalBorrowed": "借款总额",
-    "availableToBorrow": "可借"
+    "availableToBorrow": "可借",
+    "functionButtons": "行动",
+    "actions": {
+      "depositNFT": "充值 NFT",
+      "borrow": "借"
+    }
   }
 }

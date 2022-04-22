@@ -1,10 +1,16 @@
 {
   "NFTCollateralCollections": {
-    "title": "Collezioni di collaterale NFT",
+    "title": "Collezioni NFT",
     "collection": "Collezione",
-    "currentFloorPrice": "Prezzo minimo attuale",
+    "currentFloorPrice": "Prezzo al piano",
     "totalCollateralledValue": "Valore totale della garanzia",
+    "activeCollaterals": "Garanzie attive",
     "totalBorrowed": "Totale preso in prestito",
-    "availableToBorrow": "Disponibile per prendere in prestito"
+    "availableToBorrow": "Disponibile per prendere in prestito",
+    "functionButtons": "Azioni",
+    "actions": {
+      "depositNFT": "Deposito NFT",
+      "borrow": "Prestito"
+    }
   }
 }

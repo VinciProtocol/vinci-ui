@@ -10,9 +10,10 @@
   "loans": {
     "title": "قروضي",
     "collection": "مجموعة",
-    "currentFloorPrice": "سعر الطابق الحالي",
-    "collateralValue": "مضمونة القيمة",
-    "borrowBalance": "الرصيد المقترض",
+    "currentFloorPrice": "أدنى سعر",
+    "collateralValue": "القيمة الضمنية",
+    "activeCollaterals": "الضمانات النشطة",
+    "borrowBalance": "اقترضت",
     "liquidationPrice": "سعر التصفية",
     "healthFactor": "عامل الصحة",
     "functionButtons": "عمل"

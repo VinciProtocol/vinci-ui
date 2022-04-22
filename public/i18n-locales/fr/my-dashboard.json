@@ -9,13 +9,14 @@
   },
   "loans": {
     "title": "Mes prêts",
-    "collection": "Collection",
-    "currentFloorPrice": "Prix plancher actuel",
-    "collateralValue": "Valeur garantie",
-    "borrowBalance": "Solde emprunté",
+    "collection": "Le recueil",
+    "currentFloorPrice": "Prix plancher",
+    "collateralValue": "Valeur de garantie",
+    "activeCollaterals": "Garanties actives",
+    "borrowBalance": "Votre emprunt",
     "liquidationPrice": "Prix de liquidation",
     "healthFactor": "Facteur de santé",
-    "functionButtons": "action"
+    "functionButtons": "Action"
   },
   "supplies": {
     "title": "Mes fournitures",
@@ -23,6 +24,6 @@
     "APY": "APY",
     "underlyingBalance": "Solde d'approvisionnement",
     "walletBalance": "Solde du portefeuille",
-    "functionButtons": "action"
+    "functionButtons": "Action"
   }
 }

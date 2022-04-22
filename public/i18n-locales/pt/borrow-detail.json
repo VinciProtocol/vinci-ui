@@ -13,7 +13,7 @@
   },
   "NFTBorrowPool": {
     "title": "Pools de empréstimos",
-    "symbol": "Ativo",
+    "symbol": "De ativos",
     "borrowAPY": "Emprestar APY",
     "basedOnYourCollateral": "Com base em sua garantia",
     "borrowBalance": "Seu Emprestado",
@@ -23,16 +23,32 @@
     "availableToBorrow": "Disponibilidade para empréstimo",
     "availableToRepay": "Disponível para reembolsar"
   },
+  "tabs": {
+    "borrow": "Pegar emprestado",
+    "depositNFT": "Depósito NFT"
+  },
   "NFT": {
     "tabs": {
-      "wallet": "NFTs de carteira",
-      "deposit": "NFTs depositadas"
+      "wallet": "Carteira NFT",
+      "depositNFT": "NFT depositado"
     },
     "totalValuation": "Avaliação Total:",
     "valuation": "Avaliação",
     "approveAll": "Aprovar tudo",
     "depositSelected": "Depósito selecionado",
-    "withdrawSelected": "Retirar Selecionado"
+    "withdrawSelected": "Retirar Selecionado",
+    "deposit": {
+      "noData": {
+        "tip": "Você não tem garantias de NFTs.",
+        "btn": "Deposite NFTs agora"
+      }
+    },
+    "wallet": {
+      "noData": {
+        "tip": "Você não tem NFTs na carteira.",
+        "btn": "Compre NFTs agora"
+      }
+    }
   },
   "tips": {
     "healthFactor": "O fator de saúde representa a segurança do seu empréstimo derivado da proporção do valor da garantia NFT versus o valor emprestado. Mantenha-o acima de 1 para evitar liquidação.",
