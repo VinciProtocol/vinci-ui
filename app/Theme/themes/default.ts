@@ -16,24 +16,24 @@ export const lightThemeOptions: ThemeOptions = {
       contrastText: '#fff',
     },
     error: {
-      light: '#ff9500',
-      main: '#ff5f05',
-      dark: '#d65104',
+      light: '#ef5350',
+      main: '#f44336',
+      dark: '#e53935',
     },
     warning: {
-      light: '#f7f995',
-      main: '#f8fc46',
-      dark: '#fae700',
+      light: '#ffa726',
+      main: '#ff9800',
+      dark: '#fb8c00',
     },
     info: {
-      light: '#dff7ff',
-      main: '#74ddff',
-      dark: '#00c2ff',
+      light: '#29b6f6',
+      main: '#03a9f4',
+      dark: '#039be5',
     },
     success: {
-      light: '#ddfff1',
-      main: '#5affc4',
-      dark: '#00f59e',
+      light: '#81c784',
+      main: '#66bb6a',
+      dark: '#43a047',
     },
     background: {
       papers: {

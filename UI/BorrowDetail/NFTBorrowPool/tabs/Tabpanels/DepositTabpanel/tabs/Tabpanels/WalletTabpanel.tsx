@@ -3,7 +3,6 @@ import { useCallback, useEffect, useMemo, useRef, useState, Fragment } from 'rea
 import { useTranslation } from 'next-i18next'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
-import Alert from '@mui/material/Alert'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import { useContractNFT } from 'domains'
@@ -177,12 +176,12 @@ const NoData: FC = () => {
 
   return (
     <Fragment>
-      <Alert severity="error">{t('borrow-detail:NFT.wallet.noData.tip')}</Alert>
-      <div>
-        <Button variant="contained" onClick={() => open(nftSetting.market.url, '_blank')}>
+      <Stack alignItems='center' spacing={6} padding={10}>
+        <Typography>{t('borrow-detail:NFT.wallet.noData.tip')}</Typography>
+        <Button variant="contained" size='large' onClick={() => open(nftSetting.market.url, '_blank')}>
           {t('borrow-detail:NFT.wallet.noData.btn')}
         </Button>
-      </div>
+      </Stack>
     </Fragment>
   )
 }

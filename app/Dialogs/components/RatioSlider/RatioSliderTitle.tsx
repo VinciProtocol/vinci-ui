@@ -20,8 +20,8 @@ const RatioSliderTitle: FC<RatioSliderTitleProps> = ({ title, slider }) => {
   )
   return (
     <ROOT>
-      <Typography variant="caption">{title}</Typography>
-      <Typography variant="caption">{Math.round(slider.value) + '%'}</Typography>
+      <Typography variant="body2">{title}</Typography>
+      <Typography variant="body2">{Math.round(slider.value) + '%'}</Typography>
     </ROOT>
   )
 }

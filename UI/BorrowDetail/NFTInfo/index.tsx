@@ -51,7 +51,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
   return (
     <ROOT variant="card" sx={{ borderRadius: '10px', minHeight: '530px' }}>
       <Stack spacing={2}>
-        <Title>
+        <Title sx={{ alignItems: 'center' }}>
           <Stack spacing={1} direction="row">
             <NFTIcon collection={nft.collection} sx={{ width: '50px', height: '50px' }} />
             <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
@@ -60,11 +60,12 @@ const NFTInfo: FC<NFTInfoProps> = () => {
           </Stack>
           {market && (
             <IconButton
+              sx={{ height: 40 }}
               onClick={() => {
                 open(market.url, '_blank')
               }}
             >
-              <Image src={market.logo} alt={market.url} width={40} height={40} />
+              <Image src={market.logo} alt={market.url} width={24} height={24} />
             </IconButton>
           )}
         </Title>

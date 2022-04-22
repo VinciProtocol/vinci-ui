@@ -15,7 +15,7 @@ const HealthFactor: FC<{ value: BigNumber }> = ({ value }) => {
     return theme.palette.success.main
   }, [theme.palette.error.main, theme.palette.info.main, theme.palette.success.main, theme.palette.warning.main, value])
   return (
-    <Typography variant="h6" color={color}>
+    <Typography variant="subtitle1" fontWeight='medium' color={color}>
       <NumberDisplay value={value} />
     </Typography>
   )

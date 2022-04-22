@@ -40,7 +40,9 @@ const getAriaValueText = (value: number) => {
 }
 
 const RatioSlider: FC<RatioSliderProps> = ({ slider }) => {
-  const ROOT = useMemoEmpty(() => styled('div')``)
+  const ROOT = useMemoEmpty(() => styled('div')`
+    padding: 0 12px;
+  `)
   return (
     <ROOT>
       <Slider

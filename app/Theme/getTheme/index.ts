@@ -157,13 +157,6 @@ export const getTheme = (options: ThemeOptions) => {
           },
         ],
       },
-      MuiAlert: {
-        styleOverrides: {
-          root: {
-            color: '#000',
-          },
-        },
-      },
       MuiTableContainer: {
         styleOverrides: {
           root: {
@@ -222,6 +215,13 @@ export const getTheme = (options: ThemeOptions) => {
           valueLabel: {
             background: primary.main,
           },
+          markLabel: {
+            fontSize: '0.75rem',
+          },
+          thumb: {
+            width: '15px',
+            height: '15px',
+          }
         },
       },
       MuiTooltip: {
