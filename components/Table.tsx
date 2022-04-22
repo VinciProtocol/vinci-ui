@@ -10,6 +10,7 @@ import { NFTIcon, NFTSmallIcon, TokenIcon } from 'app/web3/TokenIcon'
 import NumberDisplay from 'components/math/NumberDisplay'
 import type { FC } from 'react'
 import { useTranslation } from 'next-i18next'
+import HealthFactor from './HealthFactor'
 
 export const BalanceCellRenderer: TableCellRenderer = ({ rowData, cellData, dataKey }) => {
   return (
@@ -187,6 +188,13 @@ export const NumberCellRenderer: TableCellRenderer = ({ cellData }) => {
   return (
     <TableCell align="center" component="div">
       <NumberDisplay value={cellData} />
+    </TableCell>
+  )
+}
+export const HealthFactorCellRenderer: TableCellRenderer = ({ cellData }) => {
+  return (
+    <TableCell align="center" component="div">
+      <HealthFactor value={cellData} />
     </TableCell>
   )
 }

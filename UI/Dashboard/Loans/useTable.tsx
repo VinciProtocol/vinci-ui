@@ -16,6 +16,7 @@ import {
   leftHeaderRenderer,
   BalanceCellRenderer,
   NumberDisplayCellRenderer,
+  HealthFactorCellRenderer,
 } from 'components/Table'
 import { TabValue } from 'app/Dialogs/constants'
 
@@ -89,7 +90,7 @@ export const useTable = (): VirtualizedTableProps => {
             dataKey: 'healthFactor',
             width: 200,
             headerRenderer,
-            cellRenderer: NumberCellRenderer,
+            cellRenderer: HealthFactorCellRenderer,
           },
           {
             dataKey: 'functionButtons',

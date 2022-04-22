@@ -1,9 +1,7 @@
 import type { FC } from 'react'
-import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { grey } from '@mui/material/colors'
 import { styled } from '@mui/material/styles'
-import { useTheme } from '@mui/material/styles'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import Paper from '@mui/material/Paper'
@@ -18,25 +16,10 @@ import { useApp } from 'app/App'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { NFTIcon } from 'app/web3/TokenIcon'
 import NumberDisplay from 'components/math/NumberDisplay'
+import HealthFactor from 'components/HealthFactor'
 
 import type { NFTInfoProps } from './types'
-import type BigNumber from 'bignumber.js'
 import { getNFTInfoByCollection } from 'app/web3/TokenIcon/nft-list'
-
-const HealthFactor: FC<{ value: BigNumber }> = ({ value }) => {
-  const theme = useTheme()
-  const color = useMemo(() => {
-    if (!value) return theme.palette.info.main
-    if (value.lt(1.1)) return theme.palette.error.main
-    if (value.lt(1.3)) return theme.palette.warning.main
-    return theme.palette.success.main
-  }, [theme.palette.error.main, theme.palette.info.main, theme.palette.success.main, theme.palette.warning.main, value])
-  return (
-    <Typography variant="h6" color={color}>
-      <NumberDisplay value={value} />
-    </Typography>
-  )
-}
 
 const NFTInfo: FC<NFTInfoProps> = () => {
   const {
