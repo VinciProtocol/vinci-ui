@@ -29,12 +29,15 @@ const NFTInfo: FC<NFTInfoProps> = () => {
   const ROOT = useMemoEmpty(() =>
     styled(Paper)(({ theme }) => ({
       padding: theme.spacing(2),
+      borderRadius: '10px',
+      minHeight: '530px',
     }))
   )
   const Title = useMemoEmpty(
     () => styled('div')`
       display: flex;
       justify-content: space-between;
+      align-items: 'center';
     `
   )
   const BorrowLimit = useMemoEmpty(() =>
@@ -49,9 +52,9 @@ const NFTInfo: FC<NFTInfoProps> = () => {
   const { market } = getNFTInfoByCollection(M.market, nft.collection)
 
   return (
-    <ROOT variant="card" sx={{ borderRadius: '10px', minHeight: '530px' }}>
+    <ROOT variant="card">
       <Stack spacing={2}>
-        <Title sx={{ alignItems: 'center' }}>
+        <Title>
           <Stack spacing={1} direction="row">
             <NFTIcon collection={nft.collection} sx={{ width: '50px', height: '50px' }} />
             <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
