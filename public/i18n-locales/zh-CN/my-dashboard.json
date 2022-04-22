@@ -12,7 +12,7 @@
     "collection": "收藏",
     "currentFloorPrice": "底价",
     "collateralValue": "抵押品价值",
-    "activeCollaterals": "主动抵押品",
+    "depositCount": "主动抵押品",
     "borrowBalance": "你借来的",
     "liquidationPrice": "清算价格",
     "healthFactor": "健康因素",

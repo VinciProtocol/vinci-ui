@@ -12,7 +12,7 @@
     "collection": "Collezione",
     "currentFloorPrice": "Prezzo al piano",
     "collateralValue": "Valore collaterale",
-    "activeCollaterals": "Garanzie attive",
+    "depositCount": "Garanzie attive",
     "borrowBalance": "Il tuo preso in prestito",
     "liquidationPrice": "Prezzo di liquidazione",
     "healthFactor": "Fattore di salute",

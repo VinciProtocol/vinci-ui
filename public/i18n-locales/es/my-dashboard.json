@@ -3,7 +3,7 @@
     "noOpenPosition": "Sin posición abierta"
   },
   "stats": {
-    "supplyBalance": "Suministro Total",
+    "supplyBalance": "Suministro total",
     "netAPY": "APY neto",
     "norrowBalance": "prestado total"
   },
@@ -12,7 +12,7 @@
     "collection": "Recopilación",
     "currentFloorPrice": "Precio mínimo",
     "collateralValue": "Valor colateral",
-    "activeCollaterals": "Garantías activas",
+    "depositCount": "Garantías activas",
     "borrowBalance": "su prestado",
     "liquidationPrice": "Precio de liquidación",
     "healthFactor": "factor de salud",

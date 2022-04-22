@@ -39,8 +39,8 @@
     "withdrawSelected": "選択した撤回",
     "deposit": {
       "noData": {
-        "tip": "NFTの担保はありません。",
-        "btn": "今すぐNFTを入金する"
+        "tip": "NFT担保はありません。",
+        "btn": "今すぐいくつかのNFTをデポジットする"
       }
     },
     "wallet": {

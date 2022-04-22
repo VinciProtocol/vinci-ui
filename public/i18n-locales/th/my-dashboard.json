@@ -12,7 +12,7 @@
     "collection": "ของสะสม",
     "currentFloorPrice": "ราคาพื้น",
     "collateralValue": "มูลค่าหลักประกัน",
-    "activeCollaterals": "หลักประกันที่ใช้งานอยู่",
+    "depositCount": "หลักประกันที่ใช้งานอยู่",
     "borrowBalance": "ยืมของคุณ",
     "liquidationPrice": "ราคาการชำระบัญชี",
     "healthFactor": "ปัจจัยด้านสุขภาพ",

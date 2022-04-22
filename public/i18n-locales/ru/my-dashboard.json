@@ -12,7 +12,7 @@
     "collection": "Коллекция",
     "currentFloorPrice": "Минимальная цена",
     "collateralValue": "Залоговая стоимость",
-    "activeCollaterals": "Активные залога",
+    "depositCount": "Активные залога",
     "borrowBalance": "Ваш заимствованный",
     "liquidationPrice": "Цена ликвидации",
     "healthFactor": "Фактор здоровья",

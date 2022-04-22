@@ -39,14 +39,14 @@
     "withdrawSelected": "Rút tiền đã chọn",
     "deposit": {
       "noData": {
-        "tip": "Bạn không có bất kỳ tài sản thế chấp NFTs nào.",
-        "btn": "Gửi tiền NFT ngay"
+        "tip": "Bạn không có bất kỳ tài sản thế chấp NFT nào.",
+        "btn": "Gửi một số NFT ngay bây giờ"
       }
     },
     "wallet": {
       "noData": {
         "tip": "Bạn không có bất kỳ NFT nào trong ví.",
-        "btn": "Mua NFT ngay"
+        "btn": "Mua một số NFT ngay bây giờ"
       }
     }
   },

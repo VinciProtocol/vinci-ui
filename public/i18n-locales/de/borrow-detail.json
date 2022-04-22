@@ -39,14 +39,14 @@
     "withdrawSelected": "Ausgewählte zurückziehen",
     "deposit": {
       "noData": {
-        "tip": "Sie haben keine NFTs-Sicherheiten.",
-        "btn": "Zahlen Sie jetzt NFTs ein"
+        "tip": "Sie haben keine NFT-Sicherheiten.",
+        "btn": "Zahlen Sie jetzt einige NFTs ein"
       }
     },
     "wallet": {
       "noData": {
         "tip": "Sie haben keine NFTs in der Brieftasche.",
-        "btn": "Kaufen Sie jetzt NFTs"
+        "btn": "Kaufen Sie jetzt einige NFTs"
       }
     }
   },

@@ -12,7 +12,7 @@
     "collection": "Coleção",
     "currentFloorPrice": "Preço mínimo",
     "collateralValue": "Valor da garantia",
-    "activeCollaterals": "Garantias Ativas",
+    "depositCount": "Garantias Ativas",
     "borrowBalance": "Seu Emprestado",
     "liquidationPrice": "Preço de liquidação",
     "healthFactor": "Fator de Saúde",

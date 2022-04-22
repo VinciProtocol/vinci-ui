@@ -12,7 +12,7 @@
     "collection": "Toplamak",
     "currentFloorPrice": "Kat Fiyatı",
     "collateralValue": "Teminat Değeri",
-    "activeCollaterals": "Aktif Teminatlar",
+    "depositCount": "Aktif Teminatlar",
     "borrowBalance": "ödünç aldığın",
     "liquidationPrice": "Tasfiye Fiyatı",
     "healthFactor": "Sağlık Faktörü",

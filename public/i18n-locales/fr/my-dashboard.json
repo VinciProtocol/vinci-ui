@@ -12,7 +12,7 @@
     "collection": "Le recueil",
     "currentFloorPrice": "Prix plancher",
     "collateralValue": "Valeur de garantie",
-    "activeCollaterals": "Garanties actives",
+    "depositCount": "Garanties actives",
     "borrowBalance": "Votre emprunt",
     "liquidationPrice": "Prix de liquidation",
     "healthFactor": "Facteur de santé",

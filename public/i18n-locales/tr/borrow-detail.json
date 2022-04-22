@@ -40,13 +40,13 @@
     "deposit": {
       "noData": {
         "tip": "Herhangi bir NFT teminatınız yok.",
-        "btn": "NFT'leri Şimdi Yatırın"
+        "btn": "Şimdi bazı NFT'leri yatırın"
       }
     },
     "wallet": {
       "noData": {
         "tip": "Cüzdanınızda hiç NFT yok.",
-        "btn": "Şimdi NFT Satın Alın"
+        "btn": "Şimdi bazı NFT'ler satın alın"
       }
     }
   },

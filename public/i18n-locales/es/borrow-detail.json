@@ -39,14 +39,14 @@
     "withdrawSelected": "Retirar seleccionados",
     "deposit": {
       "noData": {
-        "tip": "No tiene garantías de NFT.",
-        "btn": "Deposite NFT ahora"
+        "tip": "No tienes ninguna garantía NFT.",
+        "btn": "Deposite algunos NFT ahora"
       }
     },
     "wallet": {
       "noData": {
         "tip": "No tienes ningún NFT en la billetera.",
-        "btn": "Comprar NFT ahora"
+        "btn": "Compre algunos NFT ahora"
       }
     }
   },

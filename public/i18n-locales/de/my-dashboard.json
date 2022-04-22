@@ -12,7 +12,7 @@
     "collection": "Sammlung",
     "currentFloorPrice": "Bodenpreis",
     "collateralValue": "Sicherheitenwert",
-    "activeCollaterals": "Aktive Sicherheiten",
+    "depositCount": "Aktive Sicherheiten",
     "borrowBalance": "Ihr Geliehenes",
     "liquidationPrice": "Liquidationspreis",
     "healthFactor": "Gesundheitsfaktor",

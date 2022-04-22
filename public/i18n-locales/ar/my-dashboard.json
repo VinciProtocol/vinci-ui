@@ -12,7 +12,7 @@
     "collection": "مجموعة",
     "currentFloorPrice": "أدنى سعر",
     "collateralValue": "القيمة الضمنية",
-    "activeCollaterals": "الضمانات النشطة",
+    "depositCount": "الضمانات النشطة",
     "borrowBalance": "اقترضت",
     "liquidationPrice": "سعر التصفية",
     "healthFactor": "عامل الصحة",

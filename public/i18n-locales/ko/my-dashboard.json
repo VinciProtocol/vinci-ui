@@ -12,7 +12,7 @@
     "collection": "수집",
     "currentFloorPrice": "가격 하한선",
     "collateralValue": "담보 가치",
-    "activeCollaterals": "활성 담보",
+    "depositCount": "활성 담보",
     "borrowBalance": "당신의 빌린",
     "liquidationPrice": "청산가격",
     "healthFactor": "건강 요인",

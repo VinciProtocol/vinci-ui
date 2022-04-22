@@ -12,7 +12,7 @@
     "collection": "Bộ sưu tập",
     "currentFloorPrice": "Giá sàn",
     "collateralValue": "Giá trị tài sản đảm bảo",
-    "activeCollaterals": "Tài sản thế chấp đang hoạt động",
+    "depositCount": "Tài sản thế chấp đang hoạt động",
     "borrowBalance": "Bạn đã vay",
     "liquidationPrice": "Giá thanh lý",
     "healthFactor": "Yếu tố sức khỏe",

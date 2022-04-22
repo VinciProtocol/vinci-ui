@@ -39,14 +39,14 @@
     "withdrawSelected": "Withdraw Selected",
     "deposit": {
       "noData": {
-        "tip": "You don't have any NFTs collaterals.",
-        "btn": "Deposit NFTs Now"
+        "tip": "You don't have any NFT collaterals.",
+        "btn": "Deposit some NFTs Now"
       }
     },
     "wallet": {
       "noData": {
         "tip": "You don't have any NFTs in the wallet.",
-        "btn": "Buy NFTs Now"
+        "btn": "Buy some NFTs Now"
       }
     }
   },

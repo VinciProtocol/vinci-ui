@@ -12,7 +12,7 @@
     "collection": "コレクション",
     "currentFloorPrice": "最低料金",
     "collateralValue": "担保価値",
-    "activeCollaterals": "アクティブな担保",
+    "depositCount": "アクティブな担保",
     "borrowBalance": "あなたの借りた",
     "liquidationPrice": "清算価格",
     "healthFactor": "健康要因",
