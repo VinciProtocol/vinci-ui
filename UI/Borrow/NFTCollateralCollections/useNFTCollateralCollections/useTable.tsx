@@ -15,7 +15,7 @@ import {
   collectionCellRenderer,
   BalanceCellRenderer,
   leftHeaderRenderer,
-  NumberDisplayCellRenderer,
+  ActiveCollateralsCellRenderer,
 } from 'components/Table'
 
 export const useTable = (): VirtualizedTableProps => {
@@ -85,7 +85,7 @@ export const useTable = (): VirtualizedTableProps => {
             dataKey: 'activeCollaterals',
             width: 150,
             headerRenderer: leftHeaderRenderer,
-            cellRenderer: NumberDisplayCellRenderer,
+            cellRenderer: ActiveCollateralsCellRenderer,
           },
           {
             dataKey: 'totalBorrowed',

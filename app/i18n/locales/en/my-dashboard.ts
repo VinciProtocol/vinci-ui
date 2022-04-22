@@ -12,7 +12,7 @@ const locale = {
     collection: 'Collection',
     currentFloorPrice: 'Floor Price',
     collateralValue: 'Collateral Value',
-    activeCollaterals: 'Active Collaterals',
+    depositCount: 'Active Collaterals',
     borrowBalance: 'Your Borrowed',
     liquidationPrice: 'Liquidation Price',
     healthFactor: 'Health Factor',

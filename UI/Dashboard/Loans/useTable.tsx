@@ -12,11 +12,10 @@ import {
   collectionHeaderRenderer,
   collectionCellRenderer,
   headerRenderer,
-  NumberCellRenderer,
   leftHeaderRenderer,
   BalanceCellRenderer,
-  NumberDisplayCellRenderer,
   HealthFactorCellRenderer,
+  DepositCountCellRenderer,
 } from 'components/Table'
 import { TabValue } from 'app/Dialogs/constants'
 
@@ -63,10 +62,10 @@ export const useTable = (): VirtualizedTableProps => {
             cellRenderer: collectionCellRenderer,
           },
           {
-            dataKey: 'activeCollaterals',
+            dataKey: 'depositCount',
             width: 200,
             headerRenderer: leftHeaderRenderer,
-            cellRenderer: NumberDisplayCellRenderer,
+            cellRenderer: DepositCountCellRenderer,
           },
           {
             dataKey: 'borrowBalance',

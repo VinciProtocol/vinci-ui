@@ -321,6 +321,7 @@ const useContractDataService = () => {
         borrowBalance: totalBorrowBalanceInUSD.div(currencyPriceInUSD),
         borrowBalanceInUSD: totalBorrowBalanceInUSD,
         baseLTVasCollateral,
+        depositCount,
         collateralValue: collateralValueInUSD.div(currencyPriceInUSD),
         collateralValueInUSD,
         healthFactor,

@@ -205,6 +205,34 @@ export const NumberDisplayCellRenderer: TableCellRenderer = ({ cellData }) => {
     </TableCell>
   )
 }
+export const ActiveCollateralsCellRenderer: TableCellRenderer = ({ cellData, rowData }) => {
+  return (
+    <TableCell align="center" component="div">
+      <Stack spacing={1}>
+        <Typography variant="body2">
+          <NumberDisplay value={cellData} options="number" />
+        </Typography>
+        <Typography component="p" variant="caption" color={grey[500]}>
+          <NumberDisplay value={rowData['totalCollateralledValueInUSD']} options="USD" />
+        </Typography>
+      </Stack>
+    </TableCell>
+  )
+}
+export const DepositCountCellRenderer: TableCellRenderer = ({ cellData, rowData }) => {
+  return (
+    <TableCell align="center" component="div">
+      <Stack spacing={1}>
+        <Typography variant="body2">
+          <NumberDisplay value={cellData} options="number" />
+        </Typography>
+        <Typography component="p" variant="caption" color={grey[500]}>
+          <NumberDisplay value={rowData['collateralValueInUSD']} options="USD" />
+        </Typography>
+      </Stack>
+    </TableCell>
+  )
+}
 export const ETHCellRenderer: TableCellRenderer = ({ cellData }) => {
   return (
     <TableCell align="center" component="div">
