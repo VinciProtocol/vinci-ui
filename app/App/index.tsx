@@ -2,10 +2,12 @@ import { createContext } from 'utils/createContext'
 
 import { useFormat } from './format'
 import { usePages } from './pages'
+import { useRouteChange } from './router'
 
 export function useAppService() {
   const format = useFormat()
   const pages = usePages()
+  useRouteChange()
 
   return {
     format,
