@@ -4,11 +4,13 @@ import type { TypedUseSelectorHook } from 'react-redux'
 import { useDispatch, useSelector } from 'react-redux'
 
 import contract from './contract'
+import progress from './progress'
 
 export function makeStore() {
   return configureStore({
     reducer: {
       contract,
+      progress,
     },
   })
 }
