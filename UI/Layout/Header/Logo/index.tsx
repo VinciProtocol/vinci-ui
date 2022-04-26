@@ -12,12 +12,6 @@ const Logo = (props: LogoProps) => {
     () => styled('a')`
       display: flex;
       align-items: center;
-      .text {
-        ${({ theme }) => ({
-          marginLeft: theme.spacing(1),
-          color: theme.palette.primary.contrastText,
-        })}
-      }
     `
   )
   return (
