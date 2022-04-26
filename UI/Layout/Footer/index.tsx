@@ -2,8 +2,11 @@ import type { FC } from 'react'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
+import Box from '@mui/material/Box'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { useTheme } from '@mui/material/styles'
+
+import { RESPONSIVE_DESIGN } from 'styles/constants'
 
 import Logo from '../Header/Logo'
 import LogoImgDark from './images/logo-black.svg'
@@ -14,7 +17,7 @@ const Footer: FC = () => {
   const theme = useTheme()
 
   const ROOT = useMemoEmpty(
-    () => styled('footer')`
+    () => styled(Box)`
       ${() => ({
         padding: `${theme.spacing(12)} 0 ${theme.spacing(4)} 0`,
       })}
@@ -39,7 +42,7 @@ const Footer: FC = () => {
   )
 
   return (
-    <ROOT>
+    <ROOT component="footer" sx={RESPONSIVE_DESIGN.display.GEMD('flex')}>
       <Content>
         <Logo imgSrc={theme.palette.mode === 'dark' ? LogoImg : LogoImgDark} />
         <Links />

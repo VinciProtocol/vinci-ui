@@ -6,11 +6,11 @@ import Box from '@mui/material/Box'
 
 import ThemeButton from 'app/Theme/ThemeButton'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
+import { RESPONSIVE_DESIGN } from 'styles/constants'
 
 import Menu from './Menu'
 import MenuMobile from './Menu/mobile'
 import Logo from './Logo'
-import { RESPONSIVE_DESIGN } from 'styles/constants'
 
 const ChainButton = dynamic(() => import('app/wallet/ChainButton'), { ssr: false })
 const ConnectButton = dynamic(() => import('app/wallet/ConnectButton'), { ssr: false })
