@@ -1,3 +1,4 @@
+import { usePageProgressController } from 'store/progress/page'
 import { createContext } from 'utils/createContext'
 
 import { useChainIDChange } from './application/chainIDChange'
@@ -38,6 +39,8 @@ export const useControllersService = () => {
   const lendingPool = useLendingPoolController()
   const erc721 = useERC721Controller()
 
+  const pageProcess = usePageProgressController()
+
   return {
     reservesData,
     userReservesData,
@@ -49,6 +52,7 @@ export const useControllersService = () => {
     walletNFT3,
     lendingPool,
     erc721,
+    pageProcess,
   }
 }
 
