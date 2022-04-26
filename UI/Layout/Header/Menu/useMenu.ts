@@ -32,7 +32,7 @@ export function useMenu() {
   const menuList = useMemo(() => MenuList.map((menu) => ({ ...menu, label: t('menu.' + menu.key) })), [t])
   const currentMenu = useMemo(() => {
     const linkTo = router.route === '/' ? '/lend' : router.route
-    return menuList.find((item) => item.linkTo === linkTo)
+    return menuList.find((item) => item.linkTo === linkTo) || ({} as undefined)
   }, [menuList, router.route])
 
   return { menuList, currentMenu }
