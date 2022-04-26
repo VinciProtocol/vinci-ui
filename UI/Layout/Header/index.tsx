@@ -2,12 +2,15 @@ import type { FC } from 'react'
 import dynamic from 'next/dynamic'
 import { styled } from '@mui/material/styles'
 import Stack from '@mui/material/Stack'
+import Box from '@mui/material/Box'
 
 import ThemeButton from 'app/Theme/ThemeButton'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 
 import Menu from './Menu'
+import MenuMobile from './Menu/mobile'
 import Logo from './Logo'
+import { RESPONSIVE_DESIGN } from 'styles/constants'
 
 const ChainButton = dynamic(() => import('app/wallet/ChainButton'), { ssr: false })
 const ConnectButton = dynamic(() => import('app/wallet/ConnectButton'), { ssr: false })
@@ -21,7 +24,7 @@ const Header: FC = () => {
     `
   )
   const BODY = useMemoEmpty(
-    () => styled('header')`
+    () => styled(Box)`
       height: 85px;
       display: flex;
       justify-content: space-between;
@@ -39,9 +42,10 @@ const Header: FC = () => {
       justify-content: right;
     `
   )
+
   return (
     <ROOT>
-      <BODY>
+      <BODY sx={RESPONSIVE_DESIGN.display.GEMD('flex')}>
         <Logo />
         <Menu />
         <RIGHT direction="row" spacing={2}>
@@ -50,6 +54,10 @@ const Header: FC = () => {
           <ThemeButton />
           <LanguageMenu />
         </RIGHT>
+      </BODY>
+      <BODY sx={RESPONSIVE_DESIGN.display.LESM('flex')}>
+        <Logo />
+        <MenuMobile />
       </BODY>
       <NProgress />
     </ROOT>

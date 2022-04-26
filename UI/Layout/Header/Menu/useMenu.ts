@@ -1,33 +1,39 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 
 const MenuList = [
   {
-    label: 'Lend',
+    key: 'Lend',
     linkTo: '/lend',
   },
   {
-    label: 'Borrow',
+    key: 'Borrow',
     linkTo: '/borrow',
   },
   {
-    label: 'Dashboard',
+    key: 'Dashboard',
     linkTo: '/my-dashboard',
   },
   // {
-  //   label: 'Stake',
+  //   key: 'Stake',
   //   linkTo: '/stake',
   // },
   // {
-  //   label: 'Liquidation',
+  //   key: 'Liquidation',
   //   linkTo: '/liquidation-marketplace',
   // },
 ]
 
 export function useMenu() {
   const { t } = useTranslation()
+  const router = useRouter()
 
-  const menuList = useMemo(() => MenuList.map((menu) => ({ ...menu, label: t('menu.' + menu.label) })), [t])
+  const menuList = useMemo(() => MenuList.map((menu) => ({ ...menu, label: t('menu.' + menu.key) })), [t])
+  const currentMenu = useMemo(() => {
+    const linkTo = router.route === '/' ? '/lend' : router.route
+    return menuList.find((item) => item.linkTo === linkTo)
+  }, [menuList, router.route])
 
-  return { menuList }
+  return { menuList, currentMenu }
 }

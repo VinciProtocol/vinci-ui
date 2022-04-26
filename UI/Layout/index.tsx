@@ -32,7 +32,7 @@ const Layout: FC<LayoutProps> = ({ children, title }) => {
       </Head>
       <Header />
       <Main>{children}</Main>
-      <Footer />
+      {/* <Footer /> */}
     </Fragment>
   )
 }
