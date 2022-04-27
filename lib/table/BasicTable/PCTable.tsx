@@ -1,26 +1,15 @@
 import type { FC } from 'react'
 import { useMemo } from 'react'
+import { styled } from '@mui/material/styles'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
-import type { ColumnProps, TableProps } from 'react-virtualized'
 
-import ROOT from './css/ROOT'
+import type { BasicTableProps } from './types'
 
-export interface BasicTableProps<D = any> {
-  columns: TableColumnsProps[]
-  rowHeight?: number
-  headerHeight?: number
-  data: Array<D>
-  tableProps?: Partial<TableProps>
-}
-
-export type TableColumnsProps = ColumnProps
-
-const BasicTable: FC<BasicTableProps> = (props) => {
+const PCTable: FC<BasicTableProps> = (props) => {
   const { columns, data } = props
-  const { onRowClick } = props.tableProps || {}
 
   const table = useMemo(() => {
     return {
@@ -40,18 +29,7 @@ const BasicTable: FC<BasicTableProps> = (props) => {
       body:
         data &&
         data.map((row, rowIndex) => (
-          <TableRow
-            onClick={(e) =>
-              onRowClick &&
-              onRowClick({
-                rowData: row,
-                index: rowIndex,
-                event: e,
-              })
-            }
-            key={rowIndex}
-            className="ReactVirtualized__Table__row"
-          >
+          <TableRow key={rowIndex} className="ReactVirtualized__Table__row">
             {columns.map((column, columnIndex) => (
               <td
                 key={rowIndex + column.dataKey}
@@ -76,7 +54,7 @@ const BasicTable: FC<BasicTableProps> = (props) => {
           </TableRow>
         )),
     }
-  }, [columns, data, onRowClick])
+  }, [columns, data])
 
   return (
     <ROOT className="table basic-table">
@@ -90,4 +68,39 @@ const BasicTable: FC<BasicTableProps> = (props) => {
   )
 }
 
-export default BasicTable
+export const ROOT = styled('div')`
+  height: 100%;
+  width: 100%;
+  .MuiTable-root,
+  .MuiTableHead-root,
+  .MuiTableBody-root {
+    display: block;
+  }
+  .ReactVirtualized__Table__headerRow,
+  .ReactVirtualized__Table__rowColumn {
+    display: flex;
+  }
+  .MuiTableCell-root {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    flex: 1;
+  }
+
+  .MuiTableCell-alignCenter {
+    justify-content: center;
+  }
+
+  .ReactVirtualized__Table__row {
+    display: flex;
+    will-change: transform;
+    &:hover {
+      ${({ theme }) => ({
+        backgroundColor: theme.palette.background.papers.primary,
+        cursor: 'pointer',
+      })}
+    }
+  }
+`
+
+export default PCTable

@@ -18,7 +18,6 @@ const NProgress: FC = () => {
   )
   const { value, status } = useSelector(selectPageProgress) || {}
   if (status === PROGRESS_STATUS.ready) return null
-  console.log(value)
   return (
     <ROOT>
       <LinearProgress variant="determinate" value={value} />
