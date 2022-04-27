@@ -24,16 +24,23 @@ export const RESPONSIVE_DESIGN = {
     },
   },
   width: {
-    LESM: (lesm: string, gemd: string) => {
-      return {
-        width: {
-          xs: lesm,
-          sm: lesm,
-          md: gemd,
-          lg: gemd,
-          xl: gemd,
-        },
-      }
-    },
+    set: <T extends string>(xs: T, sm: T, md: T, lg: T, xl: T) => ({
+      width: {
+        xs,
+        sm,
+        md,
+        lg,
+        xl,
+      },
+    }),
+    LESM: (lesm: string, gemd: string) => ({
+      width: {
+        xs: lesm,
+        sm: lesm,
+        md: gemd,
+        lg: gemd,
+        xl: gemd,
+      },
+    }),
   },
 }

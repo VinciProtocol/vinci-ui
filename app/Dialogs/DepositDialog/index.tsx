@@ -1,8 +1,7 @@
 import type { FC } from 'react'
-import { styled } from '@mui/material/styles'
 import Dialog from '@mui/material/Dialog'
 
-import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
+import { ROOT } from 'app/Dialogs/styles'
 import { useDialogs } from 'domains'
 import DepositDialogCloseIconButton from './DepositDialogCloseIconButton'
 import DepositDialogTitle from './DepositDialogTitle'
@@ -12,12 +11,6 @@ const DepositDialog: FC = () => {
   const {
     deposit: { visible, close },
   } = useDialogs()
-  const ROOT = useMemoEmpty(() =>
-    styled('div')(({ theme }) => ({
-      position: 'relative',
-      width: theme.spacing(60),
-    }))
-  )
 
   return (
     <Dialog onClose={close} open={visible}>
