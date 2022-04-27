@@ -9,7 +9,7 @@ import Button from '@mui/material/Button'
 import TableCell from '@mui/material/TableCell'
 
 import { NFTTabValue } from 'app/App/pages/borrowDetail'
-import type { TableColumnsProps, VirtualizedTableProps } from 'lib/table/VirtualizedTable'
+import type { TableColumnsProps, BasicTableProps } from 'lib/table/BasicTable/types'
 import {
   collectionHeaderRenderer,
   collectionCellRenderer,
@@ -18,7 +18,7 @@ import {
   ActiveCollateralsCellRenderer,
 } from 'components/Table'
 
-export const useTable = (): VirtualizedTableProps => {
+export const useTable = (): BasicTableProps => {
   const router = useRouter()
   const { t } = useTranslation()
 
@@ -114,21 +114,8 @@ export const useTable = (): VirtualizedTableProps => {
     [t]
   )
 
-  const tableProps: VirtualizedTableProps['tableProps'] = useMemo(
-    () => ({
-      onRowClick: ({ rowData }) => {
-        router.push({
-          pathname: '/borrow/[id]',
-          query: { id: rowData.underlyingAsset },
-        })
-      },
-    }),
-    [router]
-  )
-
   return {
     columns,
     data: nftAssets,
-    tableProps,
   }
 }
