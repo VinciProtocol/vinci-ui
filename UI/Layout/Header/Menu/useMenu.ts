@@ -15,6 +15,11 @@ const MenuList = [
     key: 'Dashboard',
     linkTo: '/my-dashboard',
   },
+  {
+    key: 'BorrowDetail',
+    linkTo: '/borrow/[id]',
+    hide: true,
+  },
   // {
   //   key: 'Stake',
   //   linkTo: '/stake',

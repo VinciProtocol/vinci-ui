@@ -18,19 +18,21 @@ const Menu = () => {
 
   const list = useMemo(
     () =>
-      menuList.map(({ label, linkTo }) => (
-        <Link href={linkTo} key={linkTo} passHref>
-          <Button
-            variant="text"
-            sx={{
-              color: 'primary.contrastText',
-            }}
-            size="large"
-          >
-            {label}
-          </Button>
-        </Link>
-      )),
+      menuList
+        .filter((item) => !item.hide)
+        .map(({ label, linkTo }) => (
+          <Link href={linkTo} key={linkTo} passHref>
+            <Button
+              variant="text"
+              sx={{
+                color: 'primary.contrastText',
+              }}
+              size="large"
+            >
+              {label}
+            </Button>
+          </Link>
+        )),
     [menuList]
   )
 

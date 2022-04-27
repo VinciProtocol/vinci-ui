@@ -24,13 +24,15 @@ const MenuMobile = () => {
   const list = useMemo(
     () => (
       <List>
-        {menuList.map(({ label, linkTo, key }) => (
-          <Link href={linkTo} key={linkTo} passHref>
-            <ListItem button selected={currentMenu.key === key} onClick={() => setOpenDrawer(false)}>
-              <ListItemText primary={label} />
-            </ListItem>
-          </Link>
-        ))}
+        {menuList
+          .filter((item) => !item.hide)
+          .map(({ label, linkTo, key }) => (
+            <Link href={linkTo} key={linkTo} passHref>
+              <ListItem button selected={currentMenu.key === key} onClick={() => setOpenDrawer(false)}>
+                <ListItemText primary={label} />
+              </ListItem>
+            </Link>
+          ))}
         <Divider />
         {links.map(({ label, linkTo, icon }) => (
           <Link href={linkTo} key={linkTo} passHref>
