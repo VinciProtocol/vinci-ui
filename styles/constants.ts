@@ -23,4 +23,17 @@ export const RESPONSIVE_DESIGN = {
       }
     },
   },
+  width: {
+    LESM: (lesm: string, gemd: string) => {
+      return {
+        width: {
+          xs: lesm,
+          sm: lesm,
+          md: gemd,
+          lg: gemd,
+          xl: gemd,
+        },
+      }
+    },
+  },
 }
