@@ -10,6 +10,7 @@ import Grid from '@mui/material/Grid'
 import Tooltip from '@mui/material/Tooltip'
 import IconButton from '@mui/material/IconButton'
 import Image from 'next/image'
+import { RESPONSIVE_DESIGN } from 'styles/constants'
 import { useContractNFT, useMarket } from 'domains'
 
 import { useApp } from 'app/App'
@@ -45,7 +46,13 @@ const NFTInfo: FC<NFTInfoProps> = () => {
       paddingTop: theme.spacing(4),
     }))
   )
-  const InfoList = useMemoEmpty(() => styled(Stack)``)
+  const InfoList = useMemoEmpty(
+    () => styled(Stack)`
+      .MuiGrid-container {
+        align-items: center;
+      }
+    `
+  )
 
   const { nft } = useContractNFT()
   const M = useMarket()
@@ -54,7 +61,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
   return (
     <ROOT variant="card">
       <Stack spacing={2}>
-        <Title>
+        <Title sx={RESPONSIVE_DESIGN.display.GEMD('flex')}>
           <Stack spacing={1} direction="row">
             <NFTIcon collection={nft.collection} sx={{ width: '50px', height: '50px' }} />
             <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
@@ -72,6 +79,15 @@ const NFTInfo: FC<NFTInfoProps> = () => {
             </IconButton>
           )}
         </Title>
+        <Title sx={RESPONSIVE_DESIGN.display.LESM('flex')}>
+          <Stack spacing={1} direction="row">
+            <NFTIcon collection={nft.collection} sx={{ width: '50px', height: '50px' }} />
+            <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
+              {nft.name}
+            </Typography>
+          </Stack>
+        </Title>
+
         <BorrowLimit>
           <Slider
             value={nft.borrowLimitUtilization || 0}
@@ -95,6 +111,23 @@ const NFTInfo: FC<NFTInfoProps> = () => {
           </Grid>
         </BorrowLimit>
         <InfoList spacing={1.5}>
+          <Grid container sx={RESPONSIVE_DESIGN.display.LESM('flex')}>
+            <Grid item xs>
+              <Typography variant="subtitle1">{t('borrow-detail:borrowInfo.market')}</Typography>
+            </Grid>
+            <Grid item>
+              {market && (
+                <IconButton
+                  sx={{ height: 40 }}
+                  onClick={() => {
+                    open(market.url, '_blank')
+                  }}
+                >
+                  <Image src={market.logo} alt={market.url} width={24} height={24} />
+                </IconButton>
+              )}
+            </Grid>
+          </Grid>
           <Grid container>
             <Grid item xs>
               <Tooltip title={t('borrow-detail:tips.healthFactor')} placement="bottom-end">

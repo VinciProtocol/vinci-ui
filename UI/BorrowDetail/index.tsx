@@ -5,6 +5,7 @@ import Stack from '@mui/material/Stack'
 import Grid from '@mui/material/Grid'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
+import { RESPONSIVE_DESIGN } from 'styles/constants'
 
 import GoBack from './GoBack'
 import NFTBorrowPool from './NFTBorrowPool'
@@ -22,7 +23,7 @@ const BorrowDetail: FC = () => {
     <Content>
       <Stack spacing={2}>
         <GoBack />
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={RESPONSIVE_DESIGN.display.GEMD('flex')}>
           <Grid item xs={8}>
             <NFTBorrowPool />
           </Grid>
@@ -30,6 +31,10 @@ const BorrowDetail: FC = () => {
             <NFTInfo />
           </Grid>
         </Grid>
+        <Stack spacing={2} sx={RESPONSIVE_DESIGN.display.LESM('flex')}>
+          <NFTInfo />
+          <NFTBorrowPool />
+        </Stack>
       </Stack>
     </Content>
   )

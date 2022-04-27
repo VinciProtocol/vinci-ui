@@ -10,6 +10,7 @@ const locale = {
     availableToBorrow: 'Available to borrow:',
     ltv: 'Loan to value:',
     liquidationFee: 'Liquidation fee:',
+    market: 'Market: ',
   },
   NFTBorrowPool: {
     title: 'Lending Pools',
