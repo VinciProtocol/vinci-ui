@@ -1,21 +1,18 @@
 import type { FC } from 'react'
 import dynamic from 'next/dynamic'
 import { styled } from '@mui/material/styles'
-import Stack from '@mui/material/Stack'
 import Box from '@mui/material/Box'
 
-import ThemeButton from 'app/Theme/ThemeButton'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { RESPONSIVE_DESIGN } from 'styles/constants'
 
-import Menu from './Menu'
-import MenuMobile from './Menu/mobile'
 import Logo from './Logo'
 
-const ChainButton = dynamic(() => import('app/wallet/ChainButton'), { ssr: false })
-const ConnectButton = dynamic(() => import('app/wallet/ConnectButton'), { ssr: false })
-const LanguageMenu = dynamic(() => import('app/i18n/components/LanguageMenu'), { ssr: false })
 const NProgress = dynamic(() => import('lib/nprogress/NProgress'), { ssr: false })
+const Menu = dynamic(() => import('./Menu'), { ssr: false })
+const MenuMobile = dynamic(() => import('./Menu/mobile'), { ssr: false })
+const Actions = dynamic(() => import('./Actions'), { ssr: false })
+const ActionsMobile = dynamic(() => import('./Actions/mobile'), { ssr: false })
 
 const Header: FC = () => {
   const ROOT = useMemoEmpty(
@@ -36,28 +33,18 @@ const Header: FC = () => {
       })}
     `
   )
-  const RIGHT = useMemoEmpty(
-    () => styled(Stack)`
-      min-width: 300px;
-      justify-content: right;
-    `
-  )
 
   return (
     <ROOT>
       <BODY sx={RESPONSIVE_DESIGN.display.GEMD('flex')}>
         <Logo />
         <Menu />
-        <RIGHT direction="row" spacing={2}>
-          <ChainButton />
-          <ConnectButton />
-          <ThemeButton />
-          <LanguageMenu />
-        </RIGHT>
+        <Actions />
       </BODY>
       <BODY sx={RESPONSIVE_DESIGN.display.LESM('flex')}>
         <Logo />
         <MenuMobile />
+        <ActionsMobile />
       </BODY>
       <NProgress />
     </ROOT>

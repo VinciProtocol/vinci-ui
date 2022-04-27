@@ -19,12 +19,7 @@ const MenuMobile = () => {
   const { menuList, currentMenu } = useMenu()
   const { links } = useLinks()
   const [openDrawer, setOpenDrawer] = useState(false)
-  const ROOT = useMemoEmpty(
-    () => styled('div')`
-      display: flex;
-      align-items: center;
-    `
-  )
+  const ROOT = useMemoEmpty(() => styled('div')``)
 
   const list = useMemo(
     () => (
