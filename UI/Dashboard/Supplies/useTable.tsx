@@ -16,10 +16,10 @@ import {
   PercentCellRenderer,
   symbolCellRenderer,
 } from 'components/Table'
-import type { TableColumnsProps, VirtualizedTableProps } from 'lib/table/VirtualizedTable'
+import type { TableColumnsProps, BasicTableProps } from 'lib/table/BasicTable/types'
 import { TabValue } from 'app/Dialogs/constants'
 
-export const useTable = (): VirtualizedTableProps => {
+export const useTable = (): BasicTableProps => {
   const { t } = useTranslation()
   const { actions } = useDialogs()
   const { generalAssets } = useContractData()

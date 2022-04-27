@@ -7,7 +7,7 @@ import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import TableCell from '@mui/material/TableCell'
 
-import type { TableColumnsProps, VirtualizedTableProps } from 'lib/table/VirtualizedTable'
+import type { TableColumnsProps, BasicTableProps } from 'lib/table/BasicTable/types'
 import {
   collectionHeaderRenderer,
   collectionCellRenderer,
@@ -19,7 +19,7 @@ import {
 } from 'components/Table'
 import { TabValue } from 'app/Dialogs/constants'
 
-export const useTable = (): VirtualizedTableProps => {
+export const useTable = (): BasicTableProps => {
   const { t } = useTranslation()
 
   const { nftAssets } = useContractData()

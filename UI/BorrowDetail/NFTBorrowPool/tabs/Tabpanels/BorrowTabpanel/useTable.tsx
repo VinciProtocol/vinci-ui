@@ -8,7 +8,7 @@ import TableCell from '@mui/material/TableCell'
 import { useDialogs, useContractNFT } from 'domains'
 
 import { TabValue } from 'app/Dialogs/constants'
-import type { TableColumnsProps, VirtualizedTableProps } from 'lib/table/VirtualizedTable'
+import type { TableColumnsProps, BasicTableProps } from 'lib/table/BasicTable/types'
 import {
   leftHeaderRenderer,
   SymbolAbbCellRenderer,
@@ -18,7 +18,7 @@ import {
   AvailableToBorrowCellRenderer,
 } from 'components/Table'
 
-export const useTable = (): VirtualizedTableProps => {
+export const useTable = (): BasicTableProps => {
   const { t } = useTranslation()
   const { actions } = useDialogs()
   const { nft } = useContractNFT()
@@ -97,7 +97,7 @@ export const useTable = (): VirtualizedTableProps => {
     [t]
   )
 
-  const tableProps: VirtualizedTableProps['tableProps'] = useMemo(() => ({}), [])
+  const tableProps: BasicTableProps['tableProps'] = useMemo(() => ({}), [])
 
   return {
     columns,
