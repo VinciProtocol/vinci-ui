@@ -1,17 +1,21 @@
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { styled } from '@mui/material/styles'
+import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack'
+import { useContractData } from 'domains'
 
+import NumberDisplay from 'components/math/NumberDisplay'
+import { RESPONSIVE_DESIGN } from 'styles/constants'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
+
 import StatsItem from './StatsItem'
 import type { StatsProps } from './types'
-import { useContractData } from 'domains'
-import NumberDisplay from 'components/math/NumberDisplay'
 
 const Stats: FC<StatsProps> = () => {
   const { t } = useTranslation()
   const ROOT = useMemoEmpty(() =>
-    styled('div')(({ theme }) => ({
+    styled(Box)(({ theme }) => ({
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -54,27 +58,47 @@ const Stats: FC<StatsProps> = () => {
   )
 
   return (
-    <ROOT>
-      <StatsItem
-        title={t('my-dashboard:stats.supplyBalance')}
-        value={<NumberDisplay value={dashboard.supplyBalanceInUSD} options="USD" />}
-      />
-      <NetAPYBox>
-        <NetAPYRing>
-          <Ring />
-        </NetAPYRing>
-        <NetAPYDesc>
+    <Box>
+      <ROOT sx={RESPONSIVE_DESIGN.display.GTSM('flex')}>
+        <StatsItem
+          title={t('my-dashboard:stats.supplyBalance')}
+          value={<NumberDisplay value={dashboard.supplyBalanceInUSD} options="USD" />}
+        />
+        <NetAPYBox>
+          <NetAPYRing>
+            <Ring />
+          </NetAPYRing>
+          <NetAPYDesc>
+            <StatsItem
+              title={t('my-dashboard:stats.netAPY')}
+              value={<NumberDisplay value={dashboard.netAPY} options="percent" />}
+            />
+          </NetAPYDesc>
+        </NetAPYBox>
+        <StatsItem
+          title={t('my-dashboard:stats.norrowBalance')}
+          value={<NumberDisplay value={dashboard.borrowBalanceInUSD} options="USD" />}
+        />
+      </ROOT>
+      <Stack sx={RESPONSIVE_DESIGN.display.LESM('flex')} spacing={2}>
+        <Stack spacing={2} direction="row">
+          <StatsItem
+            title={t('my-dashboard:stats.supplyBalance')}
+            value={<NumberDisplay value={dashboard.supplyBalanceInUSD} options="USD" />}
+          />
+          <StatsItem
+            title={t('my-dashboard:stats.norrowBalance')}
+            value={<NumberDisplay value={dashboard.borrowBalanceInUSD} options="USD" />}
+          />
+        </Stack>
+        <Stack spacing={2} direction="row">
           <StatsItem
             title={t('my-dashboard:stats.netAPY')}
             value={<NumberDisplay value={dashboard.netAPY} options="percent" />}
           />
-        </NetAPYDesc>
-      </NetAPYBox>
-      <StatsItem
-        title={t('my-dashboard:stats.norrowBalance')}
-        value={<NumberDisplay value={dashboard.borrowBalanceInUSD} options="USD" />}
-      />
-    </ROOT>
+        </Stack>
+      </Stack>
+    </Box>
   )
 }
 
