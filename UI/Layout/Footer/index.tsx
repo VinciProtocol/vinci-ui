@@ -42,7 +42,7 @@ const Footer: FC = () => {
   )
 
   return (
-    <ROOT component="footer" sx={RESPONSIVE_DESIGN.display.GEMD('flex')}>
+    <ROOT component="footer" sx={RESPONSIVE_DESIGN.display.GTSM('flex')}>
       <Content>
         <Logo imgSrc={theme.palette.mode === 'dark' ? LogoImg : LogoImgDark} />
         <Links />

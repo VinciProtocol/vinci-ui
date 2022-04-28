@@ -36,7 +36,7 @@ const Header: FC = () => {
 
   return (
     <ROOT>
-      <BODY sx={RESPONSIVE_DESIGN.display.GEMD('flex')}>
+      <BODY sx={RESPONSIVE_DESIGN.display.GTSM('flex')}>
         <Logo />
         <Menu />
         <Actions />

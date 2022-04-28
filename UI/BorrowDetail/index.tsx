@@ -23,7 +23,7 @@ const BorrowDetail: FC = () => {
     <Content>
       <Stack spacing={2}>
         <GoBack />
-        <Grid container spacing={2} sx={RESPONSIVE_DESIGN.display.GEMD('flex')}>
+        <Grid container spacing={2} sx={RESPONSIVE_DESIGN.display.GTSM('flex')}>
           <Grid item xs={8}>
             <NFTBorrowPool />
           </Grid>

@@ -33,7 +33,7 @@ export const RESPONSIVE_DESIGN = {
         },
       }
     },
-    GEMD: (display = 'block') => {
+    GTSM: (display = 'block') => {
       return {
         display: {
           xs: 'none',

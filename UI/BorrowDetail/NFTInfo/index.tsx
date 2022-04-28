@@ -61,7 +61,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
   return (
     <ROOT variant="card">
       <Stack spacing={2}>
-        <Title sx={RESPONSIVE_DESIGN.display.GEMD('flex')}>
+        <Title sx={RESPONSIVE_DESIGN.display.GTSM('flex')}>
           <Stack spacing={1} direction="row">
             <NFTIcon collection={nft.collection} sx={{ width: '50px', height: '50px' }} />
             <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
