@@ -13,6 +13,7 @@ import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { useWallet } from 'app/wallet'
 import { NFTTabValue } from 'app/App/pages/borrowDetail'
 import { withTabPanel } from 'app/hoc/tabs/withTabPanel'
+import { RESPONSIVE_DESIGN } from 'styles/constants'
 
 import NFTCard from './components/NFTCard'
 import NumberDisplay from 'components/math/NumberDisplay'
@@ -77,17 +78,17 @@ const DepositTabpanel = withTabPanel(
       }
       setSize(s.size)
     }, [])
-
-    return (
-      <TabPanel>
-        <Title>
+    const title = useMemo(
+      () => ({
+        text: (
           <Typography gutterBottom variant="subtitle2" component="div">
             <Stack spacing={2} direction="row">
               <span>{t('borrow-detail:NFT.totalValuation')}</span>
               <NumberDisplay value={totalValuation} type="network" />
             </Stack>
           </Typography>
-
+        ),
+        actions: (
           <Stack spacing={2} direction="row">
             <Button
               variant="outlined"
@@ -117,8 +118,19 @@ const DepositTabpanel = withTabPanel(
               {t('borrow-detail:NFT.withdrawSelected')}
             </Button>
           </Stack>
+        ),
+      }),
+      [account, lendingPoolAddress, size, t, totalValuation, underlyingAsset, withdrawNFT]
+    )
+
+    return (
+      <TabPanel>
+        <Title sx={RESPONSIVE_DESIGN.display.NEXS('flex')}>
+          {title.text}
+          {title.actions}
         </Title>
-        <Stack spacing={2}>
+
+        <Stack spacing={2} sx={RESPONSIVE_DESIGN.display.NEXS('flex')}>
           {tabs.map((ts, index) => (
             <Stack spacing={2} direction="row" key={index}>
               {ts.map((nft) => (
@@ -127,6 +139,23 @@ const DepositTabpanel = withTabPanel(
             </Stack>
           ))}
           {!data.length && <NoData />}
+        </Stack>
+
+        <Stack spacing={2} sx={[RESPONSIVE_DESIGN.display.XS('flex')]}>
+          {title.text}
+          {title.actions}
+          <Stack
+            spacing={2}
+            sx={[
+              {
+                justifyContent: 'center',
+                alignItems: 'center',
+              },
+            ]}
+          >
+            {tabs.map((ts) => ts.map((nft) => <NFTCard key={nft.id} {...{ ...nft, action, onCheckChange }} />))}
+            {!data.length && <NoData />}
+          </Stack>
         </Stack>
       </TabPanel>
     )
@@ -147,11 +176,11 @@ const NoData: FC = () => {
   } = useApp()
   return (
     <Fragment>
-      <Stack alignItems='center' spacing={6} padding={10}>
+      <Stack alignItems="center" spacing={6} padding={10}>
         <Typography>{t('borrow-detail:NFT.deposit.noData.tip')}</Typography>
         <Button
           variant="contained"
-          size='large'
+          size="large"
           onClick={() => {
             setTab(NFTTabValue.wallet)
           }}

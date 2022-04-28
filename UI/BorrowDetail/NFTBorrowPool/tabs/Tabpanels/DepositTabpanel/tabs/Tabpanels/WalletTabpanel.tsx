@@ -6,12 +6,12 @@ import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import { useContractNFT } from 'domains'
-
 import { useControllers } from 'domains'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { useWallet } from 'app/wallet'
 import { NFTTabValue } from 'app/App/pages/borrowDetail'
 import { withTabPanel } from 'app/hoc/tabs/withTabPanel'
+import { RESPONSIVE_DESIGN } from 'styles/constants'
 
 import NFTCard from './components/NFTCard'
 import NumberDisplay from 'components/math/NumberDisplay'
@@ -90,15 +90,17 @@ const WalletTabpanel = withTabPanel(
       })
     }, [account, isApprovedForAll, lendingPoolAddress, underlyingAsset])
 
-    return (
-      <TabPanel>
-        <Title>
+    const title = useMemo(
+      () => ({
+        text: (
           <Typography gutterBottom variant="subtitle2" component="div">
             <Stack spacing={2} direction="row">
               <span>{t('borrow-detail:NFT.totalValuation')}</span>
               <NumberDisplay value={totalValuation} type="network" />
             </Stack>
           </Typography>
+        ),
+        actions: (
           <Stack spacing={2} direction="row">
             <Button
               variant="outlined"
@@ -149,8 +151,29 @@ const WalletTabpanel = withTabPanel(
               {t('borrow-detail:NFT.depositSelected')}
             </Button>
           </Stack>
+        ),
+      }),
+      [
+        account,
+        approveAllDisabled,
+        depositNFT,
+        lendingPoolAddress,
+        setApprovalForAll,
+        size,
+        t,
+        totalValuation,
+        underlyingAsset,
+      ]
+    )
+
+    return (
+      <TabPanel>
+        <Title sx={RESPONSIVE_DESIGN.display.NEXS('flex')}>
+          {title.text}
+          {title.actions}
         </Title>
-        <Stack spacing={2}>
+
+        <Stack spacing={2} sx={RESPONSIVE_DESIGN.display.NEXS('flex')}>
           {tabs.map((ts, index) => (
             <Stack spacing={2} direction="row" key={index}>
               {ts.map((nft) => (
@@ -159,6 +182,23 @@ const WalletTabpanel = withTabPanel(
             </Stack>
           ))}
           {!data.length && <NoData />}
+        </Stack>
+
+        <Stack spacing={2} sx={[RESPONSIVE_DESIGN.display.XS('flex')]}>
+          {title.text}
+          {title.actions}
+          <Stack
+            spacing={2}
+            sx={[
+              {
+                justifyContent: 'center',
+                alignItems: 'center',
+              },
+            ]}
+          >
+            {tabs.map((ts) => ts.map((nft) => <NFTCard key={nft.id} {...{ ...nft, action, onCheckChange }} />))}
+            {!data.length && <NoData />}
+          </Stack>
         </Stack>
       </TabPanel>
     )
@@ -176,9 +216,9 @@ const NoData: FC = () => {
 
   return (
     <Fragment>
-      <Stack alignItems='center' spacing={6} padding={10}>
+      <Stack alignItems="center" spacing={6} padding={10}>
         <Typography>{t('borrow-detail:NFT.wallet.noData.tip')}</Typography>
-        <Button variant="contained" size='large' onClick={() => open(nftSetting.market.url, '_blank')}>
+        <Button variant="contained" size="large" onClick={() => open(nftSetting.market.url, '_blank')}>
           {t('borrow-detail:NFT.wallet.noData.btn')}
         </Button>
       </Stack>
