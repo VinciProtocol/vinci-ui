@@ -1,5 +1,27 @@
 export const RESPONSIVE_DESIGN = {
   display: {
+    XS: (display = 'block') => {
+      return {
+        display: {
+          xs: display,
+          sm: 'none',
+          md: 'none',
+          lg: 'none',
+          xl: 'none',
+        },
+      }
+    },
+    NEXS: (display = 'block') => {
+      return {
+        display: {
+          xs: 'none',
+          sm: display,
+          md: display,
+          lg: display,
+          xl: display,
+        },
+      }
+    },
     LESM: (display = 'block') => {
       return {
         display: {
