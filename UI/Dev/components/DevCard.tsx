@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
-import type { TableColumnsProps } from 'lib/table/BasicTable'
+import type { TableColumnsProps } from 'lib/table/BasicTable/types'
 import { headerRenderer, cellRenderer } from 'components/Table'
 import BasicTable from 'lib/table/BasicTable'
 
