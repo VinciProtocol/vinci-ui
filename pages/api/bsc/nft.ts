@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { https } from 'follow-redirects'
 import { createPromise } from 'utils/promise'
+import { WAD } from 'utils/math/ray'
 
 const requestNFT = (address: string) => {
   const { promise, reslove, reject } = createPromise<string>()
@@ -57,7 +58,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       data: { nfts },
     } = JSON.parse(await requestNFT(nftAddress))
     if (!nfts.length) return res.status(404).end()
-    res.status(200).json({ floor_price: nfts[0].currentAskPrice })
+    const price = WAD.multipliedBy(nfts[0].currentAskPrice)
+    if (price.isNaN()) throw new Error('currentAskPrice is ' + nfts[0].currentAskPrice)
+    res.status(200).json({ floor_price: price.toString() })
   } catch (error) {
     console.error(error)
     res.status(500).json(error)
