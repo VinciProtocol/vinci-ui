@@ -5,7 +5,7 @@ import Lend from 'UI/Lend'
 import { withStaticTranslations } from 'app/i18n/hoc'
 
 export const getStaticProps: GetStaticProps = withStaticTranslations((props) => ({ props }), {
-  namespaces: [].concat(['menu'], ['lend']),
+  namespaces: ['lend'],
 })
 
 const Page: NextPage = () => {

@@ -16,7 +16,7 @@ export const getStaticProps: GetStaticProps = withStaticTranslations(
     }
   },
   {
-    namespaces: [].concat(['menu'], ['borrow', 'lend', 'borrow-detail']),
+    namespaces: ['borrow', 'lend', 'borrow-detail'],
   }
 )
 export const getStaticPaths: GetStaticPaths = function ({ locales }) {

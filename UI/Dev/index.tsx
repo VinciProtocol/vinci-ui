@@ -6,6 +6,8 @@ import Container from '@mui/material/Container'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import Header from 'UI/Layout/Header'
 
+// import MuiComponentSamples from 'doc/component/MuiComponentSamples'
+
 import { Log } from './Log'
 import { I18n } from './I18n'
 import { Protocol } from './Protocol'
@@ -27,6 +29,7 @@ const Dev: FC = () => {
           <Protocol />
         </Stack>
       </Content>
+      {/* <MuiComponentSamples /> */}
     </Fragment>
   )
 }

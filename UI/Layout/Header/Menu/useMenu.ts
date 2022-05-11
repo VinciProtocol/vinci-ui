@@ -20,10 +20,15 @@ const MenuList = [
     linkTo: '/borrow/[id]',
     hide: true,
   },
-  // {
-  //   key: 'Stake',
-  //   linkTo: '/stake',
-  // },
+  {
+    key: 'NFTLockdrop',
+    linkTo: '/nft-lockdrop',
+  },
+  {
+    key: 'NFTLockdropDeposit',
+    linkTo: '/nft-lockdrop/[id]',
+    hide: true,
+  },
   // {
   //   key: 'Liquidation',
   //   linkTo: '/liquidation-marketplace',

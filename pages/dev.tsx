@@ -6,7 +6,7 @@ import Dev from 'UI/Dev'
 import { withStaticTranslations } from 'app/i18n/hoc'
 
 export const getStaticProps: GetStaticProps = withStaticTranslations((props) => ({ props }), {
-  namespaces: [].concat(['menu']),
+  namespaces: [],
 })
 
 const Page: NextPage = () => {

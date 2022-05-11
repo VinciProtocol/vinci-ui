@@ -2,6 +2,7 @@ import type { FC } from 'react'
 import dynamic from 'next/dynamic'
 import { styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { RESPONSIVE_DESIGN } from 'styles/constants'
@@ -37,8 +38,10 @@ const Header: FC = () => {
   return (
     <ROOT>
       <BODY sx={RESPONSIVE_DESIGN.display.GTSM('flex')}>
-        <Logo />
-        <Menu />
+        <Stack spacing={2} direction="row">
+          <Logo />
+          <Menu />
+        </Stack>
         <Actions />
       </BODY>
       <BODY sx={RESPONSIVE_DESIGN.display.LESM('flex')}>

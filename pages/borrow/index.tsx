@@ -5,7 +5,7 @@ import Borrow from 'UI/Borrow'
 import { withStaticTranslations } from 'app/i18n/hoc'
 
 export const getStaticProps: GetStaticProps = withStaticTranslations((props) => ({ props }), {
-  namespaces: [].concat(['menu'], ['borrow']),
+  namespaces: ['borrow'],
 })
 
 const Page: NextPage = () => {
