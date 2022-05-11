@@ -9,6 +9,6 @@ type StaticTranslationsOptions = {
 export const withStaticTranslations = createWithGetStaticProps(
   async (props, { namespaces }: StaticTranslationsOptions) => ({
     ...props,
-    ...(await serverSideTranslations(props.locale, ['common', ...(namespaces || [])])),
+    ...(await serverSideTranslations(props.locale, ['common', 'router', ...(namespaces || [])])),
   })
 )

@@ -1,4 +1,4 @@
 module.exports = {
-  ns: ['common', 'lend', 'borrow', 'borrow-detail', 'dev', 'stake', 'liquidation', 'my-dashboard'],
+  ns: ['common', 'router', 'lend', 'borrow', 'borrow-detail', 'dev', 'stake', 'liquidation', 'my-dashboard'],
   defaultNS: 'common',
 }
