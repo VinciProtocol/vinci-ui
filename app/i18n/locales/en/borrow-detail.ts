@@ -1,5 +1,4 @@
 const locale = {
-  goBack: 'Go Back',
   borrowInfo: {
     borrowLimit: 'Borrow Limit',
     healthFactor: 'Health factor:',

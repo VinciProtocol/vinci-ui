@@ -1,4 +1,4 @@
-import { ToastifyCloseIconButton } from 'components/IconButton'
+import { ToastifyCloseIconButton } from 'components/btn/IconButton'
 import type { TypeOptions } from '../types'
 
 export interface CloseButtonProps {

@@ -6,8 +6,8 @@ import Grid from '@mui/material/Grid'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { RESPONSIVE_DESIGN } from 'styles/constants'
+import GoBack from 'components/btn/GoBack'
 
-import GoBack from './GoBack'
 import NFTBorrowPool from './NFTBorrowPool'
 import NFTInfo from './NFTInfo'
 
@@ -18,11 +18,10 @@ const BorrowDetail: FC = () => {
       paddingTop: theme.spacing(4),
     }))
   )
-
   return (
     <Content>
       <Stack spacing={2}>
-        <GoBack />
+        <GoBack url={{ pathname: '/borrow' }} />
         <Grid container spacing={2} sx={RESPONSIVE_DESIGN.display.GTSM('flex')}>
           <Grid item xs={8}>
             <NFTBorrowPool />
