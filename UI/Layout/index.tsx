@@ -13,7 +13,7 @@ const Layout: FC<LayoutProps> = ({ children, title }) => {
   return (
     <Fragment>
       <Head>
-        <title>Vinci - {t('menu.' + title)}</title>
+        <title>Vinci - {t('router:menu.' + title)}</title>
         <meta name="description" content="A NFT-backed DeFi Protocol for Boosting Liquidity and Hedging Volatility" />
 
         <meta property="og:type" content="website" />
