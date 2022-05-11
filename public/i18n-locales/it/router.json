@@ -1,0 +1,14 @@
+{
+  "menu": {
+    "Markets": "Mercati",
+    "Dashboard": "la mia scrivania",
+    "Lend": "Prestare",
+    "Borrow": "Prestito",
+    "BorrowDetail": "Dettaglio del prestito",
+    "Stake": "Palo",
+    "Liquidation": "Mercato della liquidazione",
+    "App": "App",
+    "NFTLockdrop": "Blocco NFT",
+    "NFTLockdropDeposit": "Lockdrop NFT - Deposito"
+  }
+}

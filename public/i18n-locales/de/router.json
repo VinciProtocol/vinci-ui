@@ -1,0 +1,14 @@
+{
+  "menu": {
+    "Markets": "Märkte",
+    "Dashboard": "Mein Armaturenbrett",
+    "Lend": "Verleihen",
+    "Borrow": "Ausleihen",
+    "BorrowDetail": "Detail ausleihen",
+    "Stake": "Einatz",
+    "Liquidation": "Liquidationsmarktplatz",
+    "App": "App",
+    "NFTLockdrop": "NFT Lockdrop",
+    "NFTLockdropDeposit": "NFT Lockdrop - Einzahlung"
+  }
+}

@@ -1,5 +1,4 @@
 {
-  "goBack": "عُد",
   "borrowInfo": {
     "borrowLimit": "حد الاقتراض",
     "healthFactor": "عامل الصحة:",
@@ -9,7 +8,8 @@
     "totalBorrowed": "إجمالي المقترضين:",
     "availableToBorrow": "متاح للاستعارة:",
     "ltv": "القرض بالقيمة:",
-    "liquidationFee": "رسوم التصفية:"
+    "liquidationFee": "رسوم التصفية:",
+    "market": "سوق:"
   },
   "NFTBorrowPool": {
     "title": "تجمعات الإقراض",

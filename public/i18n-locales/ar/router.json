@@ -1,0 +1,14 @@
+{
+  "menu": {
+    "Markets": "الأسواق",
+    "Dashboard": "لوحة القيادة الخاصة بي",
+    "Lend": "أعار",
+    "Borrow": "يستعير",
+    "BorrowDetail": "تفاصيل الاقتراض",
+    "Stake": "حصة",
+    "Liquidation": "سوق التصفية",
+    "App": "برنامج",
+    "NFTLockdrop": "NFT Lockdrop",
+    "NFTLockdropDeposit": "NFT Lockdrop - الإيداع"
+  }
+}

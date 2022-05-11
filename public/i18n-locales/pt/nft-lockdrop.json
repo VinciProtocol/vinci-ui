@@ -1,0 +1,24 @@
+{
+  "Card": {
+    "totalValueLocked": "Valor total bloqueado",
+    "totalLockedNFT": "Total de NFT Bloqueado",
+    "userLockedNFT": "Seu NFT bloqueado",
+    "estmatedRewards": "Recompensas estimadas"
+  },
+  "NFTLockdropRewards": {
+    "title": "Recompensas NFT Lockdrop",
+    "subTitle": {
+      "text": "Bloqueie seus NFTs para recompensas de token VCI",
+      "tip": "Saber mais"
+    },
+    "collection": "Coleção",
+    "TVL": "TVL",
+    "totalLockedNFT": "Total de NFT Bloqueado",
+    "userLockedNFT": "Seu NFT bloqueado",
+    "estmatedRewards": "Recompensas estimadas",
+    "functionButtons": "Açao",
+    "actions": {
+      "depositNFT": "Depósito NFT"
+    }
+  }
+}

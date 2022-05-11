@@ -1,0 +1,23 @@
+{
+  "title": "NFT Lockdrop",
+  "tabs": {
+    "lockedNFT": {
+      "title": "NFT gesperrt",
+      "noData": {
+        "tip": "Sie haben keine NFT-Sicherheiten.",
+        "btn": "Zahlen Sie jetzt einige NFTs ein"
+      }
+    },
+    "wallet": {
+      "title": "Brieftasche NFT",
+      "noData": {
+        "tip": "Sie haben keine NFTs in der Brieftasche.",
+        "btn": "Kaufen Sie jetzt einige NFTs"
+      }
+    }
+  },
+  "totalValuation": "Gesamtbewertung:",
+  "valuation": "Bewertung",
+  "approveAll": "Alle genehmigen",
+  "depositSelected": "Anzahlung ausgewählt"
+}

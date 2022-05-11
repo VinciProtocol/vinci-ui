@@ -1,5 +1,4 @@
 {
-  "goBack": "Go Back",
   "borrowInfo": {
     "borrowLimit": "Borrow Limit",
     "healthFactor": "Health factor:",
@@ -9,7 +8,8 @@
     "totalBorrowed": "Total borrowed:",
     "availableToBorrow": "Available to borrow:",
     "ltv": "Loan to value:",
-    "liquidationFee": "Liquidation fee:"
+    "liquidationFee": "Liquidation fee:",
+    "market": "Market: "
   },
   "NFTBorrowPool": {
     "title": "Lending Pools",

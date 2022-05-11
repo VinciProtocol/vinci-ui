@@ -1,0 +1,24 @@
+{
+  "Card": {
+    "totalValueLocked": "Valeur totale verrouillée",
+    "totalLockedNFT": "NFT total verrouillé",
+    "userLockedNFT": "Votre NFT verrouillé",
+    "estmatedRewards": "Récompenses estimées"
+  },
+  "NFTLockdropRewards": {
+    "title": "Récompenses NFT Lockdrop",
+    "subTitle": {
+      "text": "Verrouillez vos NFT pour les récompenses de jetons VCI",
+      "tip": "Apprendre encore plus"
+    },
+    "collection": "Le recueil",
+    "TVL": "TVL",
+    "totalLockedNFT": "NFT total verrouillé",
+    "userLockedNFT": "Votre NFT verrouillé",
+    "estmatedRewards": "Récompenses estimées",
+    "functionButtons": "Action",
+    "actions": {
+      "depositNFT": "Dépôt NFT"
+    }
+  }
+}

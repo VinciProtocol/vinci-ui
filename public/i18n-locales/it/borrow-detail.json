@@ -1,5 +1,4 @@
 {
-  "goBack": "Torna indietro",
   "borrowInfo": {
     "borrowLimit": "Limite di prestito",
     "healthFactor": "Fattore di salute:",
@@ -9,7 +8,8 @@
     "totalBorrowed": "Totale preso in prestito:",
     "availableToBorrow": "Disponibile per il prestito:",
     "ltv": "Prestito a valore:",
-    "liquidationFee": "Commissione di liquidazione:"
+    "liquidationFee": "Commissione di liquidazione:",
+    "market": "Mercato:"
   },
   "NFTBorrowPool": {
     "title": "Piscine di prestito",

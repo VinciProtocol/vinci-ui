@@ -1,0 +1,14 @@
+{
+  "menu": {
+    "Markets": "Thị trường",
+    "Dashboard": "Bảng điều khiển của tôi",
+    "Lend": "Mượn",
+    "Borrow": "Vay",
+    "BorrowDetail": "Chi tiết Vay",
+    "Stake": "Cổ phần",
+    "Liquidation": "Thị trường thanh lý",
+    "App": "Ứng dụng",
+    "NFTLockdrop": "NFT Lockdrop",
+    "NFTLockdropDeposit": "NFT Lockdrop - Đặt cọc"
+  }
+}

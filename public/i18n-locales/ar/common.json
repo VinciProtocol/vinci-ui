@@ -38,14 +38,7 @@
       "error": "شبكة غير مدعومة"
     }
   },
-  "menu": {
-    "Markets": "الأسواق",
-    "Dashboard": "لوحة القيادة الخاصة بي",
-    "Lend": "أعار",
-    "Borrow": "يستعير",
-    "BorrowDetail": "تفاصيل الاقتراض",
-    "Stake": "حصة",
-    "Liquidation": "سوق التصفية",
-    "App": "برنامج"
+  "components": {
+    "goBack": "عُد"
   }
 }

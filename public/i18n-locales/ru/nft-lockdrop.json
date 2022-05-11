@@ -1,0 +1,24 @@
+{
+  "Card": {
+    "totalValueLocked": "Общая стоимость заблокирована",
+    "totalLockedNFT": "Всего заблокировано NFT",
+    "userLockedNFT": "Ваш заблокированный NFT",
+    "estmatedRewards": "Расчетное вознаграждение"
+  },
+  "NFTLockdropRewards": {
+    "title": "Награды NFT Lockdrop",
+    "subTitle": {
+      "text": "Заблокируйте свои NFT для вознаграждения за токены VCI",
+      "tip": "Учить больше"
+    },
+    "collection": "Коллекция",
+    "TVL": "ТВЛ",
+    "totalLockedNFT": "Всего заблокировано NFT",
+    "userLockedNFT": "Ваш заблокированный NFT",
+    "estmatedRewards": "Расчетное вознаграждение",
+    "functionButtons": "Действие",
+    "actions": {
+      "depositNFT": "Депозит NFT"
+    }
+  }
+}

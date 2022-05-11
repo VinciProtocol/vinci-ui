@@ -38,14 +38,7 @@
       "error": "サポートされていないネットワーク"
     }
   },
-  "menu": {
-    "Markets": "市場",
-    "Dashboard": "マイダッシュボード",
-    "Lend": "貸す",
-    "Borrow": "かりて",
-    "BorrowDetail": "詳細を借りる",
-    "Stake": "ステーク",
-    "Liquidation": "清算マーケットプレイス",
-    "App": "アプリ"
+  "components": {
+    "goBack": "戻る"
   }
 }

@@ -1,5 +1,4 @@
 {
-  "goBack": "回去",
   "borrowInfo": {
     "borrowLimit": "借款限额",
     "healthFactor": "健康因素：",
@@ -9,7 +8,8 @@
     "totalBorrowed": "借款总额：",
     "availableToBorrow": "可借：",
     "ltv": "贷款价值：",
-    "liquidationFee": "清算费用："
+    "liquidationFee": "清算费用：",
+    "market": "市场："
   },
   "NFTBorrowPool": {
     "title": "借贷池",
@@ -51,7 +51,7 @@
     }
   },
   "tips": {
-    "healthFactor": "健康因素代表您的贷款的安全性，来自 NFT 抵押品价值与借入金额的比例。保持在1以上以避免清算。",
+    "healthFactor": "健康因素代表您的贷款的安全性，来自 NFT 抵押品价值与借入金额的比例。保持在1以上，以避免清算。",
     "floorPrice": "底价是收藏品的最低价格，而不是商品的平均价格，并实时更新。",
     "liquidationPrice": "您的头寸将被清算的抵押品底价。",
     "collateralValue": "存放在您头寸中的 NFT 抵押品的价值。",

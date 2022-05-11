@@ -38,14 +38,7 @@
       "error": "Nicht unterstütztes Netzwerk"
     }
   },
-  "menu": {
-    "Markets": "Märkte",
-    "Dashboard": "Mein Armaturenbrett",
-    "Lend": "Verleihen",
-    "Borrow": "Ausleihen",
-    "BorrowDetail": "Detail ausleihen",
-    "Stake": "Einatz",
-    "Liquidation": "Liquidationsmarktplatz",
-    "App": "App"
+  "components": {
+    "goBack": "Geh zurück"
   }
 }

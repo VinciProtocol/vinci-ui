@@ -1,0 +1,23 @@
+{
+  "title": "NFT Kilitleme",
+  "tabs": {
+    "lockedNFT": {
+      "title": "Kilitli NFT",
+      "noData": {
+        "tip": "Herhangi bir NFT teminatınız yok.",
+        "btn": "Şimdi bazı NFT'leri yatırın"
+      }
+    },
+    "wallet": {
+      "title": "Cüzdan NFT",
+      "noData": {
+        "tip": "Cüzdanınızda hiç NFT yok.",
+        "btn": "Şimdi bazı NFT'ler satın alın"
+      }
+    }
+  },
+  "totalValuation": "Toplam Değerleme:",
+  "valuation": "Değerleme",
+  "approveAll": "Tümünü Onayla",
+  "depositSelected": "Depozito Seçildi"
+}

@@ -1,0 +1,24 @@
+{
+  "Card": {
+    "totalValueLocked": "มูลค่ารวมที่ถูกล็อค",
+    "totalLockedNFT": "NFT ที่ถูกล็อคทั้งหมด",
+    "userLockedNFT": "NFT ที่ถูกล็อกของคุณ",
+    "estmatedRewards": "รางวัลโดยประมาณ"
+  },
+  "NFTLockdropRewards": {
+    "title": "รางวัลล็อคดรอป NFT",
+    "subTitle": {
+      "text": "ล็อค NFT ของคุณเพื่อรับรางวัลโทเค็น VCI",
+      "tip": "เรียนรู้เพิ่มเติม"
+    },
+    "collection": "ของสะสม",
+    "TVL": "TVL",
+    "totalLockedNFT": "NFT ที่ถูกล็อคทั้งหมด",
+    "userLockedNFT": "NFT ที่ถูกล็อกของคุณ",
+    "estmatedRewards": "รางวัลโดยประมาณ",
+    "functionButtons": "หนังบู๊",
+    "actions": {
+      "depositNFT": "ฝาก NFT"
+    }
+  }
+}

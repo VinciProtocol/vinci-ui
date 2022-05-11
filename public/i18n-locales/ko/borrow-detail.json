@@ -1,5 +1,4 @@
 {
-  "goBack": "돌아가기",
   "borrowInfo": {
     "borrowLimit": "대출 한도",
     "healthFactor": "건강 요인:",
@@ -9,7 +8,8 @@
     "totalBorrowed": "총 대출:",
     "availableToBorrow": "대여 가능:",
     "ltv": "가치에 대한 대출:",
-    "liquidationFee": "청산 수수료:"
+    "liquidationFee": "청산 수수료:",
+    "market": "시장:"
   },
   "NFTBorrowPool": {
     "title": "대출 풀",

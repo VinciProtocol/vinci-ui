@@ -1,5 +1,4 @@
 {
-  "goBack": "Geri gitmek",
   "borrowInfo": {
     "borrowLimit": "Borç Limiti",
     "healthFactor": "Sağlık faktörü:",
@@ -9,7 +8,8 @@
     "totalBorrowed": "Toplam ödünç alınan:",
     "availableToBorrow": "Ödünç alınabilir:",
     "ltv": "Değer için kredi:",
-    "liquidationFee": "Tasfiye ücreti:"
+    "liquidationFee": "Tasfiye ücreti:",
+    "market": "Market:"
   },
   "NFTBorrowPool": {
     "title": "Kredi Havuzları",

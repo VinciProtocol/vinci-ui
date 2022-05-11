@@ -1,0 +1,23 @@
+{
+  "title": "Blocco NFT",
+  "tabs": {
+    "lockedNFT": {
+      "title": "NFT bloccato",
+      "noData": {
+        "tip": "Non hai garanzie NFT.",
+        "btn": "Deposita alcuni NFT ora"
+      }
+    },
+    "wallet": {
+      "title": "Portafoglio NFT",
+      "noData": {
+        "tip": "Non hai NFT nel portafoglio.",
+        "btn": "Acquista ora alcuni NFT"
+      }
+    }
+  },
+  "totalValuation": "Valutazione totale:",
+  "valuation": "Valutazione",
+  "approveAll": "Approva tutto",
+  "depositSelected": "Deposito selezionato"
+}

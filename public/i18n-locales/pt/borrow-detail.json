@@ -1,5 +1,4 @@
 {
-  "goBack": "Volte",
   "borrowInfo": {
     "borrowLimit": "Limite de empréstimo",
     "healthFactor": "Fator de saúde:",
@@ -9,7 +8,8 @@
     "totalBorrowed": "Total emprestado:",
     "availableToBorrow": "Disponível para empréstimo:",
     "ltv": "Empréstimo de valor:",
-    "liquidationFee": "Taxa de liquidação:"
+    "liquidationFee": "Taxa de liquidação:",
+    "market": "Mercado:"
   },
   "NFTBorrowPool": {
     "title": "Pools de empréstimos",

@@ -1,0 +1,14 @@
+{
+  "menu": {
+    "Markets": "Рынки",
+    "Dashboard": "Мой Dashboard",
+    "Lend": "Давать в долг",
+    "Borrow": "Занимать",
+    "BorrowDetail": "Деталь заимствования",
+    "Stake": "Ставка",
+    "Liquidation": "Ликвидация",
+    "App": "Приложение",
+    "NFTLockdrop": "Блокировка NFT",
+    "NFTLockdropDeposit": "Блокировка NFT — Депозит"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Bloqueio NFT",
+  "tabs": {
+    "lockedNFT": {
+      "title": "NFT bloqueado",
+      "noData": {
+        "tip": "Você não tem garantias NFT.",
+        "btn": "Deposite alguns NFTs agora"
+      }
+    },
+    "wallet": {
+      "title": "Carteira NFT",
+      "noData": {
+        "tip": "Você não tem NFTs na carteira.",
+        "btn": "Compre alguns NFTs agora"
+      }
+    }
+  },
+  "totalValuation": "Avaliação Total:",
+  "valuation": "Avaliação",
+  "approveAll": "Aprovar tudo",
+  "depositSelected": "Depósito selecionado"
+}

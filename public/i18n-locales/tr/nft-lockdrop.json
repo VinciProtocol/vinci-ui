@@ -1,0 +1,24 @@
+{
+  "Card": {
+    "totalValueLocked": "Toplam Değer Kilitli",
+    "totalLockedNFT": "Toplam Kilitli NFT",
+    "userLockedNFT": "Kilitli NFT'niz",
+    "estmatedRewards": "Tahmini Ödüller"
+  },
+  "NFTLockdropRewards": {
+    "title": "NFT Lockdrop Ödülleri",
+    "subTitle": {
+      "text": "VCI jeton ödülleri için NFT'lerinizi kilitleyin",
+      "tip": "Daha fazla bilgi edin"
+    },
+    "collection": "Toplamak",
+    "TVL": "TVL",
+    "totalLockedNFT": "Toplam Kilitli NFT",
+    "userLockedNFT": "Kilitli NFT'niz",
+    "estmatedRewards": "Tahmini Ödüller",
+    "functionButtons": "Aksiyon",
+    "actions": {
+      "depositNFT": "Para Yatırma NFT"
+    }
+  }
+}

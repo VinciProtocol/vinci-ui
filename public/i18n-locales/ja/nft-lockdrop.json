@@ -1,0 +1,24 @@
+{
+  "Card": {
+    "totalValueLocked": "合計値がロックされています",
+    "totalLockedNFT": "トータルロックNFT",
+    "userLockedNFT": "ロックされたNFT",
+    "estmatedRewards": "推定報酬"
+  },
+  "NFTLockdropRewards": {
+    "title": "NFTロックドロップリワード",
+    "subTitle": {
+      "text": "VCIトークン報酬のためにNFTをロックする",
+      "tip": "もっと詳しく知る"
+    },
+    "collection": "コレクション",
+    "TVL": "TVL",
+    "totalLockedNFT": "トータルロックNFT",
+    "userLockedNFT": "ロックされたNFT",
+    "estmatedRewards": "推定報酬",
+    "functionButtons": "アクション",
+    "actions": {
+      "depositNFT": "NFTをデポジットする"
+    }
+  }
+}

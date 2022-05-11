@@ -1,5 +1,4 @@
 {
-  "goBack": "Quay lại",
   "borrowInfo": {
     "borrowLimit": "Hạn mức vay",
     "healthFactor": "Yếu tố sức khỏe:",
@@ -9,7 +8,8 @@
     "totalBorrowed": "Tổng số tiền đã vay:",
     "availableToBorrow": "Có thể vay:",
     "ltv": "Khoản vay để định giá:",
-    "liquidationFee": "Phí thanh lý:"
+    "liquidationFee": "Phí thanh lý:",
+    "market": "Thị trường:"
   },
   "NFTBorrowPool": {
     "title": "Hồ cho vay",

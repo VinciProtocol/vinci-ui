@@ -1,0 +1,23 @@
+{
+  "title": "NFT 锁投",
+  "tabs": {
+    "lockedNFT": {
+      "title": "锁定的 NFT",
+      "noData": {
+        "tip": "你没有任何 NFT 抵押品。",
+        "btn": "立即存入一些 NFT"
+      }
+    },
+    "wallet": {
+      "title": "钱包 NFT",
+      "noData": {
+        "tip": "你的钱包里没有任何 NFT。",
+        "btn": "立即购买一些 NFT"
+      }
+    }
+  },
+  "totalValuation": "总估值：",
+  "valuation": "估值",
+  "approveAll": "全部批准",
+  "depositSelected": "已选择存款"
+}

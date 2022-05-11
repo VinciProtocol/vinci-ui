@@ -1,0 +1,14 @@
+{
+  "menu": {
+    "Markets": "ตลาด",
+    "Dashboard": "แดชบอร์ดของฉัน",
+    "Lend": "ให้ยืม",
+    "Borrow": "ยืม",
+    "BorrowDetail": "รายละเอียดการยืม",
+    "Stake": "เดิมพัน",
+    "Liquidation": "ตลาดการชำระบัญชี",
+    "App": "แอป",
+    "NFTLockdrop": "NFT Lockdrop",
+    "NFTLockdropDeposit": "NFT Lockdrop - ฝากเงิน"
+  }
+}

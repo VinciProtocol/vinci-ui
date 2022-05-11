@@ -1,0 +1,24 @@
+{
+  "Card": {
+    "totalValueLocked": "Tổng giá trị đã khóa",
+    "totalLockedNFT": "Tổng NFT đã khóa",
+    "userLockedNFT": "NFT đã khóa của bạn",
+    "estmatedRewards": "Phần thưởng ước tính"
+  },
+  "NFTLockdropRewards": {
+    "title": "Phần thưởng NFT Lockdrop",
+    "subTitle": {
+      "text": "Khóa NFT của bạn để nhận phần thưởng mã thông báo VCI",
+      "tip": "Tìm hiểu thêm"
+    },
+    "collection": "Bộ sưu tập",
+    "TVL": "TVL",
+    "totalLockedNFT": "Tổng NFT đã khóa",
+    "userLockedNFT": "NFT đã khóa của bạn",
+    "estmatedRewards": "Phần thưởng ước tính",
+    "functionButtons": "Hoạt động",
+    "actions": {
+      "depositNFT": "Gửi tiền NFT"
+    }
+  }
+}

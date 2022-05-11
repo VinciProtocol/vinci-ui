@@ -1,0 +1,23 @@
+{
+  "title": "NFT Lockdrop",
+  "tabs": {
+    "lockedNFT": {
+      "title": "NFT đã khóa",
+      "noData": {
+        "tip": "Bạn không có bất kỳ tài sản thế chấp NFT nào.",
+        "btn": "Gửi một số NFT ngay bây giờ"
+      }
+    },
+    "wallet": {
+      "title": "Ví NFT",
+      "noData": {
+        "tip": "Bạn không có bất kỳ NFT nào trong ví.",
+        "btn": "Mua một số NFT ngay bây giờ"
+      }
+    }
+  },
+  "totalValuation": "Tổng định giá:",
+  "valuation": "Định giá",
+  "approveAll": "Phê duyệt tất cả",
+  "depositSelected": "Gửi tiền đã chọn"
+}

@@ -38,14 +38,7 @@
       "error": "Неподдерживаемая сеть"
     }
   },
-  "menu": {
-    "Markets": "Рынки",
-    "Dashboard": "Мой Dashboard",
-    "Lend": "Давать в долг",
-    "Borrow": "Занимать",
-    "BorrowDetail": "Деталь заимствования",
-    "Stake": "Ставка",
-    "Liquidation": "Ликвидация",
-    "App": "Приложение"
+  "components": {
+    "goBack": "Вернитесь назад"
   }
 }

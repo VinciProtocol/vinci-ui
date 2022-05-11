@@ -38,14 +38,7 @@
       "error": "Desteklenmeyen ağ"
     }
   },
-  "menu": {
-    "Markets": "Piyasalar",
-    "Dashboard": "Gösterge Panelim",
-    "Lend": "Borç vermek",
-    "Borrow": "Borç almak",
-    "BorrowDetail": "Borç Detayı",
-    "Stake": "Bahis",
-    "Liquidation": "Tasfiye Pazarı",
-    "App": "Uygulama"
+  "components": {
+    "goBack": "Geri gitmek"
   }
 }

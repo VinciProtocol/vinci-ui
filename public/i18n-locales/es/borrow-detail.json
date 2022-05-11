@@ -1,5 +1,4 @@
 {
-  "goBack": "Regresa",
   "borrowInfo": {
     "borrowLimit": "Límite de préstamo",
     "healthFactor": "Factor de salud:",
@@ -9,7 +8,8 @@
     "totalBorrowed": "Total prestado:",
     "availableToBorrow": "Disponible para préstamo:",
     "ltv": "Préstamo a valor:",
-    "liquidationFee": "Tarifa de liquidación:"
+    "liquidationFee": "Tarifa de liquidación:",
+    "market": "Mercado:"
   },
   "NFTBorrowPool": {
     "title": "Fondos de préstamos",

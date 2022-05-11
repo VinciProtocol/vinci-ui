@@ -47,5 +47,8 @@
     "Stake": "赌注",
     "Liquidation": "清算市场",
     "App": "应用程序"
+  },
+  "components": {
+    "goBack": "回去"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "menu": {
+    "Markets": "시장",
+    "Dashboard": "내 대시 보드",
+    "Lend": "빌려주다",
+    "Borrow": "빌리다",
+    "BorrowDetail": "세부 정보를 빌리다",
+    "Stake": "말뚝",
+    "Liquidation": "청산 시장",
+    "App": "앱",
+    "NFTLockdrop": "NFT 락드롭",
+    "NFTLockdropDeposit": "NFT 락드랍 - 입금"
+  }
+}

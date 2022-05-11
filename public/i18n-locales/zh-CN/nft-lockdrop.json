@@ -1,0 +1,24 @@
+{
+  "Card": {
+    "totalValueLocked": "总价值锁定",
+    "totalLockedNFT": "总锁定 NFT",
+    "userLockedNFT": "你锁定的 NFT",
+    "estmatedRewards": "估计奖励"
+  },
+  "NFTLockdropRewards": {
+    "title": "NFT 锁投奖励",
+    "subTitle": {
+      "text": "锁定您的 NFT 以获得 VCI 代币奖励",
+      "tip": "学到更多"
+    },
+    "collection": "收藏",
+    "TVL": "电视L",
+    "totalLockedNFT": "总锁定 NFT",
+    "userLockedNFT": "你锁定的 NFT",
+    "estmatedRewards": "估计奖励",
+    "functionButtons": "行动",
+    "actions": {
+      "depositNFT": "充值 NFT"
+    }
+  }
+}

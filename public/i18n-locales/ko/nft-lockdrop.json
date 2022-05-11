@@ -1,0 +1,24 @@
+{
+  "Card": {
+    "totalValueLocked": "잠긴 총 가치",
+    "totalLockedNFT": "총 잠금 NFT",
+    "userLockedNFT": "잠긴 NFT",
+    "estmatedRewards": "예상 보상"
+  },
+  "NFTLockdropRewards": {
+    "title": "NFT 락드롭 보상",
+    "subTitle": {
+      "text": "VCI 토큰 보상을 위해 NFT 잠금",
+      "tip": "더 알아보기"
+    },
+    "collection": "수집",
+    "TVL": "TVL",
+    "totalLockedNFT": "총 잠금 NFT",
+    "userLockedNFT": "잠긴 NFT",
+    "estmatedRewards": "예상 보상",
+    "functionButtons": "행동",
+    "actions": {
+      "depositNFT": "NFT 입금"
+    }
+  }
+}

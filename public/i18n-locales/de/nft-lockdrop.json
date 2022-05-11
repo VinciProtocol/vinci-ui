@@ -1,0 +1,24 @@
+{
+  "Card": {
+    "totalValueLocked": "Gesamtwert gesperrt",
+    "totalLockedNFT": "Insgesamt gesperrte NFT",
+    "userLockedNFT": "Ihre gesperrte NFT",
+    "estmatedRewards": "Geschätzte Belohnungen"
+  },
+  "NFTLockdropRewards": {
+    "title": "NFT Lockdrop-Belohnungen",
+    "subTitle": {
+      "text": "Sperren Sie Ihre NFTs für VCI-Token-Belohnungen",
+      "tip": "Mehr erfahren"
+    },
+    "collection": "Sammlung",
+    "TVL": "TVL",
+    "totalLockedNFT": "Insgesamt gesperrte NFT",
+    "userLockedNFT": "Ihre gesperrte NFT",
+    "estmatedRewards": "Geschätzte Belohnungen",
+    "functionButtons": "Handlung",
+    "actions": {
+      "depositNFT": "Hinterlegen Sie NFT"
+    }
+  }
+}

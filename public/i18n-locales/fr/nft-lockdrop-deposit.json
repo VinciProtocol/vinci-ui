@@ -1,0 +1,23 @@
+{
+  "title": "Verrouillage NFT",
+  "tabs": {
+    "lockedNFT": {
+      "title": "NFT verrouillé",
+      "noData": {
+        "tip": "Vous n'avez aucune garantie NFT.",
+        "btn": "Déposez des NFT maintenant"
+      }
+    },
+    "wallet": {
+      "title": "Portefeuille NFT",
+      "noData": {
+        "tip": "Vous n'avez pas de NFT dans le portefeuille.",
+        "btn": "Achetez des NFT maintenant"
+      }
+    }
+  },
+  "totalValuation": "Valorisation totale :",
+  "valuation": "Évaluation",
+  "approveAll": "Tout approuver",
+  "depositSelected": "Dépôt sélectionné"
+}

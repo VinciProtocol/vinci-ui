@@ -1,0 +1,23 @@
+{
+  "title": "NFT Lockdrop",
+  "tabs": {
+    "lockedNFT": {
+      "title": "ล็อค NFT",
+      "noData": {
+        "tip": "คุณไม่มีหลักประกัน NFT",
+        "btn": "ฝาก NFT บางส่วนตอนนี้"
+      }
+    },
+    "wallet": {
+      "title": "กระเป๋าเงิน NFT",
+      "noData": {
+        "tip": "คุณไม่มี NFT ในกระเป๋าเงิน",
+        "btn": "ซื้อ NFT ตอนนี้"
+      }
+    }
+  },
+  "totalValuation": "มูลค่ารวม:",
+  "valuation": "การประเมินค่า",
+  "approveAll": "อนุมัติทั้งหมด",
+  "depositSelected": "เงินฝากที่เลือก"
+}
