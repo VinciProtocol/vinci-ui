@@ -1,0 +1,57 @@
+{
+  "title": "Airdrop NFT",
+  "eligible": {
+    "title": "🎉 Complimenti! Sei idoneo per l'airdrop.",
+    "subTitle": "Puoi richiedere il tuo NFT quando l'airdrop avrà luogo nelle prossime settimane.",
+    "willReceive": "riceverà",
+    "NFT": {
+      "actions": {
+        "comingSoon": "Prossimamente",
+        "claim": "Reclamo",
+        "claimed": "Ha sostenuto",
+        "tip": {
+          "switchAccount": "Si prega di cambiare account per rivendicare."
+        }
+      }
+    }
+  },
+  "notEligible": {
+    "title": "Siamo spiacenti, non sei idoneo per questo round di airdrop.",
+    "subTitle": [
+      null,
+      "Non preoccuparti! Ci saranno più airdrop in futuro.",
+      "Il modo migliore per aumentare le tue probabilità è partecipare. Inizia a esplorare oggi:"
+    ],
+    "actions": {
+      "switchAccount": "Controlla un altro indirizzo",
+      "borrow": "Prestito",
+      "lend": "Prestare"
+    }
+  },
+  "criteria": {
+    "title": "Criteri di ammissibilità",
+    "subTitle": [
+      null,
+      "Il Leonardo da Vinci NFT Drop ricompenserà chiunque si unirà alle comunità del Protocollo Vinci e parteciperà a questa iniziativa comunitaria per aiutarci a creare un movimento sociale.",
+      "Per essere idoneo, devi partecipare al Contest e rendere noto il tuo sostegno al pubblico."
+    ],
+    "tip": {
+      "warn": [
+        null,
+        "Ora stiamo ricevendo una quantità sorprendente di richieste di whitelist.",
+        "Se hai completato le attività ma non hai potuto richiedere il premio airdrop, sii paziente."
+      ]
+    },
+    "btn": {
+      "learnMore": "Per saperne di più"
+    }
+  },
+  "switchAccountDialog": {
+    "title": "Incolla indirizzo",
+    "address": "indirizzo",
+    "placeholder": "incolla l'indirizzo",
+    "actions": {
+      "checkEligibilty": "Verifica l'idoneità"
+    }
+  }
+}

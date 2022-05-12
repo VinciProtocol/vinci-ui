@@ -1,0 +1,57 @@
+{
+  "title": "NFT Airdrop",
+  "eligible": {
+    "title": "🎉 Tebrikler! Airdrop için uygunsunuz.",
+    "subTitle": "Önümüzdeki birkaç hafta içinde airdrop gerçekleştiğinde NFT'nizi talep edebilirsiniz.",
+    "willReceive": "alacak",
+    "NFT": {
+      "actions": {
+        "comingSoon": "Yakında gelecek",
+        "claim": "İddia",
+        "claimed": "hak talebinde bulunuldu",
+        "tip": {
+          "switchAccount": "Lütfen hak talebinde bulunmak için hesabı değiştirin."
+        }
+      }
+    }
+  },
+  "notEligible": {
+    "title": "Üzgünüz, bu airdrop turu için uygun değilsiniz.",
+    "subTitle": [
+      null,
+      "Merak etme! Gelecekte daha fazla airdrop olacak.",
+      "Şansınızı artırmanın en iyi yolu, dahil olmaktır. Bugün keşfetmeye başlayın:"
+    ],
+    "actions": {
+      "switchAccount": "Başka bir adresi kontrol et",
+      "borrow": "Borç almak",
+      "lend": "Borç vermek"
+    }
+  },
+  "criteria": {
+    "title": "Uygunluk kriterleri",
+    "subTitle": [
+      null,
+      "Leonardo da Vinci NFT Drop, bir sosyal hareket yaratmamıza yardımcı olmak için Vinci Protokolü topluluklarına katılanları ve bu topluluk girişimine katılanları ödüllendirecek.",
+      "Hak kazanmak için Yarışmaya katılmalı ve desteğinizi halka duyurmalısınız."
+    ],
+    "tip": {
+      "warn": [
+        null,
+        "Şu anda şaşırtıcı miktarda beyaz liste isteği alıyoruz.",
+        "Görevleri tamamladıysanız ancak airdrop ödülünü alamadıysanız lütfen sabırlı olun."
+      ]
+    },
+    "btn": {
+      "learnMore": "Daha fazla bilgi edin"
+    }
+  },
+  "switchAccountDialog": {
+    "title": "Adresi Yapıştır",
+    "address": "adres",
+    "placeholder": "yapıştır",
+    "actions": {
+      "checkEligibilty": "Uygunluğu Kontrol Et"
+    }
+  }
+}

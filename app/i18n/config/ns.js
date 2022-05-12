@@ -11,6 +11,7 @@ module.exports = {
     'my-dashboard',
     'nft-lockdrop',
     'nft-lockdrop-deposit',
+    'nft-airdrop',
   ],
   defaultNS: 'common',
 }

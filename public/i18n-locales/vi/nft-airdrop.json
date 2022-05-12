@@ -1,0 +1,57 @@
+{
+  "title": "NFT Airdrop",
+  "eligible": {
+    "title": "🎉 Xin chúc mừng! Bạn đủ điều kiện cho airdrop.",
+    "subTitle": "Bạn có thể yêu cầu NFT của mình khi airdrop diễn ra trong vài tuần tới.",
+    "willReceive": "Sẽ nhận được",
+    "NFT": {
+      "actions": {
+        "comingSoon": "Sắp có",
+        "claim": "Yêu cầu",
+        "claimed": "Đã yêu cầu bồi thường",
+        "tip": {
+          "switchAccount": "Vui lòng chuyển tài khoản để yêu cầu."
+        }
+      }
+    }
+  },
+  "notEligible": {
+    "title": "Xin lỗi, bạn không đủ điều kiện cho đợt airdrop này.",
+    "subTitle": [
+      null,
+      "Đừng lo! Sẽ có nhiều airdrop hơn trong tương lai.",
+      "Cách tốt nhất để cải thiện tỷ lệ cược của bạn là tham gia. Bắt đầu khám phá ngay hôm nay:"
+    ],
+    "actions": {
+      "switchAccount": "Kiểm tra một địa chỉ khác",
+      "borrow": "Vay",
+      "lend": "Mượn"
+    }
+  },
+  "criteria": {
+    "title": "Đủ tiêu chuẩn",
+    "subTitle": [
+      null,
+      "Leonardo da Vinci NFT Drop sẽ thưởng cho bất kỳ ai tham gia vào cộng đồng Vinci Protocol và tham gia vào sáng kiến cộng đồng này để giúp chúng tôi tạo ra một phong trào xã hội.",
+      "Để đủ điều kiện, bạn phải tham gia Cuộc thi và công khai sự ủng hộ của bạn."
+    ],
+    "tip": {
+      "warn": [
+        null,
+        "Chúng tôi hiện đang nhận được một lượng lớn yêu cầu danh sách trắng đáng ngạc nhiên.",
+        "Nếu bạn đã hoàn thành nhiệm vụ nhưng không thể nhận phần thưởng airdrop, hãy kiên nhẫn."
+      ]
+    },
+    "btn": {
+      "learnMore": "Tìm hiểu thêm"
+    }
+  },
+  "switchAccountDialog": {
+    "title": "Dán địa chỉ",
+    "address": "Địa chỉ",
+    "placeholder": "dán addess",
+    "actions": {
+      "checkEligibilty": "Kiểm tra Eligibilty"
+    }
+  }
+}

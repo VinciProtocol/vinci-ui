@@ -1,0 +1,57 @@
+{
+  "title": "NFT空投",
+  "eligible": {
+    "title": "🎉 恭喜！您有资格获得空投。",
+    "subTitle": "在接下来的几周内进行空投时，您可以领取您的 NFT。",
+    "willReceive": "会收到",
+    "NFT": {
+      "actions": {
+        "comingSoon": "快来了",
+        "claim": "宣称",
+        "claimed": "声称",
+        "tip": {
+          "switchAccount": "请切换帐户以声明。"
+        }
+      }
+    }
+  },
+  "notEligible": {
+    "title": "抱歉，您没有资格参与本轮空投。",
+    "subTitle": [
+      null,
+      "不用担心！未来还会有更多的空投。",
+      "提高赔率的最佳方法是参与其中。今天开始探索："
+    ],
+    "actions": {
+      "switchAccount": "检查另一个地址",
+      "borrow": "借",
+      "lend": "借"
+    }
+  },
+  "criteria": {
+    "title": "资格标准",
+    "subTitle": [
+      null,
+      "Leonardo da Vinci NFT Drop 将奖励加入 Vinci Protocol 社区并参与此社区倡议的任何人，以帮助我们创建社会运动。",
+      "要获得资格，您必须参加比赛并向公众表明您的支持。"
+    ],
+    "tip": {
+      "warn": [
+        null,
+        "我们现在收到数量惊人的白名单请求。",
+        "如果您已完成任务但无法领取空投奖励，请耐心等待。"
+      ]
+    },
+    "btn": {
+      "learnMore": "学到更多"
+    }
+  },
+  "switchAccountDialog": {
+    "title": "粘贴地址",
+    "address": "地址",
+    "placeholder": "粘贴地址",
+    "actions": {
+      "checkEligibilty": "检查资格"
+    }
+  }
+}

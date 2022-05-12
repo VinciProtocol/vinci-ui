@@ -1,0 +1,57 @@
+{
+  "title": "Airdrop NFT",
+  "eligible": {
+    "title": "🎉 Félicitations ! Vous êtes éligible au parachutage.",
+    "subTitle": "Vous pourrez réclamer votre NFT lorsque le largage aérien aura lieu dans les prochaines semaines.",
+    "willReceive": "recevra",
+    "NFT": {
+      "actions": {
+        "comingSoon": "À venir",
+        "claim": "Prétendre",
+        "claimed": "Revendiqué",
+        "tip": {
+          "switchAccount": "Veuillez changer de compte pour réclamer."
+        }
+      }
+    }
+  },
+  "notEligible": {
+    "title": "Désolé, vous n'êtes pas éligible pour ce tour de parachutage.",
+    "subTitle": [
+      null,
+      "Ne vous inquiétez pas! Il y aura plus de parachutages à l'avenir.",
+      "La meilleure façon d'améliorer vos chances est de vous impliquer. Commencez à explorer dès aujourd'hui :"
+    ],
+    "actions": {
+      "switchAccount": "Vérifier une autre adresse",
+      "borrow": "Emprunter",
+      "lend": "Prêter"
+    }
+  },
+  "criteria": {
+    "title": "Critère d'éligibilité",
+    "subTitle": [
+      null,
+      "Le Leonardo da Vinci NFT Drop récompensera quiconque rejoint les communautés du protocole Vinci et participera à cette initiative communautaire pour nous aider à créer un mouvement social.",
+      "Pour être éligible, vous devez participer au concours et faire connaître votre soutien au public."
+    ],
+    "tip": {
+      "warn": [
+        null,
+        "Nous recevons maintenant une quantité surprenante de demandes de liste blanche.",
+        "Si vous avez terminé les tâches mais que vous n'avez pas pu réclamer la récompense de largage, veuillez patienter."
+      ]
+    },
+    "btn": {
+      "learnMore": "Apprendre encore plus"
+    }
+  },
+  "switchAccountDialog": {
+    "title": "Coller l'adresse",
+    "address": "adresse",
+    "placeholder": "coller l'adresse",
+    "actions": {
+      "checkEligibilty": "Vérifier l'éligibilité"
+    }
+  }
+}

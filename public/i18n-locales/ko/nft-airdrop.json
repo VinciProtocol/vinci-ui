@@ -1,0 +1,57 @@
+{
+  "title": "NFT 에어드랍",
+  "eligible": {
+    "title": "🎉 축하합니다! 에어드랍 자격이 있습니다.",
+    "subTitle": "다음 몇 주 안에 에어드랍이 이루어지면 NFT를 청구할 수 있습니다.",
+    "willReceive": "받을 것이다",
+    "NFT": {
+      "actions": {
+        "comingSoon": "출시 예정",
+        "claim": "주장하다",
+        "claimed": "주장",
+        "tip": {
+          "switchAccount": "청구하려면 계정을 전환하세요."
+        }
+      }
+    }
+  },
+  "notEligible": {
+    "title": "죄송합니다. 이 에어드롭 라운드에 참가할 자격이 없습니다.",
+    "subTitle": [
+      null,
+      "괜찮아요! 앞으로 더 많은 에어드랍이 있을 것입니다.",
+      "확률을 높이는 가장 좋은 방법은 참여하는 것입니다. 오늘 탐색 시작:"
+    ],
+    "actions": {
+      "switchAccount": "다른 주소 확인",
+      "borrow": "빌리다",
+      "lend": "빌려주다"
+    }
+  },
+  "criteria": {
+    "title": "자격 기준",
+    "subTitle": [
+      null,
+      "Leonardo da Vinci NFT Drop은 Vinci Protocol 커뮤니티에 가입하고 우리가 사회 운동을 만드는 데 도움이 되는 이 커뮤니티 이니셔티브에 참여하는 모든 사람에게 보상을 제공합니다.",
+      "자격을 얻으려면 콘테스트에 참가하고 지원 내용을 대중에게 알려야 합니다."
+    ],
+    "tip": {
+      "warn": [
+        null,
+        "현재 놀라운 양의 화이트리스트 요청을 받고 있습니다.",
+        "작업을 완료했지만 에어드랍 보상을 받을 수 없다면 기다려주세요."
+      ]
+    },
+    "btn": {
+      "learnMore": "더 알아보기"
+    }
+  },
+  "switchAccountDialog": {
+    "title": "주소 붙여넣기",
+    "address": "주소",
+    "placeholder": "붙여넣기",
+    "actions": {
+      "checkEligibilty": "자격 확인"
+    }
+  }
+}

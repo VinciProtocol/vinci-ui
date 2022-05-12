@@ -1,0 +1,57 @@
+{
+  "title": "Lançamento aéreo NFT",
+  "eligible": {
+    "title": "🎉 Parabéns! Você é elegível para o lançamento aéreo.",
+    "subTitle": "Você poderá reivindicar seu NFT quando o lançamento aéreo ocorrer nas próximas semanas.",
+    "willReceive": "receberá",
+    "NFT": {
+      "actions": {
+        "comingSoon": "Em breve",
+        "claim": "Afirmação",
+        "claimed": "Reivindicado",
+        "tip": {
+          "switchAccount": "Por favor, mude de conta para reivindicar."
+        }
+      }
+    }
+  },
+  "notEligible": {
+    "title": "Desculpe, você não é elegível para esta rodada de lançamento aéreo.",
+    "subTitle": [
+      null,
+      "Não se preocupe! Haverá mais lançamentos aéreos no futuro.",
+      "A melhor maneira de melhorar suas chances é se envolver. Comece a explorar hoje:"
+    ],
+    "actions": {
+      "switchAccount": "Verifique outro endereço",
+      "borrow": "Pegar emprestado",
+      "lend": "Emprestar"
+    }
+  },
+  "criteria": {
+    "title": "Critérios de elegibilidade",
+    "subTitle": [
+      null,
+      "O Leonardo da Vinci NFT Drop premiará quem se juntar às comunidades do Protocolo Vinci e participar desta iniciativa comunitária para nos ajudar a criar um movimento social.",
+      "Para ser elegível, você deve participar do Concurso e divulgar seu apoio ao público."
+    ],
+    "tip": {
+      "warn": [
+        null,
+        "Agora estamos recebendo uma quantidade surpreendente de solicitações de lista de permissões.",
+        "Se você terminou as tarefas, mas não conseguiu reivindicar a recompensa de lançamento aéreo, seja paciente."
+      ]
+    },
+    "btn": {
+      "learnMore": "Saber mais"
+    }
+  },
+  "switchAccountDialog": {
+    "title": "Colar endereço",
+    "address": "Morada",
+    "placeholder": "colar endereço",
+    "actions": {
+      "checkEligibilty": "Verificar elegibilidade"
+    }
+  }
+}
