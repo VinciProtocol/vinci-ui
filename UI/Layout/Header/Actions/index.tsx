@@ -8,6 +8,8 @@ import ChainButton from 'app/wallet/ChainButton'
 import ConnectButton from 'app/wallet/ConnectButton'
 import LanguageMenu from 'app/i18n/components/LanguageMenu'
 
+import NFTAirdropButton from './NFTAirdropButton'
+
 const Actions: FC = () => {
   const ROOT = useMemoEmpty(
     () => styled(Stack)`
@@ -18,6 +20,7 @@ const Actions: FC = () => {
 
   return (
     <ROOT direction="row" spacing={2}>
+      <NFTAirdropButton />
       <ChainButton />
       <ConnectButton />
       <ThemeButton />
