@@ -7,7 +7,7 @@ import Button from '@mui/material/Button'
 import DialogContent from '@mui/material/DialogContent'
 import Link from '@mui/material/Link'
 
-import ConnectingRing from '../ConnectingRing'
+import RingLoading from 'components/loading/RingLoading'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { Title, Caption } from 'components/Styled'
 import { useWallet } from 'app/wallet'
@@ -153,7 +153,7 @@ const WalletConnecting: FC = () => {
   return (
     <ROOT>
       <Loading>
-        <ConnectingRing />
+        <RingLoading />
       </Loading>
       <Caption>
         <span>{t('wallet.tips.accept')}</span>

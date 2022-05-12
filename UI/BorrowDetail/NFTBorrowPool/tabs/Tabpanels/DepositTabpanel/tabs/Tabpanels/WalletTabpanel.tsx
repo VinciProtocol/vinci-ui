@@ -13,7 +13,7 @@ import { NFTTabValue } from 'app/App/pages/borrowDetail'
 import { withTabPanel } from 'app/hoc/tabs/withTabPanel'
 import { RESPONSIVE_DESIGN } from 'styles/constants'
 
-import NFTCard from './components/NFTCard'
+import NFTCard from 'components/nft/NFTCard'
 import NumberDisplay from 'components/math/NumberDisplay'
 
 const WalletTabpanel = withTabPanel(

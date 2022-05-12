@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import { styled } from '@mui/material/styles'
 
-const ConnectingRing: FC = () => {
+const RingLoading: FC = () => {
   return (
     <Ring>
       <RingAnimation />
@@ -44,4 +44,4 @@ const RingAnimation = styled('div')`
   }
 `
 
-export default ConnectingRing
+export default RingLoading

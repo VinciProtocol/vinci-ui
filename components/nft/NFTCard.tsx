@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+import { useMemo, Fragment } from 'react'
 import { useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { styled } from '@mui/material/styles'
@@ -14,14 +15,15 @@ import type { NFT } from 'UI/BorrowDetail/types'
 import NumberDisplay from 'components/math/NumberDisplay'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 
-const NFTCard: FC<NFT & { action: { name: string; onClick: any }; currentFloorPrice: string; onCheckChange: any }> = ({
-  id,
-  description,
-  image,
-  action,
-  currentFloorPrice,
-  onCheckChange,
-}) => {
+type NFTCardProps = Partial<
+  NFT & {
+    action: { name: string; onClick: any; disabled?: boolean; tip?: any }
+    currentFloorPrice: string
+    onCheckChange: any
+  }
+>
+
+const NFTCard: FC<NFTCardProps> = ({ id, description, image, action, currentFloorPrice, onCheckChange }) => {
   const Root = useMemoEmpty(
     () =>
       styled(Card)`
@@ -34,28 +36,44 @@ const NFTCard: FC<NFT & { action: { name: string; onClick: any }; currentFloorPr
         }
       `
   )
+  const { t } = useTranslation()
   const [checked, setChecked] = useState(false)
+  const displayCheckBox = useMemo(() => !!onCheckChange, [onCheckChange])
+  const title = useMemo(() => (id ? `${description} #${id}` : description), [description, id])
+  const actions = useMemo(() => {
+    if (!action) return null
+    const { tip, disabled, onClick, name } = action
+    if (tip) return tip
+    return (
+      <Button variant="outlined" disabled={disabled} onClick={() => onClick(id)}>
+        {name}
+      </Button>
+    )
+  }, [action, id])
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.checked
     setChecked(value)
     onCheckChange(id, value)
   }
-  const { t } = useTranslation()
   return (
     <Root>
-      <Checkbox className="checkbox" checked={checked} onChange={handleChange} />
+      {displayCheckBox && <Checkbox className="checkbox" checked={checked} onChange={handleChange} />}
       <CardMedia component="img" height="200" image={image} alt={description} />
       <CardContent>
         <Typography gutterBottom variant="body2" component="div">
-          {description} #{id}
+          {title}
         </Typography>
-        <Typography component="div" variant="caption" color="text.secondary">
-          {t('borrow-detail:NFT.valuation')}
-        </Typography>
-        <Typography gutterBottom variant="body1" component="div">
-          <NumberDisplay value={currentFloorPrice} type="network" />
-        </Typography>
+        {currentFloorPrice && (
+          <Fragment>
+            <Typography component="div" variant="caption" color="text.secondary">
+              {t('borrow-detail:NFT.valuation')}
+            </Typography>
+            <Typography gutterBottom variant="body1" component="div">
+              <NumberDisplay value={currentFloorPrice} type="network" />
+            </Typography>
+          </Fragment>
+        )}
       </CardContent>
       <Divider />
       <CardActions
@@ -64,9 +82,7 @@ const NFTCard: FC<NFT & { action: { name: string; onClick: any }; currentFloorPr
           padding: 2,
         }}
       >
-        <Button variant="outlined" onClick={() => action.onClick(id)}>
-          {action.name}
-        </Button>
+        {actions}
       </CardActions>
     </Root>
   )
