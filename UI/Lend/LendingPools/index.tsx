@@ -20,7 +20,6 @@ const LendingPools: FC<LendingPoolsProps> = () => {
   )
   const ROOT = useMemoEmpty(
     () => styled(Paper)`
-      border-radius: 10px;
       .basic-table {
         min-height: 360px;
       }

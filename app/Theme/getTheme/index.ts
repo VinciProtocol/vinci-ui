@@ -180,7 +180,7 @@ export const getTheme = (options: ThemeOptions) => {
             props: { variant: 'card' },
             style: {
               border: `1px solid ${divider}`,
-              borderRadius: theme.shape.borderRadius,
+              borderRadius: '10px',
               transition: theme.transitions.create('box-shadow'),
               boxShadow: theme.shadows[0],
               ':hover': {
@@ -221,7 +221,7 @@ export const getTheme = (options: ThemeOptions) => {
           thumb: {
             width: '15px',
             height: '15px',
-          }
+          },
         },
       },
       MuiTooltip: {

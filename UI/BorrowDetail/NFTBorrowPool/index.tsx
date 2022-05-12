@@ -13,7 +13,6 @@ import TabContent from './tabs/TabContent'
 const NFTBorrowPool: FC = () => {
   const ROOT = useMemoEmpty(
     () => styled(Paper)`
-      border-radius: 10px;
       .basic-table {
         min-height: 438px;
       }

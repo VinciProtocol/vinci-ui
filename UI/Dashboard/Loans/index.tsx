@@ -20,7 +20,6 @@ const Loans: FC = () => {
   )
   const ROOT = useMemoEmpty(
     () => styled(Paper)`
-      border-radius: 10px;
       .basic-table {
         min-height: 260px;
       }
