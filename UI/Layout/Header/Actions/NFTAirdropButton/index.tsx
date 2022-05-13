@@ -1,9 +1,8 @@
 import type { FC } from 'react'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 import Button from '@mui/material/Button'
-import Icon from './celebrateTwoTone.svg'
+import Icon from '@mui/icons-material/CelebrationTwoTone'
 
 export const NFTAirdropButton: FC = () => {
   const { t } = useTranslation()
@@ -12,7 +11,7 @@ export const NFTAirdropButton: FC = () => {
     <Button
       key="nft-airdrop-button"
       variant="transOutlined"
-      startIcon={<Image src={Icon} alt="NFTAirdrop" />}
+      startIcon={<Icon />}
       onClick={() => {
         router.push({
           pathname: '/nft-airdrop',

@@ -40,7 +40,9 @@ const locale = {
     title: 'Eligibility Criteria',
     subTitle: {
       1: 'The Leonardo da Vinci NFT Drop will reward whoever joins in Vinci Protocol communities and participate in this community initiative to help us create a social movement.',
-      2: 'To be eligible, you must enter the Contest and make your support known to the public.',
+      2: 'To be eligible, you must enter',
+      3: 'and make your support known to the public.',
+      contest: 'the Contest',
     },
     btn: {
       learnMore: 'Learn More',

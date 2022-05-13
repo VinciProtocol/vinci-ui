@@ -5,6 +5,7 @@ import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import CardActions from '@mui/material/CardActions'
+import Link from '@mui/material/Link'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { SubTitle } from 'components/Styled'
@@ -23,7 +24,11 @@ const EligibilityCriteria: FC = () => {
       <Title>{t('criteria.title')}</Title>
       <Stack spacing={1}>
         <SubTitle>{t('criteria.subTitle.1')}</SubTitle>
-        <SubTitle>{t('criteria.subTitle.2')}</SubTitle>
+        <SubTitle>
+          {t('criteria.subTitle.2')}{' '}
+          <Link href='#' underline='none' target='_blank'>the Contest</Link>
+          {' '}{t('criteria.subTitle.3')}
+        </SubTitle>
       </Stack>
       <CardActions>
         <Button variant="outlined">{t('criteria.btn.learnMore')}</Button>

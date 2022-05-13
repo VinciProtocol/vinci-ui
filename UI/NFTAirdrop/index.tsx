@@ -16,13 +16,15 @@ const NFTAirdrop: FC = () => {
   const Content = useMemoEmpty(() =>
     styled(Container)(({ theme }) => ({
       paddingTop: theme.spacing(8),
+      display: 'flex',
+      justifyContent: 'center',
     }))
   )
   const { t } = useTranslation('nft-airdrop')
 
   return (
     <Content>
-      <Paper variant="card">
+      <Paper variant="card" sx={{ maxWidth: 800 }}>
         <CardContent>
           <Stack spacing={2}>
             <Title>{t('title')}</Title>

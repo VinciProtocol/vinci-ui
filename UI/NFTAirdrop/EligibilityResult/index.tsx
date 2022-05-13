@@ -76,7 +76,7 @@ const Eligibility: FC = () => {
       </SubTitle>
       <NFT>
         <NFTCard
-          description="Vinci NFT"
+          description="Leonardo da Vinci NFT"
           action={{
             onClick: () => {},
             name: t('eligible.NFT.actions.comingSoon'),

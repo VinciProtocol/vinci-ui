@@ -143,7 +143,13 @@ export const getTheme = (options: ThemeOptions) => {
               ':hover': {
                 color: '#fff',
                 background: primary.main,
+                '.MuiButton-startIcon': {
+                  color: '#fff',
+                }
               },
+              '.MuiButton-startIcon': {
+                color: primary.main,
+              }
             },
           },
           {
