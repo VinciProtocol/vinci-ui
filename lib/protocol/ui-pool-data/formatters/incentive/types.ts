@@ -24,14 +24,6 @@ export interface IncentiveDataHumanized {
   precision: number
 }
 
-// From UiIncentiveDataProvider
-export interface UserReserveIncentiveDataHumanizedResponse {
-  underlyingAsset: string
-  aTokenIncentivesUserData: IncentiveUserDataHumanized
-  vTokenIncentivesUserData: IncentiveUserDataHumanized
-  sTokenIncentivesUserData: IncentiveUserDataHumanized
-}
-
 export interface IncentiveUserDataHumanized {
   tokenIncentivesUserIndex: string
   userUnclaimedRewards: string
