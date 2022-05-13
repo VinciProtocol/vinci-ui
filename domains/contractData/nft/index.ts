@@ -6,13 +6,17 @@ import { useContractData } from 'domains'
 import { useNFTInfo } from './application/NFTInfo'
 import { log } from 'utils/dev'
 
+const NFTRouterPath = ['/borrow/[id]', '/nft-lockdrop/[id]']
+
 const useContractNFTService = () => {
   const { generalAssets, nftAssets } = useContractData()
   const router = useRouter()
 
   const nft = useMemo(() => {
     const defaultValue = { data: [] } as undefined
-    if (router.pathname != '/borrow/[id]' || !router.query.id) return defaultValue
+    if (NFTRouterPath.findIndex((pathname) => pathname === router.pathname) === -1 || !router.query.id) {
+      return defaultValue
+    }
     const nft = nftAssets.find((nft) => nft.underlyingAsset === (router.query.id as any))
     if (!nft) return defaultValue
     const data = generalAssets.filter((generalAsset) => generalAsset.collection === nft.collection)

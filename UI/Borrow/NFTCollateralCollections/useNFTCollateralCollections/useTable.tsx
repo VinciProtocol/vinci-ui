@@ -114,8 +114,21 @@ export const useTable = (): BasicTableProps => {
     [t]
   )
 
+  const tableProps: BasicTableProps['tableProps'] = useMemo(
+    () => ({
+      onRowClick: ({ rowData }) => {
+        router.push({
+          pathname: '/borrow/[id]',
+          query: { id: rowData.underlyingAsset },
+        })
+      },
+    }),
+    [router]
+  )
+
   return {
     columns,
     data: nftAssets,
+    tableProps,
   }
 }

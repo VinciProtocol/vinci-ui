@@ -15,11 +15,11 @@ const locale = {
         btn: 'Buy some NFTs Now',
       },
     },
+    totalValuation: 'Total Valuation:',
+    valuation: 'Valuation',
+    approveAll: 'Approve All',
+    depositSelected: 'Deposit Selected',
   },
-  totalValuation: 'Total Valuation:',
-  valuation: 'Valuation',
-  approveAll: 'Approve All',
-  depositSelected: 'Deposit Selected',
 }
 
 export default locale

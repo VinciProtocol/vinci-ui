@@ -1,10 +1,12 @@
 import { useMemo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { TableCellRenderer } from 'react-virtualized'
+import { useRouter } from 'next/router'
 
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import TableCell from '@mui/material/TableCell'
+import { useDialogs, useContractData } from 'domains'
 
 import type { TableColumnsProps, BasicTableProps } from 'lib/table/BasicTable/types'
 import { useWallet } from 'app/wallet'
@@ -15,9 +17,9 @@ import {
   collectionCellRenderer,
   collectionHeaderRenderer,
 } from 'components/Table'
-import { useDialogs, useContractData } from 'domains'
 
 export const useTable = (): BasicTableProps => {
+  const router = useRouter()
   const { t } = useTranslation('nft-lockdrop')
   const { account } = useWallet()
 
@@ -29,7 +31,18 @@ export const useTable = (): BasicTableProps => {
       return (
         <TableCell component="div">
           <Stack spacing={2} direction="row">
-            <Button variant="outlined" size="small" onClick={() => {}}>
+            <Button
+              variant="outlined"
+              size="small"
+              onClick={(e) => {
+                e.stopPropagation()
+                e.nativeEvent.stopImmediatePropagation()
+                router.push({
+                  pathname: '/nft-lockdrop/[id]',
+                  query: { id: rowData.underlyingAsset },
+                })
+              }}
+            >
               {t('NFTLockdropRewards.actions.depositNFT')}
             </Button>
           </Stack>
@@ -95,8 +108,21 @@ export const useTable = (): BasicTableProps => {
     [t, account]
   )
 
+  const tableProps: BasicTableProps['tableProps'] = useMemo(
+    () => ({
+      onRowClick: ({ rowData }) => {
+        router.push({
+          pathname: '/nft-lockdrop/[id]',
+          query: { id: rowData.underlyingAsset },
+        })
+      },
+    }),
+    [router]
+  )
+
   return {
     columns,
     data: nftAssets,
+    tableProps,
   }
 }
