@@ -14,10 +14,10 @@
         "tip": "Sie haben keine NFTs in der Brieftasche.",
         "btn": "Kaufen Sie jetzt einige NFTs"
       }
-    }
-  },
-  "totalValuation": "Gesamtbewertung:",
-  "valuation": "Bewertung",
-  "approveAll": "Alle genehmigen",
-  "depositSelected": "Anzahlung ausgewählt"
+    },
+    "totalValuation": "Gesamtbewertung:",
+    "valuation": "Bewertung",
+    "approveAll": "Alle genehmigen",
+    "depositSelected": "Anzahlung ausgewählt"
+  }
 }

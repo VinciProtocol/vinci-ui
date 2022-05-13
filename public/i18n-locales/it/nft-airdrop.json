@@ -15,6 +15,9 @@
       }
     }
   },
+  "loading": {
+    "title": "Caricamento in corso"
+  },
   "notEligible": {
     "title": "Siamo spiacenti, non sei idoneo per questo round di airdrop.",
     "subTitle": [
@@ -28,6 +31,13 @@
       "lend": "Prestare"
     }
   },
+  "tip": {
+    "warn": [
+      null,
+      "Ora stiamo ricevendo una quantità sorprendente di richieste di whitelist.",
+      "Se hai completato le attività ma non hai potuto richiedere il premio airdrop, sii paziente."
+    ]
+  },
   "criteria": {
     "title": "Criteri di ammissibilità",
     "subTitle": [
@@ -35,13 +45,6 @@
       "Il Leonardo da Vinci NFT Drop ricompenserà chiunque si unirà alle comunità del Protocollo Vinci e parteciperà a questa iniziativa comunitaria per aiutarci a creare un movimento sociale.",
       "Per essere idoneo, devi partecipare al Contest e rendere noto il tuo sostegno al pubblico."
     ],
-    "tip": {
-      "warn": [
-        null,
-        "Ora stiamo ricevendo una quantità sorprendente di richieste di whitelist.",
-        "Se hai completato le attività ma non hai potuto richiedere il premio airdrop, sii paziente."
-      ]
-    },
     "btn": {
       "learnMore": "Per saperne di più"
     }

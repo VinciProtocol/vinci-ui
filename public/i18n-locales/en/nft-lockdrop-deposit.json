@@ -14,10 +14,10 @@
         "tip": "You don't have any NFTs in the wallet.",
         "btn": "Buy some NFTs Now"
       }
-    }
-  },
-  "totalValuation": "Total Valuation:",
-  "valuation": "Valuation",
-  "approveAll": "Approve All",
-  "depositSelected": "Deposit Selected"
+    },
+    "totalValuation": "Total Valuation:",
+    "valuation": "Valuation",
+    "approveAll": "Approve All",
+    "depositSelected": "Deposit Selected"
+  }
 }

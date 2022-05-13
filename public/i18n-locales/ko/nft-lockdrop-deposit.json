@@ -14,10 +14,10 @@
         "tip": "지갑에 NFT가 없습니다.",
         "btn": "지금 NFT를 구매하세요"
       }
-    }
-  },
-  "totalValuation": "총 평가:",
-  "valuation": "평가",
-  "approveAll": "모두 승인",
-  "depositSelected": "선택한 예금"
+    },
+    "totalValuation": "총 평가:",
+    "valuation": "평가",
+    "approveAll": "모두 승인",
+    "depositSelected": "선택한 예금"
+  }
 }

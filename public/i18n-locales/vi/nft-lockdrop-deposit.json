@@ -14,10 +14,10 @@
         "tip": "Bạn không có bất kỳ NFT nào trong ví.",
         "btn": "Mua một số NFT ngay bây giờ"
       }
-    }
-  },
-  "totalValuation": "Tổng định giá:",
-  "valuation": "Định giá",
-  "approveAll": "Phê duyệt tất cả",
-  "depositSelected": "Gửi tiền đã chọn"
+    },
+    "totalValuation": "Tổng định giá:",
+    "valuation": "Định giá",
+    "approveAll": "Phê duyệt tất cả",
+    "depositSelected": "Gửi tiền đã chọn"
+  }
 }

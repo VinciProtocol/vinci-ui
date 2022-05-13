@@ -14,10 +14,10 @@
         "tip": "У вас нет NFT в кошельке.",
         "btn": "Купите несколько NFT сейчас"
       }
-    }
-  },
-  "totalValuation": "Общая оценка:",
-  "valuation": "оценка",
-  "approveAll": "Одобрить все",
-  "depositSelected": "Депозит выбран"
+    },
+    "totalValuation": "Общая оценка:",
+    "valuation": "оценка",
+    "approveAll": "Одобрить все",
+    "depositSelected": "Депозит выбран"
+  }
 }

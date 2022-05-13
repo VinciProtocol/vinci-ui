@@ -15,6 +15,9 @@
       }
     }
   },
+  "loading": {
+    "title": "Chargement"
+  },
   "notEligible": {
     "title": "Désolé, vous n'êtes pas éligible pour ce tour de parachutage.",
     "subTitle": [
@@ -28,6 +31,13 @@
       "lend": "Prêter"
     }
   },
+  "tip": {
+    "warn": [
+      null,
+      "Nous recevons maintenant une quantité surprenante de demandes de liste blanche.",
+      "Si vous avez terminé les tâches mais que vous n'avez pas pu réclamer la récompense de largage, veuillez patienter."
+    ]
+  },
   "criteria": {
     "title": "Critère d'éligibilité",
     "subTitle": [
@@ -35,13 +45,6 @@
       "Le Leonardo da Vinci NFT Drop récompensera quiconque rejoint les communautés du protocole Vinci et participera à cette initiative communautaire pour nous aider à créer un mouvement social.",
       "Pour être éligible, vous devez participer au concours et faire connaître votre soutien au public."
     ],
-    "tip": {
-      "warn": [
-        null,
-        "Nous recevons maintenant une quantité surprenante de demandes de liste blanche.",
-        "Si vous avez terminé les tâches mais que vous n'avez pas pu réclamer la récompense de largage, veuillez patienter."
-      ]
-    },
     "btn": {
       "learnMore": "Apprendre encore plus"
     }

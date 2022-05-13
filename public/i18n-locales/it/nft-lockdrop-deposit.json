@@ -14,10 +14,10 @@
         "tip": "Non hai NFT nel portafoglio.",
         "btn": "Acquista ora alcuni NFT"
       }
-    }
-  },
-  "totalValuation": "Valutazione totale:",
-  "valuation": "Valutazione",
-  "approveAll": "Approva tutto",
-  "depositSelected": "Deposito selezionato"
+    },
+    "totalValuation": "Valutazione totale:",
+    "valuation": "Valutazione",
+    "approveAll": "Approva tutto",
+    "depositSelected": "Deposito selezionato"
+  }
 }

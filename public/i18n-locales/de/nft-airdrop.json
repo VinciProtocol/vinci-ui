@@ -15,6 +15,9 @@
       }
     }
   },
+  "loading": {
+    "title": "Wird geladen"
+  },
   "notEligible": {
     "title": "Tut mir leid, Sie sind für diese Airdrop-Runde nicht berechtigt.",
     "subTitle": [
@@ -28,6 +31,13 @@
       "lend": "Verleihen"
     }
   },
+  "tip": {
+    "warn": [
+      null,
+      "Wir erhalten jetzt überraschend viele Whitelist-Anfragen.",
+      "Wenn Sie die Aufgaben abgeschlossen haben, aber die Airdrop-Belohnung nicht beanspruchen konnten, haben Sie bitte etwas Geduld."
+    ]
+  },
   "criteria": {
     "title": "Zulassungskriterien",
     "subTitle": [
@@ -35,13 +45,6 @@
       "Der Leonardo da Vinci NFT Drop wird jeden belohnen, der sich Vinci-Protokoll-Gemeinschaften anschließt und an dieser Gemeinschaftsinitiative teilnimmt, um uns beim Aufbau einer sozialen Bewegung zu helfen.",
       "Um teilnahmeberechtigt zu sein, müssen Sie am Wettbewerb teilnehmen und Ihre Unterstützung der Öffentlichkeit bekannt machen."
     ],
-    "tip": {
-      "warn": [
-        null,
-        "Wir erhalten jetzt überraschend viele Whitelist-Anfragen.",
-        "Wenn Sie die Aufgaben abgeschlossen haben, aber die Airdrop-Belohnung nicht beanspruchen konnten, haben Sie bitte etwas Geduld."
-      ]
-    },
     "btn": {
       "learnMore": "Lern mehr"
     }

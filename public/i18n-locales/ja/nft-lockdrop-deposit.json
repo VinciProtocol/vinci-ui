@@ -14,10 +14,10 @@
         "tip": "ウォレットにNFTがありません。",
         "btn": "今すぐNFTを購入する"
       }
-    }
-  },
-  "totalValuation": "総評価：",
-  "valuation": "評価",
-  "approveAll": "すべて承認する",
-  "depositSelected": "選択したデポジット"
+    },
+    "totalValuation": "総評価：",
+    "valuation": "評価",
+    "approveAll": "すべて承認する",
+    "depositSelected": "選択したデポジット"
+  }
 }

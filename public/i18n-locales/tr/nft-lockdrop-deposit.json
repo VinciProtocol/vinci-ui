@@ -14,10 +14,10 @@
         "tip": "Cüzdanınızda hiç NFT yok.",
         "btn": "Şimdi bazı NFT'ler satın alın"
       }
-    }
-  },
-  "totalValuation": "Toplam Değerleme:",
-  "valuation": "Değerleme",
-  "approveAll": "Tümünü Onayla",
-  "depositSelected": "Depozito Seçildi"
+    },
+    "totalValuation": "Toplam Değerleme:",
+    "valuation": "Değerleme",
+    "approveAll": "Tümünü Onayla",
+    "depositSelected": "Depozito Seçildi"
+  }
 }

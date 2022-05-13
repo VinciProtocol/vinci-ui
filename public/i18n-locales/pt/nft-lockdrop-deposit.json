@@ -14,10 +14,10 @@
         "tip": "Você não tem NFTs na carteira.",
         "btn": "Compre alguns NFTs agora"
       }
-    }
-  },
-  "totalValuation": "Avaliação Total:",
-  "valuation": "Avaliação",
-  "approveAll": "Aprovar tudo",
-  "depositSelected": "Depósito selecionado"
+    },
+    "totalValuation": "Avaliação Total:",
+    "valuation": "Avaliação",
+    "approveAll": "Aprovar tudo",
+    "depositSelected": "Depósito selecionado"
+  }
 }

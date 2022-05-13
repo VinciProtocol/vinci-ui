@@ -15,6 +15,9 @@
       }
     }
   },
+  "loading": {
+    "title": "Carregando"
+  },
   "notEligible": {
     "title": "Desculpe, você não é elegível para esta rodada de lançamento aéreo.",
     "subTitle": [
@@ -28,6 +31,13 @@
       "lend": "Emprestar"
     }
   },
+  "tip": {
+    "warn": [
+      null,
+      "Agora estamos recebendo uma quantidade surpreendente de solicitações de lista de permissões.",
+      "Se você terminou as tarefas, mas não conseguiu reivindicar a recompensa de lançamento aéreo, seja paciente."
+    ]
+  },
   "criteria": {
     "title": "Critérios de elegibilidade",
     "subTitle": [
@@ -35,13 +45,6 @@
       "O Leonardo da Vinci NFT Drop premiará quem se juntar às comunidades do Protocolo Vinci e participar desta iniciativa comunitária para nos ajudar a criar um movimento social.",
       "Para ser elegível, você deve participar do Concurso e divulgar seu apoio ao público."
     ],
-    "tip": {
-      "warn": [
-        null,
-        "Agora estamos recebendo uma quantidade surpreendente de solicitações de lista de permissões.",
-        "Se você terminou as tarefas, mas não conseguiu reivindicar a recompensa de lançamento aéreo, seja paciente."
-      ]
-    },
     "btn": {
       "learnMore": "Saber mais"
     }

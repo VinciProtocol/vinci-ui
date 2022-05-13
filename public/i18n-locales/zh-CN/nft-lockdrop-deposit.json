@@ -14,10 +14,10 @@
         "tip": "你的钱包里没有任何 NFT。",
         "btn": "立即购买一些 NFT"
       }
-    }
-  },
-  "totalValuation": "总估值：",
-  "valuation": "估值",
-  "approveAll": "全部批准",
-  "depositSelected": "已选择存款"
+    },
+    "totalValuation": "总估值：",
+    "valuation": "估值",
+    "approveAll": "全部批准",
+    "depositSelected": "已选择存款"
+  }
 }

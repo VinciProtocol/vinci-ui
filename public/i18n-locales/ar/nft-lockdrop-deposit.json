@@ -14,10 +14,10 @@
         "tip": "ليس لديك أي NFTs في المحفظة.",
         "btn": "قم بشراء بعض NFTs الآن"
       }
-    }
-  },
-  "totalValuation": "إجمالي التقييم:",
-  "valuation": "تقييم",
-  "approveAll": "الموافقة على الكل",
-  "depositSelected": "الإيداع المحدد"
+    },
+    "totalValuation": "إجمالي التقييم:",
+    "valuation": "تقييم",
+    "approveAll": "الموافقة على الكل",
+    "depositSelected": "الإيداع المحدد"
+  }
 }

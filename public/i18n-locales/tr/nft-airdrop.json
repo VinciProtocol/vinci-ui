@@ -15,6 +15,9 @@
       }
     }
   },
+  "loading": {
+    "title": "Yükleniyor"
+  },
   "notEligible": {
     "title": "Üzgünüz, bu airdrop turu için uygun değilsiniz.",
     "subTitle": [
@@ -28,6 +31,13 @@
       "lend": "Borç vermek"
     }
   },
+  "tip": {
+    "warn": [
+      null,
+      "Şu anda şaşırtıcı miktarda beyaz liste isteği alıyoruz.",
+      "Görevleri tamamladıysanız ancak airdrop ödülünü alamadıysanız lütfen sabırlı olun."
+    ]
+  },
   "criteria": {
     "title": "Uygunluk kriterleri",
     "subTitle": [
@@ -35,13 +45,6 @@
       "Leonardo da Vinci NFT Drop, bir sosyal hareket yaratmamıza yardımcı olmak için Vinci Protokolü topluluklarına katılanları ve bu topluluk girişimine katılanları ödüllendirecek.",
       "Hak kazanmak için Yarışmaya katılmalı ve desteğinizi halka duyurmalısınız."
     ],
-    "tip": {
-      "warn": [
-        null,
-        "Şu anda şaşırtıcı miktarda beyaz liste isteği alıyoruz.",
-        "Görevleri tamamladıysanız ancak airdrop ödülünü alamadıysanız lütfen sabırlı olun."
-      ]
-    },
     "btn": {
       "learnMore": "Daha fazla bilgi edin"
     }
