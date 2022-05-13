@@ -154,10 +154,10 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
     reserve,
     amount,
     onBehalfOf,
-    aTokenAddress,
+    vTokenAddress,
   }: LPWithdrawParamsType): Promise<EthereumTransactionTypeExtended[]> {
     if (reserve.toLowerCase() === API_ETH_MOCK_ADDRESS) {
-      if (!aTokenAddress) {
+      if (!vTokenAddress) {
         throw new Error('To withdraw ETH you need to pass the aWETH token address')
       }
 
@@ -166,7 +166,7 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
         user,
         amount,
         onBehalfOf,
-        aTokenAddress,
+        vTokenAddress,
       })
     }
 

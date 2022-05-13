@@ -10,12 +10,12 @@ import { useTranslation } from 'next-i18next'
 import InternalTabpanel from './InternalTabpanel'
 
 const useTabpanel = createUseTabpanel({
-  getPostProps: ({ lendingPoolAddress, user, amt, underlyingAsset, isMax, aTokenAddress }) => ({
+  getPostProps: ({ lendingPoolAddress, user, amt, underlyingAsset, isMax, vTokenAddress }) => ({
     lendingPoolAddress,
     user,
     reserve: underlyingAsset,
     amount: isMax ? '-1' : amt,
-    aTokenAddress,
+    vTokenAddress,
   }),
 })
 const tabpanelKey = TabValue.withdraw

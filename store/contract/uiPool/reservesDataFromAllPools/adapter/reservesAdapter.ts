@@ -25,7 +25,7 @@ export const getReserves = (reservesData: ReservesData['reservesData']) => {
       variableBorrowRate,
       stableBorrowRate,
       lastUpdateTimestamp,
-      aTokenAddress,
+      vTokenAddress,
       stableDebtTokenAddress,
       variableDebtTokenAddress,
       interestRateStrategyAddress,
@@ -62,7 +62,7 @@ export const getReserves = (reservesData: ReservesData['reservesData']) => {
       variableBorrowRate: valueToBigNumber(variableBorrowRate),
       stableBorrowRate: valueToBigNumber(stableBorrowRate),
       lastUpdateTimestamp,
-      aTokenAddress: aTokenAddress.toLowerCase(),
+      vTokenAddress: vTokenAddress.toLowerCase(),
       stableDebtTokenAddress: stableDebtTokenAddress.toLowerCase(),
       variableDebtTokenAddress: variableDebtTokenAddress.toLowerCase(),
       interestRateStrategyAddress: interestRateStrategyAddress.toLowerCase(),
@@ -85,7 +85,7 @@ export type Reserves = ReturnType<typeof getReserves>[0]
 //   return userReserves.map(
 //     ({
 //       underlyingAsset,
-//       scaledATokenBalance,
+//       scaledVTokenBalance,
 //       usageAsCollateralEnabledOnUser,
 //       stableBorrowRate,
 //       scaledVariableDebt,
@@ -93,7 +93,7 @@ export type Reserves = ReturnType<typeof getReserves>[0]
 //       stableBorrowLastUpdateTimestamp,
 //     }) => ({
 //       underlyingAsset: underlyingAsset.toLowerCase(),
-//       scaledATokenBalance: valueToBigNumber(scaledATokenBalance),
+//       scaledVTokenBalance: valueToBigNumber(scaledVTokenBalance),
 //       usageAsCollateralEnabledOnUser,
 //       stableBorrowRate: valueToBigNumber(stableBorrowRate),
 //       scaledVariableDebt: valueToBigNumber(scaledVariableDebt),

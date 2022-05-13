@@ -32,7 +32,7 @@ export function calculateUserReserveIncentives({
     new BigNumber(userReserveData.liquidityIndex)
   )
   const aIncentivesRequest = {
-    principalUserBalance: new BigNumber(userReserveData.scaledATokenBalance),
+    principalUserBalance: new BigNumber(userReserveData.scaledVTokenBalance),
     reserveIndex: new BigNumber(reserveIncentives.aIncentiveData.tokenIncentivesIndex),
     userIndex: new BigNumber(userReserveIncentives.aTokenIncentivesUserData.tokenIncentivesUserIndex),
     precision: reserveIncentives.aIncentiveData.precision,

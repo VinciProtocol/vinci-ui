@@ -35,7 +35,7 @@ export type AggregatedReserveDataStruct = {
   variableBorrowRate: BigNumberish
   stableBorrowRate: BigNumberish
   lastUpdateTimestamp: BigNumberish
-  aTokenAddress: string
+  vTokenAddress: string
   stableDebtTokenAddress: string
   variableDebtTokenAddress: string
   interestRateStrategyAddress: string
@@ -105,7 +105,7 @@ export type AggregatedReserveDataStructOutput = [
   variableBorrowRate: BigNumber
   stableBorrowRate: BigNumber
   lastUpdateTimestamp: number
-  aTokenAddress: string
+  vTokenAddress: string
   stableDebtTokenAddress: string
   variableDebtTokenAddress: string
   interestRateStrategyAddress: string
@@ -199,7 +199,7 @@ export type PoolDataStructOutput = [
 
 export type UserReserveDataStruct = {
   underlyingAsset: string
-  scaledATokenBalance: BigNumberish
+  scaledVTokenBalance: BigNumberish
   usageAsCollateralEnabledOnUser: boolean
   stableBorrowRate: BigNumberish
   scaledVariableDebt: BigNumberish
@@ -209,7 +209,7 @@ export type UserReserveDataStruct = {
 
 export type UserReserveDataStructOutput = [string, BigNumber, boolean, BigNumber, BigNumber, BigNumber, BigNumber] & {
   underlyingAsset: string
-  scaledATokenBalance: BigNumber
+  scaledVTokenBalance: BigNumber
   usageAsCollateralEnabledOnUser: boolean
   stableBorrowRate: BigNumber
   scaledVariableDebt: BigNumber

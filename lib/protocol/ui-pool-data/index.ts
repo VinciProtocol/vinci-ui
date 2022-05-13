@@ -1,6 +1,6 @@
 import { isAddress } from 'ethers/lib/utils'
-import type { IUiPoolDataProvider } from './typechain/UiPoolDataProvider'
-import { IUiPoolDataProvider__factory } from './typechain/UiPoolDataProviderFactory'
+import type { UiPoolDataProvider } from './typechain/UiPoolDataProvider'
+import { UiPoolDataProvider__factory } from './typechain/UiPoolDataProviderFactory'
 
 export * from './types/UiPoolDataProviderTypes'
 import type { Provider } from '../types'
@@ -39,7 +39,7 @@ export interface UiPoolDataProviderContext {
 }
 
 export class UiPoolDataContract {
-  contract: IUiPoolDataProvider
+  contract: UiPoolDataProvider
   provider: Provider
 
   /**
@@ -51,7 +51,7 @@ export class UiPoolDataContract {
       throw new Error('contract address is not valid')
     }
 
-    this.contract = IUiPoolDataProvider__factory.connect(context.address, context.provider)
+    this.contract = UiPoolDataProvider__factory.connect(context.address, context.provider)
     this.provider = context.provider
   }
 
@@ -113,7 +113,7 @@ export class UiPoolDataContract {
       variableBorrowRate: reserveRaw.variableBorrowRate.toString(),
       stableBorrowRate: reserveRaw.stableBorrowRate.toString(),
       lastUpdateTimestamp: reserveRaw.lastUpdateTimestamp,
-      aTokenAddress: reserveRaw.aTokenAddress.toString(),
+      vTokenAddress: reserveRaw.vTokenAddress.toString(),
       stableDebtTokenAddress: reserveRaw.stableDebtTokenAddress.toString(),
       variableDebtTokenAddress: reserveRaw.variableDebtTokenAddress.toString(),
       interestRateStrategyAddress: reserveRaw.interestRateStrategyAddress.toString(),
@@ -177,7 +177,7 @@ export class UiPoolDataContract {
 
     const userReservesData = userReservesRaw.map((userReserveRaw) => ({
       underlyingAsset: userReserveRaw.underlyingAsset.toLowerCase(),
-      scaledATokenBalance: userReserveRaw.scaledATokenBalance.toString(),
+      scaledVTokenBalance: userReserveRaw.scaledVTokenBalance.toString(),
       usageAsCollateralEnabledOnUser: userReserveRaw.usageAsCollateralEnabledOnUser,
       stableBorrowRate: userReserveRaw.stableBorrowRate.toString(),
       scaledVariableDebt: userReserveRaw.scaledVariableDebt.toString(),

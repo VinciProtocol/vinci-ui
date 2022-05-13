@@ -25,7 +25,7 @@ export type LPWithdrawParamsType = {
   reserve: tEthereumAddress
   amount: string
   onBehalfOf?: tEthereumAddress
-  aTokenAddress?: tEthereumAddress
+  vTokenAddress?: tEthereumAddress
 }
 
 export type LPWithdrawNFTParamsType = {
