@@ -6,11 +6,9 @@ import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import { useContractNFT } from 'domains'
-import { useControllers } from 'domains'
 
 import { useApp } from 'app/App'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
-import { useWallet } from 'app/wallet'
 import { LockdropDepositTabValue } from 'app/App/pages/lockdropDeposit'
 import { withTabPanel } from 'app/hoc/tabs/withTabPanel'
 import { RESPONSIVE_DESIGN } from 'styles/constants'
@@ -30,30 +28,12 @@ const DepositTabpanel = withTabPanel(
     )
     const { TabPanel } = props
     const {
-      nft: { lendingPoolAddress, underlyingAsset },
       userNFT: { data, totalValuation },
     } = useContractNFT()
-    const {
-      reservesData,
-      lendingPool: { withdrawNFT },
-    } = useControllers()
-
-    const { account } = useWallet()
 
     const action = {
       name: 'Withdraw',
-      onClick: (id: any) =>
-        withdrawNFT
-          .post({
-            lendingPoolAddress,
-            user: account,
-            nft: underlyingAsset,
-            tokenIds: [id],
-            amounts: ['1'],
-          })
-          .then(() => {
-            reservesData.restart()
-          }),
+      onClick: () => {},
     }
 
     const tabs = useMemo(() => {

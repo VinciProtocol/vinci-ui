@@ -41,7 +41,7 @@ export const getStaticPaths: GetStaticPaths = function ({ locales }) {
 
 const Page: NextPage = () => {
   return (
-    <Layout title="nft-lockdrop-deposit">
+    <Layout title="NFTLockdropDeposit">
       <NFTLockdropDeposit />
     </Layout>
   )

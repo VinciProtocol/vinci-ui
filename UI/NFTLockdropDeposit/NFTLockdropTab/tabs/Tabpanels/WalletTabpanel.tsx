@@ -32,26 +32,13 @@ const WalletTabpanel = withTabPanel(
       walletNFT: { data, totalValuation },
     } = useContractNFT()
     const {
-      reservesData,
-      lendingPool: { depositNFT },
       erc721: { setApprovalForAll, isApprovedForAll },
     } = useControllers()
     const { account } = useWallet()
 
     const action = {
       name: 'Deposit',
-      onClick: (id: any) =>
-        depositNFT
-          .post({
-            lendingPoolAddress,
-            user: account,
-            nft: underlyingAsset,
-            tokenIds: [id],
-            amounts: ['1'],
-          })
-          .then(() => {
-            reservesData.restart()
-          }),
+      onClick: () => {},
     }
 
     const tabs = useMemo(() => {
@@ -123,47 +110,13 @@ const WalletTabpanel = withTabPanel(
             >
               {t('nft-lockdrop-deposit:tabs.approveAll')}
             </Button>
-            <Button
-              variant="outlined"
-              disabled={!size}
-              onClick={() => {
-                const s = setRef.current
-                depositNFT
-                  .post({
-                    lendingPoolAddress,
-                    user: account,
-                    nft: underlyingAsset,
-                    tokenIds: Array.from(s.values()),
-                    amounts: (() => {
-                      const list = []
-                      for (let i = 0; i < s.size; i++) {
-                        list.push('1')
-                      }
-                      return list
-                    })(),
-                  })
-                  .then(() => {
-                    s.clear()
-                    setSize(0)
-                  })
-              }}
-            >
+            <Button variant="outlined" disabled={!size} onClick={() => {}}>
               {t('nft-lockdrop-deposit:tabs.depositSelected')}
             </Button>
           </Stack>
         ),
       }),
-      [
-        account,
-        approveAllDisabled,
-        depositNFT,
-        lendingPoolAddress,
-        setApprovalForAll,
-        size,
-        t,
-        totalValuation,
-        underlyingAsset,
-      ]
+      [account, approveAllDisabled, lendingPoolAddress, setApprovalForAll, size, t, totalValuation, underlyingAsset]
     )
 
     return (
