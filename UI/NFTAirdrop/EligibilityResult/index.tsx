@@ -12,6 +12,7 @@ import NFTCard from 'components/nft/NFTCard'
 import { textCenterEllipsis } from 'utils/string/text-center-ellipsis'
 
 import { useEligibilityResult } from './useEligibilityResult'
+import NFTImage from './images/vinci NFT.jpg'
 
 const Title = styled(Typography)(({ theme }) => ({
   ...theme.typography.h6,
@@ -76,6 +77,7 @@ const Eligibility: FC = () => {
       </SubTitle>
       <NFT>
         <NFTCard
+          image={NFTImage.src}
           description="Leonardo da Vinci NFT"
           action={{
             onClick: () => {},
