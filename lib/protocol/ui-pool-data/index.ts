@@ -189,6 +189,7 @@ export class UiPoolDataContract {
       underlyingAsset: userReserveRaw.underlyingAsset.toLowerCase(),
       usageAsCollateralEnabledOnUser: userReserveRaw.usageAsCollateralEnabledOnUser,
       nTokenBalance: userReserveRaw.nTokenBalance,
+      lockExpirations: userReserveRaw.lockExpirations.map((lockExpiration) => lockExpiration.toString()),
       tokenIds: userReserveRaw.tokenIds.map((id) => id.toString()),
       amounts: userReserveRaw.amounts.map((amount) => amount.toString()),
     }))

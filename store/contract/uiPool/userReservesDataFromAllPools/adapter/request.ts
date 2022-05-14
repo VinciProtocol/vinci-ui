@@ -28,12 +28,13 @@ export const useUserReservesDataFromAllPools = (props: UserReservesDataProps) =>
           }
         }),
         userNFTVaultsData: userNFTVaultsData.map((userNFTVault) => {
-          const { usageAsCollateralEnabledOnUser, tokenIds } = userNFTVault
+          const { usageAsCollateralEnabledOnUser, tokenIds, lockExpirations } = userNFTVault
           return {
             usageAsCollateralEnabledOnUser,
             ...getAddress(userNFTVault, ['underlyingAsset']),
             ...getString(userNFTVault, ['nTokenBalance']),
             tokenIds: tokenIds.map((id) => id.toString()),
+            lockExpirations: lockExpirations.map((lockExpiration) => lockExpiration.toString()),
           }
         }),
       }

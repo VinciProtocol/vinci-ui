@@ -19,11 +19,12 @@ type NFTCardProps = Partial<
   NFT & {
     action: { name: string; onClick: any; disabled?: boolean; tip?: any }
     currentFloorPrice: string
+    valuation: string
     onCheckChange: any
   }
 >
 
-const NFTCard: FC<NFTCardProps> = ({ id, description, image, action, currentFloorPrice, onCheckChange }) => {
+const NFTCard: FC<NFTCardProps> = ({ id, description, image, action, currentFloorPrice, onCheckChange, valuation }) => {
   const Root = useMemoEmpty(
     () =>
       styled(Card)`
@@ -67,7 +68,7 @@ const NFTCard: FC<NFTCardProps> = ({ id, description, image, action, currentFloo
         {currentFloorPrice && (
           <Fragment>
             <Typography component="div" variant="caption" color="text.secondary">
-              {t('borrow-detail:NFT.valuation')}
+              {valuation || t('borrow-detail:NFT.valuation')}
             </Typography>
             <Typography gutterBottom variant="body1" component="div">
               <NumberDisplay value={currentFloorPrice} type="network" />

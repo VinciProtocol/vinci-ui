@@ -19,6 +19,7 @@ const locale = {
     valuation: 'Valuation',
     approveAll: 'Approve All',
     depositSelected: 'Deposit Selected',
+    withdrawSelected: 'Withdraw Selected',
   },
 }
 

@@ -37,6 +37,7 @@ const useBorrow = createLendingPoolUse('borrow')
 const useRepay = createLendingPoolUse('repay')
 
 const useDepositNFT = createLendingPoolUse('depositNFT')
+const useDepositAndLockNFT = createLendingPoolUse('depositAndLockNFT')
 const useWithdrawNFT = createLendingPoolUse('withdrawNFT')
 
 export const useLendingPoolController = () => {
@@ -48,6 +49,7 @@ export const useLendingPoolController = () => {
   const repay = useRepay(lendingPool)
 
   const depositNFT = useDepositNFT(lendingPool)
+  const depositAndLockNFT = useDepositAndLockNFT(lendingPool)
   const withdrawNFT = useWithdrawNFT(lendingPool)
 
   return {
@@ -56,6 +58,7 @@ export const useLendingPoolController = () => {
     borrow,
     repay,
     depositNFT,
+    depositAndLockNFT,
     withdrawNFT,
   }
 }

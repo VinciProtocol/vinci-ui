@@ -32,20 +32,34 @@ const WalletTabpanel = withTabPanel(
       walletNFT: { data, totalValuation },
     } = useContractNFT()
     const {
+      reservesData,
+      lendingPool: { depositAndLockNFT },
       erc721: { setApprovalForAll, isApprovedForAll },
     } = useControllers()
     const { account } = useWallet()
 
     const action = {
       name: 'Deposit',
-      onClick: () => {},
+      onClick: (id: any) =>
+        depositAndLockNFT
+          .post({
+            lendingPoolAddress,
+            user: account,
+            nft: underlyingAsset,
+            tokenIds: [id],
+            amounts: ['1'],
+            lockType: '1',
+          })
+          .then(() => {
+            reservesData.restart()
+          }),
     }
 
     const tabs = useMemo(() => {
       const t: any[][] = [[]]
       if (!data) return t
       data.forEach((d, i) => {
-        const index = Math.floor(i / 3)
+        const index = Math.floor(i / 4)
         if (!t[index]) t[index] = []
         t[index].push(d)
       })
@@ -118,6 +132,7 @@ const WalletTabpanel = withTabPanel(
       }),
       [account, approveAllDisabled, lendingPoolAddress, setApprovalForAll, size, t, totalValuation, underlyingAsset]
     )
+    const valuation = useMemo(() => t('nft-lockdrop-deposit:tabs.valuation'), [t])
 
     return (
       <TabPanel>
@@ -130,7 +145,7 @@ const WalletTabpanel = withTabPanel(
           {tabs.map((ts, index) => (
             <Stack spacing={2} direction="row" key={index}>
               {ts.map((nft) => (
-                <NFTCard key={nft.id} {...{ ...nft, action, onCheckChange }} />
+                <NFTCard key={nft.id} {...{ ...nft, action, onCheckChange, valuation }} />
               ))}
             </Stack>
           ))}

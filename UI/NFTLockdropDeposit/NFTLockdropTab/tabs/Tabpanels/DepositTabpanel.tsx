@@ -5,10 +5,11 @@ import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
-import { useContractNFT } from 'domains'
+import { useContractNFT, useControllers } from 'domains'
 
 import { useApp } from 'app/App'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
+import { useWallet } from 'app/wallet'
 import { LockdropDepositTabValue } from 'app/App/pages/lockdropDeposit'
 import { withTabPanel } from 'app/hoc/tabs/withTabPanel'
 import { RESPONSIVE_DESIGN } from 'styles/constants'
@@ -28,19 +29,38 @@ const DepositTabpanel = withTabPanel(
     )
     const { TabPanel } = props
     const {
+      nft: { lendingPoolAddress, underlyingAsset },
       userNFT: { data, totalValuation },
     } = useContractNFT()
 
+    const {
+      reservesData,
+      lendingPool: { withdrawNFT },
+    } = useControllers()
+
+    const { account } = useWallet()
+
     const action = {
       name: 'Withdraw',
-      onClick: () => {},
+      onClick: (id: any) =>
+        withdrawNFT
+          .post({
+            lendingPoolAddress,
+            user: account,
+            nft: underlyingAsset,
+            tokenIds: [id],
+            amounts: ['1'],
+          })
+          .then(() => {
+            reservesData.restart()
+          }),
     }
 
     const tabs = useMemo(() => {
       const t: any[][] = [[]]
       if (!data) return t
       data.forEach((d, i) => {
-        const index = Math.floor(i / 3)
+        const index = Math.floor(i / 4)
         if (!t[index]) t[index] = []
         t[index].push(d)
       })
@@ -68,19 +88,54 @@ const DepositTabpanel = withTabPanel(
             </Stack>
           </Typography>
         ),
+        actions: (
+          <Stack spacing={2} direction="row">
+            <Button
+              variant="outlined"
+              disabled={!size}
+              onClick={() => {
+                const s = setRef.current
+                withdrawNFT
+                  .post({
+                    lendingPoolAddress,
+                    user: account,
+                    nft: underlyingAsset,
+                    tokenIds: Array.from(s.values()),
+                    amounts: (() => {
+                      const list = []
+                      for (let i = 0; i < s.size; i++) {
+                        list.push('1')
+                      }
+                      return list
+                    })(),
+                  })
+                  .then(() => {
+                    s.clear()
+                    setSize(0)
+                  })
+              }}
+            >
+              {t('nft-lockdrop-deposit:tabs.withdrawSelected')}
+            </Button>
+          </Stack>
+        ),
       }),
-      [t, totalValuation]
+      [account, lendingPoolAddress, size, t, totalValuation, underlyingAsset, withdrawNFT]
     )
+    const valuation = useMemo(() => t('nft-lockdrop-deposit:tabs.valuation'), [t])
 
     return (
       <TabPanel>
-        <Title sx={RESPONSIVE_DESIGN.display.NEXS('flex')}>{title.text}</Title>
+        <Title sx={RESPONSIVE_DESIGN.display.NEXS('flex')}>
+          {title.text}
+          {title.actions}
+        </Title>
 
         <Stack spacing={2} sx={RESPONSIVE_DESIGN.display.NEXS('flex')}>
           {tabs.map((ts, index) => (
             <Stack spacing={2} direction="row" key={index}>
               {ts.map((nft) => (
-                <NFTCard key={nft.id} {...{ ...nft, action, onCheckChange }} />
+                <NFTCard key={nft.id} {...{ ...nft, action, onCheckChange, valuation }} />
               ))}
             </Stack>
           ))}
@@ -89,6 +144,7 @@ const DepositTabpanel = withTabPanel(
 
         <Stack spacing={2} sx={[RESPONSIVE_DESIGN.display.XS('flex')]}>
           {title.text}
+          {title.actions}
           <Stack
             spacing={2}
             sx={[

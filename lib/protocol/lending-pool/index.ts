@@ -16,6 +16,7 @@ import type { WETHGatewayInterface } from '../wethgateway-contract'
 import { WETHGatewayService } from '../wethgateway-contract'
 import type {
   LPBorrowParamsType,
+  LPDepositAndLockNFTParamsType,
   LPDepositNFTParamsType,
   LPDepositParamsType,
   LPRepayParamsType,
@@ -388,6 +389,93 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
             [tokenId],
             [amount],
             onBehalfOf ?? user,
+            referralCode ?? '0'
+          ),
+        from: user,
+        value: getTxValue(nft, amount),
+      })
+
+      txs.push({
+        tx: txCallback,
+        txType: eEthereumTxType.DLP_ACTION,
+        gas: this.generateTxPriceEstimation(txs, txCallback, ProtocolAction.deposit),
+      })
+    }
+
+    return txs
+  }
+
+  public async depositAndLockNFT({
+    lendingPoolAddress,
+    user,
+    nft,
+    tokenIds,
+    amounts,
+    onBehalfOf,
+    lockType,
+    referralCode,
+  }: LPDepositAndLockNFTParamsType): Promise<EthereumTransactionTypeExtended[]> {
+    const lendingPoolContract: ILendingPool = this.getContractInstance(lendingPoolAddress)
+    const txs: EthereumTransactionTypeExtended[] = []
+    if (tokenIds.length > 1) {
+      const { setApprovalForAll, isApprovedForAll } = this.erc721Service
+      const approveProps = {
+        user,
+        spender: lendingPoolAddress,
+        token: nft,
+        value: true,
+      }
+
+      const approved = await isApprovedForAll(approveProps)
+      if (!approved) {
+        const approveTx: EthereumTransactionTypeExtended = setApprovalForAll(approveProps)[0]
+        txs.push(approveTx)
+      }
+      const txCallback: () => Promise<transactionType> = this.generateTxCallback({
+        rawTxMethod: async () =>
+          lendingPoolContract.populateTransaction.depositAndLockNFT(
+            nft,
+            tokenIds,
+            amounts,
+            onBehalfOf ?? user,
+            lockType,
+            referralCode ?? '0'
+          ),
+        from: user,
+        value: getTxValue(nft, tokenIds.length + ''),
+      })
+
+      txs.push({
+        tx: txCallback,
+        txType: eEthereumTxType.DLP_ACTION,
+        gas: this.generateTxPriceEstimation(txs, txCallback, ProtocolAction.deposit),
+      })
+    } else {
+      const amount = amounts[0]
+      const tokenId = tokenIds[0]
+      const { approve, isApproved } = this.erc721Service
+
+      const approveProps = {
+        user,
+        spender: lendingPoolAddress,
+        token: nft,
+        tokenId,
+      }
+
+      const approved = await isApproved(approveProps)
+      if (!approved) {
+        const approveTx: EthereumTransactionTypeExtended = approve(approveProps)
+        txs.push(approveTx)
+      }
+
+      const txCallback: () => Promise<transactionType> = this.generateTxCallback({
+        rawTxMethod: async () =>
+          lendingPoolContract.populateTransaction.depositAndLockNFT(
+            nft,
+            [tokenId],
+            [amount],
+            onBehalfOf ?? user,
+            lockType,
             referralCode ?? '0'
           ),
         from: user,
