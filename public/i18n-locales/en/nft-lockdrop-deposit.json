@@ -18,6 +18,7 @@
     "totalValuation": "Total Valuation:",
     "valuation": "Valuation",
     "approveAll": "Approve All",
-    "depositSelected": "Deposit Selected"
+    "depositSelected": "Deposit Selected",
+    "withdrawSelected": "Withdraw Selected"
   }
 }

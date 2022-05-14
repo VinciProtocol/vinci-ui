@@ -18,6 +18,7 @@
     "totalValuation": "총 평가:",
     "valuation": "평가",
     "approveAll": "모두 승인",
-    "depositSelected": "선택한 예금"
+    "depositSelected": "선택한 예금",
+    "withdrawSelected": "선택 취소"
   }
 }

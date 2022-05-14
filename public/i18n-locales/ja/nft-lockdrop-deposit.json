@@ -18,6 +18,7 @@
     "totalValuation": "総評価：",
     "valuation": "評価",
     "approveAll": "すべて承認する",
-    "depositSelected": "選択したデポジット"
+    "depositSelected": "選択された預金",
+    "withdrawSelected": "選択した撤回"
   }
 }

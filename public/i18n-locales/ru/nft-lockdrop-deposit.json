@@ -18,6 +18,7 @@
     "totalValuation": "Общая оценка:",
     "valuation": "оценка",
     "approveAll": "Одобрить все",
-    "depositSelected": "Депозит выбран"
+    "depositSelected": "Депозит выбран",
+    "withdrawSelected": "Выбрать выбранное"
   }
 }

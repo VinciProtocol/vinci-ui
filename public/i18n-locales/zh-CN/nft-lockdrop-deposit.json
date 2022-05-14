@@ -18,6 +18,7 @@
     "totalValuation": "总估值：",
     "valuation": "估值",
     "approveAll": "全部批准",
-    "depositSelected": "已选择存款"
+    "depositSelected": "已选择存款",
+    "withdrawSelected": "撤回所选"
   }
 }

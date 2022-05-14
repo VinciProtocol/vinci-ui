@@ -20,31 +20,76 @@ const translate = async (text: string, target: string) => {
   const [translation] = await t.translate(text, target)
   return translation
 }
+type ObjectToTempalteResultValue = { key: string; value: string; parentKey?: string; index?: number }
+type ObjectToTempalteResult = {
+  normal: ObjectToTempalteResultValue[]
+  components: ObjectToTempalteResultValue[]
+}
 
-const objectToTempalte = (obj: any, parent = '', keys: any = []) => {
+const getComponentsValue = (parentKey: string, parentValue: string) => {
+  const returnValue = {
+    hasComponentsValue: false,
+    value: parentValue,
+    key: parentKey,
+    result: [] as ObjectToTempalteResultValue[],
+  }
+  let regExpExecArray
+  const regExp = /<([a-zA-Z]*)>/g
+  while ((regExpExecArray = regExp.exec(parentValue)) !== null) {
+    const key = regExpExecArray[1]
+    const startTagIndex = regExpExecArray.index
+    const startTag = `<${key}>`
+    const endTag = `</${key}>`
+    const endTagIndex = parentValue.indexOf(endTag, startTagIndex)
+    const content = parentValue.slice(startTagIndex + 2 + key.length, endTagIndex)
+    const index = returnValue.result.length
+
+    returnValue.value = returnValue.value.replace(`${startTag}${content}${endTag}`, ` BBAA${index}AACC `)
+    returnValue.result.push({
+      key,
+      value: `${content}\n`,
+      parentKey,
+      index,
+    })
+  }
+  returnValue.hasComponentsValue = !!returnValue.result.length
+  return returnValue
+}
+
+const objectToTempalte = (obj: any, result: ObjectToTempalteResult, parent = '') => {
   parent = parent ? parent + '.' : ''
-  let template = ''
   Object.keys(obj).forEach((key) => {
     const keysK = parent + key
-    if (typeof obj[key] === 'object') {
-      template += objectToTempalte(obj[key], keysK, keys).template
+    const value = obj[key]
+    if (typeof value === 'object') {
+      return objectToTempalte(value, result, keysK)
+    }
+
+    const components = getComponentsValue(keysK, value)
+
+    if (components.hasComponentsValue) {
+      result.components = result.components.concat(components.result)
+      result.normal.push({
+        key: keysK,
+        value: `${components.value}\n`,
+      })
     } else {
-      template += `${obj[key]}\n`
-      keys.push(keysK)
+      result.normal.push({
+        key: keysK,
+        value: `${value}\n`,
+      })
     }
   })
-  return {
-    template,
-    keys,
-  }
 }
 
 const getTranslate = async function (ENlocales: any) {
   const result: any = {
     en: {},
   }
-  const keys: string | any[] = []
-  let template = ''
+  const objectToTempalteResult: ObjectToTempalteResult = {
+    normal: [],
+    components: [],
+  }
   for (let i = 0; i < ENlocales.length; i++) {
     const locale = ENlocales[i]
     const source = await locale.source.read()
@@ -53,8 +98,15 @@ const getTranslate = async function (ENlocales: any) {
       if (isEqual(source, target)) continue
     } catch (error) {}
     result.en[locale.ns] = source
-    template += objectToTempalte(source, locale.ns, keys).template
+    objectToTempalte(source, objectToTempalteResult, locale.ns)
   }
+  let template = ''
+  objectToTempalteResult.normal.forEach(({ value }) => {
+    template += value
+  })
+  objectToTempalteResult.components.forEach(({ value }) => {
+    template += value
+  })
 
   for (let i = 0; i < languages.length; i++) {
     const language = languages[i]
@@ -62,11 +114,22 @@ const getTranslate = async function (ENlocales: any) {
     const translation = await translate(template, language.code)
     if (!translation) continue
     const values = translation.split('\n')
-    const returnValue = {}
-    for (let j = 0; j < keys.length; j++) {
-      const key = keys[j]
+    const returnValue: any = {}
+    for (let j = 0; j < objectToTempalteResult.normal.length; j++) {
+      const { key } = objectToTempalteResult.normal[j]
       const value = values[j]
       set(returnValue, key, value)
+    }
+    const start = objectToTempalteResult.normal.length
+    const end = objectToTempalteResult.components.length + start
+    for (let j = start; j < end; j++) {
+      const { key, parentKey, index } = objectToTempalteResult.components[j - start]
+      const startTag = `<${key}>`
+      const endTag = `</${key}>`
+      const content = values[j]
+      const value = `${startTag}${content}${endTag}`
+      let parentValue = get(returnValue, parentKey).replace(` BBAA${index}AACC `, value)
+      set(returnValue, parentKey, parentValue)
     }
     result[language.code] = returnValue
   }

@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { useTranslation } from 'next-i18next'
+import { useTranslation, Trans } from 'next-i18next'
 import { styled } from '@mui/material/styles'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
@@ -25,9 +25,13 @@ const EligibilityCriteria: FC = () => {
       <Stack spacing={1}>
         <SubTitle>{t('criteria.subTitle.1')}</SubTitle>
         <SubTitle>
-          {t('criteria.subTitle.2')}{' '}
-          <Link href='#' underline='none' target='_blank'>the Contest</Link>
-          {' '}{t('criteria.subTitle.3')}
+          <Trans
+            i18nKey="criteria.subTitle.2"
+            t={t}
+            components={{
+              contest: <Link href="#" underline="none" target="_blank" />,
+            }}
+          />
         </SubTitle>
       </Stack>
       <CardActions>
