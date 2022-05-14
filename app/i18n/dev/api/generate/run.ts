@@ -44,7 +44,7 @@ const getComponentsValue = (parentKey: string, parentValue: string) => {
     const content = parentValue.slice(startTagIndex + 2 + key.length, endTagIndex)
     const index = returnValue.result.length
 
-    returnValue.value = returnValue.value.replace(`${startTag}${content}${endTag}`, ` BBAA${index}AACC `)
+    returnValue.value = returnValue.value.replace(`${startTag}${content}${endTag}`, `{{BBAA${index}AACC}}`)
     returnValue.result.push({
       key,
       value: `${content}\n`,
@@ -128,7 +128,7 @@ const getTranslate = async function (ENlocales: any) {
       const endTag = `</${key}>`
       const content = values[j]
       const value = `${startTag}${content}${endTag}`
-      let parentValue = get(returnValue, parentKey).replace(` BBAA${index}AACC `, value)
+      let parentValue = get(returnValue, parentKey).replace(`{{BBAA${index}AACC}}`, value)
       set(returnValue, parentKey, parentValue)
     }
     result[language.code] = returnValue
