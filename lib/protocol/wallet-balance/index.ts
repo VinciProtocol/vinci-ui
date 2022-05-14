@@ -17,9 +17,7 @@ export class WalletBalanceContract {
    * @param context The ui pool data provider context
    */
   public constructor(context: UiPoolDataProviderContext) {
-    if (!isAddress(context.address)) {
-      throw new Error('contract address is not valid')
-    }
+    if (!isAddress(context.address)) return
 
     this.contract = WalletBalanceProvider__factory.connect(context.address, context.provider)
     this.provider = context.provider

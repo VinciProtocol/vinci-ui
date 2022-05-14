@@ -11,6 +11,7 @@ import { getNFTInfo } from './NFTConfig'
 import type { MarketData, NFTSetting } from './types'
 
 const list: Record<ChainId, typeof vinci> = {
+  [ChainId.ethereum]: {},
   [ChainId.kovan]: kovan,
   [ChainId.bsct]: bsctestnet,
   [ChainId.bsc]: bscmainnet,
@@ -33,7 +34,7 @@ export const getMarketsData = (chainId: ChainId): MarketData => {
       walletBalanceProvider: generateInfo.WalletBalanceProvider,
       uiPoolDataProvider: generateInfo.UiPoolDataProvider,
     },
-    nfts: Object.keys(generateInfo.markets).reduce((obj, nftID) => {
+    nfts: Object.keys(generateInfo.markets || {}).reduce((obj, nftID) => {
       const collection = nftID.replace('Vinci', '')
       const underlyingAsset = (generateInfo as any)[collection]
       if (!underlyingAsset) throw new Error(`[getMarketsData] 找不到对应 NFT配置 => (${collection})`)
@@ -64,6 +65,7 @@ const getNFTS = () => {
     ...getMarketsData(ChainId.vinci).nfts,
     ...getMarketsData(ChainId.kovan).nfts,
     ...getMarketsData(ChainId.bsc).nfts,
+    ...getMarketsData(ChainId.ethereum).nfts,
   }
 }
 

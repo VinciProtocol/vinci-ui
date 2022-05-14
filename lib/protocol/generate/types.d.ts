@@ -4,8 +4,8 @@ export type NFTGenerate = {
   LendingPool: string
   LendingPoolConfiguratorImpl: string
   LendingPoolConfigurator: string
-  ATokensAndRatesHelper: string
-  AToken: string
+  VTokensAndRatesHelper: string
+  VToken: string
   StableDebtToken: string
   VariableDebtToken: string
   StableAndVariableTokensHelper: string

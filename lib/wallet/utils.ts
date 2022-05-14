@@ -1,7 +1,7 @@
 import type { Account, EthereumProvider, ChainInformation } from './types'
 import { getChainInformation, getKnownChainsIds } from './chains'
 import type { ChainId } from 'app/web3/chain/types'
-import { BigNumber } from 'ethers'
+import { utils } from 'ethers'
 import { setItem, removeItem, getItem } from 'utils/cache/localStorage'
 import { getNetwork } from 'app/web3/network'
 
@@ -92,7 +92,7 @@ export async function getAccountIsContract(ethereum: EthereumProvider, account: 
 }
 
 export async function switchEthereumChain(ethereum: EthereumProvider, chainId: ChainId) {
-  const id = BigNumber.from(chainId).toHexString()
+  const id = utils.hexValue(chainId)
   return ethereumRequest(ethereum, 'wallet_switchEthereumChain', [
     {
       chainId: id,

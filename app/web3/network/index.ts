@@ -20,13 +20,19 @@ export const networks: Record<ChainId, NetworkConfig> = {
     fullName: 'BSC Testnet',
     symbol: 'BNB',
     // publicJsonRPCUrl: 'https://kovan.poa.network',
-    publicJsonRPCUrl: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
+    publicJsonRPCUrl: 'https://data-seed-prebsc-1-s1.binance.org:8545',
   },
   [ChainId.bsc]: {
     name: 'BSC',
     fullName: 'BNB Smart Chain',
     symbol: 'BNB',
-    publicJsonRPCUrl: 'https://bsc-dataseed.binance.org/',
+    publicJsonRPCUrl: 'https://bsc-dataseed.binance.org',
+  },
+  [ChainId.ethereum]: {
+    name: 'Ethereum',
+    fullName: 'Ethereum Mainnet',
+    symbol: 'ETH',
+    publicJsonRPCUrl: 'https://mainnet.infura.io/v3/e33605b8ebd345fa914bd4cdfdfb401d',
   },
   [ChainId.localhost]: {
     name: 'Localhost',

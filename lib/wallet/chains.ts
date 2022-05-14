@@ -15,18 +15,18 @@ const BNB: Currency = {
 }
 
 const CHAIN_INFORMATION = new Map<number, ChainInformation | ChainType>([
-  // [
-  //   ChainId.mainnet,
-  //   {
-  //     id: ChainId.mainnet,
-  //     nativeCurrency: ETH,
-  //     type: 'main',
-  //     fullName: 'Ethereum Mainnet',
-  //     shortName: 'Ethereum',
-  //     explorerUrl: `https://etherscan.io`,
-  //     testnet: false,
-  //   },
-  // ],
+  [
+    ChainId.ethereum,
+    {
+      id: ChainId.ethereum,
+      nativeCurrency: ETH,
+      type: 'main',
+      fullName: 'Ethereum Mainnet',
+      shortName: 'Ethereum',
+      explorerUrl: `https://etherscan.io`,
+      testnet: false,
+    },
+  ],
   [
     ChainId.vinci,
     {
