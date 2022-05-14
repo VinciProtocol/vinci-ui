@@ -10,6 +10,8 @@ export const useI18nHMR = __DEV__
         import('./server-hmr').then(({ applyServerHMR }) => {
           applyServerHMR(i18n)
         })
+      } else {
+        ;(window as any).i18n = i18n
       }
 
       useEffect(() => {

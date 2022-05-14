@@ -7,6 +7,7 @@ const __DEV__ = process.env.NODE_ENV === 'development'
 
 module.exports = {
   i18n,
+  serializeConfig: false,
   defaultNS,
   ns,
   use: getUse(__DEV__),

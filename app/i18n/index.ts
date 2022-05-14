@@ -1,5 +1,5 @@
 import { appWithTranslation as baseAppWithTranslation } from 'next-i18next'
-import config from 'next-i18next.config'
+import nextI18NextConfig from 'next-i18next.config'
 
-export const appWithTranslation = __DEV__ ? (app: any) => baseAppWithTranslation(app, config) : baseAppWithTranslation
+export const appWithTranslation = (app: any) => baseAppWithTranslation(app, nextI18NextConfig)
 export * from './dev/hmr'
