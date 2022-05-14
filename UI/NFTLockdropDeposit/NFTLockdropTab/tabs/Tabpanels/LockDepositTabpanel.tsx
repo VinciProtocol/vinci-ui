@@ -17,7 +17,7 @@ import { RESPONSIVE_DESIGN } from 'styles/constants'
 import NFTCard from 'components/nft/NFTCard'
 import NumberDisplay from 'components/math/NumberDisplay'
 
-const DepositTabpanel = withTabPanel(
+const LockDepositTabpanel = withTabPanel(
   (props) => {
     const { t } = useTranslation()
     const Title = useMemoEmpty(() =>
@@ -193,4 +193,4 @@ const NoData: FC = () => {
   )
 }
 
-export default DepositTabpanel
+export default LockDepositTabpanel

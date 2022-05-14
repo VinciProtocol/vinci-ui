@@ -6,7 +6,7 @@ import { useApp } from 'app/App'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 
 import WalletTabpanel from './Tabpanels/WalletTabpanel'
-import DepositTabpanel from './Tabpanels/DepositTabpanel'
+import LockDepositTabpanel from './Tabpanels/LockDepositTabpanel'
 
 const TabContent: FC = () => {
   const {
@@ -32,7 +32,7 @@ const TabContent: FC = () => {
   return (
     <ROOT>
       <WalletTabpanel {...tabpanelProps} />
-      <DepositTabpanel {...tabpanelProps} />
+      <LockDepositTabpanel {...tabpanelProps} />
     </ROOT>
   )
 }
