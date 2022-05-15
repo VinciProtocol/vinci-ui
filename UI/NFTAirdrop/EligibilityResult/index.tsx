@@ -10,6 +10,7 @@ import { SubTitle } from 'components/Styled'
 import RingLoading from 'components/loading/RingLoading'
 import NFTCard from 'components/nft/NFTCard'
 import { textCenterEllipsis } from 'utils/string/text-center-ellipsis'
+import ConnectButton from 'app/wallet/ConnectButton'
 
 import { useEligibilityResult } from './useEligibilityResult'
 import NFTImage from './images/vinci NFT.jpg'
@@ -22,6 +23,8 @@ const EligibilityResult: FC = () => {
   const { status } = useEligibilityResult()
 
   switch (status) {
+    case 'needAccount':
+      return <NeedAccount />
     case 'loading':
       return <LoadingResult />
     case 'eligible':
@@ -134,6 +137,21 @@ const NotEligibility: FC = () => {
           <SubTitle>{t('notEligible.warn.2')}</SubTitle>
         </WarnTip>
       </Warn>
+    </ROOT>
+  )
+}
+
+const NeedAccount: FC = () => {
+  const ROOT = useMemoEmpty(
+    () => styled('div')`
+      display: flex;
+      justify-content: center;
+      margin: 16px 0;
+    `
+  )
+  return (
+    <ROOT>
+      <ConnectButton />
     </ROOT>
   )
 }
