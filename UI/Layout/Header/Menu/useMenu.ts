@@ -29,6 +29,11 @@ const MenuList = [
   //   linkTo: '/nft-lockdrop/[id]',
   //   hide: true,
   // },
+  {
+    key: 'NFTAirdrop',
+    linkTo: '/nft-airdrop',
+    hide: true,
+  },
   // {
   //   key: 'Liquidation',
   //   linkTo: '/liquidation-marketplace',

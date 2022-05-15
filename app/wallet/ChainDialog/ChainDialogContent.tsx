@@ -1,6 +1,7 @@
 import type { FC } from 'react'
 import { useMemo, Fragment } from 'react'
 import { useCallback } from 'react'
+import { useRouter } from 'next/router'
 import DialogContent from '@mui/material/DialogContent'
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
@@ -37,6 +38,7 @@ const ChainButton: FC<{ chainId: ChainId }> = (props) => {
     chainDialog: { close },
   } = useWallet()
   const { library } = useWeb3React()
+  const router = useRouter()
   const onSwitchEthereumChain = useCallback(
     (chainId: ChainId) => {
       const provider = library || window.ethereum
@@ -49,7 +51,16 @@ const ChainButton: FC<{ chainId: ChainId }> = (props) => {
     <Button
       variant="outlined"
       startIcon={<ChainIcon chainName={network.name} />}
-      onClick={() => onSwitchEthereumChain(props.chainId).then(() => close())}
+      onClick={() =>
+        onSwitchEthereumChain(props.chainId).then(() => {
+          if (ChainId.ethereum === props.chainId) {
+            router.push({
+              pathname: '/nft-airdrop',
+            })
+          }
+          close()
+        })
+      }
     >
       {network.fullName}
     </Button>

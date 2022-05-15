@@ -97,28 +97,43 @@ const NotEligibility: FC = () => {
       text-align: center;
     `
   )
-  const NFT = useMemoEmpty(
+  const Warn = useMemoEmpty(
     () => styled('div')`
       display: flex;
       justify-content: center;
     `
   )
+  const WarnTip = useMemoEmpty(
+    () => styled('div')`
+      text-align: left;
+      padding: 16px;
+      padding-left: 21px;
+      background: rgba(255, 199, 0, 0.3);
+      position: relative;
+      &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 5px;
+        height: 100%;
+        background: #ffc700;
+      }
+    `
+  )
   return (
     <ROOT spacing={2}>
       <Title>{t('notEligible.title')}</Title>
-      <SubTitle>{t('notEligible.subTitle.1')}</SubTitle>
-      <SubTitle>{t('notEligible.subTitle.2')}</SubTitle>
-      <NFT>
-        <NFTCard
-          image={NFTImage.src}
-          description="Leonardo da Vinci NFT"
-          action={{
-            onClick: () => {},
-            name: t('eligible.NFT.actions.comingSoon'),
-            disabled: true,
-          }}
-        />
-      </NFT>
+      <div>
+        <SubTitle>{t('notEligible.subTitle.1')}</SubTitle>
+        <SubTitle>{t('notEligible.subTitle.2')}</SubTitle>
+      </div>
+      <Warn>
+        <WarnTip>
+          <SubTitle>{t('notEligible.warn.1')}</SubTitle>
+          <SubTitle>{t('notEligible.warn.2')}</SubTitle>
+        </WarnTip>
+      </Warn>
     </ROOT>
   )
 }

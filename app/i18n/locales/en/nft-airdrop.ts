@@ -22,7 +22,11 @@ const locale = {
     title: 'Sorry, you are not eligible for this airdrop round.',
     subTitle: {
       1: 'Don’t worry! There will be more airdrops in the future.',
-      2: 'The best way to improve your odds is to get involved. Start exploring today:',
+      2: 'The best way to improve your odds is to get involved.',
+    },
+    warn: {
+      1: 'We are now receiving a surprising amount of whitelist request.',
+      2: 'If you have finished the tasks but couldn’t claim  the airdrop reward, please be patient.',
     },
     actions: {
       switchAccount: 'Check another address',
