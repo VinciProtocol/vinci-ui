@@ -1,6 +1,6 @@
 export const useEligibilityResult = () => {
   return {
-    status: 'eligible',
+    status: 'notEligible',
   } as {
     status: 'eligible' | 'loading' | 'notEligible'
   }

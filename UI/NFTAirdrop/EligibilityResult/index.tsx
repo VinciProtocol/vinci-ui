@@ -91,7 +91,36 @@ const Eligibility: FC = () => {
 }
 
 const NotEligibility: FC = () => {
-  return null
+  const { t } = useTranslation('nft-airdrop')
+  const ROOT = useMemoEmpty(
+    () => styled(Stack)`
+      text-align: center;
+    `
+  )
+  const NFT = useMemoEmpty(
+    () => styled('div')`
+      display: flex;
+      justify-content: center;
+    `
+  )
+  return (
+    <ROOT spacing={2}>
+      <Title>{t('notEligible.title')}</Title>
+      <SubTitle>{t('notEligible.subTitle.1')}</SubTitle>
+      <SubTitle>{t('notEligible.subTitle.2')}</SubTitle>
+      <NFT>
+        <NFTCard
+          image={NFTImage.src}
+          description="Leonardo da Vinci NFT"
+          action={{
+            onClick: () => {},
+            name: t('eligible.NFT.actions.comingSoon'),
+            disabled: true,
+          }}
+        />
+      </NFT>
+    </ROOT>
+  )
 }
 
 export default EligibilityResult
