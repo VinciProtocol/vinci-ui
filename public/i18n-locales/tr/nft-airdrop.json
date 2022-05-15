@@ -23,7 +23,12 @@
     "subTitle": [
       null,
       "Merak etme! Gelecekte daha fazla airdrop olacak.",
-      "Şansınızı artırmanın en iyi yolu, dahil olmaktır. Bugün keşfetmeye başlayın:"
+      "Şansınızı artırmanın en iyi yolu, dahil olmaktır."
+    ],
+    "warn": [
+      null,
+      "Şu anda şaşırtıcı miktarda beyaz liste isteği alıyoruz.",
+      "Görevleri tamamladıysanız ancak airdrop ödülünü alamadıysanız lütfen sabırlı olun."
     ],
     "actions": {
       "switchAccount": "Başka bir adresi kontrol et",

@@ -23,7 +23,12 @@
     "subTitle": [
       null,
       "Đừng lo! Sẽ có nhiều airdrop hơn trong tương lai.",
-      "Cách tốt nhất để cải thiện tỷ lệ cược của bạn là tham gia. Bắt đầu khám phá ngay hôm nay:"
+      "Cách tốt nhất để cải thiện tỷ lệ cược của bạn là tham gia."
+    ],
+    "warn": [
+      null,
+      "Chúng tôi hiện đang nhận được một lượng lớn yêu cầu danh sách trắng đáng ngạc nhiên.",
+      "Nếu bạn đã hoàn thành nhiệm vụ nhưng không thể nhận phần thưởng airdrop, hãy kiên nhẫn."
     ],
     "actions": {
       "switchAccount": "Kiểm tra một địa chỉ khác",

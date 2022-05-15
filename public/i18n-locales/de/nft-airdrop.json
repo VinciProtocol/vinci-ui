@@ -23,7 +23,12 @@
     "subTitle": [
       null,
       "Mach dir keine Sorgen! In Zukunft wird es noch mehr Airdrops geben.",
-      "Der beste Weg, um Ihre Chancen zu verbessern, ist, sich zu engagieren. Beginnen Sie noch heute mit der Erkundung:"
+      "Der beste Weg, um Ihre Chancen zu verbessern, ist, sich zu engagieren."
+    ],
+    "warn": [
+      null,
+      "Wir erhalten jetzt überraschend viele Whitelist-Anfragen.",
+      "Wenn Sie die Aufgaben abgeschlossen haben, aber die Airdrop-Belohnung nicht beanspruchen konnten, haben Sie bitte etwas Geduld."
     ],
     "actions": {
       "switchAccount": "Überprüfen Sie eine andere Adresse",

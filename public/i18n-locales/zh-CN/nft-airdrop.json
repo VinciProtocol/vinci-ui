@@ -23,7 +23,12 @@
     "subTitle": [
       null,
       "不用担心！未来还会有更多的空投。",
-      "提高赔率的最佳方法是参与其中。今天开始探索："
+      "提高赔率的最佳方法是参与其中。"
+    ],
+    "warn": [
+      null,
+      "我们现在收到数量惊人的白名单请求。",
+      "如果您已完成任务但无法领取空投奖励，请耐心等待。"
     ],
     "actions": {
       "switchAccount": "检查另一个地址",
@@ -42,7 +47,7 @@
     "title": "资格标准",
     "subTitle": [
       null,
-      "Leonardo da Vinci NFT Drop 将奖励加入 Vinci Protocol 社区并参与此社区倡议的任何人，以帮助我们创建社会运动。",
+      "Leonardo da Vinci NFT Drop 将奖励任何加入 Vinci Protocol 社区并参与此社区倡议的人，以帮助我们创建社会运动。",
       "要获得资格，您必须输入 <contest>比赛</contest> 并向公众表明您的支持。"
     ],
     "btn": {

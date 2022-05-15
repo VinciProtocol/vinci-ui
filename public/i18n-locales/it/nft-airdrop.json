@@ -23,7 +23,12 @@
     "subTitle": [
       null,
       "Non preoccuparti! Ci saranno più airdrop in futuro.",
-      "Il modo migliore per aumentare le tue probabilità è partecipare. Inizia a esplorare oggi:"
+      "Il modo migliore per aumentare le tue probabilità è partecipare."
+    ],
+    "warn": [
+      null,
+      "Ora stiamo ricevendo una quantità sorprendente di richieste di whitelist.",
+      "Se hai completato le attività ma non hai potuto richiedere il premio airdrop, sii paziente."
     ],
     "actions": {
       "switchAccount": "Controlla un altro indirizzo",

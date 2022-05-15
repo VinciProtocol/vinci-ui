@@ -23,7 +23,12 @@
     "subTitle": [
       null,
       "Não se preocupe! Haverá mais lançamentos aéreos no futuro.",
-      "A melhor maneira de melhorar suas chances é se envolver. Comece a explorar hoje:"
+      "A melhor maneira de melhorar suas chances é se envolver."
+    ],
+    "warn": [
+      null,
+      "Agora estamos recebendo uma quantidade surpreendente de solicitações de lista de permissões.",
+      "Se você terminou as tarefas, mas não conseguiu reivindicar a recompensa de lançamento aéreo, seja paciente."
     ],
     "actions": {
       "switchAccount": "Verifique outro endereço",

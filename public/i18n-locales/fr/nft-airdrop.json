@@ -23,7 +23,12 @@
     "subTitle": [
       null,
       "Ne vous inquiétez pas! Il y aura plus de parachutages à l'avenir.",
-      "La meilleure façon d'améliorer vos chances est de vous impliquer. Commencez à explorer dès aujourd'hui :"
+      "La meilleure façon d'améliorer vos chances est de vous impliquer."
+    ],
+    "warn": [
+      null,
+      "Nous recevons maintenant une quantité surprenante de demandes de liste blanche.",
+      "Si vous avez terminé les tâches mais que vous n'avez pas pu réclamer la récompense de largage, veuillez patienter."
     ],
     "actions": {
       "switchAccount": "Vérifier une autre adresse",

@@ -23,7 +23,12 @@
     "subTitle": [
       null,
       "¡No te preocupes! Habrá más airdrops en el futuro.",
-      "La mejor manera de mejorar sus probabilidades es involucrarse. Comience a explorar hoy:"
+      "La mejor manera de mejorar sus probabilidades es involucrarse."
+    ],
+    "warn": [
+      null,
+      "Ahora estamos recibiendo una sorprendente cantidad de solicitudes de lista blanca.",
+      "Si ha terminado las tareas pero no pudo reclamar la recompensa del lanzamiento aéreo, tenga paciencia."
     ],
     "actions": {
       "switchAccount": "Comprobar otra dirección",
