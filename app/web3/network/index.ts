@@ -30,7 +30,7 @@ export const networks: Record<ChainId, NetworkConfig> = {
   },
   [ChainId.ethereum]: {
     name: 'Ethereum',
-    fullName: 'Ethereum Mainnet',
+    fullName: 'Ethereum',
     symbol: 'ETH',
     publicJsonRPCUrl: 'https://mainnet.infura.io/v3/e33605b8ebd345fa914bd4cdfdfb401d',
   },

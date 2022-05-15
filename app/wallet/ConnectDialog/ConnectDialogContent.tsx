@@ -108,7 +108,6 @@ const WalletDisconnected: FC = () => {
   return (
     <ROOT>
       <ConnectWallet
-        variant="outlined"
         color="inherit"
         onClick={async () => {
           await connect()
@@ -119,7 +118,6 @@ const WalletDisconnected: FC = () => {
         <span className="name">Metamask</span>
       </ConnectWallet>
       <ConnectWallet
-        variant="outlined"
         color="inherit"
         onClick={async () => {
           await connect('walletconnect')
