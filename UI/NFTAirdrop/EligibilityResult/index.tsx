@@ -1,76 +1,104 @@
 import type { FC } from 'react'
+import { useCallback, useEffect, useState } from 'react'
+import { useMemo } from 'react'
 import { useTranslation } from 'next-i18next'
 import { styled } from '@mui/material/styles'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
+import { BigNumber as BN } from '@ethersproject/bignumber'
+import { useContract } from 'domains/contract'
 
-import { useWallet } from 'app/wallet'
+import { useSendTransaction } from 'app/web3/hooks/sendTransaction'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { SubTitle } from 'components/Styled'
-import RingLoading from 'components/loading/RingLoading'
 import NFTCard from 'components/nft/NFTCard'
 import { textCenterEllipsis } from 'utils/string/text-center-ellipsis'
 import ConnectButton from 'app/wallet/ConnectButton'
+import { toast } from 'lib/toastify'
+import claimableNFT from 'lib/protocol/vinci-claimable-nft/fe.json'
 
 import { useEligibilityResult } from './useEligibilityResult'
 import NFTImage from './images/vinci NFT.jpg'
+
+const list: any = claimableNFT
 
 const Title = styled(Typography)(({ theme }) => ({
   ...theme.typography.h6,
 }))
 
 const EligibilityResult: FC = () => {
-  const { status } = useEligibilityResult()
+  const { status, account } = useEligibilityResult()
 
   switch (status) {
     case 'needAccount':
       return <NeedAccount />
-    case 'loading':
-      return <LoadingResult />
     case 'eligible':
-      return <Eligibility />
+      return <Eligibility account={account} />
     case 'notEligible':
       return <NotEligibility />
   }
 }
 
-const LoadingResult: FC = () => {
-  const ROOT = useMemoEmpty(
-    () => styled('div')`
-      text-align: center;
-    `
-  )
-  const Loading = useMemoEmpty(() =>
-    styled('div')(({ theme }) => ({
-      paddingTop: theme.spacing(4),
-      paddingBottom: theme.spacing(8),
-    }))
-  )
+const Eligibility: FC<{ account: string }> = ({ account }) => {
   const { t } = useTranslation('nft-airdrop')
-  return (
-    <ROOT>
-      <Title>{t('loading.title')}</Title>
-      <Loading>
-        <RingLoading />
-      </Loading>
-    </ROOT>
-  )
-}
-
-const Eligibility: FC = () => {
-  const { t } = useTranslation('nft-airdrop')
-  const { account } = useWallet()
+  const [hasClaimed, setHasClaimed] = useState(false)
+  const [loading, setLoading] = useState(false)
   const ROOT = useMemoEmpty(
     () => styled(Stack)`
       text-align: center;
     `
   )
+
   const NFT = useMemoEmpty(
     () => styled('div')`
       display: flex;
       justify-content: center;
     `
   )
+  const { vinciNFT } = useContract()
+  const sendTransaction = useSendTransaction()
+
+  const onClick = useCallback(() => {
+    const info = list[account]
+    if (!info || !vinciNFT.contract) return
+    console.log('[vinciNFT] [mint]', info.proof, info.value)
+    setLoading(true)
+    toast.promise(
+      vinciNFT.contract.populateTransaction
+        .mint(info.proof, info.value)
+        .then((txData) =>
+          sendTransaction({
+            ...txData,
+            value: txData.value ? BN.from(txData.value).toString() : undefined,
+          })
+        )
+        .then(() => setHasClaimed(true))
+        .finally(() => {
+          setLoading(false)
+        }),
+      {
+        pending: 'Transaction is pending',
+        success: 'Transaction success 👌',
+        error: 'Transaction rejected 🤯',
+      },
+      {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      }
+    )
+  }, [account, sendTransaction, vinciNFT.contract])
+
+  const action = useMemo(() => {
+    return {
+      onClick,
+      name: t('eligible.NFT.actions.' + !hasClaimed ? 'claim' : 'claimed'),
+      disabled: hasClaimed || loading,
+    }
+  }, [hasClaimed, loading, onClick, t])
+  useEffect(() => {
+    if (!vinciNFT.contract || !account) return
+    vinciNFT.contract.hasClaimed(account).then((data) => setHasClaimed(data))
+  }, [account, vinciNFT.contract])
+
   return (
     <ROOT spacing={2}>
       <Title>{t('eligible.title')}</Title>
@@ -79,15 +107,7 @@ const Eligibility: FC = () => {
         {textCenterEllipsis(account)} {t('eligible.willReceive')}
       </SubTitle>
       <NFT>
-        <NFTCard
-          image={NFTImage.src}
-          description="Leonardo da Vinci NFT"
-          action={{
-            onClick: () => {},
-            name: t('eligible.NFT.actions.comingSoon'),
-            disabled: true,
-          }}
-        />
+        <NFTCard image={NFTImage.src} description="Leonardo da Vinci NFT" action={action} />
       </NFT>
     </ROOT>
   )

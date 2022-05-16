@@ -1,18 +1,27 @@
 import { useWallet } from 'app/wallet'
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import claimableNFT from 'lib/protocol/vinci-claimable-nft/fe.json'
 
-type EligibilityResultStatus = 'eligible' | 'loading' | 'notEligible' | 'needAccount'
+const list: any = claimableNFT
+type EligibilityResultStatus = 'eligible' | 'notEligible' | 'needAccount'
 
 export const useEligibilityResult = () => {
-  const { account } = useWallet()
+  const { account: walletAccount } = useWallet()
+  const [inputAccount, setInputAccount] = useState('')
+  useEffect(() => {
+    setInputAccount('')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [walletAccount])
+  const account = useMemo(() => inputAccount || walletAccount, [inputAccount, walletAccount])
+
   const status = useMemo(() => {
     if (!account) return 'needAccount'
+    if (list[account]) return 'eligible'
     return 'notEligible'
-  }, [account])
+  }, [account]) as EligibilityResultStatus
 
   return {
+    account,
     status,
-  } as {
-    status: EligibilityResultStatus
   }
 }
