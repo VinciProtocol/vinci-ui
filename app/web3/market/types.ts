@@ -20,6 +20,7 @@ export type MarketData = {
     LENDING_POOL_ADDRESSES_PROVIDER_REGISTRY: string
     WETH_GATEWAY: string
     walletBalanceProvider: string
+    vinciNFTProvider: string
     uiPoolDataProvider: string
   }
   nfts: Record<NFT_ID, NFTSetting>

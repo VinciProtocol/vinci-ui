@@ -5,6 +5,7 @@ import { ERC721Service } from 'lib/protocol/erc721-contract'
 import { LendingPoolContract } from 'lib/protocol/lending-pool'
 import { UiPoolDataContract } from 'lib/protocol/ui-pool-data'
 import { WalletBalanceContract } from 'lib/protocol/wallet-balance'
+import { VinciNFTContract } from 'lib/protocol/vinci-claimable-nft'
 import { useMarket } from 'domains'
 
 const useContractService = () => {
@@ -24,10 +25,15 @@ const useContractService = () => {
       }),
       ERC20Service: new ERC20Service(provider),
       ERC721Service: new ERC721Service(provider),
+      vinciNFT: new VinciNFTContract({
+        address: market.addresses.vinciNFTProvider,
+        provider,
+      }),
     }),
     [
       market.addresses.WETH_GATEWAY,
       market.addresses.uiPoolDataProvider,
+      market.addresses.vinciNFTProvider,
       market.addresses.walletBalanceProvider,
       provider,
     ]

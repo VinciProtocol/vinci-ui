@@ -23,6 +23,7 @@
   "AaveTreasuryImpl": "0xdbb7fd2c4f7b106a598eb895ccbb3481c890b100",
   "AaveTreasury": "0x3f1e784ff705347f306252ccf33e96e4c238774e",
   "WalletBalanceProvider": "0x2d86891a03a9e4703b5dfcc712da9ba9f202dac7",
+  "vinciNFTProvider": "0xfe2a5e2a02ffbb250e519a7685424dcb77daa462",
   "UiPoolDataProvider": "0x39c898df7e2260f42d2a4aa84ba87846ed0d2423",
   "WETHGateway": "0xa1815a348a39ef5b72b276b2d5a0372e39758f9e",
   "markets": {

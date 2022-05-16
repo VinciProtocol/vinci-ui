@@ -32,6 +32,7 @@ export const getMarketsData = (chainId: ChainId): MarketData => {
       LENDING_POOL_ADDRESSES_PROVIDER_REGISTRY: generateInfo.LendingPoolAddressesProviderRegistry,
       WETH_GATEWAY: generateInfo.WETHGateway,
       walletBalanceProvider: generateInfo.WalletBalanceProvider,
+      vinciNFTProvider: generateInfo.vinciNFTProvider,
       uiPoolDataProvider: generateInfo.UiPoolDataProvider,
     },
     nfts: Object.keys(generateInfo.markets || {}).reduce((obj, nftID) => {
