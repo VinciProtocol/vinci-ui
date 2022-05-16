@@ -23,5 +23,6 @@ export const useEligibilityResult = () => {
   return {
     account,
     status,
+    setInputAccount,
   }
 }

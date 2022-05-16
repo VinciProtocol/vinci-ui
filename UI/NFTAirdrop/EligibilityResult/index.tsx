@@ -5,7 +5,13 @@ import { useTranslation } from 'next-i18next'
 import { styled } from '@mui/material/styles'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
+import Dialog from '@mui/material/Dialog'
+import DialogActions from '@mui/material/DialogActions'
+import DialogContent from '@mui/material/DialogContent'
+import DialogTitle from '@mui/material/DialogTitle'
 import { BigNumber as BN } from '@ethersproject/bignumber'
+import TextField from '@mui/material/TextField'
 import { useContract } from 'domains/contract'
 
 import { useSendTransaction } from 'app/web3/hooks/sendTransaction'
@@ -27,7 +33,7 @@ const Title = styled(Typography)(({ theme }) => ({
 }))
 
 const EligibilityResult: FC = () => {
-  const { status, account } = useEligibilityResult()
+  const { status, account, setInputAccount } = useEligibilityResult()
 
   switch (status) {
     case 'needAccount':
@@ -35,7 +41,7 @@ const EligibilityResult: FC = () => {
     case 'eligible':
       return <Eligibility account={account} />
     case 'notEligible':
-      return <NotEligibility />
+      return <NotEligibility account={account} setInputAccount={setInputAccount} />
   }
 }
 
@@ -90,7 +96,7 @@ const Eligibility: FC<{ account: string }> = ({ account }) => {
   const action = useMemo(() => {
     return {
       onClick,
-      name: t('eligible.NFT.actions.' + !hasClaimed ? 'claim' : 'claimed'),
+      name: t('eligible.NFT.actions.' + (!hasClaimed ? 'claim' : 'claimed')),
       disabled: hasClaimed || loading,
     }
   }, [hasClaimed, loading, onClick, t])
@@ -113,17 +119,33 @@ const Eligibility: FC<{ account: string }> = ({ account }) => {
   )
 }
 
-const NotEligibility: FC = () => {
+const NotEligibility: FC<{ account: string; setInputAccount: any }> = ({ account, setInputAccount }) => {
   const { t } = useTranslation('nft-airdrop')
+  const [open, setOpen] = useState(false)
+  const [helperText, setHelperText] = useState('')
+  const [input, setInput] = useState('')
   const ROOT = useMemoEmpty(
     () => styled(Stack)`
       text-align: center;
+    `
+  )
+  const SwitchAccount = useMemoEmpty(
+    () => styled(SubTitle)`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    `
+  )
+  const SwitchAccountSpan = useMemoEmpty(
+    () => styled('span')`
+      line-height: 36.5px;
     `
   )
   const Warn = useMemoEmpty(
     () => styled('div')`
       display: flex;
       justify-content: center;
+      align-items: center;
     `
   )
   const WarnTip = useMemoEmpty(
@@ -144,6 +166,20 @@ const NotEligibility: FC = () => {
       }
     `
   )
+  const handleClose = useCallback(() => {
+    setHelperText('')
+    setOpen(false)
+  }, [])
+  const handleSwitchAccount = useCallback(() => {
+    if (!input.startsWith('0x') || input.length < 40) {
+      setHelperText(t('switchAccountDialog.helperText'))
+      return
+    }
+    setInputAccount(input)
+    setInput('')
+    setHelperText('')
+    setOpen(false)
+  }, [input, setInputAccount, t])
   return (
     <ROOT spacing={2}>
       <Title>{t('notEligible.title')}</Title>
@@ -151,12 +187,39 @@ const NotEligibility: FC = () => {
         <SubTitle>{t('notEligible.subTitle.1')}</SubTitle>
         <SubTitle>{t('notEligible.subTitle.2')}</SubTitle>
       </div>
+      <SwitchAccount>
+        <SwitchAccountSpan>{textCenterEllipsis(account)} - </SwitchAccountSpan>
+        <Button variant="text" onClick={() => setOpen(true)}>
+          {t('notEligible.actions.switchAccount')}
+        </Button>
+      </SwitchAccount>
       <Warn>
         <WarnTip>
           <SubTitle>{t('notEligible.warn.1')}</SubTitle>
           <SubTitle>{t('notEligible.warn.2')}</SubTitle>
         </WarnTip>
       </Warn>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>{t('switchAccountDialog.title')}</DialogTitle>
+        <DialogContent sx={{ width: '300px' }}>
+          <TextField
+            error={!helperText}
+            autoFocus
+            margin="dense"
+            id="name"
+            label={'ETH' + ' ' + t('switchAccountDialog.address')}
+            helperText={helperText}
+            fullWidth
+            variant="standard"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>{t('switchAccountDialog.actions.cancel')}</Button>
+          <Button onClick={handleSwitchAccount}>{t('switchAccountDialog.actions.checkEligibilty')}</Button>
+        </DialogActions>
+      </Dialog>
     </ROOT>
   )
 }

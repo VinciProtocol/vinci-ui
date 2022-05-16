@@ -53,9 +53,10 @@ const locale = {
   switchAccountDialog: {
     title: 'Paste Address',
     address: 'address',
-    placeholder: 'paste addess',
+    helperText: 'Invalid address',
     actions: {
       checkEligibilty: 'Check Eligibilty',
+      cancel: 'Cancel',
     },
   },
 }
