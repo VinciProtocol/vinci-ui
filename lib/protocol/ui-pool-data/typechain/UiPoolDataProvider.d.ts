@@ -131,6 +131,7 @@ export type AggregatedNFTVaultDataStruct = {
   usageAsCollateralEnabled: boolean
   isActive: boolean
   isFrozen: boolean
+  lockActionExpiration: BigNumberish
   nTokenAddress: string
   totalNumberOfCollateral: BigNumberish
   priceInMarketReferenceCurrency: BigNumberish
@@ -146,6 +147,7 @@ export type AggregatedNFTVaultDataStructOutput = [
   boolean,
   boolean,
   boolean,
+  number,
   string,
   BigNumber,
   BigNumber
@@ -159,6 +161,7 @@ export type AggregatedNFTVaultDataStructOutput = [
   usageAsCollateralEnabled: boolean
   isActive: boolean
   isFrozen: boolean
+  lockActionExpiration: number
   nTokenAddress: string
   totalNumberOfCollateral: BigNumber
   priceInMarketReferenceCurrency: BigNumber
@@ -217,21 +220,38 @@ export type UserReserveDataStructOutput = [string, BigNumber, boolean, BigNumber
   stableBorrowLastUpdateTimestamp: BigNumber
 }
 
+export type TimeLockStruct = {
+  expiration: BigNumberish
+  lockType: BigNumberish
+}
+
+export type TimeLockStructOutput = [number, number] & {
+  expiration: number
+  lockType: number
+}
+
 export type UserNFTVaultDataStruct = {
   underlyingAsset: string
   nTokenBalance: BigNumberish
   tokenIds: BigNumberish[]
   amounts: BigNumberish[]
-  lockExpirations: BigNumberish[]
+  locks: TimeLockStruct[]
   usageAsCollateralEnabledOnUser: boolean
 }
 
-export type UserNFTVaultDataStructOutput = [string, BigNumber, BigNumber[], BigNumber[], BigNumber[], boolean] & {
+export type UserNFTVaultDataStructOutput = [
+  string,
+  BigNumber,
+  BigNumber[],
+  BigNumber[],
+  TimeLockStructOutput[],
+  boolean
+] & {
   underlyingAsset: string
   nTokenBalance: BigNumber
   tokenIds: BigNumber[]
   amounts: BigNumber[]
-  lockExpirations: BigNumber[]
+  locks: TimeLockStructOutput[]
   usageAsCollateralEnabledOnUser: boolean
 }
 

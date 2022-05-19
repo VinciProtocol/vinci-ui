@@ -739,6 +739,11 @@ const _abi = [
             name: 'id',
             type: 'uint32',
           },
+          {
+            internalType: 'uint40',
+            name: 'expiration',
+            type: 'uint40',
+          },
         ],
         internalType: 'struct DataTypes.NFTVaultData',
         name: '',
@@ -1163,6 +1168,24 @@ const _abi = [
       },
     ],
     name: 'setConfiguration',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: 'nftValue',
+        type: 'address',
+      },
+      {
+        internalType: 'uint40',
+        name: 'expiration',
+        type: 'uint40',
+      },
+    ],
+    name: 'setNFTVaultActionExpiration',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',

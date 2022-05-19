@@ -144,6 +144,7 @@ const WalletTabpanel = withTabPanel(
                   })
                   .then(() => {
                     s.clear()
+                    setDisabled(true)
                     setSize(0)
                   })
               }}

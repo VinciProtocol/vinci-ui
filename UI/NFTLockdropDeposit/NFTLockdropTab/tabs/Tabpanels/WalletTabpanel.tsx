@@ -124,13 +124,39 @@ const WalletTabpanel = withTabPanel(
             >
               {t('nft-lockdrop-deposit:tabs.approveAll')}
             </Button>
-            <Button variant="outlined" disabled={!size} onClick={() => {}}>
+            <Button
+              variant="outlined"
+              disabled={!size}
+              onClick={() => {
+                const s = setRef.current
+                depositAndLockNFT
+                  .post({
+                    lendingPoolAddress,
+                    user: account,
+                    nft: underlyingAsset,
+                    tokenIds: Array.from(s.values()),
+                    lockType: '1',
+                    amounts: (() => {
+                      const list = []
+                      for (let i = 0; i < s.size; i++) {
+                        list.push('1')
+                      }
+                      return list
+                    })(),
+                  })
+                  .then(() => {
+                    s.clear()
+                    setDisabled(true)
+                    setSize(0)
+                  })
+              }}
+            >
               {t('nft-lockdrop-deposit:tabs.depositSelected')}
             </Button>
           </Stack>
         ),
       }),
-      [account, approveAllDisabled, lendingPoolAddress, setApprovalForAll, size, t, totalValuation, underlyingAsset]
+      [account, approveAllDisabled, depositAndLockNFT, lendingPoolAddress, setApprovalForAll, size, t, totalValuation, underlyingAsset]
     )
     const valuation = useMemo(() => t('nft-lockdrop-deposit:tabs.valuation'), [t])
 

@@ -34,13 +34,15 @@ export type NFTVaultDataStruct = {
   nTokenAddress: string
   nftEligibility: string
   id: BigNumberish
+  expiration: BigNumberish
 }
 
-export type NFTVaultDataStructOutput = [NFTVaultConfigurationMapStructOutput, string, string, number] & {
+export type NFTVaultDataStructOutput = [NFTVaultConfigurationMapStructOutput, string, string, number, number] & {
   configuration: NFTVaultConfigurationMapStructOutput
   nTokenAddress: string
   nftEligibility: string
   id: number
+  expiration: number
 }
 
 export type ReserveDataStruct = {
@@ -123,6 +125,7 @@ export interface ILendingPoolInterface extends utils.Interface {
     'paused()': FunctionFragment
     'repay(address,uint256,uint256,address)': FunctionFragment
     'setConfiguration(address,uint256)': FunctionFragment
+    'setNFTVaultActionExpiration(address,uint40)': FunctionFragment
     'setNFTVaultConfiguration(address,uint256)': FunctionFragment
     'setPause(bool)': FunctionFragment
     'setReserveInterestRateStrategyAddress(address,address)': FunctionFragment
@@ -179,6 +182,7 @@ export interface ILendingPoolInterface extends utils.Interface {
   encodeFunctionData(functionFragment: 'paused', values?: undefined): string
   encodeFunctionData(functionFragment: 'repay', values: [string, BigNumberish, BigNumberish, string]): string
   encodeFunctionData(functionFragment: 'setConfiguration', values: [string, BigNumberish]): string
+  encodeFunctionData(functionFragment: 'setNFTVaultActionExpiration', values: [string, BigNumberish]): string
   encodeFunctionData(functionFragment: 'setNFTVaultConfiguration', values: [string, BigNumberish]): string
   encodeFunctionData(functionFragment: 'setPause', values: [boolean]): string
   encodeFunctionData(functionFragment: 'setReserveInterestRateStrategyAddress', values: [string, string]): string
@@ -210,6 +214,7 @@ export interface ILendingPoolInterface extends utils.Interface {
   decodeFunctionResult(functionFragment: 'paused', data: BytesLike): Result
   decodeFunctionResult(functionFragment: 'repay', data: BytesLike): Result
   decodeFunctionResult(functionFragment: 'setConfiguration', data: BytesLike): Result
+  decodeFunctionResult(functionFragment: 'setNFTVaultActionExpiration', data: BytesLike): Result
   decodeFunctionResult(functionFragment: 'setNFTVaultConfiguration', data: BytesLike): Result
   decodeFunctionResult(functionFragment: 'setPause', data: BytesLike): Result
   decodeFunctionResult(functionFragment: 'setReserveInterestRateStrategyAddress', data: BytesLike): Result
@@ -534,6 +539,12 @@ export interface ILendingPool extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>
 
+    setNFTVaultActionExpiration(
+      nftValue: string,
+      expiration: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>
+
     setNFTVaultConfiguration(
       reserve: string,
       configuration: BigNumberish,
@@ -717,6 +728,12 @@ export interface ILendingPool extends BaseContract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>
 
+  setNFTVaultActionExpiration(
+    nftValue: string,
+    expiration: BigNumberish,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>
+
   setNFTVaultConfiguration(
     reserve: string,
     configuration: BigNumberish,
@@ -890,6 +907,8 @@ export interface ILendingPool extends BaseContract {
     ): Promise<BigNumber>
 
     setConfiguration(reserve: string, configuration: BigNumberish, overrides?: CallOverrides): Promise<void>
+
+    setNFTVaultActionExpiration(nftValue: string, expiration: BigNumberish, overrides?: CallOverrides): Promise<void>
 
     setNFTVaultConfiguration(reserve: string, configuration: BigNumberish, overrides?: CallOverrides): Promise<void>
 
@@ -1196,6 +1215,12 @@ export interface ILendingPool extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>
 
+    setNFTVaultActionExpiration(
+      nftValue: string,
+      expiration: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>
+
     setNFTVaultConfiguration(
       reserve: string,
       configuration: BigNumberish,
@@ -1365,6 +1390,12 @@ export interface ILendingPool extends BaseContract {
     setConfiguration(
       reserve: string,
       configuration: BigNumberish,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>
+
+    setNFTVaultActionExpiration(
+      nftValue: string,
+      expiration: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>
 

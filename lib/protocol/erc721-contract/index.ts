@@ -4,8 +4,8 @@ import type { providers } from 'ethers'
 import BaseService from '../commons/BaseService'
 import type { EthereumTransactionTypeExtended, tEthereumAddress, transactionType } from '../commons/types'
 import { eEthereumTxType } from '../commons/types'
-import type { ERC721 as IERC721Detailed } from './typechain/IERC721Detailed'
-import { ERC721__factory as IERC721Detailed__factory } from './typechain/IERC721Detailed__factory'
+import type { IERC721 as IERC721Detailed } from './typechain/IERC721'
+import { IERC721__factory as IERC721Detailed__factory } from './typechain/IERC721__factory'
 
 export interface IERC721ServiceInterface {
   // getData: (args: DataType) => Promise<any>

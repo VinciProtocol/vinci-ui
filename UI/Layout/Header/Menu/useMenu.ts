@@ -20,15 +20,15 @@ const MenuList = [
     linkTo: '/borrow/[id]',
     hide: true,
   },
-  // {
-  //   key: 'NFTLockdrop',
-  //   linkTo: '/nft-lockdrop',
-  // },
-  // {
-  //   key: 'NFTLockdropDeposit',
-  //   linkTo: '/nft-lockdrop/[id]',
-  //   hide: true,
-  // },
+  {
+    key: 'NFTLockdrop',
+    linkTo: '/nft-lockdrop',
+  },
+  {
+    key: 'NFTLockdropDeposit',
+    linkTo: '/nft-lockdrop/[id]',
+    hide: true,
+  },
   {
     key: 'NFTAirdrop',
     linkTo: '/nft-airdrop',

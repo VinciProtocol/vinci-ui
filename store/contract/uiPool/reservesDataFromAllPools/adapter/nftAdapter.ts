@@ -18,6 +18,7 @@ export const getNFTVault = (nftVaultsData: ReservesData['nftVaultsData']) => {
     isActive,
     isFrozen,
     totalNumberOfCollateral,
+    lockActionExpiration,
   } = nftVaultsData[0]
   return {
     underlyingAsset: underlyingAsset.toLowerCase(),
@@ -34,6 +35,7 @@ export const getNFTVault = (nftVaultsData: ReservesData['nftVaultsData']) => {
     isActive,
     isFrozen,
     totalNumberOfCollateral: valueToBigNumber(totalNumberOfCollateral),
+    lockActionExpiration: valueToBigNumber(lockActionExpiration).toNumber(),
   }
 }
 export type NFTVault = ReturnType<typeof getNFTVault>
