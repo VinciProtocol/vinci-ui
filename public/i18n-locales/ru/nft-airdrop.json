@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "Вставить адрес",
     "address": "адрес",
-    "placeholder": "вставить адрес",
+    "helperText": "Неверный адрес",
     "actions": {
-      "checkEligibilty": "Проверить соответствие требованиям"
+      "checkEligibilty": "Проверить соответствие требованиям",
+      "cancel": "Отмена"
     }
   }
 }

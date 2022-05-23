@@ -2,7 +2,7 @@
   "title": "NFT 에어드랍",
   "eligible": {
     "title": "🎉 축하합니다! 에어드랍 자격이 있습니다.",
-    "subTitle": "다음 몇 주 내에 에어드랍이 발생할 때 NFT를 청구할 수 있습니다.",
+    "subTitle": "다음 몇 주 안에 에어드랍이 이루어지면 NFT를 청구할 수 있습니다.",
     "willReceive": "받을 것이다",
     "NFT": {
       "actions": {
@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "주소 붙여넣기",
     "address": "주소",
-    "placeholder": "붙여넣기",
+    "helperText": "잘못된 주소",
     "actions": {
-      "checkEligibilty": "자격 확인"
+      "checkEligibilty": "자격 확인",
+      "cancel": "취소"
     }
   }
 }

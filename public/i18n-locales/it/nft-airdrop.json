@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "Incolla indirizzo",
     "address": "indirizzo",
-    "placeholder": "incolla l'indirizzo",
+    "helperText": "Indirizzo non valido",
     "actions": {
-      "checkEligibilty": "Verifica l'idoneità"
+      "checkEligibilty": "Verifica l'idoneità",
+      "cancel": "Annulla"
     }
   }
 }

@@ -19,7 +19,7 @@
     "title": "Đang tải"
   },
   "notEligible": {
-    "title": "Xin lỗi, bạn không đủ điều kiện cho đợt airdrop này.",
+    "title": "Xin lỗi, bạn không đủ điều kiện tham gia đợt airdrop này.",
     "subTitle": [
       null,
       "Đừng lo! Sẽ có nhiều airdrop hơn trong tương lai.",
@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "Dán địa chỉ",
     "address": "Địa chỉ",
-    "placeholder": "dán addess",
+    "helperText": "Địa chỉ không hợp lệ",
     "actions": {
-      "checkEligibilty": "Kiểm tra Eligibilty"
+      "checkEligibilty": "Kiểm tra Eligibilty",
+      "cancel": "Hủy bỏ"
     }
   }
 }

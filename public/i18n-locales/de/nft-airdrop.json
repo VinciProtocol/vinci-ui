@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "Adresse einfügen",
     "address": "die Anschrift",
-    "placeholder": "Adresse einfügen",
+    "helperText": "Ungültige Adresse",
     "actions": {
-      "checkEligibilty": "Berechtigung prüfen"
+      "checkEligibilty": "Überprüfen Sie die Berechtigung",
+      "cancel": "Absagen"
     }
   }
 }

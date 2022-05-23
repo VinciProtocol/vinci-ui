@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "لصق العنوان",
     "address": "عنوان",
-    "placeholder": "لصق العدة",
+    "helperText": "عنوان خاطئ",
     "actions": {
-      "checkEligibilty": "تحقق من الأهلية"
+      "checkEligibilty": "تحقق من الأهلية",
+      "cancel": "يلغي"
     }
   }
 }

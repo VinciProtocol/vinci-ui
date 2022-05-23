@@ -10,7 +10,7 @@
         "claim": "เรียกร้อง",
         "claimed": "อ้างสิทธิ์",
         "tip": {
-          "switchAccount": "โปรดเปลี่ยนบัญชีเพื่ออ้างสิทธิ์"
+          "switchAccount": "โปรดเปลี่ยนบัญชีเพื่อขอรับสิทธิ์"
         }
       }
     }
@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "วางที่อยู่",
     "address": "ที่อยู่",
-    "placeholder": "วางที่อยู่",
+    "helperText": "ที่อยู่ที่ไม่ถูกต้อง",
     "actions": {
-      "checkEligibilty": "ตรวจสอบสิทธิ์"
+      "checkEligibilty": "ตรวจสอบสิทธิ์",
+      "cancel": "ยกเลิก"
     }
   }
 }

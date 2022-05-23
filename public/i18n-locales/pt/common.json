@@ -1,4 +1,7 @@
 {
+  "layout": {
+    "description": "Um protocolo DeFi apoiado por NFT para aumentar a liquidez e a volatilidade do hedge"
+  },
   "wallet": {
     "btn": {
       "cancel": "Cancelar",

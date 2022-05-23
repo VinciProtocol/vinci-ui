@@ -1,4 +1,7 @@
 {
+  "layout": {
+    "description": "流動性を高め、ボラティリティをヘッジするためのNFT支援のDeFiプロトコル"
+  },
   "wallet": {
     "btn": {
       "cancel": "キャンセル",

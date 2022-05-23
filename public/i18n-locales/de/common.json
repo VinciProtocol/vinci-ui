@@ -1,4 +1,7 @@
 {
+  "layout": {
+    "description": "Ein NFT-unterstütztes DeFi-Protokoll zur Steigerung der Liquidität und Absicherung der Volatilität"
+  },
   "wallet": {
     "btn": {
       "cancel": "Absagen",

@@ -1,4 +1,7 @@
 {
+  "layout": {
+    "description": "بروتوكول DeFi مدعوم من NFT لتعزيز السيولة وتحوط التقلبات"
+  },
   "wallet": {
     "btn": {
       "cancel": "يلغي",

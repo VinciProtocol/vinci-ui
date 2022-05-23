@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "Pegar dirección",
     "address": "dirección",
-    "placeholder": "pegar dirección",
+    "helperText": "Dirección inválida",
     "actions": {
-      "checkEligibilty": "Comprobar elegibilidad"
+      "checkEligibilty": "Comprobar elegibilidad",
+      "cancel": "Cancelar"
     }
   }
 }

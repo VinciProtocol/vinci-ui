@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "Colar endereço",
     "address": "Morada",
-    "placeholder": "colar endereço",
+    "helperText": "Endereço inválido",
     "actions": {
-      "checkEligibilty": "Verificar elegibilidade"
+      "checkEligibilty": "Verificar elegibilidade",
+      "cancel": "Cancelar"
     }
   }
 }

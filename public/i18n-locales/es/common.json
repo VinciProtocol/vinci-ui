@@ -1,4 +1,7 @@
 {
+  "layout": {
+    "description": "Un protocolo DeFi respaldado por NFT para aumentar la liquidez y cubrir la volatilidad"
+  },
   "wallet": {
     "btn": {
       "cancel": "Cancelar",

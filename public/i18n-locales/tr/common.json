@@ -1,4 +1,7 @@
 {
+  "layout": {
+    "description": "Likiditeyi Artırmak ve Oynaklıktan Korunma için NFT Destekli DeFi Protokolü"
+  },
   "wallet": {
     "btn": {
       "cancel": "İptal etmek",

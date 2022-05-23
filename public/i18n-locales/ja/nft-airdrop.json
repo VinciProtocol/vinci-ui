@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "アドレスを貼り付け",
     "address": "住所",
-    "placeholder": "アデスを貼り付けます",
+    "helperText": "無効なアドレス",
     "actions": {
-      "checkEligibilty": "適格性を確認する"
+      "checkEligibilty": "適格性を確認する",
+      "cancel": "キャンセル"
     }
   }
 }

@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "Coller l'adresse",
     "address": "adresse",
-    "placeholder": "coller l'adresse",
+    "helperText": "Adresse invalide",
     "actions": {
-      "checkEligibilty": "Vérifier l'éligibilité"
+      "checkEligibilty": "Vérifier l'éligibilité",
+      "cancel": "Annuler"
     }
   }
 }

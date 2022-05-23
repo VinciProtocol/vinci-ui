@@ -1,4 +1,7 @@
 {
+  "layout": {
+    "description": "Giao thức DeFi được hỗ trợ bởi NFT để tăng tính thanh khoản và bảo đảm rủi ro biến động"
+  },
   "wallet": {
     "btn": {
       "cancel": "Hủy bỏ",

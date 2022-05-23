@@ -50,5 +50,8 @@
   },
   "components": {
     "goBack": "回去"
+  },
+  "layout": {
+    "description": "一种由 NFT 支持的 DeFi 协议，用于提高流动性和对冲波动性"
   }
 }

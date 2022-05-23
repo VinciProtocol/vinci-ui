@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "Adresi Yapıştır",
     "address": "adres",
-    "placeholder": "yapıştır",
+    "helperText": "Geçersiz adres",
     "actions": {
-      "checkEligibilty": "Uygunluğu Kontrol Et"
+      "checkEligibilty": "Uygunluğu Kontrol Et",
+      "cancel": "İptal etmek"
     }
   }
 }

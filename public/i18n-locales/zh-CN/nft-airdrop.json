@@ -47,7 +47,7 @@
     "title": "资格标准",
     "subTitle": [
       null,
-      "Leonardo da Vinci NFT Drop 将奖励任何加入 Vinci Protocol 社区并参与此社区倡议的人，以帮助我们创建社会运动。",
+      "Leonardo da Vinci NFT Drop 将奖励加入 Vinci Protocol 社区并参与此社区倡议的任何人，以帮助我们创建社会运动。",
       "要获得资格，您必须输入 <contest>比赛</contest> 并向公众表明您的支持。"
     ],
     "btn": {
@@ -57,9 +57,10 @@
   "switchAccountDialog": {
     "title": "粘贴地址",
     "address": "地址",
-    "placeholder": "粘贴地址",
+    "helperText": "无效地址",
     "actions": {
-      "checkEligibilty": "检查资格"
+      "checkEligibilty": "检查资格",
+      "cancel": "取消"
     }
   }
 }
