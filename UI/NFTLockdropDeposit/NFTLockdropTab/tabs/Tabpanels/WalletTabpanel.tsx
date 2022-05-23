@@ -156,7 +156,17 @@ const WalletTabpanel = withTabPanel(
           </Stack>
         ),
       }),
-      [account, approveAllDisabled, depositAndLockNFT, lendingPoolAddress, setApprovalForAll, size, t, totalValuation, underlyingAsset]
+      [
+        account,
+        approveAllDisabled,
+        depositAndLockNFT,
+        lendingPoolAddress,
+        setApprovalForAll,
+        size,
+        t,
+        totalValuation,
+        underlyingAsset,
+      ]
     )
     const valuation = useMemo(() => t('nft-lockdrop-deposit:tabs.valuation'), [t])
 
