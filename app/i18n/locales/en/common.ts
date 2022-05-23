@@ -1,4 +1,7 @@
 const locale = {
+  layout: {
+    description: 'A NFT-backed DeFi Protocol for Boosting Liquidity and Hedging Volatility',
+  },
   wallet: {
     btn: {
       cancel: 'Cancel',

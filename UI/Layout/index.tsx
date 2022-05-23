@@ -14,15 +14,12 @@ const Layout: FC<LayoutProps> = ({ children, title }) => {
     <Fragment>
       <Head>
         <title>Vinci - {t('router:menu.' + title)}</title>
-        <meta name="description" content="A NFT-backed DeFi Protocol for Boosting Liquidity and Hedging Volatility" />
+        <meta name="description" content={t('layout.description')} />
 
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Vinci Protocol | DeFing NFTs" />
         <meta property="og:image" content="https://app.vinci.io/logo.jpeg" />
-        <meta
-          property="og:description"
-          content="A NFT-backed DeFi Protocol for Boosting Liquidity and Hedging Volatility"
-        />
+        <meta property="og:description" content={t('layout.description')} />
         <meta property="og:title" content="Vinci Protocol" />
         <meta property="og:url" content="https://app.vinci.io" />
 
