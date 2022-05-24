@@ -19,9 +19,11 @@ export const getNFTVault = (nftVaultsData: ReservesData['nftVaultsData']) => {
     isFrozen,
     totalNumberOfCollateral,
     lockActionExpiration,
+    nTokenAddress,
   } = nftVaultsData[0]
   return {
     underlyingAsset: underlyingAsset.toLowerCase(),
+    nTokenAddress: nTokenAddress.toLowerCase(),
     name,
     symbol,
     baseLTVasCollateral: normalizeBN(baseLTVasCollateral, LTV_PRECISION),

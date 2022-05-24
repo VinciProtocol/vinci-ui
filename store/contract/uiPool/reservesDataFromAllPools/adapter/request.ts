@@ -76,7 +76,7 @@ export const useReservesDataFromAllPools = (props: ReservesDataProps) => {
           isActive,
           isFrozen,
           lockActionExpiration,
-          ...getAddress(nftVault, ['underlyingAsset']),
+          ...getAddress(nftVault, ['underlyingAsset', 'nTokenAddress']),
           ...getString(nftVault, [
             'baseLTVasCollateral',
             'reserveLiquidationThreshold',
