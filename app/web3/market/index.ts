@@ -22,6 +22,8 @@ const list: Record<ChainId, typeof vinci> = {
 export const NFT_ID_1 = 'VinciBAYC'
 export const NFT_ID_2 = 'VinciMAYC'
 export const NFT_ID_3 = 'VinciPS'
+export const NFT_ID_4 = 'VinciMAYCNoBorrowing'
+export const NFT_ID_5 = 'VinciMAYCNoBorrowingExpired'
 
 export const getMarketsData = (chainId: ChainId): MarketData => {
   const generateInfo = list[chainId]
@@ -38,7 +40,7 @@ export const getMarketsData = (chainId: ChainId): MarketData => {
     nfts: Object.keys(generateInfo.markets || {}).reduce((obj, nftID) => {
       const collection = nftID.replace('Vinci', '')
       const underlyingAsset = (generateInfo as any)[collection]
-      if (!underlyingAsset) throw new Error(`[getMarketsData] 找不到对应 NFT配置 => (${collection})`)
+      if (!underlyingAsset) throw new Error(`[getMarketsData] ${chainId} 找不到对应 NFT配置 => (${collection})`)
       const { LendingPool, LendingPoolAddressesProvider } = (generateInfo.markets as Record<string, NFTGenerate>)[nftID]
       const { src, market } = getNFTInfo(nftID)
       const setting: NFTSetting = {
@@ -57,7 +59,7 @@ export const getMarketsData = (chainId: ChainId): MarketData => {
   }
 }
 
-export const defaultMarket = getMarketsData(ChainId.bsc)
+export const defaultMarket = getMarketsData(ChainId.vinci)
 
 const getNFTS = () => {
   return {

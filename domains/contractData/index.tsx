@@ -1,8 +1,8 @@
 import type { FC } from 'react'
 import { useMemo } from 'react'
 import { cloneDeep, groupBy } from 'lodash'
-import { createContext } from 'utils/createContext'
 
+import { createContext } from 'utils/createContext'
 import { getCurrentTimestamp, RAY_DECIMALS, SECONDS_PER_YEAR } from 'app/App/constants'
 import { useMemoLazy } from 'app/hooks/useMemoLazy'
 import { getCompoundedBalance, getLinearBalance } from 'lib/protocol/ui-pool-data/pool-math'
@@ -10,6 +10,9 @@ import { calculateReserveDebt } from 'lib/protocol/ui-pool-data/formatters/reser
 import { normalizeBN, valueToBigNumber, valueToZDBigNumber } from 'utils/math'
 import { rayPow, RAY } from 'utils/math/ray'
 import { API_ETH_MOCK_ADDRESS } from 'lib/protocol/commons/utils'
+import { log } from 'utils/dev'
+import { useMarket } from 'domains'
+import { safeGet } from 'utils/get'
 
 import { useReservesDatas } from 'store/contract/uiPool/reservesDataFromAllPools/hooks'
 import { useUserReservesDatas } from 'store/contract/uiPool/userReservesDataFromAllPools/hooks'
@@ -18,8 +21,6 @@ import { useWalletNFTData } from 'store/contract/uiPool/walletNFT/hooks'
 import ContractNFTProvider from './nft'
 export { createContractNFTContext } from './nft'
 import ContractERC20Provider from './erc20'
-import { log } from 'utils/dev'
-import { useMarket } from 'domains'
 
 const useContractDataService = () => {
   const { market } = useMarket()
@@ -30,7 +31,7 @@ const useContractDataService = () => {
   const contractDataSource = useMemoLazy(() => {
     const returnValue = reservesDatas
       .map((reservesData) => {
-        const nftSetting = market.nfts[reservesData.nftVault.underlyingAsset]
+        const nftSetting = safeGet(() => market.nfts[reservesData.nftVaults[0].underlyingAsset])
         if (!nftSetting) return
         const userReservesData = userReservesDatas.find(({ id }) => reservesData.id === id)
         const walletBalance = walletBalanceData.find(({ id }) => reservesData.id === id)
@@ -61,7 +62,8 @@ const useContractDataService = () => {
         walletNFT: walletNFTs,
         nftSetting,
       } = contractDataSource[i]
-      const { currency, reserves, nftVault, id } = reservesData
+      const { currency, reserves, nftVaults, id } = reservesData
+      const nftVault = nftVaults[0]
       const collection = nftVault.symbol
       const collectionName = nftVault.name
       const { currencyPriceInUSD, currencyDecimals } = currency
