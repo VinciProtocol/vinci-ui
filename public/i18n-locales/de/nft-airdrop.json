@@ -2,7 +2,7 @@
   "title": "NFT-Airdrop",
   "eligible": {
     "title": "🎉 Herzlichen Glückwunsch! Sie sind für den Airdrop berechtigt.",
-    "subTitle": "Sie können Ihre NFT beanspruchen, wenn der Airdrop in den nächsten Wochen stattfindet.",
+    "subTitle": "Verbinden Sie einfach Ihre teilnehmende Adresse, um sie zu beanspruchen.",
     "willReceive": "werde empfangen",
     "NFT": {
       "actions": {
@@ -28,7 +28,7 @@
     "warn": [
       null,
       "Wir erhalten jetzt überraschend viele Whitelist-Anfragen.",
-      "Wenn Sie die Aufgaben abgeschlossen haben, aber die Airdrop-Belohnung nicht beanspruchen konnten, haben Sie bitte etwas Geduld."
+      "Wenn Sie die Aufgaben abgeschlossen haben, aber die Airdrop-Belohnung nicht beanspruchen konnten, haben Sie bitte etwas Geduld, um auf die weiße Liste gesetzt zu werden."
     ],
     "actions": {
       "switchAccount": "Überprüfen Sie eine andere Adresse",

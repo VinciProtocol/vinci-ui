@@ -2,7 +2,7 @@
   "title": "Lanzamiento aéreo NFT",
   "eligible": {
     "title": "🎉 ¡Felicidades! Eres elegible para el airdrop.",
-    "subTitle": "Puede reclamar su NFT cuando se realice el airdrop en las próximas semanas.",
+    "subTitle": "Simplemente conecta tu dirección participante para reclamarla.",
     "willReceive": "recibirá",
     "NFT": {
       "actions": {
@@ -28,7 +28,7 @@
     "warn": [
       null,
       "Ahora estamos recibiendo una sorprendente cantidad de solicitudes de lista blanca.",
-      "Si ha terminado las tareas pero no pudo reclamar la recompensa del lanzamiento aéreo, tenga paciencia."
+      "Si completó las tareas pero no pudo reclamar la recompensa de airdrop, tenga paciencia para ser incluido en la lista blanca."
     ],
     "actions": {
       "switchAccount": "Comprobar otra dirección",

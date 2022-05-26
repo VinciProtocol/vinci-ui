@@ -2,7 +2,7 @@
   "title": "Lançamento aéreo NFT",
   "eligible": {
     "title": "🎉 Parabéns! Você é elegível para o lançamento aéreo.",
-    "subTitle": "Você poderá reivindicar seu NFT quando o lançamento aéreo ocorrer nas próximas semanas.",
+    "subTitle": "Basta conectar seu endereço participante para reivindicá-lo.",
     "willReceive": "receberá",
     "NFT": {
       "actions": {
@@ -28,7 +28,7 @@
     "warn": [
       null,
       "Agora estamos recebendo uma quantidade surpreendente de solicitações de lista de permissões.",
-      "Se você terminou as tarefas, mas não conseguiu reivindicar a recompensa de lançamento aéreo, seja paciente."
+      "Se você concluiu as tarefas, mas não conseguiu reivindicar a recompensa de lançamento aéreo, seja paciente para ser incluído na lista de permissões."
     ],
     "actions": {
       "switchAccount": "Verifique outro endereço",

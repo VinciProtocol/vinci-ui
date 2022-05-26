@@ -36,7 +36,7 @@
       "term": "ヴィンチの利用規約"
     },
     "chain": {
-      "title": "Select You Network",
+      "title": "ネットワークを選択",
       "subTitle": "現在のネットワーク：",
       "error": "サポートされていないネットワーク"
     }

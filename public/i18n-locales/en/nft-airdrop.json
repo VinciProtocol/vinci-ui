@@ -2,7 +2,7 @@
   "title": "NFT Airdrop",
   "eligible": {
     "title": "🎉 Congrats! You are eligible for the airdrop.",
-    "subTitle": "You are able to claim your NFT when the  airdrop takes place in the next few weeks.",
+    "subTitle": "Simply connect your participating address to claim it.",
     "willReceive": "will receive",
     "NFT": {
       "actions": {
@@ -26,7 +26,7 @@
     },
     "warn": {
       "1": "We are now receiving a surprising amount of whitelist request.",
-      "2": "If you have finished the tasks but couldn’t claim  the airdrop reward, please be patient."
+      "2": "If you have finished the tasks but couldn’t claim  the airdrop reward, please be patient to be whitelisted."
     },
     "actions": {
       "switchAccount": "Check another address",

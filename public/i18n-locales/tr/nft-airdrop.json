@@ -2,7 +2,7 @@
   "title": "NFT Airdrop",
   "eligible": {
     "title": "🎉 Tebrikler! Airdrop için uygunsunuz.",
-    "subTitle": "Önümüzdeki birkaç hafta içinde airdrop gerçekleştiğinde NFT'nizi talep edebilirsiniz.",
+    "subTitle": "Talep etmek için katılımcı adresinizi bağlamanız yeterlidir.",
     "willReceive": "alacak",
     "NFT": {
       "actions": {
@@ -28,7 +28,7 @@
     "warn": [
       null,
       "Şu anda şaşırtıcı miktarda beyaz liste isteği alıyoruz.",
-      "Görevleri tamamladıysanız ancak airdrop ödülünü alamadıysanız lütfen sabırlı olun."
+      "Görevleri tamamladıysanız ancak airdrop ödülünü alamadıysanız, lütfen beyaz listeye alınmak için sabırlı olun."
     ],
     "actions": {
       "switchAccount": "Başka bir adresi kontrol et",

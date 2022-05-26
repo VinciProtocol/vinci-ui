@@ -2,7 +2,7 @@
   "title": "Airdrop NFT",
   "eligible": {
     "title": "🎉 Complimenti! Sei idoneo per l'airdrop.",
-    "subTitle": "Puoi richiedere il tuo NFT quando l'airdrop avrà luogo nelle prossime settimane.",
+    "subTitle": "Collega semplicemente il tuo indirizzo di partecipazione per richiederlo.",
     "willReceive": "riceverà",
     "NFT": {
       "actions": {
@@ -22,13 +22,13 @@
     "title": "Siamo spiacenti, non sei idoneo per questo round di airdrop.",
     "subTitle": [
       null,
-      "Non preoccuparti! Ci saranno più airdrop in futuro.",
+      "Non preoccuparti! Ci saranno più lanci in futuro.",
       "Il modo migliore per aumentare le tue probabilità è partecipare."
     ],
     "warn": [
       null,
       "Ora stiamo ricevendo una quantità sorprendente di richieste di whitelist.",
-      "Se hai completato le attività ma non hai potuto richiedere il premio airdrop, sii paziente."
+      "Se hai completato le attività ma non hai potuto richiedere il premio airdrop, sii paziente per essere inserito nella whitelist."
     ],
     "actions": {
       "switchAccount": "Controlla un altro indirizzo",

@@ -2,7 +2,7 @@
   "title": "Airdrop NFT",
   "eligible": {
     "title": "🎉 Félicitations ! Vous êtes éligible au parachutage.",
-    "subTitle": "Vous pourrez réclamer votre NFT lorsque le largage aérien aura lieu dans les prochaines semaines.",
+    "subTitle": "Connectez simplement votre adresse participante pour la réclamer.",
     "willReceive": "recevra",
     "NFT": {
       "actions": {
@@ -28,7 +28,7 @@
     "warn": [
       null,
       "Nous recevons maintenant une quantité surprenante de demandes de liste blanche.",
-      "Si vous avez terminé les tâches mais que vous n'avez pas pu réclamer la récompense de largage, veuillez patienter."
+      "Si vous avez terminé les tâches mais que vous n'avez pas pu réclamer la récompense de largage, veuillez patienter pour être ajouté à la liste blanche."
     ],
     "actions": {
       "switchAccount": "Vérifier une autre adresse",
