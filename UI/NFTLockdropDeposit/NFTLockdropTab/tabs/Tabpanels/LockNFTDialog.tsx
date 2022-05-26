@@ -19,6 +19,7 @@ import { DialogCloseIconButton } from 'components/btn/IconButton'
 import type { NFTCardProps } from 'components/nft/NFTCard'
 import NumberDisplay from 'components/math/NumberDisplay'
 import { SubTitle } from 'components/Styled'
+import { lockTypeList } from 'domains/thegraph'
 
 type LockNFTDialogProps = {
   nfts: NFTCardProps[]
@@ -107,36 +108,6 @@ const NFTCard: FC<NFTCardProps> = ({ id, description, image, currentFloorPrice, 
   )
 }
 
-const lockTypeList = [
-  [
-    {
-      type: '1',
-      days: '30',
-    },
-    {
-      type: '2',
-      days: '60',
-    },
-    {
-      type: '3',
-      days: '90',
-    },
-  ],
-  [
-    {
-      type: '4',
-      days: '120',
-    },
-    {
-      type: '5',
-      days: '240',
-    },
-    {
-      type: '6',
-      days: '360',
-    },
-  ],
-]
 const ChooseLockTime: FC<{ setType: (type: string) => void; type: string }> = ({ setType, type }) => {
   const Root = useMemoEmpty(() => styled(Stack)``)
   const { t } = useTranslation('nft-lockdrop-deposit')

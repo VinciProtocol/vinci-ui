@@ -7,7 +7,7 @@ import { getTimeLockedTables } from './adapter/request'
 const key = 'thegraph.nftToken.timeLockedTables'
 const request = createAsyncThunk(`${key}/request`, (args: TimeLockedTablesProps) => getTimeLockedTables(args))
 
-export const { reducer, select, useRequestController } = createRequestSlice(
+export const { reducer, select, useRequestController, selectData } = createRequestSlice(
   key,
   createRequestSliceState<TimeLockedTables>(),
   request

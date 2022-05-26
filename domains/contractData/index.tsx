@@ -18,6 +18,7 @@ import { useReservesDatas } from 'store/contract/uiPool/reservesDataFromAllPools
 import { useUserReservesDatas } from 'store/contract/uiPool/userReservesDataFromAllPools/hooks'
 import { useWalletBalanceData } from 'store/contract/uiPool/walletBalances/hooks'
 import { useWalletNFTData } from 'store/contract/uiPool/walletNFT/hooks'
+
 import ContractNFTProvider from './nft'
 export { createContractNFTContext } from './nft'
 import ContractERC20Provider from './erc20'
@@ -379,15 +380,15 @@ const useContractDataService = () => {
 
 export type ContractData = ReturnType<typeof useContractDataService>
 
-const { Provider: ContractProvider, createUseContext } = createContext(useContractDataService)
+const { Provider: ContractDataProvider, createUseContext } = createContext(useContractDataService)
 
 const Provider: FC = ({ children }) => {
   return (
-    <ContractProvider>
+    <ContractDataProvider>
       <ContractNFTProvider>
         <ContractERC20Provider>{children}</ContractERC20Provider>
       </ContractNFTProvider>
-    </ContractProvider>
+    </ContractDataProvider>
   )
 }
 
