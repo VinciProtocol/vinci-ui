@@ -22,5 +22,5 @@
     "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "lib/protocol/src"]
+  "exclude": ["node_modules", "lib/protocol/src", "lib/protocol/src-vinci-claimable-nft"]
 }
