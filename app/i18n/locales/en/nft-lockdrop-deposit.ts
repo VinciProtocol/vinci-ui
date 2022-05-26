@@ -7,6 +7,11 @@ const locale = {
         tip: `You don't have any NFT collaterals.`,
         btn: 'Deposit some NFTs Now',
       },
+      lockTimeLeft: {
+        title: 'Lock Time Left',
+        days: 'days',
+        hovers: 'hovers',
+      },
     },
     wallet: {
       title: 'Wallet NFT',
@@ -36,7 +41,7 @@ const locale = {
     },
     actions: {
       cancel: 'Cancel',
-      deposit: 'Deposit',
+      deposit: 'Lock',
     },
   },
 }

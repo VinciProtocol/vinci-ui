@@ -13,9 +13,8 @@ import { useWallet } from 'app/wallet'
 import { LockdropDepositTabValue } from 'app/App/pages/lockdropDeposit'
 import { withTabPanel } from 'app/hoc/tabs/withTabPanel'
 import { RESPONSIVE_DESIGN } from 'styles/constants'
-
-import NFTCard from 'components/nft/NFTCard'
 import NumberDisplay from 'components/math/NumberDisplay'
+import NFTCard from 'components/nft/NFTCard'
 
 const LockDepositTabpanel = withTabPanel(
   (props) => {
@@ -30,7 +29,7 @@ const LockDepositTabpanel = withTabPanel(
     const { TabPanel } = props
     const {
       nft: { lendingPoolAddress, underlyingAsset },
-      userNFT: { data, totalValuation },
+      userNFT: { lockedData, totalValuationLocked },
     } = useContractNFT()
 
     const {
@@ -58,14 +57,14 @@ const LockDepositTabpanel = withTabPanel(
 
     const tabs = useMemo(() => {
       const t: any[][] = [[]]
-      if (!data) return t
-      data.forEach((d, i) => {
+      if (!lockedData) return t
+      lockedData.forEach((d, i) => {
         const index = Math.floor(i / 4)
         if (!t[index]) t[index] = []
         t[index].push(d)
       })
       return t
-    }, [data])
+    }, [lockedData])
 
     const setRef = useRef<Set<string>>(new Set())
     const [size, setSize] = useState(0)
@@ -84,7 +83,7 @@ const LockDepositTabpanel = withTabPanel(
           <Typography gutterBottom variant="subtitle2" component="div">
             <Stack spacing={2} direction="row">
               <span>{t('nft-lockdrop-deposit:tabs.totalValuation')}</span>
-              <NumberDisplay value={totalValuation} type="network" />
+              <NumberDisplay value={totalValuationLocked} type="network" />
             </Stack>
           </Typography>
         ),
@@ -120,7 +119,7 @@ const LockDepositTabpanel = withTabPanel(
           </Stack>
         ),
       }),
-      [account, lendingPoolAddress, size, t, totalValuation, underlyingAsset, withdrawNFT]
+      [account, lendingPoolAddress, size, t, totalValuationLocked, underlyingAsset, withdrawNFT]
     )
     const valuation = useMemo(() => t('nft-lockdrop-deposit:tabs.valuation'), [t])
 
@@ -139,7 +138,7 @@ const LockDepositTabpanel = withTabPanel(
               ))}
             </Stack>
           ))}
-          {!data.length && <NoData />}
+          {!lockedData.length && <NoData />}
         </Stack>
 
         <Stack spacing={2} sx={[RESPONSIVE_DESIGN.display.XS('flex')]}>
@@ -155,7 +154,7 @@ const LockDepositTabpanel = withTabPanel(
             ]}
           >
             {tabs.map((ts) => ts.map((nft) => <NFTCard key={nft.id} {...{ ...nft, action, onCheckChange }} />))}
-            {!data.length && <NoData />}
+            {!lockedData.length && <NoData />}
           </Stack>
         </Stack>
       </TabPanel>

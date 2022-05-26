@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
 import { styled } from '@mui/material/styles'
 import Stack from '@mui/material/Stack'
-import { useContractData } from 'domains'
+import { useThegraph } from 'domains'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import NumberDisplay from 'components/math/NumberDisplay'
@@ -22,28 +22,28 @@ const Card: FC<CardProps> = () => {
     }))
   )
 
-  const { dashboard } = useContractData()
+  const { timeLockedDashboard } = useThegraph()
 
   return (
     <ROOT direction="row" spacing={2}>
       <CardItem
         title={t('Card.totalValueLocked')}
-        value={<NumberDisplay value={dashboard.totalValueLockedInUSD} options="USD" />}
+        value={<NumberDisplay value={timeLockedDashboard.TVL} options="USD" />}
         icon={<Image src={LockTwoTone} alt="icon" />}
       />
       <CardItem
         title={t('Card.totalLockedNFT')}
-        value={<NumberDisplay value={dashboard.totalValueLockedInUSD} options="number" />}
+        value={<NumberDisplay value={timeLockedDashboard.totalLocked} options="number" />}
         icon={<Image src={TokenTwoTone} alt="icon" />}
       />
       <CardItem
         title={t('Card.userLockedNFT')}
-        value={<NumberDisplay value={dashboard.totalValueLockedInUSD} options="number" />}
+        value={<NumberDisplay value={timeLockedDashboard.userLocked} options="number" />}
         icon={<Image src={LockClockTwoTone} alt="icon" />}
       />
       <CardItem
         title={t('Card.estmatedRewards')}
-        value={<NumberDisplay value={dashboard.totalValueLockedInUSD} options="number" />}
+        value={<NumberDisplay value={timeLockedDashboard.estmatedRewards} options="USD" />}
         icon={<Image src={RewardTwoTone} alt="icon" />}
       />
     </ROOT>

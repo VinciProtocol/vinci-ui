@@ -6,16 +6,17 @@ import { useRouter } from 'next/router'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import TableCell from '@mui/material/TableCell'
-import { useDialogs, useContractData } from 'domains'
+import { useDialogs, useThegraph } from 'domains'
 
 import type { TableColumnsProps, BasicTableProps } from 'lib/table/BasicTable/types'
 import { useWallet } from 'app/wallet'
 import {
   leftHeaderRenderer,
   headerRenderer,
-  cellRenderer,
   collectionCellRenderer,
   collectionHeaderRenderer,
+  USDCellRenderer,
+  cellRenderer,
 } from 'components/Table'
 
 export const useTable = (): BasicTableProps => {
@@ -24,7 +25,7 @@ export const useTable = (): BasicTableProps => {
   const { account } = useWallet()
 
   const { actions } = useDialogs()
-  const { nftAssets } = useContractData()
+  const { nftAssetsTimeLocked } = useThegraph()
 
   const FunctionButtonsCellRenderer: TableCellRenderer = useCallback(
     ({ rowData }) => {
@@ -67,7 +68,7 @@ export const useTable = (): BasicTableProps => {
             dataKey: 'TVL',
             width: 200,
             headerRenderer,
-            cellRenderer,
+            cellRenderer: USDCellRenderer,
           },
           {
             dataKey: 'totalLockedNFT',
@@ -85,7 +86,7 @@ export const useTable = (): BasicTableProps => {
             dataKey: 'estmatedRewards',
             width: 200,
             headerRenderer,
-            cellRenderer,
+            cellRenderer: USDCellRenderer,
           },
           {
             dataKey: 'functionButtons',
@@ -122,7 +123,7 @@ export const useTable = (): BasicTableProps => {
 
   return {
     columns,
-    data: nftAssets,
+    data: nftAssetsTimeLocked,
     tableProps,
   }
 }

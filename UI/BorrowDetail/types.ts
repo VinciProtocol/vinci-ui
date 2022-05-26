@@ -4,4 +4,9 @@ export type NFT = {
   src: string
   description?: string
   image?: string
+  lock: {
+    createTime: number
+    expiration: number
+    lockType: number
+  }
 }

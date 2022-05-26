@@ -5,6 +5,7 @@ import { createContext } from 'utils/createContext'
 import { useContractData } from 'domains'
 import { useNFTInfo } from './application/NFTInfo'
 import { log } from 'utils/dev'
+import { safeGet } from 'utils/get'
 
 const NFTRouterPath = ['/borrow/[id]', '/nft-lockdrop/[id]']
 
@@ -20,6 +21,7 @@ const useContractNFTService = () => {
     const nft = nftAssets.find((nft) => nft.underlyingAsset === (router.query.id as any))
     if (!nft) return defaultValue
     const data = generalAssets.filter((generalAsset) => generalAsset.collection === nft.collection)
+
     const returnValue = {
       ...nft,
       data,
@@ -44,13 +46,38 @@ const useContractNFTService = () => {
 
   const userNFTInfo = useNFTInfo(nft.userNFTVault)
   const userNFT = useMemo(() => {
-    if (!nft.underlyingAsset || !userNFTInfo) return { data: [] } as undefined
+    if (!nft.underlyingAsset || !userNFTInfo || !nft.userNFTVault) return { data: [], lockedData: [] } as undefined
+
+    const nftLocksMap = (nft.userNFTVault.tokenIds as any[]).reduce((obj, tokenId, index) => {
+      obj[tokenId] = {
+        ...nft.userNFTVault.locks[index],
+      }
+      return obj
+    }, {} as any)
+
+    const data = userNFTInfo
+      .filter((info) => !safeGet(() => nftLocksMap[info.id].expiration))
+      .map((info) => {
+        return {
+          ...info,
+          currentFloorPrice: nft.currentFloorPrice,
+        }
+      })
+    const lockedData = userNFTInfo
+      .filter((info) => safeGet(() => nftLocksMap[info.id].expiration))
+      .map((info) => {
+        return {
+          ...info,
+          currentFloorPrice: nft.currentFloorPrice,
+          lock: nftLocksMap[info.id],
+        }
+      })
+
     const returnValue = {
-      data: userNFTInfo.map((info) => ({
-        ...info,
-        currentFloorPrice: nft.currentFloorPrice,
-      })),
-      totalValuation: nft.currentFloorPrice.multipliedBy(userNFTInfo.length),
+      data,
+      lockedData,
+      totalValuation: nft.currentFloorPrice.multipliedBy(data.length),
+      totalValuationLocked: nft.currentFloorPrice.multipliedBy(lockedData.length),
     }
     log('[domains] [userNFT]', returnValue)
     return returnValue

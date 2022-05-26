@@ -35,6 +35,8 @@ const WalletTabpanel = withTabPanel(
     } = useContractNFT()
     const {
       reservesData,
+      nftTokenCountTablesController,
+      nftTokenTimeLockedTablesController,
       lendingPool: { depositAndLockNFT },
       erc721: { setApprovalForAll, isApprovedForAll },
     } = useControllers()
@@ -47,7 +49,7 @@ const WalletTabpanel = withTabPanel(
     }, [])
     const valuation = useMemo(() => t('nft-lockdrop-deposit:tabs.valuation'), [t])
     const action = {
-      name: 'Deposit',
+      name: 'Lock',
       onClick: (id: any) => {
         const nft = data.find((item) => item.id === id)
         setLockNFTs([
@@ -75,6 +77,8 @@ const WalletTabpanel = withTabPanel(
         })
         .then(() => {
           reservesData.restart()
+          nftTokenCountTablesController.restart()
+          nftTokenTimeLockedTablesController.restart()
           setRef.current.clear()
           setDisabled(true)
           setSize(0)

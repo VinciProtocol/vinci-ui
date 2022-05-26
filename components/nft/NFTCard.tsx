@@ -11,9 +11,14 @@ import Checkbox from '@mui/material/Checkbox'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
+import Stack from '@mui/material/Stack'
+import LockClockSharpIcon from '@mui/icons-material/LockClockSharp'
+
 import type { NFT } from 'UI/BorrowDetail/types'
 import NumberDisplay from 'components/math/NumberDisplay'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
+import { valueToBigNumber } from 'utils/math'
+import { useTheme } from '@mui/system'
 
 export type NFTCardProps = Partial<
   NFT & {
@@ -24,7 +29,16 @@ export type NFTCardProps = Partial<
   }
 >
 
-const NFTCard: FC<NFTCardProps> = ({ id, description, image, action, currentFloorPrice, onCheckChange, valuation }) => {
+const NFTCard: FC<NFTCardProps> = ({
+  id,
+  description,
+  image,
+  action,
+  currentFloorPrice,
+  onCheckChange,
+  valuation,
+  lock,
+}) => {
   const Root = useMemoEmpty(
     () =>
       styled(Card)`
@@ -39,18 +53,25 @@ const NFTCard: FC<NFTCardProps> = ({ id, description, image, action, currentFloo
   )
   const { t } = useTranslation()
   const [checked, setChecked] = useState(false)
-  const displayCheckBox = useMemo(() => !!onCheckChange, [onCheckChange])
   const title = useMemo(() => (id ? `${description} #${id}` : description), [description, id])
+  const isLocked = useMemo(() => {
+    const now = Date.now()
+    return lock && lock.expiration > now
+  }, [lock])
+  const displayCheckBox = useMemo(() => !!onCheckChange && !isLocked, [isLocked, onCheckChange])
   const actions = useMemo(() => {
     if (!action) return null
     const { tip, disabled, onClick, name } = action
     if (tip) return tip
+
+    if (isLocked) return <LockCountdown lock={lock} />
+
     return (
       <Button variant="outlined" disabled={disabled} onClick={() => onClick(id)}>
         {name}
       </Button>
     )
-  }, [action, id])
+  }, [action, id, isLocked, lock])
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.checked
@@ -86,6 +107,41 @@ const NFTCard: FC<NFTCardProps> = ({ id, description, image, action, currentFloo
         {actions}
       </CardActions>
     </Root>
+  )
+}
+
+const HOVER = 1000 * 60 * 60
+const DAY = HOVER * 24
+const LockCountdown: FC<Pick<NFTCardProps, 'lock'>> = ({ lock }) => {
+  const now = Date.now()
+  const { t } = useTranslation()
+  const theme = useTheme()
+  const timeInterval = valueToBigNumber(lock.expiration - now)
+  let time = timeInterval.div(DAY)
+  const days = Math.floor(time.toNumber()) || 0
+  time = time.minus(days).multipliedBy(DAY).div(HOVER)
+  const hovers = Math.floor(time.toNumber()) || 0
+  return (
+    <Stack spacing={2} direction="row" sx={{ alignItems: 'center' }}>
+      <LockClockSharpIcon sx={{ fontSize: '30px', color: theme.palette.primary.main }} />
+      <Stack spacing={0}>
+        <Typography component="div" variant="caption" color="text.secondary">
+          {t('nft-lockdrop-deposit:tabs.lockedNFT.lockTimeLeft.title')}
+        </Typography>
+        <Typography variant="body1" component="div" sx={{ fontWeight: 'bold' }}>
+          <Stack spacing={2} direction="row">
+            <Stack spacing={1} direction="row">
+              <span>{days}</span>
+              <span>{t('nft-lockdrop-deposit:tabs.lockedNFT.lockTimeLeft.days')}</span>
+            </Stack>
+            <Stack spacing={1} direction="row">
+              <span>{hovers}</span>
+              <span>{t('nft-lockdrop-deposit:tabs.lockedNFT.lockTimeLeft.hovers')}</span>
+            </Stack>
+          </Stack>
+        </Typography>
+      </Stack>
+    </Stack>
   )
 }
 

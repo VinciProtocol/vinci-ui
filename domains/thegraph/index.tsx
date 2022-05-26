@@ -1,8 +1,8 @@
 import type { FC } from 'react'
+import { useMemo } from 'react'
 import { flattenDeep } from 'lodash'
 
 import { createContext } from 'utils/createContext'
-import { useMemoLazy } from 'app/hooks/useMemoLazy'
 import { log } from 'utils/dev'
 
 import { useCountTables } from 'store/thegraph/nftToken/countTables/hooks'
@@ -34,10 +34,6 @@ export const lockTypeList = [
       type: '5',
       days: '240',
     },
-    {
-      type: '6',
-      days: '360',
-    },
   ],
 ]
 
@@ -51,8 +47,8 @@ const useThegraphService = () => {
   const timeLockedTables = useTimeLockedTables()
   const { nftAssets } = useContractData()
 
-  const timeLockedDashboard = useMemoLazy(() => {
-    if (!nftAssets[0]) return {} as undefined
+  const { timeLockedDashboard, nftAssetsTimeLocked } = useMemo(() => {
+    if (!nftAssets[0]) return { timeLockedDashboard: {}, nftAssetsTimeLocked: [] } as undefined
     const { currentFloorPriceInUSD } = nftAssets[0]
     const timeLockedCount: any = {
       total: countTables['TimeLocked_total'] || 0,
@@ -81,19 +77,29 @@ const useThegraphService = () => {
       }
     }
 
-    const returnValue = {
-      totalLocked,
+    const timeLockedDashboard = {
+      totalLocked: totalLocked.toString(),
       TVL,
-      userLocked,
+      userLocked: userLocked.toString(),
       estmatedRewards,
-      totalDays,
+      totalDays: totalDays.toString(),
     }
 
-    log('[domains] [timeLockedDashboard]', returnValue)
+    const nftAssetsTimeLocked = [
+      {
+        ...nftAssets[0],
+        ...timeLockedDashboard,
+        totalLockedNFT: timeLockedDashboard.totalLocked,
+      },
+    ]
+
+    const returnValue = { timeLockedDashboard, nftAssetsTimeLocked }
+
+    log('[domains] [timeLocked]', returnValue)
     return returnValue
   }, [countTables, timeLockedTables, nftAssets])
 
-  return { timeLockedDashboard }
+  return { timeLockedDashboard, nftAssetsTimeLocked }
 }
 
 export type Thegraph = ReturnType<typeof useThegraphService>
