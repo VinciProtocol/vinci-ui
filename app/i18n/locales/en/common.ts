@@ -36,7 +36,7 @@ const locale = {
       term: 'Vinci’s Terms of Service',
     },
     chain: {
-      title: 'Select You Network',
+      title: 'Select Your Network',
       subTitle: 'Your current network: ',
       error: 'Unsupported network',
     },
