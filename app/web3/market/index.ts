@@ -12,7 +12,7 @@ import type { MarketData, NFTSetting } from './types'
 
 const list: Record<ChainId, typeof vinci> = {
   [ChainId.ethereum]: {
-    vinciNFTProvider: '',
+    vinciNFTProvider: '0x12483993167f6e652fd59cd173a495da0b80bdf2',
   },
   [ChainId.kovan]: kovan,
   [ChainId.bsct]: bsctestnet,
