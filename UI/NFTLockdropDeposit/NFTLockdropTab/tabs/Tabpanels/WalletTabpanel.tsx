@@ -16,6 +16,8 @@ import { RESPONSIVE_DESIGN } from 'styles/constants'
 import NFTCard from 'components/nft/NFTCard'
 import NumberDisplay from 'components/math/NumberDisplay'
 
+import LockNFTDialog from './LockNFTDialog'
+
 const WalletTabpanel = withTabPanel(
   (props) => {
     const { t } = useTranslation()
@@ -38,21 +40,45 @@ const WalletTabpanel = withTabPanel(
     } = useControllers()
     const { account } = useWallet()
 
+    const [visible, setVisible] = useState(false)
+    const [lockNFTs, setLockNFTs] = useState<any[]>([])
+    const close = useCallback(() => {
+      setVisible(false)
+    }, [])
+    const valuation = useMemo(() => t('nft-lockdrop-deposit:tabs.valuation'), [t])
     const action = {
       name: 'Deposit',
-      onClick: (id: any) =>
-        depositAndLockNFT
-          .post({
-            lendingPoolAddress,
-            user: account,
-            nft: underlyingAsset,
-            tokenIds: [id],
-            amounts: ['1'],
-            lockType: '1',
-          })
-          .then(() => {
-            reservesData.restart()
-          }),
+      onClick: (id: any) => {
+        const nft = data.find((item) => item.id === id)
+        setLockNFTs([
+          {
+            ...nft,
+            valuation,
+          },
+        ])
+        setVisible(true)
+      },
+    }
+    const setRef = useRef<Set<string>>(new Set())
+    const onClick = (type: string) => {
+      close()
+      const tokenIds = lockNFTs.map((item) => item.id)
+      const amounts = tokenIds.map(() => '1')
+      return depositAndLockNFT
+        .post({
+          lendingPoolAddress,
+          user: account,
+          nft: underlyingAsset,
+          tokenIds,
+          amounts,
+          lockType: type,
+        })
+        .then(() => {
+          reservesData.restart()
+          setRef.current.clear()
+          setDisabled(true)
+          setSize(0)
+        })
     }
 
     const tabs = useMemo(() => {
@@ -66,7 +92,6 @@ const WalletTabpanel = withTabPanel(
       return t
     }, [data])
 
-    const setRef = useRef<Set<string>>(new Set())
     const [size, setSize] = useState(0)
     const [disabled, setDisabled] = useState(false)
     const onCheckChange = useCallback((id: string, value: boolean) => {
@@ -129,26 +154,18 @@ const WalletTabpanel = withTabPanel(
               disabled={!size}
               onClick={() => {
                 const s = setRef.current
-                depositAndLockNFT
-                  .post({
-                    lendingPoolAddress,
-                    user: account,
-                    nft: underlyingAsset,
-                    tokenIds: Array.from(s.values()),
-                    lockType: '1',
-                    amounts: (() => {
-                      const list = []
-                      for (let i = 0; i < s.size; i++) {
-                        list.push('1')
-                      }
-                      return list
-                    })(),
+                const ids = Array.from(s.values())
+                const lockNFTs: any[] = []
+                ids.forEach((id) => {
+                  const nft = data.find((item) => item.id === id)
+                  lockNFTs.push({
+                    ...nft,
+                    valuation,
                   })
-                  .then(() => {
-                    s.clear()
-                    setDisabled(true)
-                    setSize(0)
-                  })
+                })
+
+                setLockNFTs(lockNFTs)
+                setVisible(true)
               }}
             >
               {t('nft-lockdrop-deposit:tabs.depositSelected')}
@@ -159,16 +176,16 @@ const WalletTabpanel = withTabPanel(
       [
         account,
         approveAllDisabled,
-        depositAndLockNFT,
+        data,
         lendingPoolAddress,
         setApprovalForAll,
         size,
         t,
         totalValuation,
         underlyingAsset,
+        valuation,
       ]
     )
-    const valuation = useMemo(() => t('nft-lockdrop-deposit:tabs.valuation'), [t])
 
     return (
       <TabPanel>
@@ -204,6 +221,7 @@ const WalletTabpanel = withTabPanel(
             {!data.length && <NoData />}
           </Stack>
         </Stack>
+        <LockNFTDialog nfts={lockNFTs} visible={visible} close={close} onClick={onClick} />
       </TabPanel>
     )
   },

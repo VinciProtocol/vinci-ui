@@ -6,8 +6,8 @@ import { styled } from '@mui/material/styles'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
-import Checkbox from '@mui/material/Checkbox'
 import CardMedia from '@mui/material/CardMedia'
+import Checkbox from '@mui/material/Checkbox'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
@@ -15,7 +15,7 @@ import type { NFT } from 'UI/BorrowDetail/types'
 import NumberDisplay from 'components/math/NumberDisplay'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 
-type NFTCardProps = Partial<
+export type NFTCardProps = Partial<
   NFT & {
     action: { name: string; onClick: any; disabled?: boolean; tip?: any }
     currentFloorPrice: string
