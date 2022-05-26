@@ -11,7 +11,9 @@ import { getNFTInfo } from './NFTConfig'
 import type { MarketData, NFTSetting } from './types'
 
 const list: Record<ChainId, typeof vinci> = {
-  [ChainId.ethereum]: {},
+  [ChainId.ethereum]: {
+    vinciNFTProvider: '',
+  },
   [ChainId.kovan]: kovan,
   [ChainId.bsct]: bsctestnet,
   [ChainId.bsc]: bscmainnet,
@@ -59,7 +61,7 @@ export const getMarketsData = (chainId: ChainId): MarketData => {
   }
 }
 
-export const defaultMarket = getMarketsData(ChainId.vinci)
+export const defaultMarket = getMarketsData(ChainId.ethereum)
 
 const getNFTS = () => {
   return {

@@ -1,8 +1,15 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
+import { useWallet } from 'app/wallet'
+import { ChainId } from 'app/web3/chain/types'
 
 const MenuList = [
+  {
+    key: 'App',
+    linkTo: '/',
+    hide: true,
+  },
   {
     key: 'Lend',
     linkTo: '/lend',
@@ -43,10 +50,17 @@ const MenuList = [
 export function useMenu() {
   const { t } = useTranslation()
   const router = useRouter()
+  const { chainId } = useWallet()
 
-  const menuList = useMemo(() => MenuList.map((menu) => ({ ...menu, label: t('router:menu.' + menu.key) })), [t])
+  const menuList = useMemo(() => {
+    return MenuList.filter((menu) => {
+      if (chainId !== ChainId.ethereum) return true
+      return menu.key === 'NFTAirdrop' || menu.key === 'App'
+    }).map((menu) => ({ ...menu, label: t('router:menu.' + menu.key) }))
+  }, [chainId, t])
+
   const currentMenu = useMemo(() => {
-    const linkTo = router.route === '/' ? '/lend' : router.route
+    const linkTo = router.route
     return menuList.find((item) => item.linkTo === linkTo) || ({} as undefined)
   }, [menuList, router.route])
 

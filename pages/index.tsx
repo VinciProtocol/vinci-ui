@@ -1,17 +1,18 @@
 import type { GetStaticProps, NextPage } from 'next'
+
 import Layout from 'UI/Layout'
-import Lend from 'UI/Lend'
+import NFTAirdrop from 'UI/NFTAirdrop'
 
 import { withStaticTranslations } from 'app/i18n/hoc'
 
 export const getStaticProps: GetStaticProps = withStaticTranslations((props) => ({ props }), {
-  namespaces: ['lend'],
+  namespaces: ['nft-airdrop'],
 })
 
 const Page: NextPage = () => {
   return (
     <Layout title="App">
-      <Lend />
+      <NFTAirdrop />
     </Layout>
   )
 }
