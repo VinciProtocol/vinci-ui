@@ -25,6 +25,7 @@ import claimableNFT from 'lib/protocol/vinci-claimable-nft/fe.json'
 
 import { useEligibilityResult } from './useEligibilityResult'
 import NFTImage from './images/vinci NFT.jpg'
+import { useWallet } from 'app/wallet'
 
 const list: any = claimableNFT
 
@@ -92,14 +93,24 @@ const Eligibility: FC<{ account: string }> = ({ account }) => {
       }
     )
   }, [account, sendTransaction, vinciNFT.contract])
+  const { account: walletAccount } = useWallet()
 
   const action = useMemo(() => {
+    if (account !== walletAccount) {
+      return {
+        tip: (
+          <Typography variant="subtitle1" color="primary">
+            {t('eligible.NFT.actions.tip.switchAccount')}
+          </Typography>
+        ),
+      }
+    }
     return {
       onClick,
       name: t('eligible.NFT.actions.' + (!hasClaimed ? 'claim' : 'claimed')),
       disabled: hasClaimed || loading,
     }
-  }, [hasClaimed, loading, onClick, t])
+  }, [account, hasClaimed, loading, onClick, t, walletAccount])
   useEffect(() => {
     if (!vinciNFT.contract || !account) return
     vinciNFT.contract.hasClaimed(account).then((data) => setHasClaimed(data))

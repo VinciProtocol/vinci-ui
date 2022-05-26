@@ -22,7 +22,7 @@ import { useTheme } from '@mui/system'
 
 export type NFTCardProps = Partial<
   NFT & {
-    action: { name: string; onClick: any; disabled?: boolean; tip?: any }
+    action: { name?: string; onClick?: any; disabled?: boolean; tip?: any }
     currentFloorPrice: string
     valuation: string
     onCheckChange: any

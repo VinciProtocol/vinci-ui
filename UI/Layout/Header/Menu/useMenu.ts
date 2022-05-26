@@ -54,8 +54,13 @@ export function useMenu() {
 
   const menuList = useMemo(() => {
     return MenuList.filter((menu) => {
-      if (chainId !== ChainId.ethereum) return true
-      return menu.key === 'NFTAirdrop' || menu.key === 'App'
+      if (chainId === ChainId.ethereum) {
+        return menu.key === 'NFTAirdrop' || menu.key === 'App'
+      }
+      if (chainId === ChainId.kovan || chainId === ChainId.bsc) {
+        return menu.key !== 'NFTLockdrop' && menu.key !== 'NFTAirdrop'
+      }
+      return true
     }).map((menu) => ({ ...menu, label: t('router:menu.' + menu.key) }))
   }, [chainId, t])
 
