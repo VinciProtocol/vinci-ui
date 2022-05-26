@@ -6,6 +6,11 @@
       "noData": {
         "tip": "คุณไม่มีหลักประกัน NFT",
         "btn": "ฝาก NFT บางส่วนตอนนี้"
+      },
+      "lockTimeLeft": {
+        "title": "ล็อคเวลาที่เหลือ",
+        "days": "วัน",
+        "hovers": "hovers"
       }
     },
     "wallet": {
@@ -20,5 +25,24 @@
     "approveAll": "อนุมัติทั้งหมด",
     "depositSelected": "เงินฝากที่เลือก",
     "withdrawSelected": "ถอนที่เลือก"
+  },
+  "LockNFTDialog": {
+    "title": "ล็อค NFT . ของคุณ",
+    "chooseLockTime": {
+      "title": "เลือกเวลาล็อค",
+      "days": "DAYS"
+    },
+    "estimatedRewards": {
+      "title": "รางวัลโดยประมาณ",
+      "warn": [
+        null,
+        "ขณะนี้เราได้รับคำขออนุญาตพิเศษจำนวนมากอย่างน่าประหลาดใจ",
+        "หากคุณทำภารกิจเสร็จแล้วแต่ไม่สามารถรับรางวัลแอร์ดรอปได้ โปรดอดทนรอ"
+      ]
+    },
+    "actions": {
+      "cancel": "ยกเลิก",
+      "deposit": "ล็อค"
+    }
   }
 }

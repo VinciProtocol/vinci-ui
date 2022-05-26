@@ -6,6 +6,11 @@
       "noData": {
         "tip": "Non hai garanzie NFT.",
         "btn": "Deposita alcuni NFT ora"
+      },
+      "lockTimeLeft": {
+        "title": "Tempo di blocco rimasto",
+        "days": "giorni",
+        "hovers": "aleggia"
       }
     },
     "wallet": {
@@ -20,5 +25,24 @@
     "approveAll": "Approva tutto",
     "depositSelected": "Deposito selezionato",
     "withdrawSelected": "Ritiro selezionato"
+  },
+  "LockNFTDialog": {
+    "title": "Blocca il tuo NFT",
+    "chooseLockTime": {
+      "title": "Scegli Ora di blocco",
+      "days": "GIORNI"
+    },
+    "estimatedRewards": {
+      "title": "Premi stimati",
+      "warn": [
+        null,
+        "Ora stiamo ricevendo una quantità sorprendente di richieste di whitelist.",
+        "Se hai completato le attività ma non hai potuto richiedere il premio airdrop, sii paziente."
+      ]
+    },
+    "actions": {
+      "cancel": "Annulla",
+      "deposit": "Serratura"
+    }
   }
 }

@@ -6,6 +6,11 @@
       "noData": {
         "tip": "Bạn không có bất kỳ tài sản thế chấp NFT nào.",
         "btn": "Gửi một số NFT ngay bây giờ"
+      },
+      "lockTimeLeft": {
+        "title": "Khóa thời gian còn lại",
+        "days": "ngày",
+        "hovers": "bay lượn"
       }
     },
     "wallet": {
@@ -20,5 +25,24 @@
     "approveAll": "Phê duyệt tất cả",
     "depositSelected": "Gửi tiền đã chọn",
     "withdrawSelected": "Rút tiền đã chọn"
+  },
+  "LockNFTDialog": {
+    "title": "Khóa NFT của bạn",
+    "chooseLockTime": {
+      "title": "Chọn thời gian khóa",
+      "days": "NGÀY"
+    },
+    "estimatedRewards": {
+      "title": "Phần thưởng ước tính",
+      "warn": [
+        null,
+        "Chúng tôi hiện đang nhận được một lượng lớn yêu cầu danh sách trắng đáng ngạc nhiên.",
+        "Nếu bạn đã hoàn thành nhiệm vụ nhưng không thể nhận phần thưởng airdrop, hãy kiên nhẫn."
+      ]
+    },
+    "actions": {
+      "cancel": "Hủy bỏ",
+      "deposit": "Khóa"
+    }
   }
 }

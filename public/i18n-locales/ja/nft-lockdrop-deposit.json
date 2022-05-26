@@ -6,6 +6,11 @@
       "noData": {
         "tip": "NFT担保はありません。",
         "btn": "今すぐいくつかのNFTをデポジットする"
+      },
+      "lockTimeLeft": {
+        "title": "残りのロック時間",
+        "days": "日々",
+        "hovers": "ホバー"
       }
     },
     "wallet": {
@@ -18,7 +23,26 @@
     "totalValuation": "総評価：",
     "valuation": "評価",
     "approveAll": "すべて承認する",
-    "depositSelected": "選択された預金",
+    "depositSelected": "選択したデポジット",
     "withdrawSelected": "選択した撤回"
+  },
+  "LockNFTDialog": {
+    "title": "NFTをロックする",
+    "chooseLockTime": {
+      "title": "ロック時間を選択します",
+      "days": "日々"
+    },
+    "estimatedRewards": {
+      "title": "推定報酬",
+      "warn": [
+        null,
+        "現在、驚くほど多くのホワイトリストリクエストを受け取っています。",
+        "タスクを完了したが、エアドロップ報酬を請求できなかった場合は、しばらくお待ちください。"
+      ]
+    },
+    "actions": {
+      "cancel": "キャンセル",
+      "deposit": "ロック"
+    }
   }
 }

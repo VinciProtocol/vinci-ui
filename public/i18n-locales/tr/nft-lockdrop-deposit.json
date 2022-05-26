@@ -6,6 +6,11 @@
       "noData": {
         "tip": "Herhangi bir NFT teminatınız yok.",
         "btn": "Şimdi bazı NFT'leri yatırın"
+      },
+      "lockTimeLeft": {
+        "title": "Kilit Süresi Sola",
+        "days": "günler",
+        "hovers": "havada asılı"
       }
     },
     "wallet": {
@@ -20,5 +25,24 @@
     "approveAll": "Tümünü Onayla",
     "depositSelected": "Depozito Seçildi",
     "withdrawSelected": "Seçileni Geri Çek"
+  },
+  "LockNFTDialog": {
+    "title": "NFT'nizi Kilitleyin",
+    "chooseLockTime": {
+      "title": "Kilit Süresini Seçin",
+      "days": "GÜNLER"
+    },
+    "estimatedRewards": {
+      "title": "Tahmini Ödüller",
+      "warn": [
+        null,
+        "Şu anda şaşırtıcı miktarda beyaz liste isteği alıyoruz.",
+        "Görevleri tamamladıysanız ancak airdrop ödülünü alamadıysanız lütfen sabırlı olun."
+      ]
+    },
+    "actions": {
+      "cancel": "İptal etmek",
+      "deposit": "Kilit"
+    }
   }
 }

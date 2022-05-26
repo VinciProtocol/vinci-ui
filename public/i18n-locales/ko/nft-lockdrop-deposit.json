@@ -4,8 +4,13 @@
     "lockedNFT": {
       "title": "잠긴 NFT",
       "noData": {
-        "tip": "NFT 담보가 없습니다.",
+        "tip": "NFT 담보물이 없습니다.",
         "btn": "지금 NFT를 입금하세요"
+      },
+      "lockTimeLeft": {
+        "title": "잠금 시간 남음",
+        "days": "날",
+        "hovers": "호버링"
       }
     },
     "wallet": {
@@ -20,5 +25,24 @@
     "approveAll": "모두 승인",
     "depositSelected": "선택한 예금",
     "withdrawSelected": "선택 취소"
+  },
+  "LockNFTDialog": {
+    "title": "NFT 잠금",
+    "chooseLockTime": {
+      "title": "잠금 시간 선택",
+      "days": "날"
+    },
+    "estimatedRewards": {
+      "title": "예상 보상",
+      "warn": [
+        null,
+        "현재 놀라운 양의 화이트리스트 요청을 받고 있습니다.",
+        "작업을 완료했지만 에어드랍 보상을 받을 수 없다면 기다려주세요."
+      ]
+    },
+    "actions": {
+      "cancel": "취소",
+      "deposit": "잠그다"
+    }
   }
 }

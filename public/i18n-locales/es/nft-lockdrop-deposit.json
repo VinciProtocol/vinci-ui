@@ -6,6 +6,11 @@
       "noData": {
         "tip": "No tienes ninguna garantía NFT.",
         "btn": "Deposite algunos NFT ahora"
+      },
+      "lockTimeLeft": {
+        "title": "Tiempo restante de bloqueo",
+        "days": "dias",
+        "hovers": "se cierne"
       }
     },
     "wallet": {
@@ -20,5 +25,24 @@
     "approveAll": "Aprobar todo",
     "depositSelected": "Depósito seleccionado",
     "withdrawSelected": "Retirar seleccionados"
+  },
+  "LockNFTDialog": {
+    "title": "Bloquee su NFT",
+    "chooseLockTime": {
+      "title": "Elija el tiempo de bloqueo",
+      "days": "DIAS"
+    },
+    "estimatedRewards": {
+      "title": "Recompensas estimadas",
+      "warn": [
+        null,
+        "Ahora estamos recibiendo una sorprendente cantidad de solicitudes de lista blanca.",
+        "Si ha terminado las tareas pero no pudo reclamar la recompensa del lanzamiento aéreo, tenga paciencia."
+      ]
+    },
+    "actions": {
+      "cancel": "Cancelar",
+      "deposit": "Cerrar con llave"
+    }
   }
 }

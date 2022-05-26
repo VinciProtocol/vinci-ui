@@ -6,6 +6,11 @@
       "noData": {
         "tip": "你没有任何 NFT 抵押品。",
         "btn": "立即存入一些 NFT"
+      },
+      "lockTimeLeft": {
+        "title": "剩余锁定时间",
+        "days": "天",
+        "hovers": "悬停"
       }
     },
     "wallet": {
@@ -20,5 +25,24 @@
     "approveAll": "全部批准",
     "depositSelected": "已选择存款",
     "withdrawSelected": "撤回所选"
+  },
+  "LockNFTDialog": {
+    "title": "锁定你的 NFT",
+    "chooseLockTime": {
+      "title": "选择锁定时间",
+      "days": "天"
+    },
+    "estimatedRewards": {
+      "title": "预计奖励",
+      "warn": [
+        null,
+        "我们现在收到数量惊人的白名单请求。",
+        "如果您已完成任务但无法领取空投奖励，请耐心等待。"
+      ]
+    },
+    "actions": {
+      "cancel": "取消",
+      "deposit": "锁"
+    }
   }
 }

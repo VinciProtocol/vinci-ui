@@ -6,6 +6,11 @@
       "noData": {
         "tip": "Sie haben keine NFT-Sicherheiten.",
         "btn": "Zahlen Sie jetzt einige NFTs ein"
+      },
+      "lockTimeLeft": {
+        "title": "Verbleibende Sperrzeit",
+        "days": "Tage",
+        "hovers": "schwebt"
       }
     },
     "wallet": {
@@ -20,5 +25,24 @@
     "approveAll": "Alle genehmigen",
     "depositSelected": "Anzahlung ausgewählt",
     "withdrawSelected": "Ausgewählte zurückziehen"
+  },
+  "LockNFTDialog": {
+    "title": "Sperren Sie Ihr NFT",
+    "chooseLockTime": {
+      "title": "Wählen Sie Sperrzeit",
+      "days": "TAGE"
+    },
+    "estimatedRewards": {
+      "title": "Geschätzte Belohnungen",
+      "warn": [
+        null,
+        "Wir erhalten jetzt überraschend viele Whitelist-Anfragen.",
+        "Wenn Sie die Aufgaben abgeschlossen haben, aber die Airdrop-Belohnung nicht beanspruchen konnten, haben Sie bitte etwas Geduld."
+      ]
+    },
+    "actions": {
+      "cancel": "Absagen",
+      "deposit": "Sperren"
+    }
   }
 }
