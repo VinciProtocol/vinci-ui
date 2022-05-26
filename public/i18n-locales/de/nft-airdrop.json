@@ -19,10 +19,10 @@
     "title": "Wird geladen"
   },
   "notEligible": {
-    "title": "Tut mir leid, Sie sind für diese Airdrop-Runde nicht berechtigt.",
+    "title": "Tut mir leid, Sie sind derzeit nicht für Vinci NFT berechtigt.",
     "subTitle": [
       null,
-      "Mach dir keine Sorgen! In Zukunft wird es noch mehr Airdrops geben.",
+      "Bitte lesen Sie die Zulassungskriterien sorgfältig durch.",
       "Der beste Weg, um Ihre Chancen zu verbessern, ist, sich zu engagieren."
     ],
     "warn": [
@@ -59,7 +59,7 @@
     "address": "die Anschrift",
     "helperText": "Ungültige Adresse",
     "actions": {
-      "checkEligibilty": "Überprüfen Sie die Berechtigung",
+      "checkEligibilty": "Berechtigung prüfen",
       "cancel": "Absagen"
     }
   }

@@ -19,16 +19,16 @@
     "title": "Cargando"
   },
   "notEligible": {
-    "title": "Lo sentimos, no eres elegible para esta ronda de airdrop.",
+    "title": "Lo sentimos, no es elegible para Vinci NFT ahora.",
     "subTitle": [
       null,
-      "¡No te preocupes! Habrá más airdrops en el futuro.",
+      "Lea atentamente los Criterios de elegibilidad.",
       "La mejor manera de mejorar sus probabilidades es involucrarse."
     ],
     "warn": [
       null,
       "Ahora estamos recibiendo una sorprendente cantidad de solicitudes de lista blanca.",
-      "Si completó las tareas pero no pudo reclamar la recompensa de airdrop, tenga paciencia para ser incluido en la lista blanca."
+      "Si completó las tareas pero no pudo reclamar la recompensa del lanzamiento aéreo, tenga paciencia para ser incluido en la lista blanca."
     ],
     "actions": {
       "switchAccount": "Comprobar otra dirección",
