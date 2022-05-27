@@ -182,7 +182,7 @@ const NotEligibility: FC<{ account: string; setInputAccount: any }> = ({ account
     setOpen(false)
   }, [])
   const handleSwitchAccount = useCallback(() => {
-    if (!input.startsWith('0x') || input.length < 40) {
+    if (!input.startsWith('0x') || input.length !== 42) {
       setHelperText(t('switchAccountDialog.helperText'))
       return
     }
