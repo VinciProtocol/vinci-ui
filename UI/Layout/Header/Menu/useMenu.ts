@@ -54,6 +54,7 @@ export function useMenu() {
 
   const menuList = useMemo(() => {
     return MenuList.filter((menu) => {
+      if (__DEV__) return true
       if (chainId === ChainId.ethereum) {
         return menu.key === 'NFTAirdrop' || menu.key === 'App'
       }
