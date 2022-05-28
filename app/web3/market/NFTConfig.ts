@@ -1,6 +1,8 @@
 import ape from './images/ape.jpg'
 import mutantApe from './images/mutant-ape.jpg'
 import pancakeSquad from './images/pancake-squad.jpg'
+import azuki from './images/azuki.jpg'
+import cloneX from './images/clonex.jpg'
 
 import opensea from './images/opensea.svg'
 import pancake from './images/pancake.svg'
@@ -35,18 +37,18 @@ export const getNFTInfo = (nftID: string) => {
       }
     case NFT_ID_4:
       return {
-        src: mutantApe.src,
+        src: cloneX.src,
         market: {
           logo: opensea,
-          url: 'https://opensea.io/collection/mutant-ape-yacht-club',
+          url: 'https://opensea.io/collection/clonex',
         },
       }
     case NFT_ID_5:
       return {
-        src: mutantApe.src,
+        src: azuki.src,
         market: {
           logo: opensea,
-          url: 'https://opensea.io/collection/mutant-ape-yacht-club',
+          url: 'https://opensea.io/collection/azuki',
         },
       }
     default:

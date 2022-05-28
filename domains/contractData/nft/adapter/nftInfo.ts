@@ -1,4 +1,4 @@
-import { NFT_ID_1, NFT_ID_2 } from 'app/web3/market'
+import { NFT_ID_1, NFT_ID_2, NFT_ID_3, NFT_ID_4, NFT_ID_5 } from 'app/web3/market'
 import type { MarketData } from 'app/web3/market/types'
 import { safeGet } from 'utils/get'
 
@@ -62,7 +62,7 @@ export const getNFTInfo = (props: NFTInfoProps): Promise<NFTInfo[]> => {
       )
     }
     return Promise.all(promises)
-  } else {
+  } else if (underlyingAsset === safeGet(() => market.nfts[NFT_ID_3].underlyingAsset)) {
     const promises = []
     for (let i = 0; i < tokenIds.length; i++) {
       const tokenId = tokenIds[i]
@@ -79,6 +79,24 @@ export const getNFTInfo = (props: NFTInfoProps): Promise<NFTInfo[]> => {
       )
     }
     return Promise.all(promises)
+  } else if (underlyingAsset === safeGet(() => market.nfts[NFT_ID_4].underlyingAsset)) {
+    return Promise.all(
+      tokenIds.map((tokenId) => ({
+        id: tokenId,
+        name: '#' + tokenId,
+        image: `https://clonex-assets.rtfkt.com/images/${tokenId}.png`,
+        description: 'Clone X',
+      }))
+    )
+  } else if (underlyingAsset === safeGet(() => market.nfts[NFT_ID_5].underlyingAsset)) {
+    return Promise.all(
+      tokenIds.map((tokenId) => ({
+        id: tokenId,
+        name: '#' + tokenId,
+        image: `https://ikzttp.mypinata.cloud/ipfs/QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/${tokenId}.png`,
+        description: 'Azuki',
+      }))
+    )
   }
 }
 
