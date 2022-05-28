@@ -23,6 +23,7 @@ const ChainDialogContent: FC = () => {
         <ChainButton chainId={ChainId.ethereum} />
         <ChainButton chainId={ChainId.bsc} />
         <ChainButton chainId={ChainId.kovan} />
+        {__DEV__ && <ChainButton chainId={ChainId.vinci} />}
       </Fragment>
     ),
     []
@@ -30,7 +31,9 @@ const ChainDialogContent: FC = () => {
 
   return (
     <DialogContent>
-      <Stack spacing={2} padding={2}>{buttons}</Stack>
+      <Stack spacing={2} padding={2}>
+        {buttons}
+      </Stack>
     </DialogContent>
   )
 }
