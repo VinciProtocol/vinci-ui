@@ -21,11 +21,11 @@ const list: Record<ChainId, typeof vinci> = {
   [ChainId.localhost]: localhost,
 } as any
 
-export const NFT_ID_1 = 'VinciBAYC'
-export const NFT_ID_2 = 'VinciMAYC'
-export const NFT_ID_3 = 'VinciPS'
-export const NFT_ID_4 = 'VinciMAYCNoBorrowing'
-export const NFT_ID_5 = 'VinciMAYCNoBorrowingExpired'
+export const NFT_ID_1 = 'BAYC'
+export const NFT_ID_2 = 'MAYC'
+export const NFT_ID_3 = 'PS'
+export const NFT_ID_4 = 'CloneX'
+export const NFT_ID_5 = 'MEKA'
 
 export const getMarketsData = (chainId: ChainId): MarketData => {
   const generateInfo = list[chainId]
@@ -39,38 +39,43 @@ export const getMarketsData = (chainId: ChainId): MarketData => {
       vinciNFTProvider: generateInfo.vinciNFTProvider,
       uiPoolDataProvider: generateInfo.UiPoolDataProvider,
     },
-    nfts: Object.keys(generateInfo.markets || {}).reduce((obj, nftID) => {
-      const collection = nftID.replace('Vinci', '')
-      const underlyingAsset = (generateInfo as any)[collection]
-      if (!underlyingAsset) throw new Error(`[getMarketsData] ${chainId} 找不到对应 NFT配置 => (${collection})`)
-      const { LendingPool, LendingPoolAddressesProvider } = (generateInfo.markets as Record<string, NFTGenerate>)[nftID]
-      const { src, market } = getNFTInfo(nftID)
-      const setting: NFTSetting = {
-        LENDING_POOL: LendingPool,
-        LENDING_POOL_ADDRESS_PROVIDER: LendingPoolAddressesProvider,
-        collection,
-        underlyingAsset,
-        src,
-        market,
-      }
-      obj[nftID] = setting
-      obj[collection] = setting
-      obj[underlyingAsset] = setting
+    nfts: Object.keys(generateInfo.markets || {}).reduce((obj, marketID) => {
+      const markets: Record<string, NFTGenerate> = generateInfo.markets
+      Object.keys(markets[marketID].TimeLockableNTokenForTest).forEach((nftID) => {
+        const collection = nftID.replace('vn', '')
+        const underlyingAsset = (generateInfo as any)[collection]
+        if (!underlyingAsset) throw new Error(`[getMarketsData] ${chainId} 找不到对应 NFT配置 => (${collection})`)
+        const nToken = markets[marketID].TimeLockableNTokenForTest[nftID]
+        const { LendingPool, LendingPoolAddressesProvider } = markets[marketID]
+        const { src, market } = getNFTInfo(collection)
+        const setting: NFTSetting = {
+          LENDING_POOL: LendingPool,
+          LENDING_POOL_ADDRESS_PROVIDER: LendingPoolAddressesProvider,
+          collection,
+          underlyingAsset,
+          src,
+          market,
+          nToken,
+        }
+        obj[marketID] = setting
+        obj[collection] = setting
+        obj[underlyingAsset] = setting
+      })
       return obj
     }, {} as MarketData['nfts']),
   }
 }
 
-export const defaultMarket = getMarketsData(ChainId.ethereum)
+export const defaultMarket = getMarketsData(ChainId.vinci)
 
 const getNFTS = () => {
   return {
-    ...getMarketsData(ChainId.localhost).nfts,
-    ...getMarketsData(ChainId.bsct).nfts,
+    // ...getMarketsData(ChainId.localhost).nfts,
+    // ...getMarketsData(ChainId.bsct).nfts,
     ...getMarketsData(ChainId.vinci).nfts,
-    ...getMarketsData(ChainId.kovan).nfts,
-    ...getMarketsData(ChainId.bsc).nfts,
-    ...getMarketsData(ChainId.ethereum).nfts,
+    // ...getMarketsData(ChainId.kovan).nfts,
+    // ...getMarketsData(ChainId.bsc).nfts,
+    // ...getMarketsData(ChainId.ethereum).nfts,
   }
 }
 

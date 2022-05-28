@@ -1,19 +1,17 @@
 {
+  "vinciNFTProvider": "",
   "LendingPoolAddressesProviderRegistry": "0x7dd43f81288b198c538756a2462ccf5aec0049ac",
   "DAI": "0xf8f6ecb61badb90e5de95b9a438133b35fb977a9",
   "WETH": "0xe14bf9206d15d3c8dfd8fb417544df4890cd3009",
   "BAYC": "0xe7aeadd51f5f012b043210ecb4c03ad5782c6bc8",
   "MAYC": "0x620a85575f330f39a46269d258520b03161553df",
-  "MAYCNoBorrowing": "0x620a85575f330f39a46269d258520b03161553df",
-  "MAYCNoBorrowingExpired": "0x620a85575f330f39a46269d258520b03161553df",
   "BAYCEligibilityImpl": "0xaf924172db6742dbad8bbecec9257bb66849c9b0",
   "BAYCEligibility": "0xc5ec274326fb5b4e6d0e49edc74b645881443b46",
-  "MAYCEligibilityImpl": "0xdbd16ae8b62a023136ab7c3491ec81877f6e40e8",
   "MAYCEligibility": "0x951ed8768151227d35de4eeb438485046027ca4c",
-  "ReserveLogic": "0x4e28e23a65394bee7fecee0de4f56ad4d96776ec",
-  "NFTVaultLogic": "0xcbf8b3e96503fbad02a37ff93bd9e078b6802487",
-  "GenericLogic": "0x366ea31ce5d25737a15f61c5c51c673ae925ea71",
-  "ValidationLogic": "0xc4f7ab3ae0d72c4202f72a93de230f7af6fbd09e",
+  "ReserveLogic": "0x6b1a99436e03199cb9b4899224feab5e2430d44c",
+  "NFTVaultLogic": "0x50875cfe98e12f6bcfab8942e6efa91ec3572d61",
+  "GenericLogic": "0x8c9c05f280a48eaf70c280b42d794977ca07f1cd",
+  "ValidationLogic": "0xb1f3870e7f7386ba8c9425c7306ada751fe35200",
   "PriceOracle": "0xe13da81d5e904759e990aa6b1c68cbe517e0dfbb",
   "DAIMockAggregator": "0x0932ebc39f2040643154830d051a6e04c0ac820b",
   "WETHMockAggregator": "0x603fca146372a6d275fa78a4a903180958793ad0",
@@ -27,12 +25,13 @@
   "WalletBalanceProvider": "0xd2014019e3f48592df6b57003d69ccb485241cf9",
   "UiPoolDataProvider": "0xecc1e259f65d70c1d7a28ae5d01c2ca669c27eb8",
   "WETHGateway": "0x74c10920124f4feefcf6719f379a241f97dd4203",
-  "vinciNFTProvider": "0xfe2a5e2a02ffbb250e519a7685424dcb77daa462",
+  "CloneX": "0x6c16757e9bf15cce15cb8abdbaf6742be2b76cc8",
+  "MEKA": "0x605f3e4e2d42623e88c4a7e7f8f5a0297f9b4f17",
   "markets": {
     "VinciBAYC": {
       "LendingPoolAddressesProvider": "0xd68d70a54b97536f818864a3795201e63fb4cdbb",
-      "LendingPoolImpl": "0x84dd011dd13789ddf8b72e616c7d5facf7667ba7",
-      "LendingPool": "0x9d5152dbe462106677a5e617339cbdf02d331350",
+      "LendingPoolImpl": "0x0f7638ac10c03a79576e4a5c06cfe72337050473",
+      "LendingPool": "0x0f7638ac10c03a79576e4a5c06cfe72337050473",
       "LendingPoolConfiguratorImpl": "0x71f941d0b5e68b65c257fcf9c8fe40437275a4b5",
       "LendingPoolConfigurator": "0x469c723e3da926c4ae8c4df62cda1492c6be8495",
       "StableAndVariableTokensHelper": "0x0c542ede24426d0939ee1aaf81bb1cd6027e294e",
@@ -40,7 +39,9 @@
       "VToken": "0x64b4f661f1986cca4af59bdb4472c053c9bcef45",
       "StableDebtToken": "0xd7af947aeb0a0ccec79fa5695d0fbeb6e435987c",
       "VariableDebtToken": "0xee820db2f81a1f25cc5a2f5b3f51761bc566c417",
-      "TimeLockableNTokenForTest": "0xc4e72e285a0967d6746a16bab8a5a0c9d153130a",
+      "TimeLockableNTokenForTest": {
+        "vnBAYC": "0xc4e72e285a0967d6746a16bab8a5a0c9d153130a"
+      },
       "AaveProtocolDataProvider": "0x8ee1dc1b2f6c6473abf942bf330a9fee725349a3",
       "rateStrategyStableTwo": "0x5c674632e44e5b42b17c4344d6d5bc4b6dc5a8a9",
       "rateStrategyWETH": "0xe69c92c3508c6dc3fa552ca848da3fd16ea72ec5",
@@ -49,33 +50,63 @@
     },
     "VinciMAYCNoBorrowing": {
       "LendingPoolAddressesProvider": "0x6ad41484603022fbdc3f92d2bc3af6773bd2fbbb",
-      "LendingPoolImpl": "0x8d7a335550c89e799022c00cd3e29c6ebc2ff394",
-      "LendingPool": "0x0357b60dcd4664a9755bea92d97566e34ae7ffaf",
+      "LendingPoolImpl": "0xf117c83279bf6015e5cb7bea9b699292976dbd8f",
+      "LendingPool": "0xf117c83279bf6015e5cb7bea9b699292976dbd8f",
       "LendingPoolConfiguratorImpl": "0x87236732c485cea5636d79cead510bbc06ccad7a",
       "LendingPoolConfigurator": "0xea929ab5a7b82dccc1a72a11a42d6471888564d8",
       "StableAndVariableTokensHelper": "0x52a834f2b50c1d025a07cd1ce578155e5be0df43",
       "VTokensAndRatesHelper": "0x556f7b4d67cadc4409f308002f017ad7f1ca2232",
       "StableDebtToken": "0xaf3a4d8914b33da5383a5fc553f9b51206b21b40",
       "VariableDebtToken": "0xa9fdfc6b47d3d00c6b82d3327094ea7904a7eb20",
-      "TimeLockableNTokenForTest": "0xe1f77c814af8731cece37e3455df427d36de709f",
+      "TimeLockableNTokenForTest": {
+        "vnMAYC": "0xe1f77c814af8731cece37e3455df427d36de709f"
+      },
       "AaveProtocolDataProvider": "0x2e0dd8a3d27608ff6056e4760aec35d854438adc",
       "LendingPoolCollateralManagerImpl": "0x2c9c9ec84f858c611004e0b2231c1b9d27164806",
       "LendingPoolCollateralManager": "0x2c9c9ec84f858c611004e0b2231c1b9d27164806"
     },
     "VinciMAYCNoBorrowingExpired": {
       "LendingPoolAddressesProvider": "0xaf727c540ea8357d89e7ed793c82d2143d4742b2",
-      "LendingPoolImpl": "0x731c331a55a4bff98205898a9050458b1b2480c5",
-      "LendingPool": "0x31661cdb46aa49ea9cd78301493bd71a2749b2ea",
+      "LendingPoolImpl": "0x6af6835f9d8923b88d6419cc4212f232c8670b86",
+      "LendingPool": "0x6af6835f9d8923b88d6419cc4212f232c8670b86",
       "LendingPoolConfiguratorImpl": "0xc783ccdb986bfa46f9170382796059535aff8b06",
       "LendingPoolConfigurator": "0x80e4bff5f3e74237e52e0c8e651214025bdd0fb6",
       "StableAndVariableTokensHelper": "0xd6384b56ec1b1e7dca1518d0958bfa07296aa4d4",
       "VTokensAndRatesHelper": "0x0b0c4860a2b1312125899d14eb21fcfd6942e1b2",
       "StableDebtToken": "0x2c9ace15ac3969843f7f8f7e6658ed3ac4c6a60e",
       "VariableDebtToken": "0x1c020bce5bd0880644cff3f2b90cb2cf8f9e65d1",
-      "TimeLockableNTokenForTest": "0xb102296ddc1bb9a2bfde2a8325d706baf2210be7",
+      "TimeLockableNTokenForTest": {
+        "vnMAYC": "0xb102296ddc1bb9a2bfde2a8325d706baf2210be7"
+      },
       "AaveProtocolDataProvider": "0xd0703f0ca02972bbd703e900238b561e977d2fd2",
       "LendingPoolCollateralManagerImpl": "0xd1e9e1a32c8d7b328cc34abc91ef9dd9d2a21ea5",
       "LendingPoolCollateralManager": "0xd1e9e1a32c8d7b328cc34abc91ef9dd9d2a21ea5"
+    },
+    "VinciLockDrop": {
+      "LendingPoolAddressesProvider": "0x05e4e30c0749dab8512275e2fabcc4dddbdf76df",
+      "LendingPoolImpl": "0x1a9fd8fd43ac16d0ef7a832b2c07534c9696623e",
+      "LendingPool": "0x898b10ff9216ed0e6af829ac5dca7b384d3c8537",
+      "LendingPoolConfiguratorImpl": "0xbb52cfcf03be3ecf1600b2b35042a4cf1d32c2a4",
+      "LendingPoolConfigurator": "0x7732a614a510fff64e86749655e351caaa6a7abe",
+      "StableAndVariableTokensHelper": "0x8917de3e63f0c3fd2eeef719f303ad76e78217e6",
+      "VTokensAndRatesHelper": "0x517386742b4b76b3200b2ec5506f8d9dd021a1c1",
+      "StableDebtToken": "0x7b3f9426bd36f9de868472b9b94286d3fb414596",
+      "VariableDebtToken": "0x0ffb3b319ce70c23134cccf7f356dfa2b287689e",
+      "TimeLockableNTokenForTest": {
+        "vnCloneX": "0x3aa9b811c70942bf74be7394c0b416bad8ed44dc",
+        "vnMEKA": "0x631c82f72565f8648f342fb16c4627fdb117b4a0"
+      },
+      "AaveProtocolDataProvider": "0x3355afbf392b38daf8a0520e6e469790955148bf",
+      "LendingPoolCollateralManagerImpl": "0x7fa89212bef83f433d91ae4d2beb2ae159b4af41",
+      "LendingPoolCollateralManager": "0x7fa89212bef83f433d91ae4d2beb2ae159b4af41",
+      "BAYCEligibilityImpl": "0x34eeb4c9b7bddbb5215702aab3a56b5727c775a0",
+      "BAYCEligibility": "0x25a78fafe9e3e2e9d3bf707e6837258ddd9af291",
+      "MAYCEligibilityImpl": "0xf8193006dc94c3ac5a396363abc614a4f08e1b95",
+      "MAYCEligibility": "0x17a16a7c5cc42d016c15bad237275b6a072867bd",
+      "CLONEXEligibilityImpl": "0x6a71d358905e9d46a533582cded62a4536da3703",
+      "CLONEXEligibility": "0xa5002ce442f3c3a8f0e50684c909bc147b8b0c0a",
+      "MEKAEligibilityImpl": "0x3e51d63a2329849d55b15bc4dc75c075ac16208b",
+      "MEKAEligibility": "0x97dd2f3657c7c83dfda0477a526ace56a80cc638"
     }
   }
 }

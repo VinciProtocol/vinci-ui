@@ -5,6 +5,7 @@ export type NFTSetting = {
   LENDING_POOL_ADDRESS_PROVIDER: string
   collection: any
   underlyingAsset: any
+  nToken: any
   src: any
   market: {
     logo: any

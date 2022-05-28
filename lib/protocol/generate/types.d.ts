@@ -11,4 +11,5 @@ export type NFTGenerate = {
   AaveProtocolDataProvider: string
   LendingPoolCollateralManagerImpl: string
   LendingPoolCollateralManager: string
+  TimeLockableNTokenForTest: Record<string, string>
 }

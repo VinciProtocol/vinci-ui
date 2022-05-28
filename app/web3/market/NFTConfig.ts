@@ -2,15 +2,15 @@ import ape from './images/ape.jpg'
 import mutantApe from './images/mutant-ape.jpg'
 import pancakeSquad from './images/pancake-squad.jpg'
 import azuki from './images/azuki.jpg'
-import cloneX from './images/clonex.jpg'
+import cloneX from './images/clonex.png'
 
 import opensea from './images/opensea.svg'
 import pancake from './images/pancake.svg'
 
 import { NFT_ID_1, NFT_ID_2, NFT_ID_3, NFT_ID_4, NFT_ID_5 } from '.'
 
-export const getNFTInfo = (nftID: string) => {
-  switch (nftID) {
+export const getNFTInfo = (collection: string) => {
+  switch (collection) {
     case NFT_ID_1:
       return {
         src: ape.src,
@@ -52,6 +52,6 @@ export const getNFTInfo = (nftID: string) => {
         },
       }
     default:
-      throw new Error(`[getNFTInfo] 找不到对应 NFTInfo => (${nftID})`)
+      throw new Error(`[getNFTInfo] 找不到对应 NFTInfo => (${collection})`)
   }
 }
