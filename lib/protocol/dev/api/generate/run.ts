@@ -33,6 +33,16 @@ export const run = async () => {
       Object.keys(v2).forEach((marketId) => {
         if (!markets[network]) markets[network] = {}
         if (!markets[network][marketId]) markets[network][marketId] = {}
+
+        if (key === 'TimeLockableNTokenForTest') {
+          const nToken: any = {}
+          Object.keys(v2[marketId]).forEach((key) => {
+            nToken[key] = v2[marketId][key].address.toLocaleLowerCase()
+          })
+          markets[network][marketId][key] = nToken
+          return
+        }
+
         markets[network][marketId][key] = v2[marketId].address.toLocaleLowerCase()
       })
     })
