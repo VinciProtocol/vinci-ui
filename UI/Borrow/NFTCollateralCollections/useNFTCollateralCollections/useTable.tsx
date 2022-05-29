@@ -17,6 +17,7 @@ import {
   leftHeaderRenderer,
   ActiveCollateralsCellRenderer,
 } from 'components/Table'
+import { safeGet } from 'utils/get'
 
 export const useTable = (): BasicTableProps => {
   const router = useRouter()
@@ -126,9 +127,11 @@ export const useTable = (): BasicTableProps => {
     [router]
   )
 
+  const data = useMemo(() => nftAssets.filter((nftAsset) => safeGet(() => nftAsset.reserves.length)), [nftAssets])
+
   return {
     columns,
-    data: nftAssets,
+    data,
     tableProps,
   }
 }

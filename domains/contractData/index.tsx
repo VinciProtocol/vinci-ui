@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 import { useMemo } from 'react'
-import { cloneDeep, groupBy } from 'lodash'
+import { cloneDeep } from 'lodash'
 
 import { createContext } from 'utils/createContext'
 import { getCurrentTimestamp, RAY_DECIMALS, SECONDS_PER_YEAR } from 'app/App/constants'
@@ -32,8 +32,10 @@ const useContractDataService = () => {
   const contractDataSource = useMemoLazy(() => {
     const returnValue = reservesDatas
       .map((reservesData) => {
-        const nftSetting = safeGet(() => market.nfts[reservesData.nftVaults[0].underlyingAsset])
-        if (!nftSetting) return
+        const nftSettings = safeGet(() =>
+          reservesData.nftVaults.map(({ underlyingAsset }) => market.nfts[underlyingAsset])
+        )
+        if (!nftSettings.length) return
         const userReservesData = userReservesDatas.find(({ id }) => reservesData.id === id)
         const walletBalance = walletBalanceData.find(({ id }) => reservesData.id === id)
         const walletNFT = walletNFTData.find(({ id }) => reservesData.id === id)
@@ -42,7 +44,7 @@ const useContractDataService = () => {
           userReservesData,
           walletBalance,
           walletNFT,
-          nftSetting,
+          nftSettings,
         }
       })
       .filter((reservesData) => reservesData)
@@ -51,29 +53,53 @@ const useContractDataService = () => {
     return returnValue
   }, [market, reservesDatas, userReservesDatas, walletBalanceData])
 
-  const generalAssets = useMemo(() => {
-    if (!contractDataSource) return [] as undefined
+  const { generalAssets, generalAssetsMap } = useMemo(() => {
+    if (!contractDataSource) {
+      return {
+        generalAssets: [],
+      } as undefined
+    }
     const currentTimestamp = getCurrentTimestamp()
-    const list = [] as any[]
+    const generalAssets = [] as any[]
+    const generalAssetsMap = {} as any
     for (let i = 0; i < contractDataSource.length; i++) {
       const {
         reservesData,
         userReservesData,
         walletBalance: walletBalances,
         walletNFT: walletNFTs,
-        nftSetting,
+        nftSettings,
       } = contractDataSource[i]
       const { currency, reserves, nftVaults, id } = reservesData
-      const nftVault = nftVaults[0]
-      const collection = nftVault.symbol
-      const collectionName = nftVault.name
       const { currencyPriceInUSD, currencyDecimals } = currency
-      const nftPriceInUSD = normalizeBN(nftVault.priceInMarketReferenceCurrency, currencyDecimals).multipliedBy(
-        currencyPriceInUSD
-      )
+
+      generalAssetsMap[id] = {
+        nftVaults: nftVaults.map((nftVault, index) => {
+          const collection = nftVault.symbol
+          const collectionName = nftVault.name
+          const nftPriceInUSD = normalizeBN(nftVault.priceInMarketReferenceCurrency, currencyDecimals).multipliedBy(
+            currencyPriceInUSD
+          )
+          const { userNFTVaults } = userReservesData
+          return {
+            ...nftVault,
+            collection,
+            collectionName,
+            nftPriceInUSD,
+            currency,
+            nftSetting: nftSettings[index],
+            userNFTVaults,
+            walletNFTs,
+          }
+        }),
+        reserves: [],
+      }
+      const nftVault = generalAssetsMap[id].nftVaults[0]
+      const { nftPriceInUSD, collection, collectionName } = nftVault
       reserves.forEach((p) => {
         const poolReserve = cloneDeep(p)
         if (!poolReserve.isActive) return
+        const nftSetting = nftSettings[0]
         const {
           underlyingAsset,
           vTokenAddress,
@@ -169,6 +195,7 @@ const useContractDataService = () => {
             }
           }
         }
+
         const returnValue = {
           id,
           underlyingAsset,
@@ -211,28 +238,31 @@ const useContractDataService = () => {
           }
         }
 
-        list.push(returnValue)
+        generalAssets.push(returnValue)
+        generalAssetsMap[id].reserves.push(returnValue)
       })
     }
-    log('[domains] [generalAssets]', list)
-    return list
+
+    const returnValue = { generalAssets, generalAssetsMap }
+
+    log('[domains] [generalAssets]', returnValue)
+    return returnValue
   }, [contractDataSource])
 
   const { nftAssets, dashboard } = useMemo(() => {
-    if (!generalAssets || !generalAssets.length)
+    if (!generalAssetsMap)
       return {
         nftAssets: [],
         dashboard: {},
       } as undefined
-    const obj = groupBy(generalAssets, 'id')
     const dashboard = {
       supplyBalanceInUSD: valueToBigNumber(0),
       netAPY: valueToBigNumber(0),
       borrowBalanceInUSD: valueToBigNumber(0),
       totalValueLockedInUSD: valueToBigNumber(0),
     }
-    const nftAssets = Object.keys(obj).map((k) => {
-      const list = obj[k]
+    const nftAssets = Object.keys(generalAssetsMap).reduce((nftAssets, k) => {
+      const reserves = generalAssetsMap[k].reserves
       const info = {
         totalValueLockedInUSD: valueToBigNumber(0),
         totalBorrowedInUSD: valueToBigNumber(0),
@@ -244,11 +274,7 @@ const useContractDataService = () => {
         APY: valueToBigNumber(0),
         borrowAPY: valueToBigNumber(0),
       }
-      const { nftVault, userNFTVault, walletNFTs, nftPriceInUSD, lendingPoolAddress, nftSetting, currency } = list[0]
-
-      const { currencyPriceInUSD } = currency
-
-      list.forEach(
+      reserves.forEach(
         ({
           priceInUSD,
           APY,
@@ -278,85 +304,97 @@ const useContractDataService = () => {
         totalAvailableToBorrowInUSD,
         totalUserAvailableToBorrowInUSD,
       } = info
-      const {
-        symbol: collection,
-        name,
-        underlyingAsset,
-        reserveLiquidationThreshold,
-        totalNumberOfCollateral,
-        baseLTVasCollateral,
-        reserveLiquidationBonus,
-        lockActionExpiration,
-      } = nftVault
-      let collateralValueInUSD = valueToBigNumber(0)
-      let borrowLimitInUSD = valueToBigNumber(0)
-      let depositCount = valueToBigNumber(0)
-      let userLockedNFT = 0
-      if (userNFTVault) {
-        const now = new Date().getTime()
-        depositCount = userNFTVault.nTokenBalance
-        collateralValueInUSD = depositCount.multipliedBy(nftPriceInUSD)
-        borrowLimitInUSD = collateralValueInUSD.multipliedBy(baseLTVasCollateral)
-        userLockedNFT = userNFTVault.locks.filter(({ expiration }: any) => expiration > now).length
-      }
-      const borrowLimitUtilization = borrowLimitInUSD.eq(0)
-        ? 0
-        : totalBorrowBalanceInUSD.div(borrowLimitInUSD).toNumber()
-      const healthFactor = totalBorrowBalanceInUSD.eq(0)
-        ? valueToBigNumber(0)
-        : collateralValueInUSD.multipliedBy(reserveLiquidationThreshold).div(totalBorrowBalanceInUSD)
-      const liquidationPriceInUSD = depositCount.eq(0)
-        ? valueToBigNumber(0)
-        : totalBorrowBalanceInUSD.div(depositCount.multipliedBy(reserveLiquidationThreshold))
 
-      const totalCollateralledValueInUSD = totalNumberOfCollateral.multipliedBy(nftPriceInUSD)
+      generalAssetsMap[k].nftVaults.forEach(
+        ({
+          collection,
+          name,
+          underlyingAsset,
+          reserveLiquidationThreshold,
+          totalNumberOfCollateral,
+          baseLTVasCollateral,
+          reserveLiquidationBonus,
+          lockActionExpiration,
+          nftPriceInUSD,
+          currency: { currencyPriceInUSD },
+          nftSetting,
+          userNFTVaults,
+          walletNFTs,
+        }: any) => {
+          let collateralValueInUSD = valueToBigNumber(0)
+          let borrowLimitInUSD = valueToBigNumber(0)
+          let depositCount = valueToBigNumber(0)
+          let userLockedNFT = 0
+          const userNFTVault = userNFTVaults.find((i: any) => i.underlyingAsset === underlyingAsset)
+          const now = new Date().getTime()
+          userNFTVaults.forEach((userNFTVault: any) => {
+            depositCount = userNFTVault.nTokenBalance
+            collateralValueInUSD = depositCount.multipliedBy(nftPriceInUSD)
+            borrowLimitInUSD = collateralValueInUSD.multipliedBy(baseLTVasCollateral)
+            userLockedNFT = userNFTVault.locks.filter(({ expiration }: any) => expiration > now).length
+          })
+          const borrowLimitUtilization = borrowLimitInUSD.eq(0)
+            ? 0
+            : totalBorrowBalanceInUSD.div(borrowLimitInUSD).toNumber()
+          const healthFactor = totalBorrowBalanceInUSD.eq(0)
+            ? valueToBigNumber(0)
+            : collateralValueInUSD.multipliedBy(reserveLiquidationThreshold).div(totalBorrowBalanceInUSD)
+          const liquidationPriceInUSD = depositCount.eq(0)
+            ? valueToBigNumber(0)
+            : totalBorrowBalanceInUSD.div(depositCount.multipliedBy(reserveLiquidationThreshold))
 
-      const nftWallet = {
-        underlyingAsset,
-        tokenIds: [] as any[],
-      }
-      if (walletNFTs && collection) {
-        const tokenIds = walletNFTs.data[underlyingAsset]
-        if (tokenIds) {
-          nftWallet.tokenIds = tokenIds
+          const totalCollateralledValueInUSD = totalNumberOfCollateral.multipliedBy(nftPriceInUSD)
+
+          const nftWallet = {
+            underlyingAsset,
+            tokenIds: [] as any[],
+          }
+          if (walletNFTs && collection) {
+            const tokenIds = walletNFTs.data[underlyingAsset]
+            if (tokenIds) {
+              nftWallet.tokenIds = tokenIds
+            }
+          }
+
+          const nft = {
+            lendingPoolAddress: nftSetting.LENDING_POOL,
+            nftSetting,
+            borrowBalance: totalBorrowBalanceInUSD.div(currencyPriceInUSD),
+            borrowBalanceInUSD: totalBorrowBalanceInUSD,
+            baseLTVasCollateral,
+            depositCount,
+            collateralValue: collateralValueInUSD.div(currencyPriceInUSD),
+            collateralValueInUSD,
+            healthFactor,
+            liquidationPrice: liquidationPriceInUSD.div(currencyPriceInUSD),
+            liquidationPriceInUSD,
+            liquidationFee: reserveLiquidationBonus,
+            borrowLimit: borrowLimitInUSD.div(currencyPriceInUSD),
+            borrowLimitInUSD,
+            borrowLimitUtilization: borrowLimitUtilization > 1 ? 1 : borrowLimitUtilization,
+            collection,
+            underlyingAsset,
+            currentFloorPrice: nftPriceInUSD.div(currencyPriceInUSD),
+            currentFloorPriceInUSD: nftPriceInUSD,
+            totalCollateralledValue: totalCollateralledValueInUSD.div(currencyPriceInUSD),
+            activeCollaterals: totalNumberOfCollateral,
+            totalCollateralledValueInUSD,
+            totalBorrowed: totalBorrowedInUSD.div(currencyPriceInUSD),
+            totalBorrowedInUSD,
+            availableToBorrow: totalAvailableToBorrowInUSD.div(currencyPriceInUSD),
+            availableToBorrowInUSD: totalAvailableToBorrowInUSD,
+            totalUserAvailableToBorrowInUSD,
+            totalUserAvailableToBorrow: totalUserAvailableToBorrowInUSD.div(currencyPriceInUSD),
+            nftWallet,
+            userNFTVault,
+            name,
+            lockActionExpiration: lockActionExpiration * 1000,
+            userLockedNFT,
+            reserves,
+          }
+          nftAssets.push(nft)
         }
-      }
-
-      const nft = {
-        lendingPoolAddress,
-        nftSetting,
-        borrowBalance: totalBorrowBalanceInUSD.div(currencyPriceInUSD),
-        borrowBalanceInUSD: totalBorrowBalanceInUSD,
-        baseLTVasCollateral,
-        depositCount,
-        collateralValue: collateralValueInUSD.div(currencyPriceInUSD),
-        collateralValueInUSD,
-        healthFactor,
-        liquidationPrice: liquidationPriceInUSD.div(currencyPriceInUSD),
-        liquidationPriceInUSD,
-        liquidationFee: reserveLiquidationBonus,
-        borrowLimit: borrowLimitInUSD.div(currencyPriceInUSD),
-        borrowLimitInUSD,
-        borrowLimitUtilization: borrowLimitUtilization > 1 ? 1 : borrowLimitUtilization,
-        collection,
-        underlyingAsset,
-        currentFloorPrice: nftPriceInUSD.div(currencyPriceInUSD),
-        currentFloorPriceInUSD: nftPriceInUSD,
-        totalCollateralledValue: totalCollateralledValueInUSD.div(currencyPriceInUSD),
-        activeCollaterals: totalNumberOfCollateral,
-        totalCollateralledValueInUSD,
-        totalBorrowed: totalBorrowedInUSD.div(currencyPriceInUSD),
-        totalBorrowedInUSD,
-        availableToBorrow: totalAvailableToBorrowInUSD.div(currencyPriceInUSD),
-        availableToBorrowInUSD: totalAvailableToBorrowInUSD,
-        totalUserAvailableToBorrowInUSD,
-        totalUserAvailableToBorrow: totalUserAvailableToBorrowInUSD.div(currencyPriceInUSD),
-        nftWallet,
-        userNFTVault,
-        name,
-        lockActionExpiration: lockActionExpiration * 1000,
-        userLockedNFT,
-      }
+      )
 
       const { APY, borrowAPY, supplyBalanceInUSD, borrowBalanceInUSD, totalValueLockedInUSD } = info
       const total = supplyBalanceInUSD.plus(borrowBalanceInUSD)
@@ -369,11 +407,11 @@ const useContractDataService = () => {
       dashboard.totalValueLockedInUSD = dashboard.totalValueLockedInUSD.plus(totalValueLockedInUSD)
       dashboard.netAPY = dashboard.netAPY.plus(netAPY)
 
-      return nft
-    })
+      return nftAssets
+    }, [])
     log('[domains] [nftAssetsalAssets]', { nftAssets, dashboard })
     return { nftAssets, dashboard }
-  }, [generalAssets])
+  }, [generalAssetsMap])
 
   return { generalAssets, nftAssets, dashboard }
 }
