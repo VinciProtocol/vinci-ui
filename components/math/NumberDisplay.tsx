@@ -1,3 +1,4 @@
+import type { SxProps, Theme } from '@mui/material/styles'
 import { styled } from '@mui/material/styles'
 import { useApp } from 'app/App'
 import { useWallet } from 'app/wallet'
@@ -10,7 +11,8 @@ import type { BigNumberValue } from 'utils/math/types'
 type NumberDisplayProps = {
   value: BigNumberValue
   options?: 'number' | 'USD' | 'percent'
-  type?: 'network'
+  type?: 'network' | 'VCI'
+  sx?: SxProps<Theme>
 }
 
 const NumberSpan = styled('div')`
@@ -18,7 +20,7 @@ const NumberSpan = styled('div')`
   align-items: center;
 `
 
-const NumberDisplay: FC<NumberDisplayProps> = ({ value, options, type }) => {
+const NumberDisplay: FC<NumberDisplayProps> = ({ value, options, type, sx }) => {
   const { network } = useWallet()
 
   const {
@@ -30,14 +32,25 @@ const NumberDisplay: FC<NumberDisplayProps> = ({ value, options, type }) => {
     return options ? NF.format(d, NF.options(options)) : d.toFixed(2)
   }, [NF, options, value])
   if (type) {
+    let tokenSymbol = 'ETH'
+    switch (type) {
+      case 'network':
+        if (network?.symbol) tokenSymbol = network.symbol
+        break
+      case 'VCI':
+        if (network?.symbol) tokenSymbol = 'VCI'
+        break
+    }
+
     return (
       <NumberSpan>
         <TokenIcon
-          tokenSymbol={network?.symbol || 'BNB'}
+          tokenSymbol={tokenSymbol}
           sx={{
             width: '0.875rem',
             height: '0.875rem',
             marginRight: '4px',
+            ...sx,
           }}
         />
         <span>{data}</span>

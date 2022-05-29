@@ -240,3 +240,10 @@ export const ETHCellRenderer: TableCellRenderer = ({ cellData }) => {
     </TableCell>
   )
 }
+export const VCICellRenderer: TableCellRenderer = ({ cellData }) => {
+  return (
+    <TableCell align="center" component="div">
+      <NumberDisplay value={cellData} type="VCI" />
+    </TableCell>
+  )
+}

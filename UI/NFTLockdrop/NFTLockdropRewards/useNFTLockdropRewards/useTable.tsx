@@ -17,6 +17,7 @@ import {
   collectionHeaderRenderer,
   USDCellRenderer,
   cellRenderer,
+  VCICellRenderer,
 } from 'components/Table'
 
 export const useTable = (): BasicTableProps => {
@@ -86,7 +87,7 @@ export const useTable = (): BasicTableProps => {
             dataKey: 'estmatedRewards',
             width: 200,
             headerRenderer,
-            cellRenderer: USDCellRenderer,
+            cellRenderer: VCICellRenderer,
           },
           {
             dataKey: 'functionButtons',

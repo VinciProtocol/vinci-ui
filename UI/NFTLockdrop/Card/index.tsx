@@ -1,5 +1,4 @@
 import type { FC } from 'react'
-import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
 import { styled } from '@mui/material/styles'
 import Stack from '@mui/material/Stack'
@@ -9,16 +8,19 @@ import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import NumberDisplay from 'components/math/NumberDisplay'
 import CardItem from './CardItem'
 import type { CardProps } from './types'
-import LockClockTwoTone from './icon/LockClockTwoTone.svg'
-import LockTwoTone from './icon/LockTwoTone.svg'
-import RewardTwoTone from './icon/RewardTwoTone.svg'
-import TokenTwoTone from './icon/TokenTwoTone.svg'
+import MonetizationOnTwoToneIcon from '@mui/icons-material/MonetizationOnTwoTone'
+import LockTwoTone from '@mui/icons-material/LockTwoTone'
+import RewardTwoTone from '@mui/icons-material/EmojiEventsTwoTone'
+import TokenTwoTone from '@mui/icons-material/TokenTwoTone'
 
 const Card: FC<CardProps> = () => {
   const { t } = useTranslation('nft-lockdrop')
   const ROOT = useMemoEmpty(() =>
     styled(Stack)(({ theme }) => ({
       paddingTop: theme.spacing(2),
+      ['.MuiSvgIcon-root']: {
+        fontSize: '30px',
+      },
     }))
   )
 
@@ -29,22 +31,32 @@ const Card: FC<CardProps> = () => {
       <CardItem
         title={t('Card.totalValueLocked')}
         value={<NumberDisplay value={timeLockedDashboard.TVL} options="USD" />}
-        icon={<Image src={LockTwoTone} alt="icon" />}
+        icon={<LockTwoTone color="primary" />}
       />
       <CardItem
         title={t('Card.totalLockedNFT')}
         value={<NumberDisplay value={timeLockedDashboard.totalLocked} options="number" />}
-        icon={<Image src={TokenTwoTone} alt="icon" />}
+        icon={<TokenTwoTone color="primary" />}
       />
       <CardItem
-        title={t('Card.userLockedNFT')}
-        value={<NumberDisplay value={timeLockedDashboard.userLocked} options="number" />}
-        icon={<Image src={LockClockTwoTone} alt="icon" />}
+        title={t('Card.rewardAPR')}
+        value={<NumberDisplay value={timeLockedDashboard.rewardAPR} options="percent" />}
+        icon={<MonetizationOnTwoToneIcon color="primary" />}
       />
       <CardItem
         title={t('Card.estmatedRewards')}
-        value={<NumberDisplay value={timeLockedDashboard.estmatedRewards} options="USD" />}
-        icon={<Image src={RewardTwoTone} alt="icon" />}
+        value={
+          <NumberDisplay
+            value={timeLockedDashboard.estmatedRewards}
+            type="VCI"
+            sx={{
+              width: '2.125rem',
+              height: '2.125rem',
+              marginRight: '8px',
+            }}
+          />
+        }
+        icon={<RewardTwoTone color="primary" />}
       />
     </ROOT>
   )

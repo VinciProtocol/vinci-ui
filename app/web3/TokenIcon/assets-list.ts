@@ -16,6 +16,13 @@ export interface Asset {
 
 export const assetsList: Asset[] = [
   {
+    name: 'Vci',
+    symbol: 'VCI',
+    color: '#b6509e',
+    icon: icons.vci,
+    aIcon: icons.vci,
+  },
+  {
     name: 'Aave',
     symbol: 'AAVE',
     color: '#b6509e',

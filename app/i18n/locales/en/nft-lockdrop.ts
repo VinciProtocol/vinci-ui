@@ -3,6 +3,7 @@ const locale = {
     totalValueLocked: 'Total Value Locked',
     totalLockedNFT: 'Total Locked NFT',
     userLockedNFT: 'Your Locked NFT',
+    rewardAPR: 'Reward APR',
     estmatedRewards: 'Estmated Rewards',
   },
   NFTLockdropRewards: {
