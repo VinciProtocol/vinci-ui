@@ -80,7 +80,6 @@ const useContractDataService = () => {
           const nftPriceInUSD = normalizeBN(nftVault.priceInMarketReferenceCurrency, currencyDecimals).multipliedBy(
             currencyPriceInUSD
           )
-          const { userNFTVaults } = userReservesData
           return {
             ...nftVault,
             collection,
@@ -88,7 +87,7 @@ const useContractDataService = () => {
             nftPriceInUSD,
             currency,
             nftSetting: nftSettings[index],
-            userNFTVaults,
+            userNFTVaults: userReservesData?.userNFTVaults || [],
             walletNFTs,
           }
         }),
