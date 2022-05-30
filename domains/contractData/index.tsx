@@ -37,8 +37,10 @@ const useContractDataService = () => {
         )
         if (!nftSettings.length) return
         const userReservesData = userReservesDatas.find(({ id }) => reservesData.id === id)
-        const walletBalance = walletBalanceData.find(({ id }) => reservesData.id === id)
-        const walletNFT = walletNFTData.find(({ id }) => reservesData.id === id)
+        const nftSymbol = safeGet(() => reservesData.nftVaults[0].symbol)
+        const walletBalance = nftSymbol && walletBalanceData.find(({ id }) => nftSymbol === id)
+        const walletNFT = nftSymbol && walletNFTData.find(({ id }) => nftSymbol === id)
+
         return {
           reservesData,
           userReservesData,
