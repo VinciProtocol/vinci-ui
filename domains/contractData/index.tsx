@@ -297,7 +297,7 @@ const useContractDataService = () => {
         depositCount = userNFTVault.nTokenBalance
         collateralValueInUSD = depositCount.multipliedBy(nftPriceInUSD)
         borrowLimitInUSD = collateralValueInUSD.multipliedBy(baseLTVasCollateral)
-        userLockedNFT = userNFTVault.locks.filter(({ expiration }: any) => expiration > now).length
+        userLockedNFT = userNFTVault.locks?.filter(({ expiration }: any) => expiration > now).length || 0
       }
       const borrowLimitUtilization = borrowLimitInUSD.eq(0)
         ? 0
