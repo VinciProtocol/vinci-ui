@@ -12,6 +12,8 @@ import {
   useWalletBalanceController1,
   useWalletBalanceController2,
   useWalletBalanceController3,
+  useWalletBalanceController4,
+  useWalletBalanceController5,
 } from './application/walletBalance'
 import { useWalletNFTController1, useWalletNFTController2, useWalletNFTController3 } from './application/walletNFT'
 
@@ -21,6 +23,8 @@ export const useControllersService = () => {
   const walletBalance1 = useWalletBalanceController1()
   const walletBalance2 = useWalletBalanceController2()
   const walletBalance3 = useWalletBalanceController3()
+  const walletBalance4 = useWalletBalanceController4()
+  const walletBalance5 = useWalletBalanceController5()
   const walletNFT1 = useWalletNFTController1()
   const walletNFT2 = useWalletNFTController2()
   const walletNFT3 = useWalletNFTController3()
@@ -32,6 +36,8 @@ export const useControllersService = () => {
       walletBalance1,
       walletBalance2,
       walletBalance3,
+      walletBalance4,
+      walletBalance5,
       walletNFT1,
       walletNFT2,
       walletNFT3,
@@ -51,6 +57,8 @@ export const useControllersService = () => {
     walletBalance1,
     walletBalance2,
     walletBalance3,
+    walletBalance4,
+    walletBalance5,
     walletNFT1,
     walletNFT2,
     walletNFT3,
