@@ -31,7 +31,7 @@
     "VinciBAYC": {
       "LendingPoolAddressesProvider": "0xd68d70a54b97536f818864a3795201e63fb4cdbb",
       "LendingPoolImpl": "0x0f7638ac10c03a79576e4a5c06cfe72337050473",
-      "LendingPool": "0x0f7638ac10c03a79576e4a5c06cfe72337050473",
+      "LendingPool": "0x9D5152dbE462106677A5e617339cbDf02D331350",
       "LendingPoolConfiguratorImpl": "0x71f941d0b5e68b65c257fcf9c8fe40437275a4b5",
       "LendingPoolConfigurator": "0x469c723e3da926c4ae8c4df62cda1492c6be8495",
       "StableAndVariableTokensHelper": "0x0c542ede24426d0939ee1aaf81bb1cd6027e294e",
