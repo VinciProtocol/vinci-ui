@@ -22,7 +22,7 @@ export type WETHWithdrawParamsType = {
   lendingPool: tEthereumAddress
   user: tEthereumAddress
   amount: string
-  vTokenAddress: tEthereumAddress
+  aTokenAddress: tEthereumAddress
   onBehalfOf?: tEthereumAddress
 }
 
@@ -154,14 +154,14 @@ export class WETHGatewayService extends BaseService<IWETHGateway> implements WET
     user,
     amount,
     onBehalfOf,
-    vTokenAddress,
+    aTokenAddress,
   }: WETHWithdrawParamsType): Promise<EthereumTransactionTypeExtended[]> {
     const txs: EthereumTransactionTypeExtended[] = []
     const { isApproved, approve }: IERC20ServiceInterface = this.erc20Service
     const convertedAmount: string = amount === '-1' ? constants.MaxUint256.toString() : valueToWei(amount, 18)
 
     const approved: boolean = await isApproved({
-      token: vTokenAddress,
+      token: aTokenAddress,
       user,
       spender: this.wethGatewayAddress,
       amount,
@@ -170,7 +170,7 @@ export class WETHGatewayService extends BaseService<IWETHGateway> implements WET
     if (!approved) {
       const approveTx: EthereumTransactionTypeExtended = approve({
         user,
-        token: vTokenAddress,
+        token: aTokenAddress,
         spender: this.wethGatewayAddress,
         amount: constants.MaxUint256.toString(),
       })

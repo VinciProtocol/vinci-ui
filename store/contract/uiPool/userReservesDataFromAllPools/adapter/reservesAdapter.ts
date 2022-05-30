@@ -6,7 +6,7 @@ export const getUserReserves = (userReserves: UserReservesData['userReservesData
   return userReserves.map(
     ({
       underlyingAsset,
-      scaledVTokenBalance,
+      scaledATokenBalance,
       usageAsCollateralEnabledOnUser,
       stableBorrowRate,
       scaledVariableDebt,
@@ -14,7 +14,7 @@ export const getUserReserves = (userReserves: UserReservesData['userReservesData
       stableBorrowLastUpdateTimestamp,
     }) => ({
       underlyingAsset: underlyingAsset.toLowerCase(),
-      scaledVTokenBalance: valueToBigNumber(scaledVTokenBalance),
+      scaledATokenBalance: valueToBigNumber(scaledATokenBalance),
       usageAsCollateralEnabledOnUser,
       stableBorrowRate: valueToBigNumber(stableBorrowRate),
       scaledVariableDebt: valueToBigNumber(scaledVariableDebt),

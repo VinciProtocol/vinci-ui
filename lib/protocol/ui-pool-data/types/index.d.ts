@@ -11,7 +11,7 @@ export interface ComputedReserveData extends FormatReserveResponse {
   stableBorrowRateEnabled: boolean
   isActive: boolean
   isFrozen: boolean
-  vTokenAddress: string
+  aTokenAddress: string
   stableDebtTokenAddress: string
   variableDebtTokenAddress: string
   priceInMarketReferenceCurrency: string
@@ -40,7 +40,7 @@ export interface ReserveDataHumanized {
   variableBorrowRate: string
   stableBorrowRate: string
   lastUpdateTimestamp: number
-  vTokenAddress: string
+  aTokenAddress: string
   stableDebtTokenAddress: string
   variableDebtTokenAddress: string
   interestRateStrategyAddress: string
@@ -65,7 +65,7 @@ export interface ReservesDataHumanized {
 export interface UserReserveDataHumanized {
   userReservesData: Array<{
     underlyingAsset: string
-    scaledVTokenBalance: string
+    scaledATokenBalance: string
     usageAsCollateralEnabledOnUser: boolean
     stableBorrowRate: string
     scaledVariableDebt: string

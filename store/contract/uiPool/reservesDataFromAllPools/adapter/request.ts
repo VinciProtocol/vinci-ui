@@ -25,7 +25,7 @@ export const useReservesDataFromAllPools = (props: ReservesDataProps) => {
           symbol,
           ...getAddress(reserve, [
             'underlyingAsset',
-            'vTokenAddress',
+            'aTokenAddress',
             'stableDebtTokenAddress',
             'variableDebtTokenAddress',
             'interestRateStrategyAddress',

@@ -822,7 +822,7 @@ const _abi = [
           },
           {
             internalType: 'address',
-            name: 'vTokenAddress',
+            name: 'aTokenAddress',
             type: 'address',
           },
           {
@@ -1012,7 +1012,7 @@ const _abi = [
       },
       {
         internalType: 'address',
-        name: 'vTokenAddress',
+        name: 'aTokenAddress',
         type: 'address',
       },
       {

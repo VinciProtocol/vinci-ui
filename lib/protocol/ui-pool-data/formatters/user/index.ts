@@ -33,7 +33,7 @@ export interface RawReserveData {
 
 export interface RawUserReserveData {
   reserve: RawReserveData
-  scaledVTokenBalance: string
+  scaledATokenBalance: string
   usageAsCollateralEnabledOnUser: boolean
   stableBorrowRate: string
   scaledVariableDebt: string

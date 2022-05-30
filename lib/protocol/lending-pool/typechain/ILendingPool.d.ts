@@ -53,7 +53,7 @@ export type ReserveDataStruct = {
   currentVariableBorrowRate: BigNumberish
   currentStableBorrowRate: BigNumberish
   lastUpdateTimestamp: BigNumberish
-  vTokenAddress: string
+  aTokenAddress: string
   stableDebtTokenAddress: string
   variableDebtTokenAddress: string
   interestRateStrategyAddress: string
@@ -81,7 +81,7 @@ export type ReserveDataStructOutput = [
   currentVariableBorrowRate: BigNumber
   currentStableBorrowRate: BigNumber
   lastUpdateTimestamp: number
-  vTokenAddress: string
+  aTokenAddress: string
   stableDebtTokenAddress: string
   variableDebtTokenAddress: string
   interestRateStrategyAddress: string
@@ -497,7 +497,7 @@ export interface ILendingPool extends BaseContract {
 
     initReserve(
       reserve: string,
-      vTokenAddress: string,
+      aTokenAddress: string,
       stableDebtAddress: string,
       variableDebtAddress: string,
       interestRateStrategyAddress: string,
@@ -686,7 +686,7 @@ export interface ILendingPool extends BaseContract {
 
   initReserve(
     reserve: string,
-    vTokenAddress: string,
+    aTokenAddress: string,
     stableDebtAddress: string,
     variableDebtAddress: string,
     interestRateStrategyAddress: string,
@@ -870,7 +870,7 @@ export interface ILendingPool extends BaseContract {
 
     initReserve(
       reserve: string,
-      vTokenAddress: string,
+      aTokenAddress: string,
       stableDebtAddress: string,
       variableDebtAddress: string,
       interestRateStrategyAddress: string,
@@ -1173,7 +1173,7 @@ export interface ILendingPool extends BaseContract {
 
     initReserve(
       reserve: string,
-      vTokenAddress: string,
+      aTokenAddress: string,
       stableDebtAddress: string,
       variableDebtAddress: string,
       interestRateStrategyAddress: string,
@@ -1351,7 +1351,7 @@ export interface ILendingPool extends BaseContract {
 
     initReserve(
       reserve: string,
-      vTokenAddress: string,
+      aTokenAddress: string,
       stableDebtAddress: string,
       variableDebtAddress: string,
       interestRateStrategyAddress: string,

@@ -39,7 +39,7 @@ export const createUseTabpanel = (props: {
     lendingPoolAddress: string
     underlyingAsset: string
     variableDebtTokenAddress: string
-    vTokenAddress: string
+    aTokenAddress: string
     isMax: Boolean
     isApproved: Boolean
   }) => void
@@ -90,7 +90,7 @@ export const createUseTabpanel = (props: {
       [tableData.APY, tableData.borrowAPY, balanceInUSD]
     )
 
-    const { underlyingAsset, vTokenAddress, lendingPoolAddress, variableDebtTokenAddress } = tableData
+    const { underlyingAsset, aTokenAddress, lendingPoolAddress, variableDebtTokenAddress } = tableData
 
     const actions = useMemo(() => {
       return {
@@ -113,7 +113,7 @@ export const createUseTabpanel = (props: {
                   user,
                   amt: inputSlider.input.value,
                   underlyingAsset,
-                  vTokenAddress,
+                  aTokenAddress,
                   isMax: getIsMax(inputSlider.input.value, balance.toString()),
                   isApproved,
                 })
@@ -140,7 +140,7 @@ export const createUseTabpanel = (props: {
       inputSlider.input.value,
       close,
       underlyingAsset,
-      vTokenAddress,
+      aTokenAddress,
       lendingPoolAddress,
       isApproved,
       getIsMax,

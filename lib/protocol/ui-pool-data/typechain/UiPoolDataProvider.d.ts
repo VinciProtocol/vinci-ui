@@ -35,7 +35,7 @@ export type AggregatedReserveDataStruct = {
   variableBorrowRate: BigNumberish
   stableBorrowRate: BigNumberish
   lastUpdateTimestamp: BigNumberish
-  vTokenAddress: string
+  aTokenAddress: string
   stableDebtTokenAddress: string
   variableDebtTokenAddress: string
   interestRateStrategyAddress: string
@@ -105,7 +105,7 @@ export type AggregatedReserveDataStructOutput = [
   variableBorrowRate: BigNumber
   stableBorrowRate: BigNumber
   lastUpdateTimestamp: number
-  vTokenAddress: string
+  aTokenAddress: string
   stableDebtTokenAddress: string
   variableDebtTokenAddress: string
   interestRateStrategyAddress: string

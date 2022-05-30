@@ -76,7 +76,7 @@ const useContractDataService = () => {
         if (!poolReserve.isActive) return
         const {
           underlyingAsset,
-          vTokenAddress,
+          aTokenAddress,
           variableDebtTokenAddress,
           symbol,
           priceInMarketReferenceCurrency,
@@ -125,7 +125,7 @@ const useContractDataService = () => {
             const userNFTVault = userNFTVaults.find((i) => i.underlyingAsset === nftVault.underlyingAsset)
             const underlyingBalance = normalizeBN(
               getLinearBalance({
-                balance: userReserve.scaledVTokenBalance,
+                balance: userReserve.scaledATokenBalance,
                 index: poolReserve.liquidityIndex,
                 rate: poolReserve.liquidityRate,
                 lastUpdateTimestamp: poolReserve.lastUpdateTimestamp,
@@ -172,7 +172,7 @@ const useContractDataService = () => {
         const returnValue = {
           id,
           underlyingAsset,
-          vTokenAddress,
+          aTokenAddress,
           variableDebtTokenAddress,
           lendingPoolAddress: nftSetting.LENDING_POOL,
           nftSetting,
