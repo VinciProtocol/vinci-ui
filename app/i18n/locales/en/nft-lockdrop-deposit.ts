@@ -35,8 +35,9 @@ const locale = {
     estimatedRewards: {
       title: 'Estimated Rewards',
       warn: {
-        1: 'We are now receiving a surprising amount of whitelist request.',
-        2: 'If you have finished the tasks but couldn’t claim  the airdrop reward, please be patient.',
+        1: 'You will get a Wrapped NFT as the NFT Lockdrop voucher.',
+        2: 'The Lockdrop NFTs will automatically have the liquidity mining incentives from the lending pools.',
+        3: 'You can only withdraw your NFT back when the lock expires.',
       },
     },
     actions: {

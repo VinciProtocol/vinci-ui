@@ -13,6 +13,7 @@ import DialogTitle from '@mui/material/DialogTitle'
 import { BigNumber as BN } from '@ethersproject/bignumber'
 import TextField from '@mui/material/TextField'
 import { useContract } from 'domains/contract'
+import Alert from '@mui/material/Alert'
 
 import { useSendTransaction } from 'app/web3/hooks/sendTransaction'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
@@ -157,24 +158,7 @@ const NotEligibility: FC<{ account: string; setInputAccount: any }> = ({ account
       display: flex;
       justify-content: center;
       align-items: center;
-    `
-  )
-  const WarnTip = useMemoEmpty(
-    () => styled('div')`
       text-align: left;
-      padding: 16px;
-      padding-left: 21px;
-      background: rgba(255, 199, 0, 0.3);
-      position: relative;
-      &::after {
-        position: absolute;
-        content: '';
-        left: 0;
-        top: 0;
-        width: 5px;
-        height: 100%;
-        background: #ffc700;
-      }
     `
   )
   const handleClose = useCallback(() => {
@@ -205,10 +189,10 @@ const NotEligibility: FC<{ account: string; setInputAccount: any }> = ({ account
         </Button>
       </SwitchAccount>
       <Warn>
-        <WarnTip>
+        <Alert severity="warning">
           <SubTitle>{t('notEligible.warn.1')}</SubTitle>
           <SubTitle>{t('notEligible.warn.2')}</SubTitle>
-        </WarnTip>
+        </Alert>
       </Warn>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>{t('switchAccountDialog.title')}</DialogTitle>

@@ -12,14 +12,17 @@ import CardContent from '@mui/material/CardContent'
 import Stack from '@mui/material/Stack'
 import Grid from '@mui/material/Grid'
 import Button from '@mui/material/Button'
+import Alert from '@mui/material/Alert'
 
 import { ROOT } from 'app/Dialogs/styles'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { DialogCloseIconButton } from 'components/btn/IconButton'
 import type { NFTCardProps } from 'components/nft/NFTCard'
 import NumberDisplay from 'components/math/NumberDisplay'
-import { SubTitle } from 'components/Styled'
-import { lockTypeList } from 'domains/thegraph'
+import { Caption } from 'components/Styled'
+import { lockTypeList, lockTypeMap, REWARD_AMOUNT } from 'domains/thegraph'
+import { useThegraph } from 'domains'
+import { valueToBigNumber } from 'utils/math'
 
 type LockNFTDialogProps = {
   nfts: NFTCardProps[]
@@ -35,6 +38,20 @@ const LockNFTDialog: FC<LockNFTDialogProps> = ({ nfts, visible, close, onClick }
       width: 100%;
     `
   )
+  const {
+    timeLockedDashboard: { totalValue },
+  } = useThegraph()
+
+  const estimatedRewards = useMemo(() => {
+    if (!totalValue || totalValue.eq(0) || !nfts) return 0
+    const days = lockTypeMap[type]
+    const userValue = nfts.reduce((sum, nft) => {
+      if (!nft.currentFloorPrice) return sum
+      return sum.plus(valueToBigNumber(days).multipliedBy(nft.currentFloorPrice))
+    }, valueToBigNumber(0))
+    if (userValue.eq(0)) return 0
+    return userValue.div(totalValue.plus(userValue)).multipliedBy(REWARD_AMOUNT)
+  }, [nfts, totalValue, type])
 
   return (
     <Dialog onClose={close} open={visible}>
@@ -51,7 +68,7 @@ const LockNFTDialog: FC<LockNFTDialogProps> = ({ nfts, visible, close, onClick }
               <NFTCard key={nft.id} {...nft} />
             ))}
             <ChooseLockTime setType={setType} type={type} />
-            <EstimatedRewards estimatedRewards={123.12} />
+            <EstimatedRewards estimatedRewards={estimatedRewards} />
 
             <Stack spacing={2} direction="row">
               <ActionButton variant="outlined" disabled={false} onClick={close}>
@@ -121,6 +138,7 @@ const ChooseLockTime: FC<{ setType: (type: string) => void; type: string }> = ({
           {row.map((info) => (
             <Grid key={info.type} item xs={4}>
               <Button
+                key={`${index}-${info.type}`}
                 sx={{ width: '90%', margin: '0 5%' }}
                 onClick={() => setType(info.type)}
                 variant={type === info.type ? 'linear' : 'outlined'}
@@ -138,31 +156,9 @@ const ChooseLockTime: FC<{ setType: (type: string) => void; type: string }> = ({
 const EstimatedRewards: FC<{ estimatedRewards: any }> = ({ estimatedRewards }) => {
   const Root = useMemoEmpty(() => styled(Stack)``)
   const { t } = useTranslation('nft-lockdrop-deposit')
-  const Warn = useMemoEmpty(
-    () => styled('div')`
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    `
-  )
-  const WarnTip = useMemoEmpty(
-    () => styled('div')`
-      text-align: left;
-      padding: 16px;
-      padding-left: 21px;
-      background: rgba(255, 199, 0, 0.3);
-      position: relative;
-      &::after {
-        position: absolute;
-        content: '';
-        left: 0;
-        top: 0;
-        width: 5px;
-        height: 100%;
-        background: #ffc700;
-      }
-    `
-  )
+  const Tip = styled('p')(({ theme }) => ({
+    ...theme.typography.caption,
+  }))
   return (
     <Root spacing={2}>
       <Typography variant="subtitle2" component="div">
@@ -171,12 +167,11 @@ const EstimatedRewards: FC<{ estimatedRewards: any }> = ({ estimatedRewards }) =
           <NumberDisplay value={estimatedRewards} type="network" />
         </Stack>
       </Typography>
-      <Warn>
-        <WarnTip>
-          <SubTitle>{t('LockNFTDialog.estimatedRewards.warn.1')}</SubTitle>
-          <SubTitle>{t('LockNFTDialog.estimatedRewards.warn.2')}</SubTitle>
-        </WarnTip>
-      </Warn>
+      <Alert severity="info">
+        <Tip>{t('LockNFTDialog.estimatedRewards.warn.1')}</Tip>
+        <Tip>{t('LockNFTDialog.estimatedRewards.warn.2')}</Tip>
+        <Tip>{t('LockNFTDialog.estimatedRewards.warn.3')}</Tip>
+      </Alert>
     </Root>
   )
 }

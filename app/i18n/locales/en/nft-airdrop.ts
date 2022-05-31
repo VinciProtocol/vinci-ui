@@ -34,12 +34,6 @@ const locale = {
       lend: 'Lend',
     },
   },
-  tip: {
-    warn: {
-      1: 'We are now receiving a surprising amount of whitelist request.',
-      2: 'If you have finished the tasks but couldn’t claim  the airdrop reward, please be patient.',
-    },
-  },
   criteria: {
     title: 'Eligibility Criteria',
     subTitle: {

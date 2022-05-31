@@ -38,9 +38,9 @@ export const lockTypeList = [
 ]
 
 const VCI_TOKEN_PRICE = 0.3
-const REWARD_AMOUNT = 25000000
+export const REWARD_AMOUNT = 25000000
 
-const lockTypeMap = flattenDeep(lockTypeList).reduce((obj, { type, days }) => {
+export const lockTypeMap = flattenDeep(lockTypeList).reduce((obj, { type, days }) => {
   obj[type] = parseInt(days)
   return obj
 }, {} as Record<string, number>)
@@ -75,7 +75,7 @@ const useThegraphService = () => {
       const TVL = valueToBigNumber(currentFloorPriceInUSD).multipliedBy(timeLockedCount.total)
       const userLocked = timeLockedTables.length
       let userValue = valueToBigNumber(0)
-      if (!totalUserLocked.eq(0)) {
+      if (userLocked) {
         let userDays = valueToBigNumber(0)
         let totalDays = valueToBigNumber(0)
         Object.keys(lockTypeMap).map((type) => {
