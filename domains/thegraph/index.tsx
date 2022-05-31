@@ -54,6 +54,7 @@ const useThegraphService = () => {
     if (!nftAssets.length) return { timeLockedDashboard: {}, nftAssetsTimeLocked: [] } as undefined
     let totalLocked = valueToBigNumber(0)
     let totalTVL = valueToBigNumber(0)
+    let totalTVLInUSD = valueToBigNumber(0)
     let totalUserLocked = valueToBigNumber(0)
     let estmatedRewards = {
       value: valueToBigNumber(0),
@@ -72,7 +73,8 @@ const useThegraphService = () => {
         '5': countTables['TimeLocked_lockType_5'] || 0,
         '6': countTables['TimeLocked_lockType_6'] || 0,
       }
-      const TVL = valueToBigNumber(currentFloorPriceInUSD).multipliedBy(timeLockedCount.total)
+      const TVL = valueToBigNumber(timeLockedCount.total)
+      const TVLInUSD = valueToBigNumber(currentFloorPriceInUSD).multipliedBy(TVL)
       const userLocked = timeLockedTables.length
       let userValue = valueToBigNumber(0)
       if (userLocked) {
@@ -92,13 +94,16 @@ const useThegraphService = () => {
       }
       totalLocked = totalLocked.plus(timeLockedCount.total)
       totalTVL = totalTVL.plus(TVL)
+      totalTVLInUSD = totalTVLInUSD.plus(TVLInUSD)
       totalUserLocked = totalUserLocked.plus(userLocked)
       nftAssetsTimeLocked.push({
         ...nft,
         TVL,
+        TVLInUSD,
         totalLockedNFT: timeLockedCount.total,
         userLocked,
         userValue,
+        userLockedNFT: userLocked,
       })
     })
 
@@ -114,6 +119,7 @@ const useThegraphService = () => {
     const timeLockedDashboard = {
       totalLocked: totalLocked.toString(),
       TVL: totalTVL,
+      TVLInUSD: totalTVLInUSD,
       userLocked: totalUserLocked.toString(),
       estmatedRewards: estmatedRewards.value,
       rewardAPR,

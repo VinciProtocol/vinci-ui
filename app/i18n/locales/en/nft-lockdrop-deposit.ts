@@ -10,7 +10,7 @@ const locale = {
       lockTimeLeft: {
         title: 'Lock Time Left',
         days: 'days',
-        hovers: 'hovers',
+        hours: 'hours',
       },
     },
     wallet: {
@@ -23,7 +23,7 @@ const locale = {
     totalValuation: 'Total Valuation:',
     valuation: 'Valuation',
     approveAll: 'Approve All',
-    depositSelected: 'Deposit Selected',
+    depositSelected: 'Lock Selected',
     withdrawSelected: 'Withdraw Selected',
   },
   LockNFTDialog: {

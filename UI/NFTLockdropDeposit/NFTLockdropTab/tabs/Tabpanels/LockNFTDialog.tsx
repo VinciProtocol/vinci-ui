@@ -19,7 +19,6 @@ import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { DialogCloseIconButton } from 'components/btn/IconButton'
 import type { NFTCardProps } from 'components/nft/NFTCard'
 import NumberDisplay from 'components/math/NumberDisplay'
-import { Caption } from 'components/Styled'
 import { lockTypeList, lockTypeMap, REWARD_AMOUNT } from 'domains/thegraph'
 import { useThegraph } from 'domains'
 import { valueToBigNumber } from 'utils/math'
@@ -164,7 +163,7 @@ const EstimatedRewards: FC<{ estimatedRewards: any }> = ({ estimatedRewards }) =
       <Typography variant="subtitle2" component="div">
         <Stack spacing={2} direction="row">
           <span>{t('LockNFTDialog.estimatedRewards.title')}</span>
-          <NumberDisplay value={estimatedRewards} type="network" />
+          <NumberDisplay value={estimatedRewards} type="VCI" />
         </Stack>
       </Typography>
       <Alert severity="info">

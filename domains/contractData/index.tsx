@@ -325,14 +325,11 @@ const useContractDataService = () => {
           let collateralValueInUSD = valueToBigNumber(0)
           let borrowLimitInUSD = valueToBigNumber(0)
           let depositCount = valueToBigNumber(0)
-          let userLockedNFT = 0
           const userNFTVault = userNFTVaults.find((i: any) => i.underlyingAsset === underlyingAsset)
-          const now = new Date().getTime()
           userNFTVaults.forEach((userNFTVault: any) => {
             depositCount = userNFTVault.nTokenBalance
             collateralValueInUSD = depositCount.multipliedBy(nftPriceInUSD)
             borrowLimitInUSD = collateralValueInUSD.multipliedBy(baseLTVasCollateral)
-            userLockedNFT = userNFTVault.locks.filter(({ expiration }: any) => expiration > now).length
           })
           const borrowLimitUtilization = borrowLimitInUSD.eq(0)
             ? 0
@@ -390,7 +387,6 @@ const useContractDataService = () => {
             userNFTVault,
             name,
             lockActionExpiration: lockActionExpiration * 1000,
-            userLockedNFT,
             reserves,
           }
           nftAssets.push(nft)

@@ -30,7 +30,17 @@ const Card: FC<CardProps> = () => {
     <ROOT direction="row" spacing={2}>
       <CardItem
         title={t('Card.totalValueLocked')}
-        value={<NumberDisplay value={timeLockedDashboard.TVL} options="USD" />}
+        value={
+          <NumberDisplay
+            value={timeLockedDashboard.TVL}
+            type="network"
+            sx={{
+              width: '2.125rem',
+              height: '2.125rem',
+              marginRight: '8px',
+            }}
+          />
+        }
         icon={<LockTwoTone color="primary" />}
       />
       <CardItem

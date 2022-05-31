@@ -12,7 +12,7 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
-import LockClockSharpIcon from '@mui/icons-material/LockClockSharp'
+import LockClockTwoTone from '@mui/icons-material/LockClockTwoTone'
 
 import type { NFT } from 'UI/BorrowDetail/types'
 import NumberDisplay from 'components/math/NumberDisplay'
@@ -120,10 +120,10 @@ const LockCountdown: FC<Pick<NFTCardProps, 'lock'>> = ({ lock }) => {
   let time = timeInterval.div(DAY)
   const days = Math.floor(time.toNumber()) || 0
   time = time.minus(days).multipliedBy(DAY).div(HOVER)
-  const hovers = Math.floor(time.toNumber()) || 0
+  const hours = Math.floor(time.toNumber()) || 0
   return (
     <Stack spacing={2} direction="row" sx={{ alignItems: 'center' }}>
-      <LockClockSharpIcon sx={{ fontSize: '30px', color: theme.palette.primary.main }} />
+      <LockClockTwoTone sx={{ fontSize: '30px', color: theme.palette.primary.main }} />
       <Stack spacing={0}>
         <Typography component="div" variant="caption" color="text.secondary">
           {t('nft-lockdrop-deposit:tabs.lockedNFT.lockTimeLeft.title')}
@@ -135,8 +135,8 @@ const LockCountdown: FC<Pick<NFTCardProps, 'lock'>> = ({ lock }) => {
               <span>{t('nft-lockdrop-deposit:tabs.lockedNFT.lockTimeLeft.days')}</span>
             </Stack>
             <Stack spacing={1} direction="row">
-              <span>{hovers}</span>
-              <span>{t('nft-lockdrop-deposit:tabs.lockedNFT.lockTimeLeft.hovers')}</span>
+              <span>{hours}</span>
+              <span>{t('nft-lockdrop-deposit:tabs.lockedNFT.lockTimeLeft.hours')}</span>
             </Stack>
           </Stack>
         </Typography>

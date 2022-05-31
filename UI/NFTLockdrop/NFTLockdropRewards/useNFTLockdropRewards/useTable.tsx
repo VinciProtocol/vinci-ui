@@ -15,9 +15,9 @@ import {
   headerRenderer,
   collectionCellRenderer,
   collectionHeaderRenderer,
-  USDCellRenderer,
   cellRenderer,
   VCICellRenderer,
+  BalanceCellRenderer,
 } from 'components/Table'
 
 export const useTable = (): BasicTableProps => {
@@ -69,7 +69,7 @@ export const useTable = (): BasicTableProps => {
             dataKey: 'TVL',
             width: 200,
             headerRenderer,
-            cellRenderer: USDCellRenderer,
+            cellRenderer: BalanceCellRenderer,
           },
           {
             dataKey: 'totalLockedNFT',

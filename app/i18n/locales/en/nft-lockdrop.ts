@@ -19,7 +19,7 @@ const locale = {
     estmatedRewards: 'Estmated Rewards',
     functionButtons: 'Action',
     actions: {
-      depositNFT: 'Deposit NFT',
+      depositNFT: 'Lock NFT',
     },
   },
 }
