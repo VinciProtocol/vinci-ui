@@ -3,6 +3,7 @@
     "totalValueLocked": "Gesamtwert gesperrt",
     "totalLockedNFT": "Insgesamt gesperrte NFT",
     "userLockedNFT": "Ihre gesperrte NFT",
+    "rewardAPR": "Belohnung APR",
     "estmatedRewards": "Geschätzte Belohnungen"
   },
   "NFTLockdropRewards": {
@@ -16,9 +17,9 @@
     "totalLockedNFT": "Insgesamt gesperrte NFT",
     "userLockedNFT": "Ihre gesperrte NFT",
     "estmatedRewards": "Geschätzte Belohnungen",
-    "functionButtons": "Handlung",
+    "functionButtons": "Aktion",
     "actions": {
-      "depositNFT": "Hinterlegen Sie NFT"
+      "depositNFT": "NFT sperren"
     }
   }
 }

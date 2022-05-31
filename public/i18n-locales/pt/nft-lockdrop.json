@@ -3,6 +3,7 @@
     "totalValueLocked": "Valor total bloqueado",
     "totalLockedNFT": "Total de NFT Bloqueado",
     "userLockedNFT": "Seu NFT bloqueado",
+    "rewardAPR": "APR de recompensa",
     "estmatedRewards": "Recompensas estimadas"
   },
   "NFTLockdropRewards": {
@@ -16,9 +17,9 @@
     "totalLockedNFT": "Total de NFT Bloqueado",
     "userLockedNFT": "Seu NFT bloqueado",
     "estmatedRewards": "Recompensas estimadas",
-    "functionButtons": "Açao",
+    "functionButtons": "Ação",
     "actions": {
-      "depositNFT": "Depósito NFT"
+      "depositNFT": "Bloquear NFT"
     }
   }
 }

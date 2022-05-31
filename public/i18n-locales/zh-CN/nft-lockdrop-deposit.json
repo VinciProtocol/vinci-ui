@@ -10,7 +10,7 @@
       "lockTimeLeft": {
         "title": "剩余锁定时间",
         "days": "天",
-        "hovers": "悬停"
+        "hours": "小时"
       }
     },
     "wallet": {
@@ -23,7 +23,7 @@
     "totalValuation": "总估值：",
     "valuation": "估值",
     "approveAll": "全部批准",
-    "depositSelected": "已选择存款",
+    "depositSelected": "锁定选定",
     "withdrawSelected": "撤回所选"
   },
   "LockNFTDialog": {
@@ -36,8 +36,9 @@
       "title": "预计奖励",
       "warn": [
         null,
-        "我们现在收到数量惊人的白名单请求。",
-        "如果您已完成任务但无法领取空投奖励，请耐心等待。"
+        "您将获得一个 Wrapped NFT 作为 NFT Lockdrop 代金券。",
+        "Lockdrop NFT 将自动获得来自借贷池的流动性挖矿激励。",
+        "您只能在锁定到期时撤回您的 NFT。"
       ]
     },
     "actions": {

@@ -3,6 +3,7 @@
     "totalValueLocked": "มูลค่ารวมที่ถูกล็อค",
     "totalLockedNFT": "NFT ที่ถูกล็อคทั้งหมด",
     "userLockedNFT": "NFT ที่ถูกล็อกของคุณ",
+    "rewardAPR": "รางวัลเมษายน",
     "estmatedRewards": "รางวัลโดยประมาณ"
   },
   "NFTLockdropRewards": {
@@ -16,9 +17,9 @@
     "totalLockedNFT": "NFT ที่ถูกล็อคทั้งหมด",
     "userLockedNFT": "NFT ที่ถูกล็อกของคุณ",
     "estmatedRewards": "รางวัลโดยประมาณ",
-    "functionButtons": "หนังบู๊",
+    "functionButtons": "การกระทำ",
     "actions": {
-      "depositNFT": "ฝาก NFT"
+      "depositNFT": "ล็อค NFT"
     }
   }
 }

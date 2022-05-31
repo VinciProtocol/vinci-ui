@@ -3,6 +3,7 @@
     "totalValueLocked": "合計値がロックされています",
     "totalLockedNFT": "トータルロックNFT",
     "userLockedNFT": "ロックされたNFT",
+    "rewardAPR": "報酬APR",
     "estmatedRewards": "推定報酬"
   },
   "NFTLockdropRewards": {
@@ -18,7 +19,7 @@
     "estmatedRewards": "推定報酬",
     "functionButtons": "アクション",
     "actions": {
-      "depositNFT": "NFTをデポジットする"
+      "depositNFT": "NFTをロックする"
     }
   }
 }

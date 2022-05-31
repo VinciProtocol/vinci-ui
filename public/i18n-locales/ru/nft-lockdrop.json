@@ -3,12 +3,13 @@
     "totalValueLocked": "Общая стоимость заблокирована",
     "totalLockedNFT": "Всего заблокировано NFT",
     "userLockedNFT": "Ваш заблокированный NFT",
+    "rewardAPR": "Награда годовых",
     "estmatedRewards": "Расчетное вознаграждение"
   },
   "NFTLockdropRewards": {
     "title": "Награды NFT Lockdrop",
     "subTitle": {
-      "text": "Заблокируйте свои NFT для вознаграждения за токены VCI",
+      "text": "Заблокируйте свои NFT для вознаграждения токенами VCI",
       "tip": "Учить больше"
     },
     "collection": "Коллекция",
@@ -18,7 +19,7 @@
     "estmatedRewards": "Расчетное вознаграждение",
     "functionButtons": "Действие",
     "actions": {
-      "depositNFT": "Депозит NFT"
+      "depositNFT": "Блокировка NFT"
     }
   }
 }

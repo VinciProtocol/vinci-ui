@@ -10,7 +10,7 @@
       "lockTimeLeft": {
         "title": "Khóa thời gian còn lại",
         "days": "ngày",
-        "hovers": "bay lượn"
+        "hours": "giờ"
       }
     },
     "wallet": {
@@ -23,7 +23,7 @@
     "totalValuation": "Tổng định giá:",
     "valuation": "Định giá",
     "approveAll": "Phê duyệt tất cả",
-    "depositSelected": "Gửi tiền đã chọn",
+    "depositSelected": "Khóa đã chọn",
     "withdrawSelected": "Rút tiền đã chọn"
   },
   "LockNFTDialog": {
@@ -36,8 +36,9 @@
       "title": "Phần thưởng ước tính",
       "warn": [
         null,
-        "Chúng tôi hiện đang nhận được một lượng lớn yêu cầu danh sách trắng đáng ngạc nhiên.",
-        "Nếu bạn đã hoàn thành nhiệm vụ nhưng không thể nhận phần thưởng airdrop, hãy kiên nhẫn."
+        "Bạn sẽ nhận được một NFT được bọc dưới dạng phiếu thưởng NFT Lockdrop.",
+        "Các NFT Lockdrop sẽ tự động có các ưu đãi khai thác thanh khoản từ các nhóm cho vay.",
+        "Bạn chỉ có thể rút lại NFT khi khóa hết hạn."
       ]
     },
     "actions": {

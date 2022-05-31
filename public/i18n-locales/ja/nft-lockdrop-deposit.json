@@ -10,7 +10,7 @@
       "lockTimeLeft": {
         "title": "残りのロック時間",
         "days": "日々",
-        "hovers": "ホバー"
+        "hours": "時間"
       }
     },
     "wallet": {
@@ -23,7 +23,7 @@
     "totalValuation": "総評価：",
     "valuation": "評価",
     "approveAll": "すべて承認する",
-    "depositSelected": "選択したデポジット",
+    "depositSelected": "選択したロック",
     "withdrawSelected": "選択した撤回"
   },
   "LockNFTDialog": {
@@ -36,8 +36,9 @@
       "title": "推定報酬",
       "warn": [
         null,
-        "現在、驚くほど多くのホワイトリストリクエストを受け取っています。",
-        "タスクを完了したが、エアドロップ報酬を請求できなかった場合は、しばらくお待ちください。"
+        "NFTロックドロップバウチャーとしてラップされたNFTを取得します。",
+        "Lockdrop NFTは、貸付プールからの流動性マイニングインセンティブを自動的に取得します。",
+        "ロックの有効期限が切れた場合にのみ、NFTを取り消すことができます。"
       ]
     },
     "actions": {

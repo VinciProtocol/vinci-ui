@@ -3,6 +3,7 @@
     "totalValueLocked": "Toplam Değer Kilitli",
     "totalLockedNFT": "Toplam Kilitli NFT",
     "userLockedNFT": "Kilitli NFT'niz",
+    "rewardAPR": "Nisan ayı ödülü",
     "estmatedRewards": "Tahmini Ödüller"
   },
   "NFTLockdropRewards": {
@@ -16,9 +17,9 @@
     "totalLockedNFT": "Toplam Kilitli NFT",
     "userLockedNFT": "Kilitli NFT'niz",
     "estmatedRewards": "Tahmini Ödüller",
-    "functionButtons": "Aksiyon",
+    "functionButtons": "Eylem",
     "actions": {
-      "depositNFT": "Para Yatırma NFT"
+      "depositNFT": "NFT'yi kilitle"
     }
   }
 }

@@ -7,7 +7,7 @@
     "NFT": {
       "actions": {
         "comingSoon": "Em breve",
-        "claim": "Afirmação",
+        "claim": "Alegar",
         "claimed": "Reivindicado",
         "tip": {
           "switchAccount": "Por favor, mude de conta para reivindicar."
@@ -32,16 +32,9 @@
     ],
     "actions": {
       "switchAccount": "Verifique outro endereço",
-      "borrow": "Pegar emprestado",
+      "borrow": "Pedir emprestado",
       "lend": "Emprestar"
     }
-  },
-  "tip": {
-    "warn": [
-      null,
-      "Agora estamos recebendo uma quantidade surpreendente de solicitações de lista de permissões.",
-      "Se você terminou as tarefas, mas não conseguiu reivindicar a recompensa de lançamento aéreo, seja paciente."
-    ]
   },
   "criteria": {
     "title": "Critérios de elegibilidade",

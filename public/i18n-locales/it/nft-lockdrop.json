@@ -3,13 +3,14 @@
     "totalValueLocked": "Valore totale bloccato",
     "totalLockedNFT": "NFT totale bloccato",
     "userLockedNFT": "Il tuo NFT bloccato",
+    "rewardAPR": "Ricompensa aprile",
     "estmatedRewards": "Premi stimati"
   },
   "NFTLockdropRewards": {
     "title": "Premi Lockdrop NFT",
     "subTitle": {
       "text": "Blocca i tuoi NFT per i premi in token VCI",
-      "tip": "Per saperne di più"
+      "tip": "Scopri di più"
     },
     "collection": "Collezione",
     "TVL": "TVL",
@@ -18,7 +19,7 @@
     "estmatedRewards": "Premi stimati",
     "functionButtons": "Azione",
     "actions": {
-      "depositNFT": "Deposito NFT"
+      "depositNFT": "Blocca NFT"
     }
   }
 }

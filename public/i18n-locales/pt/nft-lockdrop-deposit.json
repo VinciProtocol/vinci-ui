@@ -10,7 +10,7 @@
       "lockTimeLeft": {
         "title": "Tempo restante de bloqueio",
         "days": "dias",
-        "hovers": "paira"
+        "hours": "horas"
       }
     },
     "wallet": {
@@ -23,7 +23,7 @@
     "totalValuation": "Avaliação Total:",
     "valuation": "Avaliação",
     "approveAll": "Aprovar tudo",
-    "depositSelected": "Depósito selecionado",
+    "depositSelected": "Bloqueio selecionado",
     "withdrawSelected": "Retirar Selecionado"
   },
   "LockNFTDialog": {
@@ -36,8 +36,9 @@
       "title": "Recompensas estimadas",
       "warn": [
         null,
-        "Agora estamos recebendo uma quantidade surpreendente de solicitações de lista de permissões.",
-        "Se você terminou as tarefas, mas não conseguiu reivindicar a recompensa de lançamento aéreo, seja paciente."
+        "Você receberá um NFT Embrulhado como o voucher NFT Lockdrop.",
+        "Os NFTs Lockdrop terão automaticamente os incentivos de mineração de liquidez dos pools de empréstimos.",
+        "Você só pode retirar seu NFT de volta quando o bloqueio expirar."
       ]
     },
     "actions": {

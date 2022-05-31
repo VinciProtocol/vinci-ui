@@ -6,7 +6,7 @@
     "willReceive": "alacak",
     "NFT": {
       "actions": {
-        "comingSoon": "Yakında gelecek",
+        "comingSoon": "Çok yakında",
         "claim": "İddia",
         "claimed": "hak talebinde bulunuldu",
         "tip": {
@@ -32,16 +32,9 @@
     ],
     "actions": {
       "switchAccount": "Başka bir adresi kontrol et",
-      "borrow": "Borç almak",
-      "lend": "Borç vermek"
+      "borrow": "Ödünç almak",
+      "lend": "Ödünç vermek"
     }
-  },
-  "tip": {
-    "warn": [
-      null,
-      "Şu anda şaşırtıcı miktarda beyaz liste isteği alıyoruz.",
-      "Görevleri tamamladıysanız ancak airdrop ödülünü alamadıysanız lütfen sabırlı olun."
-    ]
   },
   "criteria": {
     "title": "Uygunluk kriterleri",
@@ -60,7 +53,7 @@
     "helperText": "Geçersiz adres",
     "actions": {
       "checkEligibilty": "Uygunluğu Kontrol Et",
-      "cancel": "İptal etmek"
+      "cancel": "İptal"
     }
   }
 }

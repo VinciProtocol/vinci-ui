@@ -3,12 +3,13 @@
     "totalValueLocked": "إجمالي القيمة مؤمن",
     "totalLockedNFT": "إجمالي NFT مغلق",
     "userLockedNFT": "NFT الخاص بك مغلق",
+    "rewardAPR": "المكافأة APR",
     "estmatedRewards": "المكافآت المقدرة"
   },
   "NFTLockdropRewards": {
     "title": "مكافآت NFT Lockdrop",
     "subTitle": {
-      "text": "قفل NFTs لمكافآت رمز VCI",
+      "text": "قفل NFTs للحصول على مكافآت رمز VCI",
       "tip": "يتعلم أكثر"
     },
     "collection": "مجموعة",
@@ -18,7 +19,7 @@
     "estmatedRewards": "المكافآت المقدرة",
     "functionButtons": "عمل",
     "actions": {
-      "depositNFT": "إيداع NFT"
+      "depositNFT": "قفل NFT"
     }
   }
 }

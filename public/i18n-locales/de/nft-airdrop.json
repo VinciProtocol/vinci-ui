@@ -6,8 +6,8 @@
     "willReceive": "werde empfangen",
     "NFT": {
       "actions": {
-        "comingSoon": "Kommt bald",
-        "claim": "Anspruch",
+        "comingSoon": "Demnächst",
+        "claim": "Beanspruchen",
         "claimed": "Behauptet",
         "tip": {
           "switchAccount": "Bitte wechsle zum Anspruchskonto."
@@ -35,13 +35,6 @@
       "borrow": "Ausleihen",
       "lend": "Verleihen"
     }
-  },
-  "tip": {
-    "warn": [
-      null,
-      "Wir erhalten jetzt überraschend viele Whitelist-Anfragen.",
-      "Wenn Sie die Aufgaben abgeschlossen haben, aber die Airdrop-Belohnung nicht beanspruchen konnten, haben Sie bitte etwas Geduld."
-    ]
   },
   "criteria": {
     "title": "Zulassungskriterien",

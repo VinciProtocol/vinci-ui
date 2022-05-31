@@ -10,7 +10,7 @@
       "lockTimeLeft": {
         "title": "Verbleibende Sperrzeit",
         "days": "Tage",
-        "hovers": "schwebt"
+        "hours": "Std."
       }
     },
     "wallet": {
@@ -23,7 +23,7 @@
     "totalValuation": "Gesamtbewertung:",
     "valuation": "Bewertung",
     "approveAll": "Alle genehmigen",
-    "depositSelected": "Anzahlung ausgewählt",
+    "depositSelected": "Ausgewählt sperren",
     "withdrawSelected": "Ausgewählte zurückziehen"
   },
   "LockNFTDialog": {
@@ -36,8 +36,9 @@
       "title": "Geschätzte Belohnungen",
       "warn": [
         null,
-        "Wir erhalten jetzt überraschend viele Whitelist-Anfragen.",
-        "Wenn Sie die Aufgaben abgeschlossen haben, aber die Airdrop-Belohnung nicht beanspruchen konnten, haben Sie bitte etwas Geduld."
+        "Sie erhalten ein Wrapped NFT als NFT Lockdrop-Gutschein.",
+        "Die Lockdrop-NFTs erhalten automatisch die Liquiditätsabbauanreize aus den Kreditpools.",
+        "Sie können Ihre NFT erst zurückziehen, wenn die Sperre abgelaufen ist."
       ]
     },
     "actions": {

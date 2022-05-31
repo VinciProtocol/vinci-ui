@@ -6,8 +6,8 @@
     "willReceive": "recibirá",
     "NFT": {
       "actions": {
-        "comingSoon": "Próximamente",
-        "claim": "Afirmar",
+        "comingSoon": "Próximamente, en breve, pronto",
+        "claim": "Reclamar",
         "claimed": "Reclamado",
         "tip": {
           "switchAccount": "Cambie de cuenta para reclamar."
@@ -28,20 +28,13 @@
     "warn": [
       null,
       "Ahora estamos recibiendo una sorprendente cantidad de solicitudes de lista blanca.",
-      "Si completó las tareas pero no pudo reclamar la recompensa del lanzamiento aéreo, tenga paciencia para ser incluido en la lista blanca."
+      "Si completó las tareas pero no pudo reclamar la recompensa de airdrop, tenga paciencia para ser incluido en la lista blanca."
     ],
     "actions": {
       "switchAccount": "Comprobar otra dirección",
       "borrow": "Tomar prestado",
       "lend": "Prestar"
     }
-  },
-  "tip": {
-    "warn": [
-      null,
-      "Ahora estamos recibiendo una sorprendente cantidad de solicitudes de lista blanca.",
-      "Si ha terminado las tareas pero no pudo reclamar la recompensa del lanzamiento aéreo, tenga paciencia."
-    ]
   },
   "criteria": {
     "title": "Criterio de elegibilidad",
@@ -56,7 +49,7 @@
   },
   "switchAccountDialog": {
     "title": "Pegar dirección",
-    "address": "dirección",
+    "address": "Dirección",
     "helperText": "Dirección inválida",
     "actions": {
       "checkEligibilty": "Comprobar elegibilidad",

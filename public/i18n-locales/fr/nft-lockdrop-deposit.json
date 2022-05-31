@@ -9,8 +9,8 @@
       },
       "lockTimeLeft": {
         "title": "Temps de verrouillage restant",
-        "days": "jours",
-        "hovers": "plane"
+        "days": "journées",
+        "hours": "heures"
       }
     },
     "wallet": {
@@ -23,26 +23,27 @@
     "totalValuation": "Valorisation totale :",
     "valuation": "Évaluation",
     "approveAll": "Tout approuver",
-    "depositSelected": "Dépôt sélectionné",
+    "depositSelected": "Verrouiller la sélection",
     "withdrawSelected": "Retirer la sélection"
   },
   "LockNFTDialog": {
     "title": "Verrouillez votre NFT",
     "chooseLockTime": {
       "title": "Choisissez l'heure de verrouillage",
-      "days": "JOURS"
+      "days": "JOURNÉES"
     },
     "estimatedRewards": {
       "title": "Récompenses estimées",
       "warn": [
         null,
-        "Nous recevons maintenant une quantité surprenante de demandes de liste blanche.",
-        "Si vous avez terminé les tâches mais que vous n'avez pas pu réclamer la récompense de largage, veuillez patienter."
+        "Vous recevrez un Wrapped NFT en tant que bon NFT Lockdrop.",
+        "Les NFT Lockdrop bénéficieront automatiquement des incitations à l'extraction de liquidités des pools de prêt.",
+        "Vous ne pouvez retirer votre NFT que lorsque le verrouillage expire."
       ]
     },
     "actions": {
       "cancel": "Annuler",
-      "deposit": "Fermer à clé"
+      "deposit": "Bloquer"
     }
   }
 }

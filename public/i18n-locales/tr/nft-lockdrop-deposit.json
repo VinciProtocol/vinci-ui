@@ -10,7 +10,7 @@
       "lockTimeLeft": {
         "title": "Kilit Süresi Sola",
         "days": "günler",
-        "hovers": "havada asılı"
+        "hours": "saat"
       }
     },
     "wallet": {
@@ -23,7 +23,7 @@
     "totalValuation": "Toplam Değerleme:",
     "valuation": "Değerleme",
     "approveAll": "Tümünü Onayla",
-    "depositSelected": "Depozito Seçildi",
+    "depositSelected": "Seçileni Kilitle",
     "withdrawSelected": "Seçileni Geri Çek"
   },
   "LockNFTDialog": {
@@ -36,12 +36,13 @@
       "title": "Tahmini Ödüller",
       "warn": [
         null,
-        "Şu anda şaşırtıcı miktarda beyaz liste isteği alıyoruz.",
-        "Görevleri tamamladıysanız ancak airdrop ödülünü alamadıysanız lütfen sabırlı olun."
+        "NFT Lockdrop kuponu olarak bir Wrapped NFT alacaksınız.",
+        "Lockdrop NFT'leri, kredi havuzlarından otomatik olarak likidite madenciliği teşviklerine sahip olacaktır.",
+        "NFT'nizi yalnızca kilidin süresi dolduğunda geri çekebilirsiniz."
       ]
     },
     "actions": {
-      "cancel": "İptal etmek",
+      "cancel": "İptal",
       "deposit": "Kilit"
     }
   }

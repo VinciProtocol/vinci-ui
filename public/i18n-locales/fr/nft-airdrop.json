@@ -36,13 +36,6 @@
       "lend": "Prêter"
     }
   },
-  "tip": {
-    "warn": [
-      null,
-      "Nous recevons maintenant une quantité surprenante de demandes de liste blanche.",
-      "Si vous avez terminé les tâches mais que vous n'avez pas pu réclamer la récompense de largage, veuillez patienter."
-    ]
-  },
   "criteria": {
     "title": "Critère d'éligibilité",
     "subTitle": [

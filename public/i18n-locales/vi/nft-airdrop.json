@@ -33,15 +33,8 @@
     "actions": {
       "switchAccount": "Kiểm tra một địa chỉ khác",
       "borrow": "Vay",
-      "lend": "Mượn"
+      "lend": "Cho vay"
     }
-  },
-  "tip": {
-    "warn": [
-      null,
-      "Chúng tôi hiện đang nhận được một lượng lớn yêu cầu danh sách trắng đáng ngạc nhiên.",
-      "Nếu bạn đã hoàn thành nhiệm vụ nhưng không thể nhận phần thưởng airdrop, hãy kiên nhẫn."
-    ]
   },
   "criteria": {
     "title": "Đủ tiêu chuẩn",
@@ -56,7 +49,7 @@
   },
   "switchAccountDialog": {
     "title": "Dán địa chỉ",
-    "address": "Địa chỉ",
+    "address": "địa chỉ",
     "helperText": "Địa chỉ không hợp lệ",
     "actions": {
       "checkEligibilty": "Kiểm tra Eligibilty",

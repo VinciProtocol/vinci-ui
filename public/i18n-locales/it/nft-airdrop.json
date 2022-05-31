@@ -36,13 +36,6 @@
       "lend": "Prestare"
     }
   },
-  "tip": {
-    "warn": [
-      null,
-      "Ora stiamo ricevendo una quantità sorprendente di richieste di whitelist.",
-      "Se hai completato le attività ma non hai potuto richiedere il premio airdrop, sii paziente."
-    ]
-  },
   "criteria": {
     "title": "Criteri di ammissibilità",
     "subTitle": [

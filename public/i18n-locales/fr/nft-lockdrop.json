@@ -3,6 +3,7 @@
     "totalValueLocked": "Valeur totale verrouillée",
     "totalLockedNFT": "NFT total verrouillé",
     "userLockedNFT": "Votre NFT verrouillé",
+    "rewardAPR": "Récompense APR",
     "estmatedRewards": "Récompenses estimées"
   },
   "NFTLockdropRewards": {
@@ -18,7 +19,7 @@
     "estmatedRewards": "Récompenses estimées",
     "functionButtons": "Action",
     "actions": {
-      "depositNFT": "Dépôt NFT"
+      "depositNFT": "Verrouiller NFT"
     }
   }
 }

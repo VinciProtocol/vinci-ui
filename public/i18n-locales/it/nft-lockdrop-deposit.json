@@ -10,7 +10,7 @@
       "lockTimeLeft": {
         "title": "Tempo di blocco rimasto",
         "days": "giorni",
-        "hovers": "aleggia"
+        "hours": "ore"
       }
     },
     "wallet": {
@@ -23,7 +23,7 @@
     "totalValuation": "Valutazione totale:",
     "valuation": "Valutazione",
     "approveAll": "Approva tutto",
-    "depositSelected": "Deposito selezionato",
+    "depositSelected": "Blocca selezionato",
     "withdrawSelected": "Ritiro selezionato"
   },
   "LockNFTDialog": {
@@ -36,8 +36,9 @@
       "title": "Premi stimati",
       "warn": [
         null,
-        "Ora stiamo ricevendo una quantità sorprendente di richieste di whitelist.",
-        "Se hai completato le attività ma non hai potuto richiedere il premio airdrop, sii paziente."
+        "Riceverai un Wrapped NFT come voucher NFT Lockdrop.",
+        "I Lockdrop NFT riceveranno automaticamente gli incentivi per l'estrazione di liquidità dai pool di prestito.",
+        "Puoi ritirare la tua NFT solo quando il blocco scade."
       ]
     },
     "actions": {

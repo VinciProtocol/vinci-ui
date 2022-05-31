@@ -9,8 +9,8 @@
       },
       "lockTimeLeft": {
         "title": "Tiempo restante de bloqueo",
-        "days": "dias",
-        "hovers": "se cierne"
+        "days": "días",
+        "hours": "horas"
       }
     },
     "wallet": {
@@ -23,26 +23,27 @@
     "totalValuation": "Valoración total:",
     "valuation": "Valuación",
     "approveAll": "Aprobar todo",
-    "depositSelected": "Depósito seleccionado",
+    "depositSelected": "Bloqueo seleccionado",
     "withdrawSelected": "Retirar seleccionados"
   },
   "LockNFTDialog": {
     "title": "Bloquee su NFT",
     "chooseLockTime": {
       "title": "Elija el tiempo de bloqueo",
-      "days": "DIAS"
+      "days": "DÍAS"
     },
     "estimatedRewards": {
       "title": "Recompensas estimadas",
       "warn": [
         null,
-        "Ahora estamos recibiendo una sorprendente cantidad de solicitudes de lista blanca.",
-        "Si ha terminado las tareas pero no pudo reclamar la recompensa del lanzamiento aéreo, tenga paciencia."
+        "Obtendrá un NFT envuelto como cupón de NFT Lockdrop.",
+        "Los NFT de Lockdrop tendrán automáticamente los incentivos de extracción de liquidez de los grupos de préstamos.",
+        "Solo puede retirar su NFT cuando expire el bloqueo."
       ]
     },
     "actions": {
       "cancel": "Cancelar",
-      "deposit": "Cerrar con llave"
+      "deposit": "Cerrar"
     }
   }
 }

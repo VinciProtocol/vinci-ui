@@ -3,6 +3,7 @@
     "totalValueLocked": "잠긴 총 가치",
     "totalLockedNFT": "총 잠금 NFT",
     "userLockedNFT": "잠긴 NFT",
+    "rewardAPR": "보상 APR",
     "estmatedRewards": "예상 보상"
   },
   "NFTLockdropRewards": {
@@ -16,9 +17,9 @@
     "totalLockedNFT": "총 잠금 NFT",
     "userLockedNFT": "잠긴 NFT",
     "estmatedRewards": "예상 보상",
-    "functionButtons": "행동",
+    "functionButtons": "동작",
     "actions": {
-      "depositNFT": "NFT 입금"
+      "depositNFT": "NFT 잠금"
     }
   }
 }

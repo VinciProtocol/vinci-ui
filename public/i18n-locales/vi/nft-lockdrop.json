@@ -3,6 +3,7 @@
     "totalValueLocked": "Tổng giá trị đã khóa",
     "totalLockedNFT": "Tổng NFT đã khóa",
     "userLockedNFT": "NFT đã khóa của bạn",
+    "rewardAPR": "Thưởng APR",
     "estmatedRewards": "Phần thưởng ước tính"
   },
   "NFTLockdropRewards": {
@@ -18,7 +19,7 @@
     "estmatedRewards": "Phần thưởng ước tính",
     "functionButtons": "Hoạt động",
     "actions": {
-      "depositNFT": "Gửi tiền NFT"
+      "depositNFT": "Khóa NFT"
     }
   }
 }
