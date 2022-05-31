@@ -73,7 +73,7 @@ const getNFTS = () => {
     // ...getMarketsData(ChainId.localhost).nfts,
     // ...getMarketsData(ChainId.bsct).nfts,
     ...getMarketsData(ChainId.vinci).nfts,
-    // ...getMarketsData(ChainId.kovan).nfts,
+    ...getMarketsData(ChainId.kovan).nfts,
     // ...getMarketsData(ChainId.bsc).nfts,
     // ...getMarketsData(ChainId.ethereum).nfts,
   }

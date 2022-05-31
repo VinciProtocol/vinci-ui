@@ -37,7 +37,9 @@
       "VToken": "0x82c3832d07c8165c4df9134e9f422fc1b536e14f",
       "StableDebtToken": "0xe7aeadd51f5f012b043210ecb4c03ad5782c6bc8",
       "VariableDebtToken": "0x620a85575f330f39a46269d258520b03161553df",
-      "TimeLockableNTokenForTest": "0xaf924172db6742dbad8bbecec9257bb66849c9b0",
+      "TimeLockableNTokenForTest": {
+        "vnBAYC": "0xaf924172db6742dbad8bbecec9257bb66849c9b0"
+      },
       "AaveProtocolDataProvider": "0x26639a3f8db0a861943c841a8fa2e49573411f46",
       "rateStrategyStableTwo": "0xe14bf9206d15d3c8dfd8fb417544df4890cd3009",
       "rateStrategyWETH": "0xdafc502771d822249e58651c362c350068a5b84e",
