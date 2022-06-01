@@ -38,7 +38,7 @@ const LockNFTDialog: FC<LockNFTDialogProps> = ({ nfts, visible, close, onClick }
     `
   )
   const {
-    timeLockedDashboard: { totalValue },
+    timeLockedDashboard: { totalValue, rewardAmount },
   } = useThegraph()
 
   const estimatedRewards = useMemo(() => {
@@ -49,8 +49,8 @@ const LockNFTDialog: FC<LockNFTDialogProps> = ({ nfts, visible, close, onClick }
       return sum.plus(valueToBigNumber(days).multipliedBy(nft.currentFloorPrice))
     }, valueToBigNumber(0))
     if (userValue.eq(0)) return 0
-    return userValue.div(totalValue.plus(userValue)).multipliedBy(REWARD_AMOUNT)
-  }, [nfts, totalValue, type])
+    return userValue.div(totalValue.plus(userValue)).multipliedBy(rewardAmount)
+  }, [nfts, rewardAmount, totalValue, type])
 
   return (
     <Dialog onClose={close} open={visible}>

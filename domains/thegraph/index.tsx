@@ -108,8 +108,9 @@ const useThegraphService = () => {
     })
 
     const { userValue, totalValue } = estmatedRewards
+    const rewardAmount = totalTVL.gte(5000) ? REWARD_AMOUNT : totalTVL.div(5000).multipliedBy(REWARD_AMOUNT)
     if (!userValue.eq(0) && !totalValue.eq(0)) {
-      estmatedRewards.value = userValue.div(totalValue).multipliedBy(REWARD_AMOUNT)
+      estmatedRewards.value = userValue.div(totalValue).multipliedBy(rewardAmount)
     }
     let rewardAPR = valueToBigNumber(0)
     if (!totalValue.eq(0) && !estmatedRewards.value.eq(0)) {
@@ -124,12 +125,13 @@ const useThegraphService = () => {
       estmatedRewards: estmatedRewards.value,
       rewardAPR,
       totalValue,
+      rewardAmount,
     }
 
     nftAssets.forEach((nft, index) => {
       const { userValue } = nftAssetsTimeLocked[index]
       if (!userValue.eq(0) && !totalValue.eq(0)) {
-        nftAssetsTimeLocked[index].estmatedRewards = userValue.div(totalValue).multipliedBy(REWARD_AMOUNT)
+        nftAssetsTimeLocked[index].estmatedRewards = userValue.div(totalValue).multipliedBy(rewardAmount)
       }
     })
 
