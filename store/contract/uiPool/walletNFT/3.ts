@@ -9,7 +9,7 @@ const request = createAsyncThunk(`${key}/request`, (args: WalletNFTProps) => use
 
 export const { reducer, selectData, useRequestController } = createRequestSlice(
   key,
-  createRequestSliceState<WalletNFT[]>(),
+  createRequestSliceState<WalletNFT>(),
   request
 )
 

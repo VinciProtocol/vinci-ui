@@ -12,7 +12,7 @@ import { selectData as select5 } from '../5'
 import type { WalletBalancesData } from '../adapter/walletBalanceAdapter'
 import { getWalletBalancesData } from '../adapter/walletBalanceAdapter'
 
-type WalletBalance = WalletBalancesData[]
+export type WalletBalance = WalletBalancesData[]
 export const useWalletBalanceData = () => {
   const data1 = useAppSelector(select1)
   const data2 = useAppSelector(select2)

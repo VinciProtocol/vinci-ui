@@ -3,11 +3,15 @@ import { valueToBigNumber } from 'utils/math'
 
 import type { WalletBalances } from './request'
 
-export const getWalletBalancesData = (id: string, walletBalances: WalletBalances = {}) => {
+export const getWalletBalancesData = (
+  id: string,
+  { data, lendingPoolAddressesProvider }: WalletBalances = { data: {}, lendingPoolAddressesProvider: '' }
+) => {
   return {
     id,
-    data: Object.keys(walletBalances).reduce((o, k) => {
-      o[k] = valueToBigNumber(walletBalances[k])
+    lendingPoolAddressesProvider,
+    data: Object.keys(data).reduce((o, k) => {
+      o[k] = valueToBigNumber(data[k])
       return o
     }, {} as Record<string, BigNumber>),
   }

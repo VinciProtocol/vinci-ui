@@ -25,7 +25,7 @@ export const NFT_ID_1 = 'BAYC'
 export const NFT_ID_2 = 'MAYC'
 export const NFT_ID_3 = 'PS'
 export const NFT_ID_4 = 'CloneX'
-export const NFT_ID_5 = 'MEKA'
+export const NFT_ID_5 = 'Azuki'
 
 export const getMarketsData = (chainId: ChainId): MarketData => {
   const generateInfo = list[chainId]
@@ -39,13 +39,21 @@ export const getMarketsData = (chainId: ChainId): MarketData => {
       vinciNFTProvider: generateInfo.vinciNFTProvider,
       uiPoolDataProvider: generateInfo.UiPoolDataProvider,
     },
+    info: Object.keys(generateInfo.markets || {}).reduce((obj, marketID) => {
+      const market = (generateInfo.markets as any)[marketID]
+      obj[marketID] = {
+        lendingPool: market.LendingPool,
+        lendingPoolAddressesProvider: market.LendingPoolAddressesProvider,
+      }
+      return obj
+    }, {} as Record<string, any>),
     nfts: Object.keys(generateInfo.markets || {}).reduce((obj, marketID) => {
-      const markets: Record<string, NFTGenerate> = generateInfo.markets
-      Object.keys(markets[marketID].TimeLockableNTokenForTest).forEach((nftID) => {
+      const markets: Record<string, NFTGenerate> = generateInfo.markets as any
+      Object.keys(markets[marketID].TimeLockableNToken).forEach((nftID) => {
         const collection = nftID.replace('vn', '')
         const underlyingAsset = (generateInfo as any)[collection]
         if (!underlyingAsset) throw new Error(`[getMarketsData] ${chainId} 找不到对应 NFT配置 => (${collection})`)
-        const nToken = markets[marketID].TimeLockableNTokenForTest[nftID]
+        const nToken = markets[marketID].TimeLockableNToken[nftID]
         const { LendingPool, LendingPoolAddressesProvider } = markets[marketID]
         const { src, market } = getNFTInfo(collection)
         const setting: NFTSetting = {
@@ -66,13 +74,13 @@ export const getMarketsData = (chainId: ChainId): MarketData => {
   }
 }
 
-export const defaultMarket = getMarketsData(ChainId.vinci)
+export const defaultMarket = getMarketsData(ChainId.kovan)
 
 const getNFTS = () => {
   return {
     // ...getMarketsData(ChainId.localhost).nfts,
     // ...getMarketsData(ChainId.bsct).nfts,
-    ...getMarketsData(ChainId.vinci).nfts,
+    // ...getMarketsData(ChainId.vinci).nfts,
     ...getMarketsData(ChainId.kovan).nfts,
     // ...getMarketsData(ChainId.bsc).nfts,
     // ...getMarketsData(ChainId.ethereum).nfts,

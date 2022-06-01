@@ -22,6 +22,8 @@ import { useWalletNFTData } from 'store/contract/uiPool/walletNFT/hooks'
 import ContractNFTProvider from './nft'
 export { createContractNFTContext } from './nft'
 import ContractERC20Provider from './erc20'
+import type { WalletBalancesData } from 'store/contract/uiPool/walletBalances/adapter/walletBalanceAdapter'
+import type { WalletNFTData } from 'store/contract/uiPool/walletNFT/adapter/walletNFTAdapter'
 
 const useContractDataService = () => {
   const { market } = useMarket()
@@ -36,10 +38,21 @@ const useContractDataService = () => {
           reservesData.nftVaults.map(({ underlyingAsset }) => market.nfts[underlyingAsset])
         )
         if (!nftSettings.length) return
-        const userReservesData = userReservesDatas.find(({ id }) => reservesData.id === id)
-        const nftSymbol = safeGet(() => reservesData.nftVaults[0].symbol)
-        const walletBalance = nftSymbol && walletBalanceData.find(({ id }) => nftSymbol === id)
-        const walletNFT = nftSymbol && walletNFTData.find(({ id }) => nftSymbol === id)
+        const marketId = reservesData.id
+        const userReservesData = userReservesDatas.find(({ id }) => marketId === id)
+        let walletNFT: WalletNFTData
+        let walletBalance: WalletBalancesData
+        const marketInfo = market.info[marketId]
+        if (marketInfo && marketInfo.lendingPoolAddressesProvider) {
+          walletBalance = walletBalanceData.find(
+            ({ lendingPoolAddressesProvider }) =>
+              marketInfo.lendingPoolAddressesProvider === lendingPoolAddressesProvider
+          )
+          walletNFT = walletNFTData.find(
+            ({ lendingPoolAddressesProvider }) =>
+              marketInfo.lendingPoolAddressesProvider === lendingPoolAddressesProvider
+          )
+        }
 
         return {
           reservesData,
