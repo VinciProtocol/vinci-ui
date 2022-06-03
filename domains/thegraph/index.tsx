@@ -14,25 +14,25 @@ export const lockTypeList = [
   [
     {
       type: '1',
-      days: '30',
-    },
-    {
-      type: '2',
       days: '60',
     },
     {
-      type: '3',
+      type: '2',
       days: '90',
+    },
+    {
+      type: '3',
+      days: '120',
     },
   ],
   [
     {
       type: '4',
-      days: '120',
+      days: '240',
     },
     {
       type: '5',
-      days: '240',
+      days: '360',
     },
   ],
 ]

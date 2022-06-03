@@ -10,6 +10,7 @@ import type { BasicTableProps } from './types'
 
 const PCTable: FC<BasicTableProps> = (props) => {
   const { columns, data } = props
+  const { onRowClick } = props.tableProps || {}
 
   const table = useMemo(() => {
     return {
@@ -29,7 +30,18 @@ const PCTable: FC<BasicTableProps> = (props) => {
       body:
         data &&
         data.map((row, rowIndex) => (
-          <TableRow key={rowIndex} className="ReactVirtualized__Table__row">
+          <TableRow
+            key={rowIndex}
+            className="ReactVirtualized__Table__row"
+            onClick={(e) =>
+              onRowClick &&
+              onRowClick({
+                rowData: row,
+                index: rowIndex,
+                event: e,
+              })
+            }
+          >
             {columns.map((column, columnIndex) => (
               <td
                 key={rowIndex + column.dataKey}
@@ -54,7 +66,7 @@ const PCTable: FC<BasicTableProps> = (props) => {
           </TableRow>
         )),
     }
-  }, [columns, data])
+  }, [columns, data, onRowClick])
 
   return (
     <ROOT className="table basic-table">
