@@ -14,6 +14,7 @@ import {
   useWalletBalanceController3,
   useWalletBalanceController4,
   useWalletBalanceController5,
+  useWalletBalanceController6,
 } from './application/walletBalance'
 
 import {
@@ -22,6 +23,7 @@ import {
   useWalletNFTController3,
   useWalletNFTController4,
   useWalletNFTController5,
+  useWalletNFTController6,
 } from './application/walletNFT'
 
 export const useControllersService = () => {
@@ -32,11 +34,13 @@ export const useControllersService = () => {
   const walletBalance3 = useWalletBalanceController3()
   const walletBalance4 = useWalletBalanceController4()
   const walletBalance5 = useWalletBalanceController5()
+  const walletBalance6 = useWalletBalanceController6()
   const walletNFT1 = useWalletNFTController1()
   const walletNFT2 = useWalletNFTController2()
   const walletNFT3 = useWalletNFTController3()
   const walletNFT4 = useWalletNFTController4()
   const walletNFT5 = useWalletNFTController5()
+  const walletNFT6 = useWalletNFTController6()
 
   useChainIDChange({
     controllers: [
@@ -47,11 +51,13 @@ export const useControllersService = () => {
       walletBalance3,
       walletBalance4,
       walletBalance5,
+      walletBalance6,
       walletNFT1,
       walletNFT2,
       walletNFT3,
       walletNFT4,
       walletNFT5,
+      walletNFT6
     ],
   })
 

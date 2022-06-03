@@ -5,6 +5,7 @@ import wn2 from './2'
 import wn3 from './3'
 import wn4 from './4'
 import wn5 from './5'
+import wn6 from './6'
 
 const reducer = combineReducers({
   wn1,
@@ -12,6 +13,7 @@ const reducer = combineReducers({
   wn3,
   wn4,
   wn5,
+  wn6,
 })
 
 export default reducer

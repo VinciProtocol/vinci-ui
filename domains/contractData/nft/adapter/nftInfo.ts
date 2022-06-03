@@ -1,4 +1,4 @@
-import { NFT_ID_1, NFT_ID_2, NFT_ID_3, NFT_ID_4, NFT_ID_5 } from 'app/web3/market'
+import { NFT_ID_1, NFT_ID_2, NFT_ID_3, NFT_ID_4, NFT_ID_5, NFT_ID_6 } from 'app/web3/market'
 import type { MarketData } from 'app/web3/market/types'
 import { safeGet } from 'utils/get'
 
@@ -97,6 +97,20 @@ export const getNFTInfo = (props: NFTInfoProps): Promise<NFTInfo[]> => {
         description: 'Azuki',
       }))
     )
+  } else if (underlyingAsset === safeGet(() => market.nfts[NFT_ID_6].underlyingAsset)) {
+    const promises = []
+    for (let i = 0; i < tokenIds.length; i++) {
+      const tokenId = tokenIds[i]
+      promises.push(
+        fetchNFTInfo('https://ipfs.io/ipfs/QmPMc4tcBsMqLRuCQtPmPe84bpSjrC3Ky7t3JWuHXYB4aS/' + tokenId, (d) => ({
+          id: tokenId,
+          name: '#' + tokenId,
+          image: d.image.replace('ipfs://', 'https://ipfs.io/ipfs/'),
+          description: 'Doodles',
+        }))
+      )
+    }
+    return Promise.all(promises)
   }
 }
 

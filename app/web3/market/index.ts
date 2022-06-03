@@ -26,6 +26,7 @@ export const NFT_ID_2 = 'MAYC'
 export const NFT_ID_3 = 'PS'
 export const NFT_ID_4 = 'CloneX'
 export const NFT_ID_5 = 'Azuki'
+export const NFT_ID_6 = 'DOODLE'
 
 export const getMarketsData = (chainId: ChainId): MarketData => {
   const generateInfo = list[chainId]

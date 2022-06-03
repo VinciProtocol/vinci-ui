@@ -3,11 +3,12 @@ import mutantApe from './images/mutant-ape.jpg'
 import pancakeSquad from './images/pancake-squad.jpg'
 import azuki from './images/azuki.jpg'
 import cloneX from './images/clonex.png'
+import doodles from './images/doodles.jpg'
 
 import opensea from './images/opensea.svg'
 import pancake from './images/pancake.svg'
 
-import { NFT_ID_1, NFT_ID_2, NFT_ID_3, NFT_ID_4, NFT_ID_5 } from '.'
+import { NFT_ID_1, NFT_ID_2, NFT_ID_3, NFT_ID_4, NFT_ID_5, NFT_ID_6 } from '.'
 
 export const getNFTInfo = (collection: string) => {
   switch (collection) {
@@ -49,6 +50,14 @@ export const getNFTInfo = (collection: string) => {
         market: {
           logo: opensea,
           url: 'https://opensea.io/collection/azuki',
+        },
+      }
+    case NFT_ID_6:
+      return {
+        src: doodles.src,
+        market: {
+          logo: opensea,
+          url: 'https://opensea.io/collection/doodles-official',
         },
       }
     default:

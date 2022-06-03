@@ -113,7 +113,7 @@ const useContractDataService = () => {
       reserves.forEach((p) => {
         const poolReserve = cloneDeep(p)
         if (!poolReserve.isActive) return
-        const nftSetting = nftSettings[0]
+        const nftSetting = nftSettings[0] || ({} as undefined)
         const {
           underlyingAsset,
           vTokenAddress,
@@ -331,13 +331,14 @@ const useContractDataService = () => {
           lockActionExpiration,
           nftPriceInUSD,
           currency: { currencyPriceInUSD },
-          nftSetting,
+          nftSetting: nS,
           userNFTVaults,
           walletNFTs,
         }: any) => {
           let collateralValueInUSD = valueToBigNumber(0)
           let borrowLimitInUSD = valueToBigNumber(0)
           let depositCount = valueToBigNumber(0)
+          let nftSetting = nS || {}
           const userNFTVault = userNFTVaults.find((i: any) => i.underlyingAsset === underlyingAsset)
           userNFTVaults.forEach((userNFTVault: any) => {
             depositCount = userNFTVault.nTokenBalance
