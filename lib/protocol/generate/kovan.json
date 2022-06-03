@@ -10,6 +10,7 @@
   "WETHGateway": "0x355b5a7a1425d64e18acc5797e5f52b920593e5b",
   "WalletBalanceProvider": "0xeb6e982c5af8082b418df04cbf8a2166665964aa",
   "Azuki": "0xafc554d0d3b91e2c22b91efb86a2edeb95145387",
+  "DOODLE": "0x739e74dfb5fe3fffef785e7d9c3784e280d86606",
   "UiPoolDataProvider": "0x1ac832ade012a6a2cfd0abfe4597da1c8f77584f",
   "markets": {
     "VinciAzuki": {
@@ -30,6 +31,23 @@
       "AZUKIEligibility": "0x2abcddd4cce67a75a40aa18612f9ce7800cff21e",
       "LendingPoolCollateralManagerImpl": "0x66268ec4ca5ea2d49b789981c12f3fb10d42a3e5",
       "LendingPoolCollateralManager": "0x66268ec4ca5ea2d49b789981c12f3fb10d42a3e5"
+    },
+    "VinciDOODLE": {
+      "LendingPoolAddressesProvider": "0x2224b6f3cdedda34dd6c30b0b7651a0a7061788b",
+      "LendingPoolImpl": "0xbf2da00be73f6a002783761e37031ffebe1a2fae",
+      "LendingPool": "0xabd5bd7af8fefa73dfeff9bce0fd3914012f3cb4",
+      "LendingPoolConfiguratorImpl": "0x88e1372aaa6957c250ca3fce0803cd957b826f74",
+      "LendingPoolConfigurator": "0x935383bb8fcea636bba18b20a8bff66de22f5a31",
+      "StableAndVariableTokensHelper": "0x20fe39d8c3fc9e3df83c4682d1ebaadc9feada45",
+      "VTokensAndRatesHelper": "0x6d28cc18f5ce2af9330f48950de1515e5babb6d8",
+      "TimeLockableNToken": {
+        "vnDOODLE": "0x5e83de1387360727adc92c097ee087d2c49e9394"
+      },
+      "AaveProtocolDataProvider": "0x4369bd122a353247a429af36e7558d048002a2e9",
+      "LendingPoolCollateralManagerImpl": "0xef8872064ca18bdd475e31bee6ee7721a1e8ae8e",
+      "LendingPoolCollateralManager": "0xef8872064ca18bdd475e31bee6ee7721a1e8ae8e",
+      "DOODLEEligibilityImpl": "0x52a834f2b50c1d025a07cd1ce578155e5be0df43",
+      "DOODLEEligibility": "0x556f7b4d67cadc4409f308002f017ad7f1ca2232"
     }
   }
 }
