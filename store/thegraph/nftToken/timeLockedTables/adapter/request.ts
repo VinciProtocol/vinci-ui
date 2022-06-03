@@ -1,10 +1,13 @@
+import { NFTs, NFT_IDS } from 'app/web3/market'
 import { safeGet } from 'utils/get'
 
-export type TimeLockedTablesProps = {
+type RequestProps = {
+  name: string
   account: string
+  signal: any
 }
-export const getTimeLockedTables = ({ account }: TimeLockedTablesProps) => {
-  return fetch('https://api.thegraph.com/subgraphs/name/imsunhao/nft-token', {
+function request({ name, account, signal }: RequestProps) {
+  return fetch(`https://api.thegraph.com/subgraphs/name/${name}`, {
     headers: {
       accept: '*/*',
       'content-type': 'application/json',
@@ -17,17 +20,41 @@ export const getTimeLockedTables = ({ account }: TimeLockedTablesProps) => {
     method: 'POST',
     mode: 'cors',
     credentials: 'omit',
-  })
-    .then((data) => data.json())
-    .then((data) => {
-      const timeLockedTables: any[] = safeGet(() => data.data.timeLockedTables)
-      if (!timeLockedTables) return Promise.reject(data)
-      return timeLockedTables
-    })
+    signal,
+  }).then((data) => data.json())
 }
-export type TimeLockedTables = Array<{
-  expirationTime: number
-  nToken: string
-  lockType: string
-  tokenid: string
-}>
+
+export type TimeLockedTablesProps = {
+  account: string
+}
+export const getTimeLockedTables = ({ account }: TimeLockedTablesProps, { signal }: any) => {
+  const timeLockedTables: TimeLockedTables = {}
+  const promises: any = []
+  NFT_IDS.forEach((NFT_ID) => {
+    const nftSetting = NFTs[NFT_ID]
+    const name = `imsunhao/nft-token-${nftSetting.collection.toLowerCase()}`
+    promises.push(
+      request({
+        name,
+        signal,
+        account,
+      }).then((data) => {
+        const table: any[] = safeGet(() => data.data.timeLockedTables)
+        if (!table) return Promise.reject(data)
+        timeLockedTables[nftSetting.underlyingAsset] = table
+        return table
+      })
+    )
+  })
+  return Promise.all(promises).then(() => timeLockedTables)
+}
+
+export type TimeLockedTables = Record<
+  string,
+  Array<{
+    expirationTime: number
+    nToken: string
+    lockType: string
+    tokenid: string
+  }>
+>

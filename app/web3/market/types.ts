@@ -3,9 +3,9 @@ import type { ChainId } from '../chain/types'
 export type NFTSetting = {
   LENDING_POOL: string
   LENDING_POOL_ADDRESS_PROVIDER: string
-  collection: any
-  underlyingAsset: any
-  nToken: any
+  collection: string
+  underlyingAsset: string
+  nToken: string
   src: any
   market: {
     logo: any

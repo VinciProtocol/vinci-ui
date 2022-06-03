@@ -5,7 +5,7 @@ import type { CountTablesProps, CountTables } from './adapter/request'
 import { getCountTables } from './adapter/request'
 
 const key = 'thegraph.nftToken.countTables'
-const request = createAsyncThunk(`${key}/request`, (args: CountTablesProps) => getCountTables(args))
+const request = createAsyncThunk(`${key}/request`, (args: CountTablesProps, options) => getCountTables(args, options))
 
 export const { reducer, select, useRequestController, selectData } = createRequestSlice(
   key,

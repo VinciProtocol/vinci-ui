@@ -63,25 +63,27 @@ const useThegraphService = () => {
     }
     const nftAssetsTimeLocked: any[] = []
     nftAssets.forEach((nft) => {
-      const { currentFloorPriceInUSD } = nft
+      const { currentFloorPriceInUSD, underlyingAsset } = nft
+      const countTable = countTables[underlyingAsset] || {}
+      const timeLockedTable = timeLockedTables[underlyingAsset] || []
       const timeLockedCount: any = {
-        total: countTables['TimeLocked_total'] || 0,
-        '1': countTables['TimeLocked_lockType_1'] || 0,
-        '2': countTables['TimeLocked_lockType_2'] || 0,
-        '3': countTables['TimeLocked_lockType_3'] || 0,
-        '4': countTables['TimeLocked_lockType_4'] || 0,
-        '5': countTables['TimeLocked_lockType_5'] || 0,
-        '6': countTables['TimeLocked_lockType_6'] || 0,
+        total: countTable['TimeLocked_total'] || 0,
+        '1': countTable['TimeLocked_lockType_1'] || 0,
+        '2': countTable['TimeLocked_lockType_2'] || 0,
+        '3': countTable['TimeLocked_lockType_3'] || 0,
+        '4': countTable['TimeLocked_lockType_4'] || 0,
+        '5': countTable['TimeLocked_lockType_5'] || 0,
+        '6': countTable['TimeLocked_lockType_6'] || 0,
       }
       const TVL = valueToBigNumber(timeLockedCount.total)
       const TVLInUSD = valueToBigNumber(currentFloorPriceInUSD).multipliedBy(TVL)
-      const userLocked = timeLockedTables.length
+      const userLocked = timeLockedTable.length
       let userValue = valueToBigNumber(0)
       if (userLocked) {
         let userDays = valueToBigNumber(0)
         let totalDays = valueToBigNumber(0)
         Object.keys(lockTypeMap).map((type) => {
-          const timeLocked = timeLockedTables.filter((row) => row.lockType === type)
+          const timeLocked = timeLockedTable.filter((row) => row.lockType === type)
           const days = lockTypeMap[type]
           userDays = userDays.plus(valueToBigNumber(timeLocked.length).multipliedBy(days))
           totalDays = totalDays.plus(valueToBigNumber(timeLockedCount[type]).multipliedBy(days))
@@ -108,13 +110,15 @@ const useThegraphService = () => {
     })
 
     const { userValue, totalValue } = estmatedRewards
-    const rewardAmount = totalTVL.gte(5000) ? REWARD_AMOUNT : totalTVL.div(5000).multipliedBy(REWARD_AMOUNT)
+    const rewardAmount = valueToBigNumber(
+      totalTVL.gte(5000) ? REWARD_AMOUNT : totalTVL.div(5000).multipliedBy(REWARD_AMOUNT)
+    )
     if (!userValue.eq(0) && !totalValue.eq(0)) {
       estmatedRewards.value = userValue.div(totalValue).multipliedBy(rewardAmount)
     }
     let rewardAPR = valueToBigNumber(0)
-    if (!totalValue.eq(0) && !estmatedRewards.value.eq(0)) {
-      rewardAPR = estmatedRewards.value.multipliedBy(VCI_TOKEN_PRICE).multipliedBy(365).div(totalValue)
+    if (!totalValue.eq(0)) {
+      rewardAPR = rewardAmount.multipliedBy(VCI_TOKEN_PRICE).multipliedBy(365).div(totalValue)
     }
 
     const timeLockedDashboard = {
@@ -139,7 +143,7 @@ const useThegraphService = () => {
 
     log('[domains] [timeLocked]', returnValue)
     return returnValue
-  }, [countTables, timeLockedTables, nftAssets])
+  }, [nftAssets, countTables, timeLockedTables])
 
   return { timeLockedDashboard, nftAssetsTimeLocked }
 }

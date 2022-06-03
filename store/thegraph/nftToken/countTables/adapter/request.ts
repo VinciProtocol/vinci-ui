@@ -1,8 +1,12 @@
+import { NFTs, NFT_IDS } from 'app/web3/market'
 import { safeGet } from 'utils/get'
 
-export type CountTablesProps = {}
-export const getCountTables = (props: CountTablesProps) => {
-  return fetch('https://api.thegraph.com/subgraphs/name/imsunhao/nft-token', {
+type RequestProps = {
+  name: string
+  signal: any
+}
+function request({ name, signal }: RequestProps) {
+  return fetch(`https://api.thegraph.com/subgraphs/name/${name}`, {
     headers: {
       accept: '*/*',
       'content-type': 'application/json',
@@ -15,15 +19,32 @@ export const getCountTables = (props: CountTablesProps) => {
     method: 'POST',
     mode: 'cors',
     credentials: 'omit',
-  })
-    .then((data) => data.json())
-    .then((data) => {
-      const countTables: any[] = safeGet(() => data.data.countTables)
-      if (!countTables) return Promise.reject(data)
-      return countTables.reduce((obj, { id, count }) => {
-        obj[id] = count
-        return obj
-      }, {} as any)
-    })
+    signal,
+  }).then((data) => data.json())
 }
-export type CountTables = Record<string, number>
+
+export type CountTablesProps = {}
+export const getCountTables = (props: CountTablesProps, { signal }: any) => {
+  const countTables: CountTables = {}
+  const promises: any = []
+  NFT_IDS.forEach((NFT_ID) => {
+    const nftSetting = NFTs[NFT_ID]
+    const name = `imsunhao/nft-token-${nftSetting.collection.toLowerCase()}`
+    promises.push(
+      request({
+        name,
+        signal,
+      }).then((data) => {
+        const table: any[] = safeGet(() => data.data.countTables)
+        if (!table) return Promise.reject(data)
+        countTables[nftSetting.underlyingAsset] = table.reduce((obj, { id, count }) => {
+          obj[id] = count
+          return obj
+        }, {} as any)
+        return table
+      })
+    )
+  })
+  return Promise.all(promises).then(() => countTables)
+}
+export type CountTables = Record<string, Record<string, number>>
