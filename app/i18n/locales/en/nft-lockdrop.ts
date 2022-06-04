@@ -1,4 +1,6 @@
 const locale = {
+  title: 'NFT Lockdrop',
+  subTitle: 'Lock your NFTs for VCI token rewards.',
   Card: {
     totalValueLocked: 'Total Value Locked',
     totalLockedNFT: 'Total Locked NFT',

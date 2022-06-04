@@ -16,8 +16,7 @@ import TokenTwoTone from '@mui/icons-material/TokenTwoTone'
 const Card: FC<CardProps> = () => {
   const { t } = useTranslation('nft-lockdrop')
   const ROOT = useMemoEmpty(() =>
-    styled(Stack)(({ theme }) => ({
-      paddingTop: theme.spacing(2),
+    styled(Stack)(() => ({
       ['.MuiSvgIcon-root']: {
         fontSize: '30px',
       },

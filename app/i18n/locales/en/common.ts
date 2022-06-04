@@ -43,6 +43,7 @@ const locale = {
   },
   components: {
     goBack: 'Go Back',
+    learnMore: 'Learn more',
   },
 }
 
