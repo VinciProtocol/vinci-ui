@@ -79,21 +79,21 @@ const useThegraphService = () => {
       const TVLInUSD = valueToBigNumber(currentFloorPriceInUSD).multipliedBy(timeLockedCount.total)
       const userLocked = timeLockedTable.length
       let userValue = valueToBigNumber(0)
-      if (userLocked) {
-        let userDays = valueToBigNumber(0)
-        let totalDays = valueToBigNumber(0)
-        Object.keys(lockTypeMap).map((type) => {
+      let userDays = valueToBigNumber(0)
+      let totalDays = valueToBigNumber(0)
+      Object.keys(lockTypeMap).map((type) => {
+        const days = lockTypeMap[type]
+        if (userLocked) {
           const timeLocked = timeLockedTable.filter((row) => row.lockType === type)
-          const days = lockTypeMap[type]
           userDays = userDays.plus(valueToBigNumber(timeLocked.length).multipliedBy(days))
-          totalDays = totalDays.plus(valueToBigNumber(timeLockedCount[type]).multipliedBy(days))
-        })
-        if (!userDays.eq(0) && !totalDays.eq(0)) {
-          userValue = userDays.multipliedBy(currentFloorPriceInUSD)
-          estmatedRewards.userValue = estmatedRewards.userValue.plus(userValue)
-          estmatedRewards.totalValue = estmatedRewards.totalValue.plus(totalDays.multipliedBy(currentFloorPriceInUSD))
         }
+        totalDays = totalDays.plus(valueToBigNumber(timeLockedCount[type]).multipliedBy(days))
+      })
+      if (userLocked) {
+        userValue = userDays.multipliedBy(currentFloorPriceInUSD)
+        estmatedRewards.userValue = estmatedRewards.userValue.plus(userValue)
       }
+      estmatedRewards.totalValue = estmatedRewards.totalValue.plus(totalDays.multipliedBy(currentFloorPriceInUSD))
       totalLocked = totalLocked.plus(timeLockedCount.total)
       totalTVL = totalTVL.plus(TVL)
       totalTVLInUSD = totalTVLInUSD.plus(TVLInUSD)
