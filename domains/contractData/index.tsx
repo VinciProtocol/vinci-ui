@@ -71,7 +71,7 @@ const useContractDataService = () => {
   }, [market, reservesDatas, userReservesDatas, walletBalanceData])
 
   const { generalAssets, generalAssetsMap } = useMemo(() => {
-    if (!contractDataSource) {
+    if (!contractDataSource || !oracle) {
       return {
         generalAssets: [],
       } as undefined

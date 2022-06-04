@@ -37,6 +37,7 @@ const useContractNFTService = () => {
       data: walletNFTInfo.map((info) => ({
         ...info,
         currentFloorPrice: nft.currentFloorPrice,
+        currentFloorPriceInUSD: nft.currentFloorPriceInUSD,
       })),
       totalValuation: nft.currentFloorPrice.multipliedBy(walletNFTInfo.length),
     }
@@ -61,6 +62,7 @@ const useContractNFTService = () => {
         return {
           ...info,
           currentFloorPrice: nft.currentFloorPrice,
+          currentFloorPriceInUSD: nft.currentFloorPriceInUSD,
         }
       })
     const lockedData = userNFTInfo
@@ -69,6 +71,7 @@ const useContractNFTService = () => {
         return {
           ...info,
           currentFloorPrice: nft.currentFloorPrice,
+          currentFloorPriceInUSD: nft.currentFloorPriceInUSD,
           lock: nftLocksMap[info.id],
         }
       })

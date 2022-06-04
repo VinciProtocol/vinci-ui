@@ -24,6 +24,7 @@ export type NFTCardProps = Partial<
   NFT & {
     action: { name?: string; onClick?: any; disabled?: boolean; tip?: any }
     currentFloorPrice: string
+    currentFloorPriceInUSD: string
     valuation: string
     onCheckChange: any
   }

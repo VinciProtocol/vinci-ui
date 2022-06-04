@@ -19,7 +19,7 @@ import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { DialogCloseIconButton } from 'components/btn/IconButton'
 import type { NFTCardProps } from 'components/nft/NFTCard'
 import NumberDisplay from 'components/math/NumberDisplay'
-import { lockTypeList, lockTypeMap, REWARD_AMOUNT } from 'domains/thegraph'
+import { lockTypeList, lockTypeMap } from 'domains/thegraph'
 import { useThegraph } from 'domains'
 import { valueToBigNumber } from 'utils/math'
 
@@ -45,8 +45,8 @@ const LockNFTDialog: FC<LockNFTDialogProps> = ({ nfts, visible, close, onClick }
     if (!totalValue || totalValue.eq(0) || !nfts) return 0
     const days = lockTypeMap[type]
     const userValue = nfts.reduce((sum, nft) => {
-      if (!nft.currentFloorPrice) return sum
-      return sum.plus(valueToBigNumber(days).multipliedBy(nft.currentFloorPrice))
+      if (!nft.currentFloorPriceInUSD) return sum
+      return sum.plus(valueToBigNumber(days).multipliedBy(nft.currentFloorPriceInUSD))
     }, valueToBigNumber(0))
     if (userValue.eq(0)) return 0
     return userValue.div(totalValue.plus(userValue)).multipliedBy(rewardAmount)

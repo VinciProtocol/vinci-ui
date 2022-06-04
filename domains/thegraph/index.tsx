@@ -63,7 +63,7 @@ const useThegraphService = () => {
     }
     const nftAssetsTimeLocked: any[] = []
     nftAssets.forEach((nft) => {
-      const { currentFloorPriceInUSD, underlyingAsset } = nft
+      const { currentFloorPriceInUSD, currentFloorPrice, underlyingAsset } = nft
       const countTable = countTables[underlyingAsset] || {}
       const timeLockedTable = timeLockedTables[underlyingAsset] || []
       const timeLockedCount: any = {
@@ -75,8 +75,8 @@ const useThegraphService = () => {
         '5': countTable['TimeLocked_lockType_5'] || 0,
         '6': countTable['TimeLocked_lockType_6'] || 0,
       }
-      const TVL = valueToBigNumber(timeLockedCount.total)
-      const TVLInUSD = valueToBigNumber(currentFloorPriceInUSD).multipliedBy(TVL)
+      const TVL = valueToBigNumber(currentFloorPrice).multipliedBy(timeLockedCount.total)
+      const TVLInUSD = valueToBigNumber(currentFloorPriceInUSD).multipliedBy(timeLockedCount.total)
       const userLocked = timeLockedTable.length
       let userValue = valueToBigNumber(0)
       if (userLocked) {
