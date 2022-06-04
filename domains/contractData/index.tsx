@@ -18,6 +18,7 @@ import { useReservesDatas } from 'store/contract/uiPool/reservesDataFromAllPools
 import { useUserReservesDatas } from 'store/contract/uiPool/userReservesDataFromAllPools/hooks'
 import { useWalletBalanceData } from 'store/contract/uiPool/walletBalances/hooks'
 import { useWalletNFTData } from 'store/contract/uiPool/walletNFT/hooks'
+import { useOracle } from 'store/oracle/hooks'
 
 import ContractNFTProvider from './nft'
 export { createContractNFTContext } from './nft'
@@ -31,6 +32,7 @@ const useContractDataService = () => {
   const userReservesDatas = useUserReservesDatas()
   const walletBalanceData = useWalletBalanceData()
   const walletNFTData = useWalletNFTData()
+  const oracle = useOracle()
   const contractDataSource = useMemoLazy(() => {
     const returnValue = reservesDatas
       .map((reservesData) => {
@@ -90,18 +92,22 @@ const useContractDataService = () => {
 
       generalAssetsMap[id] = {
         nftVaults: nftVaults.map((nftVault, index) => {
-          const collection = nftVault.symbol
+          const nftSetting = nftSettings[index]
+          const collection = nftSetting.collection
           const collectionName = nftVault.name
-          const nftPriceInUSD = normalizeBN(nftVault.priceInMarketReferenceCurrency, currencyDecimals).multipliedBy(
+          let nftPriceInUSD = normalizeBN(nftVault.priceInMarketReferenceCurrency, currencyDecimals).multipliedBy(
             currencyPriceInUSD
           )
+          if (nftPriceInUSD.eq(0)) {
+            nftPriceInUSD = valueToBigNumber(oracle[collection]).multipliedBy(currencyPriceInUSD)
+          }
           return {
             ...nftVault,
             collection,
             collectionName,
             nftPriceInUSD,
             currency,
-            nftSetting: nftSettings[index],
+            nftSetting,
             userNFTVaults: userReservesData?.userNFTVaults || [],
             walletNFTs,
           }
@@ -261,7 +267,7 @@ const useContractDataService = () => {
 
     log('[domains] [generalAssets]', returnValue)
     return returnValue
-  }, [contractDataSource])
+  }, [contractDataSource, oracle])
 
   const { nftAssets, dashboard } = useMemo(() => {
     if (!generalAssetsMap)

@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import contract from './contract'
 import progress from './progress'
 import thegraph from './thegraph'
+import oracle from './oracle'
 
 export function makeStore() {
   return configureStore({
@@ -13,6 +14,7 @@ export function makeStore() {
       contract,
       progress,
       thegraph,
+      oracle,
     },
   })
 }

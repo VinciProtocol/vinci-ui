@@ -15,6 +15,7 @@ export const getNFTInfo = (collection: string) => {
     case NFT_ID_1:
       return {
         src: ape.src,
+        oracle: '',
         market: {
           logo: opensea,
           url: 'https://opensea.io/collection/boredapeyachtclub',
@@ -23,6 +24,7 @@ export const getNFTInfo = (collection: string) => {
     case NFT_ID_2:
       return {
         src: mutantApe.src,
+        oracle: '',
         market: {
           logo: opensea,
           url: 'https://opensea.io/collection/mutant-ape-yacht-club',
@@ -31,6 +33,7 @@ export const getNFTInfo = (collection: string) => {
     case NFT_ID_3:
       return {
         src: pancakeSquad.src,
+        oracle: '',
         market: {
           logo: pancake,
           url: 'https://pancakeswap.finance/nfts/collections/0x0a8901b0E25DEb55A87524f0cC164E9644020EBA',
@@ -39,6 +42,7 @@ export const getNFTInfo = (collection: string) => {
     case NFT_ID_4:
       return {
         src: cloneX.src,
+        oracle: '',
         market: {
           logo: opensea,
           url: 'https://opensea.io/collection/clonex',
@@ -47,6 +51,7 @@ export const getNFTInfo = (collection: string) => {
     case NFT_ID_5:
       return {
         src: azuki.src,
+        oracle: 'azuki',
         market: {
           logo: opensea,
           url: 'https://opensea.io/collection/azuki',
@@ -55,6 +60,7 @@ export const getNFTInfo = (collection: string) => {
     case NFT_ID_6:
       return {
         src: doodles.src,
+        oracle: 'doodles-official',
         market: {
           logo: opensea,
           url: 'https://opensea.io/collection/doodles-official',

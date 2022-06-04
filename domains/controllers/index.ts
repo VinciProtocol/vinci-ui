@@ -8,6 +8,7 @@ import { useReservesDataController } from './application/reservesData'
 import { useUserReservesDataController } from './application/userReservesData'
 import { useCountTablesController } from './application/thegraph/nftToken/countTables'
 import { useTimeLockedTablesController } from './application/thegraph/nftToken/timeLockedTables'
+import { useOracleController } from './application/oracle'
 import {
   useWalletBalanceController1,
   useWalletBalanceController2,
@@ -57,7 +58,7 @@ export const useControllersService = () => {
       walletNFT3,
       walletNFT4,
       walletNFT5,
-      walletNFT6
+      walletNFT6,
     ],
   })
 
@@ -65,6 +66,7 @@ export const useControllersService = () => {
   const erc721 = useERC721Controller()
   const nftTokenCountTablesController = useCountTablesController()
   const nftTokenTimeLockedTablesController = useTimeLockedTablesController()
+  const oracleController = useOracleController()
 
   const pageProcess = usePageProgressController()
 
@@ -84,6 +86,7 @@ export const useControllersService = () => {
     pageProcess,
     nftTokenCountTablesController,
     nftTokenTimeLockedTablesController,
+    oracleController,
   }
 }
 
