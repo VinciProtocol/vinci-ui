@@ -67,6 +67,17 @@ const useContractDataService = () => {
       .filter((reservesData) => reservesData)
 
     log('[domains] [contractDataSource]', returnValue)
+    if (__DEV__) {
+      const nToken = returnValue.reduce((obj, { reservesData, nftSettings }) => {
+        if (!reservesData || !reservesData.nftVaults) return obj
+        reservesData.nftVaults.forEach(({ nTokenAddress }, index) => {
+          const nftSetting = nftSettings[index]
+          obj[nftSetting.nftToken] = nTokenAddress
+        })
+        return obj
+      }, {} as any)
+      log('[domains] [nToken]', { nToken })
+    }
     return returnValue
   }, [market, reservesDatas, userReservesDatas, walletBalanceData])
 
@@ -93,18 +104,17 @@ const useContractDataService = () => {
       generalAssetsMap[id] = {
         nftVaults: nftVaults.map((nftVault, index) => {
           const nftSetting = nftSettings[index]
-          const collection = nftSetting.collection
-          const collectionName = nftVault.name
+          const NFT_ID = nftSetting.NFT_ID
           let nftPriceInUSD = normalizeBN(nftVault.priceInMarketReferenceCurrency, currencyDecimals).multipliedBy(
             currencyPriceInUSD
           )
           if (nftPriceInUSD.eq(0)) {
-            nftPriceInUSD = valueToBigNumber(oracle[collection]).multipliedBy(currencyPriceInUSD)
+            nftPriceInUSD = valueToBigNumber(oracle[NFT_ID]).multipliedBy(currencyPriceInUSD)
           }
           return {
             ...nftVault,
-            collection,
-            collectionName,
+            NFT_ID,
+            collection: nftSetting.name,
             nftPriceInUSD,
             currency,
             nftSetting,
@@ -115,7 +125,7 @@ const useContractDataService = () => {
         reserves: [],
       }
       const nftVault = generalAssetsMap[id].nftVaults[0]
-      const { nftPriceInUSD, collection, collectionName } = nftVault
+      const { nftPriceInUSD, collection } = nftVault
       reserves.forEach((p) => {
         const poolReserve = cloneDeep(p)
         if (!poolReserve.isActive) return
@@ -225,7 +235,7 @@ const useContractDataService = () => {
           nftSetting,
           symbol,
           collection,
-          collectionName,
+          NFT_ID: nftSetting.NFT_ID,
           priceInUSD,
           APY: supplyAPY,
           borrowAPY: variableBorrowAPY,
@@ -391,6 +401,7 @@ const useContractDataService = () => {
             borrowLimitInUSD,
             borrowLimitUtilization: borrowLimitUtilization > 1 ? 1 : borrowLimitUtilization,
             collection,
+            NFT_ID: nftSetting.NFT_ID,
             underlyingAsset,
             currentFloorPrice: nftPriceInUSD.div(currencyPriceInUSD),
             currentFloorPriceInUSD: nftPriceInUSD,

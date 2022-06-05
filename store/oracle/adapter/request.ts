@@ -21,13 +21,13 @@ export type OracleProps = {}
 export const useOracle = (props: OracleProps) => {
   const promises: any[] = []
   const oracle: Oracle = {}
-  NFT_IDS.forEach((collection) => {
-    const NFTSetting = NFTs[collection]
+  NFT_IDS.forEach((NFT_ID) => {
+    const NFTSetting = NFTs[NFT_ID]
     if (!NFTSetting.oracle) return
     promises.push(
       request(NFTSetting.oracle).then((data) => {
         const floorPrice = safeGet(() => data.stats.floor_price) || 0
-        oracle[collection] = floorPrice
+        oracle[NFT_ID] = floorPrice
       })
     )
   })

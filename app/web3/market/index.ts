@@ -15,8 +15,8 @@ const list: Record<ChainId, typeof vinci> = {
     vinciNFTProvider: '0x12483993167f6e652fd59cd173a495da0b80bdf2',
   },
   [ChainId.kovan]: kovan,
-  [ChainId.bsct]: bsctestnet,
   [ChainId.bsc]: bscmainnet,
+  [ChainId.bsct]: bsctestnet,
   [ChainId.vinci]: vinci,
   [ChainId.localhost]: localhost,
 } as any
@@ -26,7 +26,11 @@ export const NFT_ID_2 = 'MAYC'
 export const NFT_ID_3 = 'PS'
 export const NFT_ID_4 = 'CloneX'
 export const NFT_ID_5 = 'Azuki'
-export const NFT_ID_6 = 'Doodles'
+export const NFT_ID_6 = 'DOODLE'
+export const NFT_ID_7 = 'Sandbox'
+export const NFT_ID_8 = 'OTHR'
+export const NFT_ID_9 = 'MOONBIRD'
+export const NFT_ID_10 = 'DLAND'
 
 export const getMarketsData = (chainId: ChainId): MarketData => {
   const generateInfo = list[chainId]
@@ -50,25 +54,26 @@ export const getMarketsData = (chainId: ChainId): MarketData => {
     }, {} as Record<string, any>),
     nfts: Object.keys(generateInfo.markets || {}).reduce((obj, marketID) => {
       const markets: Record<string, NFTGenerate> = generateInfo.markets as any
-      Object.keys(markets[marketID].TimeLockableNToken).forEach((nftID) => {
-        const collection = nftID.replace('vn', '')
-        const underlyingAsset = (generateInfo as any)[collection]
-        if (!underlyingAsset) throw new Error(`[getMarketsData] ${chainId} 找不到对应 NFT配置 => (${collection})`)
-        const nToken = markets[marketID].TimeLockableNToken[nftID]
+      Object.keys(markets[marketID].TimeLockableNToken).forEach((NFT_ID) => {
+        const underlyingAsset = (generateInfo as any)[NFT_ID]
+        if (!underlyingAsset) throw new Error(`[getMarketsData] ${chainId} 找不到对应 NFT配置 => (${NFT_ID})`)
+        const nToken = markets[marketID].TimeLockableNToken[NFT_ID]
         const { LendingPool, LendingPoolAddressesProvider } = markets[marketID]
-        const { src, market, oracle } = getNFTInfo(collection)
+        const { src, market, oracle, name, nftToken } = getNFTInfo(NFT_ID)
         const setting: NFTSetting = {
           LENDING_POOL: LendingPool,
           LENDING_POOL_ADDRESS_PROVIDER: LendingPoolAddressesProvider,
-          collection,
+          NFT_ID,
           underlyingAsset,
           src,
+          name,
           market,
           nToken,
           oracle,
+          nftToken,
         }
         obj[marketID] = setting
-        obj[collection] = setting
+        obj[NFT_ID] = setting
         obj[underlyingAsset] = setting
       })
       return obj
@@ -91,7 +96,14 @@ const getNFTS = () => {
 
 export const NFTs = getNFTS()
 export const NFT_IDS = [
-  // NFT_ID_1, NFT_ID_2, NFT_ID_3, NFT_ID_4,
+  NFT_ID_1,
+  NFT_ID_2,
+  // NFT_ID_3,
+  NFT_ID_4,
   NFT_ID_5,
   NFT_ID_6,
+  NFT_ID_7,
+  NFT_ID_8,
+  NFT_ID_9,
+  NFT_ID_10,
 ]

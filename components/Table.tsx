@@ -109,7 +109,7 @@ export const symbolCellRenderer: TableCellRenderer = ({ cellData, rowData }) => 
           <Badge
             overlap="circular"
             anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-            badgeContent={<NFTSmallIcon collection={rowData.collection} />}
+            badgeContent={<NFTSmallIcon NFT_ID={rowData.NFT_ID} />}
           >
             <TokenIcon tokenSymbol={cellData} />
           </Badge>
@@ -131,7 +131,7 @@ export const SymbolAbbCellRenderer: TableCellRenderer = ({ cellData, rowData }) 
           <Badge
             overlap="circular"
             anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-            badgeContent={<NFTSmallIcon collection={rowData.collection} />}
+            badgeContent={<NFTSmallIcon NFT_ID={rowData.NFT_ID} />}
           >
             <TokenIcon tokenSymbol={cellData} />
           </Badge>
@@ -159,9 +159,9 @@ export const collectionCellRenderer: TableCellRenderer = ({ cellData, rowData })
   return (
     <TableCell align="left" component="div">
       <Stack spacing={1} direction="row">
-        <NFTIcon collection={cellData} />
+        <NFTIcon NFT_ID={rowData.NFT_ID} />
         <Typography variant="body2" component="div" sx={{ lineHeight: '40px' }}>
-          {rowData.name}
+          {cellData}
         </Typography>
       </Stack>
     </TableCell>

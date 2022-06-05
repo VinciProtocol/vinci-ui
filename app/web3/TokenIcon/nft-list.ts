@@ -1,5 +1,5 @@
 import type { MarketData } from '../market/types'
 
-export const getNFTInfoByCollection = (market: MarketData, collection: string) => {
-  return market.nfts[collection] || ({} as undefined)
+export const getNFTInfoByNFTID = (market: MarketData, NFT_ID: string) => {
+  return market.nfts[NFT_ID] || ({} as undefined)
 }

@@ -2,7 +2,7 @@ import Avatar from '@mui/material/Avatar'
 import type { SxProps, Theme } from '@mui/material/styles'
 import { styled } from '@mui/material/styles'
 import { getAssetInfo } from './assets-list'
-import { getNFTInfoByCollection } from './nft-list'
+import { getNFTInfoByNFTID } from './nft-list'
 import { useMarket } from 'domains'
 
 export interface TokenIconProps {
@@ -31,22 +31,22 @@ const SmallAvatar = styled(Avatar)(({ theme }) => ({
 }))
 
 export interface NFTIconProps {
-  collection: string
+  NFT_ID: string
   sx?: SxProps<Theme>
 }
 
-export function NFTSmallIcon({ collection, sx }: NFTIconProps) {
+export function NFTSmallIcon({ NFT_ID, sx }: NFTIconProps) {
   const { market } = useMarket()
-  if (!collection) return null
+  if (!NFT_ID) return null
 
-  const { src } = getNFTInfoByCollection(market, collection)
-  return <SmallAvatar sx={sx} alt={collection} src={src} />
+  const { src } = getNFTInfoByNFTID(market, NFT_ID)
+  return <SmallAvatar sx={sx} alt={NFT_ID} src={src} />
 }
 
-export function NFTIcon({ collection, sx }: NFTIconProps) {
+export function NFTIcon({ NFT_ID, sx }: NFTIconProps) {
   const { market } = useMarket()
-  if (!collection) return null
+  if (!NFT_ID) return null
 
-  const { src } = getNFTInfoByCollection(market, collection)
-  return <Avatar sx={sx} alt={collection} src={src} />
+  const { src } = getNFTInfoByNFTID(market, NFT_ID)
+  return <Avatar sx={sx} alt={NFT_ID} src={src} />
 }

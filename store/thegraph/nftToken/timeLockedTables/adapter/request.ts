@@ -32,7 +32,7 @@ export const getTimeLockedTables = ({ account }: TimeLockedTablesProps, { signal
   const promises: any = []
   NFT_IDS.forEach((NFT_ID) => {
     const nftSetting = NFTs[NFT_ID]
-    const name = `imsunhao/nft-token-${nftSetting.collection.toLowerCase()}`
+    const name = `imsunhao/nft-token-${nftSetting.nftToken}`
     promises.push(
       request({
         name,

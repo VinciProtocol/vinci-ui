@@ -1,4 +1,15 @@
-import { NFT_ID_1, NFT_ID_2, NFT_ID_3, NFT_ID_4, NFT_ID_5, NFT_ID_6 } from 'app/web3/market'
+import {
+  NFT_ID_1,
+  NFT_ID_2,
+  NFT_ID_3,
+  NFT_ID_4,
+  NFT_ID_5,
+  NFT_ID_6,
+  NFT_ID_7,
+  NFT_ID_8,
+  NFT_ID_9,
+  NFT_ID_10,
+} from 'app/web3/market'
 import type { MarketData } from 'app/web3/market/types'
 import { safeGet } from 'utils/get'
 
@@ -108,6 +119,60 @@ export const getNFTInfo = (props: NFTInfoProps): Promise<NFTInfo[]> => {
           image: d.image.replace('ipfs://', 'https://ipfs.io/ipfs/'),
           description: 'Doodles',
         }))
+      )
+    }
+    return Promise.all(promises)
+  } else if (underlyingAsset === safeGet(() => market.nfts[NFT_ID_7].underlyingAsset)) {
+    const promises = []
+    for (let i = 0; i < tokenIds.length; i++) {
+      const tokenId = tokenIds[i]
+      promises.push(
+        fetchNFTInfo(`https://api.sandbox.game/lands/${tokenId}/metadata.json`, (d) => ({
+          id: tokenId,
+          name: d.name,
+          image: d.image,
+          description: 'Sandbox',
+        }))
+      )
+    }
+    return Promise.all(promises)
+  } else if (underlyingAsset === safeGet(() => market.nfts[NFT_ID_8].underlyingAsset)) {
+    const promises = []
+    for (let i = 0; i < tokenIds.length; i++) {
+      const tokenId = tokenIds[i]
+      promises.push(
+        fetchNFTInfo(`https://api.otherside.xyz/lands/${tokenId}`, (d) => ({
+          id: tokenId,
+          name: '#' + tokenId,
+          image: d.image,
+          description: 'Otherdeed for Otherside',
+        }))
+      )
+    }
+    return Promise.all(promises)
+  } else if (underlyingAsset === safeGet(() => market.nfts[NFT_ID_9].underlyingAsset)) {
+    return Promise.all(
+      tokenIds.map((tokenId) => ({
+        id: tokenId,
+        name: '#' + tokenId,
+        image: `https://live---metadata-5covpqijaa-uc.a.run.app/images/${tokenId}`,
+        description: 'Moonbirds',
+      }))
+    )
+  } else if (underlyingAsset === safeGet(() => market.nfts[NFT_ID_10].underlyingAsset)) {
+    const promises = []
+    for (let i = 0; i < tokenIds.length; i++) {
+      const tokenId = tokenIds[i]
+      promises.push(
+        fetchNFTInfo(
+          `https://api.decentraland.org/v2/contracts/0xf87e31492faf9a91b02ee0deaad50d51d56d5d4d/tokens/${tokenId}`,
+          (d) => ({
+            id: tokenId,
+            name: d.name,
+            image: d.image,
+            description: 'Decentraland',
+          })
+        )
       )
     }
     return Promise.all(promises)

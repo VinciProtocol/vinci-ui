@@ -20,7 +20,7 @@ import NumberDisplay from 'components/math/NumberDisplay'
 import HealthFactor from 'components/HealthFactor'
 
 import type { NFTInfoProps } from './types'
-import { getNFTInfoByCollection } from 'app/web3/TokenIcon/nft-list'
+import { getNFTInfoByNFTID } from 'app/web3/TokenIcon/nft-list'
 
 const NFTInfo: FC<NFTInfoProps> = () => {
   const {
@@ -56,14 +56,14 @@ const NFTInfo: FC<NFTInfoProps> = () => {
 
   const { nft } = useContractNFT()
   const M = useMarket()
-  const { market } = getNFTInfoByCollection(M.market, nft.collection)
+  const { market } = getNFTInfoByNFTID(M.market, nft.collection)
 
   return (
     <ROOT variant="card">
       <Stack spacing={2}>
         <Title sx={RESPONSIVE_DESIGN.display.GTSM('flex')}>
           <Stack spacing={1} direction="row">
-            <NFTIcon collection={nft.collection} sx={{ width: '50px', height: '50px' }} />
+            <NFTIcon NFT_ID={nft.collection} sx={{ width: '50px', height: '50px' }} />
             <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
               {nft.name}
             </Typography>
@@ -81,7 +81,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
         </Title>
         <Title sx={RESPONSIVE_DESIGN.display.LESM('flex')}>
           <Stack spacing={1} direction="row">
-            <NFTIcon collection={nft.collection} sx={{ width: '50px', height: '50px' }} />
+            <NFTIcon NFT_ID={nft.collection} sx={{ width: '50px', height: '50px' }} />
             <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
               {nft.name}
             </Typography>
