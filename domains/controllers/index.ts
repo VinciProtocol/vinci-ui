@@ -16,6 +16,10 @@ import {
   useWalletBalanceController4,
   useWalletBalanceController5,
   useWalletBalanceController6,
+  useWalletBalanceController7,
+  useWalletBalanceController8,
+  useWalletBalanceController9,
+  useWalletBalanceController10,
 } from './application/walletBalance'
 
 import {
@@ -25,6 +29,10 @@ import {
   useWalletNFTController4,
   useWalletNFTController5,
   useWalletNFTController6,
+  useWalletNFTController7,
+  useWalletNFTController8,
+  useWalletNFTController9,
+  useWalletNFTController10,
 } from './application/walletNFT'
 
 export const useControllersService = () => {
@@ -36,12 +44,20 @@ export const useControllersService = () => {
   const walletBalance4 = useWalletBalanceController4()
   const walletBalance5 = useWalletBalanceController5()
   const walletBalance6 = useWalletBalanceController6()
+  const walletBalance7 = useWalletBalanceController7()
+  const walletBalance8 = useWalletBalanceController8()
+  const walletBalance9 = useWalletBalanceController9()
+  const walletBalance10 = useWalletBalanceController10()
   const walletNFT1 = useWalletNFTController1()
   const walletNFT2 = useWalletNFTController2()
   const walletNFT3 = useWalletNFTController3()
   const walletNFT4 = useWalletNFTController4()
   const walletNFT5 = useWalletNFTController5()
   const walletNFT6 = useWalletNFTController6()
+  const walletNFT7 = useWalletNFTController7()
+  const walletNFT8 = useWalletNFTController8()
+  const walletNFT9 = useWalletNFTController9()
+  const walletNFT10 = useWalletNFTController10()
 
   useChainIDChange({
     controllers: [
@@ -78,9 +94,21 @@ export const useControllersService = () => {
     walletBalance3,
     walletBalance4,
     walletBalance5,
+    walletBalance6,
+    walletBalance7,
+    walletBalance8,
+    walletBalance9,
+    walletBalance10,
     walletNFT1,
     walletNFT2,
     walletNFT3,
+    walletNFT4,
+    walletNFT5,
+    walletNFT6,
+    walletNFT7,
+    walletNFT8,
+    walletNFT9,
+    walletNFT10,
     lendingPool,
     erc721,
     pageProcess,

@@ -1,7 +1,18 @@
 import { useCallback, useMemo } from 'react'
 import { useWallet } from 'app/wallet'
 import { useContract } from 'domains/contract'
-import { NFT_ID_1, NFT_ID_2, NFT_ID_3, NFT_ID_4, NFT_ID_5, NFT_ID_6 } from 'app/web3/market'
+import {
+  NFT_ID_1,
+  NFT_ID_2,
+  NFT_ID_3,
+  NFT_ID_4,
+  NFT_ID_5,
+  NFT_ID_6,
+  NFT_ID_7,
+  NFT_ID_8,
+  NFT_ID_9,
+  NFT_ID_10,
+} from 'app/web3/market'
 
 import { useRequestController as useRequestController1 } from 'store/contract/uiPool/walletBalances/1'
 import { useRequestController as useRequestController2 } from 'store/contract/uiPool/walletBalances/2'
@@ -70,6 +81,22 @@ export const useWalletBalanceController5 = createUseWalletBalanceController(
 )
 export const useWalletBalanceController6 = createUseWalletBalanceController(
   (market) => safeGet(() => market.nfts[NFT_ID_6].LENDING_POOL_ADDRESS_PROVIDER),
+  useRequestController6
+)
+export const useWalletBalanceController7 = createUseWalletBalanceController(
+  (market) => safeGet(() => market.nfts[NFT_ID_7].LENDING_POOL_ADDRESS_PROVIDER),
+  useRequestController6
+)
+export const useWalletBalanceController8 = createUseWalletBalanceController(
+  (market) => safeGet(() => market.nfts[NFT_ID_8].LENDING_POOL_ADDRESS_PROVIDER),
+  useRequestController6
+)
+export const useWalletBalanceController9 = createUseWalletBalanceController(
+  (market) => safeGet(() => market.nfts[NFT_ID_9].LENDING_POOL_ADDRESS_PROVIDER),
+  useRequestController6
+)
+export const useWalletBalanceController10 = createUseWalletBalanceController(
+  (market) => safeGet(() => market.nfts[NFT_ID_10].LENDING_POOL_ADDRESS_PROVIDER),
   useRequestController6
 )
 
