@@ -1,4 +1,6 @@
 {
+  "title": "NFT Lockdrop",
+  "subTitle": "Sperren Sie Ihre NFTs für VCI-Token-Belohnungen.",
   "Card": {
     "totalValueLocked": "Gesamtwert gesperrt",
     "totalLockedNFT": "Insgesamt gesperrte NFT",

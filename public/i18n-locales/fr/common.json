@@ -7,10 +7,10 @@
       "cancel": "Annuler",
       "disconnected": "Déconnecter",
       "deposit": "Verser",
-      "withdraw": "Retirer",
+      "withdraw": "Se désister",
       "borrow": "Emprunter",
       "repay": "Rembourser",
-      "details": "Des détails",
+      "details": "Détails",
       "approve": "Approuver"
     },
     "disconnected": {
@@ -18,7 +18,7 @@
       "subTitle": "Pour commencer à utiliser Vinci"
     },
     "connected": {
-      "title": "Connecté",
+      "title": "Lié",
       "subTitle": "Connecté avec"
     },
     "connecting": {
@@ -42,6 +42,7 @@
     }
   },
   "components": {
-    "goBack": "Retourner"
+    "goBack": "Retourner",
+    "learnMore": "Apprendre encore plus"
   }
 }

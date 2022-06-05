@@ -1,4 +1,6 @@
 {
+  "title": "NFT 锁投",
+  "subTitle": "锁定您的 NFT 以获得 VCI 代币奖励。",
   "Card": {
     "totalValueLocked": "总价值锁定",
     "totalLockedNFT": "总锁定 NFT",

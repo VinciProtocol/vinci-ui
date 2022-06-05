@@ -1,4 +1,6 @@
 {
+  "title": "NFT Lockdrop",
+  "subTitle": "قفل NFTs لمكافآت رمز VCI.",
   "Card": {
     "totalValueLocked": "إجمالي القيمة مؤمن",
     "totalLockedNFT": "إجمالي NFT مغلق",
@@ -9,7 +11,7 @@
   "NFTLockdropRewards": {
     "title": "مكافآت NFT Lockdrop",
     "subTitle": {
-      "text": "قفل NFTs للحصول على مكافآت رمز VCI",
+      "text": "قفل NFTs لمكافآت رمز VCI",
       "tip": "يتعلم أكثر"
     },
     "collection": "مجموعة",

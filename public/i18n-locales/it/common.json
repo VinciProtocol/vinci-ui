@@ -10,7 +10,7 @@
       "withdraw": "Ritirare",
       "borrow": "Prestito",
       "repay": "Rimborsare",
-      "details": "Dettagli",
+      "details": "Particolari",
       "approve": "Approvare"
     },
     "disconnected": {
@@ -42,6 +42,7 @@
     }
   },
   "components": {
-    "goBack": "Torna indietro"
+    "goBack": "Torna indietro",
+    "learnMore": "Scopri di più"
   }
 }

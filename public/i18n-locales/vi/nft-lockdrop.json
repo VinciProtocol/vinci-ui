@@ -1,4 +1,6 @@
 {
+  "title": "NFT Lockdrop",
+  "subTitle": "Khóa NFT của bạn để nhận phần thưởng mã thông báo VCI.",
   "Card": {
     "totalValueLocked": "Tổng giá trị đã khóa",
     "totalLockedNFT": "Tổng NFT đã khóa",

@@ -1,4 +1,6 @@
 {
+  "title": "Verrouillage NFT",
+  "subTitle": "Verrouillez vos NFT pour les récompenses de jetons VCI.",
   "Card": {
     "totalValueLocked": "Valeur totale verrouillée",
     "totalLockedNFT": "NFT total verrouillé",

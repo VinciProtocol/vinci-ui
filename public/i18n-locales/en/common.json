@@ -42,6 +42,7 @@
     }
   },
   "components": {
-    "goBack": "Go Back"
+    "goBack": "Go Back",
+    "learnMore": "Learn more"
   }
 }

@@ -1,4 +1,6 @@
 {
+  "title": "NFT Kilitleme",
+  "subTitle": "VCI jeton ödülleri için NFT'lerinizi kilitleyin.",
   "Card": {
     "totalValueLocked": "Toplam Değer Kilitli",
     "totalLockedNFT": "Toplam Kilitli NFT",

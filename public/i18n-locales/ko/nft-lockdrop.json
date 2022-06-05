@@ -1,4 +1,6 @@
 {
+  "title": "NFT 락드롭",
+  "subTitle": "VCI 토큰 보상을 위해 NFT를 잠그십시오.",
   "Card": {
     "totalValueLocked": "잠긴 총 가치",
     "totalLockedNFT": "총 잠금 NFT",

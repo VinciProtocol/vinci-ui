@@ -4,11 +4,11 @@
   },
   "wallet": {
     "btn": {
-      "cancel": "İptal etmek",
+      "cancel": "İptal",
       "disconnected": "bağlantıyı kes",
       "deposit": "Depozito",
       "withdraw": "Geri çekilmek",
-      "borrow": "Borç almak",
+      "borrow": "Ödünç almak",
       "repay": "geri ödeme",
       "details": "Detaylar",
       "approve": "Onaylamak"
@@ -42,6 +42,7 @@
     }
   },
   "components": {
-    "goBack": "Geri gitmek"
+    "goBack": "Geri dön",
+    "learnMore": "Daha fazla bilgi edin"
   }
 }

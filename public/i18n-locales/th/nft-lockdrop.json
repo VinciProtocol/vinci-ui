@@ -1,4 +1,6 @@
 {
+  "title": "NFT Lockdrop",
+  "subTitle": "ล็อค NFT ของคุณเพื่อรับรางวัลโทเค็น VCI",
   "Card": {
     "totalValueLocked": "มูลค่ารวมที่ถูกล็อค",
     "totalLockedNFT": "NFT ที่ถูกล็อคทั้งหมด",

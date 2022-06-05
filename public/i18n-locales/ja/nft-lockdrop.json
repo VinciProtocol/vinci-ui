@@ -1,4 +1,6 @@
 {
+  "title": "NFTロックドロップ",
+  "subTitle": "VCIトークン報酬のためにNFTをロックします。",
   "Card": {
     "totalValueLocked": "合計値がロックされています",
     "totalLockedNFT": "トータルロックNFT",

@@ -6,8 +6,8 @@
     "btn": {
       "cancel": "Absagen",
       "disconnected": "Trennen",
-      "deposit": "Anzahlung",
-      "withdraw": "Zurückziehen",
+      "deposit": "Kaution",
+      "withdraw": "Abheben",
       "borrow": "Ausleihen",
       "repay": "Zurückzahlen",
       "details": "Einzelheiten",
@@ -42,6 +42,7 @@
     }
   },
   "components": {
-    "goBack": "Geh zurück"
+    "goBack": "Geh zurück",
+    "learnMore": "Mehr erfahren"
   }
 }

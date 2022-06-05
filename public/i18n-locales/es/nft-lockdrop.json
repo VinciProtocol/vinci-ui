@@ -1,4 +1,6 @@
 {
+  "title": "Bloqueo NFT",
+  "subTitle": "Bloquee sus NFT para recompensas de tokens VCI.",
   "Card": {
     "totalValueLocked": "Valor total bloqueado",
     "totalLockedNFT": "NFT bloqueado total",

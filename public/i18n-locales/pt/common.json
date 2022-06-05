@@ -8,7 +8,7 @@
       "disconnected": "desconectar",
       "deposit": "Depósito",
       "withdraw": "Retirar",
-      "borrow": "Pegar emprestado",
+      "borrow": "Pedir emprestado",
       "repay": "Reembolsar",
       "details": "Detalhes",
       "approve": "Aprovar"
@@ -42,6 +42,7 @@
     }
   },
   "components": {
-    "goBack": "Volte"
+    "goBack": "Volte",
+    "learnMore": "Saber mais"
   }
 }

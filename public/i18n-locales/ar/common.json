@@ -7,8 +7,8 @@
       "cancel": "يلغي",
       "disconnected": "قطع الاتصال",
       "deposit": "إيداع",
-      "withdraw": "انسحب",
-      "borrow": "يستعير",
+      "withdraw": "ينسحب",
+      "borrow": "اقتراض",
       "repay": "السداد",
       "details": "تفاصيل",
       "approve": "يوافق"
@@ -42,6 +42,7 @@
     }
   },
   "components": {
-    "goBack": "عُد"
+    "goBack": "عُد",
+    "learnMore": "يتعلم أكثر"
   }
 }

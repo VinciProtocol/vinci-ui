@@ -7,18 +7,18 @@
       "cancel": "Отмена",
       "disconnected": "Отключить",
       "deposit": "Депозит",
-      "withdraw": "Изымать",
+      "withdraw": "Отзывать",
       "borrow": "Занимать",
       "repay": "Погашать",
       "details": "Подробности",
-      "approve": "Утвердить"
+      "approve": "Одобрить"
     },
     "disconnected": {
       "title": "Подключить кошелек",
       "subTitle": "Чтобы начать использовать Винчи"
     },
     "connected": {
-      "title": "Связанный",
+      "title": "Связано",
       "subTitle": "Связано с"
     },
     "connecting": {
@@ -42,6 +42,7 @@
     }
   },
   "components": {
-    "goBack": "Вернитесь назад"
+    "goBack": "Вернись",
+    "learnMore": "Учить больше"
   }
 }

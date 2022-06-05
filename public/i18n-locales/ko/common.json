@@ -19,7 +19,7 @@
     },
     "connected": {
       "title": "연결됨",
-      "subTitle": "연관된"
+      "subTitle": "와 연결되다"
     },
     "connecting": {
       "title": "지갑 잠금 해제",
@@ -42,6 +42,7 @@
     }
   },
   "components": {
-    "goBack": "돌아가기"
+    "goBack": "돌아가기",
+    "learnMore": "더 알아보기"
   }
 }

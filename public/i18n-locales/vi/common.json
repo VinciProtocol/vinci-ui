@@ -6,7 +6,7 @@
     "btn": {
       "cancel": "Hủy bỏ",
       "disconnected": "Ngắt kết nối",
-      "deposit": "Gửi tiền",
+      "deposit": "Tiền gửi",
       "withdraw": "Rút",
       "borrow": "Vay",
       "repay": "Trả lại",
@@ -42,6 +42,7 @@
     }
   },
   "components": {
-    "goBack": "Quay lại"
+    "goBack": "Quay lại",
+    "learnMore": "Tìm hiểu thêm"
   }
 }
