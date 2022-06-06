@@ -61,7 +61,7 @@ const getMarketsData = (chainId: ChainId): MarketData => {
         if (!underlyingAsset) throw new Error(`[getMarketsData] ${chainId} 找不到对应 NFT配置 => (${NFT_ID})`)
         const nToken = markets[marketID].TimeLockableNToken[NFT_ID]
         const { LendingPool, LendingPoolAddressesProvider } = markets[marketID]
-        const { src, market, oracle, name, nftToken } = getNFTInfo(NFT_ID)
+        const { src, market, oracle, name, nftToken, symbol, imageName } = getNFTInfo(NFT_ID)
         const setting: NFTSetting = {
           LENDING_POOL: LendingPool,
           LENDING_POOL_ADDRESS_PROVIDER: LendingPoolAddressesProvider,
@@ -69,13 +69,14 @@ const getMarketsData = (chainId: ChainId): MarketData => {
           underlyingAsset,
           src,
           name,
+          imageName,
           market,
           nToken,
+          symbol,
           oracle,
           nftToken,
         }
-        obj[marketID] = setting
-        obj[NFT_ID] = setting
+        // obj[NFT_ID] = setting
         obj[underlyingAsset] = setting
       })
       return obj

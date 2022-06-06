@@ -8,6 +8,8 @@ export type NFTSetting = {
   oracle: string
   nftToken: string
   name: string
+  imageName: string
+  symbol: string
   nToken: string
   src: any
   market: {

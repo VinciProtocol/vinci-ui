@@ -33,6 +33,8 @@ export const getNFTInfo = (NFT_ID: string) => {
   switch (NFT_ID) {
     case NFT_ID_1:
       return {
+        imageName: 'ape.jpg',
+        symbol: 'BAYC',
         src: ape.src,
         oracle: 'boredapeyachtclub',
         nftToken: 'boredapeyachtclub',
@@ -44,6 +46,8 @@ export const getNFTInfo = (NFT_ID: string) => {
       }
     case NFT_ID_2:
       return {
+        imageName: 'mutant-ape.jpg',
+        symbol: 'MAYC',
         src: mutantApe.src,
         oracle: 'mutant-ape-yacht-club',
         nftToken: 'mutant-ape-yacht-club',
@@ -55,6 +59,8 @@ export const getNFTInfo = (NFT_ID: string) => {
       }
     case NFT_ID_3:
       return {
+        imageName: '',
+        symbol: '',
         src: pancakeSquad.src,
         oracle: '',
         nftToken: '',
@@ -66,6 +72,8 @@ export const getNFTInfo = (NFT_ID: string) => {
       }
     case NFT_ID_4:
       return {
+        imageName: 'clonex.png',
+        symbol: 'CloneX',
         src: cloneX.src,
         oracle: 'clonex',
         nftToken: 'clonex',
@@ -77,6 +85,8 @@ export const getNFTInfo = (NFT_ID: string) => {
       }
     case NFT_ID_5:
       return {
+        imageName: 'azuki.jpg',
+        symbol: 'AZUKI',
         src: azuki.src,
         oracle: 'azuki',
         nftToken: 'azuki',
@@ -88,6 +98,8 @@ export const getNFTInfo = (NFT_ID: string) => {
       }
     case NFT_ID_6:
       return {
+        imageName: 'doodles.jpg',
+        symbol: 'DOODLE',
         src: doodles.src,
         oracle: 'doodles-official',
         nftToken: 'doodles',
@@ -99,6 +111,8 @@ export const getNFTInfo = (NFT_ID: string) => {
       }
     case NFT_ID_7:
       return {
+        imageName: 'sandbox.png',
+        symbol: 'LAND',
         src: sandbox.src,
         oracle: 'sandbox',
         nftToken: 'sandbox',
@@ -110,6 +124,8 @@ export const getNFTInfo = (NFT_ID: string) => {
       }
     case NFT_ID_8:
       return {
+        imageName: 'otherdeed.jpg',
+        symbol: 'OTHR',
         src: otherdeed.src,
         oracle: 'otherdeed',
         nftToken: 'otherdeed',
@@ -121,6 +137,8 @@ export const getNFTInfo = (NFT_ID: string) => {
       }
     case NFT_ID_9:
       return {
+        imageName: 'moonbirds.png',
+        symbol: 'MOONBIRD',
         src: moonbirds.src,
         oracle: 'proof-moonbirds',
         nftToken: 'proof-moonbirds',
@@ -132,10 +150,12 @@ export const getNFTInfo = (NFT_ID: string) => {
       }
     case NFT_ID_10:
       return {
+        imageName: 'decentraland.png',
+        symbol: 'LAND',
         src: decentraland.src,
         oracle: 'decentraland',
         nftToken: 'decentraland',
-        name: 'Decentraland',
+        name: 'Decentraland LAND',
         market: {
           logo: opensea,
           url: 'https://opensea.io/collection/decentraland',
@@ -143,6 +163,8 @@ export const getNFTInfo = (NFT_ID: string) => {
       }
     case NFT_ID_11:
       return {
+        imageName: 'meebits.png',
+        symbol: 'Meebit',
         src: meebits.src,
         oracle: 'meebits',
         nftToken: 'meebits',
@@ -154,6 +176,8 @@ export const getNFTInfo = (NFT_ID: string) => {
       }
     case NFT_ID_12:
       return {
+        imageName: 'cryptopunks.png',
+        symbol: 'CryptoPunk',
         src: cryptopunks.src,
         oracle: 'cryptopunks',
         nftToken: 'cryptopunks',
