@@ -3,12 +3,12 @@ import { useWallet } from 'app/wallet'
 import { useContract } from 'domains/contract'
 import { NFT_IDS } from 'app/web3/market'
 
-import { useRequestControllers } from 'store/contract/uiPool/walletBalances'
 import type { MarketData } from 'app/web3/market/types'
+import { useObjectMemo } from 'app/hooks/useValues'
+import { useRequestControllers } from 'store/contract/uiPool/walletBalances'
+import type { WalletBalancesUseRequestController } from 'store/contract/uiPool/walletBalances/utils/requestSliceHelper'
 import { useMarket } from 'domains'
 import { safeGet } from 'utils/get'
-import type { WalletBalancesUseRequestController } from 'store/contract/uiPool/walletBalances/utils/requestSliceHelper'
-import { useObjectMemo } from 'app/hooks/useValues'
 
 type UseRequestController = WalletBalancesUseRequestController
 type CreateUseWalletBalanceController = ReturnType<typeof createUseWalletBalanceController>

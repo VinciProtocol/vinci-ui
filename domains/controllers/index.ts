@@ -10,47 +10,17 @@ import { useCountTablesController } from './application/thegraph/nftToken/countT
 import { useTimeLockedTablesController } from './application/thegraph/nftToken/timeLockedTables'
 import { useOracleController } from './application/oracle'
 import { useWalletBalanceControllers } from './application/walletBalance'
-
-import {
-  useWalletNFTController1,
-  useWalletNFTController2,
-  useWalletNFTController3,
-  useWalletNFTController4,
-  useWalletNFTController5,
-  useWalletNFTController6,
-  useWalletNFTController7,
-  useWalletNFTController8,
-  useWalletNFTController9,
-  useWalletNFTController10,
-} from './application/walletNFT'
+import { useWalletNFTControllers } from './application/walletNFT'
 
 export const useControllersService = () => {
   const reservesData = useReservesDataController()
   const userReservesData = useUserReservesDataController()
   const walletBalances = useWalletBalanceControllers()
-  const walletNFT1 = useWalletNFTController1()
-  const walletNFT2 = useWalletNFTController2()
-  const walletNFT3 = useWalletNFTController3()
-  const walletNFT4 = useWalletNFTController4()
-  const walletNFT5 = useWalletNFTController5()
-  const walletNFT6 = useWalletNFTController6()
-  const walletNFT7 = useWalletNFTController7()
-  const walletNFT8 = useWalletNFTController8()
-  const walletNFT9 = useWalletNFTController9()
-  const walletNFT10 = useWalletNFTController10()
+  const walletNFTs = useWalletNFTControllers()
 
   useChainIDChange({
-    controllers: [
-      reservesData,
-      userReservesData,
-      walletNFT1,
-      walletNFT2,
-      walletNFT3,
-      walletNFT4,
-      walletNFT5,
-      walletNFT6,
-    ],
-    ObjectControllers: [walletBalances],
+    controllers: [reservesData, userReservesData],
+    ObjectControllers: [walletBalances, walletNFTs],
   })
 
   const lendingPool = useLendingPoolController()
@@ -65,16 +35,7 @@ export const useControllersService = () => {
     reservesData,
     userReservesData,
     walletBalances,
-    walletNFT1,
-    walletNFT2,
-    walletNFT3,
-    walletNFT4,
-    walletNFT5,
-    walletNFT6,
-    walletNFT7,
-    walletNFT8,
-    walletNFT9,
-    walletNFT10,
+    walletNFTs,
     lendingPool,
     erc721,
     pageProcess,
