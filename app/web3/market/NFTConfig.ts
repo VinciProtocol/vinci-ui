@@ -6,13 +6,28 @@ import cloneX from './images/clonex.png'
 import sandbox from './images/sandbox.png'
 import moonbirds from './images/moonbirds.png'
 import decentraland from './images/decentraland.png'
+import cryptopunks from './images/cryptopunks.png'
+import meebits from './images/meebits.png'
 import doodles from './images/doodles.jpg'
 import otherdeed from './images/otherdeed.jpg'
 
 import opensea from './images/opensea.svg'
 import pancake from './images/pancake.svg'
 
-import { NFT_ID_1, NFT_ID_2, NFT_ID_3, NFT_ID_4, NFT_ID_5, NFT_ID_6, NFT_ID_7, NFT_ID_8, NFT_ID_9, NFT_ID_10 } from '.'
+import {
+  NFT_ID_1,
+  NFT_ID_2,
+  NFT_ID_3,
+  NFT_ID_4,
+  NFT_ID_5,
+  NFT_ID_6,
+  NFT_ID_7,
+  NFT_ID_8,
+  NFT_ID_9,
+  NFT_ID_10,
+  NFT_ID_11,
+  NFT_ID_12,
+} from '.'
 
 export const getNFTInfo = (NFT_ID: string) => {
   switch (NFT_ID) {
@@ -124,6 +139,28 @@ export const getNFTInfo = (NFT_ID: string) => {
         market: {
           logo: opensea,
           url: 'https://opensea.io/collection/decentraland',
+        },
+      }
+    case NFT_ID_11:
+      return {
+        src: meebits.src,
+        oracle: 'meebits',
+        nftToken: 'meebits',
+        name: 'Meebits',
+        market: {
+          logo: opensea,
+          url: 'https://opensea.io/collection/meebits',
+        },
+      }
+    case NFT_ID_12:
+      return {
+        src: cryptopunks.src,
+        oracle: 'cryptopunks',
+        nftToken: 'cryptopunks',
+        name: 'CryptoPunks',
+        market: {
+          logo: opensea,
+          url: 'https://opensea.io/collection/cryptopunks',
         },
       }
     default:

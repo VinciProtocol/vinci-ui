@@ -31,6 +31,8 @@ export const NFT_ID_7 = 'Sandbox'
 export const NFT_ID_8 = 'OTHR'
 export const NFT_ID_9 = 'MOONBIRD'
 export const NFT_ID_10 = 'DLAND'
+export const NFT_ID_11 = 'Meebits'
+export const NFT_ID_12 = 'PUNK'
 
 export const getMarketsData = (chainId: ChainId): MarketData => {
   const generateInfo = list[chainId]
@@ -106,4 +108,6 @@ export const NFT_IDS = [
   NFT_ID_8,
   NFT_ID_9,
   NFT_ID_10,
+  NFT_ID_11,
+  NFT_ID_12,
 ]

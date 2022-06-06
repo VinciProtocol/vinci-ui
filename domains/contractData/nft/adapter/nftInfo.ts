@@ -9,6 +9,8 @@ import {
   NFT_ID_8,
   NFT_ID_9,
   NFT_ID_10,
+  NFT_ID_11,
+  NFT_ID_12,
 } from 'app/web3/market'
 import type { MarketData } from 'app/web3/market/types'
 import { safeGet } from 'utils/get'
@@ -176,6 +178,29 @@ export const getNFTInfo = (props: NFTInfoProps): Promise<NFTInfo[]> => {
       )
     }
     return Promise.all(promises)
+  } else if (underlyingAsset === safeGet(() => market.nfts[NFT_ID_11].underlyingAsset)) {
+    const promises = []
+    for (let i = 0; i < tokenIds.length; i++) {
+      const tokenId = tokenIds[i]
+      promises.push(
+        fetchNFTInfo(`https://meebits.app/meebit/${tokenId}`, (d) => ({
+          id: tokenId,
+          name: d.name,
+          image: d.image,
+          description: 'Decentraland',
+        }))
+      )
+    }
+    return Promise.all(promises)
+  } else if (underlyingAsset === safeGet(() => market.nfts[NFT_ID_12].underlyingAsset)) {
+    return Promise.all(
+      tokenIds.map((tokenId) => ({
+        id: tokenId,
+        name: '#' + tokenId,
+        image: `https://api.wrappedpunks.com/images/punks/${tokenId}.png`,
+        description: 'Wrapped Punks',
+      }))
+    )
   }
 }
 
