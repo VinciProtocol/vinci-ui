@@ -76,7 +76,7 @@ const getMarketsData = (chainId: ChainId): MarketData => {
           oracle,
           nftToken,
         }
-        // obj[NFT_ID] = setting
+        obj[NFT_ID] = setting
         obj[underlyingAsset] = setting
       })
       return obj
