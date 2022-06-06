@@ -72,6 +72,7 @@ const useContractDataService = () => {
         if (!reservesData || !reservesData.nftVaults) return obj
         reservesData.nftVaults.forEach(({ nTokenAddress }, index) => {
           const nftSetting = nftSettings[index]
+          if (!nftSetting) return
           obj[nftSetting.nftToken] = nTokenAddress
         })
         return obj
@@ -103,12 +104,12 @@ const useContractDataService = () => {
 
       generalAssetsMap[id] = {
         nftVaults: nftVaults.map((nftVault, index) => {
-          const nftSetting = nftSettings[index]
-          const NFT_ID = nftSetting.NFT_ID
+          const nftSetting = nftSettings[index] || ({} as undefined)
           let nftPriceInUSD = normalizeBN(nftVault.priceInMarketReferenceCurrency, currencyDecimals).multipliedBy(
             currencyPriceInUSD
           )
-          if (nftPriceInUSD.eq(0)) {
+          const NFT_ID = nftSetting.NFT_ID
+          if (NFT_ID && nftPriceInUSD.eq(0)) {
             nftPriceInUSD = valueToBigNumber(oracle[NFT_ID]).multipliedBy(currencyPriceInUSD)
           }
           return {
@@ -125,6 +126,7 @@ const useContractDataService = () => {
         reserves: [],
       }
       const nftVault = generalAssetsMap[id].nftVaults[0]
+      if (!nftVault) continue
       const { nftPriceInUSD, collection } = nftVault
       reserves.forEach((p) => {
         const poolReserve = cloneDeep(p)
