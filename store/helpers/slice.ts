@@ -174,7 +174,7 @@ export const createRequestSlice = <SliceState extends RequestSliceState, Returne
     const dispatch = useAppDispatch()
     const polling = usePolling()
     const single = useSingle()
-    const clearData = useCallback(() => {
+    const clearData: () => void = useCallback(() => {
       dispatch(setData(undefined))
     }, [dispatch])
 

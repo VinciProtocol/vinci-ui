@@ -9,18 +9,7 @@ import { useUserReservesDataController } from './application/userReservesData'
 import { useCountTablesController } from './application/thegraph/nftToken/countTables'
 import { useTimeLockedTablesController } from './application/thegraph/nftToken/timeLockedTables'
 import { useOracleController } from './application/oracle'
-import {
-  useWalletBalanceController1,
-  useWalletBalanceController2,
-  useWalletBalanceController3,
-  useWalletBalanceController4,
-  useWalletBalanceController5,
-  useWalletBalanceController6,
-  useWalletBalanceController7,
-  useWalletBalanceController8,
-  useWalletBalanceController9,
-  useWalletBalanceController10,
-} from './application/walletBalance'
+import { useWalletBalanceControllers } from './application/walletBalance'
 
 import {
   useWalletNFTController1,
@@ -38,16 +27,7 @@ import {
 export const useControllersService = () => {
   const reservesData = useReservesDataController()
   const userReservesData = useUserReservesDataController()
-  const walletBalance1 = useWalletBalanceController1()
-  const walletBalance2 = useWalletBalanceController2()
-  const walletBalance3 = useWalletBalanceController3()
-  const walletBalance4 = useWalletBalanceController4()
-  const walletBalance5 = useWalletBalanceController5()
-  const walletBalance6 = useWalletBalanceController6()
-  const walletBalance7 = useWalletBalanceController7()
-  const walletBalance8 = useWalletBalanceController8()
-  const walletBalance9 = useWalletBalanceController9()
-  const walletBalance10 = useWalletBalanceController10()
+  const walletBalances = useWalletBalanceControllers()
   const walletNFT1 = useWalletNFTController1()
   const walletNFT2 = useWalletNFTController2()
   const walletNFT3 = useWalletNFTController3()
@@ -63,12 +43,6 @@ export const useControllersService = () => {
     controllers: [
       reservesData,
       userReservesData,
-      walletBalance1,
-      walletBalance2,
-      walletBalance3,
-      walletBalance4,
-      walletBalance5,
-      walletBalance6,
       walletNFT1,
       walletNFT2,
       walletNFT3,
@@ -76,6 +50,7 @@ export const useControllersService = () => {
       walletNFT5,
       walletNFT6,
     ],
+    ObjectControllers: [walletBalances],
   })
 
   const lendingPool = useLendingPoolController()
@@ -89,16 +64,7 @@ export const useControllersService = () => {
   return {
     reservesData,
     userReservesData,
-    walletBalance1,
-    walletBalance2,
-    walletBalance3,
-    walletBalance4,
-    walletBalance5,
-    walletBalance6,
-    walletBalance7,
-    walletBalance8,
-    walletBalance9,
-    walletBalance10,
+    walletBalances,
     walletNFT1,
     walletNFT2,
     walletNFT3,

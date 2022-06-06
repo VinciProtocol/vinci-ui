@@ -98,7 +98,7 @@ export const NFTs = getNFTS()
 export const NFT_IDS = [
   NFT_ID_1,
   NFT_ID_2,
-  // NFT_ID_3,
+  NFT_ID_3,
   NFT_ID_4,
   NFT_ID_5,
   NFT_ID_6,

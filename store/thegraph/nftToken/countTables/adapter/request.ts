@@ -29,6 +29,7 @@ export const getCountTables = (props: CountTablesProps, { signal }: any) => {
   const promises: any = []
   NFT_IDS.forEach((NFT_ID) => {
     const nftSetting = NFTs[NFT_ID]
+    if (!nftSetting || !nftSetting.nftToken) return
     const name = `imsunhao/nft-token-${nftSetting.nftToken}`
     promises.push(
       request({

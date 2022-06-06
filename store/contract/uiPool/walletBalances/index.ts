@@ -1,27 +1,25 @@
 import { combineReducers } from 'redux'
+import { NFT_IDS } from 'app/web3/market'
 
-import wb1 from './1'
-import wb2 from './2'
-import wb3 from './3'
-import wb4 from './4'
-import wb5 from './5'
-import wb6 from './6'
-import wb7 from './7'
-import wb8 from './8'
-import wb9 from './9'
-import wb10 from './10'
+import type {
+  WalletBalancesReducer,
+  WalletBalancesSelectData,
+  WalletBalancesUseRequestController,
+} from './utils/requestSliceHelper'
+import { requestSliceHelper } from './utils/requestSliceHelper'
 
-const reducer = combineReducers({
-  wb1,
-  wb2,
-  wb3,
-  wb4,
-  wb5,
-  wb6,
-  wb7,
-  wb8,
-  wb9,
-  wb10,
+const reducers: Record<string, WalletBalancesReducer> = {}
+const selectDatas: Record<string, WalletBalancesSelectData> = {}
+const useRequestControllers: Record<string, WalletBalancesUseRequestController> = {}
+
+NFT_IDS.forEach((NFT_ID) => {
+  const { reducer, selectData, useRequestController } = requestSliceHelper(NFT_ID)
+  reducers[NFT_ID] = reducer
+  selectDatas[NFT_ID] = selectData
+  useRequestControllers[NFT_ID] = useRequestController
 })
 
+const reducer = combineReducers(reducers)
+
 export default reducer
+export { selectDatas, useRequestControllers }
