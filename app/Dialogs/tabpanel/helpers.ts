@@ -9,7 +9,6 @@ import type { TabPanelBaseProps } from 'app/hoc/tabs/withTabPanel'
 
 import type { TabValue } from '../constants'
 import { useInputSlider } from '../hooks/tab/useInputSlider'
-import { NFT_IDS } from 'app/web3/market'
 
 const defaultGetIsMax = (value: string, balance: string) => value === balance
 
