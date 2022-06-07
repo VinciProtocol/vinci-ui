@@ -10,17 +10,17 @@ import { useCountTablesController } from './application/thegraph/nftToken/countT
 import { useTimeLockedTablesController } from './application/thegraph/nftToken/timeLockedTables'
 import { useOracleController } from './application/oracle'
 import { useWalletBalanceControllers } from './application/walletBalance'
-import { useWalletNFTControllers } from './application/walletNFT'
+import { useWalletNFTController } from './application/walletNFT'
 
 export const useControllersService = () => {
   const reservesData = useReservesDataController()
   const userReservesData = useUserReservesDataController()
   const walletBalances = useWalletBalanceControllers()
-  const walletNFTs = useWalletNFTControllers()
+  const walletNFT = useWalletNFTController()
 
   useChainIDChange({
-    controllers: [reservesData, userReservesData],
-    ObjectControllers: [walletBalances, walletNFTs],
+    controllers: [reservesData, userReservesData, walletNFT],
+    ObjectControllers: [walletBalances],
   })
 
   const lendingPool = useLendingPoolController()
@@ -35,7 +35,7 @@ export const useControllersService = () => {
     reservesData,
     userReservesData,
     walletBalances,
-    walletNFTs,
+    walletNFT,
     lendingPool,
     erc721,
     pageProcess,

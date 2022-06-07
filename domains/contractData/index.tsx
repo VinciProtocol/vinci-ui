@@ -24,7 +24,6 @@ import ContractNFTProvider from './nft'
 export { createContractNFTContext } from './nft'
 import ContractERC20Provider from './erc20'
 import type { WalletBalancesData } from 'store/contract/uiPool/walletBalances/adapter/walletBalanceAdapter'
-import type { WalletNFTData } from 'store/contract/uiPool/walletNFT/adapter/walletNFTAdapter'
 
 const useContractDataService = () => {
   const { market } = useMarket()
@@ -42,15 +41,10 @@ const useContractDataService = () => {
         if (!nftSettings.length) return
         const marketId = reservesData.id
         const userReservesData = userReservesDatas.find(({ id }) => marketId === id)
-        let walletNFT: WalletNFTData
         let walletBalance: WalletBalancesData
         const marketInfo = market.info[marketId]
         if (marketInfo && marketInfo.lendingPoolAddressesProvider) {
           walletBalance = walletBalanceData.find(
-            ({ lendingPoolAddressesProvider }) =>
-              marketInfo.lendingPoolAddressesProvider === lendingPoolAddressesProvider
-          )
-          walletNFT = walletNFTData.find(
             ({ lendingPoolAddressesProvider }) =>
               marketInfo.lendingPoolAddressesProvider === lendingPoolAddressesProvider
           )
@@ -60,7 +54,7 @@ const useContractDataService = () => {
           reservesData,
           userReservesData,
           walletBalance,
-          walletNFT,
+          walletNFT: walletNFTData,
           nftSettings,
         }
       })
@@ -80,7 +74,7 @@ const useContractDataService = () => {
       log('[domains] [nToken]', { nToken })
     }
     return returnValue
-  }, [market, reservesDatas, userReservesDatas, walletBalanceData])
+  }, [market, reservesDatas, userReservesDatas, walletBalanceData, walletNFTData])
 
   const { generalAssets, generalAssetsMap } = useMemo(() => {
     if (!contractDataSource || !oracle) {
@@ -380,9 +374,9 @@ const useContractDataService = () => {
             tokenIds: [] as any[],
           }
           if (walletNFTs && collection) {
-            const tokenIds = walletNFTs.data[underlyingAsset]
-            if (tokenIds) {
-              nftWallet.tokenIds = tokenIds
+            const walletNFT = walletNFTs.find(({ underlyingNFT }: any) => underlyingNFT === underlyingAsset)
+            if (walletNFT && walletNFT.tokenIds) {
+              nftWallet.tokenIds = walletNFT.tokenIds
             }
           }
 

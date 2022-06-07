@@ -1,5 +1,5 @@
-import bscmainnet from 'lib/protocol/generate/bscmainnet.json'
 import bsctestnet from 'lib/protocol/generate/bsctestnet.json'
+import bscmainnet from 'lib/protocol/generate/bscmainnet.json'
 import kovan from 'lib/protocol/generate/kovan.json'
 import localhost from 'lib/protocol/generate/localhost.json'
 import vinci from 'lib/protocol/generate/vinci.json'
@@ -34,9 +34,9 @@ export const NFT_ID_10 = 'DLAND'
 export const NFT_ID_11 = 'Meebits'
 export const NFT_ID_12 = 'PUNK'
 
-export const getMarketsData = (chainId: ChainId): MarketData => {
+const getMarketsData = (chainId: ChainId): MarketData => {
   const generateInfo = list[chainId]
-  if (!generateInfo) return defaultMarket
+  if (!generateInfo) throw new Error(`[getMarketsData] error. chainId => ${chainId}`)
   return {
     chainId,
     addresses: {
@@ -83,20 +83,19 @@ export const getMarketsData = (chainId: ChainId): MarketData => {
   }
 }
 
-export const defaultMarket = getMarketsData(ChainId.kovan)
-
-const getNFTS = () => {
-  return {
-    // ...getMarketsData(ChainId.localhost).nfts,
-    // ...getMarketsData(ChainId.bsct).nfts,
-    // ...getMarketsData(ChainId.vinci).nfts,
-    ...getMarketsData(ChainId.kovan).nfts,
-    // ...getMarketsData(ChainId.bsc).nfts,
-    // ...getMarketsData(ChainId.ethereum).nfts,
-  }
+export const MARKETS: Record<number, MarketData> = {
+  [ChainId.kovan]: getMarketsData(ChainId.kovan),
 }
-
-export const NFTs = getNFTS()
+export const defaultMarket = MARKETS[ChainId.kovan]
+export const getMarket = (chainId: ChainId) => MARKETS[chainId] || defaultMarket
+export const NFTs = {
+  // ...getMarketsData(ChainId.localhost).nfts,
+  // ...getMarketsData(ChainId.bsct).nfts,
+  // ...getMarketsData(ChainId.vinci).nfts,
+  ...MARKETS[ChainId.kovan].nfts,
+  // ...getMarketsData(ChainId.bsc).nfts,
+  // ...getMarketsData(ChainId.ethereum).nfts,
+}
 export const NFT_IDS = [
   NFT_ID_1,
   NFT_ID_2,

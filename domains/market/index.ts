@@ -1,13 +1,13 @@
 import { useMemo } from 'react'
 import { createContext } from 'utils/createContext'
-import { getMarketsData } from 'app/web3/market'
+import { getMarket } from 'app/web3/market'
 import { getProvider } from 'app/web3/provider'
 import { useWallet } from 'app/wallet'
 
 const useMarketService = () => {
   const { chainId, ethereum, error } = useWallet()
   const { provider, market } = useMemo(() => {
-    const market = getMarketsData(chainId)
+    const market = getMarket(chainId)
     const provider = !error && ethereum ? ethereum : getProvider(market.chainId)
     return {
       provider,
