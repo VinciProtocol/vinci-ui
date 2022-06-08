@@ -49,7 +49,7 @@ export const transaction = (props: {
               .tx()
               .then(sendTransaction)
               .then((txResponse) => {
-                console.log(txResponse)
+                console.log('[txResponse]', txResponse)
                 return txResponse.wait()
               })
           : Promise.resolve()
@@ -64,7 +64,7 @@ export const transaction = (props: {
           .then(() => actionTxData.tx())
           .then(sendTransaction)
           .then((txResponse) => {
-            console.log(txResponse)
+            console.log('[txResponse]', txResponse)
             return txResponse.wait()
           })
           .then(() => {

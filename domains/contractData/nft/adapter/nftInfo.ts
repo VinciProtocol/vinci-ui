@@ -38,7 +38,7 @@ const fetchNFTInfo = (url: string, getValue: (d: any) => any): Promise<any> => {
       })
         .then((d) => d.json())
         .then((d) => {
-          if (!d.name) return Promise.reject()
+          if (!d.image) return Promise.reject()
           const returnValue = getValue(d)
           setItem(url, returnValue)
           return returnValue

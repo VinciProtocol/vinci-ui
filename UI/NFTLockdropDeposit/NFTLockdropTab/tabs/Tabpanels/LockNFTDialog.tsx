@@ -84,7 +84,7 @@ const LockNFTDialog: FC<LockNFTDialogProps> = ({ nfts, visible, close, onClick }
   )
 }
 
-const NFTCard: FC<NFTCardProps> = ({ id, description, image, currentFloorPrice, valuation }) => {
+const NFTCard: FC<NFTCardProps> = ({ name, description, image, currentFloorPrice, valuation }) => {
   const Root = useMemoEmpty(
     () =>
       styled(Card)`
@@ -92,7 +92,7 @@ const NFTCard: FC<NFTCardProps> = ({ id, description, image, currentFloorPrice, 
         position: relative;
       `
   )
-  const title = useMemo(() => (id ? `${description} #${id}` : description), [description, id])
+  const title = useMemo(() => (name ? `${description} ${name}` : description), [description, name])
 
   return (
     <Root>
