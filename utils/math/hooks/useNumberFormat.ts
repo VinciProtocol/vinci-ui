@@ -35,7 +35,7 @@ const getOptions = (fn: any, options: any) => ({
 })
 
 const numberFormatOptions = (
-  type: 'number' | 'USD' | 'percent',
+  type: 'number' | 'USD' | 'percent' = 'number',
   options: Intl.NumberFormatOptions = {}
 ): Intl.NumberFormatOptions => {
   switch (type) {

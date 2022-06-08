@@ -29,7 +29,7 @@ const NumberDisplay: FC<NumberDisplayProps> = ({ value, options, type, sx }) => 
   const data = useMemo(() => {
     const d = valueToBigNumber(value)
     if (!d || d.isNaN() || d.eq(0)) return '-'
-    return options ? NF.format(d, NF.options(options)) : d.toFixed(2)
+    return NF.format(d, NF.options(options))
   }, [NF, options, value])
   if (type) {
     let tokenSymbol = 'ETH'
