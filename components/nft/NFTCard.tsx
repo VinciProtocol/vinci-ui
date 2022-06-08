@@ -32,6 +32,7 @@ export type NFTCardProps = Partial<
 
 const NFTCard: FC<NFTCardProps> = ({
   id,
+  name,
   description,
   image,
   action,
@@ -54,7 +55,7 @@ const NFTCard: FC<NFTCardProps> = ({
   )
   const { t } = useTranslation()
   const [checked, setChecked] = useState(false)
-  const title = useMemo(() => (id ? `${description} #${id}` : description), [description, id])
+  const title = useMemo(() => (name ? `${description} ${name}` : description), [description, name])
   const isLocked = useMemo(() => {
     const now = Date.now()
     return lock && lock.expiration > now

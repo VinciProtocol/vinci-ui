@@ -25,19 +25,28 @@ export type NFTInfoProps = {
   }
 }
 
-const fetchNFTInfo = (url: string, getValue: (d: any) => any) => {
+const fetchNFTInfo = (url: string, getValue: (d: any) => any): Promise<any> => {
   return getItem(url)
     .then((d) => {
       if (!d) return Promise.reject()
       return d
     })
     .catch(() =>
-      fetch(url)
+      fetch(url, {
+        method: 'GET',
+        mode: 'cors',
+      })
         .then((d) => d.json())
         .then((d) => {
+          if (!d.name) return Promise.reject()
           const returnValue = getValue(d)
           setItem(url, returnValue)
           return returnValue
+        })
+        .catch(() => {
+          if (url.startsWith('/proxy/sandbox/')) {
+            return fetchNFTInfo('/proxy/sandbox/33195', getValue)
+          }
         })
     )
 }
@@ -129,7 +138,7 @@ export const getNFTInfo = (props: NFTInfoProps): Promise<NFTInfo[]> => {
     for (let i = 0; i < tokenIds.length; i++) {
       const tokenId = tokenIds[i]
       promises.push(
-        fetchNFTInfo(`https://api.sandbox.game/lands/${tokenId}/metadata.json`, (d) => ({
+        fetchNFTInfo(`/proxy/sandbox/${tokenId}`, (d) => ({
           id: tokenId,
           name: d.name,
           image: d.image,

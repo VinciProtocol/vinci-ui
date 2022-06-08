@@ -35,4 +35,14 @@ module.exports = {
 
     return config
   },
+  async rewrites() {
+    return {
+      fallback: [
+        {
+          source: '/proxy/sandbox/:token_id*',
+          destination: `https://api.sandbox.game/lands/:token_id*/metadata.json`,
+        },
+      ],
+    }
+  },
 }
