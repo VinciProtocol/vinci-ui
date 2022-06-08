@@ -12,14 +12,13 @@ export const networks: Record<ChainId, NetworkConfig> = {
     name: 'Kovan',
     fullName: 'Kovan Testnet',
     symbol: 'ETH',
-    // publicJsonRPCUrl: 'https://kovan.poa.network',
-    publicJsonRPCUrl: 'https://kovan.infura.io/v3/e33605b8ebd345fa914bd4cdfdfb401d',
+    publicJsonRPCUrl: 'https://kovan.poa.network',
+    // publicJsonRPCUrl: 'https://kovan.infura.io/v3/e33605b8ebd345fa914bd4cdfdfb401d',
   },
   [ChainId.bsct]: {
     name: 'BSC Testnet',
     fullName: 'BSC Testnet',
     symbol: 'BNB',
-    // publicJsonRPCUrl: 'https://kovan.poa.network',
     publicJsonRPCUrl: 'https://data-seed-prebsc-1-s1.binance.org:8545',
   },
   [ChainId.bsc]: {
