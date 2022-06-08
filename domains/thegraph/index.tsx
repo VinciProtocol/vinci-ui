@@ -111,7 +111,7 @@ const useThegraphService = () => {
 
     const { userValue, totalValue } = estmatedRewards
     const rewardAmount = valueToBigNumber(
-      totalTVL.gte(5000) ? REWARD_AMOUNT : totalTVL.div(5000).multipliedBy(REWARD_AMOUNT)
+      totalTVL.gte(5000) ? REWARD_AMOUNT : totalTVL.div(5000).sqrt().multipliedBy(REWARD_AMOUNT)
     )
     if (!userValue.eq(0) && !totalValue.eq(0)) {
       estmatedRewards.value = userValue.div(totalValue).multipliedBy(rewardAmount)
