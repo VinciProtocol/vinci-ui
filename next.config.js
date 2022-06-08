@@ -42,6 +42,14 @@ module.exports = {
           source: '/proxy/sandbox/:token_id*',
           destination: `https://api.sandbox.game/lands/:token_id*/metadata.json`,
         },
+        {
+          source: '/proxy/mutants/:token_id*',
+          destination: `https://boredapeyachtclub.com/api/mutants/:token_id*`,
+        },
+        {
+          source: '/proxy/meebit/:token_id*',
+          destination: `https://meebits.app/meebit/:token_id*`,
+        },
       ],
     }
   },

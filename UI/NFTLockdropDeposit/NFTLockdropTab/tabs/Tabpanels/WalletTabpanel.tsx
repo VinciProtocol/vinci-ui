@@ -35,8 +35,6 @@ const WalletTabpanel = withTabPanel(
     } = useContractNFT()
     const {
       reservesData,
-      nftTokenCountTablesController,
-      nftTokenTimeLockedTablesController,
       lendingPool: { depositAndLockNFT },
       erc721: { setApprovalForAll, isApprovedForAll },
     } = useControllers()
@@ -77,8 +75,6 @@ const WalletTabpanel = withTabPanel(
         })
         .then(() => {
           reservesData.restart()
-          nftTokenCountTablesController.restart()
-          nftTokenTimeLockedTablesController.restart()
           setRef.current.clear()
           setDisabled(true)
           setSize(0)

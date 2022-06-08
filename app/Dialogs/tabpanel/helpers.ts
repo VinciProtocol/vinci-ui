@@ -67,7 +67,7 @@ export const createUseTabpanel = (props: {
     const inputSlider = useInputSlider({ balance })
     const { account: user } = useWallet()
 
-    const { reservesData, walletBalances, walletNFT } = useControllers()
+    const { reservesData, walletBalances } = useControllers()
 
     const title = useMemo(() => {
       const BN4 = BigNumber.clone({
@@ -120,7 +120,6 @@ export const createUseTabpanel = (props: {
               .then(() => {
                 reservesData.restart()
                 Object.keys(walletBalances).forEach((key) => walletBalances[key].restart())
-                walletNFT.restart()
                 if (isApproved) inputSlider.input.clear()
               })
           },

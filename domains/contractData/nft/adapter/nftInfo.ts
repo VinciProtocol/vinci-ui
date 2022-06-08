@@ -75,7 +75,7 @@ export const getNFTInfo = (props: NFTInfoProps): Promise<NFTInfo[]> => {
     for (let i = 0; i < tokenIds.length; i++) {
       const tokenId = tokenIds[i]
       promises.push(
-        fetchNFTInfo('https://boredapeyachtclub.com/api/mutants/' + tokenId, (d) => ({
+        fetchNFTInfo('/proxy/mutants/' + tokenId, (d) => ({
           id: tokenId,
           name: '#' + tokenId,
           image: d.image.replace('ipfs://', 'https://ipfs.io/ipfs/'),
@@ -192,7 +192,7 @@ export const getNFTInfo = (props: NFTInfoProps): Promise<NFTInfo[]> => {
     for (let i = 0; i < tokenIds.length; i++) {
       const tokenId = tokenIds[i]
       promises.push(
-        fetchNFTInfo(`https://meebits.app/meebit/${tokenId}`, (d) => ({
+        fetchNFTInfo(`/proxy/meebit/${tokenId}`, (d) => ({
           id: tokenId,
           name: d.name,
           image: d.image,

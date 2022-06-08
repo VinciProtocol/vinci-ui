@@ -25,8 +25,8 @@ export const useControllersService = () => {
 
   const lendingPool = useLendingPoolController()
   const erc721 = useERC721Controller()
-  const nftTokenCountTablesController = useCountTablesController()
-  const nftTokenTimeLockedTablesController = useTimeLockedTablesController()
+  const nftTokenCountTables = useCountTablesController()
+  const nftTokenTimeLockedTables = useTimeLockedTablesController()
   const oracleController = useOracleController()
 
   const pageProcess = usePageProgressController()
@@ -39,8 +39,8 @@ export const useControllersService = () => {
     lendingPool,
     erc721,
     pageProcess,
-    nftTokenCountTablesController,
-    nftTokenTimeLockedTablesController,
+    nftTokenCountTables,
+    nftTokenTimeLockedTables,
     oracleController,
   }
 }
