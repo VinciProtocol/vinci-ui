@@ -1,6 +1,7 @@
 import bsctestnet from 'lib/protocol/generate/bsctestnet.json'
 import bscmainnet from 'lib/protocol/generate/bscmainnet.json'
 import kovan from 'lib/protocol/generate/kovan.json'
+import mainnet from 'lib/protocol/generate/mainnet.json'
 import localhost from 'lib/protocol/generate/localhost.json'
 import vinci from 'lib/protocol/generate/vinci.json'
 
@@ -13,6 +14,7 @@ import type { MarketData, NFTSetting } from './types'
 const list: Record<ChainId, typeof vinci> = {
   [ChainId.ethereum]: {
     vinciNFTProvider: '0x12483993167f6e652fd59cd173a495da0b80bdf2',
+    ...mainnet,
   },
   [ChainId.kovan]: kovan,
   [ChainId.bsc]: bscmainnet,
@@ -85,15 +87,17 @@ const getMarketsData = (chainId: ChainId): MarketData => {
 }
 
 export const MARKETS: Record<number, MarketData> = {
+  [ChainId.ethereum]: getMarketsData(ChainId.ethereum),
   [ChainId.kovan]: getMarketsData(ChainId.kovan),
 }
-export const defaultMarket = MARKETS[ChainId.kovan]
+export const defaultMarket = MARKETS[ChainId.ethereum]
 export const getMarket = (chainId: ChainId) => MARKETS[chainId] || defaultMarket
 export const NFTs = {
   // ...getMarketsData(ChainId.localhost).nfts,
   // ...getMarketsData(ChainId.bsct).nfts,
   // ...getMarketsData(ChainId.vinci).nfts,
   ...MARKETS[ChainId.kovan].nfts,
+  ...MARKETS[ChainId.ethereum].nfts,
   // ...getMarketsData(ChainId.bsc).nfts,
   // ...getMarketsData(ChainId.ethereum).nfts,
 }

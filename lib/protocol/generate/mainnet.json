@@ -1,0 +1,34 @@
+{
+  "LendingPoolAddressesProviderRegistry": "0xa564b497252fbdd67d09d1929d1d695fec97291b",
+  "WETHGateway": "0x3fdd1c30c5f61078a50f5b1823f6ec97b6144d2f",
+  "WalletBalanceProvider": "0x900357214460d6c51ace460beac3700940ab4285",
+  "UiPoolDataProvider": "0x7ca68e4fd1644f6a46d86efbe4916d2d446c4d08",
+  "PriceOracle": "0x548955c95d28da83c409d2250ac0d51988cb1b95",
+  "AaveOracle": "0xc9d086f46b9726871f01ae09d46f6488dcac37d3",
+  "LendingRateOracle": "0x1e1015de8eda3d8e913da250a110893f8f9cb240",
+  "LendingPoolCollateralManagerImpl": "0x2cfec532824647da5b0563916d1ccf6e09bde974",
+  "LendingPoolCollateralManager": "0x2cfec532824647da5b0563916d1ccf6e09bde974",
+  "NFTVaultLogic": "0x37206a476adc1a3a820a35be414d6bf39fc474d3",
+  "GenericLogic": "0x8a2b212ee8ec8ede8a70af481f0950f7ff7c9ae1",
+  "ValidationLogic": "0xb7e6fa926d1d027d36dd212981a98edfb66a34b8",
+  "ReserveLogic": "0x8ba0b857ddc9602020ac95ad359717d94598e9de",
+  "LendingPoolImpl": "0xcc7134d34807ed6d7150670665723ea5386e4920",
+  "LendingPoolConfiguratorImpl": "0xc7edec8a047da8e6cdca2ee697e52713f68c0ee0",
+  "TimeLockableNToken": "0x6a3c3542402614efbecf53ff4b3290bfcd6df74e",
+  "VariableDebtToken": "0x9d7cfec9366bede52cc7443fd8414c4044c5d8b9",
+  "VToken": "0x54d8d8ec5e331d2d266836c4ef814dc8c8dffd5d",
+  "NToken": "0xbafba17955b3677b65abe3b09527a0342202df2e",
+  "AllowAllEligibilityImpl": "0x2b7efea254cf5567e6751dc6aad0deaefa3c0ef9",
+  "Sandbox": "0x5cc5b05a8a13e3fbdb0bb9fccd98d38e50f90c38",
+  "markets": {
+    "VinciSandbox": {
+      "LendingPoolAddressesProvider": "0x7d20bd87de4249eccc7fb955653c88ccc52e74dc",
+      "AaveProtocolDataProvider": "0x6cd41da73f1b2bb60ae1d649f93947b4d60e374a",
+      "LendingPool": "0x27fcc669c764c953832fdcd3e83e77850cd85152",
+      "LendingPoolConfigurator": "0xa9af258bab03adb619d4026b34267a8e0f4b0e20",
+      "TimeLockableNToken": {
+        "Sandbox": "0x99078247eeaf08dfa9f0e8ebec988a692354a774"
+      }
+    }
+  }
+}
