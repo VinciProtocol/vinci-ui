@@ -56,7 +56,7 @@ export function useMenu() {
     return MenuList.filter((menu) => {
       if (__DEV__) return true
       if (chainId === ChainId.ethereum) {
-        return menu.key === 'NFTAirdrop' || menu.key === 'App'
+        return menu.key === 'NFTAirdrop' || menu.key === 'App' || menu.key === 'NFTLockdrop'
       }
       if (chainId === ChainId.kovan || chainId === ChainId.bsc) {
         return menu.key !== 'NFTLockdrop' && menu.key !== 'NFTAirdrop'

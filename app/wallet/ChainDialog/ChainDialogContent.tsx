@@ -21,7 +21,7 @@ const ChainDialogContent: FC = () => {
     () => (
       <Fragment>
         <ChainButton chainId={ChainId.ethereum} />
-        <ChainButton chainId={ChainId.bsc} />
+        {/* <ChainButton chainId={ChainId.bsc} /> */}
         <ChainButton chainId={ChainId.kovan} />
         {__DEV__ && <ChainButton chainId={ChainId.vinci} />}
       </Fragment>

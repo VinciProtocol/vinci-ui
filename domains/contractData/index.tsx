@@ -24,6 +24,7 @@ import ContractNFTProvider from './nft'
 export { createContractNFTContext } from './nft'
 import ContractERC20Provider from './erc20'
 import type { WalletBalancesData } from 'store/contract/uiPool/walletBalances/adapter/walletBalanceAdapter'
+import { getNFTMeta } from 'app/web3/market/NFTConfig'
 
 const useContractDataService = () => {
   const { market } = useMarket()
@@ -62,12 +63,20 @@ const useContractDataService = () => {
 
     log('[domains] [contractDataSource]', returnValue)
     if (__DEV__) {
+      const getTitle = (symbol: string) => {
+        let title = symbol.toLowerCase()
+        return `${title[0].toUpperCase()}${title.substring(1)}`
+      }
       const vNFT = returnValue.reduce((obj, { reservesData, nftSettings }) => {
         if (!reservesData || !reservesData.nftVaults) return obj
         reservesData.nftVaults.forEach(({ nTokenAddress }, index) => {
           const nftSetting = nftSettings[index]
           if (!nftSetting) return
-          obj[`V${nftSetting.symbol}`] = nTokenAddress
+          const meta = getNFTMeta(nftSetting)
+          obj[`V ${getTitle(nftSetting.symbol)}`] = {
+            ...meta,
+            underlyingAsset: nTokenAddress,
+          }
         })
         return obj
       }, {} as any)

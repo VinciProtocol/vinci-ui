@@ -35,7 +35,7 @@ export const getTimeLockedTables = ({ account, chainId }: TimeLockedTablesProps,
   NFT_IDS.forEach((NFT_ID) => {
     const nftSetting = safeGet(() => MARKETS[chainId].nfts[NFT_ID])
     if (!nftSetting || !nftSetting.symbol) return
-    const vSymbol = `V${nftSetting.symbol}`
+    const vSymbol = `V-${nftSetting.symbol}`
     const name = `vinciprotocol/${vSymbol.toLowerCase()}`
     promises.push(
       request({
