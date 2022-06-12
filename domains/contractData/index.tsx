@@ -24,7 +24,7 @@ import ContractNFTProvider from './nft'
 export { createContractNFTContext } from './nft'
 import ContractERC20Provider from './erc20'
 import type { WalletBalancesData } from 'store/contract/uiPool/walletBalances/adapter/walletBalanceAdapter'
-import { getNFTMeta } from 'app/web3/market/NFTConfig'
+import { getNFTMeta } from 'app/web3/market/NFTMeta'
 
 const useContractDataService = () => {
   const { market } = useMarket()

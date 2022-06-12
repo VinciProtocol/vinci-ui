@@ -28,7 +28,6 @@ import {
   NFT_ID_11,
   NFT_ID_12,
 } from '.'
-import type { NFTSetting } from './types'
 
 export const getNFTInfo = (NFT_ID: string) => {
   switch (NFT_ID) {
@@ -178,13 +177,5 @@ export const getNFTInfo = (NFT_ID: string) => {
       }
     default:
       throw new Error(`[getNFTInfo] 找不到对应 NFTInfo => (${NFT_ID})`)
-  }
-}
-
-export const getNFTMeta = ({ name, symbol, imageName }: NFTSetting) => {
-  return {
-    name: `Vinci wrapped ${name}`,
-    description: `v${symbol}s are wrapped NFTs that are minted when ${symbol} holders deposit their ${symbol}s as collateral in Vinci Protocol, and burned when they withdraw the ${symbol}s.`,
-    image: `https://gateway.pinata.cloud/ipfs/QmXDAGsZzJPz8QP7VFqS1HKznGvwjVgXmgYhnqg2v4txgL/${imageName}`,
   }
 }

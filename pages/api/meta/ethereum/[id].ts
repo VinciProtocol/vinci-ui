@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { MARKETS } from 'app/web3/market'
 import { ChainId } from 'app/web3/chain/types'
-import { getNFTMeta } from 'app/web3/market/NFTConfig'
+import { getNFTMeta } from 'app/web3/market/NFTMeta'
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   let { id } = req.query
