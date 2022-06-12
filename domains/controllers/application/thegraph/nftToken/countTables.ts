@@ -1,12 +1,19 @@
 import { useCallback, useMemo } from 'react'
 
+import { useWallet } from 'app/wallet'
 import { useRequestController } from 'store/thegraph/nftToken/countTables'
 
 export const useCountTablesController = () => {
+  const { chainId } = useWallet()
   const { usePolling, polling, clearData } = useRequestController()
-  const query = useMemo(() => ({}), [])
+  const query = useMemo(
+    () => ({
+      chainId,
+    }),
+    [chainId]
+  )
 
-  usePolling(query, () => false, 60 * 1000)
+  usePolling(query, (query) => !query.chainId, 60 * 1000)
 
   const restart = useCallback(() => {
     polling.restart(query)

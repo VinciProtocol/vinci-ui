@@ -6,7 +6,6 @@ export type NFTSetting = {
   NFT_ID: string
   underlyingAsset: string
   oracle: string
-  nftToken: string
   name: string
   imageName: string
   symbol: string

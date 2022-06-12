@@ -5,15 +5,16 @@ import { useRequestController } from 'store/thegraph/nftToken/timeLockedTables'
 
 export const useTimeLockedTablesController = () => {
   const { usePolling, polling, clearData } = useRequestController()
-  const { account } = useWallet()
+  const { account, chainId } = useWallet()
   const query = useMemo(
     () => ({
       account,
+      chainId,
     }),
-    [account]
+    [account, chainId]
   )
 
-  usePolling(query, (query) => !query.account, 60 * 1000)
+  usePolling(query, (query) => !query.account || !query.chainId, 60 * 1000)
 
   const restart = useCallback(() => {
     polling.restart(query)

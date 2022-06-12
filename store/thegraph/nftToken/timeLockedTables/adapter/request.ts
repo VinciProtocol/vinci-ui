@@ -1,4 +1,5 @@
-import { NFTs, NFT_IDS } from 'app/web3/market'
+import type { ChainId } from 'app/web3/chain/types'
+import { MARKETS, NFT_IDS } from 'app/web3/market'
 import { safeGet } from 'utils/get'
 
 type RequestProps = {
@@ -26,14 +27,16 @@ function request({ name, account, signal }: RequestProps) {
 
 export type TimeLockedTablesProps = {
   account: string
+  chainId: ChainId
 }
-export const getTimeLockedTables = ({ account }: TimeLockedTablesProps, { signal }: any) => {
+export const getTimeLockedTables = ({ account, chainId }: TimeLockedTablesProps, { signal }: any) => {
   const timeLockedTables: TimeLockedTables = {}
   const promises: any = []
   NFT_IDS.forEach((NFT_ID) => {
-    const nftSetting = NFTs[NFT_ID]
-    if (!nftSetting || !nftSetting.nftToken) return
-    const name = `imsunhao/nft-token-${nftSetting.nftToken}`
+    const nftSetting = safeGet(() => MARKETS[chainId].nfts[NFT_ID])
+    if (!nftSetting || !nftSetting.symbol) return
+    const vSymbol = `V${nftSetting.symbol}`
+    const name = `vinciprotocol/${vSymbol.toLowerCase()}`
     promises.push(
       request({
         name,

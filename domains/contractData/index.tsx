@@ -62,16 +62,16 @@ const useContractDataService = () => {
 
     log('[domains] [contractDataSource]', returnValue)
     if (__DEV__) {
-      const nToken = returnValue.reduce((obj, { reservesData, nftSettings }) => {
+      const vNFT = returnValue.reduce((obj, { reservesData, nftSettings }) => {
         if (!reservesData || !reservesData.nftVaults) return obj
         reservesData.nftVaults.forEach(({ nTokenAddress }, index) => {
           const nftSetting = nftSettings[index]
           if (!nftSetting) return
-          obj[nftSetting.nftToken] = nTokenAddress
+          obj[`V${nftSetting.symbol}`] = nTokenAddress
         })
         return obj
       }, {} as any)
-      log('[domains] [nToken]', { nToken })
+      log('[domains] [vNFT]', { vNFT })
     }
     return returnValue
   }, [market, reservesDatas, userReservesDatas, walletBalanceData, walletNFTData])

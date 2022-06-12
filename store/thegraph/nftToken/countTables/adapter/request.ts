@@ -1,4 +1,5 @@
-import { NFTs, NFT_IDS } from 'app/web3/market'
+import type { ChainId } from 'app/web3/chain/types'
+import { MARKETS, NFT_IDS } from 'app/web3/market'
 import { safeGet } from 'utils/get'
 
 type RequestProps = {
@@ -23,14 +24,17 @@ function request({ name, signal }: RequestProps) {
   }).then((data) => data.json())
 }
 
-export type CountTablesProps = {}
-export const getCountTables = (props: CountTablesProps, { signal }: any) => {
+export type CountTablesProps = {
+  chainId: ChainId
+}
+export const getCountTables = ({ chainId }: CountTablesProps, { signal }: any) => {
   const countTables: CountTables = {}
   const promises: any = []
   NFT_IDS.forEach((NFT_ID) => {
-    const nftSetting = NFTs[NFT_ID]
-    if (!nftSetting || !nftSetting.nftToken) return
-    const name = `imsunhao/nft-token-${nftSetting.nftToken}`
+    const nftSetting = safeGet(() => MARKETS[chainId].nfts[NFT_ID])
+    if (!nftSetting || !nftSetting.symbol) return
+    const vSymbol = `V${nftSetting.symbol}`
+    const name = `vinciprotocol/${vSymbol.toLowerCase()}`
     promises.push(
       request({
         name,

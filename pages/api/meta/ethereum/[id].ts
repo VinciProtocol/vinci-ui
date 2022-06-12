@@ -1,11 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { NFTs } from 'app/web3/market'
+import { MARKETS } from 'app/web3/market'
+import { ChainId } from 'app/web3/chain/types'
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   let { id } = req.query
   if (typeof id !== 'string') return res.status(404).end()
   if (id.length === 42) id = id.toLowerCase()
-  const NFT = NFTs[id]
+  const NFT = MARKETS[ChainId.ethereum].nfts[id]
   if (!NFT) return res.status(404).end()
   const { name, symbol, imageName } = NFT
 
