@@ -106,7 +106,7 @@ export const getNFTInfo = (NFT_ID: string) => {
     case NFT_ID_7:
       return {
         imageName: 'sandbox.png',
-        symbol: 'LAND',
+        symbol: 'Sandbox',
         src: sandbox.src,
         oracle: 'sandbox',
         name: `Sandbox's LANDs`,
