@@ -1,7 +1,10 @@
 import type { FC } from 'react'
+import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { styled } from '@mui/material/styles'
 import Stack from '@mui/material/Stack'
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import { useThegraph } from 'domains'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
@@ -24,9 +27,14 @@ const Card: FC<CardProps> = () => {
   )
 
   const { timeLockedDashboard } = useThegraph()
+  const theme = useTheme()
+  const isbreakpointUpSM = useMediaQuery(theme.breakpoints.up('sm'))
+  const direction = useMemo(() => {
+    return isbreakpointUpSM ? 'row' : 'column'
+  }, [isbreakpointUpSM])
 
   return (
-    <ROOT direction="row" spacing={2}>
+    <ROOT direction={direction} spacing={2}>
       <CardItem
         title={t('Card.totalValueLocked')}
         value={

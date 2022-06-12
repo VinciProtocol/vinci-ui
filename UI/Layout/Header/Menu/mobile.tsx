@@ -13,6 +13,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { useLinks } from 'UI/Layout/Footer/Links/useLinks'
 
+import Logo from '../Logo'
 import { useMenu } from './useMenu'
 
 const MenuMobile = () => {
@@ -23,7 +24,11 @@ const MenuMobile = () => {
 
   const list = useMemo(
     () => (
-      <List>
+      <List sx={{ paddingTop: 0 }}>
+        <ListItem sx={{ background: '#1C0200', paddingTop: '16px', paddingBottom: '16px' }}>
+          <Logo />
+        </ListItem>
+        <Divider />
         {menuList
           .filter((item) => !item.hide)
           .map(({ label, linkTo, key }) => (
@@ -43,7 +48,7 @@ const MenuMobile = () => {
           </Link>
         ))}
         <Divider />
-        <ListItem button>
+        <ListItem>
           <ListItemText primary=" © 2022, VINCI. All Rights Reserved" />
         </ListItem>
       </List>
