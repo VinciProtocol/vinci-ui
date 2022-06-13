@@ -68,14 +68,14 @@ export const useReservesDataFromAllPools = (props: ReservesDataProps) => {
         'networkBaseTokenPriceInUsd',
       ]),
       nftVaultsData: nftVaultsData.map((nftVault) => {
-        const { name, symbol, usageAsCollateralEnabled, isActive, isFrozen } = nftVault
+        const { name, symbol, usageAsCollateralEnabled, isActive, isFrozen, lockActionExpiration } = nftVault
         return {
           name,
           symbol,
           usageAsCollateralEnabled,
           isActive,
           isFrozen,
-          lockActionExpiration: (nftVault as any).lockActionExpiration,
+          lockActionExpiration,
           ...getAddress(nftVault, ['underlyingAsset', 'nTokenAddress']),
           ...getString(nftVault, [
             'baseLTVasCollateral',
