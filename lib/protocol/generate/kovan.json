@@ -2,7 +2,7 @@
   "LendingPoolAddressesProviderRegistry": "0x691a99bbaf8003b5d0201ee54e7be546e27e9816",
   "WETHGateway": "0x2c9c9ec84f858c611004e0b2231c1b9d27164806",
   "WalletBalanceProvider": "0xeb6e982c5af8082b418df04cbf8a2166665964aa",
-  "UiPoolDataProvider": "0x1ac832ade012a6a2cfd0abfe4597da1c8f77584f",
+  "UiPoolDataProvider": "0x5a97e3490ed5b6446005c5a2aaedd6ff45862e47",
   "PriceOracle": "0x784a0e42246cceecad91581d4f86f422ce5c0c84",
   "AaveOracle": "0x0ce4a7527bf10491d8e3ccc1034b692f99adad42",
   "LendingRateOracle": "0xaf727c540ea8357d89e7ed793c82d2143d4742b2",
@@ -29,6 +29,11 @@
   "AllowAllEligibilityImpl": "0x0b0c4860a2b1312125899d14eb21fcfd6942e1b2",
   "Meebits": "0x260d6ce2136bcd9423841bb8fd95db7ce305c472",
   "PUNK": "0x5b4f390056089436e98ba742c346a17460aa8c9d",
+  "AaveTreasuryImpl": "0x4a21840f4ab53eb9a878ae0f8d771682688b5f71",
+  "AaveTreasury": "0x61c93fa8122df7e5278a6ade72f2d4f495469796",
+  "WPUNKSGateway": "0x2f568df6c88b92d762a7db18ee4b09313c61bbf3",
+  "NToken": "0xa8acd4fd53ede9b788ab13febe07185d014fb71e",
+  "TimeLockableNTokenForTest": "0xfd6c73991d5e21e48b43963cd7e5484fc948232a",
   "markets": {
     "VinciAzuki": {
       "LendingPoolAddressesProvider": "0x3df1ddb582f89616544a4a060da4328191d30ff7",
@@ -141,12 +146,12 @@
       }
     },
     "VinciPUNK": {
-      "LendingPoolAddressesProvider": "0xd83766f1f51ac281b3f199565feac9afd93ff1cb",
-      "AaveProtocolDataProvider": "0x70e2706ca511cc7c28ef86e45689911c43ff03ca",
-      "LendingPool": "0x0c47f3ac97671063abc3ab10ae975e60d8d36bec",
-      "LendingPoolConfigurator": "0x2e6d162be27d046a8efa2127a9ede9922076e556",
-      "StableAndVariableTokensHelper": "0xc382224c31c1dfee2c8ba9b3bfce3b48e48f91d3",
-      "VTokensAndRatesHelper": "0x46053df45129dc669ce53622003316abeb73f037",
+      "LendingPoolAddressesProvider": "0xdd9199f7c6a2a9e59698a48e63f77795bfc3c1c9",
+      "AaveProtocolDataProvider": "0xa9846d22978a75fb9fbe8422d52b8b5cfc92b515",
+      "LendingPool": "0x84471b8c2867f6e811098fcc4377a9d181d0a05d",
+      "LendingPoolConfigurator": "0xa05297578608db462a73bc6082803886471aea79",
+      "StableAndVariableTokensHelper": "0xc930cb8654aa297ef3de6e45d84494822833aa41",
+      "VTokensAndRatesHelper": "0xe97bbc8a3fa07afef355170d1e4fe9b2e2e4a11e",
       "TimeLockableNToken": {
         "PUNK": "0xd1bcc08f6ddb6ab3cdc19c4c961e0228d9fb7e01"
       }

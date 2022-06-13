@@ -60,7 +60,6 @@ export const createProgressSlice = (path: string) => {
     }, [])
 
     const start = useCallback(() => {
-      console.log('start')
       const { status } = statusRef.current
       if (status !== PROGRESS_STATUS.ready) return false
       dispatch(setValue(0))
