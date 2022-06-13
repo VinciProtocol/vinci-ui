@@ -39,6 +39,37 @@ export const NFT_ID_12 = 'PUNK'
 const getMarketsData = (chainId: ChainId): MarketData => {
   const generateInfo = list[chainId]
   if (!generateInfo) throw new Error(`[getMarketsData] error. chainId => ${chainId}`)
+
+  const nfts: MarketData['nfts'] = {}
+  const nftsNtoken: MarketData['nftsNtoken'] = {}
+
+  Object.keys(generateInfo.markets || {}).forEach((marketID) => {
+    const markets: Record<string, NFTGenerate> = generateInfo.markets as any
+    Object.keys(markets[marketID].TimeLockableNToken).forEach((NFT_ID) => {
+      const underlyingAsset = (generateInfo as any)[NFT_ID]
+      if (!underlyingAsset) throw new Error(`[getMarketsData] ${chainId} 找不到对应 NFT配置 => (${NFT_ID})`)
+      const nToken = markets[marketID].TimeLockableNToken[NFT_ID]
+      const { LendingPool, LendingPoolAddressesProvider } = markets[marketID]
+      const { src, market, oracle, name, symbol, imageName } = getNFTInfo(NFT_ID)
+      const setting: NFTSetting = {
+        LENDING_POOL: LendingPool,
+        LENDING_POOL_ADDRESS_PROVIDER: LendingPoolAddressesProvider,
+        NFT_ID,
+        underlyingAsset,
+        src,
+        name,
+        imageName,
+        market,
+        nToken,
+        symbol,
+        oracle,
+      }
+      nfts[NFT_ID] = setting
+      nfts[underlyingAsset] = setting
+      nftsNtoken[nToken] = setting
+    })
+  })
+
   return {
     chainId,
     addresses: {
@@ -48,6 +79,8 @@ const getMarketsData = (chainId: ChainId): MarketData => {
       vinciNFTProvider: generateInfo.vinciNFTProvider,
       uiPoolDataProvider: generateInfo.UiPoolDataProvider,
     },
+    nfts,
+    nftsNtoken,
     info: Object.keys(generateInfo.markets || {}).reduce((obj, marketID) => {
       const market = (generateInfo.markets as any)[marketID]
       obj[marketID] = {
@@ -56,32 +89,6 @@ const getMarketsData = (chainId: ChainId): MarketData => {
       }
       return obj
     }, {} as Record<string, any>),
-    nfts: Object.keys(generateInfo.markets || {}).reduce((obj, marketID) => {
-      const markets: Record<string, NFTGenerate> = generateInfo.markets as any
-      Object.keys(markets[marketID].TimeLockableNToken).forEach((NFT_ID) => {
-        const underlyingAsset = (generateInfo as any)[NFT_ID]
-        if (!underlyingAsset) throw new Error(`[getMarketsData] ${chainId} 找不到对应 NFT配置 => (${NFT_ID})`)
-        const nToken = markets[marketID].TimeLockableNToken[NFT_ID]
-        const { LendingPool, LendingPoolAddressesProvider } = markets[marketID]
-        const { src, market, oracle, name, symbol, imageName } = getNFTInfo(NFT_ID)
-        const setting: NFTSetting = {
-          LENDING_POOL: LendingPool,
-          LENDING_POOL_ADDRESS_PROVIDER: LendingPoolAddressesProvider,
-          NFT_ID,
-          underlyingAsset,
-          src,
-          name,
-          imageName,
-          market,
-          nToken,
-          symbol,
-          oracle,
-        }
-        obj[NFT_ID] = setting
-        obj[underlyingAsset] = setting
-      })
-      return obj
-    }, {} as MarketData['nfts']),
   }
 }
 

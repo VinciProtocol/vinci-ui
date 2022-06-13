@@ -29,6 +29,7 @@ export type MarketData = {
     uiPoolDataProvider: string
   }
   nfts: Record<NFT_ID, NFTSetting>
+  nftsNtoken: Record<NFT_ID, NFTSetting>
   info: Record<
     string,
     {
