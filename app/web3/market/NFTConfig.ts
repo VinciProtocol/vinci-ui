@@ -36,7 +36,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'ape.jpg',
         symbol: 'BAYC',
         src: ape.src,
-        oracle: 'boredapeyachtclub',
+        oracle: 'bored-ape-yacht-club',
         name: 'Bored Ape Yacht Club',
         market: {
           logo: opensea,
@@ -96,7 +96,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'doodles.jpg',
         symbol: 'DOODLE',
         src: doodles.src,
-        oracle: 'doodles-official',
+        oracle: 'doodles',
         name: 'Doodles',
         market: {
           logo: opensea,
@@ -108,7 +108,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'sandbox.png',
         symbol: 'Sandbox',
         src: sandbox.src,
-        oracle: 'sandbox',
+        oracle: 'opensea__sandbox',
         name: `Sandbox's LANDs`,
         market: {
           logo: opensea,
@@ -144,7 +144,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'decentraland.png',
         symbol: 'LAND',
         src: decentraland.src,
-        oracle: 'decentraland',
+        oracle: 'opensea__decentraland',
         name: 'Decentraland LAND',
         market: {
           logo: opensea,
