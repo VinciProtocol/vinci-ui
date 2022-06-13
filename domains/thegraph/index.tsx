@@ -139,7 +139,10 @@ const useThegraphService = () => {
       }
     })
 
-    const returnValue = { timeLockedDashboard, nftAssetsTimeLocked }
+    const returnValue = {
+      timeLockedDashboard,
+      nftAssetsTimeLocked: nftAssetsTimeLocked.sort((a, b) => b.currentFloorPrice - a.currentFloorPrice),
+    }
 
     log('[domains] [timeLocked]', returnValue)
     return returnValue
