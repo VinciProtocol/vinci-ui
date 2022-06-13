@@ -22,7 +22,9 @@ const NFTLockdrop: FC = () => {
     return (
       <Fragment>
         <span>{t('nft-lockdrop:subTitle')}</span>
-        <Link href="#">{t('components.learnMore')}</Link>
+        <Link href="https://medium.com/@vinciprotocol/launching-nft-lockdrop-with-26-000-000-vci-reward-78be1535da5e">
+          {t('components.learnMore')}
+        </Link>
       </Fragment>
     )
   }, [t])
