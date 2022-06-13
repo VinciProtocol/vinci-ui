@@ -19,7 +19,7 @@ export const useUserReservesDataFromAllPools = (props: UserReservesDataProps) =>
             usageAsCollateralEnabledOnUser,
             ...getAddress(userReserve, ['underlyingAsset']),
             ...getString(userReserve, [
-              'scaledATokenBalance',
+              'scaledVTokenBalance',
               'stableBorrowRate',
               'scaledVariableDebt',
               'principalStableDebt',

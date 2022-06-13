@@ -163,7 +163,7 @@ const _abi = [
           },
           {
             internalType: 'address',
-            name: 'aTokenAddress',
+            name: 'vTokenAddress',
             type: 'address',
           },
           {
@@ -482,7 +482,7 @@ const _abi = [
               },
               {
                 internalType: 'address',
-                name: 'aTokenAddress',
+                name: 'vTokenAddress',
                 type: 'address',
               },
               {

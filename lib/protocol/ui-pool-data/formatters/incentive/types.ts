@@ -39,7 +39,7 @@ export interface UserReserveCalculationData {
   liquidityIndex: string
   totalScaledVariableDebt: string
   totalPrincipalStableDebt: string
-  scaledATokenBalance: string
+  scaledVTokenBalance: string
   scaledVariableDebt: string
   principalStableDebt: string
 }
