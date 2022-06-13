@@ -433,7 +433,7 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
       }
       const txCallback: () => Promise<transactionType> = this.generateTxCallback({
         rawTxMethod: async () =>
-          (lendingPoolContract.populateTransaction as any).depositAndLockNFT(
+          lendingPoolContract.populateTransaction.depositAndLockNFT(
             nft,
             tokenIds,
             amounts,
@@ -470,7 +470,7 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
 
       const txCallback: () => Promise<transactionType> = this.generateTxCallback({
         rawTxMethod: async () =>
-          (lendingPoolContract.populateTransaction as any).depositAndLockNFT(
+          lendingPoolContract.populateTransaction.depositAndLockNFT(
             nft,
             [tokenId],
             [amount],

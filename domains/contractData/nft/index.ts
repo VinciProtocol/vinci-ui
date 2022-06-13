@@ -49,7 +49,9 @@ const useContractNFTService = () => {
     if (!nft.underlyingAsset || !userNFTInfo || !nft.userNFTVault) return { data: [], lockedData: [] } as undefined
 
     const nftLocksMap = (nft.userNFTVault.tokenIds as any[]).reduce((obj, tokenId, index) => {
-      obj[tokenId] = nft.userNFTVault.locks?.[index]
+      obj[tokenId] = {
+        ...nft.userNFTVault.locks[index],
+      }
       return obj
     }, {} as any)
 

@@ -29,7 +29,7 @@ export const getUserNFTVault = (userNFTVaultsData: UserReservesData['userNFTVaul
       usageAsCollateralEnabledOnUser,
       nTokenBalance: valueToBigNumber(nTokenBalance),
       tokenIds,
-      locks: locks?.map(({ expiration, lockType }: any) => {
+      locks: locks.map(({ expiration, lockType }) => {
         const endTime = expiration * 1000
         return {
           createTime: getCreateTime(lockType, endTime),
