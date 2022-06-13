@@ -36,11 +36,14 @@ const useContractDataService = () => {
   const contractDataSource = useMemoLazy(() => {
     const returnValue = reservesDatas
       .map((reservesData) => {
+        const marketId = reservesData.id
+        if (marketId !== 'VinciSandbox') return
+
         const nftSettings = safeGet(() =>
           reservesData.nftVaults.map(({ underlyingAsset }) => market.nfts[underlyingAsset])
         )
         if (!nftSettings.length) return
-        const marketId = reservesData.id
+
         const userReservesData = userReservesDatas.find(({ id }) => marketId === id)
         let walletBalance: WalletBalancesData
         const marketInfo = market.info[marketId]
