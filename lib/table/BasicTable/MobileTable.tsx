@@ -184,6 +184,9 @@ const MobileTable: FC<BasicTableProps> = (props) => {
 export const ROOT = styled('div')`
   height: 100%;
   width: 100%;
+  .MuiTable-root {
+    padding-bottom: 16px;
+  }
   .MuiTable-root,
   .MuiTableHead-root,
   .MuiTableBody-root {
