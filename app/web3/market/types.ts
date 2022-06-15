@@ -27,6 +27,7 @@ export type MarketData = {
     walletBalanceProvider: string
     vinciNFTProvider: string
     uiPoolDataProvider: string
+    cryptoPunksMarket: string
   }
   nfts: Record<NFT_ID, NFTSetting>
   nftsNtoken: Record<NFT_ID, NFTSetting>

@@ -13,6 +13,7 @@
   "GenericLogic": "0x8c9c05f280a48eaf70c280b42d794977ca07f1cd",
   "ValidationLogic": "0xb1f3870e7f7386ba8c9425c7306ada751fe35200",
   "PriceOracle": "0xe13da81d5e904759e990aa6b1c68cbe517e0dfbb",
+  "CryptoPunksMarket": "0x1CfccDC825BCA6199E5FcbF956275AC99F58C801",
   "DAIMockAggregator": "0x0932ebc39f2040643154830d051a6e04c0ac820b",
   "WETHMockAggregator": "0x603fca146372a6d275fa78a4a903180958793ad0",
   "USDMockAggregator": "0x2dce7d0be40cac17cbbc95496054e1331ba4b036",

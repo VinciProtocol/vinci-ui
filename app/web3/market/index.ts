@@ -13,10 +13,14 @@ import type { MarketData, NFTSetting } from './types'
 
 const list: Record<ChainId, typeof vinci> = {
   [ChainId.ethereum]: {
+    CryptoPunksMarket: '',
     vinciNFTProvider: '0x12483993167f6e652fd59cd173a495da0b80bdf2',
     ...mainnet,
   },
-  [ChainId.kovan]: kovan,
+  [ChainId.kovan]: {
+    CryptoPunksMarket: '0x1CfccDC825BCA6199E5FcbF956275AC99F58C801',
+    ...kovan,
+  },
   [ChainId.bsc]: bscmainnet,
   [ChainId.bsct]: bsctestnet,
   [ChainId.vinci]: vinci,
@@ -78,6 +82,7 @@ const getMarketsData = (chainId: ChainId): MarketData => {
       walletBalanceProvider: generateInfo.WalletBalanceProvider,
       vinciNFTProvider: generateInfo.vinciNFTProvider,
       uiPoolDataProvider: generateInfo.UiPoolDataProvider,
+      cryptoPunksMarket: generateInfo.CryptoPunksMarket,
     },
     nfts,
     nftsNtoken,
