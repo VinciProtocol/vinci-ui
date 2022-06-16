@@ -378,13 +378,14 @@ const useContractDataService = () => {
             : totalBorrowBalanceInUSD.div(depositCount.multipliedBy(reserveLiquidationThreshold))
 
           const totalCollateralledValueInUSD = totalNumberOfCollateral.multipliedBy(nftPriceInUSD)
+          const walletUnderlyingAsset = nftSetting.walletUnderlyingAsset
 
           const nftWallet = {
-            underlyingAsset,
+            underlyingAsset: walletUnderlyingAsset || underlyingAsset,
             tokenIds: [] as any[],
           }
           if (walletNFTs && collection) {
-            const walletNFT = walletNFTs.find(({ underlyingNFT }: any) => underlyingNFT === underlyingAsset)
+            const walletNFT = walletNFTs.find(({ underlyingNFT }: any) => underlyingNFT === nftWallet.underlyingAsset)
             if (walletNFT && walletNFT.tokenIds) {
               nftWallet.tokenIds = walletNFT.tokenIds
             }
@@ -409,6 +410,7 @@ const useContractDataService = () => {
             collection,
             NFT_ID: nftSetting.NFT_ID,
             underlyingAsset,
+            walletUnderlyingAsset,
             currentFloorPrice: nftPriceInUSD.div(currencyPriceInUSD),
             currentFloorPriceInUSD: nftPriceInUSD,
             totalCollateralledValue: totalCollateralledValueInUSD.div(currencyPriceInUSD),

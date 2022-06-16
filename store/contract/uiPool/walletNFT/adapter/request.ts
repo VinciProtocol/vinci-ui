@@ -3,6 +3,7 @@ import { utils } from 'ethers'
 import { groupBy } from 'lodash'
 
 import type { ChainId } from 'app/web3/chain/types'
+import { safeGet } from 'utils/get'
 
 export type WalletNFTProps = { chainId: ChainId; user: string; tokenAddresses: string[] }
 export const useWalletNFT = (
@@ -15,6 +16,37 @@ export const useWalletNFT = (
 > => {
   const { user, tokenAddresses, chainId } = props
   if (!user || !chainId || !tokenAddresses || !tokenAddresses.length) return Promise.reject()
+  if (__DEV__ && tokenAddresses[0] === '0x1CfccDC825BCA6199E5FcbF956275AC99F58C801') {
+    return fetch('https://api.thegraph.com/subgraphs/name/imsunhao/cryptopunks', {
+      headers: {
+        accept: '*/*',
+        'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+        'content-type': 'application/json',
+        'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-site',
+      },
+      referrer: 'https://thegraph.com/',
+      referrerPolicy: 'strict-origin-when-cross-origin',
+      body: `{"query":"{users(first: 1, where: {id: \\"${user.toLowerCase()}\\"  }) { id tokenIndex}}","variables":null}`,
+      method: 'POST',
+      mode: 'cors',
+      credentials: 'omit',
+    })
+      .then((data) => data.json())
+      .then((data) => {
+        return [
+          {
+            underlyingNFT: tokenAddresses[0],
+            tokenIds: safeGet(() => data.data.users[0].tokenIndex) || [],
+          },
+        ]
+      })
+  }
+
   let results: any[] = []
   const fn = (params: any): Promise<any> =>
     axios

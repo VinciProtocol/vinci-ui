@@ -26,6 +26,7 @@
   "WalletBalanceProvider": "0xd2014019e3f48592df6b57003d69ccb485241cf9",
   "UiPoolDataProvider": "0xecc1e259f65d70c1d7a28ae5d01c2ca669c27eb8",
   "WETHGateway": "0x74c10920124f4feefcf6719f379a241f97dd4203",
+  "WPUNKSGateway": "0x2f568df6c88b92d762a7db18ee4b09313c61bbf3",
   "CloneX": "0x6c16757e9bf15cce15cb8abdbaf6742be2b76cc8",
   "MEKA": "0x605f3e4e2d42623e88c4a7e7f8f5a0297f9b4f17",
   "markets": {

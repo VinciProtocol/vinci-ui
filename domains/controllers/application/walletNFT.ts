@@ -10,7 +10,7 @@ export const useWalletNFTController = () => {
   const { usePolling, polling, clearData } = useRequestController()
   const query = useMemo(() => {
     if (!nft.underlyingAsset) return undefined
-    const tokenAddresses = [nft.underlyingAsset]
+    const tokenAddresses = [nft.walletUnderlyingAsset || nft.underlyingAsset]
     return {
       chainId,
       user: account,

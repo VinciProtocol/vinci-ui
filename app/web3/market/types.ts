@@ -5,6 +5,7 @@ export type NFTSetting = {
   LENDING_POOL_ADDRESS_PROVIDER: string
   NFT_ID: string
   underlyingAsset: string
+  walletUnderlyingAsset: string
   oracle: string
   name: string
   imageName: string
@@ -24,6 +25,7 @@ export type MarketData = {
   addresses: {
     LENDING_POOL_ADDRESSES_PROVIDER_REGISTRY: string
     WETH_GATEWAY: string
+    WPUNKS_GATEWAY: string
     walletBalanceProvider: string
     vinciNFTProvider: string
     uiPoolDataProvider: string

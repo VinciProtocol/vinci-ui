@@ -201,7 +201,10 @@ export const getNFTInfo = (props: NFTInfoProps): Promise<NFTInfo[]> => {
       )
     }
     return Promise.all(promises)
-  } else if (underlyingAsset === safeGet(() => market.nfts[NFT_ID_12].underlyingAsset)) {
+  } else if (
+    underlyingAsset === safeGet(() => market.nfts[NFT_ID_12].underlyingAsset) ||
+    underlyingAsset === safeGet(() => market.nfts[NFT_ID_12].walletUnderlyingAsset)
+  ) {
     return Promise.all(
       tokenIds.map((tokenId) => ({
         id: tokenId,

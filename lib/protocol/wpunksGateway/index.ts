@@ -11,18 +11,24 @@ import type {
   LPDepositNFTParamsType,
   LPWithdrawNFTParamsType,
 } from '../lending-pool/lendingPoolTypes'
+import type { Provider } from '../types'
 import type { IWPUNKSGateway } from './typechain/IWPUNKSGateway'
 import { IWPUNKSGateway__factory } from './typechain/IWPUNKSGateway__factory'
 
-export class WPUNKSGatewayService extends BaseService<IWPUNKSGateway> {
+export interface WPUNKSGatewayContext {
+  address: string
+  provider: Provider
+}
+
+export class WPUNKSGatewayContract extends BaseService<IWPUNKSGateway> {
   readonly wPunksGatewayAddress: string
   readonly erc721Service: IERC721ServiceInterface
   readonly cryptoPunksContract: CryptoPunksContract
 
-  constructor(provider: providers.Provider, wPunksGatewayAddress?: string) {
+  constructor({ provider, address }: WPUNKSGatewayContext) {
     super(provider, IWPUNKSGateway__factory)
 
-    this.wPunksGatewayAddress = wPunksGatewayAddress ?? ''
+    this.wPunksGatewayAddress = address
     this.erc721Service = new ERC721Service(provider)
     this.cryptoPunksContract = new CryptoPunksContract(provider)
 

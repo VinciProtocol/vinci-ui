@@ -55,11 +55,18 @@ const getMarketsData = (chainId: ChainId): MarketData => {
       const nToken = markets[marketID].TimeLockableNToken[NFT_ID]
       const { LendingPool, LendingPoolAddressesProvider } = markets[marketID]
       const { src, market, oracle, name, symbol, imageName } = getNFTInfo(NFT_ID)
+      let walletUnderlyingAsset = ''
+
+      if (NFT_ID === NFT_ID_12) {
+        walletUnderlyingAsset = generateInfo.CryptoPunksMarket
+      }
+
       const setting: NFTSetting = {
         LENDING_POOL: LendingPool,
         LENDING_POOL_ADDRESS_PROVIDER: LendingPoolAddressesProvider,
         NFT_ID,
         underlyingAsset,
+        walletUnderlyingAsset,
         src,
         name,
         imageName,
@@ -79,6 +86,7 @@ const getMarketsData = (chainId: ChainId): MarketData => {
     addresses: {
       LENDING_POOL_ADDRESSES_PROVIDER_REGISTRY: generateInfo.LendingPoolAddressesProviderRegistry,
       WETH_GATEWAY: generateInfo.WETHGateway,
+      WPUNKS_GATEWAY: generateInfo.WPUNKSGateway,
       walletBalanceProvider: generateInfo.WalletBalanceProvider,
       vinciNFTProvider: generateInfo.vinciNFTProvider,
       uiPoolDataProvider: generateInfo.UiPoolDataProvider,

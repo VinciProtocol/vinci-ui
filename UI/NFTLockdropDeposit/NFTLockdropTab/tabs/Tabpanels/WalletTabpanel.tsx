@@ -30,7 +30,7 @@ const WalletTabpanel = withTabPanel(
     )
     const { TabPanel } = props
     const {
-      nft: { lendingPoolAddress, underlyingAsset },
+      nft: { lendingPoolAddress, underlyingAsset, walletUnderlyingAsset },
       walletNFT: { data, totalValuation },
     } = useContractNFT()
     const {
@@ -60,6 +60,7 @@ const WalletTabpanel = withTabPanel(
       },
     }
     const setRef = useRef<Set<string>>(new Set())
+    const displayCheckBox = useMemo(() => !walletUnderlyingAsset, [walletUnderlyingAsset])
     const onClick = (type: string) => {
       close()
       const tokenIds = lockNFTs.map((item) => item.id)
@@ -94,18 +95,22 @@ const WalletTabpanel = withTabPanel(
 
     const [size, setSize] = useState(0)
     const [disabled, setDisabled] = useState(false)
-    const onCheckChange = useCallback((id: string, value: boolean) => {
-      const s = setRef.current
-      if (value) {
-        s.add(id)
-      } else {
-        s.delete(id)
+    const onCheckChange = useMemo(() => {
+      if (!displayCheckBox) return
+      return (id: string, value: boolean) => {
+        const s = setRef.current
+        if (value) {
+          s.add(id)
+        } else {
+          s.delete(id)
+        }
+        setSize(s.size)
       }
-      setSize(s.size)
-    }, [])
+    }, [displayCheckBox])
     const approveAllDisabled = useMemo(() => disabled, [disabled])
 
     useEffect(() => {
+      if (!displayCheckBox) return
       if (!lendingPoolAddress || !underlyingAsset) return
       isApprovedForAll({
         user: account,
@@ -114,7 +119,7 @@ const WalletTabpanel = withTabPanel(
       }).then((data) => {
         setDisabled(data)
       })
-    }, [account, isApprovedForAll, lendingPoolAddress, underlyingAsset])
+    }, [account, displayCheckBox, isApprovedForAll, lendingPoolAddress, underlyingAsset, walletUnderlyingAsset])
 
     const title = useMemo(
       () => ({
@@ -126,7 +131,7 @@ const WalletTabpanel = withTabPanel(
             </Stack>
           </Typography>
         ),
-        actions: (
+        actions: displayCheckBox ? (
           <Stack spacing={2} direction="row">
             <Button
               variant="outlined"
@@ -171,12 +176,15 @@ const WalletTabpanel = withTabPanel(
               {t('nft-lockdrop-deposit:tabs.depositSelected')}
             </Button>
           </Stack>
+        ) : (
+          <div />
         ),
       }),
       [
         account,
         approveAllDisabled,
         data,
+        displayCheckBox,
         lendingPoolAddress,
         setApprovalForAll,
         size,
