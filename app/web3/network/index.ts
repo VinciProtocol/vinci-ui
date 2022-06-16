@@ -31,7 +31,8 @@ export const networks: Record<ChainId, NetworkConfig> = {
     name: 'Ethereum',
     fullName: 'Ethereum',
     symbol: 'ETH',
-    publicJsonRPCUrl: 'https://mainnet.infura.io/v3/e33605b8ebd345fa914bd4cdfdfb401d',
+    // publicJsonRPCUrl: 'https://mainnet.infura.io/v3/e33605b8ebd345fa914bd4cdfdfb401d',
+    publicJsonRPCUrl: 'https://mainnet.infura.io/v3/ba81afa823ed4d3e952c8f1b4be63abb',
   },
   [ChainId.localhost]: {
     name: 'Localhost',
