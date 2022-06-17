@@ -16,7 +16,7 @@ export const useWalletNFT = (
 > => {
   const { user, tokenAddresses, chainId } = props
   if (!user || !chainId || !tokenAddresses || !tokenAddresses.length) return Promise.reject()
-  if (__DEV__ && tokenAddresses[0] === '0x1CfccDC825BCA6199E5FcbF956275AC99F58C801') {
+  if (tokenAddresses[0] === '0x1CfccDC825BCA6199E5FcbF956275AC99F58C801') {
     return fetch('https://api.thegraph.com/subgraphs/name/imsunhao/cryptopunks', {
       headers: {
         accept: '*/*',
