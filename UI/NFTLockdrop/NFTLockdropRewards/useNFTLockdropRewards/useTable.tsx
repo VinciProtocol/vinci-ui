@@ -18,6 +18,7 @@ import {
   cellRenderer,
   VCICellRenderer,
   BalanceCellRenderer,
+  totalLockedNFTCellRenderer,
 } from 'components/Table'
 
 export const useTable = (): BasicTableProps => {
@@ -75,7 +76,7 @@ export const useTable = (): BasicTableProps => {
             dataKey: 'totalLockedNFT',
             width: 200,
             headerRenderer,
-            cellRenderer,
+            cellRenderer: totalLockedNFTCellRenderer,
           },
           {
             dataKey: 'userLockedNFT',

@@ -1,10 +1,12 @@
 import type { TableCellRenderer, TableHeaderRenderer } from 'react-virtualized'
 import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
 import TableCell from '@mui/material/TableCell'
 import { grey } from '@mui/material/colors'
 import Badge from '@mui/material/Badge'
 import Tooltip from '@mui/material/Tooltip'
+import InsertLinkIcon from '@mui/icons-material/InsertLink'
 
 import { NFTIcon, NFTSmallIcon, TokenIcon } from 'app/web3/TokenIcon'
 import NumberDisplay from 'components/math/NumberDisplay'
@@ -75,6 +77,44 @@ export const leftHeaderRenderer: TableHeaderRenderer = ({ label }) => {
 }
 
 export const cellRenderer: TableCellRenderer = ({ cellData }) => {
+  return (
+    <TableCell align="center" component="div">
+      {cellData || '-'}
+    </TableCell>
+  )
+}
+
+const TotalLockedNFTTooltip: FC = (props) => {
+  const { t } = useTranslation()
+  return (
+    <Tooltip title={t('View on NFT Market')} placement="bottom-end" arrow>
+      <Typography component="p" variant="caption" color="">
+        {props.children}
+      </Typography>
+    </Tooltip>
+  )
+}
+
+export const totalLockedNFTCellRenderer: TableCellRenderer = ({ cellData, rowData }) => {
+  if (cellData > 0) {
+    return (
+      <TableCell align="center" component="div">
+        <TotalLockedNFTTooltip>
+          <Button
+            onClick={(e) => {
+              e.stopPropagation()
+              e.nativeEvent.stopImmediatePropagation()
+              open('https://looksrare.org/accounts/' + rowData.nTokenAddress, '_blank')
+            }}
+            variant="text"
+            endIcon={<InsertLinkIcon />}
+          >
+            {cellData}
+          </Button>
+        </TotalLockedNFTTooltip>
+      </TableCell>
+    )
+  }
   return (
     <TableCell align="center" component="div">
       {cellData || '-'}
