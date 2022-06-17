@@ -1,5 +1,9 @@
 import type { tEthereumAddress, InterestRate } from '../commons/types'
 
+type SpecialNFTs = {
+  isPunks?: boolean
+}
+
 export type LPDepositParamsType = {
   lendingPoolAddress: tEthereumAddress
   user: tEthereumAddress
@@ -28,7 +32,7 @@ export type LPDepositAndLockNFTParamsType = {
   lockType: string
   onBehalfOf?: tEthereumAddress
   referralCode?: string
-}
+} & SpecialNFTs
 
 export type LPWithdrawParamsType = {
   lendingPoolAddress: tEthereumAddress
@@ -46,7 +50,7 @@ export type LPWithdrawNFTParamsType = {
   tokenIds: string[]
   amounts: string[]
   onBehalfOf?: tEthereumAddress
-}
+} & SpecialNFTs
 export type LPBorrowParamsType = {
   lendingPoolAddress: tEthereumAddress
   user: tEthereumAddress

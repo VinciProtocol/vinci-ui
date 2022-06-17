@@ -1,6 +1,4 @@
-import type { providers } from 'ethers'
 import type { IERC721ServiceInterface } from 'lib/protocol/erc721-contract'
-import { ERC721Service } from 'lib/protocol/erc721-contract'
 
 import BaseService from '../commons/BaseService'
 import type { EthereumTransactionTypeExtended, transactionType } from '../commons/types'
@@ -15,21 +13,16 @@ import type { Provider } from '../types'
 import type { IWPUNKSGateway } from './typechain/IWPUNKSGateway'
 import { IWPUNKSGateway__factory } from './typechain/IWPUNKSGateway__factory'
 
-export interface WPUNKSGatewayContext {
-  address: string
-  provider: Provider
-}
-
-export class WPUNKSGatewayContract extends BaseService<IWPUNKSGateway> {
+export class WPUNKSGatewayService extends BaseService<IWPUNKSGateway> {
   readonly wPunksGatewayAddress: string
   readonly erc721Service: IERC721ServiceInterface
   readonly cryptoPunksContract: CryptoPunksContract
 
-  constructor({ provider, address }: WPUNKSGatewayContext) {
+  constructor(provider: Provider, erc721Service: IERC721ServiceInterface, address: string) {
     super(provider, IWPUNKSGateway__factory)
 
     this.wPunksGatewayAddress = address
-    this.erc721Service = new ERC721Service(provider)
+    this.erc721Service = erc721Service
     this.cryptoPunksContract = new CryptoPunksContract(provider)
 
     this.depositPUNKS = this.depositPUNKS.bind(this)
@@ -37,7 +30,7 @@ export class WPUNKSGatewayContract extends BaseService<IWPUNKSGateway> {
     this.withdrawPUNKS = this.withdrawPUNKS.bind(this)
   }
 
-  public depositPUNKS({
+  public async depositPUNKS({
     lendingPoolAddress,
     user,
     nft,
@@ -45,18 +38,27 @@ export class WPUNKSGatewayContract extends BaseService<IWPUNKSGateway> {
     amounts,
     onBehalfOf,
     referralCode,
-  }: LPDepositNFTParamsType): EthereumTransactionTypeExtended[] {
+  }: LPDepositNFTParamsType): Promise<EthereumTransactionTypeExtended[]> {
     const txs: EthereumTransactionTypeExtended[] = []
     const tokenId = tokenIds[0]
     const wPunksGatewayAddress = this.wPunksGatewayAddress
 
-    const approveTx = this.cryptoPunksContract.approve({
-      punkIndex: tokenId,
-      wPunksGatewayAddress,
+    const approveProps = {
       user,
+      spender: wPunksGatewayAddress,
       token: nft,
-    })
-    txs.push(approveTx)
+      tokenId,
+    }
+
+    if (!(await this.cryptoPunksContract.isApproved(approveProps))) {
+      const approveTx = this.cryptoPunksContract.approve({
+        punkIndex: tokenId,
+        wPunksGatewayAddress,
+        user,
+        token: nft,
+      })
+      txs.push(approveTx)
+    }
 
     const wPunksGatewayContract: IWPUNKSGateway = this.getContractInstance(wPunksGatewayAddress)
     const txCallback: () => Promise<transactionType> = this.generateTxCallback({
@@ -69,7 +71,6 @@ export class WPUNKSGatewayContract extends BaseService<IWPUNKSGateway> {
           referralCode ?? '0'
         ),
       from: user,
-      value: tokenIds.length + '',
     })
 
     txs.push({
@@ -81,7 +82,7 @@ export class WPUNKSGatewayContract extends BaseService<IWPUNKSGateway> {
     return txs
   }
 
-  public depositAndLockPUNKS({
+  public async depositAndLockPUNKS({
     lendingPoolAddress,
     user,
     nft,
@@ -90,18 +91,26 @@ export class WPUNKSGatewayContract extends BaseService<IWPUNKSGateway> {
     onBehalfOf,
     lockType,
     referralCode,
-  }: LPDepositAndLockNFTParamsType): EthereumTransactionTypeExtended[] {
+  }: LPDepositAndLockNFTParamsType): Promise<EthereumTransactionTypeExtended[]> {
     const txs: EthereumTransactionTypeExtended[] = []
     const tokenId = tokenIds[0]
     const wPunksGatewayAddress = this.wPunksGatewayAddress
-
-    const approveTx = this.cryptoPunksContract.approve({
-      punkIndex: tokenId,
-      wPunksGatewayAddress,
+    const approveProps = {
       user,
+      spender: wPunksGatewayAddress,
       token: nft,
-    })
-    txs.push(approveTx)
+      tokenId,
+    }
+
+    if (!(await this.cryptoPunksContract.isApproved(approveProps))) {
+      const approveTx = this.cryptoPunksContract.approve({
+        punkIndex: tokenId,
+        wPunksGatewayAddress,
+        user,
+        token: nft,
+      })
+      txs.push(approveTx)
+    }
 
     const wPunksGatewayContract: IWPUNKSGateway = this.getContractInstance(wPunksGatewayAddress)
     const txCallback: () => Promise<transactionType> = this.generateTxCallback({
@@ -115,7 +124,6 @@ export class WPUNKSGatewayContract extends BaseService<IWPUNKSGateway> {
           referralCode ?? '0'
         ),
       from: user,
-      value: tokenIds.length + '',
     })
 
     txs.push({
@@ -142,7 +150,7 @@ export class WPUNKSGatewayContract extends BaseService<IWPUNKSGateway> {
       const { setApprovalForAll, isApprovedForAll } = this.erc721Service
       const approveProps = {
         user,
-        spender: lendingPoolAddress,
+        spender: this.wPunksGatewayAddress,
         token: nft,
         value: true,
       }
@@ -158,7 +166,7 @@ export class WPUNKSGatewayContract extends BaseService<IWPUNKSGateway> {
 
       const approveProps = {
         user,
-        spender: lendingPoolAddress,
+        spender: this.wPunksGatewayAddress,
         token: nft,
         tokenId,
       }
@@ -172,7 +180,12 @@ export class WPUNKSGatewayContract extends BaseService<IWPUNKSGateway> {
 
     const txCallback: () => Promise<transactionType> = this.generateTxCallback({
       rawTxMethod: async () =>
-        wPunksGatewayContract.populateTransaction.withdrawPUNKS(nft, tokenIds, amounts, onBehalfOf ?? user),
+        wPunksGatewayContract.populateTransaction.withdrawPUNKS(
+          lendingPoolAddress,
+          tokenIds,
+          amounts,
+          onBehalfOf ?? user
+        ),
       from: user,
     })
 

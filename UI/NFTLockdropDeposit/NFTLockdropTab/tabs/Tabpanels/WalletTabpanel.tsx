@@ -69,7 +69,8 @@ const WalletTabpanel = withTabPanel(
         .post({
           lendingPoolAddress,
           user: account,
-          nft: underlyingAsset,
+          nft: walletUnderlyingAsset || underlyingAsset,
+          isPunks: !!walletUnderlyingAsset,
           tokenIds,
           amounts,
           lockType: type,

@@ -10,34 +10,30 @@ import { useMarket } from 'domains'
 
 const useContractService = () => {
   const { provider, market } = useMarket()
-  const contracts = useMemo(
-    () => ({
+  const contracts = useMemo(() => {
+    const { WETH_GATEWAY, WPUNKS_GATEWAY, uiPoolDataProvider, walletBalanceProvider, vinciNFTProvider } =
+      market.addresses
+    return {
       lendingPool: new LendingPoolContract(provider, {
-        WETH_GATEWAY: market.addresses.WETH_GATEWAY,
+        WETH_GATEWAY,
+        WPUNKS_GATEWAY,
       }),
       uiPool: new UiPoolDataContract({
-        address: market.addresses.uiPoolDataProvider,
+        address: uiPoolDataProvider,
         provider,
       }),
       wallet: new WalletBalanceContract({
-        address: market.addresses.walletBalanceProvider,
+        address: walletBalanceProvider,
         provider,
       }),
       ERC20Service: new ERC20Service(provider),
       ERC721Service: new ERC721Service(provider),
       vinciNFT: new VinciNFTContract({
-        address: market.addresses.vinciNFTProvider,
+        address: vinciNFTProvider,
         provider,
       }),
-    }),
-    [
-      market.addresses.WETH_GATEWAY,
-      market.addresses.uiPoolDataProvider,
-      market.addresses.vinciNFTProvider,
-      market.addresses.walletBalanceProvider,
-      provider,
-    ]
-  )
+    }
+  }, [market.addresses, provider])
 
   return contracts
 }

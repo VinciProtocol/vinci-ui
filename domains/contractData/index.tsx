@@ -76,7 +76,7 @@ const useContractDataService = () => {
           const meta = getNFTMeta(nftSetting)
           obj[`V ${getTitle(nftSetting.symbol)}`] = {
             ...meta,
-            underlyingAsset: nTokenAddress,
+            nTokenAddress,
           }
         })
         return obj
@@ -346,6 +346,7 @@ const useContractDataService = () => {
           collection,
           name,
           underlyingAsset,
+          nTokenAddress,
           reserveLiquidationThreshold,
           totalNumberOfCollateral,
           baseLTVasCollateral,
@@ -410,7 +411,9 @@ const useContractDataService = () => {
             collection,
             NFT_ID: nftSetting.NFT_ID,
             underlyingAsset,
+            nTokenAddress,
             walletUnderlyingAsset,
+            nTokenUnderlyingAsset: nftSetting.nToken,
             currentFloorPrice: nftPriceInUSD.div(currencyPriceInUSD),
             currentFloorPriceInUSD: nftPriceInUSD,
             totalCollateralledValue: totalCollateralledValueInUSD.div(currencyPriceInUSD),

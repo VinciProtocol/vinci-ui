@@ -25,7 +25,9 @@ export const transaction = (props: {
       setStatus(TransactionStatus.ready)
       let approveTxData: EthereumTransactionTypeExtended = undefined
       let actionTxData: EthereumTransactionTypeExtended = undefined
-      const approvalTx = txs.find((tx) => tx.txType === 'ERC20_APPROVAL' || tx.txType === 'ERC721_APPROVAL')
+      const approvalTx = txs.find(
+        (tx) => tx.txType === 'ERC20_APPROVAL' || tx.txType === 'ERC721_APPROVAL' || tx.txType === 'ERC1155_APPROVAL'
+      )
       const actionTx = txs.find((tx) =>
         ['DLP_ACTION', 'GOVERNANCE_ACTION', 'STAKE_ACTION', 'GOV_DELEGATION_ACTION', 'REWARD_ACTION'].includes(
           tx.txType

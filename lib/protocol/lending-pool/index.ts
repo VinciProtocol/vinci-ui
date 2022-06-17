@@ -14,6 +14,7 @@ import type { SynthetixInterface } from '../synthetix-contract'
 import { SynthetixService } from '../synthetix-contract'
 import type { WETHGatewayInterface } from '../wethgateway-contract'
 import { WETHGatewayService } from '../wethgateway-contract'
+import { WPUNKSGatewayService } from '../wpunksGateway'
 import type {
   LPBorrowParamsType,
   LPDepositAndLockNFTParamsType,
@@ -27,6 +28,8 @@ import type { ILendingPool } from './typechain/ILendingPool'
 import { ILendingPool__factory } from './typechain/ILendingPool__factory'
 import type { IERC721ServiceInterface } from 'lib/protocol/erc721-contract'
 import { ERC721Service } from 'lib/protocol/erc721-contract'
+import type { IERC1155ServiceInterface } from '../erc1155-contract'
+import { ERC1155Service } from '../erc1155-contract'
 
 export interface LendingPoolInterface {
   deposit: (args: LPDepositParamsType) => Promise<EthereumTransactionTypeExtended[]>
@@ -40,10 +43,12 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
 
   readonly erc20Service: IERC20ServiceInterface
   readonly erc721Service: IERC721ServiceInterface
+  readonly erc1155Service: IERC1155ServiceInterface
 
   readonly synthetixService: SynthetixInterface
 
   readonly wethGatewayService: WETHGatewayInterface
+  readonly wPUNKSGatewayService: WPUNKSGatewayService
 
   readonly liquiditySwapAdapterService: LiquiditySwapAdapterInterface
 
@@ -59,8 +64,13 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
     super(provider, ILendingPool__factory)
     this.provider = provider
 
-    const { FLASH_LIQUIDATION_ADAPTER, REPAY_WITH_COLLATERAL_ADAPTER, SWAP_COLLATERAL_ADAPTER, WETH_GATEWAY } =
-      lendingPoolConfig ?? {}
+    const {
+      FLASH_LIQUIDATION_ADAPTER,
+      REPAY_WITH_COLLATERAL_ADAPTER,
+      SWAP_COLLATERAL_ADAPTER,
+      WETH_GATEWAY,
+      WPUNKS_GATEWAY,
+    } = lendingPoolConfig ?? {}
 
     this.flashLiquidationAddress = FLASH_LIQUIDATION_ADAPTER ?? ''
     this.swapCollateralAddress = SWAP_COLLATERAL_ADAPTER ?? ''
@@ -69,8 +79,10 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
     // initialize services
     this.erc20Service = new ERC20Service(provider)
     this.erc721Service = new ERC721Service(provider)
+    this.erc1155Service = new ERC1155Service(provider)
     this.synthetixService = new SynthetixService(provider)
     this.wethGatewayService = new WETHGatewayService(provider, this.erc20Service, WETH_GATEWAY)
+    this.wPUNKSGatewayService = new WPUNKSGatewayService(provider, this.erc721Service, WPUNKS_GATEWAY)
     this.liquiditySwapAdapterService = new LiquiditySwapAdapterService(provider, SWAP_COLLATERAL_ADAPTER)
     this.repayWithCollateralAdapterService = new RepayWithCollateralAdapterService(
       provider,
@@ -405,16 +417,12 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
     return txs
   }
 
-  public async depositAndLockNFT({
-    lendingPoolAddress,
-    user,
-    nft,
-    tokenIds,
-    amounts,
-    onBehalfOf,
-    lockType,
-    referralCode,
-  }: LPDepositAndLockNFTParamsType): Promise<EthereumTransactionTypeExtended[]> {
+  public async depositAndLockNFT(payload: LPDepositAndLockNFTParamsType): Promise<EthereumTransactionTypeExtended[]> {
+    const { lendingPoolAddress, user, nft, tokenIds, amounts, onBehalfOf, lockType, referralCode, isPunks } = payload
+    if (isPunks) {
+      return this.wPUNKSGatewayService.depositAndLockPUNKS(payload)
+    }
+
     const lendingPoolContract: ILendingPool = this.getContractInstance(lendingPoolAddress)
     const txs: EthereumTransactionTypeExtended[] = []
     if (tokenIds.length > 1) {
@@ -492,14 +500,12 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
     return txs
   }
 
-  public async withdrawNFT({
-    lendingPoolAddress,
-    user,
-    nft,
-    tokenIds,
-    amounts,
-    onBehalfOf,
-  }: LPWithdrawNFTParamsType): Promise<EthereumTransactionTypeExtended[]> {
+  public async withdrawNFT(payload: LPWithdrawNFTParamsType): Promise<EthereumTransactionTypeExtended[]> {
+    const { lendingPoolAddress, user, nft, tokenIds, amounts, onBehalfOf, isPunks } = payload
+    if (isPunks) {
+      return this.wPUNKSGatewayService.withdrawPUNKS(payload)
+    }
+
     const lendingPoolContract: ILendingPool = this.getContractInstance(lendingPoolAddress)
 
     const txCallback: () => Promise<transactionType> = this.generateTxCallback({

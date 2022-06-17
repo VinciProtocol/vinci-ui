@@ -5,6 +5,7 @@ import type { Provider } from '../types'
 import type { EthereumTransactionTypeExtended, tEthereumAddress, transactionType } from '../commons/types'
 import { eEthereumTxType } from '../commons/types'
 import BaseService from '../commons/BaseService'
+import type { ApproveType } from '../erc721-contract'
 
 export type OfferPunkForSaleToAddress = {
   punkIndex: string
@@ -24,9 +25,17 @@ export class CryptoPunksContract extends BaseService<CryptoPunks> {
   public constructor(provider: Provider) {
     super(provider, CryptoPunks__factory)
     this.provider = provider
+
+    this.approve = this.approve.bind(this)
+    this.isApproved = this.isApproved.bind(this)
   }
 
-  public approve({ punkIndex, user, token, wPunksGatewayAddress }: OfferPunkForSaleToAddress): EthereumTransactionTypeExtended {
+  public approve({
+    punkIndex,
+    user,
+    token,
+    wPunksGatewayAddress,
+  }: OfferPunkForSaleToAddress): EthereumTransactionTypeExtended {
     const cryptoPunksContract: CryptoPunks = this.getContractInstance(token)
 
     const txCallback: () => Promise<transactionType> = this.generateTxCallback({
@@ -40,5 +49,13 @@ export class CryptoPunksContract extends BaseService<CryptoPunks> {
       txType: eEthereumTxType.ERC721_APPROVAL,
       gas: this.generateTxPriceEstimation([], txCallback),
     }
+  }
+
+  public async isApproved({ user, token, spender, tokenId }: ApproveType): Promise<boolean> {
+    const cryptoPunksContract: CryptoPunks = this.getContractInstance(token)
+    const { onlySellTo } = await cryptoPunksContract.punksOfferedForSale(tokenId)
+    const approvedAddress = (onlySellTo || '').toLowerCase()
+    spender = (spender || '').toLowerCase()
+    return spender === approvedAddress
   }
 }

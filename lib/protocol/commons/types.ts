@@ -34,6 +34,7 @@ export type MigratorConfig = {
 
 export type LendingPoolMarketConfig = {
   WETH_GATEWAY: tEthereumAddress
+  WPUNKS_GATEWAY: tEthereumAddress
   FLASH_LIQUIDATION_ADAPTER?: tEthereumAddress
   REPAY_WITH_COLLATERAL_ADAPTER?: tEthereumAddress
   SWAP_COLLATERAL_ADAPTER?: tEthereumAddress
@@ -44,6 +45,7 @@ export type LendingPoolConfig = Record<string, Record<string, LendingPoolMarketC
 export enum eEthereumTxType {
   ERC20_APPROVAL = 'ERC20_APPROVAL',
   ERC721_APPROVAL = 'ERC721_APPROVAL',
+  ERC1155_APPROVAL = 'ERC1155_APPROVAL',
   DLP_ACTION = 'DLP_ACTION',
   GOVERNANCE_ACTION = 'GOVERNANCE_ACTION',
   GOV_DELEGATION_ACTION = 'GOV_DELEGATION_ACTION',
