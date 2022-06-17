@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 import { useMemo } from 'react'
-import { flattenDeep } from 'lodash'
+import { cloneDeep, flattenDeep } from 'lodash'
 
 import { createContext } from 'utils/createContext'
 import { log } from 'utils/dev'
@@ -139,9 +139,44 @@ const useThegraphService = () => {
       }
     })
 
+    const orderlyNFTAssetsTimeLockedSource = cloneDeep(nftAssetsTimeLocked)
+    let orderlyNFTAssetsTimeLocked: any[] = []
+    const order = {
+      value: -1,
+      startIndex: 0,
+    }
+    orderlyNFTAssetsTimeLockedSource
+      .sort((a, b) => b.totalLockedNFT - a.totalLockedNFT)
+      .forEach((i, index) => {
+        const value = i.totalLockedNFT
+        if (!index) {
+          order.value = value
+          return
+        }
+
+        const end = (endIndex = index) => {
+          const array = orderlyNFTAssetsTimeLockedSource.slice(order.startIndex, endIndex)
+          orderlyNFTAssetsTimeLocked = orderlyNFTAssetsTimeLocked.concat(
+            array.sort((a, b) => b.currentFloorPrice - a.currentFloorPrice)
+          )
+        }
+
+        if (index === orderlyNFTAssetsTimeLockedSource.length - 1) {
+          end(orderlyNFTAssetsTimeLockedSource.length)
+        }
+
+        if (order.value > value) {
+          order.value = value
+          if (order.startIndex <= index) {
+            end()
+            order.startIndex = index
+          }
+        }
+      })
+
     const returnValue = {
       timeLockedDashboard,
-      nftAssetsTimeLocked: nftAssetsTimeLocked.sort((a, b) => b.currentFloorPrice - a.currentFloorPrice),
+      nftAssetsTimeLocked: orderlyNFTAssetsTimeLocked,
     }
 
     log('[domains] [timeLocked]', returnValue)
