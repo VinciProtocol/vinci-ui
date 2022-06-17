@@ -209,8 +209,8 @@ export const getNFTInfo = (props: NFTInfoProps): Promise<NFTInfo[]> => {
       tokenIds.map((tokenId) => ({
         id: tokenId,
         name: '#' + tokenId,
-        image: `https://api.wrappedpunks.com/images/punks/${tokenId}.png`,
-        description: 'Wrapped Punks',
+        image: `https://www.larvalabs.com/cryptopunks/cryptopunk${tokenId}.png`,
+        description: 'CryptoPunks',
       }))
     )
   }
