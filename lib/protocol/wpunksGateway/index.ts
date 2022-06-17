@@ -146,36 +146,18 @@ export class WPUNKSGatewayService extends BaseService<IWPUNKSGateway> {
     const txs: EthereumTransactionTypeExtended[] = []
     const wPunksGatewayContract: IWPUNKSGateway = this.getContractInstance(this.wPunksGatewayAddress)
 
-    if (tokenIds.length > 1) {
-      const { setApprovalForAll, isApprovedForAll } = this.erc721Service
-      const approveProps = {
-        user,
-        spender: this.wPunksGatewayAddress,
-        token: nft,
-        value: true,
-      }
+    const { setApprovalForAll, isApprovedForAll } = this.erc721Service
+    const approveProps = {
+      user,
+      spender: this.wPunksGatewayAddress,
+      token: nft,
+      value: true,
+    }
 
-      const approved = await isApprovedForAll(approveProps)
-      if (!approved) {
-        const approveTx: EthereumTransactionTypeExtended = setApprovalForAll(approveProps)[0]
-        txs.push(approveTx)
-      }
-    } else {
-      const tokenId = tokenIds[0]
-      const { approve, isApproved } = this.erc721Service
-
-      const approveProps = {
-        user,
-        spender: this.wPunksGatewayAddress,
-        token: nft,
-        tokenId,
-      }
-
-      const approved = await isApproved(approveProps)
-      if (!approved) {
-        const approveTx: EthereumTransactionTypeExtended = approve(approveProps)
-        txs.push(approveTx)
-      }
+    const approved = await isApprovedForAll(approveProps)
+    if (!approved) {
+      const approveTx: EthereumTransactionTypeExtended = setApprovalForAll(approveProps)[0]
+      txs.push(approveTx)
     }
 
     const txCallback: () => Promise<transactionType> = this.generateTxCallback({
