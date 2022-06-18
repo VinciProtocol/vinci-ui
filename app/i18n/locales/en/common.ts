@@ -45,6 +45,9 @@ const locale = {
     goBack: 'Go Back',
     learnMore: 'Learn more',
   },
+  tips: {
+    NFTMarket: 'View on NFT Market',
+  },
 }
 
 export default locale

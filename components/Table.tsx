@@ -87,7 +87,7 @@ export const cellRenderer: TableCellRenderer = ({ cellData }) => {
 const TotalLockedNFTTooltip: FC = (props) => {
   const { t } = useTranslation()
   return (
-    <Tooltip title={t('View on NFT Market')} placement="bottom-end" arrow>
+    <Tooltip title={t('tips.NFTMarket')} placement="bottom-end" arrow>
       <Typography component="p" variant="caption" color="">
         {props.children}
       </Typography>

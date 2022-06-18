@@ -44,5 +44,8 @@
   "components": {
     "goBack": "Geri dön",
     "learnMore": "Daha fazla bilgi edin"
+  },
+  "tips": {
+    "NFTMarket": "NFT Market'te görüntüle"
   }
 }

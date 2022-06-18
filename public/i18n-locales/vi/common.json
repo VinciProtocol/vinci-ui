@@ -44,5 +44,8 @@
   "components": {
     "goBack": "Quay lại",
     "learnMore": "Tìm hiểu thêm"
+  },
+  "tips": {
+    "NFTMarket": "Xem trên NFT Market"
   }
 }

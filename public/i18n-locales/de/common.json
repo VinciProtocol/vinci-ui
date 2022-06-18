@@ -33,7 +33,7 @@
     },
     "tips": {
       "accept": "Indem ich mich verbinde, akzeptiere ich",
-      "term": "Vincis Nutzungsbedingungen"
+      "term": "Nutzungsbedingungen von Vinci"
     },
     "chain": {
       "title": "Wählen Sie Ihr Netzwerk aus",
@@ -44,5 +44,8 @@
   "components": {
     "goBack": "Geh zurück",
     "learnMore": "Mehr erfahren"
+  },
+  "tips": {
+    "NFTMarket": "Blick auf den NFT-Markt"
   }
 }

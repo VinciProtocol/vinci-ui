@@ -44,5 +44,8 @@
   "components": {
     "goBack": "Volte",
     "learnMore": "Saber mais"
+  },
+  "tips": {
+    "NFTMarket": "Veja no mercado NFT"
   }
 }

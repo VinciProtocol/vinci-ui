@@ -44,5 +44,8 @@
   "components": {
     "goBack": "돌아가기",
     "learnMore": "더 알아보기"
+  },
+  "tips": {
+    "NFTMarket": "NFT 마켓에서 보기"
   }
 }

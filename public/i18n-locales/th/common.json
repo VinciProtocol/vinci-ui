@@ -44,5 +44,8 @@
   "components": {
     "goBack": "ย้อนกลับ",
     "learnMore": "เรียนรู้เพิ่มเติม"
+  },
+  "tips": {
+    "NFTMarket": "ดูในตลาด NFT"
   }
 }
