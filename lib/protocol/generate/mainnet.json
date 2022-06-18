@@ -1,6 +1,7 @@
 {
   "LendingPoolAddressesProviderRegistry": "0x9360add623759fa9fe28ff544739113ea04d15b2",
   "WETHGateway": "0x3fdd1c30c5f61078a50f5b1823f6ec97b6144d2f",
+  "WPUNKSGateway": "0x02eaae6c419b462b8e8c7c0b85f1dc0383f0d2e0",
   "WalletBalanceProvider": "0x900357214460d6c51ace460beac3700940ab4285",
   "UiPoolDataProvider": "0x7ca68e4fd1644f6a46d86efbe4916d2d446c4d08",
   "PriceOracle": "0x548955c95d28da83c409d2250ac0d51988cb1b95",
