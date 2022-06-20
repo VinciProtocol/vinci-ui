@@ -45,6 +45,8 @@ export const useWalletNFT = (
           },
         ]
       })
+  } else if (tokenAddresses[0] === '0x2406C682C3F9720C5aE24BFa576a2351CCCd008a') {
+    // TODO
   }
 
   let results: any[] = []

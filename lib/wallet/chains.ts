@@ -87,6 +87,18 @@ const CHAIN_INFORMATION = new Map<number, ChainInformation | ChainType>([
       testnet: true,
     },
   ],
+  [
+    ChainId.rinkeby,
+    {
+      id: ChainId.rinkeby,
+      nativeCurrency: ETH,
+      type: 'rinkeby',
+      fullName: 'Rinkeby',
+      shortName: 'Rinkeby',
+      explorerUrl: `https://rinkeby.etherscan.io`,
+      testnet: true,
+    },
+  ],
 ])
 
 /**

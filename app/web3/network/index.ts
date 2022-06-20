@@ -8,11 +8,17 @@ export const networks: Record<ChainId, NetworkConfig> = {
     symbol: 'ETH',
     publicJsonRPCUrl: 'http://18.167.30.221:6357',
   },
+  [ChainId.rinkeby]: {
+    name: 'Rinkeby',
+    fullName: 'Rinkeby Testnet',
+    symbol: 'ETH',
+    publicJsonRPCUrl: 'https://rinkeby.infura.io/v3/1fe83aa589cd4ae3adfcbb2d7d411d4a',
+  },
   [ChainId.kovan]: {
     name: 'Kovan',
     fullName: 'Kovan Testnet',
     symbol: 'ETH',
-    publicJsonRPCUrl: 'https://kovan.poa.network',
+    publicJsonRPCUrl: 'https://kovan.infura.io/v3/1fe83aa589cd4ae3adfcbb2d7d411d4a',
     // publicJsonRPCUrl: 'https://kovan.infura.io/v3/e33605b8ebd345fa914bd4cdfdfb401d',
   },
   [ChainId.bsct]: {

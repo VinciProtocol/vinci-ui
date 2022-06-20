@@ -1,6 +1,7 @@
 import bsctestnet from 'lib/protocol/generate/bsctestnet.json'
 import bscmainnet from 'lib/protocol/generate/bscmainnet.json'
 import kovan from 'lib/protocol/generate/kovan.json'
+import rinkeby from 'lib/protocol/generate/rinkeby.json'
 import mainnet from 'lib/protocol/generate/mainnet.json'
 import localhost from 'lib/protocol/generate/localhost.json'
 import vinci from 'lib/protocol/generate/vinci.json'
@@ -20,6 +21,10 @@ const list: Record<ChainId, typeof vinci> = {
   [ChainId.kovan]: {
     CryptoPunksMarket: '0x1CfccDC825BCA6199E5FcbF956275AC99F58C801',
     ...kovan,
+  },
+  [ChainId.rinkeby]: {
+    CryptoPunksMarket: '0x2406C682C3F9720C5aE24BFa576a2351CCCd008a',
+    ...rinkeby,
   },
   [ChainId.bsc]: bscmainnet,
   [ChainId.bsct]: bsctestnet,
@@ -107,6 +112,7 @@ const getMarketsData = (chainId: ChainId): MarketData => {
 
 export const MARKETS: Record<number, MarketData> = {
   [ChainId.ethereum]: getMarketsData(ChainId.ethereum),
+  [ChainId.rinkeby]: getMarketsData(ChainId.rinkeby),
   [ChainId.kovan]: getMarketsData(ChainId.kovan),
 }
 export const defaultMarket = MARKETS[ChainId.ethereum]

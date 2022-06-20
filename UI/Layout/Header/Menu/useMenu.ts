@@ -58,7 +58,7 @@ export function useMenu() {
       if (chainId === ChainId.ethereum) {
         return menu.key === 'NFTAirdrop' || menu.key === 'App' || menu.key === 'NFTLockdrop'
       }
-      if (chainId === ChainId.kovan || chainId === ChainId.bsc) {
+      if (chainId === ChainId.rinkeby || chainId === ChainId.kovan || chainId === ChainId.bsc) {
         return menu.key !== 'NFTLockdrop' && menu.key !== 'NFTAirdrop'
       }
       return true
