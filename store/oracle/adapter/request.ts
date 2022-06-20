@@ -15,7 +15,9 @@ function request() {
     method: 'GET',
     mode: 'cors',
     credentials: 'omit',
-  }).then((data) => data.json())
+  })
+    .then((data) => data.json())
+    .catch(() => [])
 }
 
 function requestOpensea(oracle: string) {
@@ -31,7 +33,9 @@ function requestOpensea(oracle: string) {
     method: 'GET',
     mode: 'cors',
     credentials: 'omit',
-  }).then((data) => data.json())
+  })
+    .then((data) => data.json())
+    .catch(() => ({ stats: { floor_price: 0 } }))
 }
 
 export type OracleProps = {}
@@ -61,7 +65,10 @@ export const useOracle = (props: OracleProps) => {
         const oracleName = NFTSetting.oracle
         if (/opensea__/.test(oracleName)) return
         const data = datas.find((i: any) => i.slug === oracleName)
-        if (!data) return console.error('[useOracle]', oracleName)
+        if (!data) {
+          oracle[NFT_ID] = 0
+          return console.error('[useOracle]', oracleName)
+        }
         const floorPrice = safeGet(() => data.floorPriceETH) || 0
         oracle[NFT_ID] = floorPrice
       })
