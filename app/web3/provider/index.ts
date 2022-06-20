@@ -1,3 +1,5 @@
+import { FallbackProvider } from '@ethersproject/providers'
+
 import type { ChainId } from '../chain/types'
 import { getNetwork } from '../network'
 import type { Provider } from './common-static-json-rpc-provider'
@@ -19,7 +21,15 @@ export const getProvider = (chainId: ChainId) => {
   const network = getNetwork(chainId)
 
   if (network.publicJsonRPCUrl) {
-    provider = new CommonStaticJsonRpcProvider(createConnectionInfo(network.publicJsonRPCUrl))
+    if (typeof network.publicJsonRPCUrl === 'string') {
+      provider = new CommonStaticJsonRpcProvider(createConnectionInfo(network.publicJsonRPCUrl))
+    } else {
+      const providers: any[] = []
+      network.publicJsonRPCUrl.map((url) => {
+        providers.push(new CommonStaticJsonRpcProvider(createConnectionInfo(url)))
+      })
+      provider = new FallbackProvider(providers)
+    }
   } else {
     throw new Error(`${chainId} has no jsonRPCUrl configured`)
   }

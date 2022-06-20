@@ -1,9 +1,10 @@
+import type { FallbackProvider } from '@ethersproject/providers'
 import { StaticJsonRpcProvider } from '@ethersproject/providers'
 import { deepCopy } from '@ethersproject/properties'
 import type { ConnectionInfo } from '@ethersproject/web'
 import { fetchJson } from '@ethersproject/web'
 
-export type Provider = CommonStaticJsonRpcProvider
+export type Provider = CommonStaticJsonRpcProvider | FallbackProvider
 
 function getResult(payload: { error?: { code?: number; data?: any; message?: string }; result?: any }): any {
   if (payload.error) {
@@ -17,7 +18,7 @@ function getResult(payload: { error?: { code?: number; data?: any; message?: str
   return payload.result
 }
 
-export class CommonStaticJsonRpcProvider extends StaticJsonRpcProvider implements Provider {
+export class CommonStaticJsonRpcProvider extends StaticJsonRpcProvider {
   _connectionInfo: Partial<ConnectionInfo>
   get connectionInfo(): ConnectionInfo {
     return {
