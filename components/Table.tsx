@@ -156,7 +156,7 @@ export const symbolCellRenderer: TableCellRenderer = ({ cellData, rowData }) => 
         </Stack>
         <Stack spacing={1}>
           <Typography variant="body2">{cellData}</Typography>
-          <CollectionTooltip>{rowData.collectionName}</CollectionTooltip>
+          <CollectionTooltip>{rowData.NFT_ID}</CollectionTooltip>
         </Stack>
       </Stack>
     </TableCell>
