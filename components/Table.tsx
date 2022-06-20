@@ -179,7 +179,7 @@ export const SymbolAbbCellRenderer: TableCellRenderer = ({ cellData, rowData }) 
         <Stack spacing={1}>
           <Typography variant="body2">{cellData}</Typography>
           <Typography component="p" variant="caption" color={grey[500]}>
-            {rowData.collection}
+            {rowData.NFT_ID}
           </Typography>
         </Stack>
       </Stack>

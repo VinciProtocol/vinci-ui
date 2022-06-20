@@ -122,6 +122,7 @@ export const NFTs = {
   // ...getMarketsData(ChainId.bsct).nfts,
   // ...getMarketsData(ChainId.vinci).nfts,
   ...MARKETS[ChainId.kovan].nfts,
+  ...MARKETS[ChainId.rinkeby].nfts,
   ...MARKETS[ChainId.ethereum].nfts,
   // ...getMarketsData(ChainId.bsc).nfts,
   // ...getMarketsData(ChainId.ethereum).nfts,

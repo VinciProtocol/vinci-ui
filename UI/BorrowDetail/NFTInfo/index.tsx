@@ -63,7 +63,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
       <Stack spacing={2}>
         <Title sx={RESPONSIVE_DESIGN.display.GTSM('flex')}>
           <Stack spacing={1} direction="row">
-            <NFTIcon NFT_ID={nft.collection} sx={{ width: '50px', height: '50px' }} />
+            <NFTIcon NFT_ID={nft.NFT_ID} sx={{ width: '50px', height: '50px' }} />
             <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
               {nft.name}
             </Typography>
@@ -81,7 +81,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
         </Title>
         <Title sx={RESPONSIVE_DESIGN.display.LESM('flex')}>
           <Stack spacing={1} direction="row">
-            <NFTIcon NFT_ID={nft.collection} sx={{ width: '50px', height: '50px' }} />
+            <NFTIcon NFT_ID={nft.NFT_ID} sx={{ width: '50px', height: '50px' }} />
             <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
               {nft.name}
             </Typography>
