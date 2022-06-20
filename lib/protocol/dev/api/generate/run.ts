@@ -34,16 +34,20 @@ export const run = async () => {
         if (!markets[network]) markets[network] = {}
         if (!markets[network][marketId]) markets[network][marketId] = {}
 
-        if (key === 'TimeLockableNToken') {
-          const nToken: any = {}
+        if (key === 'TimeLockableNToken' || key === 'VToken' || key === 'VariableDebtToken') {
+          const returnValue: any = {}
           Object.keys(v2[marketId]).forEach((key) => {
-            nToken[key] = v2[marketId][key].address.toLocaleLowerCase()
+            returnValue[key] = v2[marketId][key].address.toLocaleLowerCase()
           })
-          markets[network][marketId][key] = nToken
+          markets[network][marketId][key] = returnValue
           return
         }
 
-        markets[network][marketId][key] = v2[marketId].address.toLocaleLowerCase()
+        try {
+          markets[network][marketId][key] = v2[marketId].address.toLocaleLowerCase()
+        } catch (error) {
+          console.log(`${network} ${marketId} ${key}`)
+        }
       })
     })
   })
