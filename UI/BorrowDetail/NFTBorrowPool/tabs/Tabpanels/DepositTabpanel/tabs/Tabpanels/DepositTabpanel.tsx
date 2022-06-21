@@ -37,7 +37,7 @@ const DepositTabpanel = withTabPanel(
       lendingPool: { withdrawNFT },
     } = useControllers()
 
-    const { account } = useWallet()
+    const { networkAccount: account } = useWallet()
 
     const action = {
       name: 'Withdraw',

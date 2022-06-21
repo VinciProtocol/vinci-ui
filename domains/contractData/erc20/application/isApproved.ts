@@ -1,4 +1,4 @@
-import { useWallet } from 'lib/wallet'
+import { useWallet } from 'app/wallet'
 import { useRequestController } from 'store/contract/erc20/isApproved'
 import { useEffect, useMemo } from 'react'
 import { useContractData } from 'domains'
@@ -6,7 +6,7 @@ import { useContract } from 'domains/contract'
 
 export const useIsApproved = () => {
   const { generalAssets } = useContractData()
-  const { account } = useWallet()
+  const { networkAccount: account } = useWallet()
   const { ERC20Service } = useContract()
   const { single } = useRequestController()
 

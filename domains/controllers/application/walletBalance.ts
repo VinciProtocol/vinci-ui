@@ -16,7 +16,7 @@ type CreateUseWalletBalanceController = ReturnType<typeof createUseWalletBalance
 const createUseWalletBalanceController =
   (getProvider: (market: MarketData) => string, useRequestController: UseRequestController) => () => {
     const { wallet } = useContract()
-    const { account } = useWallet()
+    const { networkAccount: account } = useWallet()
     const { usePolling, polling, clearData } = useRequestController()
     const { market } = useMarket()
     const provider = getProvider(market)

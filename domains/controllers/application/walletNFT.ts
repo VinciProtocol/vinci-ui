@@ -5,7 +5,7 @@ import { useRequestController } from 'store/contract/uiPool/walletNFT'
 import { useContractNFT } from 'domains'
 
 export const useWalletNFTController = () => {
-  const { account, chainId } = useWallet()
+  const { networkAccount: account, chainId } = useWallet()
   const { nft } = useContractNFT()
   const { usePolling, polling, clearData } = useRequestController()
   const query = useMemo(() => {

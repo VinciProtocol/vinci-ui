@@ -36,7 +36,7 @@ const WalletTabpanel = withTabPanel(
       lendingPool: { depositNFT },
       erc721: { setApprovalForAll, isApprovedForAll },
     } = useControllers()
-    const { account } = useWallet()
+    const { networkAccount: account } = useWallet()
 
     const action = {
       name: 'Deposit',

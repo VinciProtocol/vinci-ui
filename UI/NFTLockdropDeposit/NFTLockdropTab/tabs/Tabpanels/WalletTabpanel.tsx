@@ -38,7 +38,7 @@ const WalletTabpanel = withTabPanel(
       lendingPool: { depositAndLockNFT },
       erc721: { setApprovalForAll, isApprovedForAll },
     } = useControllers()
-    const { account } = useWallet()
+    const { networkAccount: account } = useWallet()
 
     const [visible, setVisible] = useState(false)
     const [lockNFTs, setLockNFTs] = useState<any[]>([])

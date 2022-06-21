@@ -37,7 +37,7 @@ const LockDepositTabpanel = withTabPanel(
       lendingPool: { withdrawNFT },
     } = useControllers()
 
-    const { account } = useWallet()
+    const { networkAccount: account } = useWallet()
     const isPunks = useMemo(() => !!walletUnderlyingAsset, [walletUnderlyingAsset])
 
     const action = {

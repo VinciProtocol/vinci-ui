@@ -1,4 +1,5 @@
-import type { FC } from 'react'
+import type { FC} from 'react';
+import { useMemo } from 'react'
 
 import { createContext } from 'utils/createContext'
 import { useWallet as useWalletBase } from 'lib/wallet'
@@ -13,7 +14,11 @@ const useWalletService = () => {
   const connectDialog = useConnectDialog()
   const wallet = useWalletBase()
 
-  return { ...wallet, connectDialog, chainDialog }
+  const { account, network } = wallet
+
+  const networkAccount = useMemo(() => (!network ? null : account), [account, network])
+
+  return { ...wallet, networkAccount, connectDialog, chainDialog }
 }
 
 export const { Context, Provider: WalletProvider, createUseContext } = createContext(useWalletService)

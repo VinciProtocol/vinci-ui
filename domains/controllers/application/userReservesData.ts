@@ -7,7 +7,7 @@ import { useContract } from 'domains/contract'
 
 export const useUserReservesDataController = () => {
   const { uiPool } = useContract()
-  const { account } = useWallet()
+  const { networkAccount: account } = useWallet()
   const { usePolling, polling, clearData } = useRequestController()
   const { market } = useMarket()
   const query = useMemo(

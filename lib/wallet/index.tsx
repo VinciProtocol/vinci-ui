@@ -105,16 +105,9 @@ function UseWalletProvider({ children, autoConnect }: UseWalletProviderProps) {
   useMemo(() => {
     if (web3Error instanceof UnsupportedChainIdError) {
       setStatus('error')
-      debugger
       setError(new ChainUnsupportedError(web3Error.message))
     }
   }, [web3Error])
-
-  useEffect(() => {
-    if (!error) return
-    console.log(error)
-    debugger
-  }, [error])
 
   const connect = useCallback(
     async (connectorId: ProviderId = 'injected') => {
@@ -244,19 +237,14 @@ function UseWalletProvider({ children, autoConnect }: UseWalletProviderProps) {
   const wallet = useMemo(() => {
     let chainInfo: any = getNetwork(chainId)
     let e = error
-    let s = status
     try {
       chainInfo = {
         ...chains.getChainInformation(chainId),
         ...chainInfo,
       }
-    } catch (error) {
-      e = error as any
-      s = 'error'
-    }
+    } catch (err) {}
 
     return {
-      _web3ReactContext: web3ReactContext,
       account: account || null,
       chainId,
       connect,
@@ -264,14 +252,14 @@ function UseWalletProvider({ children, autoConnect }: UseWalletProviderProps) {
       connectors,
       error: e,
       ethereum: library,
-      isConnected: () => s === 'connected',
+      isConnected: () => status === 'connected',
       network: chainInfo,
       providerInfo: connector ? getProviderFromUseWalletId(connector) : getProviderFromUseWalletId('unknown'),
       reset,
-      status: s,
+      status,
       type,
     }
-  }, [account, chainId, connect, connector, error, library, type, reset, status, web3ReactContext])
+  }, [account, chainId, connect, connector, error, library, type, reset, status])
 
   return (
     <UseWalletContext.Provider

@@ -23,7 +23,7 @@ export const useTable = (): BasicTableProps => {
   const { t } = useTranslation()
   const { actions } = useDialogs()
   const { generalAssets } = useContractData()
-  const { account } = useWallet()
+  const { networkAccount: account } = useWallet()
 
   const FunctionButtonsCellRenderer: TableCellRenderer = useCallback(
     ({ rowData }) => {

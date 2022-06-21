@@ -24,7 +24,7 @@ import {
 export const useTable = (): BasicTableProps => {
   const router = useRouter()
   const { t } = useTranslation('nft-lockdrop')
-  const { account } = useWallet()
+  const { networkAccount: account } = useWallet()
 
   const { actions } = useDialogs()
   const { nftAssetsTimeLocked } = useThegraph()

@@ -21,7 +21,7 @@ import { useDialogs, useContractData } from 'domains'
 
 export const useTable = (): BasicTableProps => {
   const { t } = useTranslation()
-  const { account } = useWallet()
+  const { networkAccount: account } = useWallet()
 
   const { actions } = useDialogs()
   const { generalAssets } = useContractData()

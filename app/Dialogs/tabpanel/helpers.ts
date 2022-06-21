@@ -65,7 +65,7 @@ export const createUseTabpanel = (props: {
     )
     const balance: BigNumber = useMemo(() => new BigNumber(defaultBalance), [defaultBalance])
     const inputSlider = useInputSlider({ balance })
-    const { account: user } = useWallet()
+    const { networkAccount: user } = useWallet()
 
     const { reservesData, walletBalances } = useControllers()
 
