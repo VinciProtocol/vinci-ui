@@ -85,5 +85,5 @@ export type Connector = {
   // parameters, when using `class implements Connector`. It also rejects any
   // extra parameters added to `{}` or `object` in this case.
   web3ReactConnector: (params: any) => AbstractConnector
-  handleActivationError?: (error: Error) => Error | null
+  handleActivationError?: (error: Error) => { error: Error; ignore?: boolean } | null
 }

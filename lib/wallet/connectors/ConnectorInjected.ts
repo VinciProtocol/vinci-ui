@@ -1,5 +1,4 @@
 import type { Connector } from '../types'
-import { ConnectionRejectedError } from '../errors'
 
 export default async function init(): Promise<Connector> {
   const { InjectedConnector, UserRejectedRequestError } = await import('@web3-react/injected-connector')
@@ -7,8 +6,14 @@ export default async function init(): Promise<Connector> {
     web3ReactConnector({ chainId }: { chainId: number[] }) {
       return new InjectedConnector({ supportedChainIds: chainId })
     },
-    handleActivationError(err: Error) {
-      return err instanceof UserRejectedRequestError ? new ConnectionRejectedError() : null
+    handleActivationError(error: Error) {
+      const returnValue = { error, ignore: false }
+
+      if (error instanceof UserRejectedRequestError) {
+        returnValue.ignore = true
+      }
+
+      return returnValue
     },
   }
 }

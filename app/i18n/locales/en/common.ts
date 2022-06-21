@@ -29,7 +29,6 @@ const locale = {
       title: 'Connect Wallet',
       subTitle: 'To start using Vinci',
       ChainUnknownError: 'Switch Network',
-      ConnectionRejectedError: 'Rejected to connect wallet',
     },
     tips: {
       accept: 'By connecting, I accept ',

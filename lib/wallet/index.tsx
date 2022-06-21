@@ -9,7 +9,7 @@ import type { Web3ReactContextInterface } from '@web3-react/core/dist/types'
 
 import type { AccountType, Status, Wallet } from './types'
 import { connectors } from './connectors'
-import { ConnectionRejectedError, ChainUnsupportedError, ConnectorUnsupportedError } from './errors'
+import { ChainUnsupportedError, ConnectorUnsupportedError } from './errors'
 
 import { getProviderFromUseWalletId, getProviderString } from './providers'
 import type { ProviderId } from './providers/types'
@@ -105,9 +105,16 @@ function UseWalletProvider({ children, autoConnect }: UseWalletProviderProps) {
   useMemo(() => {
     if (web3Error instanceof UnsupportedChainIdError) {
       setStatus('error')
+      debugger
       setError(new ChainUnsupportedError(web3Error.message))
     }
   }, [web3Error])
+
+  useEffect(() => {
+    if (!error) return
+    console.log(error)
+    debugger
+  }, [error])
 
   const connect = useCallback(
     async (connectorId: ProviderId = 'injected') => {
@@ -166,25 +173,27 @@ function UseWalletProvider({ children, autoConnect }: UseWalletProviderProps) {
           return
         }
 
-        // If not, the error has been thrown during the current connection attempt,
-        // so it's correct to indicate that there has been an error
-        setConnector(null)
-        setStatus('error')
-
-        if (err instanceof UnsupportedChainIdError) {
-          setError(new ChainUnsupportedError(err.message))
-          return
+        const throwError = (error: Error) => {
+          setConnector(null)
+          setStatus('error')
+          setError(error)
         }
+
+        const ignoreError = () => {
+          setConnector(null)
+          setStatus('disconnected')
+        }
+
+        if (err instanceof UnsupportedChainIdError) return throwError(new ChainUnsupportedError(err.message))
+
         // It might have thrown with an error known by the connector
         if (connector.handleActivationError) {
-          const handledError = connector.handleActivationError(err as Error)
-          if (handledError) {
-            setError(handledError)
-            return
-          }
+          const { error, ignore } = connector.handleActivationError(err as Error)
+          if (ignore) return ignoreError()
+          if (error) return throwError(error)
         }
-        // Otherwise, set to state the received error
-        setError(err as Error)
+
+        throwError(err as Error)
       }
     },
     [reset, web3ReactContext]
@@ -288,7 +297,6 @@ function UseWalletProviderWrapper(props: UseWalletProviderProps) {
 }
 
 export {
-  ConnectionRejectedError,
   ChainUnsupportedError,
   ConnectorUnsupportedError,
   UseWalletProviderWrapper as UseWalletProvider,

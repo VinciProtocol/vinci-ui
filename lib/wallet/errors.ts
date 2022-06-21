@@ -22,14 +22,6 @@ export class ConnectorUnsupportedError extends Error {
   }
 }
 
-export class ConnectionRejectedError extends Error {
-  constructor(...params: any[]) {
-    super(...params)
-    this.name = 'ConnectionRejectedError'
-    this.message = `The activation has been rejected by the provider.`
-  }
-}
-
 export class ConnectorConfigError extends Error {
   constructor(...params: any[]) {
     super(...params)
