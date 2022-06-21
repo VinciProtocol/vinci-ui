@@ -5,15 +5,15 @@ import { getProvider } from 'app/web3/provider'
 import { useWallet } from 'app/wallet'
 
 const useMarketService = () => {
-  const { chainId, ethereum, error } = useWallet()
+  const { chainId, ethereum, network } = useWallet()
   const { provider, market } = useMemo(() => {
     const market = getMarket(chainId)
-    const provider = !error && ethereum ? ethereum : getProvider(market.chainId)
+    const provider = network && ethereum ? ethereum : getProvider(market.chainId)
     return {
       provider,
       market,
     }
-  }, [chainId, error, ethereum])
+  }, [chainId, network, ethereum])
 
   return { provider, market }
 }
