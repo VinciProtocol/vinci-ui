@@ -1,18 +1,18 @@
 import type { GetStaticProps, NextPage } from 'next'
 
 import Layout from 'UI/Layout'
-import NFTLockdrop from 'UI/NFTLockdrop'
+import NFTAirdrop from 'UI/NFTAirdrop'
 
 import { withStaticTranslations } from 'app/i18n/hoc'
 
 export const getStaticProps: GetStaticProps = withStaticTranslations((props) => ({ props }), {
-  namespaces: ['nft-lockdrop'],
+  namespaces: ['nft-airdrop'],
 })
 
 const Page: NextPage = () => {
   return (
-    <Layout title="NFTLockdrop">
-      <NFTLockdrop />
+    <Layout title="NFTAirdrop">
+      <NFTAirdrop />
     </Layout>
   )
 }

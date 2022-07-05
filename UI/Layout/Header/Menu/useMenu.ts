@@ -28,15 +28,6 @@ const MenuList = [
     hide: true,
   },
   {
-    key: 'NFTLockdrop',
-    linkTo: '/nft-lockdrop',
-  },
-  {
-    key: 'NFTLockdropDeposit',
-    linkTo: '/nft-lockdrop/[id]',
-    hide: true,
-  },
-  {
     key: 'NFTAirdrop',
     linkTo: '/nft-airdrop',
     hide: true,
