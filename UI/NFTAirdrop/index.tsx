@@ -1,4 +1,6 @@
 import type { FC } from 'react'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 import { styled } from '@mui/material/styles'
 import Stack from '@mui/material/Stack'
@@ -11,6 +13,8 @@ import { Title } from 'components/Styled'
 
 import EligibilityResult from './EligibilityResult'
 import EligibilityCriteria from './EligibilityCriteria'
+import { useWallet } from 'app/wallet'
+import { ChainId } from 'app/web3/chain/types'
 
 const NFTAirdrop: FC = () => {
   const Content = useMemoEmpty(() =>
@@ -21,6 +25,16 @@ const NFTAirdrop: FC = () => {
     }))
   )
   const { t } = useTranslation('nft-airdrop')
+  const { chainId } = useWallet()
+  const router = useRouter()
+
+  useEffect(() => {
+    if (chainId !== ChainId.ethereum) {
+      router.push({
+        pathname: '/lend',
+      })
+    }
+  }, [chainId, router])
 
   return (
     <Content>
