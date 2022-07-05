@@ -14,7 +14,7 @@
       "approve": "อนุมัติ"
     },
     "disconnected": {
-      "title": "เชื่อมต่อกระเป๋าสตางค์",
+      "title": "เชื่อมต่อกระเป๋าเงิน",
       "subTitle": "เพื่อเริ่มใช้ Vinci"
     },
     "connected": {
@@ -26,10 +26,9 @@
       "subTitle": "คุณอาจต้องคลิกส่วนขยาย"
     },
     "error": {
-      "title": "เชื่อมต่อกระเป๋าสตางค์",
+      "title": "เชื่อมต่อกระเป๋าเงิน",
       "subTitle": "เพื่อเริ่มใช้ Vinci",
-      "ChainUnknownError": "สลับเครือข่าย",
-      "ConnectionRejectedError": "ปฏิเสธที่จะเชื่อมต่อกระเป๋าเงิน"
+      "ChainUnknownError": "สลับเครือข่าย"
     },
     "tips": {
       "accept": "โดยการเชื่อมต่อฉันยอมรับ",

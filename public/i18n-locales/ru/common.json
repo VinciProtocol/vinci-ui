@@ -28,8 +28,7 @@
     "error": {
       "title": "Подключить кошелек",
       "subTitle": "Чтобы начать использовать Винчи",
-      "ChainUnknownError": "Переключить сеть",
-      "ConnectionRejectedError": "Отказ в подключении кошелька"
+      "ChainUnknownError": "Переключить сеть"
     },
     "tips": {
       "accept": "Подключаясь, я принимаю",

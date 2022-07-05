@@ -28,8 +28,7 @@
     "error": {
       "title": "Conectar Carteira",
       "subTitle": "Para começar a usar o Vinci",
-      "ChainUnknownError": "Mudar de rede",
-      "ConnectionRejectedError": "Rejeitado para conectar a carteira"
+      "ChainUnknownError": "Mudar de rede"
     },
     "tips": {
       "accept": "Ao conectar, eu aceito",

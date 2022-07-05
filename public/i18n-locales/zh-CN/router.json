@@ -2,14 +2,12 @@
   "menu": {
     "Markets": "市场",
     "Dashboard": "我的仪表板",
-    "Lend": "借出",
-    "Borrow": "借用",
+    "Lend": "借",
+    "Borrow": "借",
     "BorrowDetail": "借阅详情",
     "Stake": "赌注",
     "Liquidation": "清算市场",
     "App": "应用程序",
-    "NFTLockdrop": "NFT 锁投",
-    "NFTLockdropDeposit": "NFT 锁投 - 存款",
     "NFTAirdrop": "NFT空投"
   }
 }

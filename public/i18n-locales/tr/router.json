@@ -2,14 +2,12 @@
   "menu": {
     "Markets": "Piyasalar",
     "Dashboard": "Gösterge Panelim",
-    "Lend": "Borç vermek",
-    "Borrow": "Borç almak",
+    "Lend": "Ödünç vermek",
+    "Borrow": "Ödünç almak",
     "BorrowDetail": "Borç Detayı",
     "Stake": "Bahis",
     "Liquidation": "Tasfiye Pazarı",
     "App": "Uygulama",
-    "NFTAirdrop": "NFT Airdrop",
-    "NFTLockdrop": "NFT Kilitleme",
-    "NFTLockdropDeposit": "NFT Lockdrop - Para Yatırma"
+    "NFTAirdrop": "NFT Airdrop"
   }
 }

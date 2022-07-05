@@ -28,8 +28,7 @@
     "error": {
       "title": "Connecter le portefeuille",
       "subTitle": "Pour commencer à utiliser Vinci",
-      "ChainUnknownError": "Changer de réseau",
-      "ConnectionRejectedError": "Refusé de connecter le portefeuille"
+      "ChainUnknownError": "Changer de réseau"
     },
     "tips": {
       "accept": "En me connectant, j'accepte",

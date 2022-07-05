@@ -2,14 +2,12 @@
   "menu": {
     "Markets": "Thị trường",
     "Dashboard": "Bảng điều khiển của tôi",
-    "Lend": "Mượn",
+    "Lend": "Cho vay",
     "Borrow": "Vay",
     "BorrowDetail": "Chi tiết Vay",
     "Stake": "Cổ phần",
     "Liquidation": "Thị trường thanh lý",
     "App": "Ứng dụng",
-    "NFTAirdrop": "NFT Airdrop",
-    "NFTLockdrop": "NFT Lockdrop",
-    "NFTLockdropDeposit": "NFT Lockdrop - Đặt cọc"
+    "NFTAirdrop": "NFT Airdrop"
   }
 }

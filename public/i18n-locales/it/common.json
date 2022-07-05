@@ -28,8 +28,7 @@
     "error": {
       "title": "Collega il portafoglio",
       "subTitle": "Per iniziare a usare Vinci",
-      "ChainUnknownError": "Cambia rete",
-      "ConnectionRejectedError": "Rifiutato per connettere il portafoglio"
+      "ChainUnknownError": "Cambia rete"
     },
     "tips": {
       "accept": "Collegandomi, accetto",

@@ -8,8 +8,6 @@
     "Stake": "Ставка",
     "Liquidation": "Ликвидация",
     "App": "Приложение",
-    "NFTAirdrop": "Аирдроп NFT",
-    "NFTLockdrop": "Блокировка NFT",
-    "NFTLockdropDeposit": "Блокировка NFT — Депозит"
+    "NFTAirdrop": "Аирдроп NFT"
   }
 }

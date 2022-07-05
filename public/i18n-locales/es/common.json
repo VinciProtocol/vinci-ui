@@ -28,8 +28,7 @@
     "error": {
       "title": "Conectar billetera",
       "subTitle": "Para empezar a usar Vinci",
-      "ChainUnknownError": "Cambiar red",
-      "ConnectionRejectedError": "Rechazado para conectar la billetera"
+      "ChainUnknownError": "Cambiar red"
     },
     "tips": {
       "accept": "Al conectarme, acepto",

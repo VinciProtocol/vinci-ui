@@ -28,8 +28,7 @@
     "error": {
       "title": "지갑 연결",
       "subTitle": "Vinci 사용을 시작하려면",
-      "ChainUnknownError": "네트워크 전환",
-      "ConnectionRejectedError": "지갑 연결 거부"
+      "ChainUnknownError": "스위치 네트워크"
     },
     "tips": {
       "accept": "연결하여 수락합니다.",

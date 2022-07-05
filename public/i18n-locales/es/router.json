@@ -8,8 +8,6 @@
     "Stake": "Apostar",
     "Liquidation": "Mercado de liquidación",
     "App": "aplicación",
-    "NFTAirdrop": "Lanzamiento aéreo NFT",
-    "NFTLockdrop": "Bloqueo NFT",
-    "NFTLockdropDeposit": "NFT Lockdrop - Depósito"
+    "NFTAirdrop": "Lanzamiento aéreo NFT"
   }
 }

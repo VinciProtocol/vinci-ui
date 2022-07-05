@@ -28,8 +28,7 @@
     "error": {
       "title": "ウォレットを接続する",
       "subTitle": "Vinciの使用を開始するには",
-      "ChainUnknownError": "スイッチネットワーク",
-      "ConnectionRejectedError": "ウォレットの接続を拒否しました"
+      "ChainUnknownError": "スイッチネットワーク"
     },
     "tips": {
       "accept": "接続することで、私は受け入れます",

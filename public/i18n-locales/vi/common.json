@@ -1,6 +1,6 @@
 {
   "layout": {
-    "description": "Giao thức DeFi được hỗ trợ bởi NFT để tăng tính thanh khoản và bảo đảm rủi ro biến động"
+    "description": "Giao thức DeFi được hỗ trợ bởi NFT để tăng tính thanh khoản và phòng ngừa rủi ro biến động"
   },
   "wallet": {
     "btn": {
@@ -28,8 +28,7 @@
     "error": {
       "title": "Kết nối ví",
       "subTitle": "Để bắt đầu sử dụng Vinci",
-      "ChainUnknownError": "Chuyển mạng",
-      "ConnectionRejectedError": "Bị từ chối kết nối ví"
+      "ChainUnknownError": "Chuyển mạng"
     },
     "tips": {
       "accept": "Bằng cách kết nối, tôi chấp nhận",

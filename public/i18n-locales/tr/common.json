@@ -28,8 +28,7 @@
     "error": {
       "title": "Cüzdanı Bağla",
       "subTitle": "Vinci'yi kullanmaya başlamak için",
-      "ChainUnknownError": "Ağ Değiştir",
-      "ConnectionRejectedError": "Cüzdanı bağlamak için reddedildi"
+      "ChainUnknownError": "Ağ Değiştir"
     },
     "tips": {
       "accept": "Bağlanarak kabul ediyorum",

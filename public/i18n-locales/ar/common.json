@@ -15,7 +15,7 @@
     },
     "disconnected": {
       "title": "ربط المحفظة",
-      "subTitle": "لبدء استخدام فينشي"
+      "subTitle": "لبدء استخدام Vinci"
     },
     "connected": {
       "title": "متصل",
@@ -27,9 +27,8 @@
     },
     "error": {
       "title": "ربط المحفظة",
-      "subTitle": "لبدء استخدام فينشي",
-      "ChainUnknownError": "تبديل الشبكة",
-      "ConnectionRejectedError": "رفض توصيل المحفظة"
+      "subTitle": "لبدء استخدام Vinci",
+      "ChainUnknownError": "تبديل الشبكة"
     },
     "tips": {
       "accept": "عن طريق الاتصال ، أوافق",

@@ -3,13 +3,11 @@
     "Markets": "الأسواق",
     "Dashboard": "لوحة القيادة الخاصة بي",
     "Lend": "أعار",
-    "Borrow": "يستعير",
+    "Borrow": "اقتراض",
     "BorrowDetail": "تفاصيل الاقتراض",
     "Stake": "حصة",
     "Liquidation": "سوق التصفية",
-    "App": "برنامج",
-    "NFTAirdrop": "NFT Airdrop",
-    "NFTLockdrop": "NFT Lockdrop",
-    "NFTLockdropDeposit": "NFT Lockdrop - الإيداع"
+    "App": "تطبيق",
+    "NFTAirdrop": "NFT Airdrop"
   }
 }

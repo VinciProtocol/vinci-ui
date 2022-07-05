@@ -28,8 +28,7 @@
     "error": {
       "title": "Connect Wallet",
       "subTitle": "To start using Vinci",
-      "ChainUnknownError": "Switch Network",
-      "ConnectionRejectedError": "Rejected to connect wallet"
+      "ChainUnknownError": "Switch Network"
     },
     "tips": {
       "accept": "By connecting, I accept ",

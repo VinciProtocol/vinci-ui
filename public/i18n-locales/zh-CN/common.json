@@ -1,4 +1,7 @@
 {
+  "layout": {
+    "description": "一种由 NFT 支持的 DeFi 协议，用于提高流动性和对冲波动性"
+  },
   "wallet": {
     "btn": {
       "cancel": "取消",
@@ -16,7 +19,7 @@
     },
     "connected": {
       "title": "连接的",
-      "subTitle": "连接到"
+      "subTitle": "与"
     },
     "connecting": {
       "title": "解锁钱包",
@@ -25,8 +28,7 @@
     "error": {
       "title": "连接钱包",
       "subTitle": "开始使用 Vinci",
-      "ChainUnknownError": "交换网络",
-      "ConnectionRejectedError": "拒绝连接钱包"
+      "ChainUnknownError": "交换网络"
     },
     "tips": {
       "accept": "通过连接，我接受",
@@ -38,22 +40,9 @@
       "error": "不支持的网络"
     }
   },
-  "menu": {
-    "Markets": "市场",
-    "Dashboard": "我的仪表板",
-    "Lend": "借出",
-    "Borrow": "借用",
-    "BorrowDetail": "借阅详情",
-    "Stake": "赌注",
-    "Liquidation": "清算市场",
-    "App": "应用程序"
-  },
   "components": {
     "goBack": "回去",
     "learnMore": "学到更多"
-  },
-  "layout": {
-    "description": "一种由 NFT 支持的 DeFi 协议，用于提高流动性和对冲波动性"
   },
   "tips": {
     "NFTMarket": "看 NFT 市场"

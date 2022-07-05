@@ -3,13 +3,11 @@
     "Markets": "Mercados",
     "Dashboard": "Meu painel",
     "Lend": "Emprestar",
-    "Borrow": "Pegar emprestado",
+    "Borrow": "Pedir emprestado",
     "BorrowDetail": "Detalhe do empréstimo",
     "Stake": "Estaca",
     "Liquidation": "Mercado de liquidação",
     "App": "Aplicativo",
-    "NFTAirdrop": "Lançamento aéreo NFT",
-    "NFTLockdrop": "Bloqueio NFT",
-    "NFTLockdropDeposit": "NFT Lockdrop - Depósito"
+    "NFTAirdrop": "Lançamento aéreo NFT"
   }
 }

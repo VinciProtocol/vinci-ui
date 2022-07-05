@@ -5,11 +5,9 @@
     "Lend": "Verleihen",
     "Borrow": "Ausleihen",
     "BorrowDetail": "Detail ausleihen",
-    "Stake": "Einatz",
+    "Stake": "Einsatz",
     "Liquidation": "Liquidationsmarktplatz",
     "App": "App",
-    "NFTAirdrop": "NFT-Airdrop",
-    "NFTLockdrop": "NFT Lockdrop",
-    "NFTLockdropDeposit": "NFT Lockdrop - Einzahlung"
+    "NFTAirdrop": "NFT-Airdrop"
   }
 }

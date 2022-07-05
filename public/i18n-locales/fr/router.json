@@ -5,11 +5,9 @@
     "Lend": "Prêter",
     "Borrow": "Emprunter",
     "BorrowDetail": "Détail de l'emprunt",
-    "Stake": "Miser",
+    "Stake": "Pieu",
     "Liquidation": "Marché des liquidations",
     "App": "Application",
-    "NFTAirdrop": "Airdrop NFT",
-    "NFTLockdrop": "Verrouillage NFT",
-    "NFTLockdropDeposit": "NFT Lockdrop - Dépôt"
+    "NFTAirdrop": "Airdrop NFT"
   }
 }

@@ -28,12 +28,11 @@
     "error": {
       "title": "Brieftasche verbinden",
       "subTitle": "Um mit der Verwendung von Vinci zu beginnen",
-      "ChainUnknownError": "Netzwerk wechseln",
-      "ConnectionRejectedError": "Wallet-Verbindung abgelehnt"
+      "ChainUnknownError": "Netzwerk wechseln"
     },
     "tips": {
       "accept": "Indem ich mich verbinde, akzeptiere ich",
-      "term": "Nutzungsbedingungen von Vinci"
+      "term": "Vincis Nutzungsbedingungen"
     },
     "chain": {
       "title": "Wählen Sie Ihr Netzwerk aus",

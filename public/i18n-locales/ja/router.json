@@ -3,13 +3,11 @@
     "Markets": "市場",
     "Dashboard": "マイダッシュボード",
     "Lend": "貸す",
-    "Borrow": "かりて",
+    "Borrow": "借りる",
     "BorrowDetail": "詳細を借りる",
     "Stake": "ステーク",
     "Liquidation": "清算マーケットプレイス",
     "App": "アプリ",
-    "NFTAirdrop": "NFTエアドロップ",
-    "NFTLockdrop": "NFTロックドロップ",
-    "NFTLockdropDeposit": "NFTロックドロップ-デポジット"
+    "NFTAirdrop": "NFTエアドロップ"
   }
 }
