@@ -8,12 +8,6 @@ const ETH: Currency = {
   decimals: 18,
 }
 
-const BNB: Currency = {
-  name: 'BNB',
-  symbol: 'ETH',
-  decimals: 18,
-}
-
 const CHAIN_INFORMATION = new Map<number, ChainInformation | ChainType>([
   [
     ChainId.ethereum,

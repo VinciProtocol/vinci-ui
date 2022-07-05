@@ -1,4 +1,4 @@
-import type { FC} from 'react';
+import type { FC } from 'react'
 import { useMemo } from 'react'
 
 import { createContext } from 'utils/createContext'

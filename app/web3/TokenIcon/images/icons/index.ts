@@ -91,5 +91,5 @@ export default {
   frax,
   fei,
   usdp,
-  vci
+  vci,
 } as Images

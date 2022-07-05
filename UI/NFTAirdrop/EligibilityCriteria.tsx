@@ -29,17 +29,25 @@ const EligibilityCriteria: FC = () => {
             i18nKey="criteria.subTitle.2"
             t={t}
             components={{
-              contest: <Link href="https://gleam.io/rGkAO/vinci-protocol-leonardo-da-vinci-nft-drop-1000000-vci" underline="none" target="_blank" />,
+              contest: (
+                <Link
+                  href="https://gleam.io/rGkAO/vinci-protocol-leonardo-da-vinci-nft-drop-1000000-vci"
+                  underline="none"
+                  target="_blank"
+                />
+              ),
             }}
           />
         </SubTitle>
       </Stack>
       <CardActions>
-        <Button 
-          variant="outlined" 
-          href='https://medium.com/@vinciprotocol/vinci-protocol-leonardo-da-vinci-nft-drop-cea7b40fc985'
-          target='_blank'
-        >{t('criteria.btn.learnMore')}</Button>
+        <Button
+          variant="outlined"
+          href="https://medium.com/@vinciprotocol/vinci-protocol-leonardo-da-vinci-nft-drop-cea7b40fc985"
+          target="_blank"
+        >
+          {t('criteria.btn.learnMore')}
+        </Button>
       </CardActions>
     </ROOT>
   )

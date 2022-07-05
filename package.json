@@ -8,8 +8,11 @@
     "build": "yarn build-core --no-lint",
     "build-core": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prettier": "node ./scripts/prettier.js",
+    "lint": "yarn lint:ts && next lint",
+    "lint:ts": "tsc --noEmit --incremental",
+    "fix:prettier": "node ./scripts/prettier.js",
+    "fix:eslint": "eslint --fix",
+    "fix": "yarn fix:eslint && yarn fix:prettier",
     "safe-headers": "node ./scripts/safe-headers.js"
   },
   "sideEffects": false,

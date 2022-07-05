@@ -100,9 +100,9 @@ function runPrettier(options) {
     try {
       const input = fs__default.readFileSync(file, 'utf8')
       if (shouldWrite) {
-        console.log(`Formatting ${file}`)
         const output = prettier__default.format(input, { ...prettierOptions, filepath: file })
         if (output !== input) {
+          console.log(`Formatting ${file}`)
           fs__default.writeFileSync(file, output, 'utf8')
         }
       } else {

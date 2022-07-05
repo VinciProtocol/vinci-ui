@@ -145,11 +145,11 @@ export const getTheme = (options: ThemeOptions) => {
                 background: primary.main,
                 '.MuiButton-startIcon': {
                   color: '#fff',
-                }
+                },
               },
               '.MuiButton-startIcon': {
                 color: primary.main,
-              }
+              },
             },
           },
           {
