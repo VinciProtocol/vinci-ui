@@ -40,54 +40,6 @@ const CHAIN_INFORMATION = new Map<number, ChainInformation | ChainType>([
     },
   ],
   [
-    ChainId.localhost,
-    {
-      id: ChainId.localhost,
-      nativeCurrency: ETH,
-      type: 'Localhost',
-      fullName: 'Stage Vinci',
-      shortName: 'Stage Vinci',
-      explorerUrl: `https://etherscan.io`,
-      testnet: true,
-    },
-  ],
-  [
-    ChainId.bsct,
-    {
-      id: ChainId.bsct,
-      nativeCurrency: BNB,
-      type: 'BSC Test',
-      fullName: 'BSC Test',
-      shortName: 'BSC Test',
-      explorerUrl: `https://testnet.bscscan.com/`,
-      testnet: true,
-    },
-  ],
-  [
-    ChainId.bsc,
-    {
-      id: ChainId.bsc,
-      nativeCurrency: BNB,
-      type: 'BSC',
-      fullName: 'BSC',
-      shortName: 'BSC',
-      explorerUrl: `https://bscscan.com`,
-      testnet: false,
-    },
-  ],
-  [
-    ChainId.kovan,
-    {
-      id: ChainId.kovan,
-      nativeCurrency: ETH,
-      type: 'kovan',
-      fullName: 'Kovan',
-      shortName: 'Kovan',
-      explorerUrl: `https://kovan.etherscan.io`,
-      testnet: true,
-    },
-  ],
-  [
     ChainId.rinkeby,
     {
       id: ChainId.rinkeby,

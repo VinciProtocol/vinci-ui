@@ -14,24 +14,6 @@ export const networks: Record<ChainId, NetworkConfig> = {
     symbol: 'ETH',
     publicJsonRPCUrl: ['https://rinkeby.infura.io/v3/1fe83aa589cd4ae3adfcbb2d7d411d4a'],
   },
-  [ChainId.kovan]: {
-    name: 'Kovan',
-    fullName: 'Kovan Testnet',
-    symbol: 'ETH',
-    publicJsonRPCUrl: ['https://kovan.infura.io/v3/1fe83aa589cd4ae3adfcbb2d7d411d4a'],
-  },
-  [ChainId.bsct]: {
-    name: 'BSC Testnet',
-    fullName: 'BSC Testnet',
-    symbol: 'BNB',
-    publicJsonRPCUrl: 'https://data-seed-prebsc-1-s1.binance.org:8545',
-  },
-  [ChainId.bsc]: {
-    name: 'BSC',
-    fullName: 'BNB Smart Chain',
-    symbol: 'BNB',
-    publicJsonRPCUrl: 'https://bsc-dataseed.binance.org',
-  },
   [ChainId.ethereum]: {
     name: 'Ethereum',
     fullName: 'Ethereum',
@@ -41,12 +23,6 @@ export const networks: Record<ChainId, NetworkConfig> = {
       'https://mainnet.infura.io/v3/1fe83aa589cd4ae3adfcbb2d7d411d4a',
       'https://mainnet.infura.io/v3/ba81afa823ed4d3e952c8f1b4be63abb',
     ],
-  },
-  [ChainId.localhost]: {
-    name: 'Localhost',
-    fullName: 'Localhost',
-    symbol: 'ETH',
-    publicJsonRPCUrl: 'http://localhost:8545',
   },
 }
 
