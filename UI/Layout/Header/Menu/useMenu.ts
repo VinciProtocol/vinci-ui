@@ -47,10 +47,10 @@ export function useMenu() {
     return MenuList.filter((menu) => {
       if (__DEV__) return true
       if (chainId === ChainId.ethereum) {
-        return menu.key === 'NFTAirdrop' || menu.key === 'App' || menu.key === 'NFTLockdrop'
+        return menu.key === 'NFTAirdrop' || menu.key === 'App'
       }
-      if (chainId === ChainId.rinkeby || chainId === ChainId.kovan || chainId === ChainId.bsc) {
-        return menu.key !== 'NFTLockdrop' && menu.key !== 'NFTAirdrop'
+      if (chainId === ChainId.rinkeby) {
+        return menu.key !== 'NFTAirdrop'
       }
       return true
     }).map((menu) => ({ ...menu, label: t('router:menu.' + menu.key) }))

@@ -9,8 +9,6 @@ const locale = {
     Liquidation: 'Liquidation Marketplace',
     App: 'App',
     NFTAirdrop: 'NFT Airdrop',
-    NFTLockdrop: 'NFT Lockdrop',
-    NFTLockdropDeposit: 'NFT Lockdrop - Deposit',
   },
 }
 
