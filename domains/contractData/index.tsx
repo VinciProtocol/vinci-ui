@@ -18,7 +18,6 @@ import { useReservesDatas } from 'store/contract/uiPool/reservesDataFromAllPools
 import { useUserReservesDatas } from 'store/contract/uiPool/userReservesDataFromAllPools/hooks'
 import { useWalletBalanceData } from 'store/contract/uiPool/walletBalances/hooks'
 import { useWalletNFTData } from 'store/contract/uiPool/walletNFT/hooks'
-import { useOracle } from 'store/oracle/hooks'
 
 import ContractNFTProvider from './nft'
 export { createContractNFTContext } from './nft'
@@ -32,7 +31,6 @@ const useContractDataService = () => {
   const userReservesDatas = useUserReservesDatas()
   const walletBalanceData = useWalletBalanceData()
   const walletNFTData = useWalletNFTData()
-  const oracle = useOracle()
   const contractDataSource = useMemoLazy(() => {
     const returnValue = reservesDatas
       .map((reservesData) => {
@@ -87,7 +85,7 @@ const useContractDataService = () => {
   }, [market, reservesDatas, userReservesDatas, walletBalanceData, walletNFTData])
 
   const { generalAssets, generalAssetsMap } = useMemo(() => {
-    if (!contractDataSource || !oracle) {
+    if (!contractDataSource) {
       return {
         generalAssets: [],
       } as undefined
@@ -113,9 +111,6 @@ const useContractDataService = () => {
             currencyPriceInUSD
           )
           const NFT_ID = nftSetting.NFT_ID
-          if (NFT_ID && nftPriceInUSD.eq(0)) {
-            nftPriceInUSD = valueToBigNumber(oracle[NFT_ID]).multipliedBy(currencyPriceInUSD)
-          }
           return {
             ...nftVault,
             NFT_ID,
@@ -283,7 +278,7 @@ const useContractDataService = () => {
 
     log('[domains] [generalAssets]', returnValue)
     return returnValue
-  }, [contractDataSource, oracle])
+  }, [contractDataSource])
 
   const { nftAssets, dashboard } = useMemo(() => {
     if (!generalAssetsMap)
