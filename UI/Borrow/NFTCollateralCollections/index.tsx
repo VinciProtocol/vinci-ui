@@ -20,10 +20,6 @@ const NFTCollateralCollections: FC<NFTCollateralCollectionsProps> = () => {
   )
   const ROOT = useMemoEmpty(
     () => styled(Paper)`
-      .basic-table {
-        min-height: 360px;
-      }
-
       .ReactVirtualized__Table__row:hover {
         cursor: pointer;
       }

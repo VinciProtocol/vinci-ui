@@ -18,13 +18,7 @@ const Supplies: FC = () => {
       padding: theme.spacing(3),
     }))
   )
-  const ROOT = useMemoEmpty(
-    () => styled(Paper)`
-      .basic-table {
-        min-height: 260px;
-      }
-    `
-  )
+  const ROOT = useMemoEmpty(() => styled(Paper)``)
 
   return (
     <ROOT variant="card">

@@ -1,5 +1,6 @@
 import type { FC } from 'react'
 import { useMemo } from 'react'
+import clsx from 'clsx'
 import { styled } from '@mui/material/styles'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
@@ -32,7 +33,9 @@ const PCTable: FC<BasicTableProps> = (props) => {
         data.map((row, rowIndex) => (
           <TableRow
             key={rowIndex}
-            className="ReactVirtualized__Table__row"
+            className={clsx(['ReactVirtualized__Table__row'], {
+              'end-row': data.length - 1 === rowIndex,
+            })}
             onClick={(e) =>
               onRowClick &&
               onRowClick({
@@ -83,9 +86,6 @@ const PCTable: FC<BasicTableProps> = (props) => {
 export const ROOT = styled('div')`
   height: 100%;
   width: 100%;
-  .MuiTable-root {
-    padding-bottom: 16px;
-  }
   .MuiTable-root,
   .MuiTableHead-root,
   .MuiTableBody-root {
@@ -114,6 +114,11 @@ export const ROOT = styled('div')`
         backgroundColor: theme.palette.background.papers.primary,
         cursor: 'pointer',
       })}
+    }
+    &.end-row {
+      .MuiTableCell-root {
+        border-bottom: unset;
+      }
     }
   }
 `

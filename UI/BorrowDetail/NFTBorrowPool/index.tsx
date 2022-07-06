@@ -11,13 +11,7 @@ import TabTitle from './tabs/TabTitle'
 import TabContent from './tabs/TabContent'
 
 const NFTBorrowPool: FC = () => {
-  const ROOT = useMemoEmpty(
-    () => styled(Paper)`
-      .basic-table {
-        min-height: 438px;
-      }
-    `
-  )
+  const ROOT = useMemoEmpty(() => styled(Paper)``)
   const router = useRouter()
   const {
     pages: {

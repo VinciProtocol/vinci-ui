@@ -1,5 +1,6 @@
 import type { FC } from 'react'
 import { useMemo, Fragment, useState } from 'react'
+import clsx from 'clsx'
 import { styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Collapse from '@mui/material/Collapse'
@@ -20,6 +21,7 @@ const columnsPrimaryNumber = 2
 
 type CollapsibleHeadProps = Pick<BasicTableProps, 'columns'>
 type CollapsibleRowProps = Pick<BasicTableProps, 'columns'> & {
+  data: any[]
   row: any
   rowIndex: any
 }
@@ -59,14 +61,19 @@ const CollapsibleHead: FC<CollapsibleHeadProps> = (props) => {
 }
 const CollapsibleRow: FC<CollapsibleRowProps> = (props) => {
   const [open, setOpen] = useState(false)
-  const { columns, row, rowIndex } = props
+  const { columns, row, rowIndex, data } = props
 
   const columnsPrimary = columns.slice(0, columnsPrimaryNumber)
   const columnsSecondary = columns.slice(columnsPrimaryNumber)
 
   return (
     <Fragment>
-      <TableRow className="ReactVirtualized__Table__row" onClick={() => setOpen(!open)}>
+      <TableRow
+        className={clsx(['ReactVirtualized__Table__row'], {
+          'end-row': data.length - 1 === rowIndex,
+        })}
+        onClick={() => setOpen(!open)}
+      >
         <td
           className="ReactVirtualized__Table__rowColumn"
           role="gridcell"
@@ -112,7 +119,7 @@ const CollapsibleRow: FC<CollapsibleRowProps> = (props) => {
               overflow: 'hidden',
               flex: 1,
             },
-            { borderBottom: 1, borderColor: 'divider' },
+            data.length - 1 != rowIndex && { borderBottom: 1, borderColor: 'divider' },
           ]}
         >
           <Collapse in={open} timeout="auto" unmountOnExit>
@@ -160,6 +167,7 @@ const MobileTable: FC<BasicTableProps> = (props) => {
           <CollapsibleRow
             key={rowIndex}
             {...{
+              data,
               row,
               rowIndex,
               columns,
@@ -184,9 +192,6 @@ const MobileTable: FC<BasicTableProps> = (props) => {
 export const ROOT = styled('div')`
   height: 100%;
   width: 100%;
-  .MuiTable-root {
-    padding-bottom: 16px;
-  }
   .MuiTable-root,
   .MuiTableHead-root,
   .MuiTableBody-root {
@@ -239,6 +244,11 @@ export const ROOT = styled('div')`
   .ReactVirtualized__Table__row {
     display: flex;
     will-change: transform;
+    &.end-row {
+      .MuiTableCell-root {
+        border-bottom: unset;
+      }
+    }
   }
 `
 
