@@ -6,7 +6,9 @@ import Stack from '@mui/material/Stack'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import PageTitle from 'UI/Layout/components/PageTitle'
+
 import NFTCollateralCollections from './NFTCollateralCollections'
+import TVL from './TVL'
 
 const Borrow: FC = () => {
   const { t } = useTranslation('borrow')
@@ -20,6 +22,7 @@ const Borrow: FC = () => {
     <Content>
       <Stack spacing={2}>
         <PageTitle title={t('title')} subTitle={t('subTitle')} />
+        <TVL />
         <NFTCollateralCollections />
       </Stack>
     </Content>

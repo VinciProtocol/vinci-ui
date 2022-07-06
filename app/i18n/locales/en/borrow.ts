@@ -1,6 +1,10 @@
 const locale = {
   title: 'Borrow',
   subTitle: 'Deposit your NFTs as collateral to take out loans',
+  TVL: {
+    totalCollateralledValue: 'Total Collateralled Value',
+    totalBorrowed: 'Total Borrowed',
+  },
   NFTCollateralCollections: {
     title: 'NFT Collections',
     collection: 'Collection',
