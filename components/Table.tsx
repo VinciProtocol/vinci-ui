@@ -13,6 +13,7 @@ import NumberDisplay from 'components/math/NumberDisplay'
 import type { FC } from 'react'
 import { useTranslation } from 'next-i18next'
 import HealthFactor from './HealthFactor'
+import { valueToBigNumber } from 'utils/math'
 
 export const BalanceCellRenderer: TableCellRenderer = ({ rowData, cellData, dataKey }) => {
   return (
@@ -96,6 +97,7 @@ const TotalLockedNFTTooltip: FC = (props) => {
 }
 
 export const totalLockedNFTCellRenderer: TableCellRenderer = ({ cellData, rowData }) => {
+  cellData = valueToBigNumber(cellData).toNumber()
   if (cellData > 0) {
     return (
       <TableCell align="center" component="div">
@@ -242,20 +244,6 @@ export const NumberDisplayCellRenderer: TableCellRenderer = ({ cellData }) => {
   return (
     <TableCell align="center" component="div">
       <NumberDisplay value={cellData} options="number" />
-    </TableCell>
-  )
-}
-export const ActiveCollateralsCellRenderer: TableCellRenderer = ({ cellData, rowData }) => {
-  return (
-    <TableCell align="center" component="div">
-      <Stack spacing={1}>
-        <Typography variant="body2">
-          <NumberDisplay value={cellData} options="number" />
-        </Typography>
-        <Typography component="p" variant="caption" color={grey[500]}>
-          <NumberDisplay value={rowData['totalCollateralledValueInUSD']} options="USD" />
-        </Typography>
-      </Stack>
     </TableCell>
   )
 }

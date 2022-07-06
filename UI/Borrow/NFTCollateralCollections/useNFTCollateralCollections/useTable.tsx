@@ -15,7 +15,7 @@ import {
   collectionCellRenderer,
   BalanceCellRenderer,
   leftHeaderRenderer,
-  ActiveCollateralsCellRenderer,
+  totalLockedNFTCellRenderer,
   PercentCellRenderer,
   headerRenderer,
 } from 'components/Table'
@@ -88,7 +88,7 @@ export const useTable = (): BasicTableProps => {
             dataKey: 'activeCollaterals',
             width: 150,
             headerRenderer: leftHeaderRenderer,
-            cellRenderer: ActiveCollateralsCellRenderer,
+            cellRenderer: totalLockedNFTCellRenderer,
           },
           {
             dataKey: 'availableToBorrow',
