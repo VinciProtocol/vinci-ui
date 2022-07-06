@@ -1,6 +1,9 @@
 const locale = {
+  title: 'Lend',
+  subTitle: 'Provide liquidity to lending pools and earn yields',
   TVL: {
-    totalValueLocked: 'Total Value Locked',
+    totalSupply: 'Total Supply',
+    // totalValueLocked: 'Total Value Locked',
   },
   lendingPools: {
     title: 'Lending Pools',

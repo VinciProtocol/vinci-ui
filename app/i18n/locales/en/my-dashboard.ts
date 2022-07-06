@@ -1,4 +1,6 @@
 const locale = {
+  title: 'Dashboard',
+  subTitle: 'View the protocol stats and all your positions',
   common: {
     noOpenPosition: 'No Open Position',
   },

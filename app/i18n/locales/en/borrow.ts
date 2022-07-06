@@ -1,4 +1,6 @@
 const locale = {
+  title: 'Borrow',
+  subTitle: 'Deposit your NFTs as collateral to take out loans',
   NFTCollateralCollections: {
     title: 'NFT Collections',
     collection: 'Collection',
