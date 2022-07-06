@@ -8,12 +8,10 @@ import TableCell from '@mui/material/TableCell'
 
 import type { TableColumnsProps, BasicTableProps } from 'lib/table/BasicTable/types'
 import { TabValue } from 'app/Dialogs/constants'
-import { useWallet } from 'app/wallet'
 import {
   leftHeaderRenderer,
   symbolCellRenderer,
   headerRenderer,
-  BalanceCellRenderer,
   PercentCellRenderer,
   ETHCellRenderer,
 } from 'components/Table'
@@ -21,7 +19,6 @@ import { useDialogs, useContractData } from 'domains'
 
 export const useTable = (): BasicTableProps => {
   const { t } = useTranslation()
-  const { networkAccount: account } = useWallet()
 
   const { actions } = useDialogs()
   const { generalAssets } = useContractData()
@@ -100,13 +97,6 @@ export const useTable = (): BasicTableProps => {
             cellRenderer: PercentCellRenderer,
           },
           {
-            dataKey: 'walletBalance',
-            width: 200,
-            hide: !account,
-            headerRenderer: leftHeaderRenderer,
-            cellRenderer: BalanceCellRenderer,
-          },
-          {
             dataKey: 'functionButtons',
             width: 250,
             headerRenderer: leftHeaderRenderer,
@@ -124,7 +114,7 @@ export const useTable = (): BasicTableProps => {
           return column
         }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [t, account]
+    [t]
   )
 
   return {
