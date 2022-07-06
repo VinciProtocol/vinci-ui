@@ -5,4 +5,5 @@ export class TVLProps {}
 export class TVLItemProps {
   title: string
   value: ReactNode
+  icon: ReactNode
 }
