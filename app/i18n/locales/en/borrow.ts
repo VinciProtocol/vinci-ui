@@ -11,8 +11,9 @@ const locale = {
     currentFloorPrice: 'Floor Price',
     totalCollateralledValue: 'Total Collateral Value',
     activeCollaterals: 'Active Collaterals',
-    totalBorrowed: 'Total Borrowed',
+    // totalBorrowed: 'Total Borrowed',
     availableToBorrow: 'Available to Borrow',
+    borrowAPY: 'borrow APY',
     functionButtons: 'Actions',
     actions: {
       depositNFT: 'Deposit NFT',

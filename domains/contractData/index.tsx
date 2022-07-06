@@ -348,6 +348,7 @@ const useContractDataService = () => {
         totalBorrowBalanceInUSD,
         totalAvailableToBorrowInUSD,
         totalUserAvailableToBorrowInUSD,
+        borrowAPY,
       } = info
 
       generalAssetsMap[k].nftVaults.forEach(
@@ -439,6 +440,7 @@ const useContractDataService = () => {
             name,
             lockActionExpiration: lockActionExpiration * 1000,
             reserves,
+            borrowAPY,
           }
 
           nftAssets.push(nft)
@@ -449,7 +451,6 @@ const useContractDataService = () => {
 
       const {
         APY,
-        borrowAPY,
         supplyBalanceInUSD,
         borrowBalanceInUSD,
         totalValueLockedInUSD,

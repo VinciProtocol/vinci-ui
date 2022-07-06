@@ -16,6 +16,8 @@ import {
   BalanceCellRenderer,
   leftHeaderRenderer,
   ActiveCollateralsCellRenderer,
+  PercentCellRenderer,
+  headerRenderer,
 } from 'components/Table'
 import { safeGet } from 'utils/get'
 
@@ -89,16 +91,16 @@ export const useTable = (): BasicTableProps => {
             cellRenderer: ActiveCollateralsCellRenderer,
           },
           {
-            dataKey: 'totalBorrowed',
+            dataKey: 'availableToBorrow',
             width: 200,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: BalanceCellRenderer,
           },
           {
-            dataKey: 'availableToBorrow',
+            dataKey: 'borrowAPY',
             width: 200,
-            headerRenderer: leftHeaderRenderer,
-            cellRenderer: BalanceCellRenderer,
+            headerRenderer,
+            cellRenderer: PercentCellRenderer,
           },
           {
             dataKey: 'functionButtons',
