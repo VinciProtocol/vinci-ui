@@ -20,19 +20,25 @@ const Dashboard: FC = () => {
     }))
   )
 
+  const ContentItem = useMemoEmpty(() =>
+    styled(Stack)(({ theme }) => ({
+      width: `calc(50% - ${theme.spacing(1)})`,
+    }))
+  )
+
   return (
     <Content>
       <Stack spacing={2}>
         <PageTitle title={t('title')} subTitle={t('subTitle')} />
         <Stack spacing={2} direction="row">
-          <Stack spacing={2}>
+          <ContentItem spacing={2}>
             <TVL />
             <Supplies />
-          </Stack>
-          <Stack spacing={2}>
+          </ContentItem>
+          <ContentItem spacing={2}>
             <NetAPY />
             <Loans />
-          </Stack>
+          </ContentItem>
         </Stack>
       </Stack>
     </Content>

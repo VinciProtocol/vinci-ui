@@ -29,7 +29,7 @@ export const useTable = (): BasicTableProps => {
     ({ rowData }) => {
       return (
         <TableCell component="div">
-          <Stack spacing={2} direction="row">
+          <Stack spacing={1} direction="row">
             <Button
               variant="outlined"
               size="small"
@@ -70,27 +70,21 @@ export const useTable = (): BasicTableProps => {
         [
           {
             dataKey: 'symbol',
-            width: 250,
+            width: 220,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: symbolCellRenderer,
           },
           {
+            dataKey: 'underlyingBalance',
+            width: 200,
+            headerRenderer: leftHeaderRenderer,
+            cellRenderer: BalanceCellRenderer,
+          },
+          {
             dataKey: 'APY',
-            width: 250,
+            width: 180,
             headerRenderer,
             cellRenderer: PercentCellRenderer,
-          },
-          {
-            dataKey: 'underlyingBalance',
-            width: 250,
-            headerRenderer: leftHeaderRenderer,
-            cellRenderer: BalanceCellRenderer,
-          },
-          {
-            dataKey: 'walletBalance',
-            width: 250,
-            headerRenderer: leftHeaderRenderer,
-            cellRenderer: BalanceCellRenderer,
           },
           {
             dataKey: 'functionButtons',
