@@ -5,7 +5,6 @@ import type { EthereumTransactionTypeExtended, transactionType } from '../common
 import { eEthereumTxType, ProtocolAction } from '../commons/types'
 import { CryptoPunksContract } from '../crypto-punks'
 import type {
-  LPDepositAndLockNFTParamsType,
   LPDepositNFTParamsType,
   LPWithdrawNFTParamsType,
 } from '../lending-pool/lendingPoolTypes'
@@ -26,7 +25,6 @@ export class WPUNKSGatewayService extends BaseService<IWPUNKSGateway> {
     this.cryptoPunksContract = new CryptoPunksContract(provider)
 
     this.depositPUNKS = this.depositPUNKS.bind(this)
-    this.depositAndLockPUNKS = this.depositAndLockPUNKS.bind(this)
     this.withdrawPUNKS = this.withdrawPUNKS.bind(this)
   }
 
@@ -68,59 +66,6 @@ export class WPUNKSGatewayService extends BaseService<IWPUNKSGateway> {
           tokenIds,
           amounts,
           onBehalfOf ?? user,
-          referralCode ?? '0'
-        ),
-      from: user,
-    })
-
-    txs.push({
-      tx: txCallback,
-      txType: eEthereumTxType.DLP_ACTION,
-      gas: this.generateTxPriceEstimation([], txCallback),
-    })
-
-    return txs
-  }
-
-  public async depositAndLockPUNKS({
-    lendingPoolAddress,
-    user,
-    nft,
-    tokenIds,
-    amounts,
-    onBehalfOf,
-    lockType,
-    referralCode,
-  }: LPDepositAndLockNFTParamsType): Promise<EthereumTransactionTypeExtended[]> {
-    const txs: EthereumTransactionTypeExtended[] = []
-    const tokenId = tokenIds[0]
-    const wPunksGatewayAddress = this.wPunksGatewayAddress
-    const approveProps = {
-      user,
-      spender: wPunksGatewayAddress,
-      token: nft,
-      tokenId,
-    }
-
-    if (!(await this.cryptoPunksContract.isApproved(approveProps))) {
-      const approveTx = this.cryptoPunksContract.approve({
-        punkIndex: tokenId,
-        wPunksGatewayAddress,
-        user,
-        token: nft,
-      })
-      txs.push(approveTx)
-    }
-
-    const wPunksGatewayContract: IWPUNKSGateway = this.getContractInstance(wPunksGatewayAddress)
-    const txCallback: () => Promise<transactionType> = this.generateTxCallback({
-      rawTxMethod: async () =>
-        wPunksGatewayContract.populateTransaction.depositAndLockPUNKS(
-          lendingPoolAddress,
-          tokenIds,
-          amounts,
-          onBehalfOf ?? user,
-          lockType,
           referralCode ?? '0'
         ),
       from: user,

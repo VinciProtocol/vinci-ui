@@ -29,7 +29,7 @@ const DepositTabpanel = withTabPanel(
     )
     const { TabPanel } = props
     const {
-      nft: { lendingPoolAddress, underlyingAsset },
+      nft: { lendingPoolAddress, underlyingAsset, walletUnderlyingAsset, nTokenAddress },
       userNFT: { data, totalValuation },
     } = useContractNFT()
     const {
@@ -38,6 +38,7 @@ const DepositTabpanel = withTabPanel(
     } = useControllers()
 
     const { networkAccount: account } = useWallet()
+    const isPunks = useMemo(() => !!walletUnderlyingAsset, [walletUnderlyingAsset])
 
     const action = {
       name: 'Withdraw',
@@ -46,9 +47,10 @@ const DepositTabpanel = withTabPanel(
           .post({
             lendingPoolAddress,
             user: account,
-            nft: underlyingAsset,
+            nft: isPunks ? nTokenAddress : underlyingAsset,
             tokenIds: [id],
             amounts: ['1'],
+            isPunks,
           })
           .then(() => {
             reservesData.restart()
@@ -98,7 +100,7 @@ const DepositTabpanel = withTabPanel(
                   .post({
                     lendingPoolAddress,
                     user: account,
-                    nft: underlyingAsset,
+                    nft: isPunks ? nTokenAddress : underlyingAsset,
                     tokenIds: Array.from(s.values()),
                     amounts: (() => {
                       const list = []
@@ -107,6 +109,7 @@ const DepositTabpanel = withTabPanel(
                       }
                       return list
                     })(),
+                    isPunks,
                   })
                   .then(() => {
                     s.clear()
@@ -119,7 +122,7 @@ const DepositTabpanel = withTabPanel(
           </Stack>
         ),
       }),
-      [account, lendingPoolAddress, size, t, totalValuation, underlyingAsset, withdrawNFT]
+      [account, isPunks, lendingPoolAddress, nTokenAddress, size, t, totalValuation, underlyingAsset, withdrawNFT]
     )
 
     return (

@@ -17,7 +17,6 @@ import { WETHGatewayService } from '../wethgateway-contract'
 import { WPUNKSGatewayService } from '../wpunksGateway'
 import type {
   LPBorrowParamsType,
-  LPDepositAndLockNFTParamsType,
   LPDepositNFTParamsType,
   LPDepositParamsType,
   LPRepayParamsType,
@@ -333,94 +332,10 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
     return txs
   }
 
-  public async depositNFT({
-    lendingPoolAddress,
-    user,
-    nft,
-    tokenIds,
-    amounts,
-    onBehalfOf,
-    referralCode,
-  }: LPDepositNFTParamsType): Promise<EthereumTransactionTypeExtended[]> {
-    const lendingPoolContract: ILendingPool = this.getContractInstance(lendingPoolAddress)
-    const txs: EthereumTransactionTypeExtended[] = []
-    if (tokenIds.length > 1) {
-      const { setApprovalForAll, isApprovedForAll } = this.erc721Service
-      const approveProps = {
-        user,
-        spender: lendingPoolAddress,
-        token: nft,
-        value: true,
-      }
-
-      const approved = await isApprovedForAll(approveProps)
-      if (!approved) {
-        const approveTx: EthereumTransactionTypeExtended = setApprovalForAll(approveProps)[0]
-        txs.push(approveTx)
-      }
-      const txCallback: () => Promise<transactionType> = this.generateTxCallback({
-        rawTxMethod: async () =>
-          lendingPoolContract.populateTransaction.depositNFT(
-            nft,
-            tokenIds,
-            amounts,
-            onBehalfOf ?? user,
-            referralCode ?? '0'
-          ),
-        from: user,
-        value: getTxValue(nft, tokenIds.length + ''),
-      })
-
-      txs.push({
-        tx: txCallback,
-        txType: eEthereumTxType.DLP_ACTION,
-        gas: this.generateTxPriceEstimation(txs, txCallback, ProtocolAction.deposit),
-      })
-    } else {
-      const amount = amounts[0]
-      const tokenId = tokenIds[0]
-      const { approve, isApproved } = this.erc721Service
-
-      const approveProps = {
-        user,
-        spender: lendingPoolAddress,
-        token: nft,
-        tokenId,
-      }
-
-      const approved = await isApproved(approveProps)
-      if (!approved) {
-        const approveTx: EthereumTransactionTypeExtended = approve(approveProps)
-        txs.push(approveTx)
-      }
-
-      const txCallback: () => Promise<transactionType> = this.generateTxCallback({
-        rawTxMethod: async () =>
-          lendingPoolContract.populateTransaction.depositNFT(
-            nft,
-            [tokenId],
-            [amount],
-            onBehalfOf ?? user,
-            referralCode ?? '0'
-          ),
-        from: user,
-        value: getTxValue(nft, amount),
-      })
-
-      txs.push({
-        tx: txCallback,
-        txType: eEthereumTxType.DLP_ACTION,
-        gas: this.generateTxPriceEstimation(txs, txCallback, ProtocolAction.deposit),
-      })
-    }
-
-    return txs
-  }
-
-  public async depositAndLockNFT(payload: LPDepositAndLockNFTParamsType): Promise<EthereumTransactionTypeExtended[]> {
-    const { lendingPoolAddress, user, nft, tokenIds, amounts, onBehalfOf, lockType, referralCode, isPunks } = payload
+  public async depositNFT(payload: LPDepositNFTParamsType): Promise<EthereumTransactionTypeExtended[]> {
+    const { lendingPoolAddress, user, nft, tokenIds, amounts, onBehalfOf, referralCode, isPunks } = payload
     if (isPunks) {
-      return this.wPUNKSGatewayService.depositAndLockPUNKS(payload)
+      return this.wPUNKSGatewayService.depositPUNKS(payload)
     }
 
     const lendingPoolContract: ILendingPool = this.getContractInstance(lendingPoolAddress)
@@ -441,12 +356,11 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
       }
       const txCallback: () => Promise<transactionType> = this.generateTxCallback({
         rawTxMethod: async () =>
-          lendingPoolContract.populateTransaction.depositAndLockNFT(
+          lendingPoolContract.populateTransaction.depositNFT(
             nft,
             tokenIds,
             amounts,
             onBehalfOf ?? user,
-            lockType,
             referralCode ?? '0'
           ),
         from: user,
@@ -478,12 +392,11 @@ export class LendingPoolContract extends BaseService<ILendingPool> implements Le
 
       const txCallback: () => Promise<transactionType> = this.generateTxCallback({
         rawTxMethod: async () =>
-          lendingPoolContract.populateTransaction.depositAndLockNFT(
+          lendingPoolContract.populateTransaction.depositNFT(
             nft,
             [tokenId],
             [amount],
             onBehalfOf ?? user,
-            lockType,
             referralCode ?? '0'
           ),
         from: user,

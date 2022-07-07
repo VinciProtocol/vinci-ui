@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { useCallback, useEffect, useMemo, useRef, useState, Fragment } from 'react'
+import { useEffect, useMemo, useRef, useState, Fragment } from 'react'
 import { useTranslation } from 'next-i18next'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
@@ -28,7 +28,7 @@ const WalletTabpanel = withTabPanel(
     )
     const { TabPanel } = props
     const {
-      nft: { lendingPoolAddress, underlyingAsset },
+      nft: { lendingPoolAddress, underlyingAsset, walletUnderlyingAsset },
       walletNFT: { data, totalValuation },
     } = useContractNFT()
     const {
@@ -37,6 +37,12 @@ const WalletTabpanel = withTabPanel(
       erc721: { setApprovalForAll, isApprovedForAll },
     } = useControllers()
     const { networkAccount: account } = useWallet()
+    const isPunks = useMemo(() => !!walletUnderlyingAsset, [walletUnderlyingAsset])
+    const nft = useMemo(
+      () => (isPunks ? walletUnderlyingAsset : underlyingAsset),
+      [isPunks, underlyingAsset, walletUnderlyingAsset]
+    )
+    const displayCheckBox = useMemo(() => !isPunks, [isPunks])
 
     const action = {
       name: 'Deposit',
@@ -45,9 +51,10 @@ const WalletTabpanel = withTabPanel(
           .post({
             lendingPoolAddress,
             user: account,
-            nft: underlyingAsset,
+            nft,
             tokenIds: [id],
             amounts: ['1'],
+            isPunks,
           })
           .then(() => {
             reservesData.restart()
@@ -68,18 +75,22 @@ const WalletTabpanel = withTabPanel(
     const setRef = useRef<Set<string>>(new Set())
     const [size, setSize] = useState(0)
     const [disabled, setDisabled] = useState(false)
-    const onCheckChange = useCallback((id: string, value: boolean) => {
-      const s = setRef.current
-      if (value) {
-        s.add(id)
-      } else {
-        s.delete(id)
+    const onCheckChange = useMemo(() => {
+      if (!displayCheckBox) return
+      return (id: string, value: boolean) => {
+        const s = setRef.current
+        if (value) {
+          s.add(id)
+        } else {
+          s.delete(id)
+        }
+        setSize(s.size)
       }
-      setSize(s.size)
-    }, [])
+    }, [displayCheckBox])
     const approveAllDisabled = useMemo(() => disabled, [disabled])
 
     useEffect(() => {
+      if (!displayCheckBox) return
       if (!lendingPoolAddress || !underlyingAsset) return
       isApprovedForAll({
         user: account,
@@ -88,7 +99,7 @@ const WalletTabpanel = withTabPanel(
       }).then((data) => {
         setDisabled(data)
       })
-    }, [account, isApprovedForAll, lendingPoolAddress, underlyingAsset])
+    }, [account, displayCheckBox, isApprovedForAll, lendingPoolAddress, underlyingAsset])
 
     const title = useMemo(
       () => ({
@@ -100,7 +111,7 @@ const WalletTabpanel = withTabPanel(
             </Stack>
           </Typography>
         ),
-        actions: (
+        actions: displayCheckBox ? (
           <Stack spacing={2} direction="row">
             <Button
               variant="outlined"
@@ -132,7 +143,7 @@ const WalletTabpanel = withTabPanel(
                   .post({
                     lendingPoolAddress,
                     user: account,
-                    nft: underlyingAsset,
+                    nft,
                     tokenIds: Array.from(s.values()),
                     amounts: (() => {
                       const list = []
@@ -141,6 +152,7 @@ const WalletTabpanel = withTabPanel(
                       }
                       return list
                     })(),
+                    isPunks,
                   })
                   .then(() => {
                     s.clear()
@@ -152,13 +164,18 @@ const WalletTabpanel = withTabPanel(
               {t('borrow-detail:NFT.depositSelected')}
             </Button>
           </Stack>
+        ) : (
+          <div />
         ),
       }),
       [
         account,
         approveAllDisabled,
         depositNFT,
+        displayCheckBox,
+        isPunks,
         lendingPoolAddress,
+        nft,
         setApprovalForAll,
         size,
         t,

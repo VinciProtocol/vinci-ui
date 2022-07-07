@@ -21,17 +21,6 @@ export type LPDepositNFTParamsType = {
   amounts: string[]
   onBehalfOf?: tEthereumAddress
   referralCode?: string
-}
-
-export type LPDepositAndLockNFTParamsType = {
-  lendingPoolAddress: tEthereumAddress
-  user: tEthereumAddress
-  nft: tEthereumAddress
-  tokenIds: string[]
-  amounts: string[]
-  lockType: string
-  onBehalfOf?: tEthereumAddress
-  referralCode?: string
 } & SpecialNFTs
 
 export type LPWithdrawParamsType = {
