@@ -47,7 +47,7 @@ const useContractNFTService = () => {
 
   const userNFTInfo = useNFTInfo(nft.userNFTVault)
   const userNFT = useMemo(() => {
-    if (!nft.underlyingAsset || !userNFTInfo || !nft.userNFTVault) return { data: [], lockedData: [] } as undefined
+    if (!nft.underlyingAsset || !userNFTInfo || !nft.userNFTVault) return { data: [] } as undefined
 
     const nftLocksMap = (nft.userNFTVault.tokenIds as any[]).reduce((obj, tokenId, index) => {
       obj[tokenId] = {
@@ -65,22 +65,10 @@ const useContractNFTService = () => {
           currentFloorPriceInUSD: nft.currentFloorPriceInUSD,
         }
       })
-    const lockedData = userNFTInfo
-      .filter((info) => safeGet(() => nftLocksMap[info.id].expiration))
-      .map((info) => {
-        return {
-          ...info,
-          currentFloorPrice: nft.currentFloorPrice,
-          currentFloorPriceInUSD: nft.currentFloorPriceInUSD,
-          lock: nftLocksMap[info.id],
-        }
-      })
 
     const returnValue = {
       data,
-      lockedData,
       totalValuation: nft.currentFloorPrice.multipliedBy(data.length),
-      totalValuationLocked: nft.currentFloorPrice.multipliedBy(lockedData.length),
     }
     log('[domains] [userNFT]', returnValue)
     return returnValue

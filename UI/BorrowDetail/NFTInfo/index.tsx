@@ -65,7 +65,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
           <Stack spacing={1} direction="row">
             <NFTIcon NFT_ID={nft.NFT_ID} sx={{ width: '50px', height: '50px' }} />
             <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
-              {nft.name}
+              {nft. collection}
             </Typography>
           </Stack>
           {market && (
@@ -83,7 +83,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
           <Stack spacing={1} direction="row">
             <NFTIcon NFT_ID={nft.NFT_ID} sx={{ width: '50px', height: '50px' }} />
             <Typography variant="h5" component="div" sx={{ lineHeight: '50px' }}>
-              {nft.name}
+              {nft. collection}
             </Typography>
           </Stack>
         </Title>
