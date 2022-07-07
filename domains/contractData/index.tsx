@@ -290,6 +290,7 @@ const useContractDataService = () => {
       supplyBalanceInUSD: valueToBigNumber(0),
       supplyBalance: valueToBigNumber(0),
       netAPY: valueToBigNumber(0),
+      TVL: valueToBigNumber(0),
       borrowBalanceInUSD: valueToBigNumber(0),
       borrowBalance: valueToBigNumber(0),
       totalValueLockedInUSD: valueToBigNumber(0),
@@ -308,8 +309,8 @@ const useContractDataService = () => {
         totalBorrowBalanceInUSD: valueToBigNumber(0),
         supplyBalanceInUSD: valueToBigNumber(0),
         borrowBalanceInUSD: valueToBigNumber(0),
-        APY: valueToBigNumber(0),
-        borrowAPY: valueToBigNumber(0),
+        depositAPYSum: valueToBigNumber(0),
+        borrowAPYSum: valueToBigNumber(0),
         supplyBalance: valueToBigNumber(0),
         borrowBalance: valueToBigNumber(0),
         totalValueLocked: valueToBigNumber(0),
@@ -334,13 +335,15 @@ const useContractDataService = () => {
           info.totalUserAvailableToBorrowInUSD = info.totalUserAvailableToBorrowInUSD.plus(availableToBorrowInUSD)
           info.totalBorrowBalanceInUSD = info.totalBorrowBalanceInUSD.plus(borrowBalanceInUSD)
           info.supplyBalanceInUSD = info.supplyBalanceInUSD.plus(underlyingBalanceInUSD || 0)
-          info.supplyBalance = info.supplyBalance.plus(valueToBigNumber(underlyingBalanceInUSD || 0).div(priceInUSD))
+          const supplyBalance = valueToBigNumber(underlyingBalanceInUSD || 0).div(priceInUSD)
+          info.supplyBalance = info.supplyBalance.plus(supplyBalance)
           info.borrowBalanceInUSD = info.borrowBalanceInUSD.plus(borrowBalanceInUSD)
-          info.borrowBalance = info.borrowBalance.plus(valueToBigNumber(borrowBalanceInUSD || 0).div(priceInUSD))
+          const borrowBalance = valueToBigNumber(borrowBalanceInUSD || 0).div(priceInUSD)
+          info.borrowBalance = info.borrowBalance.plus(borrowBalance)
           // info.totalAvailableToBorrow = info.totalAvailableToBorrow.plus(totalAvailableToBorrow)
           info.totalAvailableToBorrowInUSD = info.totalAvailableToBorrowInUSD.plus(totalAvailableToBorrowInUSD)
-          info.APY = APY
-          info.borrowAPY = borrowAPY
+          info.depositAPYSum = info.depositAPYSum.plus(supplyBalance.multipliedBy(APY))
+          info.borrowAPYSum = info.borrowAPYSum.plus(borrowBalance.multipliedBy(borrowAPY))
         }
       )
       const {
@@ -348,7 +351,6 @@ const useContractDataService = () => {
         totalBorrowBalanceInUSD,
         totalAvailableToBorrowInUSD,
         totalUserAvailableToBorrowInUSD,
-        borrowAPY,
       } = info
 
       generalAssetsMap[k].nftVaults.forEach(
@@ -426,8 +428,8 @@ const useContractDataService = () => {
             nTokenUnderlyingAsset: nftSetting.nToken,
             currentFloorPrice: nftPriceInUSD.div(currencyPriceInUSD),
             currentFloorPriceInUSD: nftPriceInUSD,
-            totalCollateralledValue: totalCollateralledValueInUSD.div(currencyPriceInUSD),
             activeCollaterals: totalNumberOfCollateral,
+            totalCollateralledValue: totalCollateralledValueInUSD.div(currencyPriceInUSD),
             totalCollateralledValueInUSD,
             totalBorrowed: totalBorrowedInUSD.div(currencyPriceInUSD),
             totalBorrowedInUSD,
@@ -440,7 +442,6 @@ const useContractDataService = () => {
             name,
             lockActionExpiration: lockActionExpiration * 1000,
             reserves,
-            borrowAPY,
           }
 
           nftAssets.push(nft)
@@ -450,7 +451,6 @@ const useContractDataService = () => {
       )
 
       const {
-        APY,
         supplyBalanceInUSD,
         borrowBalanceInUSD,
         totalValueLockedInUSD,
@@ -459,11 +459,13 @@ const useContractDataService = () => {
         totalValueLocked,
         totalBorrowed,
         totalCollateralledValue,
+        depositAPYSum,
+        borrowAPYSum,
       } = info
-      const total = supplyBalanceInUSD.plus(borrowBalanceInUSD)
-      const netAPY = total.eq(0)
-        ? 0
-        : supplyBalanceInUSD.multipliedBy(APY).minus(borrowBalanceInUSD.multipliedBy(borrowAPY)).div(total)
+      const total = supplyBalance.plus(borrowBalance)
+      if (!total.eq(0)) {
+        dashboard.netAPY = total.eq(0) ? valueToBigNumber(0) : depositAPYSum.minus(borrowAPYSum).div(total)
+      }
 
       dashboard.borrowBalanceInUSD = dashboard.borrowBalanceInUSD.plus(borrowBalanceInUSD)
       dashboard.supplyBalanceInUSD = dashboard.supplyBalanceInUSD.plus(supplyBalanceInUSD)
@@ -473,7 +475,7 @@ const useContractDataService = () => {
       dashboard.totalBorrowed = dashboard.totalBorrowed.plus(totalBorrowed)
       dashboard.totalValueLocked = dashboard.totalValueLocked.plus(totalValueLocked)
       dashboard.totalCollateralledValue = dashboard.totalCollateralledValue.plus(totalCollateralledValue)
-      dashboard.netAPY = dashboard.netAPY.plus(netAPY)
+      dashboard.TVL = dashboard.totalBorrowed.plus(dashboard.supplyBalance).plus(dashboard.totalCollateralledValue)
 
       return nftAssets
     }, [])

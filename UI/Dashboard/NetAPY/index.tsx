@@ -7,16 +7,16 @@ import Table from '@mui/material/Table'
 import TableRow from '@mui/material/TableRow'
 import TableCell from '@mui/material/TableCell'
 import Typography from '@mui/material/Typography'
-import LockTwoTone from '@mui/icons-material/LockTwoTone'
+import InsertChartTwoTone from '@mui/icons-material/InsertChartTwoTone'
 import { useTheme } from '@mui/material/styles'
 import { useContractData } from 'domains'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import NumberDisplay from 'components/math/NumberDisplay'
-import TVLItem from './TVLItem'
-import type { TVLProps } from './types'
+import NetAPYItem from './NetAPYItem'
+import type { NetAPYProps } from './types'
 
-const TVL: FC<TVLProps> = () => {
+const NetAPY: FC<NetAPYProps> = () => {
   const { t } = useTranslation('my-dashboard')
   const theme = useTheme()
   const ROOT = useMemoEmpty(() =>
@@ -47,35 +47,41 @@ const TVL: FC<TVLProps> = () => {
   const TitleTableCell: FC<{
     title: string
     value: any
-  }> = ({ title, value }) => (
-    <Fragment>
-      <TableCell>
-        <SubTitle>{t(`TVL.${title}`)}</SubTitle>
-      </TableCell>
-      <TableCell>
-        <Typography variant="h6" color={theme.palette.grey[500]}>
-          <NumberDisplay
-            sx={{
-              width: '1.125rem',
-              height: '1.125rem',
-            }}
-            value={value}
-            type="network"
-          />
-        </Typography>
-      </TableCell>
-    </Fragment>
-  )
+    isPercent?: boolean
+  }> = ({ title, value, isPercent }) => {
+    const type = isPercent ? '' : 'network'
+    const options = isPercent ? 'percent' : 'number'
+    return (
+      <Fragment>
+        <TableCell>
+          <SubTitle>{t(`NetAPY.${title}`)}</SubTitle>
+        </TableCell>
+        <TableCell>
+          <Typography variant="h6" color={theme.palette.grey[500]}>
+            <NumberDisplay
+              sx={{
+                width: '1.125rem',
+                height: '1.125rem',
+              }}
+              value={value}
+              type={type}
+              options={options}
+            />
+          </Typography>
+        </TableCell>
+      </Fragment>
+    )
+  }
 
   const { dashboard } = useContractData()
 
   return (
     <ROOT direction="row" spacing={2}>
-      <TVLItem>
+      <NetAPYItem>
         <Title>
           <Stack spacing={1} direction="row">
-            <LockTwoTone color="primary" />
-            <span>{t('TVL.totalValueLocked')}</span>
+            <InsertChartTwoTone color="primary" />
+            <span>{t('NetAPY.yourNetAPY')}</span>
           </Stack>
         </Title>
         <Typography variant="h4">
@@ -85,22 +91,21 @@ const TVL: FC<TVLProps> = () => {
               height: '2.125rem',
               marginRight: '8px',
             }}
-            value={dashboard.TVL}
-            type="network"
+            value={dashboard.netAPY}
+            options="percent"
           />
         </Typography>
         <Table>
           <TableRow>
-            <TitleTableCell title="totalSupply" value={dashboard.totalValueLocked} />
-            <TitleTableCell title="nftCollaterals" value={dashboard.totalCollateralledValue} />
+            <TitleTableCell title="yourSupplies" value={dashboard.supplyBalance} />
           </TableRow>
           <TableRow>
-            <TitleTableCell title="totalBorrowed" value={dashboard.totalBorrowed} />
+            <TitleTableCell title="yourLoans" value={dashboard.borrowBalance} />
           </TableRow>
         </Table>
-      </TVLItem>
+      </NetAPYItem>
     </ROOT>
   )
 }
 
-export default TVL
+export default NetAPY

@@ -11,7 +11,7 @@ import type { BigNumberValue } from 'utils/math/types'
 type NumberDisplayProps = {
   value: BigNumberValue
   options?: 'number' | 'USD' | 'percent'
-  type?: 'network' | 'VCI'
+  type?: 'network' | 'VCI' | ''
   sx?: SxProps<Theme>
 }
 

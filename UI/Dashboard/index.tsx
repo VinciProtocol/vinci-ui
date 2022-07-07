@@ -8,6 +8,7 @@ import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import PageTitle from 'UI/Layout/components/PageTitle'
 
 import TVL from './TVL'
+import NetAPY from './NetAPY'
 import Supplies from './Supplies'
 import Loans from './Loans'
 
@@ -29,7 +30,7 @@ const Dashboard: FC = () => {
             <Supplies />
           </Stack>
           <Stack spacing={2}>
-            <TVL />
+            <NetAPY />
             <Loans />
           </Stack>
         </Stack>
