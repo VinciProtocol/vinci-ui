@@ -21,6 +21,7 @@ const NetAPY: FC<NetAPYProps> = () => {
   const theme = useTheme()
   const ROOT = useMemoEmpty(() =>
     styled(Stack)(({ theme }) => ({
+      minHeight: '136px',
       ['.MuiSvgIcon-root']: {
         fontSize: theme.typography.pxToRem(30),
       },
@@ -41,6 +42,11 @@ const NetAPY: FC<NetAPYProps> = () => {
     styled('p')(({ theme }) => ({
       ...theme.typography.h6,
       color: theme.palette.grey[500],
+    }))
+  )
+  const Left = useMemoEmpty(() =>
+    styled(Stack)(({ theme }) => ({
+      minWidth: theme.spacing(30),
     }))
   )
 
@@ -78,23 +84,25 @@ const NetAPY: FC<NetAPYProps> = () => {
   return (
     <ROOT direction="row" spacing={2}>
       <NetAPYItem>
-        <Title>
-          <Stack spacing={1} direction="row">
-            <InsertChartTwoTone color="primary" />
-            <span>{t('NetAPY.yourNetAPY')}</span>
-          </Stack>
-        </Title>
-        <Typography variant="h4">
-          <NumberDisplay
-            sx={{
-              width: '2.125rem',
-              height: '2.125rem',
-              marginRight: '8px',
-            }}
-            value={dashboard.netAPY}
-            options="percent"
-          />
-        </Typography>
+        <Left>
+          <Title>
+            <Stack spacing={1} direction="row">
+              <InsertChartTwoTone color="primary" />
+              <span>{t('NetAPY.yourNetAPY')}</span>
+            </Stack>
+          </Title>
+          <Typography variant="h4">
+            <NumberDisplay
+              sx={{
+                width: '2.125rem',
+                height: '2.125rem',
+                marginRight: '8px',
+              }}
+              value={dashboard.netAPY}
+              options="percent"
+            />
+          </Typography>
+        </Left>
         <Table>
           <TableRow>
             <TitleTableCell title="yourSupplies" value={dashboard.supplyBalance} />

@@ -21,6 +21,7 @@ const TVL: FC<TVLProps> = () => {
   const theme = useTheme()
   const ROOT = useMemoEmpty(() =>
     styled(Stack)(({ theme }) => ({
+      minHeight: '136px',
       ['.MuiSvgIcon-root']: {
         fontSize: theme.typography.pxToRem(30),
       },
@@ -43,7 +44,6 @@ const TVL: FC<TVLProps> = () => {
       color: theme.palette.grey[500],
     }))
   )
-
   const TitleTableCell: FC<{
     title: string
     value: any
@@ -66,36 +66,45 @@ const TVL: FC<TVLProps> = () => {
       </TableCell>
     </Fragment>
   )
+  const Left = useMemoEmpty(() =>
+    styled(Stack)(({ theme }) => ({
+      minWidth: theme.spacing(30),
+    }))
+  )
 
   const { dashboard } = useContractData()
 
   return (
     <ROOT direction="row" spacing={2}>
       <TVLItem>
-        <Title>
-          <Stack spacing={1} direction="row">
-            <LockTwoTone color="primary" />
-            <span>{t('TVL.totalValueLocked')}</span>
-          </Stack>
-        </Title>
-        <Typography variant="h4">
-          <NumberDisplay
-            sx={{
-              width: '2.125rem',
-              height: '2.125rem',
-              marginRight: '8px',
-            }}
-            value={dashboard.TVL}
-            type="network"
-          />
-        </Typography>
+        <Left spacing={1}>
+          <Title>
+            <Stack spacing={1} direction="row">
+              <LockTwoTone color="primary" />
+              <span>{t('TVL.totalValueLocked')}</span>
+            </Stack>
+          </Title>
+          <Typography variant="h4">
+            <NumberDisplay
+              sx={{
+                width: '2.125rem',
+                height: '2.125rem',
+                marginRight: '8px',
+              }}
+              value={dashboard.TVL}
+              type="network"
+            />
+          </Typography>
+        </Left>
         <Table>
           <TableRow>
             <TitleTableCell title="totalSupply" value={dashboard.totalValueLocked} />
-            <TitleTableCell title="nftCollaterals" value={dashboard.totalCollateralledValue} />
           </TableRow>
           <TableRow>
             <TitleTableCell title="totalBorrowed" value={dashboard.totalBorrowed} />
+          </TableRow>
+          <TableRow>
+            <TitleTableCell title="nftCollaterals" value={dashboard.totalCollateralledValue} />
           </TableRow>
         </Table>
       </TVLItem>
