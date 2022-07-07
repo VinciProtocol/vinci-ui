@@ -7,7 +7,7 @@ import Stack from '@mui/material/Stack'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import PageTitle from 'UI/Layout/components/PageTitle'
 
-import Stats from './Stats'
+import TVL from './TVL'
 import Supplies from './Supplies'
 import Loans from './Loans'
 
@@ -23,9 +23,16 @@ const Dashboard: FC = () => {
     <Content>
       <Stack spacing={2}>
         <PageTitle title={t('title')} subTitle={t('subTitle')} />
-        <Stats />
-        <Supplies />
-        <Loans />
+        <Stack spacing={2} direction="row">
+          <Stack spacing={2}>
+            <TVL />
+            <Supplies />
+          </Stack>
+          <Stack spacing={2}>
+            <TVL />
+            <Loans />
+          </Stack>
+        </Stack>
       </Stack>
     </Content>
   )

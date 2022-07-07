@@ -4,6 +4,12 @@ const locale = {
   common: {
     noOpenPosition: 'No Open Position',
   },
+  TVL: {
+    totalValueLocked: 'Total Value Locked',
+    totalSupply: 'Total Supply',
+    totalBorrowed: 'Total Borrowed',
+    nftCollaterals: 'NFT Collaterals',
+  },
   stats: {
     supplyBalance: 'Total Supply',
     netAPY: 'Net APY',

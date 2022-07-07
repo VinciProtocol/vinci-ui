@@ -11,16 +11,16 @@ const MenuList = [
     hide: true,
   },
   {
+    key: 'Dashboard',
+    linkTo: '/my-dashboard',
+  },
+  {
     key: 'Lend',
     linkTo: '/lend',
   },
   {
     key: 'Borrow',
     linkTo: '/borrow',
-  },
-  {
-    key: 'Dashboard',
-    linkTo: '/my-dashboard',
   },
   {
     key: 'BorrowDetail',
