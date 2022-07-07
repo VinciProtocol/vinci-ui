@@ -179,3 +179,6 @@ export const getNFTInfo = (NFT_ID: string) => {
       throw new Error(`[getNFTInfo] 找不到对应 NFTInfo => (${NFT_ID})`)
   }
 }
+
+export const ethereumCryptoPunksMarket = '0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb'
+export const rinkebyCryptoPunksMarket = '0x2406c682c3f9720c5ae24bfa576a2351cccd008a'

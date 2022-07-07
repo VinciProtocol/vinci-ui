@@ -5,17 +5,17 @@ import vinci from 'lib/protocol/generate/vinci.json'
 import type { NFTGenerate } from 'lib/protocol/generate/types'
 
 import { ChainId } from '../chain/types'
-import { getNFTInfo } from './NFTConfig'
+import { ethereumCryptoPunksMarket, getNFTInfo, rinkebyCryptoPunksMarket } from './NFTConfig'
 import type { MarketData, NFTSetting } from './types'
 
 const list: Record<ChainId, typeof vinci> = {
   [ChainId.ethereum]: {
-    CryptoPunksMarket: '0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb',
+    CryptoPunksMarket: ethereumCryptoPunksMarket,
     vinciNFTProvider: '0x12483993167f6e652fd59cd173a495da0b80bdf2',
     ...mainnet,
   },
   [ChainId.rinkeby]: {
-    CryptoPunksMarket: '0x2406C682C3F9720C5aE24BFa576a2351CCCd008a',
+    CryptoPunksMarket: rinkebyCryptoPunksMarket,
     ...rinkeby,
   },
   [ChainId.vinci]: vinci,

@@ -4,6 +4,7 @@ import { groupBy } from 'lodash'
 
 import type { ChainId } from 'app/web3/chain/types'
 import { safeGet } from 'utils/get'
+import { rinkebyCryptoPunksMarket } from 'app/web3/market/NFTConfig'
 
 export type WalletNFTProps = { chainId: ChainId; user: string; tokenAddresses: string[] }
 export const useWalletNFT = (
@@ -16,7 +17,7 @@ export const useWalletNFT = (
 > => {
   const { user, tokenAddresses, chainId } = props
   if (!user || !chainId || !tokenAddresses || !tokenAddresses.length) return Promise.reject()
-  if (tokenAddresses[0] === '0x1CfccDC825BCA6199E5FcbF956275AC99F58C801') {
+  if (tokenAddresses[0] === rinkebyCryptoPunksMarket) {
     return fetch('https://api.thegraph.com/subgraphs/name/imsunhao/cryptopunks', {
       headers: {
         accept: '*/*',
@@ -45,8 +46,6 @@ export const useWalletNFT = (
           },
         ]
       })
-  } else if (tokenAddresses[0] === '0x2406C682C3F9720C5aE24BFa576a2351CCCd008a') {
-    // TODO
   }
 
   let results: any[] = []
