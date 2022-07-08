@@ -4,10 +4,7 @@ import BaseService from '../commons/BaseService'
 import type { EthereumTransactionTypeExtended, transactionType } from '../commons/types'
 import { eEthereumTxType, ProtocolAction } from '../commons/types'
 import { CryptoPunksContract } from '../crypto-punks'
-import type {
-  LPDepositNFTParamsType,
-  LPWithdrawNFTParamsType,
-} from '../lending-pool/lendingPoolTypes'
+import type { LPDepositNFTParamsType, LPWithdrawNFTParamsType } from '../lending-pool/lendingPoolTypes'
 import type { Provider } from '../types'
 import type { IWPUNKSGateway } from './typechain/IWPUNKSGateway'
 import { IWPUNKSGateway__factory } from './typechain/IWPUNKSGateway__factory'
