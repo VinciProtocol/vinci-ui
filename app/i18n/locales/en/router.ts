@@ -1,7 +1,7 @@
 const locale = {
   menu: {
     Markets: 'Markets',
-    Dashboard: 'My Dashboard',
+    Dashboard: 'Dashboard',
     Lend: 'Lend',
     Borrow: 'Borrow',
     BorrowDetail: 'Borrow Detail',
