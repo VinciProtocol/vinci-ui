@@ -86,7 +86,7 @@ export const useTable = (): BasicTableProps => {
       )
         .filter((column) => !column.hide)
         .map((column) => {
-          column.label = t('my-dashboard:lend.' + column.dataKey)
+          column.label = t('dashboard:lend.' + column.dataKey)
           return column
         }),
     // eslint-disable-next-line react-hooks/exhaustive-deps

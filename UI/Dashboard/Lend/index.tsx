@@ -22,7 +22,7 @@ const Lend: FC = () => {
   return (
     <ROOT variant="card">
       <Stack spacing={2}>
-        <Title variant="h5">{t('my-dashboard:lend.title')}</Title>
+        <Title variant="h5">{t('dashboard:lend.title')}</Title>
         <BasicTable {...table} />
       </Stack>
     </ROOT>

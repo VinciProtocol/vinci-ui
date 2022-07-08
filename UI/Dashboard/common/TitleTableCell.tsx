@@ -17,7 +17,7 @@ type TitleTableCellProps = {
 }
 
 const TitleTableCell: FC<TitleTableCellProps> = ({ title, value, isPercent }) => {
-  const { t } = useTranslation('my-dashboard')
+  const { t } = useTranslation('dashboard')
   const theme = useTheme()
   const SubTitle = useMemoEmpty(() =>
     styled('p')(({ theme }) => ({

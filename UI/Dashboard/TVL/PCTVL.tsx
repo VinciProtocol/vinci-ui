@@ -15,7 +15,7 @@ import TVLItem from './TVLItem'
 import type { TVLProps } from './types'
 
 const PCTVL: FC<TVLProps> = () => {
-  const { t } = useTranslation('my-dashboard')
+  const { t } = useTranslation('dashboard')
 
   const { dashboard } = useContractData()
 

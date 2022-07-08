@@ -12,7 +12,7 @@ const MenuList = [
   },
   {
     key: 'Dashboard',
-    linkTo: '/my-dashboard',
+    linkTo: '/dashboard',
   },
   {
     key: 'Lend',

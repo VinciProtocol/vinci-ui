@@ -12,7 +12,7 @@ import Lend from './Lend'
 import Borrow from './Borrow'
 
 const MobileDashboard: FC = () => {
-  const { t } = useTranslation('my-dashboard')
+  const { t } = useTranslation('dashboard')
 
   return (
     <Stack spacing={2}>

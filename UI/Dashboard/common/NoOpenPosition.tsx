@@ -6,7 +6,7 @@ const NoOpenPosition: FC = () => {
   const { t } = useTranslation()
   return (
     <Typography component="div" textAlign="center" padding={(theme) => `${theme.spacing(2)} 0 ${theme.spacing(4)}`}>
-      {t('my-dashboard:common.noOpenPosition')}
+      {t('dashboard:common.noOpenPosition')}
     </Typography>
   )
 }

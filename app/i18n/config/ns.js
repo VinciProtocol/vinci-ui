@@ -8,7 +8,7 @@ module.exports = {
     'dev',
     'stake',
     'liquidation',
-    'my-dashboard',
+    'dashboard',
     'nft-lockdrop',
     'nft-lockdrop-deposit',
     'nft-airdrop',

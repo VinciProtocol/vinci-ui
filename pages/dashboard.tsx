@@ -5,7 +5,7 @@ import Dashboard from 'UI/Dashboard'
 import { withStaticTranslations } from 'app/i18n/hoc'
 
 export const getStaticProps: GetStaticProps = withStaticTranslations((props) => ({ props }), {
-  namespaces: ['my-dashboard', 'lend'],
+  namespaces: ['dashboard', 'lend'],
 })
 
 const Page: NextPage = () => {

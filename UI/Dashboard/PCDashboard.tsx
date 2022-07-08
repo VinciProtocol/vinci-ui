@@ -14,7 +14,7 @@ import Lend from './Lend'
 import Borrow from './Borrow'
 
 const PCDashboard: FC = () => {
-  const { t } = useTranslation('my-dashboard')
+  const { t } = useTranslation('dashboard')
   const ContentItem = useMemoEmpty(() =>
     styled(Stack)(({ theme }) => ({
       width: `calc(50% - ${theme.spacing(1)})`,

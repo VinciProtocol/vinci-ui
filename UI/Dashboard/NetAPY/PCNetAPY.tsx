@@ -15,7 +15,7 @@ import NetAPYItem from './NetAPYItem'
 import type { NetAPYProps } from './types'
 
 const PCNetAPY: FC<NetAPYProps> = () => {
-  const { t } = useTranslation('my-dashboard')
+  const { t } = useTranslation('dashboard')
 
   const { dashboard } = useContractData()
 

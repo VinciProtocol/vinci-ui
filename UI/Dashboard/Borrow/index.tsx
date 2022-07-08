@@ -22,7 +22,7 @@ const Borrow: FC = () => {
   return (
     <ROOT variant="card">
       <Stack spacing={2}>
-        <Title variant="h5">{t('my-dashboard:borrow.title')}</Title>
+        <Title variant="h5">{t('dashboard:borrow.title')}</Title>
         <BasicTable {...table} />
       </Stack>
     </ROOT>
