@@ -1,6 +1,19 @@
 {
+  "title": "Gösterge Paneli",
+  "subTitle": "Protokol istatistiklerini ve tüm pozisyonlarınızı görüntüleyin",
   "common": {
     "noOpenPosition": "Açık Pozisyon Yok"
+  },
+  "TVL": {
+    "totalValueLocked": "Toplam Değer Kilitli",
+    "totalSupply": "Toplam Arz",
+    "totalBorrowed": "Toplam Borç",
+    "nftCollaterals": "NFT Teminatları"
+  },
+  "NetAPY": {
+    "yourNetAPY": "Net APY'niz",
+    "yourSupplies": "Malzemeleriniz",
+    "yourLoans": "kredileriniz"
   },
   "stats": {
     "supplyBalance": "Toplam Arz",
@@ -8,22 +21,32 @@
     "norrowBalance": "Toplam Borç"
   },
   "loans": {
-    "title": "Kredilerim",
+    "title": "Kredileriniz",
     "collection": "Toplamak",
-    "currentFloorPrice": "Kat Fiyatı",
-    "collateralValue": "Teminat Değeri",
-    "depositCount": "Aktif Teminatlar",
-    "borrowBalance": "ödünç aldığın",
-    "liquidationPrice": "Tasfiye Fiyatı",
+    "borrowBalance": "Borç Bakiyesi",
+    "borrowAPY": "APY",
     "healthFactor": "Sağlık Faktörü",
-    "functionButtons": "Aksiyon"
+    "functionButtons": "Eylem"
   },
   "supplies": {
-    "title": "Malzemelerim",
+    "title": "Malzemeleriniz",
     "symbol": "Varlıklar",
-    "APY": "APY",
+    "APY": "APY yatır",
     "underlyingBalance": "Arz Dengesi",
-    "walletBalance": "Cüzdan Bakiyesi",
-    "functionButtons": "Aksiyon"
+    "functionButtons": "Eylem"
+  },
+  "lend": {
+    "title": "Ödünç vermek",
+    "symbol": "Varlıklar",
+    "totalSupply": "Toplam Arz",
+    "APY": "APY yatır",
+    "functionButtons": "Eylem"
+  },
+  "borrow": {
+    "title": "Ödünç almak",
+    "collection": "Toplamak",
+    "currentFloorPrice": "Kat Fiyatı",
+    "borrowAPY": "APY'yi ödünç al",
+    "functionButtons": "Eylem"
   }
 }

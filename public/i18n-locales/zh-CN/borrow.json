@@ -1,12 +1,18 @@
 {
+  "title": "借",
+  "subTitle": "存入您的 NFT 作为抵押品以获取贷款",
+  "TVL": {
+    "totalCollateralledValue": "总抵押价值",
+    "totalBorrowed": "借款总额"
+  },
   "NFTCollateralCollections": {
     "title": "NFT 集合",
     "collection": "收藏",
     "currentFloorPrice": "底价",
     "totalCollateralledValue": "总抵押品价值",
     "activeCollaterals": "主动抵押品",
-    "totalBorrowed": "借款总额",
     "availableToBorrow": "可借",
+    "borrowAPY": "借APY",
     "functionButtons": "行动",
     "actions": {
       "depositNFT": "充值 NFT",

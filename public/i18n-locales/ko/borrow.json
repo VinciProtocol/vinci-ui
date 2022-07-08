@@ -1,12 +1,18 @@
 {
+  "title": "빌리다",
+  "subTitle": "NFT를 담보로 예치하여 대출을 받으세요",
+  "TVL": {
+    "totalCollateralledValue": "총 담보 가치",
+    "totalBorrowed": "총 차입금"
+  },
   "NFTCollateralCollections": {
     "title": "NFT 컬렉션",
     "collection": "수집",
     "currentFloorPrice": "가격 하한선",
     "totalCollateralledValue": "총 담보 가치",
     "activeCollaterals": "활성 담보",
-    "totalBorrowed": "총 차입금",
     "availableToBorrow": "대출 가능",
+    "borrowAPY": "APY를 빌리다",
     "functionButtons": "행위",
     "actions": {
       "depositNFT": "NFT 입금",

@@ -1,15 +1,21 @@
 {
+  "title": "ยืม",
+  "subTitle": "ฝาก NFT ของคุณเป็นหลักประกันในการออกเงินกู้",
+  "TVL": {
+    "totalCollateralledValue": "มูลค่าหลักประกันทั้งหมด",
+    "totalBorrowed": "ยืมทั้งหมด"
+  },
   "NFTCollateralCollections": {
     "title": "คอลเลกชัน NFT",
     "collection": "ของสะสม",
     "currentFloorPrice": "ราคาพื้น",
     "totalCollateralledValue": "มูลค่าหลักประกันทั้งหมด",
     "activeCollaterals": "หลักประกันที่ใช้งานอยู่",
-    "totalBorrowed": "ยืมทั้งหมด",
     "availableToBorrow": "พร้อมให้ยืม",
+    "borrowAPY": "ยืม APY",
     "functionButtons": "การกระทำ",
     "actions": {
-      "depositNFT": "ฝาก NFT",
+      "depositNFT": "ฝากเงิน NFT",
       "borrow": "ยืม"
     }
   }

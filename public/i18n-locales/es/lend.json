@@ -1,6 +1,8 @@
 {
+  "title": "Prestar",
+  "subTitle": "Proporcione liquidez a los grupos de préstamo y obtenga rendimientos",
   "TVL": {
-    "totalValueLocked": "Valor total bloqueado"
+    "totalSupply": "Suministro Total"
   },
   "lendingPools": {
     "title": "Fondos de préstamos",
@@ -12,7 +14,7 @@
     "walletBalance": "Saldo de la cartera",
     "functionButtons": "Acción",
     "deposited": "Depositado",
-    "ratio": "Proporción",
+    "ratio": "Relación",
     "available": "Disponible para retirar",
     "collectionTip": "Sus activos solo se prestarán a los titulares de NFT de {{name}}",
     "insufficientLiquidity": "Liquidez insuficiente"

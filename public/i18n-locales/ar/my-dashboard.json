@@ -1,6 +1,19 @@
 {
+  "title": "لوحة القيادة",
+  "subTitle": "عرض احصائيات البروتوكول وجميع المواقف الخاصة بك",
   "common": {
     "noOpenPosition": "لا يوجد موقف مفتوح"
+  },
+  "TVL": {
+    "totalValueLocked": "إجمالي القيمة مؤمن",
+    "totalSupply": "إجمالي العرض",
+    "totalBorrowed": "إجمالي المقترض",
+    "nftCollaterals": "ضمانات NFT"
+  },
+  "NetAPY": {
+    "yourNetAPY": "صافي APY الخاص بك",
+    "yourSupplies": "المستلزمات الخاصة بك",
+    "yourLoans": "قروضك"
   },
   "stats": {
     "supplyBalance": "إجمالي العرض",
@@ -8,22 +21,32 @@
     "norrowBalance": "إجمالي المقترض"
   },
   "loans": {
-    "title": "قروضي",
+    "title": "قروضك",
     "collection": "مجموعة",
-    "currentFloorPrice": "أدنى سعر",
-    "collateralValue": "القيمة الضمنية",
-    "depositCount": "الضمانات النشطة",
-    "borrowBalance": "اقترضت",
-    "liquidationPrice": "سعر التصفية",
+    "borrowBalance": "رصيد الديون",
+    "borrowAPY": "APY",
     "healthFactor": "عامل الصحة",
     "functionButtons": "عمل"
   },
   "supplies": {
-    "title": "المستلزمات الخاصة بي",
+    "title": "المستلزمات الخاصة بك",
     "symbol": "أصول",
-    "APY": "APY",
+    "APY": "إيداع APY",
     "underlyingBalance": "ميزان العرض",
-    "walletBalance": "رصيد المحفظة",
+    "functionButtons": "عمل"
+  },
+  "lend": {
+    "title": "أعار",
+    "symbol": "أصول",
+    "totalSupply": "إجمالي العرض",
+    "APY": "إيداع APY",
+    "functionButtons": "عمل"
+  },
+  "borrow": {
+    "title": "اقتراض",
+    "collection": "مجموعة",
+    "currentFloorPrice": "أدنى سعر",
+    "borrowAPY": "استعارة APY",
     "functionButtons": "عمل"
   }
 }

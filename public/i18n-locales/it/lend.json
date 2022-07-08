@@ -1,6 +1,8 @@
 {
+  "title": "Prestare",
+  "subTitle": "Fornire liquidità ai pool di prestito e guadagnare rendimenti",
   "TVL": {
-    "totalValueLocked": "Valore totale bloccato"
+    "totalSupply": "Fornitura totale"
   },
   "lendingPools": {
     "title": "Piscine di prestito",

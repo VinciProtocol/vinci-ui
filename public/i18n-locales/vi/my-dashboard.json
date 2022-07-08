@@ -1,6 +1,19 @@
 {
+  "title": "bảng điều khiển",
+  "subTitle": "Xem thống kê giao thức và tất cả các vị trí của bạn",
   "common": {
     "noOpenPosition": "Không có vị trí mở"
+  },
+  "TVL": {
+    "totalValueLocked": "Tổng giá trị đã khóa",
+    "totalSupply": "Tổng cung",
+    "totalBorrowed": "Tổng số tiền đã vay",
+    "nftCollaterals": "Tài sản thế chấp NFT"
+  },
+  "NetAPY": {
+    "yourNetAPY": "APY ròng của bạn",
+    "yourSupplies": "Nguồn cung cấp của bạn",
+    "yourLoans": "Các khoản vay của bạn"
   },
   "stats": {
     "supplyBalance": "Tổng cung",
@@ -8,22 +21,32 @@
     "norrowBalance": "Tổng số tiền đã vay"
   },
   "loans": {
-    "title": "Các khoản cho vay của tôi",
+    "title": "Khoản vay của bạn",
     "collection": "Bộ sưu tập",
-    "currentFloorPrice": "Giá sàn",
-    "collateralValue": "Giá trị tài sản đảm bảo",
-    "depositCount": "Tài sản thế chấp đang hoạt động",
-    "borrowBalance": "Bạn đã vay",
-    "liquidationPrice": "Giá thanh lý",
+    "borrowBalance": "Số dư Nợ",
+    "borrowAPY": "APY",
     "healthFactor": "Yếu tố sức khỏe",
     "functionButtons": "Hoạt động"
   },
   "supplies": {
-    "title": "Nguồn cung cấp của tôi",
+    "title": "Nguồn cung cấp của bạn",
     "symbol": "Tài sản",
-    "APY": "APY",
+    "APY": "Gửi tiền APY",
     "underlyingBalance": "Cân bằng cung cấp",
-    "walletBalance": "Số dư trên Wallet",
+    "functionButtons": "Hoạt động"
+  },
+  "lend": {
+    "title": "Cho vay",
+    "symbol": "Tài sản",
+    "totalSupply": "Tổng cung",
+    "APY": "Gửi tiền APY",
+    "functionButtons": "Hoạt động"
+  },
+  "borrow": {
+    "title": "Vay",
+    "collection": "Bộ sưu tập",
+    "currentFloorPrice": "Giá sàn",
+    "borrowAPY": "Vay APY",
     "functionButtons": "Hoạt động"
   }
 }

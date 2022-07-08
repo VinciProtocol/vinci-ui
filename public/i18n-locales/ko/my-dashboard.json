@@ -1,6 +1,19 @@
 {
+  "title": "계기반",
+  "subTitle": "프로토콜 통계 및 모든 위치 보기",
   "common": {
     "noOpenPosition": "오픈 포지션 없음"
+  },
+  "TVL": {
+    "totalValueLocked": "잠긴 총 가치",
+    "totalSupply": "총 공급",
+    "totalBorrowed": "총 차입금",
+    "nftCollaterals": "NFT 담보"
+  },
+  "NetAPY": {
+    "yourNetAPY": "귀하의 순 APY",
+    "yourSupplies": "당신의 용품",
+    "yourLoans": "대출"
   },
   "stats": {
     "supplyBalance": "총 공급",
@@ -8,22 +21,32 @@
     "norrowBalance": "총 차입금"
   },
   "loans": {
-    "title": "내 대출",
+    "title": "대출",
     "collection": "수집",
-    "currentFloorPrice": "가격 하한선",
-    "collateralValue": "담보 가치",
-    "depositCount": "활성 담보",
-    "borrowBalance": "당신의 빌린",
-    "liquidationPrice": "청산가격",
+    "borrowBalance": "부채 잔액",
+    "borrowAPY": "APY",
     "healthFactor": "건강 요인",
-    "functionButtons": "행동"
+    "functionButtons": "동작"
   },
   "supplies": {
-    "title": "내 용품",
+    "title": "당신의 용품",
     "symbol": "자산",
-    "APY": "APY",
+    "APY": "보증금 APY",
     "underlyingBalance": "공급 균형",
-    "walletBalance": "지갑 잔액",
-    "functionButtons": "행동"
+    "functionButtons": "동작"
+  },
+  "lend": {
+    "title": "빌려주다",
+    "symbol": "자산",
+    "totalSupply": "총 공급",
+    "APY": "보증금 APY",
+    "functionButtons": "동작"
+  },
+  "borrow": {
+    "title": "빌리다",
+    "collection": "수집",
+    "currentFloorPrice": "가격 하한선",
+    "borrowAPY": "APY를 빌리다",
+    "functionButtons": "동작"
   }
 }

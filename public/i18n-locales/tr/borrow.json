@@ -1,16 +1,22 @@
 {
+  "title": "Ödünç almak",
+  "subTitle": "Kredi almak için NFT'lerinizi teminat olarak yatırın",
+  "TVL": {
+    "totalCollateralledValue": "Toplam Teminatlı Değer",
+    "totalBorrowed": "Toplam Borç"
+  },
   "NFTCollateralCollections": {
     "title": "NFT Koleksiyonları",
     "collection": "Toplamak",
     "currentFloorPrice": "Kat Fiyatı",
     "totalCollateralledValue": "Toplam Teminat Değeri",
     "activeCollaterals": "Aktif Teminatlar",
-    "totalBorrowed": "Toplam Borç",
     "availableToBorrow": "Ödünç Alınabilir",
+    "borrowAPY": "APY'yi ödünç almak",
     "functionButtons": "Hareketler",
     "actions": {
       "depositNFT": "Para Yatırma NFT",
-      "borrow": "Borç almak"
+      "borrow": "Ödünç almak"
     }
   }
 }

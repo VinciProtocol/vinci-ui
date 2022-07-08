@@ -1,16 +1,18 @@
 {
+  "title": "Emprestar",
+  "subTitle": "Fornecer liquidez a pools de empréstimos e obter rendimentos",
   "TVL": {
-    "totalValueLocked": "Valor total bloqueado"
+    "totalSupply": "Fornecimento Total"
   },
   "lendingPools": {
     "title": "Pools de empréstimos",
-    "symbol": "Bens",
+    "symbol": "Ativos",
     "APY": "Depósito APY",
     "totalSupply": "Fornecimento Total",
     "totalBorrowed": "Total emprestado",
     "utilization": "Utilização",
     "walletBalance": "Saldo da carteira",
-    "functionButtons": "Açao",
+    "functionButtons": "Ação",
     "deposited": "Depositado",
     "ratio": "Razão",
     "available": "Disponível para retirar",

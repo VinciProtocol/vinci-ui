@@ -1,6 +1,8 @@
 {
+  "title": "أعار",
+  "subTitle": "توفير السيولة لمجمعات الإقراض وكسب العوائد",
   "TVL": {
-    "totalValueLocked": "إجمالي القيمة مؤمن"
+    "totalSupply": "إجمالي العرض"
   },
   "lendingPools": {
     "title": "تجمعات الإقراض",

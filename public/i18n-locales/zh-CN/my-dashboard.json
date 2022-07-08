@@ -1,6 +1,19 @@
 {
+  "title": "仪表板",
+  "subTitle": "查看协议统计数据和您的所有职位",
   "common": {
     "noOpenPosition": "无空缺职位"
+  },
+  "TVL": {
+    "totalValueLocked": "总价值锁定",
+    "totalSupply": "总供应量",
+    "totalBorrowed": "借款总额",
+    "nftCollaterals": "NFT 抵押品"
+  },
+  "NetAPY": {
+    "yourNetAPY": "你的净APY",
+    "yourSupplies": "您的用品",
+    "yourLoans": "您的贷款"
   },
   "stats": {
     "supplyBalance": "总供应量",
@@ -8,22 +21,32 @@
     "norrowBalance": "借款总额"
   },
   "loans": {
-    "title": "我的贷款",
+    "title": "你的贷款",
     "collection": "收藏",
-    "currentFloorPrice": "底价",
-    "collateralValue": "抵押品价值",
-    "depositCount": "主动抵押品",
-    "borrowBalance": "你借来的",
-    "liquidationPrice": "清算价格",
+    "borrowBalance": "债务余额",
+    "borrowAPY": "APY",
     "healthFactor": "健康因素",
     "functionButtons": "行动"
   },
   "supplies": {
-    "title": "我的用品",
+    "title": "您的用品",
     "symbol": "资产",
-    "APY": "APY",
+    "APY": "存款APY",
     "underlyingBalance": "供应平衡",
-    "walletBalance": "钱包余额",
+    "functionButtons": "行动"
+  },
+  "lend": {
+    "title": "借",
+    "symbol": "资产",
+    "totalSupply": "总供应量",
+    "APY": "存款APY",
+    "functionButtons": "行动"
+  },
+  "borrow": {
+    "title": "借",
+    "collection": "收藏",
+    "currentFloorPrice": "底价",
+    "borrowAPY": "借用APY",
     "functionButtons": "行动"
   }
 }

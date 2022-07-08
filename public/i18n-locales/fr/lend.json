@@ -1,16 +1,18 @@
 {
+  "title": "Prêter",
+  "subTitle": "Fournir des liquidités aux pools de prêt et générer des rendements",
   "TVL": {
-    "totalValueLocked": "Valeur totale verrouillée"
+    "totalSupply": "Approvisionnement total"
   },
   "lendingPools": {
     "title": "Pools de prêt",
-    "symbol": "Actifs",
+    "symbol": "Les atouts",
     "APY": "Dépôt APY",
     "totalSupply": "Approvisionnement total",
     "totalBorrowed": "Total emprunté",
     "utilization": "Utilisation",
     "walletBalance": "Solde du portefeuille",
-    "functionButtons": "action",
+    "functionButtons": "Action",
     "deposited": "Déposé",
     "ratio": "Rapport",
     "available": "Disponible pour retirer",

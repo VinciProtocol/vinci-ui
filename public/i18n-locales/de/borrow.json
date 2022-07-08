@@ -1,12 +1,18 @@
 {
+  "title": "Ausleihen",
+  "subTitle": "Hinterlegen Sie Ihre NFTs als Sicherheit, um Kredite aufzunehmen",
+  "TVL": {
+    "totalCollateralledValue": "Besicherter Gesamtwert",
+    "totalBorrowed": "Insgesamt geliehen"
+  },
   "NFTCollateralCollections": {
     "title": "NFT-Sammlungen",
     "collection": "Sammlung",
     "currentFloorPrice": "Bodenpreis",
     "totalCollateralledValue": "Gesamter Sicherheitenwert",
     "activeCollaterals": "Aktive Sicherheiten",
-    "totalBorrowed": "Insgesamt geliehen",
     "availableToBorrow": "Zum Ausleihen verfügbar",
+    "borrowAPY": "APY ausleihen",
     "functionButtons": "Aktionen",
     "actions": {
       "depositNFT": "Hinterlegen Sie NFT",

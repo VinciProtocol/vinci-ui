@@ -1,6 +1,8 @@
 {
+  "title": "빌려주다",
+  "subTitle": "대출 풀에 유동성을 제공하고 수익률을 얻습니다.",
   "TVL": {
-    "totalValueLocked": "잠긴 총 가치"
+    "totalSupply": "총 공급"
   },
   "lendingPools": {
     "title": "대출 풀",

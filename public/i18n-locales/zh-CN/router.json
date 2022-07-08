@@ -1,9 +1,9 @@
 {
   "menu": {
     "Markets": "市场",
-    "Dashboard": "我的仪表板",
-    "Lend": "借",
-    "Borrow": "借",
+    "Dashboard": "仪表板",
+    "Lend": "借出",
+    "Borrow": "借用",
     "BorrowDetail": "借阅详情",
     "Stake": "赌注",
     "Liquidation": "清算市场",

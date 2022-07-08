@@ -1,6 +1,19 @@
 {
+  "title": "ダッシュボード",
+  "subTitle": "プロトコル統計とすべての位置を表示します",
   "common": {
     "noOpenPosition": "オープンポジションなし"
+  },
+  "TVL": {
+    "totalValueLocked": "合計値がロックされています",
+    "totalSupply": "総供給",
+    "totalBorrowed": "総借入額",
+    "nftCollaterals": "NFT担保"
+  },
+  "NetAPY": {
+    "yourNetAPY": "あなたのネットAPY",
+    "yourSupplies": "あなたの物資",
+    "yourLoans": "あなたのローン"
   },
   "stats": {
     "supplyBalance": "総供給",
@@ -8,22 +21,32 @@
     "norrowBalance": "総借入額"
   },
   "loans": {
-    "title": "私のローン",
+    "title": "あなたのローン",
     "collection": "コレクション",
-    "currentFloorPrice": "最低料金",
-    "collateralValue": "担保価値",
-    "depositCount": "アクティブな担保",
-    "borrowBalance": "あなたの借りた",
-    "liquidationPrice": "清算価格",
+    "borrowBalance": "債務残高",
+    "borrowAPY": "APY",
     "healthFactor": "健康要因",
     "functionButtons": "アクション"
   },
   "supplies": {
-    "title": "私の物資",
+    "title": "あなたの物資",
     "symbol": "資産",
-    "APY": "APY",
+    "APY": "APYをデポジットする",
     "underlyingBalance": "供給バランス",
-    "walletBalance": "ウォレットの残高",
+    "functionButtons": "アクション"
+  },
+  "lend": {
+    "title": "貸す",
+    "symbol": "資産",
+    "totalSupply": "総供給",
+    "APY": "APYをデポジットする",
+    "functionButtons": "アクション"
+  },
+  "borrow": {
+    "title": "借りる",
+    "collection": "コレクション",
+    "currentFloorPrice": "最低料金",
+    "borrowAPY": "APYを借りる",
     "functionButtons": "アクション"
   }
 }

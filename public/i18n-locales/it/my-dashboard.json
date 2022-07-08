@@ -1,6 +1,19 @@
 {
+  "title": "Pannello di controllo",
+  "subTitle": "Visualizza le statistiche del protocollo e tutte le tue posizioni",
   "common": {
     "noOpenPosition": "Nessuna posizione aperta"
+  },
+  "TVL": {
+    "totalValueLocked": "Valore totale bloccato",
+    "totalSupply": "Fornitura totale",
+    "totalBorrowed": "Totale preso in prestito",
+    "nftCollaterals": "Garanzie NFT"
+  },
+  "NetAPY": {
+    "yourNetAPY": "Il tuo APY netto",
+    "yourSupplies": "Le tue forniture",
+    "yourLoans": "I tuoi prestiti"
   },
   "stats": {
     "supplyBalance": "Fornitura totale",
@@ -8,22 +21,32 @@
     "norrowBalance": "Totale preso in prestito"
   },
   "loans": {
-    "title": "I miei prestiti",
+    "title": "I tuoi prestiti",
     "collection": "Collezione",
-    "currentFloorPrice": "Prezzo al piano",
-    "collateralValue": "Valore collaterale",
-    "depositCount": "Garanzie attive",
-    "borrowBalance": "Il tuo preso in prestito",
-    "liquidationPrice": "Prezzo di liquidazione",
+    "borrowBalance": "Saldo del debito",
+    "borrowAPY": "APY",
     "healthFactor": "Fattore di salute",
     "functionButtons": "Azione"
   },
   "supplies": {
-    "title": "Le mie forniture",
+    "title": "Le tue forniture",
     "symbol": "Risorse",
-    "APY": "APY",
+    "APY": "Deposito APY",
     "underlyingBalance": "Equilibrio di approvvigionamento",
-    "walletBalance": "Saldo del portafoglio",
+    "functionButtons": "Azione"
+  },
+  "lend": {
+    "title": "Prestare",
+    "symbol": "Risorse",
+    "totalSupply": "Fornitura totale",
+    "APY": "Deposito APY",
+    "functionButtons": "Azione"
+  },
+  "borrow": {
+    "title": "Prestito",
+    "collection": "Collezione",
+    "currentFloorPrice": "Prezzo al piano",
+    "borrowAPY": "Prendi in prestito APY",
     "functionButtons": "Azione"
   }
 }

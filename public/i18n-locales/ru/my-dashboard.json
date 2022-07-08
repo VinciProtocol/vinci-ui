@@ -1,6 +1,19 @@
 {
+  "title": "Приборная доска",
+  "subTitle": "Просматривайте статистику протокола и все свои позиции",
   "common": {
     "noOpenPosition": "Нет открытой позиции"
+  },
+  "TVL": {
+    "totalValueLocked": "Общая стоимость заблокирована",
+    "totalSupply": "Общее предложение",
+    "totalBorrowed": "Всего заимствовано",
+    "nftCollaterals": "Обеспечение NFT"
+  },
+  "NetAPY": {
+    "yourNetAPY": "Ваш чистый APY",
+    "yourSupplies": "Ваши расходные материалы",
+    "yourLoans": "Ваши кредиты"
   },
   "stats": {
     "supplyBalance": "Общее предложение",
@@ -8,22 +21,32 @@
     "norrowBalance": "Всего заимствовано"
   },
   "loans": {
-    "title": "Мои кредиты",
+    "title": "Ваши кредиты",
     "collection": "Коллекция",
-    "currentFloorPrice": "Минимальная цена",
-    "collateralValue": "Залоговая стоимость",
-    "depositCount": "Активные залога",
-    "borrowBalance": "Ваш заимствованный",
-    "liquidationPrice": "Цена ликвидации",
+    "borrowBalance": "Баланс долга",
+    "borrowAPY": "APY",
     "healthFactor": "Фактор здоровья",
     "functionButtons": "Действие"
   },
   "supplies": {
-    "title": "Мои поставки",
+    "title": "Ваши расходные материалы",
     "symbol": "Ресурсы",
-    "APY": "APY",
+    "APY": "Депозит APY",
     "underlyingBalance": "Баланс поставок",
-    "walletBalance": "Баланс кошелька",
+    "functionButtons": "Действие"
+  },
+  "lend": {
+    "title": "Давать в долг",
+    "symbol": "Ресурсы",
+    "totalSupply": "Общее предложение",
+    "APY": "Депозит APY",
+    "functionButtons": "Действие"
+  },
+  "borrow": {
+    "title": "Занимать",
+    "collection": "Коллекция",
+    "currentFloorPrice": "Минимальная цена",
+    "borrowAPY": "Занять APY",
     "functionButtons": "Действие"
   }
 }

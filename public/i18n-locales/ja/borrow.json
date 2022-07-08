@@ -1,16 +1,22 @@
 {
+  "title": "借りる",
+  "subTitle": "ローンを組むための担保としてNFTを預けます",
+  "TVL": {
+    "totalCollateralledValue": "総担保価値",
+    "totalBorrowed": "総借入額"
+  },
   "NFTCollateralCollections": {
     "title": "NFTコレクション",
     "collection": "コレクション",
     "currentFloorPrice": "最低料金",
     "totalCollateralledValue": "総担保価値",
     "activeCollaterals": "アクティブな担保",
-    "totalBorrowed": "総借入額",
     "availableToBorrow": "借りることができます",
+    "borrowAPY": "APYを借りる",
     "functionButtons": "行動",
     "actions": {
       "depositNFT": "NFTをデポジットする",
-      "borrow": "かりて"
+      "borrow": "借りる"
     }
   }
 }

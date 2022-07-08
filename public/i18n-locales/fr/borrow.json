@@ -1,12 +1,18 @@
 {
+  "title": "Emprunter",
+  "subTitle": "Déposez vos NFT en garantie pour contracter des emprunts",
+  "TVL": {
+    "totalCollateralledValue": "Valeur garantie totale",
+    "totalBorrowed": "Total emprunté"
+  },
   "NFTCollateralCollections": {
     "title": "Collections NFT",
     "collection": "Le recueil",
     "currentFloorPrice": "Prix plancher",
     "totalCollateralledValue": "Valeur totale de la garantie",
     "activeCollaterals": "Garanties actives",
-    "totalBorrowed": "Total emprunté",
     "availableToBorrow": "Disponible à emprunter",
+    "borrowAPY": "emprunter APY",
     "functionButtons": "Actions",
     "actions": {
       "depositNFT": "Dépôt NFT",

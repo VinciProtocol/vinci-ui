@@ -1,16 +1,18 @@
 {
+  "title": "Ödünç vermek",
+  "subTitle": "Kredi havuzlarına likidite sağlayın ve getiri elde edin",
   "TVL": {
-    "totalValueLocked": "Toplam Değer Kilitli"
+    "totalSupply": "Toplam Arz"
   },
   "lendingPools": {
     "title": "Kredi Havuzları",
     "symbol": "Varlıklar",
-    "APY": "APY yatırın",
+    "APY": "APY yatır",
     "totalSupply": "Toplam Arz",
     "totalBorrowed": "Toplam Borç",
     "utilization": "kullanım",
     "walletBalance": "Cüzdan Bakiyesi",
-    "functionButtons": "Aksiyon",
+    "functionButtons": "Eylem",
     "deposited": "Yatırıldı",
     "ratio": "Oran",
     "available": "Çekilebilir",

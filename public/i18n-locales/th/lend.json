@@ -1,6 +1,8 @@
 {
+  "title": "ให้ยืม",
+  "subTitle": "จัดหาสภาพคล่องให้กับกลุ่มสินเชื่อและรับผลตอบแทน",
   "TVL": {
-    "totalValueLocked": "มูลค่ารวมที่ถูกล็อค"
+    "totalSupply": "อุปทานทั้งหมด"
   },
   "lendingPools": {
     "title": "แหล่งเงินกู้",
@@ -10,7 +12,7 @@
     "totalBorrowed": "ยืมทั้งหมด",
     "utilization": "การใช้ประโยชน์",
     "walletBalance": "ยอดคงเหลือในกระเป๋าเงิน",
-    "functionButtons": "หนังบู๊",
+    "functionButtons": "การกระทำ",
     "deposited": "ฝาก",
     "ratio": "อัตราส่วน",
     "available": "ถอนได้",

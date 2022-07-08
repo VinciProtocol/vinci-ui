@@ -1,12 +1,18 @@
 {
+  "title": "Занимать",
+  "subTitle": "Внесите свои NFT в качестве залога для получения кредита",
+  "TVL": {
+    "totalCollateralledValue": "Общая залоговая стоимость",
+    "totalBorrowed": "Всего заимствовано"
+  },
   "NFTCollateralCollections": {
     "title": "Коллекции NFT",
     "collection": "Коллекция",
     "currentFloorPrice": "Минимальная цена",
     "totalCollateralledValue": "Общая залоговая стоимость",
     "activeCollaterals": "Активные залога",
-    "totalBorrowed": "Всего заимствовано",
     "availableToBorrow": "Доступно для заимствования",
+    "borrowAPY": "занять APY",
     "functionButtons": "Действия",
     "actions": {
       "depositNFT": "Депозит NFT",

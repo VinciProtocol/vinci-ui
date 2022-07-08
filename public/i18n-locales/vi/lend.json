@@ -1,6 +1,8 @@
 {
+  "title": "Cho vay",
+  "subTitle": "Cung cấp thanh khoản cho các nhóm cho vay và kiếm lợi tức",
   "TVL": {
-    "totalValueLocked": "Tổng giá trị đã khóa"
+    "totalSupply": "Tổng cung"
   },
   "lendingPools": {
     "title": "Hồ cho vay",
@@ -14,7 +16,7 @@
     "deposited": "Đã ký gửi",
     "ratio": "Tỉ lệ",
     "available": "Có sẵn để rút",
-    "collectionTip": "Tài sản của bạn sẽ chỉ được cho vay đối với những người nắm giữ {{name}} NFT",
+    "collectionTip": "Tài sản của bạn sẽ chỉ được cho vay đối với chủ sở hữu {{name}} NFT",
     "insufficientLiquidity": "Không đủ thanh khoản"
   }
 }

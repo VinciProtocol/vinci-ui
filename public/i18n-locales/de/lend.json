@@ -1,6 +1,8 @@
 {
+  "title": "Verleihen",
+  "subTitle": "Stellen Sie Kreditpools Liquidität zur Verfügung und erzielen Sie Renditen",
   "TVL": {
-    "totalValueLocked": "Gesamtwert gesperrt"
+    "totalSupply": "Gesamtversorgung"
   },
   "lendingPools": {
     "title": "Kreditpools",

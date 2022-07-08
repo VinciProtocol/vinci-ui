@@ -1,16 +1,22 @@
 {
+  "title": "اقتراض",
+  "subTitle": "قم بإيداع NFTs الخاصة بك كضمان للحصول على قروض",
+  "TVL": {
+    "totalCollateralledValue": "إجمالي القيمة المجمعة",
+    "totalBorrowed": "إجمالي المقترض"
+  },
   "NFTCollateralCollections": {
     "title": "مجموعات NFT",
     "collection": "مجموعة",
     "currentFloorPrice": "أدنى سعر",
     "totalCollateralledValue": "إجمالي قيمة الضمان",
     "activeCollaterals": "الضمانات النشطة",
-    "totalBorrowed": "إجمالي المقترض",
     "availableToBorrow": "متاح للاستعارة",
+    "borrowAPY": "استعارة APY",
     "functionButtons": "أجراءات",
     "actions": {
       "depositNFT": "إيداع NFT",
-      "borrow": "يستعير"
+      "borrow": "اقتراض"
     }
   }
 }

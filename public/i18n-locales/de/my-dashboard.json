@@ -1,6 +1,19 @@
 {
+  "title": "Armaturenbrett",
+  "subTitle": "Zeigen Sie die Protokollstatistiken und alle Ihre Positionen an",
   "common": {
     "noOpenPosition": "Keine offene Stelle"
+  },
+  "TVL": {
+    "totalValueLocked": "Gesamtwert gesperrt",
+    "totalSupply": "Gesamtversorgung",
+    "totalBorrowed": "Insgesamt geliehen",
+    "nftCollaterals": "NFT-Sicherheiten"
+  },
+  "NetAPY": {
+    "yourNetAPY": "Ihr Netto-APY",
+    "yourSupplies": "Ihre Vorräte",
+    "yourLoans": "Ihre Kredite"
   },
   "stats": {
     "supplyBalance": "Gesamtversorgung",
@@ -8,22 +21,32 @@
     "norrowBalance": "Insgesamt geliehen"
   },
   "loans": {
-    "title": "Meine Darlehen",
+    "title": "Ihre Kredite",
     "collection": "Sammlung",
-    "currentFloorPrice": "Bodenpreis",
-    "collateralValue": "Sicherheitenwert",
-    "depositCount": "Aktive Sicherheiten",
-    "borrowBalance": "Ihr Geliehenes",
-    "liquidationPrice": "Liquidationspreis",
+    "borrowBalance": "Schuldensaldo",
+    "borrowAPY": "APY",
     "healthFactor": "Gesundheitsfaktor",
-    "functionButtons": "Handlung"
+    "functionButtons": "Aktion"
   },
   "supplies": {
-    "title": "Meine Vorräte",
+    "title": "Ihre Vorräte",
     "symbol": "Vermögenswerte",
-    "APY": "APY",
+    "APY": "APY einzahlen",
     "underlyingBalance": "Versorgungsbilanz",
-    "walletBalance": "Wallet-Guthaben",
-    "functionButtons": "Handlung"
+    "functionButtons": "Aktion"
+  },
+  "lend": {
+    "title": "Verleihen",
+    "symbol": "Vermögenswerte",
+    "totalSupply": "Gesamtversorgung",
+    "APY": "APY einzahlen",
+    "functionButtons": "Aktion"
+  },
+  "borrow": {
+    "title": "Ausleihen",
+    "collection": "Sammlung",
+    "currentFloorPrice": "Bodenpreis",
+    "borrowAPY": "APY ausleihen",
+    "functionButtons": "Aktion"
   }
 }
