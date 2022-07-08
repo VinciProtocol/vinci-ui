@@ -57,13 +57,13 @@ export const useTable = (): BasicTableProps => {
         [
           {
             dataKey: 'collection',
-            width: 150,
+            width: 250,
             headerRenderer: collectionHeaderRenderer,
             cellRenderer: collectionCellRenderer,
           },
           {
             dataKey: 'borrowBalance',
-            width: 150,
+            width: 130,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: BalanceCellRenderer,
           },
@@ -75,13 +75,13 @@ export const useTable = (): BasicTableProps => {
           },
           {
             dataKey: 'healthFactor',
-            width: 150,
+            width: 130,
             headerRenderer,
             cellRenderer: HealthFactorCellRenderer,
           },
           {
             dataKey: 'functionButtons',
-            width: 100,
+            width: 120,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: FunctionButtonsCellRenderer,
           },

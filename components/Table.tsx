@@ -158,7 +158,7 @@ export const symbolCellRenderer: TableCellRenderer = ({ cellData, rowData }) => 
         </Stack>
         <Stack spacing={1}>
           <Typography variant="body2">{cellData}</Typography>
-          <CollectionTooltip>{rowData.NFT_ID}</CollectionTooltip>
+          <CollectionTooltip>{rowData.collection}</CollectionTooltip>
         </Stack>
       </Stack>
     </TableCell>
@@ -181,7 +181,7 @@ export const SymbolAbbCellRenderer: TableCellRenderer = ({ cellData, rowData }) 
         <Stack spacing={1}>
           <Typography variant="body2">{cellData}</Typography>
           <Typography component="p" variant="caption" color={grey[500]}>
-            {rowData.NFT_ID}
+            {rowData.collection}
           </Typography>
         </Stack>
       </Stack>

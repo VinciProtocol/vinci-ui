@@ -70,25 +70,25 @@ export const useTable = (): BasicTableProps => {
         [
           {
             dataKey: 'symbol',
-            width: 220,
+            width: 230,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: symbolCellRenderer,
           },
           {
             dataKey: 'underlyingBalance',
-            width: 200,
+            width: 140,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: BalanceCellRenderer,
           },
           {
             dataKey: 'APY',
-            width: 150,
+            width: 140,
             headerRenderer,
             cellRenderer: PercentCellRenderer,
           },
           {
             dataKey: 'functionButtons',
-            width: 250,
+            width: 200,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: FunctionButtonsCellRenderer,
           },

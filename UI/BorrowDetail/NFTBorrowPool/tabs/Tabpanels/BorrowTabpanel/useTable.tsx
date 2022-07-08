@@ -60,25 +60,25 @@ export const useTable = (): BasicTableProps => {
         [
           {
             dataKey: 'symbol',
-            width: 150,
+            width: 260,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: SymbolAbbCellRenderer,
           },
           {
             dataKey: 'borrowAPY',
-            width: 200,
+            width: 180,
             headerRenderer,
             cellRenderer: PercentCellRenderer,
           },
           {
             dataKey: 'availableToBorrow',
-            width: 250,
+            width: 200,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: AvailableToBorrowCellRenderer,
           },
           {
             dataKey: 'borrowBalance',
-            width: 200,
+            width: 180,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: BalanceCellRenderer,
           },
