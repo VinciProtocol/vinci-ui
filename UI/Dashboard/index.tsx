@@ -11,6 +11,8 @@ import TVL from './TVL'
 import NetAPY from './NetAPY'
 import Supplies from './Supplies'
 import Loans from './Loans'
+import Lend from './Lend'
+import Borrow from './Borrow'
 
 const Dashboard: FC = () => {
   const { t } = useTranslation('my-dashboard')
@@ -34,10 +36,12 @@ const Dashboard: FC = () => {
           <ContentItem spacing={2}>
             <TVL />
             <Supplies />
+            <Lend />
           </ContentItem>
           <ContentItem spacing={2}>
             <NetAPY />
             <Loans />
+            <Borrow />
           </ContentItem>
         </Stack>
       </Stack>

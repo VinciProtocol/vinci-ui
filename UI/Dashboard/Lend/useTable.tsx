@@ -5,12 +5,11 @@ import type { TableCellRenderer } from 'react-virtualized'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import TableCell from '@mui/material/TableCell'
-import BigNumber from 'bignumber.js'
 import { useContractData, useDialogs } from 'domains'
 
 import { useWallet } from 'app/wallet'
 import {
-  BalanceCellRenderer,
+  ETHCellRenderer,
   headerRenderer,
   leftHeaderRenderer,
   PercentCellRenderer,
@@ -43,19 +42,6 @@ export const useTable = (): BasicTableProps => {
             >
               {t('common:wallet.btn.deposit')}
             </Button>
-            <Button
-              variant="outlined"
-              size="small"
-              onClick={() =>
-                actions.depositDialogOpen(TabValue.withdraw, {
-                  underlyingAsset: rowData.underlyingAsset,
-                  id: rowData.id,
-                  lendingPoolAddress: rowData.lendingPoolAddress,
-                })
-              }
-            >
-              {t('common:wallet.btn.withdraw')}
-            </Button>
           </Stack>
         </TableCell>
       )
@@ -70,25 +56,25 @@ export const useTable = (): BasicTableProps => {
         [
           {
             dataKey: 'symbol',
-            width: 220,
+            width: 180,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: symbolCellRenderer,
           },
           {
-            dataKey: 'underlyingBalance',
-            width: 200,
-            headerRenderer: leftHeaderRenderer,
-            cellRenderer: BalanceCellRenderer,
+            dataKey: 'totalSupply',
+            width: 250,
+            headerRenderer,
+            cellRenderer: ETHCellRenderer,
           },
           {
             dataKey: 'APY',
-            width: 150,
+            width: 180,
             headerRenderer,
             cellRenderer: PercentCellRenderer,
           },
           {
             dataKey: 'functionButtons',
-            width: 250,
+            width: 180,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: FunctionButtonsCellRenderer,
           },
@@ -100,20 +86,15 @@ export const useTable = (): BasicTableProps => {
       )
         .filter((column) => !column.hide)
         .map((column) => {
-          column.label = t('my-dashboard:supplies.' + column.dataKey)
+          column.label = t('my-dashboard:lend.' + column.dataKey)
           return column
         }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [t, account]
   )
 
-  const data = useMemo(
-    () => generalAssets.filter(({ underlyingBalance }) => underlyingBalance && !new BigNumber(underlyingBalance).eq(0)),
-    [generalAssets]
-  )
-
   return {
     columns,
-    data,
+    data: generalAssets,
   }
 }
