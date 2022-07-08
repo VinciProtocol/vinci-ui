@@ -3,7 +3,6 @@ import { Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
 import { styled } from '@mui/material/styles'
 import TableCell from '@mui/material/TableCell'
-import { useTheme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack'
 
@@ -18,7 +17,6 @@ type TitleTableCellProps = {
 
 const TitleTableCell: FC<TitleTableCellProps> = ({ title, value, isPercent }) => {
   const { t } = useTranslation('dashboard')
-  const theme = useTheme()
   const SubTitle = useMemoEmpty(() =>
     styled('p')(({ theme }) => ({
       ...theme.typography.subtitle1,
@@ -34,7 +32,7 @@ const TitleTableCell: FC<TitleTableCellProps> = ({ title, value, isPercent }) =>
         <SubTitle>{t(title)}</SubTitle>
       </TableCell>
       <TableCell>
-        <Typography variant="h6" color={theme.palette.grey[500]}>
+        <Typography variant="subtitle1" color="text.primary">
           <NumberDisplay
             sx={{
               width: '1.125rem',
