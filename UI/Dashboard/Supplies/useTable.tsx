@@ -82,7 +82,7 @@ export const useTable = (): BasicTableProps => {
           },
           {
             dataKey: 'APY',
-            width: 180,
+            width: 120,
             headerRenderer,
             cellRenderer: PercentCellRenderer,
           },

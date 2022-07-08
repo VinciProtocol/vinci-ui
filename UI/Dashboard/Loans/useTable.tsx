@@ -15,7 +15,7 @@ import {
   leftHeaderRenderer,
   BalanceCellRenderer,
   HealthFactorCellRenderer,
-  DepositCountCellRenderer,
+  PercentCellRenderer,
 } from 'components/Table'
 import { TabValue } from 'app/Dialogs/constants'
 
@@ -57,43 +57,31 @@ export const useTable = (): BasicTableProps => {
         [
           {
             dataKey: 'collection',
-            width: 300,
+            width: 150,
             headerRenderer: collectionHeaderRenderer,
             cellRenderer: collectionCellRenderer,
           },
           {
-            dataKey: 'depositCount',
-            width: 200,
-            headerRenderer: leftHeaderRenderer,
-            cellRenderer: DepositCountCellRenderer,
-          },
-          {
             dataKey: 'borrowBalance',
-            width: 250,
+            width: 150,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: BalanceCellRenderer,
           },
           {
-            dataKey: 'currentFloorPrice',
-            width: 250,
-            headerRenderer: leftHeaderRenderer,
-            cellRenderer: BalanceCellRenderer,
-          },
-          {
-            dataKey: 'liquidationPrice',
-            width: 250,
-            headerRenderer: leftHeaderRenderer,
-            cellRenderer: BalanceCellRenderer,
+            dataKey: 'borrowAPY',
+            width: 80,
+            headerRenderer,
+            cellRenderer: PercentCellRenderer,
           },
           {
             dataKey: 'healthFactor',
-            width: 200,
+            width: 150,
             headerRenderer,
             cellRenderer: HealthFactorCellRenderer,
           },
           {
             dataKey: 'functionButtons',
-            width: 180,
+            width: 100,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: FunctionButtonsCellRenderer,
           },
@@ -108,10 +96,7 @@ export const useTable = (): BasicTableProps => {
 
   const data = useMemo(() => {
     if (!nftAssets) return []
-    return nftAssets.filter(
-      ({ borrowBalance, collateralValue }) =>
-        !borrowBalance.isNaN() && !collateralValue.isNaN() && (!borrowBalance.eq(0) || !collateralValue.eq(0))
-    )
+    return nftAssets.filter(({ borrowBalance }) => !borrowBalance.isNaN() && !borrowBalance.eq(0))
   }, [nftAssets])
 
   return {
