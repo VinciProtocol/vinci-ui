@@ -11,7 +11,8 @@ import type { TVLItemProps } from './types'
 const TVLItem: FC<TVLItemProps> = ({ value, title, icon }) => {
   const Title = useMemoEmpty(() =>
     styled(Typography)(({ theme }) => ({
-      color: theme.palette.grey[500],
+      color: theme.palette.text.secondary,
+      fontWeight: 'normal',
     }))
   )
   const Value = useMemoEmpty(() => styled(Typography)``)

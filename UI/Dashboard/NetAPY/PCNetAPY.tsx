@@ -22,7 +22,7 @@ const PCNetAPY: FC<NetAPYProps> = () => {
   return (
     <ROOT direction="row" spacing={2}>
       <NetAPYItem>
-        <Left>
+        <Left spacing={1}>
           <Title>
             <Stack spacing={1} direction="row">
               <InsertChartTwoTone color="primary" />

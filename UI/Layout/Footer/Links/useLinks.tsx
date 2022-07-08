@@ -22,7 +22,8 @@ const MediumIcon = styled('div')`
   display: flex;
   align-items: center;
   ${({ theme }) => ({
-    color: theme.palette.grey[500],
+    color: theme.palette.text.secondary,
+    fontWeight: 'normal',
     width: '20px',
     height: '20px',
   })}

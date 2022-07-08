@@ -13,7 +13,7 @@ const locale = {
   NetAPY: {
     yourNetAPY: 'Your Net APY',
     yourSupplies: 'Your Supplies',
-    yourLoans: 'Your loans',
+    yourLoans: 'Your Loans',
   },
   stats: {
     supplyBalance: 'Total Supply',

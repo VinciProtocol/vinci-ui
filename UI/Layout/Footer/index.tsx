@@ -35,7 +35,8 @@ const Footer: FC = () => {
   const CopyRight = useMemoEmpty(
     () => styled(Typography)`
       ${({ theme }) => ({
-        color: theme.palette.grey[500],
+        color: theme.palette.text.secondary,
+        fontWeight: 'normal',
         marginLeft: theme.spacing(1),
       })}
     `

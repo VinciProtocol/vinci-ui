@@ -21,9 +21,8 @@ const TitleTableCell: FC<TitleTableCellProps> = ({ title, value, isPercent }) =>
   const theme = useTheme()
   const SubTitle = useMemoEmpty(() =>
     styled('p')(({ theme }) => ({
-      ...theme.typography.h6,
-      fontSize: theme.typography.pxToRem(18),
-      color: theme.palette.grey[500],
+      ...theme.typography.subtitle1,
+      color: theme.palette.text.secondary,
     }))
   )
   const type = isPercent ? '' : 'network'
@@ -63,8 +62,8 @@ export const ROOT = styled(Stack)(({ theme }) => ({
 }))
 
 export const Title = styled('p')(({ theme }) => ({
-  ...theme.typography.h6,
-  color: theme.palette.grey[500],
+  ...theme.typography.subtitle1,
+  color: theme.palette.text.primary,
 }))
 
 export const Left = styled(Stack)(({ theme }) => ({
