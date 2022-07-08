@@ -68,7 +68,7 @@ const TVL: FC<TVLProps> = () => {
   )
   const Left = useMemoEmpty(() =>
     styled(Stack)(({ theme }) => ({
-      minWidth: theme.spacing(30),
+      minWidth: theme.spacing(35),
     }))
   )
 

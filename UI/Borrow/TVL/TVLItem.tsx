@@ -18,7 +18,7 @@ const TVLItem: FC<TVLItemProps> = ({ value, title, icon }) => {
   const ROOT = useMemoEmpty(
     () => styled(Card)`
       flex: 1;
-      max-width: 284px;
+      max-width: 324px;
     `
   )
 
