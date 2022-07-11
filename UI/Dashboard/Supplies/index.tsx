@@ -24,7 +24,7 @@ const Supplies: FC = () => {
     <ROOT variant="card">
       <Stack spacing={2}>
         <Title variant="h5">{t('dashboard:supplies.title')}</Title>
-        {table.data.length ? <BasicTable {...table} /> : <NoOpenPosition />}
+        {table.data.length ? <BasicTable {...table} /> : <NoOpenPosition text="dashboard:supplies.noData" />}
       </Stack>
     </ROOT>
   )

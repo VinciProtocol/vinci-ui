@@ -27,6 +27,7 @@ const locale = {
     borrowAPY: 'APY',
     healthFactor: 'Health Factor',
     functionButtons: 'Action',
+    noData: 'Nothing borrowed yet',
   },
   supplies: {
     title: 'Your Supplies',
@@ -34,6 +35,7 @@ const locale = {
     APY: 'Deposit APY',
     underlyingBalance: 'Supply Balance',
     functionButtons: 'Action',
+    noData: 'Nothing supplied yet',
   },
   lend: {
     title: 'Lend',
