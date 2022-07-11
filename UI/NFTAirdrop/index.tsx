@@ -31,7 +31,7 @@ const NFTAirdrop: FC = () => {
   useEffect(() => {
     if (chainId !== ChainId.ethereum) {
       router.push({
-        pathname: '/lend',
+        pathname: '/dashboard',
       })
     }
   }, [chainId, router])
