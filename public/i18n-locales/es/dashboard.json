@@ -6,14 +6,14 @@
   },
   "TVL": {
     "totalValueLocked": "Valor total bloqueado",
-    "totalSupply": "Suministro total",
+    "totalSupply": "Suministro Total",
     "totalBorrowed": "prestado total",
     "nftCollaterals": "Colaterales NFT"
   },
   "NetAPY": {
     "yourNetAPY": "Su APY neto",
     "yourSupplies": "Sus Suministros",
-    "yourLoans": "tus prestamos"
+    "yourLoans": "Tus Préstamos"
   },
   "stats": {
     "supplyBalance": "Suministro total",
@@ -26,14 +26,16 @@
     "borrowBalance": "Saldo de la deuda",
     "borrowAPY": "APY",
     "healthFactor": "factor de salud",
-    "functionButtons": "Acción"
+    "functionButtons": "Acción",
+    "noData": "Nada prestado todavía"
   },
   "supplies": {
     "title": "Sus Suministros",
     "symbol": "Activos",
     "APY": "Depósito APY",
     "underlyingBalance": "Saldo de suministro",
-    "functionButtons": "Acción"
+    "functionButtons": "Acción",
+    "noData": "Nada suministrado todavía"
   },
   "lend": {
     "title": "Prestar",

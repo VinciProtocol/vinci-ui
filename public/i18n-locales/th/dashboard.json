@@ -26,14 +26,16 @@
     "borrowBalance": "ยอดหนี้",
     "borrowAPY": "APY",
     "healthFactor": "ปัจจัยด้านสุขภาพ",
-    "functionButtons": "การกระทำ"
+    "functionButtons": "การกระทำ",
+    "noData": "ยังไม่มีอะไรให้ยืม"
   },
   "supplies": {
     "title": "พัสดุของคุณ",
     "symbol": "ทรัพย์สิน",
     "APY": "ฝาก APY",
     "underlyingBalance": "อุปทานคงเหลือ",
-    "functionButtons": "การกระทำ"
+    "functionButtons": "การกระทำ",
+    "noData": "ยังไม่มีของมาเลย"
   },
   "lend": {
     "title": "ให้ยืม",

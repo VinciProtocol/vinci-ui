@@ -26,14 +26,16 @@
     "borrowBalance": "債務残高",
     "borrowAPY": "APY",
     "healthFactor": "健康要因",
-    "functionButtons": "アクション"
+    "functionButtons": "アクション",
+    "noData": "まだ何も借りていません"
   },
   "supplies": {
     "title": "あなたの物資",
     "symbol": "資産",
     "APY": "APYをデポジットする",
     "underlyingBalance": "供給バランス",
-    "functionButtons": "アクション"
+    "functionButtons": "アクション",
+    "noData": "まだ何も供給されていません"
   },
   "lend": {
     "title": "貸す",

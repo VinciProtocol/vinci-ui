@@ -26,14 +26,16 @@
     "borrowBalance": "Saldo del debito",
     "borrowAPY": "APY",
     "healthFactor": "Fattore di salute",
-    "functionButtons": "Azione"
+    "functionButtons": "Azione",
+    "noData": "Niente di prestato ancora"
   },
   "supplies": {
     "title": "Le tue forniture",
     "symbol": "Risorse",
     "APY": "Deposito APY",
     "underlyingBalance": "Equilibrio di approvvigionamento",
-    "functionButtons": "Azione"
+    "functionButtons": "Azione",
+    "noData": "Niente ancora fornito"
   },
   "lend": {
     "title": "Prestare",

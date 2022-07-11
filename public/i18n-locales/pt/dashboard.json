@@ -26,14 +26,16 @@
     "borrowBalance": "Saldo da dívida",
     "borrowAPY": "APY",
     "healthFactor": "Fator de Saúde",
-    "functionButtons": "Ação"
+    "functionButtons": "Ação",
+    "noData": "Nada emprestado ainda"
   },
   "supplies": {
     "title": "Seus suprimentos",
     "symbol": "Ativos",
     "APY": "Depósito APY",
     "underlyingBalance": "Saldo de fornecimento",
-    "functionButtons": "Ação"
+    "functionButtons": "Ação",
+    "noData": "Nada fornecido ainda"
   },
   "lend": {
     "title": "Emprestar",

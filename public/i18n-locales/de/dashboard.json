@@ -26,14 +26,16 @@
     "borrowBalance": "Schuldensaldo",
     "borrowAPY": "APY",
     "healthFactor": "Gesundheitsfaktor",
-    "functionButtons": "Aktion"
+    "functionButtons": "Aktion",
+    "noData": "Noch nichts ausgeliehen"
   },
   "supplies": {
     "title": "Ihre Vorräte",
     "symbol": "Vermögenswerte",
     "APY": "APY einzahlen",
     "underlyingBalance": "Versorgungsbilanz",
-    "functionButtons": "Aktion"
+    "functionButtons": "Aktion",
+    "noData": "Noch nichts geliefert"
   },
   "lend": {
     "title": "Verleihen",

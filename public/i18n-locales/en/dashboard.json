@@ -13,7 +13,7 @@
   "NetAPY": {
     "yourNetAPY": "Your Net APY",
     "yourSupplies": "Your Supplies",
-    "yourLoans": "Your loans"
+    "yourLoans": "Your Loans"
   },
   "stats": {
     "supplyBalance": "Total Supply",
@@ -26,14 +26,16 @@
     "borrowBalance": "Debt Balance",
     "borrowAPY": "APY",
     "healthFactor": "Health Factor",
-    "functionButtons": "Action"
+    "functionButtons": "Action",
+    "noData": "Nothing borrowed yet"
   },
   "supplies": {
     "title": "Your Supplies",
     "symbol": "Assets",
     "APY": "Deposit APY",
     "underlyingBalance": "Supply Balance",
-    "functionButtons": "Action"
+    "functionButtons": "Action",
+    "noData": "Nothing supplied yet"
   },
   "lend": {
     "title": "Lend",

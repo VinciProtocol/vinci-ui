@@ -13,7 +13,7 @@
   "NetAPY": {
     "yourNetAPY": "Net APY'niz",
     "yourSupplies": "Malzemeleriniz",
-    "yourLoans": "kredileriniz"
+    "yourLoans": "Kredileriniz"
   },
   "stats": {
     "supplyBalance": "Toplam Arz",
@@ -26,14 +26,16 @@
     "borrowBalance": "Borç Bakiyesi",
     "borrowAPY": "APY",
     "healthFactor": "Sağlık Faktörü",
-    "functionButtons": "Eylem"
+    "functionButtons": "Eylem",
+    "noData": "Henüz hiçbir şey ödünç alınmadı"
   },
   "supplies": {
     "title": "Malzemeleriniz",
     "symbol": "Varlıklar",
     "APY": "APY yatır",
     "underlyingBalance": "Arz Dengesi",
-    "functionButtons": "Eylem"
+    "functionButtons": "Eylem",
+    "noData": "Henüz hiçbir şey sağlanmadı"
   },
   "lend": {
     "title": "Ödünç vermek",

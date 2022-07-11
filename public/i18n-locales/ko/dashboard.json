@@ -26,14 +26,16 @@
     "borrowBalance": "부채 잔액",
     "borrowAPY": "APY",
     "healthFactor": "건강 요인",
-    "functionButtons": "동작"
+    "functionButtons": "동작",
+    "noData": "아직 빌린 것이 없다"
   },
   "supplies": {
     "title": "당신의 용품",
     "symbol": "자산",
     "APY": "보증금 APY",
     "underlyingBalance": "공급 균형",
-    "functionButtons": "동작"
+    "functionButtons": "동작",
+    "noData": "아직 제공되지 않음"
   },
   "lend": {
     "title": "빌려주다",

@@ -26,14 +26,16 @@
     "borrowBalance": "Баланс долга",
     "borrowAPY": "APY",
     "healthFactor": "Фактор здоровья",
-    "functionButtons": "Действие"
+    "functionButtons": "Действие",
+    "noData": "Еще ничего не заимствовано"
   },
   "supplies": {
     "title": "Ваши расходные материалы",
     "symbol": "Ресурсы",
     "APY": "Депозит APY",
     "underlyingBalance": "Баланс поставок",
-    "functionButtons": "Действие"
+    "functionButtons": "Действие",
+    "noData": "Пока ничего не поставлено"
   },
   "lend": {
     "title": "Давать в долг",

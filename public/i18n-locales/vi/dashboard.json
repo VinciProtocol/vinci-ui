@@ -13,7 +13,7 @@
   "NetAPY": {
     "yourNetAPY": "APY ròng của bạn",
     "yourSupplies": "Nguồn cung cấp của bạn",
-    "yourLoans": "Các khoản vay của bạn"
+    "yourLoans": "Khoản vay của bạn"
   },
   "stats": {
     "supplyBalance": "Tổng cung",
@@ -26,14 +26,16 @@
     "borrowBalance": "Số dư Nợ",
     "borrowAPY": "APY",
     "healthFactor": "Yếu tố sức khỏe",
-    "functionButtons": "Hoạt động"
+    "functionButtons": "Hoạt động",
+    "noData": "Chưa có gì vay"
   },
   "supplies": {
     "title": "Nguồn cung cấp của bạn",
     "symbol": "Tài sản",
     "APY": "Gửi tiền APY",
     "underlyingBalance": "Cân bằng cung cấp",
-    "functionButtons": "Hoạt động"
+    "functionButtons": "Hoạt động",
+    "noData": "Chưa có gì được cung cấp"
   },
   "lend": {
     "title": "Cho vay",

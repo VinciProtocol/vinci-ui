@@ -13,7 +13,7 @@
   "NetAPY": {
     "yourNetAPY": "你的净APY",
     "yourSupplies": "您的用品",
-    "yourLoans": "您的贷款"
+    "yourLoans": "你的贷款"
   },
   "stats": {
     "supplyBalance": "总供应量",
@@ -26,14 +26,16 @@
     "borrowBalance": "债务余额",
     "borrowAPY": "APY",
     "healthFactor": "健康因素",
-    "functionButtons": "行动"
+    "functionButtons": "行动",
+    "noData": "还没借什么"
   },
   "supplies": {
     "title": "您的用品",
     "symbol": "资产",
     "APY": "存款APY",
     "underlyingBalance": "供应平衡",
-    "functionButtons": "行动"
+    "functionButtons": "行动",
+    "noData": "还没有提供任何东西"
   },
   "lend": {
     "title": "借",

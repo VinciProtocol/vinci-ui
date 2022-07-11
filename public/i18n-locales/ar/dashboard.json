@@ -26,14 +26,16 @@
     "borrowBalance": "رصيد الديون",
     "borrowAPY": "APY",
     "healthFactor": "عامل الصحة",
-    "functionButtons": "عمل"
+    "functionButtons": "عمل",
+    "noData": "لا شيء مستعار حتى الآن"
   },
   "supplies": {
     "title": "المستلزمات الخاصة بك",
     "symbol": "أصول",
     "APY": "إيداع APY",
     "underlyingBalance": "ميزان العرض",
-    "functionButtons": "عمل"
+    "functionButtons": "عمل",
+    "noData": "لم يتم توفير أي شيء حتى الآن"
   },
   "lend": {
     "title": "أعار",
