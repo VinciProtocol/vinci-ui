@@ -16,7 +16,12 @@ const HealthFactor: FC<{ value: BigNumber }> = ({ value }) => {
   }, [theme.palette.error.main, theme.palette.info.main, theme.palette.success.main, theme.palette.warning.main, value])
   return (
     <Typography variant="subtitle1" fontWeight="medium" color={color}>
-      <NumberDisplay value={value} />
+      <NumberDisplay
+        value={value}
+        numberFormatOptions={{
+          maximumFractionDigits: 2,
+        }}
+      />
     </Typography>
   )
 }

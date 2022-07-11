@@ -11,6 +11,7 @@ import type { BigNumberValue } from 'utils/math/types'
 type NumberDisplayProps = {
   value: BigNumberValue
   options?: 'number' | 'USD' | 'percent'
+  numberFormatOptions?: Intl.NumberFormatOptions
   type?: 'network' | 'VCI' | ''
   sx?: SxProps<Theme>
 }
@@ -20,7 +21,7 @@ const NumberSpan = styled('div')`
   align-items: center;
 `
 
-const NumberDisplay: FC<NumberDisplayProps> = ({ value, options, type, sx }) => {
+const NumberDisplay: FC<NumberDisplayProps> = ({ value, options, numberFormatOptions, type, sx }) => {
   const { network } = useWallet()
 
   const {
@@ -29,8 +30,8 @@ const NumberDisplay: FC<NumberDisplayProps> = ({ value, options, type, sx }) => 
   const data = useMemo(() => {
     const d = valueToBigNumber(value)
     if (!d || d.isNaN() || d.eq(0)) return '-'
-    return NF.format(d, NF.options(options))
-  }, [NF, options, value])
+    return NF.format(d, NF.options(options, numberFormatOptions))
+  }, [NF, numberFormatOptions, options, value])
   if (type) {
     let tokenSymbol = 'ETH'
     switch (type) {
