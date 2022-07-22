@@ -9,6 +9,8 @@ import { useUserReservesDataController } from './application/userReservesData'
 import { useWalletBalanceControllers } from './application/walletBalance'
 import { useWalletNFTController } from './application/walletNFT'
 
+import { useOracleRecordsController } from './application/thegraph/oracleRecords'
+
 export const useControllersService = () => {
   const reservesData = useReservesDataController()
   const userReservesData = useUserReservesDataController()
@@ -24,6 +26,7 @@ export const useControllersService = () => {
   const erc721 = useERC721Controller()
 
   const pageProcess = usePageProgressController()
+  const oracleRecords = useOracleRecordsController()
 
   return {
     reservesData,
@@ -33,6 +36,7 @@ export const useControllersService = () => {
     lendingPool,
     erc721,
     pageProcess,
+    oracleRecords,
   }
 }
 
