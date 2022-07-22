@@ -5,12 +5,14 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import contract from './contract'
 import progress from './progress'
+import thegraph from './thegraph'
 
 export function makeStore() {
   return configureStore({
     reducer: {
       contract,
       progress,
+      thegraph,
     },
   })
 }
