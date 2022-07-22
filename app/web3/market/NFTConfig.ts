@@ -36,7 +36,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'ape.jpg',
         symbol: 'BAYC',
         src: ape.src,
-        oracle: 'bored-ape-yacht-club',
+        oracle: 'v2',
         name: 'Bored Ape Yacht Club',
         market: {
           logo: opensea,
@@ -48,7 +48,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'mutant-ape.jpg',
         symbol: 'MAYC',
         src: mutantApe.src,
-        oracle: 'mutant-ape-yacht-club',
+        oracle: 'v3',
         name: 'Mutant Ape Yacht Club',
         market: {
           logo: opensea,
@@ -72,7 +72,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'clonex.png',
         symbol: 'CloneX',
         src: cloneX.src,
-        oracle: 'clonex',
+        oracle: 'v6',
         name: 'Clone X',
         market: {
           logo: opensea,
@@ -84,7 +84,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'azuki.jpg',
         symbol: 'AZUKI',
         src: azuki.src,
-        oracle: 'azuki',
+        oracle: 'v7',
         name: 'Azuki',
         market: {
           logo: opensea,
@@ -96,7 +96,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'doodles.jpg',
         symbol: 'DOODLE',
         src: doodles.src,
-        oracle: 'doodles',
+        oracle: 'v5',
         name: 'Doodles',
         market: {
           logo: opensea,
@@ -108,7 +108,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'sandbox.png',
         symbol: 'Sandbox',
         src: sandbox.src,
-        oracle: 'opensea__sandbox',
+        oracle: '',
         name: `Sandbox's LANDs`,
         market: {
           logo: opensea,
@@ -120,7 +120,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'otherdeed.jpg',
         symbol: 'OTHR',
         src: otherdeed.src,
-        oracle: 'otherdeed',
+        oracle: '',
         name: 'Otherdeed',
         market: {
           logo: opensea,
@@ -132,7 +132,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'moonbirds.png',
         symbol: 'MOONBIRD',
         src: moonbirds.src,
-        oracle: 'proof-moonbirds',
+        oracle: 'v4',
         name: 'Moonbirds',
         market: {
           logo: opensea,
@@ -144,7 +144,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'decentraland.png',
         symbol: 'LAND',
         src: decentraland.src,
-        oracle: 'opensea__decentraland',
+        oracle: '',
         name: 'Decentraland LAND',
         market: {
           logo: opensea,
@@ -156,7 +156,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'meebits.png',
         symbol: 'Meebit',
         src: meebits.src,
-        oracle: 'meebits',
+        oracle: '',
         name: 'Meebits',
         market: {
           logo: opensea,
@@ -168,7 +168,7 @@ export const getNFTInfo = (NFT_ID: string) => {
         imageName: 'cryptopunks.png',
         symbol: 'CryptoPunk',
         src: cryptopunks.src,
-        oracle: 'cryptopunks',
+        oracle: 'v1',
         name: 'CryptoPunks',
         market: {
           logo: opensea,
