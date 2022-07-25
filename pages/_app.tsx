@@ -12,14 +12,15 @@ import Wallet from 'app/wallet'
 import DomainsProvider from 'domains'
 
 import { ToastContainer } from 'lib/toastify'
-import { useChartjs } from 'lib/chartjs'
+import { initChartjs } from 'lib/chartjs'
 
 import 'styles/global.css'
 import 'lib/toastify/styles.css'
 
+initChartjs()
+
 function MyApp({ Component, pageProps }: AppProps) {
   useI18nHMR()
-  useChartjs()
   return (
     <StoreProvider store={store}>
       <Head>
