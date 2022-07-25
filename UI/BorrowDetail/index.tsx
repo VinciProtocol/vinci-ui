@@ -10,6 +10,7 @@ import GoBack from 'components/btn/GoBack'
 
 import NFTBorrowPool from './NFTBorrowPool'
 import NFTInfo from './NFTInfo'
+import FloorPriceTrends from './FloorPriceTrends'
 
 const BorrowDetail: FC = () => {
   const Content = useMemoEmpty(() =>
@@ -24,7 +25,10 @@ const BorrowDetail: FC = () => {
         <GoBack url={{ pathname: '/borrow' }} />
         <Grid container spacing={2} sx={RESPONSIVE_DESIGN.display.GTSM('flex')}>
           <Grid item xs={8}>
-            <NFTBorrowPool />
+            <Stack spacing={2}>
+              <NFTBorrowPool />
+              <FloorPriceTrends />
+            </Stack>
           </Grid>
           <Grid item xs={4}>
             <NFTInfo />
@@ -33,6 +37,7 @@ const BorrowDetail: FC = () => {
         <Stack spacing={2} sx={RESPONSIVE_DESIGN.display.LESM('flex')}>
           <NFTInfo />
           <NFTBorrowPool />
+          <FloorPriceTrends />
         </Stack>
       </Stack>
     </Content>

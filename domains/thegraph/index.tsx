@@ -5,14 +5,16 @@ import { cloneDeep } from 'lodash'
 import { createContext } from 'utils/createContext'
 import { useMarket } from 'domains'
 import { useOracleRecords } from 'store/thegraph/oracle/hooks'
+import { valueToBigNumber } from 'utils/math'
 
 const useThegraphService = () => {
   const oracleRecordsSource = useOracleRecords()
   const { market } = useMarket()
 
   const oracleRecords = useMemo(() => {
-    if (!oracleRecordsSource) return
+    if (!oracleRecordsSource || !oracleRecordsSource.length) return
     const source = cloneDeep(oracleRecordsSource)
+
     const returnValue = {} as any
     const nfts = Object.keys(market.nfts).map((key) => market.nfts[key])
     source.forEach((item) => {
@@ -21,7 +23,9 @@ const useThegraphService = () => {
       Object.keys(item).forEach((key) => {
         const nft = nfts.find((n) => n.oracle === key)
         if (!returnValue[nft.NFT_ID]) returnValue[nft.NFT_ID] = []
-        const y = (item as any)[key]
+        const y = valueToBigNumber((item as any)[key])
+          .div(10000)
+          .toFixed(2)
         returnValue[nft.NFT_ID].push({ x, y })
       })
     })

@@ -62,6 +62,11 @@ const locale = {
     ltv: 'The Loan to Value (LTV) ratio defines the maximum amount of loan assets that can be borrowed with a specific NFT collateral.',
     liquidationFee: 'This is the discount a liquidator gets when buying NFT collateral flagged for liquidation.',
   },
+  floorPriceTrends: {
+    title: 'Floor Price Trends',
+    change24h: '24h change:',
+    days: 'Days',
+  },
 }
 
 export default locale

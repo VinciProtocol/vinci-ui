@@ -44,6 +44,13 @@ export const getTheme = (options: ThemeOptions) => {
           },
         },
       },
+      MuiToggleButton: {
+        styleOverrides: {
+          root: {
+            textTransform: 'capitalize',
+          },
+        },
+      },
       MuiButton: {
         styleOverrides: {
           root: {
