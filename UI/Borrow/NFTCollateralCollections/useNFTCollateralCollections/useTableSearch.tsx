@@ -1,0 +1,196 @@
+import { useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useTheme } from '@mui/material/styles'
+
+import { styled } from '@mui/material/styles'
+import Stack from '@mui/material/Stack'
+import Select from '@mui/material/Select'
+import MenuItem from '@mui/material/MenuItem'
+import FormControl from '@mui/material/FormControl'
+import InputLabel from '@mui/material/InputLabel'
+import ListItemText from '@mui/material/ListItemText'
+import OutlinedInput from '@mui/material/OutlinedInput'
+import TextField from '@mui/material/TextField'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import useMediaQuery from '@mui/material/useMediaQuery'
+
+import { NFTIcon } from 'app/web3/TokenIcon'
+import { useContractData } from 'domains'
+import { cloneDeep } from 'lodash'
+import { valueToBigNumber } from 'utils/math'
+import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
+import { RESPONSIVE_DESIGN } from 'styles/constants'
+import { safeGet } from 'utils/get'
+
+export const useTableSearch = () => {
+  const theme = useTheme()
+  const { nftAssets } = useContractData()
+  const ROOT = useMemoEmpty(() => styled(Stack)``)
+  const source = useMemo(() => nftAssets.filter((nftAsset) => safeGet(() => nftAsset.reserves.length)), [nftAssets])
+
+  const input = useInput(source)
+  const searchCollections = useSearchCollections(input.data)
+  const sort = useSort(searchCollections.data)
+  const matches = useMediaQuery(theme.breakpoints.up('md'))
+
+  const data = useMemo(() => {
+    if (!sort.data) return []
+    const returnValue = cloneDeep(sort.data)
+    return returnValue
+  }, [sort])
+
+  const content = useMemo(
+    () =>
+      matches ? (
+        <ROOT spacing={2} direction="row">
+          {input.content}
+          {searchCollections.content}
+          {sort.content}
+        </ROOT>
+      ) : (
+        <ROOT spacing={2}>
+          {input.content}
+          {searchCollections.content}
+          {sort.content}
+        </ROOT>
+      ),
+    [ROOT, input.content, matches, searchCollections.content, sort.content]
+  )
+
+  return {
+    data,
+    content,
+  }
+}
+
+const useInput = (sourceData: any[]) => {
+  const { t } = useTranslation('borrow')
+  const [value, onChange] = useState('')
+  const data = useMemo(() => {
+    if (!sourceData) return []
+    try {
+      const regExp = new RegExp(value, 'i')
+      return sourceData.filter((i) => regExp.test(i.collection))
+    } catch (e) {
+      return sourceData
+    }
+  }, [sourceData, value])
+
+  const content = useMemo(
+    () => (
+      <TextField
+        sx={RESPONSIVE_DESIGN.width.LESM('100%', '250px')}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        label={t('common:components.table.collectionName')}
+      />
+    ),
+    [t, value]
+  )
+
+  return {
+    data,
+    content,
+  }
+}
+
+const useSearchCollections = (sourceData: any[]) => {
+  const { t } = useTranslation('borrow')
+  const { nftAssets } = useContractData()
+  const source = useMemo(() => nftAssets.filter((nftAsset) => safeGet(() => nftAsset.reserves.length)), [nftAssets])
+
+  const [values, setValues] = useState([])
+
+  const data = useMemo(() => {
+    if (!sourceData) return []
+    if (!values.length) return sourceData
+    return sourceData.filter((i) => values.find((v) => v === i.collection))
+  }, [sourceData, values])
+
+  const content = useMemo(
+    () => (
+      <FormControl sx={RESPONSIVE_DESIGN.width.LESM('100%', '250px')}>
+        <InputLabel>{t('common:components.table.collections')}</InputLabel>
+        <Select
+          multiple
+          value={values}
+          onChange={(e) => {
+            const value = e.target.value
+            setValues(typeof value === 'string' ? value.split(',') : value)
+          }}
+          input={<OutlinedInput label={t('common:components.table.collections')} />}
+          renderValue={(selected) => selected.join(', ')}
+        >
+          {source.map((asset) => (
+            <MenuItem key={asset.NFT_ID} value={asset.collection}>
+              <ListItemIcon>
+                <NFTIcon NFT_ID={asset.NFT_ID} sx={{ width: 30, height: 30 }} />
+              </ListItemIcon>
+              <ListItemText primary={asset.collection} />
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+    ),
+    [source, t, values]
+  )
+
+  return {
+    data,
+    content,
+  }
+}
+
+const useSort = (sourceData: any[]) => {
+  const { t } = useTranslation('borrow')
+  const [value, onChange] = useState('currentFloorPrice-desc')
+
+  const data = useMemo(() => {
+    if (!sourceData) return []
+    const returnValue = cloneDeep(sourceData)
+    const [dataKey, order] = value.split('-')
+    const asc = (a: any, b: any) => valueToBigNumber(a[dataKey]).minus(b[dataKey]).toNumber()
+    const sortFn = order === 'asc' ? asc : (a: any, b: any) => asc(b, a)
+    return returnValue.sort(sortFn)
+  }, [sourceData, value])
+
+  const content = useMemo(
+    () => (
+      <FormControl sx={RESPONSIVE_DESIGN.width.LESM('100%', '250px')}>
+        <InputLabel>{t('common:components.table.sort.title')}</InputLabel>
+        <Select
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          label={t('common:components.table.sort.title')}
+        >
+          {[
+            'borrowAPY-desc',
+            'borrowAPY-asc',
+            'currentFloorPrice-desc',
+            'currentFloorPrice-asc',
+            'activeCollaterals-desc',
+            'activeCollaterals-asc',
+            'availableToBorrow-desc',
+            'availableToBorrow-asc',
+          ].map((key) => {
+            const [dataKey, order] = key.split('-')
+            return (
+              <MenuItem value={key} key={key}>
+                <ListItemText
+                  sx={{ margin: 0 }}
+                  primary={`${t('NFTCollateralCollections.' + dataKey)}: ${t(`common:components.table.sort.${order}`)}`}
+                />
+              </MenuItem>
+            )
+          })}
+        </Select>
+      </FormControl>
+    ),
+    [value, t]
+  )
+
+  return {
+    data,
+    content,
+  }
+}

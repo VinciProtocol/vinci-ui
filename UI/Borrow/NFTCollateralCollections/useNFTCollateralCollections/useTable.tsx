@@ -1,7 +1,6 @@
 import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useRouter } from 'next/router'
-import { useContractData } from 'domains'
 import type { TableCellRenderer } from 'react-virtualized'
 
 import Stack from '@mui/material/Stack'
@@ -9,7 +8,7 @@ import Button from '@mui/material/Button'
 import TableCell from '@mui/material/TableCell'
 
 import { NFTTabValue } from 'app/App/pages/borrowDetail'
-import type { TableColumnsProps, BasicTableProps } from 'lib/table/BasicTable/types'
+import type { BasicTableProps, TableColumnsProps } from 'lib/table/BasicTable/types'
 import {
   collectionHeaderRenderer,
   collectionCellRenderer,
@@ -19,13 +18,12 @@ import {
   PercentCellRenderer,
   headerRenderer,
 } from 'components/Table'
-import { safeGet } from 'utils/get'
 
-export const useTable = (): BasicTableProps => {
+import { useTableSearch } from './useTableSearch'
+
+export const useTable = () => {
   const router = useRouter()
-  const { t } = useTranslation()
-
-  const { nftAssets } = useContractData()
+  const { t } = useTranslation('borrow')
 
   const FunctionButtonsCellRenderer: TableCellRenderer = useCallback(
     ({ rowData }) => {
@@ -44,7 +42,7 @@ export const useTable = (): BasicTableProps => {
                 })
               }}
             >
-              {t('borrow:NFTCollateralCollections.actions.depositNFT')}
+              {t('NFTCollateralCollections.actions.depositNFT')}
             </Button>
             <Button
               variant="outlined"
@@ -58,7 +56,7 @@ export const useTable = (): BasicTableProps => {
                 })
               }}
             >
-              {t('borrow:NFTCollateralCollections.actions.borrow')}
+              {t('NFTCollateralCollections.actions.borrow')}
             </Button>
           </Stack>
         </TableCell>
@@ -110,7 +108,7 @@ export const useTable = (): BasicTableProps => {
           },
         ] as TableColumnsProps[]
       ).map((column) => {
-        column.label = t('borrow:NFTCollateralCollections.' + column.dataKey)
+        column.label = t('NFTCollateralCollections.' + column.dataKey)
         return column
       }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -129,11 +127,16 @@ export const useTable = (): BasicTableProps => {
     [router]
   )
 
-  const data = useMemo(() => nftAssets.filter((nftAsset) => safeGet(() => nftAsset.reserves.length)), [nftAssets])
+  const title = useMemo(() => t('NFTCollateralCollections.title'), [t])
+
+  const search = useTableSearch()
 
   return {
-    columns,
-    data,
-    tableProps,
+    title,
+    search,
+    table: {
+      columns,
+      tableProps,
+    },
   }
 }
