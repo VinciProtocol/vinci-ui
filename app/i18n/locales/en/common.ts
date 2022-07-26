@@ -43,6 +43,15 @@ const locale = {
   components: {
     goBack: 'Go Back',
     learnMore: 'Learn more',
+    table: {
+      collectionName: 'Collection Name',
+      collections: 'Collections',
+      sort: {
+        title: 'Sort',
+        desc: 'High to Low',
+        asc: 'Low to High',
+      },
+    },
   },
   tips: {
     NFTMarket: 'View on NFT Market',

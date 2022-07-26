@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import TableCell from '@mui/material/TableCell'
 
-import type { TableColumnsProps, BasicTableProps } from 'lib/table/BasicTable/types'
+import type { TableColumnsProps } from 'lib/table/BasicTable/types'
 import { TabValue } from 'app/Dialogs/constants'
 import {
   leftHeaderRenderer,
@@ -15,13 +15,14 @@ import {
   PercentCellRenderer,
   ETHCellRenderer,
 } from 'components/Table'
-import { useDialogs, useContractData } from 'domains'
+import { useDialogs } from 'domains'
 
-export const useTable = (): BasicTableProps => {
-  const { t } = useTranslation()
+import { useTableSearch } from './useTableSearch'
+
+export const useTable = () => {
+  const { t } = useTranslation('lend')
 
   const { actions } = useDialogs()
-  const { generalAssets } = useContractData()
 
   const FunctionButtonsCellRenderer: TableCellRenderer = useCallback(
     ({ rowData }) => {
@@ -110,15 +111,22 @@ export const useTable = (): BasicTableProps => {
       )
         .filter((column) => !column.hide)
         .map((column) => {
-          column.label = t('lend:lendingPools.' + column.dataKey)
+          column.label = t('lendingPools.' + column.dataKey)
           return column
         }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [t]
   )
 
+  const title = useMemo(() => t('lendingPools.title'), [t])
+
+  const search = useTableSearch()
+
   return {
-    columns,
-    data: generalAssets,
+    title,
+    search,
+    table: {
+      columns,
+    },
   }
 }
