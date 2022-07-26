@@ -9,22 +9,22 @@
     "availableToBorrow": "Ödünç alınabilir:",
     "ltv": "Değer için kredi:",
     "liquidationFee": "Tasfiye ücreti:",
-    "market": "Market:"
+    "market": "Pazar:"
   },
   "NFTBorrowPool": {
     "title": "Kredi Havuzları",
     "symbol": "Varlık",
     "borrowAPY": "APY'yi ödünç al",
     "basedOnYourCollateral": "Teminatınıza göre",
-    "borrowBalance": "ödünç aldığın",
-    "functionButtons": "Aksiyon",
+    "borrowBalance": "Ödünç aldığın",
+    "functionButtons": "Eylem",
     "ratio": "Oran",
     "walletBalance": "Cüzdan bakiyesi",
     "availableToBorrow": "Ödünç almak için müsait",
     "availableToRepay": "Geri ödeme için kullanılabilir"
   },
   "tabs": {
-    "borrow": "Borç almak",
+    "borrow": "Ödünç almak",
     "depositNFT": "Para Yatırma NFT"
   },
   "NFT": {
@@ -58,6 +58,11 @@
     "totalBorrowed": "Şu anda pozisyonunuzdaki toplam ödünç alınmış.",
     "availableToBorrow": "Teminat verilen ödünç alınabilir kredi değeri.",
     "ltv": "Kredi / Değer (LTV) oranı, belirli bir NFT teminatıyla ödünç alınabilecek maksimum kredi varlık miktarını tanımlar.",
-    "liquidationFee": "Bu, tasfiye için işaretlenmiş NFT teminatını satın alırken bir tasfiye memurunun aldığı indirimdir."
+    "liquidationFee": "Bu, bir tasfiye memurunun, tasfiye için işaretlenmiş NFT teminatını satın alırken aldığı indirimdir."
+  },
+  "floorPriceTrends": {
+    "title": "Taban Fiyat Trendleri",
+    "change24h": "24 saat değişiklik:",
+    "days": "Günler"
   }
 }

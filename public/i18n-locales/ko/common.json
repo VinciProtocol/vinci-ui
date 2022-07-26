@@ -42,7 +42,16 @@
   },
   "components": {
     "goBack": "돌아가기",
-    "learnMore": "더 알아보기"
+    "learnMore": "더 알아보기",
+    "table": {
+      "collectionName": "컬렉션 이름",
+      "collections": "컬렉션",
+      "sort": {
+        "title": "종류",
+        "desc": "높음에서 낮음",
+        "asc": "낮음에서 높음으로"
+      }
+    }
   },
   "tips": {
     "NFTMarket": "NFT 마켓에서 보기"

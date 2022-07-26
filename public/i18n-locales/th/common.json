@@ -42,7 +42,16 @@
   },
   "components": {
     "goBack": "ย้อนกลับ",
-    "learnMore": "เรียนรู้เพิ่มเติม"
+    "learnMore": "เรียนรู้เพิ่มเติม",
+    "table": {
+      "collectionName": "ชื่อคอลเลกชัน",
+      "collections": "ของสะสม",
+      "sort": {
+        "title": "เรียงลำดับ",
+        "desc": "สูงไปต่ำ",
+        "asc": "ต่ำไปสูง"
+      }
+    }
   },
   "tips": {
     "NFTMarket": "ดูในตลาด NFT"

@@ -57,7 +57,12 @@
     "collateralValue": "存放在您头寸中的 NFT 抵押品的价值。",
     "totalBorrowed": "目前在您的职位上借入的总额。",
     "availableToBorrow": "给定抵押品可借入的贷款价值。",
-    "ltv": "贷款价值 (LTV) 比率定义了可以使用特定 NFT 抵押品借入的最大贷款资产数量。",
+    "ltv": "贷款与价值 (LTV) 比率定义了可以使用特定 NFT 抵押品借入的最大贷款资产数量。",
     "liquidationFee": "这是清算人在购买标记为清算的 NFT 抵押品时获得的折扣。"
+  },
+  "floorPriceTrends": {
+    "title": "底价趋势",
+    "change24h": "24小时变化：",
+    "days": "天"
   }
 }

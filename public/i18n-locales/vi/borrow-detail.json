@@ -20,7 +20,7 @@
     "functionButtons": "Hoạt động",
     "ratio": "Tỉ lệ",
     "walletBalance": "Số dư trên ví",
-    "availableToBorrow": "Có sẵn để vay",
+    "availableToBorrow": "Có sẵn để mượn",
     "availableToRepay": "Có sẵn để hoàn trả"
   },
   "tabs": {
@@ -51,13 +51,18 @@
     }
   },
   "tips": {
-    "healthFactor": "Yếu tố sức khỏe thể hiện mức độ an toàn cho khoản vay của bạn dựa trên tỷ lệ giữa giá trị tài sản thế chấp NFT so với số tiền đã vay. Giữ nó trên 1 để tránh thanh lý.",
+    "healthFactor": "Yếu tố sức khỏe thể hiện sự an toàn cho khoản vay của bạn dựa trên tỷ lệ giữa giá trị tài sản thế chấp NFT so với số tiền đã vay. Giữ nó trên 1 để tránh thanh lý.",
     "floorPrice": "Giá sàn là giá thấp nhất cho các mặt hàng trong bộ sưu tập, thay vì giá trung bình và được cập nhật theo thời gian thực.",
-    "liquidationPrice": "Giá sàn của tài sản đảm bảo tại đó vị thế của bạn sẽ được thanh lý.",
+    "liquidationPrice": "Giá sàn của tài sản thế chấp tại đó vị thế của bạn sẽ được thanh lý.",
     "collateralValue": "Giá trị của tài sản thế chấp NFT được gửi vào vị trí của bạn.",
     "totalBorrowed": "Tổng số tiền vay hiện tại ở vị trí của bạn.",
     "availableToBorrow": "Giá trị khoản vay có thể vay được đối với tài sản thế chấp được ký gửi.",
     "ltv": "Tỷ lệ Khoản vay trên Giá trị (LTV) xác định số lượng tài sản cho vay tối đa có thể được vay với một tài sản thế chấp NFT cụ thể.",
     "liquidationFee": "Đây là khoản chiết khấu mà người thanh lý nhận được khi mua tài sản thế chấp NFT được gắn cờ để thanh lý."
+  },
+  "floorPriceTrends": {
+    "title": "Xu hướng giá sàn",
+    "change24h": "Thay đổi 24h:",
+    "days": "Ngày"
   }
 }

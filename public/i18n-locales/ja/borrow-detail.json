@@ -2,8 +2,8 @@
   "borrowInfo": {
     "borrowLimit": "借入限度額",
     "healthFactor": "健康要因：",
-    "currentFloorPrice": "現在の最低価格：",
-    "liquidationFloorPrice": "清算フロア価格：",
+    "currentFloorPrice": "現在の最低料金：",
+    "liquidationFloorPrice": "清算最低料金：",
     "collateralValue": "担保価値：",
     "totalBorrowed": "借入総額：",
     "availableToBorrow": "借りることができます：",
@@ -12,19 +12,19 @@
     "market": "市場："
   },
   "NFTBorrowPool": {
-    "title": "貸し出しプール",
+    "title": "貸付プール",
     "symbol": "資産",
     "borrowAPY": "APYを借りる",
-    "basedOnYourCollateral": "担保に基づく",
+    "basedOnYourCollateral": "あなたの担保に基づいて",
     "borrowBalance": "あなたの借りた",
     "functionButtons": "アクション",
-    "ratio": "比率",
+    "ratio": "比",
     "walletBalance": "ウォレットの残高",
     "availableToBorrow": "借りる利用可能",
     "availableToRepay": "返済するために利用可能"
   },
   "tabs": {
-    "borrow": "かりて",
+    "borrow": "借りる",
     "depositNFT": "NFTをデポジットする"
   },
   "NFT": {
@@ -35,7 +35,7 @@
     "totalValuation": "総評価：",
     "valuation": "評価",
     "approveAll": "すべて承認する",
-    "depositSelected": "選択したデポジット",
+    "depositSelected": "選択された預金",
     "withdrawSelected": "選択した撤回",
     "deposit": {
       "noData": {
@@ -53,11 +53,16 @@
   "tips": {
     "healthFactor": "健全性係数は、NFT担保価値と借入額の比率から導き出されるローンの安全性を表します。清算を避けるために1より上に保ってください。",
     "floorPrice": "最低料金は、平均アイテム価格ではなく、コレクションアイテムの最低価格であり、リアルタイムで更新されます。",
-    "liquidationPrice": "ポジションが清算される担保フロア価格。",
+    "liquidationPrice": "ポジションが清算される担保の最低価格。",
     "collateralValue": "あなたのポジションに預けられたNFT担保の価値。",
     "totalBorrowed": "現在、あなたのポジションで借りている合計。",
-    "availableToBorrow": "預け入れられた担保を考慮した借入可能なローンの価値。",
-    "ltv": "ローン・トゥ・バリュー（LTV）比率は、特定のNFT担保で借りることができるローン資産の最大額を定義します。",
-    "liquidationFee": "これは、清算のフラグが立てられたNFT担保を購入するときに清算人が得る割引です。"
+    "availableToBorrow": "預け入れられた担保を考慮して借りることができるローンの価値。",
+    "ltv": "ローントゥバリュー（LTV）比率は、特定のNFT担保で借りることができるローン資産の最大額を定義します。",
+    "liquidationFee": "これは、清算のフラグが立てられたNFT担保を購入するときに清算人が取得する割引です。"
+  },
+  "floorPriceTrends": {
+    "title": "最低料金の傾向",
+    "change24h": "24時間の変更：",
+    "days": "日々"
   }
 }

@@ -23,7 +23,7 @@
     },
     "connecting": {
       "title": "Mở khóa ví",
-      "subTitle": "Bạn có thể cần phải nhấp vào phần mở rộng."
+      "subTitle": "Bạn có thể cần phải nhấp vào tiện ích mở rộng."
     },
     "error": {
       "title": "Kết nối ví",
@@ -42,7 +42,16 @@
   },
   "components": {
     "goBack": "Quay lại",
-    "learnMore": "Tìm hiểu thêm"
+    "learnMore": "Tìm hiểu thêm",
+    "table": {
+      "collectionName": "Tên bộ sưu tập",
+      "collections": "Bộ sưu tập",
+      "sort": {
+        "title": "Loại",
+        "desc": "Cao đến thấp",
+        "asc": "Thấp đến cao"
+      }
+    }
   },
   "tips": {
     "NFTMarket": "Xem trên NFT Market"

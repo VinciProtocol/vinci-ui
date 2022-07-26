@@ -42,7 +42,16 @@
   },
   "components": {
     "goBack": "Retourner",
-    "learnMore": "Apprendre encore plus"
+    "learnMore": "Apprendre encore plus",
+    "table": {
+      "collectionName": "Nom de la collecte",
+      "collections": "Collections",
+      "sort": {
+        "title": "Trier",
+        "desc": "Haut en bas",
+        "asc": "De bas en haut"
+      }
+    }
   },
   "tips": {
     "NFTMarket": "Voir sur le marché NFT"

@@ -59,5 +59,10 @@
     "availableToBorrow": "Valore del prestito prestabile data la garanzia depositata.",
     "ltv": "Il rapporto Loan to Value (LTV) definisce l'importo massimo delle attività di prestito che possono essere prese in prestito con una specifica garanzia NFT.",
     "liquidationFee": "Questo è lo sconto che un liquidatore ottiene quando acquista una garanzia NFT segnalata per la liquidazione."
+  },
+  "floorPriceTrends": {
+    "title": "Andamento dei prezzi di base",
+    "change24h": "Cambio 24 ore:",
+    "days": "Giorni"
   }
 }

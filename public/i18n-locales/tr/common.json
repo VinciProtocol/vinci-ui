@@ -42,7 +42,16 @@
   },
   "components": {
     "goBack": "Geri dön",
-    "learnMore": "Daha fazla bilgi edin"
+    "learnMore": "Daha fazla bilgi edin",
+    "table": {
+      "collectionName": "Koleksiyon Adı",
+      "collections": "Koleksiyonlar",
+      "sort": {
+        "title": "Çeşit",
+        "desc": "Yüksekten alçağa",
+        "asc": "Düşükten yükseğe"
+      }
+    }
   },
   "tips": {
     "NFTMarket": "NFT Market'te görüntüle"

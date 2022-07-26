@@ -17,14 +17,14 @@
     "borrowAPY": "Emprestar APY",
     "basedOnYourCollateral": "Com base em sua garantia",
     "borrowBalance": "Seu Emprestado",
-    "functionButtons": "Açao",
+    "functionButtons": "Ação",
     "ratio": "Razão",
     "walletBalance": "Saldo da carteira",
     "availableToBorrow": "Disponibilidade para empréstimo",
     "availableToRepay": "Disponível para reembolsar"
   },
   "tabs": {
-    "borrow": "Pegar emprestado",
+    "borrow": "Pedir emprestado",
     "depositNFT": "Depósito NFT"
   },
   "NFT": {
@@ -56,8 +56,13 @@
     "liquidationPrice": "Preço mínimo de garantia pelo qual sua posição será liquidada.",
     "collateralValue": "Valor da garantia NFT depositada em sua posição.",
     "totalBorrowed": "Atualmente total emprestado em sua posição.",
-    "availableToBorrow": "Valor do empréstimo a ser emprestado em função da garantia depositada.",
+    "availableToBorrow": "Valor do empréstimo a ser emprestado em função das garantias depositadas.",
     "ltv": "O índice Loan to Value (LTV) define o valor máximo de ativos de empréstimo que podem ser emprestados com uma garantia NFT específica.",
     "liquidationFee": "Este é o desconto que um liquidante obtém ao comprar garantias NFT sinalizadas para liquidação."
+  },
+  "floorPriceTrends": {
+    "title": "Tendências de preço mínimo",
+    "change24h": "Mudança 24h:",
+    "days": "Dias"
   }
 }

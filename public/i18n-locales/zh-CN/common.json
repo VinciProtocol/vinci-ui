@@ -42,7 +42,16 @@
   },
   "components": {
     "goBack": "回去",
-    "learnMore": "学到更多"
+    "learnMore": "学到更多",
+    "table": {
+      "collectionName": "集合名称",
+      "collections": "收藏品",
+      "sort": {
+        "title": "种类",
+        "desc": "从高到低",
+        "asc": "从低到高"
+      }
+    }
   },
   "tips": {
     "NFTMarket": "看 NFT 市场"

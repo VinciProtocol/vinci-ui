@@ -59,5 +59,10 @@
     "availableToBorrow": "Valeur du prêt empruntable compte tenu de la garantie déposée.",
     "ltv": "Le ratio Loan to Value (LTV) définit le montant maximum d'actifs de prêt qui peuvent être empruntés avec une garantie NFT spécifique.",
     "liquidationFee": "Il s'agit de la remise qu'un liquidateur obtient lors de l'achat de garanties NFT signalées pour liquidation."
+  },
+  "floorPriceTrends": {
+    "title": "Tendances des prix planchers",
+    "change24h": "changement 24h:",
+    "days": "Journées"
   }
 }

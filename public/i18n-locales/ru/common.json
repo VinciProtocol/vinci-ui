@@ -42,7 +42,16 @@
   },
   "components": {
     "goBack": "Вернись",
-    "learnMore": "Учить больше"
+    "learnMore": "Учить больше",
+    "table": {
+      "collectionName": "Название коллекции",
+      "collections": "Коллекции",
+      "sort": {
+        "title": "Сортировать",
+        "desc": "От высокого к низкому",
+        "asc": "Снизу вверх"
+      }
+    }
   },
   "tips": {
     "NFTMarket": "Посмотреть на рынке NFT"

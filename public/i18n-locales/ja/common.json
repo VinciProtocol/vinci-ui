@@ -1,6 +1,6 @@
 {
   "layout": {
-    "description": "流動性を高め、ボラティリティをヘッジするためのNFTが支援するDeFiプロトコル"
+    "description": "流動性を高め、ボラティリティをヘッジするためのNFTに裏打ちされたDeFiプロトコル"
   },
   "wallet": {
     "btn": {
@@ -15,19 +15,19 @@
     },
     "disconnected": {
       "title": "ウォレットを接続する",
-      "subTitle": "Vinciの使用を開始するには"
+      "subTitle": "ヴィンチの使用を開始するには"
     },
     "connected": {
       "title": "接続済み",
       "subTitle": "つながっている"
     },
     "connecting": {
-      "title": "ウォレットのロックを解除",
+      "title": "ウォレットのロックを解除する",
       "subTitle": "拡張機能をクリックする必要がある場合があります。"
     },
     "error": {
       "title": "ウォレットを接続する",
-      "subTitle": "Vinciの使用を開始するには",
+      "subTitle": "ヴィンチの使用を開始するには",
       "ChainUnknownError": "スイッチネットワーク"
     },
     "tips": {
@@ -35,14 +35,23 @@
       "term": "ヴィンチの利用規約"
     },
     "chain": {
-      "title": "ネットワークを選択",
+      "title": "ネットワークを選択してください",
       "subTitle": "現在のネットワーク：",
       "error": "サポートされていないネットワーク"
     }
   },
   "components": {
     "goBack": "戻る",
-    "learnMore": "もっと詳しく知る"
+    "learnMore": "もっと詳しく知る",
+    "table": {
+      "collectionName": "コレクション名",
+      "collections": "コレクション",
+      "sort": {
+        "title": "選別",
+        "desc": "高から低",
+        "asc": "低から高"
+      }
+    }
   },
   "tips": {
     "NFTMarket": "NFT市場で見る"

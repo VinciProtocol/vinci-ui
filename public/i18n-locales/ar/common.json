@@ -42,7 +42,16 @@
   },
   "components": {
     "goBack": "عُد",
-    "learnMore": "يتعلم أكثر"
+    "learnMore": "يتعلم أكثر",
+    "table": {
+      "collectionName": "اسم المجموعة",
+      "collections": "المجموعات",
+      "sort": {
+        "title": "فرز",
+        "desc": "من الأعلى إلى الأقل",
+        "asc": "من أسفل إلى أعلى"
+      }
+    }
   },
   "tips": {
     "NFTMarket": "عرض في سوق NFT"
