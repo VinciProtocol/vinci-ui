@@ -13,6 +13,8 @@ import OutlinedInput from '@mui/material/OutlinedInput'
 import TextField from '@mui/material/TextField'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import InputAdornment from '@mui/material/InputAdornment'
+import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone'
 
 import { NFTIcon } from 'app/web3/TokenIcon'
 import { useContractData } from 'domains'
@@ -40,10 +42,12 @@ export const useTableSearch = () => {
   const content = useMemo(
     () =>
       matches ? (
-        <ROOT spacing={2} direction="row">
+        <ROOT paddingX={2} direction="row" justifyContent="space-between">
           {input.content}
-          {searchCollections.content}
-          {sort.content}
+          <Stack spacing={2} direction="row">
+            {searchCollections.content}
+            {sort.content}
+          </Stack>
         </ROOT>
       ) : (
         <ROOT spacing={2}>
@@ -77,10 +81,18 @@ const useInput = (sourceData: any[]) => {
   const content = useMemo(
     () => (
       <TextField
-        sx={RESPONSIVE_DESIGN.width.LESM('100%', '250px')}
+        sx={RESPONSIVE_DESIGN.width.LESM('100%', '300px')}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         label={t('common:components.table.collectionName')}
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <SearchTwoToneIcon />
+            </InputAdornment>
+          ),
+        }}
+        size="small"
       />
     ),
     [t, value]
@@ -106,7 +118,7 @@ const useSearchCollections = (sourceData: any[]) => {
 
   const content = useMemo(
     () => (
-      <FormControl sx={RESPONSIVE_DESIGN.width.LESM('100%', '250px')}>
+      <FormControl sx={RESPONSIVE_DESIGN.width.LESM('100%', '200px')} size="small">
         <InputLabel>{t('common:components.table.collections')}</InputLabel>
         <Select
           multiple
@@ -123,7 +135,7 @@ const useSearchCollections = (sourceData: any[]) => {
               <ListItemIcon>
                 <NFTIcon NFT_ID={asset.NFT_ID} sx={{ width: 30, height: 30 }} />
               </ListItemIcon>
-              <ListItemText primary={asset.collection} />
+              <ListItemText primary={asset.collection} primaryTypographyProps={{ variant: 'body2' }}/>
             </MenuItem>
           ))}
         </Select>
@@ -153,7 +165,7 @@ const useSort = (sourceData: any[]) => {
 
   const content = useMemo(
     () => (
-      <FormControl sx={RESPONSIVE_DESIGN.width.LESM('100%', '250px')}>
+      <FormControl sx={RESPONSIVE_DESIGN.width.LESM('100%', '200px')} size="small">
         <InputLabel>{t('common:components.table.sort.title')}</InputLabel>
         <Select
           value={value}
@@ -174,6 +186,7 @@ const useSort = (sourceData: any[]) => {
                 <ListItemText
                   sx={{ margin: 0 }}
                   primary={`${t('lendingPools.' + dataKey)}: ${t(`common:components.table.sort.${order}`)}`}
+                  primaryTypographyProps={{ variant: 'body2' }}
                 />
               </MenuItem>
             )

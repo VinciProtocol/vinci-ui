@@ -23,8 +23,8 @@ const PCTable: FC<SearchTableProps> = (props) => {
     <ROOT className="search-table" spacing={2}>
       <Header>
         <Typography variant="h5">{title}</Typography>
-        {search.content}
       </Header>
+      {search.content}
       <BasicTable {...table} />
     </ROOT>
   )

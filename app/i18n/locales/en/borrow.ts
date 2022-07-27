@@ -13,7 +13,7 @@ const locale = {
     activeCollaterals: 'Active Collaterals',
     // totalBorrowed: 'Total Borrowed',
     availableToBorrow: 'Available to Borrow',
-    borrowAPY: 'borrow APY',
+    borrowAPY: 'Borrow APY',
     functionButtons: 'Actions',
     actions: {
       depositNFT: 'Deposit NFT',
