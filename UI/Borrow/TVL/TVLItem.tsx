@@ -7,8 +7,13 @@ import Stack from '@mui/material/Stack'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import type { TVLItemProps } from './types'
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 const TVLItem: FC<TVLItemProps> = ({ value, title, icon }) => {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.up('md'))
+
   const Title = useMemoEmpty(() =>
     styled(Typography)(({ theme }) => ({
       color: theme.palette.text.secondary,
@@ -19,12 +24,11 @@ const TVLItem: FC<TVLItemProps> = ({ value, title, icon }) => {
   const ROOT = useMemoEmpty(
     () => styled(Card)`
       flex: 1;
-      max-width: 324px;
     `
   )
 
   return (
-    <ROOT variant="card">
+    <ROOT variant="card" sx={{ maxWidth: matches ? '50%' : '100%' }}>
       <CardContent>
         <Stack spacing={1}>
           <Title variant="h6">

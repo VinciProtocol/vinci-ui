@@ -23,7 +23,7 @@ const TVL: FC<TVLProps> = () => {
   const { dashboard } = useContractData()
 
   return (
-    <ROOT direction="row" spacing={2}>
+    <ROOT direction={{ xs: 'column', sm: 'row' }} spacing={2}>
       <TVLItem
         title={t('TVL.totalSupply')}
         value={
