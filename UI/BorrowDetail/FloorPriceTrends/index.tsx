@@ -53,22 +53,21 @@ const FloorPriceTrends: FC<FloorPriceTrendsProps> = () => {
         </Typography>
         <SubTitle>
           <Left spacing={2} direction="row">
-            <Typography variant="h5">
+            <Typography variant="h4">
               <NumberDisplay
                 sx={{
                   width: '1.5rem',
                   height: '1.5rem',
                 }}
                 value={chart.currentFloorPrice}
-                options="USD"
                 type="network"
               />
             </Typography>
             <Change24h spacing={1} direction="row">
-              <Typography variant="caption" color="text.secondary">
+              <Typography variant="subtitle1" color="text.secondary">
                 <span>{t('floorPriceTrends.change24h')}</span>
               </Typography>
-              <Typography variant="body2" color="primary.main">
+              <Typography variant="subtitle1" color="primary.main">
                 <NumberDisplay value={chart.change24} options="percent" />
               </Typography>
             </Change24h>
@@ -81,7 +80,7 @@ const FloorPriceTrends: FC<FloorPriceTrendsProps> = () => {
               onChange={chart.dayButton.onChange}
             >
               {chart.dayButton.list.map((day) => (
-                <ToggleButton value={day} key={day} size="small">
+                <ToggleButton value={day} key={day}>
                   {day} {t('floorPriceTrends.days')}
                 </ToggleButton>
               ))}

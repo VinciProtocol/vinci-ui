@@ -11,7 +11,7 @@ import { cloneDeep } from 'lodash'
 
 const DayButtonList = [7, 14, 30, 90]
 const useDayButton = () => {
-  const [value, setValue] = useState(90)
+  const [value, setValue] = useState(7)
   return {
     value,
     onChange: (event: MouseEvent<HTMLElement>, newValue: number) => {
@@ -91,20 +91,11 @@ export const useChart = () => {
             tooltip: {
               callbacks: {
                 label: (context) => {
-                  const label = context.dataset.label || ''
-                  return `${label}: ${context.parsed.y}`
+                  return ` ${context.parsed.y} ETH`
                 },
-              },
-            },
-            zoom: {
-              zoom: {
-                wheel: {
-                  enabled: true,
+                title: (context) => {
+                  return `${context[0].label.split(',').slice(0, -1)}`
                 },
-                drag: {
-                  enabled: true,
-                },
-                mode: 'x',
               },
             },
           },
@@ -122,9 +113,9 @@ export const useChart = () => {
               },
             },
             y: {
-              // min: 0,
+              position: 'right',
               grid: {
-                display: false,
+                display: true,
               },
               ticks: {
                 color: theme.palette.text.secondary,

@@ -64,7 +64,7 @@ const locale = {
   },
   floorPriceTrends: {
     title: 'Floor Price Trends',
-    change24h: '24h change:',
+    change24h: '24h%:',
     days: 'Days',
   },
 }
