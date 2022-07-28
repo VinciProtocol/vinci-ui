@@ -22,6 +22,7 @@ import { cloneDeep } from 'lodash'
 import { valueToBigNumber } from 'utils/math'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { RESPONSIVE_DESIGN } from 'styles/constants'
+import MultipleSelect from 'components/MultipleSelect'
 
 export const useTableSearch = () => {
   const theme = useTheme()
@@ -87,7 +88,7 @@ const useInput = (sourceData: any[]) => {
         label={t('common:components.table.collectionName')}
         InputProps={{
           endAdornment: (
-            <InputAdornment position="end">
+            <InputAdornment position="end" style={{ pointerEvents: 'none' }}>
               <SearchTwoToneIcon />
             </InputAdornment>
           ),
@@ -116,12 +117,11 @@ const useSearchCollections = (sourceData: any[]) => {
     return sourceData.filter((i) => values.find((v) => v === i.collection))
   }, [sourceData, values])
 
-  const content = useMemo(
-    () => (
+  const content = useMemo(() => {
+    return (
       <FormControl sx={RESPONSIVE_DESIGN.width.LESM('100%', '200px')} size="small">
         <InputLabel>{t('common:components.table.collections')}</InputLabel>
-        <Select
-          multiple
+        <MultipleSelect
           value={values}
           onChange={(e) => {
             const value = e.target.value
@@ -135,14 +135,13 @@ const useSearchCollections = (sourceData: any[]) => {
               <ListItemIcon>
                 <NFTIcon NFT_ID={asset.NFT_ID} sx={{ width: 30, height: 30 }} />
               </ListItemIcon>
-              <ListItemText primary={asset.collection} primaryTypographyProps={{ variant: 'body2' }}/>
+              <ListItemText primary={asset.collection} primaryTypographyProps={{ variant: 'body2' }} />
             </MenuItem>
           ))}
-        </Select>
+        </MultipleSelect>
       </FormControl>
-    ),
-    [generalAssets, t, values]
-  )
+    )
+  }, [generalAssets, t, values])
 
   return {
     data,
