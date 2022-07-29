@@ -3,13 +3,15 @@ import { useMemo } from 'react'
 import { cloneDeep } from 'lodash'
 
 import { createContext } from 'utils/createContext'
-import { useMarket } from 'domains'
+import { useContractData, useMarket } from 'domains'
 import { useOracleRecords } from 'store/thegraph/oracle/hooks'
 import { valueToBigNumber } from 'utils/math'
+import { safeGet } from 'utils/get'
 
 const useThegraphService = () => {
   const { source: oracleRecordsSource, fixed: oracleRecordsFixed } = useOracleRecords()
   const { market } = useMarket()
+  const { nftAssets } = useContractData()
 
   const oracleRecords = useMemo(() => {
     if (!oracleRecordsFixed || !oracleRecordsFixed.length) return
@@ -34,7 +36,37 @@ const useThegraphService = () => {
     return returnValue
   }, [market.nfts, oracleRecordsFixed])
 
-  return { oracleRecords, oracleRecordsSource }
+  const oracleAssets = useMemo(() => {
+    if (!nftAssets || !nftAssets.length || !oracleRecordsSource || !oracleRecordsSource.length) return []
+    const source = cloneDeep(nftAssets)
+    const lastUpdate = oracleRecordsSource[oracleRecordsSource.length - 1].createTime
+    const getData = (nft: any) => {
+      if (!oracleRecords || !nft || !oracleRecords[nft.NFT_ID]) return []
+      const returnValue = cloneDeep(oracleRecords[nft.NFT_ID])
+      const { length } = returnValue
+      if (length < 7) return returnValue
+      const startIndex = length - 7
+      return returnValue.slice(startIndex, length)
+    }
+
+    const oracleAssets = source.map((nft) => {
+      const data = getData(nft)
+
+      const change24h =
+        safeGet(() =>
+          valueToBigNumber(data[data.length - 1].y)
+            .div(data[data.length - 2].y)
+            .minus(1)
+        ) || 0
+
+      return { ...nft, lastUpdate, oracle7Trend: data, change24h }
+    })
+
+    console.log('oracleAssets', oracleAssets)
+    return oracleAssets
+  }, [nftAssets, oracleRecords, oracleRecordsSource])
+
+  return { oracleRecords, oracleAssets }
 }
 
 export type Thegraph = ReturnType<typeof useThegraphService>

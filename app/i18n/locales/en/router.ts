@@ -9,6 +9,7 @@ const locale = {
     Liquidation: 'Liquidation Marketplace',
     App: 'App',
     NFTAirdrop: 'NFT Airdrop',
+    NFTOracle: 'NFT Oracle',
   },
 }
 

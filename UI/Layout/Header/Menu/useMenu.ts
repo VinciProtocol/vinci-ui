@@ -23,6 +23,10 @@ const MenuList = [
     linkTo: '/borrow',
   },
   {
+    key: 'NFTOracle',
+    linkTo: '/nft-oracle',
+  },
+  {
     key: 'BorrowDetail',
     linkTo: '/borrow/[id]',
     hide: true,

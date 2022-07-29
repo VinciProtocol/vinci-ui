@@ -9,12 +9,13 @@ import { valueToBigNumber } from 'utils/math'
 
 const RiseOrFall: FC<{ value: any } & TypographyTypeMap<{}, 'span'>['props']> = ({ value, ...props }) => {
   const theme = useTheme()
-  const isZero = useMemo(() => valueToBigNumber(value).isZero, [value])
+  const bn = useMemo(() => valueToBigNumber(value), [value])
+  const isZero = useMemo(() => bn.isNaN() || bn.isZero(), [bn])
   const color = useMemo(() => {
     if (isZero) return theme.palette.text.primary
-    if (value.gt(0)) return theme.palette.error.main
+    if (bn.gt(0)) return theme.palette.error.main
     return theme.palette.success.main
-  }, [isZero, theme.palette.error.main, theme.palette.success.main, theme.palette.text.primary, value])
+  }, [bn, isZero, theme.palette.error.main, theme.palette.success.main, theme.palette.text.primary])
   return (
     <Typography {...props} color={color}>
       {isZero ? (

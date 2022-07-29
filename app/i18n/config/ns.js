@@ -12,6 +12,7 @@ module.exports = {
     'nft-lockdrop',
     'nft-lockdrop-deposit',
     'nft-airdrop',
+    'nft-oracle',
   ],
   defaultNS: 'common',
 }
