@@ -26,6 +26,7 @@ export const getOracleRecords = (props: OracleRecordsProps, { signal }: any) => 
     orderBy: createTime
     orderDirection: asc
   ) {
+    id
     v1
     v2
     v3
@@ -46,5 +47,5 @@ export const getOracleRecords = (props: OracleRecordsProps, { signal }: any) => 
     .then((data) => data.json())
     .then(({ data }) => data.records)
 }
-export type OracleRecord = Record<'createTime' | 'v1' | 'v2' | 'v3' | 'v4' | 'v5' | 'v6' | 'v7', string>
-export type OracleRecords = OracleRecord[]
+export type OracleRecord = Record<'id' | 'createTime' | 'v1' | 'v2' | 'v3' | 'v4' | 'v5' | 'v6' | 'v7', string>
+export type OracleRecordFixed = Omit<OracleRecord, 'createTime'> & { createTime: number }

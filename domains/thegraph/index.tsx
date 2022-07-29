@@ -8,12 +8,12 @@ import { useOracleRecords } from 'store/thegraph/oracle/hooks'
 import { valueToBigNumber } from 'utils/math'
 
 const useThegraphService = () => {
-  const oracleRecordsSource = useOracleRecords()
+  const { source: oracleRecordsSource, fixed: oracleRecordsFixed } = useOracleRecords()
   const { market } = useMarket()
 
   const oracleRecords = useMemo(() => {
-    if (!oracleRecordsSource || !oracleRecordsSource.length) return
-    const source = cloneDeep(oracleRecordsSource)
+    if (!oracleRecordsFixed || !oracleRecordsFixed.length) return
+    const source = cloneDeep(oracleRecordsFixed)
 
     const returnValue = {} as any
     const nfts = Object.keys(market.nfts).map((key) => market.nfts[key])
@@ -22,6 +22,7 @@ const useThegraphService = () => {
       delete item.createTime
       Object.keys(item).forEach((key) => {
         const nft = nfts.find((n) => n.oracle === key)
+        if (!nft) return
         if (!returnValue[nft.NFT_ID]) returnValue[nft.NFT_ID] = []
         const y = valueToBigNumber((item as any)[key])
           .div(10000)
@@ -31,9 +32,9 @@ const useThegraphService = () => {
     })
     console.log('[oracleRecords]', returnValue)
     return returnValue
-  }, [market.nfts, oracleRecordsSource])
+  }, [market.nfts, oracleRecordsFixed])
 
-  return { oracleRecords }
+  return { oracleRecords, oracleRecordsSource }
 }
 
 export type Thegraph = ReturnType<typeof useThegraphService>
