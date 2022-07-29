@@ -9,6 +9,7 @@ import Paper from '@mui/material/Paper'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import NumberDisplay from 'components/math/NumberDisplay'
+import RiseOrFall from 'components/math/RiseOrFall'
 
 import Chart from './Chart'
 import type { FloorPriceTrendsProps } from './types'
@@ -67,9 +68,7 @@ const FloorPriceTrends: FC<FloorPriceTrendsProps> = () => {
               <Typography variant="subtitle1" color="text.secondary">
                 <span>{t('floorPriceTrends.change24h')}</span>
               </Typography>
-              <Typography variant="subtitle1" color="primary.main">
-                <NumberDisplay value={chart.change24} options="percent" />
-              </Typography>
+              <RiseOrFall variant="subtitle1" value={chart.change24} />
             </Change24h>
           </Left>
           <Right>
