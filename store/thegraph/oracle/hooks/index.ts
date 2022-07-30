@@ -33,8 +33,9 @@ export const useOracleRecords = () => {
     let index = 0
 
     const addSource = (createTime: number) => {
-      source[index].createTime = createTime
-      returnValue.source.push(source[index])
+      const fixedSource: any = source[index]
+      fixedSource.createTime = createTime
+      returnValue.source.push(fixedSource)
       return source[++index]
     }
 
