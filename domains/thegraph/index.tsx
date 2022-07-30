@@ -66,7 +66,7 @@ const useThegraphService = () => {
     return oracleAssets
   }, [nftAssets, oracleRecords, oracleRecordsSource])
 
-  return { oracleRecords, oracleAssets }
+  return { oracleRecords, oracleAssets, oracleRecordsSource }
 }
 
 export type Thegraph = ReturnType<typeof useThegraphService>

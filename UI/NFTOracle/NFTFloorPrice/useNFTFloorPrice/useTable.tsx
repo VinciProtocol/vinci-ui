@@ -1,7 +1,8 @@
 import { useMemo } from 'react'
+import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 
-import type { TableColumnsProps } from 'lib/table/BasicTable/types'
+import type { BasicTableProps, TableColumnsProps } from 'lib/table/BasicTable/types'
 import {
   leftHeaderRenderer,
   BalanceCellRenderer,
@@ -15,6 +16,7 @@ import {
 import { useTableSearch } from './useTableSearch'
 
 export const useTable = () => {
+  const router = useRouter()
   const { t } = useTranslation('nft-oracle')
 
   const columns = useMemo(
@@ -66,6 +68,18 @@ export const useTable = () => {
     [t]
   )
 
+  const tableProps: BasicTableProps['tableProps'] = useMemo(
+    () => ({
+      onRowClick: ({ rowData }) => {
+        router.push({
+          pathname: '/nft-oracle/[id]',
+          query: { id: rowData.underlyingAsset },
+        })
+      },
+    }),
+    [router]
+  )
+
   const title = useMemo(() => t('NFTFloorPrice.title'), [t])
 
   const search = useTableSearch()
@@ -75,6 +89,7 @@ export const useTable = () => {
     search,
     table: {
       columns,
+      tableProps,
     },
   }
 }

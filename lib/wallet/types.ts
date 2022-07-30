@@ -22,7 +22,7 @@ export type ChainInformation = ChainType & {
   nativeCurrency: Currency
   fullName: string
   shortName: string
-  explorerUrl?: string
+  explorerUrl: string
 }
 
 export type AccountType = 'contract' | 'normal'

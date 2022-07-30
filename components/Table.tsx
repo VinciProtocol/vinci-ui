@@ -21,6 +21,7 @@ import { valueToBigNumber } from 'utils/math'
 import RiseOrFall from './math/RiseOrFall'
 import { safeGet } from 'utils/get'
 import type { FloorPriceTrendsChartProps } from 'UI/BorrowDetail/FloorPriceTrends/types'
+import LinkToAddress from './LinkToAddress'
 
 const Oracle7Trend: FC<{ nft: any }> = ({ nft }) => {
   const theme = useTheme()
@@ -118,7 +119,15 @@ export const Oracle7TrendCellRenderer: TableCellRenderer = ({ rowData }) => {
 export const DateCellRenderer: TableCellRenderer = ({ cellData }) => {
   return (
     <TableCell component="div">
-      <span>{safeGet(() => format(cellData, 'MM/dd hh:mm:ss')) || '-'}</span>
+      <span>{safeGet(() => format(cellData, 'MM/dd hh:mm')) || '-'}</span>
+    </TableCell>
+  )
+}
+
+export const IdCellRenderer: TableCellRenderer = ({ cellData }) => {
+  return (
+    <TableCell component="div">
+      <LinkToAddress address={cellData} />
     </TableCell>
   )
 }

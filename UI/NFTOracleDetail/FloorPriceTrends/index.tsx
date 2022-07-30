@@ -1,8 +1,8 @@
 import type { FC } from 'react'
-import { Fragment } from 'react'
-import { useMemo } from 'react'
+import { Fragment, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { styled, useTheme } from '@mui/material/styles'
+import { styled } from '@mui/material/styles'
+import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
@@ -24,7 +24,7 @@ const FloorPriceTrends: FC<FloorPriceTrendsProps> = () => {
     styled(Paper)(({ theme }) => ({
       padding: theme.spacing(2),
       borderRadius: '10px',
-      minHeight: '530px',
+      flex: 8,
     }))
   )
   const Title = useMemoEmpty(() => styled('div')``)
@@ -54,11 +54,11 @@ const FloorPriceTrends: FC<FloorPriceTrendsProps> = () => {
   const left = useMemo(
     () => (
       <Left spacing={2} direction="row">
-        <Typography variant="h4">
+        <Typography variant="h5">
           <NumberDisplay
             sx={{
-              width: '1.5rem',
-              height: '1.5rem',
+              width: '1.25rem',
+              height: '1.25rem',
             }}
             value={chart.currentFloorPrice}
             type="network"
@@ -80,7 +80,7 @@ const FloorPriceTrends: FC<FloorPriceTrendsProps> = () => {
       <Right>
         <ToggleButtonGroup color="primary" value={chart.dayButton.value} exclusive onChange={chart.dayButton.onChange}>
           {chart.dayButton.list.map((day) => (
-            <ToggleButton value={day} key={day}>
+            <ToggleButton value={day} key={day} size="small">
               {day} {t('floorPriceTrends.days')}
             </ToggleButton>
           ))}

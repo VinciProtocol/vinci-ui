@@ -23,10 +23,6 @@ const MenuList = [
     linkTo: '/borrow',
   },
   {
-    key: 'NFTOracle',
-    linkTo: '/nft-oracle',
-  },
-  {
     key: 'BorrowDetail',
     linkTo: '/borrow/[id]',
     hide: true,
@@ -34,6 +30,15 @@ const MenuList = [
   {
     key: 'NFTAirdrop',
     linkTo: '/nft-airdrop',
+    hide: true,
+  },
+  {
+    key: 'NFTOracle',
+    linkTo: '/nft-oracle',
+  },
+  {
+    key: 'NFTOracleDetail',
+    linkTo: '/nft-oracle/[id]',
     hide: true,
   },
   // {

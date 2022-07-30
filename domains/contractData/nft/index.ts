@@ -7,7 +7,7 @@ import { useNFTInfo } from './application/NFTInfo'
 import { log } from 'utils/dev'
 import { safeGet } from 'utils/get'
 
-const NFTRouterPath = ['/borrow/[id]', '/nft-lockdrop/[id]']
+const NFTRouterPath = ['/borrow/[id]', '/nft-lockdrop/[id]', '/nft-oracle/[id]']
 
 const useContractNFTService = () => {
   const { generalAssets, nftAssets } = useContractData()
