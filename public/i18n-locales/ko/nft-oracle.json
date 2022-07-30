@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "NFT 오라클",
+    "subTitle": "Vinci NFT 오라클은 NFT 지원 DeFi 생태계를 위한 온체인 최저가 오라클입니다."
+  },
+  "oracleCards": {
+    "dataSources": {
+      "title": "여러 데이터 소스",
+      "subTitle": "모든 NFT 가격 데이터는 가격 하한선 API를 직접 모니터링하여 여러 NFT 시장에서 제공됩니다."
+    },
+    "pricingStrategies": {
+      "title": "안전한 가격 책정 전략",
+      "subTitle": "오라클의 보안을 유지하기 위해 오프체인 및 온체인 데이터 보호 메커니즘을 설계했습니다."
+    },
+    "dataFeeds": {
+      "title": "쉬운 통합",
+      "subTitle": "Oracle은 NFT 지원 DeFi 프로젝트에 쉽게 통합됩니다."
+    }
+  },
+  "NFTFloorPrice": {
+    "title": "NFT 하한가",
+    "collection": "수집",
+    "currentFloorPrice": "가격 하한선",
+    "change24h": "24시간%",
+    "lastUpdate": "마지막 업데이트",
+    "trend": "7일 추세"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "NFT Oracle",
+    "subTitle": "Vinci NFT oracles là oracles giá sàn trên chuỗi cho hệ sinh thái DeFi được hỗ trợ bởi NFT."
+  },
+  "oracleCards": {
+    "dataSources": {
+      "title": "Nhiều nguồn dữ liệu",
+      "subTitle": "Tất cả dữ liệu giá NFT được lấy từ nhiều thị trường NFT bằng cách theo dõi trực tiếp các API giá sàn của họ."
+    },
+    "pricingStrategies": {
+      "title": "Các chiến lược định giá an toàn",
+      "subTitle": "Để giữ an toàn cho oracle của chúng tôi, chúng tôi đã thiết kế cả cơ chế bảo vệ dữ liệu ngoài chuỗi và trên chuỗi."
+    },
+    "dataFeeds": {
+      "title": "Dễ dàng tích hợp",
+      "subTitle": "Oracles dễ dàng tích hợp vào các dự án DeFi được NFT hỗ trợ."
+    }
+  },
+  "NFTFloorPrice": {
+    "title": "Giá sàn NFT",
+    "collection": "Bộ sưu tập",
+    "currentFloorPrice": "Giá sàn",
+    "change24h": "24h%",
+    "lastUpdate": "Cập nhật cuối cùng",
+    "trend": "Xu hướng trong 7 ngày"
+  }
+}

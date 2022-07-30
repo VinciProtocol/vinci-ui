@@ -1,0 +1,20 @@
+{
+  "info": {
+    "threshold": "Umbral de desviación",
+    "interval": "Intervalo mínimo",
+    "fluctuation": "Fluctuación máxima",
+    "update": "Última actualización",
+    "address": "Dirección del contrato"
+  },
+  "tips": {
+    "threshold": "Cuando los datos del precio mínimo fuera de la cadena superan el umbral de desviación, se activará una transacción en la cadena para escribir un nuevo precio en nuestro contrato inteligente de Oracle.",
+    "interval": "El intervalo entre dos actualizaciones no puede ser inferior a 30 minutos.",
+    "fluctuation": "La fluctuación entre dos actualizaciones no puede exceder el 15%."
+  },
+  "updateHistory": {
+    "title": "Historial de actualizaciones",
+    "id": "ID de transacción",
+    "price": "Precio",
+    "createTime": "Fecha"
+  }
+}

@@ -62,7 +62,7 @@
   },
   "floorPriceTrends": {
     "title": "가격 하한선",
-    "change24h": "24시간 변경:",
+    "change24h": "24시간%:",
     "days": "날"
   }
 }

@@ -62,7 +62,7 @@
   },
   "floorPriceTrends": {
     "title": "Floor-Preis-Trends",
-    "change24h": "24h Wechsel:",
+    "change24h": "24h%:",
     "days": "Tage"
   }
 }

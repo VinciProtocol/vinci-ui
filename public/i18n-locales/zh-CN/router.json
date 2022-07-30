@@ -8,6 +8,7 @@
     "Stake": "赌注",
     "Liquidation": "清算市场",
     "App": "应用程序",
-    "NFTAirdrop": "NFT空投"
+    "NFTAirdrop": "NFT空投",
+    "NFTOracle": "NFT 预言机"
   }
 }

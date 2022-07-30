@@ -1,0 +1,20 @@
+{
+  "info": {
+    "threshold": "Limite de desvio",
+    "interval": "Intervalo mínimo",
+    "fluctuation": "Flutuação máxima",
+    "update": "Última atualização",
+    "address": "Endereço do contrato"
+  },
+  "tips": {
+    "threshold": "Quando os dados de preço mínimo fora da cadeia se movem mais do que o limite de desvio, uma transação na cadeia será acionada para gravar um novo preço em nosso contrato inteligente oracle.",
+    "interval": "O intervalo entre duas atualizações não pode ser inferior a 30 minutos.",
+    "fluctuation": "A flutuação entre duas atualizações não pode exceder 15%."
+  },
+  "updateHistory": {
+    "title": "Atualizar histórico",
+    "id": "Código da transação",
+    "price": "Preço",
+    "createTime": "Encontro"
+  }
+}

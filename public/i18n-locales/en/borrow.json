@@ -12,7 +12,7 @@
     "totalCollateralledValue": "Total Collateral Value",
     "activeCollaterals": "Active Collaterals",
     "availableToBorrow": "Available to Borrow",
-    "borrowAPY": "borrow APY",
+    "borrowAPY": "Borrow APY",
     "functionButtons": "Actions",
     "actions": {
       "depositNFT": "Deposit NFT",

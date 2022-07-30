@@ -1,0 +1,20 @@
+{
+  "info": {
+    "threshold": "偏差阈值",
+    "interval": "最小间隔",
+    "fluctuation": "最大波动",
+    "update": "最后更新",
+    "address": "合约地址"
+  },
+  "tips": {
+    "threshold": "当链下底价数据移动超过偏差阈值时，将触发链上交易以将新价格写入我们的预言机智能合约。",
+    "interval": "两次更新之间的间隔不能少于 30 分钟。",
+    "fluctuation": "两次更新之间的波动不能超过 15%。"
+  },
+  "updateHistory": {
+    "title": "更新历史",
+    "id": "交易编号",
+    "price": "价格",
+    "createTime": "日期"
+  }
+}

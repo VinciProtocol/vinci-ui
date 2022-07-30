@@ -62,7 +62,7 @@
   },
   "floorPriceTrends": {
     "title": "Tendances des prix planchers",
-    "change24h": "changement 24h:",
+    "change24h": "24h% :",
     "days": "Journées"
   }
 }

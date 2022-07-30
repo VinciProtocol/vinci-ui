@@ -62,7 +62,7 @@
   },
   "floorPriceTrends": {
     "title": "Tendências de preço mínimo",
-    "change24h": "Mudança 24h:",
+    "change24h": "24h%:",
     "days": "Dias"
   }
 }

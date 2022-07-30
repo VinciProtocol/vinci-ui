@@ -8,6 +8,7 @@
     "Stake": "Einsatz",
     "Liquidation": "Liquidationsmarktplatz",
     "App": "App",
-    "NFTAirdrop": "NFT-Airdrop"
+    "NFTAirdrop": "NFT-Airdrop",
+    "NFTOracle": "NFT-Orakel"
   }
 }

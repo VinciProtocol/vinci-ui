@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "Oracolo NFT",
+    "subTitle": "Gli oracoli Vinci NFT sono oracoli a prezzo minimo della catena per l'ecosistema DeFi supportato da NFT."
+  },
+  "oracleCards": {
+    "dataSources": {
+      "title": "Più origini dati",
+      "subTitle": "Tutti i dati sui prezzi NFT provengono da più mercati NFT monitorando direttamente le loro API dei prezzi iniziali."
+    },
+    "pricingStrategies": {
+      "title": "Strategie di prezzo sicure",
+      "subTitle": "Per mantenere il nostro Oracle al sicuro, abbiamo progettato meccanismi di protezione dei dati sia off-chain che on-chain."
+    },
+    "dataFeeds": {
+      "title": "Facile da integrare",
+      "subTitle": "Gli Oracle sono facili da integrare nei progetti DeFi supportati da NFT."
+    }
+  },
+  "NFTFloorPrice": {
+    "title": "Prezzo minimo NFT",
+    "collection": "Collezione",
+    "currentFloorPrice": "Prezzo al piano",
+    "change24h": "24 ore%",
+    "lastUpdate": "Ultimo aggiornamento",
+    "trend": "Tendenza di 7 giorni"
+  }
+}

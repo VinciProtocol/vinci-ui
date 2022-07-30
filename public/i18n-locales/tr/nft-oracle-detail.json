@@ -1,0 +1,20 @@
+{
+  "info": {
+    "threshold": "sapma eşiği",
+    "interval": "Minimum aralık",
+    "fluctuation": "Maksimum dalgalanma",
+    "update": "Son Güncelleme",
+    "address": "Sözleşme adresi"
+  },
+  "tips": {
+    "threshold": "Zincir dışı taban fiyat verileri sapma eşiğinden daha fazla hareket ettiğinde, Oracle akıllı sözleşmemize yeni bir fiyat yazmak için zincir üstü bir işlem tetiklenir.",
+    "interval": "İki güncelleme arasındaki aralık 30 dakikadan az olamaz.",
+    "fluctuation": "İki güncelleme arasındaki dalgalanma %15'i aşamaz."
+  },
+  "updateHistory": {
+    "title": "Güncelleme Geçmişi",
+    "id": "İşlem Kimliği",
+    "price": "Fiyat",
+    "createTime": "Tarih"
+  }
+}

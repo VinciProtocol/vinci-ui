@@ -56,13 +56,13 @@
     "liquidationPrice": "Prezzo minimo del collaterale al quale la tua posizione verrà liquidata.",
     "collateralValue": "Valore della garanzia NFT depositata nella tua posizione.",
     "totalBorrowed": "Attualmente totale preso in prestito nella tua posizione.",
-    "availableToBorrow": "Valore del prestito prestabile data la garanzia depositata.",
+    "availableToBorrow": "Valore del prestito prendibile in prestito data la garanzia depositata.",
     "ltv": "Il rapporto Loan to Value (LTV) definisce l'importo massimo delle attività di prestito che possono essere prese in prestito con una specifica garanzia NFT.",
     "liquidationFee": "Questo è lo sconto che un liquidatore ottiene quando acquista una garanzia NFT segnalata per la liquidazione."
   },
   "floorPriceTrends": {
     "title": "Andamento dei prezzi di base",
-    "change24h": "Cambio 24 ore:",
+    "change24h": "24 ore%:",
     "days": "Giorni"
   }
 }

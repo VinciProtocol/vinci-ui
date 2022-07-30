@@ -12,7 +12,7 @@
     "totalCollateralledValue": "Tổng giá trị tài sản đảm bảo",
     "activeCollaterals": "Tài sản thế chấp đang hoạt động",
     "availableToBorrow": "Có sẵn để vay",
-    "borrowAPY": "mượn APY",
+    "borrowAPY": "Vay APY",
     "functionButtons": "Hành động",
     "actions": {
       "depositNFT": "Gửi tiền NFT",

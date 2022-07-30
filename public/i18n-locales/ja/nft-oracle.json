@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "NFTオラクル",
+    "subTitle": "ヴィンチ NFT オラクルは、NFT に裏打ちされた DeFi エコシステムのオンチェーン最低価格オラクルです。"
+  },
+  "oracleCards": {
+    "dataSources": {
+      "title": "複数のデータ ソース",
+      "subTitle": "すべての NFT 価格データは、最低価格 API を直接監視することにより、複数の NFT マーケットプレイスから取得されます。"
+    },
+    "pricingStrategies": {
+      "title": "安全な価格戦略",
+      "subTitle": "オラクルを安全に保つために、オフチェーンとオンチェーンの両方のデータ保護メカニズムを設計しました。"
+    },
+    "dataFeeds": {
+      "title": "統合が容易",
+      "subTitle": "オラクルは、NFT が支援する DeFi プロジェクトに簡単に統合できます。"
+    }
+  },
+  "NFTFloorPrice": {
+    "title": "NFT最低価格",
+    "collection": "コレクション",
+    "currentFloorPrice": "最低料金",
+    "change24h": "24時間%",
+    "lastUpdate": "最後の更新",
+    "trend": "7日間のトレンド"
+  }
+}

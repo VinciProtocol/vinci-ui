@@ -62,7 +62,7 @@
   },
   "floorPriceTrends": {
     "title": "Xu hướng giá sàn",
-    "change24h": "Thay đổi 24h:",
+    "change24h": "% 24h:",
     "days": "Ngày"
   }
 }

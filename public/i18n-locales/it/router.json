@@ -8,6 +8,7 @@
     "Stake": "Palo",
     "Liquidation": "Mercato della liquidazione",
     "App": "App",
-    "NFTAirdrop": "Airdrop NFT"
+    "NFTAirdrop": "Airdrop NFT",
+    "NFTOracle": "Oracolo NFT"
   }
 }

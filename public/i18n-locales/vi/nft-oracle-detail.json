@@ -1,0 +1,20 @@
+{
+  "info": {
+    "threshold": "Ngưỡng sai lệch",
+    "interval": "Khoảng thời gian tối thiểu",
+    "fluctuation": "Dao động tối đa",
+    "update": "Cập nhật cuối cùng",
+    "address": "Địa chỉ hợp đồng"
+  },
+  "tips": {
+    "threshold": "Khi dữ liệu giá sàn ngoài chuỗi di chuyển nhiều hơn ngưỡng lệch, một giao dịch trên chuỗi sẽ được kích hoạt để ghi giá mới vào hợp đồng thông minh oracle của chúng tôi.",
+    "interval": "Khoảng thời gian giữa hai lần cập nhật không được ít hơn 30 phút.",
+    "fluctuation": "Sự dao động giữa hai lần cập nhật không được vượt quá 15%."
+  },
+  "updateHistory": {
+    "title": "Cập nhật lịch sử",
+    "id": "ID giao dịch",
+    "price": "Giá bán",
+    "createTime": "Ngày"
+  }
+}

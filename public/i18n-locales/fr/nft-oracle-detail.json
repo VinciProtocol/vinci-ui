@@ -1,0 +1,20 @@
+{
+  "info": {
+    "threshold": "Seuil de déviation",
+    "interval": "Intervalle minimal",
+    "fluctuation": "Fluctuation maximale",
+    "update": "Dernière mise à jour",
+    "address": "Adresse du contrat"
+  },
+  "tips": {
+    "threshold": "Lorsque les données de prix plancher hors chaîne dépassent le seuil d'écart, une transaction en chaîne sera déclenchée pour écrire un nouveau prix dans notre contrat intelligent oracle.",
+    "interval": "L'intervalle entre deux mises à jour ne peut être inférieur à 30 minutes.",
+    "fluctuation": "La fluctuation entre deux mises à jour ne peut excéder 15 %."
+  },
+  "updateHistory": {
+    "title": "Mettre à jour l'historique",
+    "id": "Identifiant de transaction",
+    "price": "Prix",
+    "createTime": "Date"
+  }
+}

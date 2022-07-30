@@ -12,7 +12,7 @@
     "market": "Mercado:"
   },
   "NFTBorrowPool": {
-    "title": "Fondos de préstamo",
+    "title": "Fondos de préstamos",
     "symbol": "Activo",
     "borrowAPY": "préstamo APY",
     "basedOnYourCollateral": "Basado en su garantía",
@@ -62,7 +62,7 @@
   },
   "floorPriceTrends": {
     "title": "Tendencias de precios mínimos",
-    "change24h": "Cambio 24h:",
+    "change24h": "24h%:",
     "days": "Días"
   }
 }

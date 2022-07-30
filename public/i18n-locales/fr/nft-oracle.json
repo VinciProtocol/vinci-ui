@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "Oracle NFT",
+    "subTitle": "Les oracles Vinci NFT sont des oracles de prix plancher en chaîne pour l'écosystème DeFi soutenu par NFT."
+  },
+  "oracleCards": {
+    "dataSources": {
+      "title": "Sources de données multiples",
+      "subTitle": "Toutes les données sur les prix NFT proviennent de plusieurs marchés NFT en surveillant directement leurs API de prix plancher."
+    },
+    "pricingStrategies": {
+      "title": "Stratégies tarifaires sécurisées",
+      "subTitle": "Pour assurer la sécurité de notre oracle, nous avons conçu des mécanismes de protection des données hors chaîne et en chaîne."
+    },
+    "dataFeeds": {
+      "title": "Facile à intégrer",
+      "subTitle": "Les oracles sont faciles à intégrer aux projets DeFi soutenus par NFT."
+    }
+  },
+  "NFTFloorPrice": {
+    "title": "Prix plancher NFT",
+    "collection": "Le recueil",
+    "currentFloorPrice": "Prix plancher",
+    "change24h": "24h%",
+    "lastUpdate": "Dernière mise à jour",
+    "trend": "Tendance sur 7 jours"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "info": {
+    "threshold": "Soglia di deviazione",
+    "interval": "Intervallo minimo",
+    "fluctuation": "Massima fluttuazione",
+    "update": "Ultimo aggiornamento",
+    "address": "Indirizzo del contratto"
+  },
+  "tips": {
+    "threshold": "Quando i dati del prezzo iniziale off-chain si spostano oltre la soglia di deviazione, verrà attivata una transazione on-chain per scrivere un nuovo prezzo nel nostro smart contract Oracle.",
+    "interval": "L'intervallo tra due aggiornamenti non può essere inferiore a 30 minuti.",
+    "fluctuation": "La fluttuazione tra due aggiornamenti non può superare il 15%."
+  },
+  "updateHistory": {
+    "title": "Aggiorna cronologia",
+    "id": "ID transazione",
+    "price": "Prezzo",
+    "createTime": "Data"
+  }
+}

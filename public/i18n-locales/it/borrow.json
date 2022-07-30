@@ -12,7 +12,7 @@
     "totalCollateralledValue": "Valore totale della garanzia",
     "activeCollaterals": "Garanzie attive",
     "availableToBorrow": "Disponibile per prendere in prestito",
-    "borrowAPY": "prendere in prestito APY",
+    "borrowAPY": "Prendi in prestito APY",
     "functionButtons": "Azioni",
     "actions": {
       "depositNFT": "Deposito NFT",

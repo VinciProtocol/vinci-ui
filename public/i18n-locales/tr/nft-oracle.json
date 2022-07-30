@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "NFT Oracle'ı",
+    "subTitle": "Vinci NFT kahinleri, NFT destekli DeFi ekosistemi için zincir üstü taban fiyat kahinleridir."
+  },
+  "oracleCards": {
+    "dataSources": {
+      "title": "Çoklu veri kaynakları",
+      "subTitle": "Tüm NFT fiyat verileri, taban fiyat API'lerini doğrudan izleyerek birden fazla NFT pazarından elde edilir."
+    },
+    "pricingStrategies": {
+      "title": "Güvenli fiyatlandırma stratejileri",
+      "subTitle": "Oracle'ımızı güvende tutmak için hem zincir dışı hem de zincir üstü veri koruma mekanizmaları tasarladık."
+    },
+    "dataFeeds": {
+      "title": "Kolay entegrasyon",
+      "subTitle": "Oracles, NFT destekli DeFi projelerine kolayca entegre edilebilir."
+    }
+  },
+  "NFTFloorPrice": {
+    "title": "NFT Kat Fiyatı",
+    "collection": "Toplamak",
+    "currentFloorPrice": "Kat Fiyatı",
+    "change24h": "24h%",
+    "lastUpdate": "Son Güncelleme",
+    "trend": "7 Günlük Trend"
+  }
+}

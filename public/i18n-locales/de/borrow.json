@@ -2,7 +2,7 @@
   "title": "Ausleihen",
   "subTitle": "Hinterlegen Sie Ihre NFTs als Sicherheit, um Kredite aufzunehmen",
   "TVL": {
-    "totalCollateralledValue": "Besicherter Gesamtwert",
+    "totalCollateralledValue": "Gesamter besicherter Wert",
     "totalBorrowed": "Insgesamt geliehen"
   },
   "NFTCollateralCollections": {

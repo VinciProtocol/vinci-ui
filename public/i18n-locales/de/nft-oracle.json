@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "NFT-Orakel",
+    "subTitle": "Vinci-NFT-Orakel sind On-Chain-Bodenpreisorakel für das NFT-unterstützte DeFi-Ökosystem."
+  },
+  "oracleCards": {
+    "dataSources": {
+      "title": "Mehrere Datenquellen",
+      "subTitle": "Alle NFT-Preisdaten werden von mehreren NFT-Marktplätzen bezogen, indem deren Mindestpreis-APIs direkt überwacht werden."
+    },
+    "pricingStrategies": {
+      "title": "Sichere Preisstrategien",
+      "subTitle": "Um unser Orakel sicher zu halten, haben wir sowohl Off-Chain- als auch On-Chain-Datenschutzmechanismen entwickelt."
+    },
+    "dataFeeds": {
+      "title": "Einfach zu integrieren",
+      "subTitle": "Oracles lassen sich leicht in NFT-unterstützte DeFi-Projekte integrieren."
+    }
+  },
+  "NFTFloorPrice": {
+    "title": "NFT-Mindestpreis",
+    "collection": "Sammlung",
+    "currentFloorPrice": "Bodenpreis",
+    "change24h": "24h%",
+    "lastUpdate": "Letztes Update",
+    "trend": "7-Tage-Trend"
+  }
+}

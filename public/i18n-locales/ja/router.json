@@ -1,13 +1,14 @@
 {
   "menu": {
-    "Markets": "市場",
+    "Markets": "マーケット",
     "Dashboard": "ダッシュボード",
     "Lend": "貸す",
     "Borrow": "借りる",
     "BorrowDetail": "詳細を借りる",
     "Stake": "ステーク",
-    "Liquidation": "清算マーケットプレイス",
+    "Liquidation": "清算市場",
     "App": "アプリ",
-    "NFTAirdrop": "NFTエアドロップ"
+    "NFTAirdrop": "NFT エアドロップ",
+    "NFTOracle": "NFTオラクル"
   }
 }

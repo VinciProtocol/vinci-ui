@@ -12,7 +12,7 @@
     "totalCollateralledValue": "Toplam Teminat Değeri",
     "activeCollaterals": "Aktif Teminatlar",
     "availableToBorrow": "Ödünç Alınabilir",
-    "borrowAPY": "APY'yi ödünç almak",
+    "borrowAPY": "APY'yi ödünç al",
     "functionButtons": "Hareketler",
     "actions": {
       "depositNFT": "Para Yatırma NFT",

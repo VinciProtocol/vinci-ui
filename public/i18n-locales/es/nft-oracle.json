@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "Oráculo NFT",
+    "subTitle": "Los oráculos Vinci NFT son oráculos de precio mínimo en cadena para el ecosistema DeFi respaldado por NFT."
+  },
+  "oracleCards": {
+    "dataSources": {
+      "title": "Múltiples fuentes de datos",
+      "subTitle": "Todos los datos de precios de NFT se obtienen de múltiples mercados de NFT al monitorear directamente sus API de precios mínimos."
+    },
+    "pricingStrategies": {
+      "title": "Estrategias de precios seguras",
+      "subTitle": "Para mantener nuestro oráculo seguro, hemos diseñado mecanismos de protección de datos dentro y fuera de la cadena."
+    },
+    "dataFeeds": {
+      "title": "Fácil de integrar",
+      "subTitle": "Los oráculos son fáciles de integrar en proyectos DeFi respaldados por NFT."
+    }
+  },
+  "NFTFloorPrice": {
+    "title": "Precio mínimo NFT",
+    "collection": "Recopilación",
+    "currentFloorPrice": "Precio mínimo",
+    "change24h": "24h%",
+    "lastUpdate": "Última actualización",
+    "trend": "Tendencia de 7 días"
+  }
+}

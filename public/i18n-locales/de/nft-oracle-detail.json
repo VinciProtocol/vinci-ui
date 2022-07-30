@@ -1,0 +1,20 @@
+{
+  "info": {
+    "threshold": "Abweichungsschwelle",
+    "interval": "Mindestintervall",
+    "fluctuation": "Maximale Fluktuation",
+    "update": "Letztes Update",
+    "address": "Vertragsadresse"
+  },
+  "tips": {
+    "threshold": "Wenn sich die Off-Chain-Mindestpreisdaten um mehr als die Abweichungsschwelle bewegen, wird eine On-Chain-Transaktion ausgelöst, um einen neuen Preis in unseren Orakel-Smart-Vertrag zu schreiben.",
+    "interval": "Das Intervall zwischen zwei Aktualisierungen darf nicht weniger als 30 Minuten betragen.",
+    "fluctuation": "Die Schwankung zwischen zwei Updates darf 15 % nicht überschreiten."
+  },
+  "updateHistory": {
+    "title": "Verlauf aktualisieren",
+    "id": "Transaktions-ID",
+    "price": "Preis",
+    "createTime": "Datum"
+  }
+}

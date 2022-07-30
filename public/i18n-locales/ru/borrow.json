@@ -12,7 +12,7 @@
     "totalCollateralledValue": "Общая залоговая стоимость",
     "activeCollaterals": "Активные залога",
     "availableToBorrow": "Доступно для заимствования",
-    "borrowAPY": "занять APY",
+    "borrowAPY": "Занять APY",
     "functionButtons": "Действия",
     "actions": {
       "depositNFT": "Депозит NFT",

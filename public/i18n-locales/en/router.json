@@ -8,6 +8,7 @@
     "Stake": "Stake",
     "Liquidation": "Liquidation Marketplace",
     "App": "App",
-    "NFTAirdrop": "NFT Airdrop"
+    "NFTAirdrop": "NFT Airdrop",
+    "NFTOracle": "NFT Oracle"
   }
 }

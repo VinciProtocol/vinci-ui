@@ -62,7 +62,7 @@
   },
   "floorPriceTrends": {
     "title": "Taban Fiyat Trendleri",
-    "change24h": "24 saat değişiklik:",
+    "change24h": "24h%:",
     "days": "Günler"
   }
 }

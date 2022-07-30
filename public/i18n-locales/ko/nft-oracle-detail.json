@@ -1,0 +1,20 @@
+{
+  "info": {
+    "threshold": "편차 임계값",
+    "interval": "최소 간격",
+    "fluctuation": "최대 변동",
+    "update": "마지막 업데이트",
+    "address": "계약 주소"
+  },
+  "tips": {
+    "threshold": "오프체인 가격 하한선 데이터가 편차 임계값 이상으로 이동하면 온체인 트랜잭션이 트리거되어 Oracle 스마트 계약에 새 가격을 기록합니다.",
+    "interval": "두 업데이트 사이의 간격은 30분보다 짧을 수 없습니다.",
+    "fluctuation": "두 업데이트 간의 변동은 15%를 초과할 수 없습니다."
+  },
+  "updateHistory": {
+    "title": "업데이트 기록",
+    "id": "거래 ID",
+    "price": "가격",
+    "createTime": "날짜"
+  }
+}

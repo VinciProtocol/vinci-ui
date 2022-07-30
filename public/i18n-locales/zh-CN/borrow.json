@@ -12,7 +12,7 @@
     "totalCollateralledValue": "总抵押品价值",
     "activeCollaterals": "主动抵押品",
     "availableToBorrow": "可借",
-    "borrowAPY": "借APY",
+    "borrowAPY": "借用APY",
     "functionButtons": "行动",
     "actions": {
       "depositNFT": "充值 NFT",

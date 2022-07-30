@@ -62,7 +62,7 @@
   },
   "floorPriceTrends": {
     "title": "底价趋势",
-    "change24h": "24小时变化：",
+    "change24h": "24 小时：",
     "days": "天"
   }
 }
