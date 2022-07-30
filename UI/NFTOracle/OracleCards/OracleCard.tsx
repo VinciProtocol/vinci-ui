@@ -36,10 +36,10 @@ const OracleCard: FC<OracleCardProps> = ({ learnMoreUrl, title, subTitle, icon }
           {icon}
           <Title>
             <Stack spacing={1} style={{ minHeight: matches ? '80px' : '0' }}>
-              <Typography variant="subtitle1" color="text.primary">
+              <Typography variant="subtitle2" color="text.primary" textTransform="uppercase" fontWeight="bold">
                 {title}
               </Typography>
-              <Typography variant="subtitle2" color="#999999">
+              <Typography variant="body1" color="text.secondary">
                 {subTitle}
               </Typography>
             </Stack>

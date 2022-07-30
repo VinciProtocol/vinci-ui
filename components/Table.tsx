@@ -83,23 +83,17 @@ const Oracle7Trend: FC<{ nft: any }> = ({ nft }) => {
               time: {
                 unit: 'day',
               },
-              ticks: {
-                display: false,
-              },
-              grid: {
-                display: false,
-              },
+              display: false,
             },
             y: {
-              position: 'right',
-              grid: {
-                display: false,
-              },
-              ticks: {
-                display: false,
-              },
+              display: false,
             },
           },
+          elements: {
+            point: {
+              radius: 2,
+            }
+          }
         },
       } as FloorPriceTrendsChartProps),
     [nft?.collection, nft.oracle7Trend, theme.palette.primary.main]
@@ -134,7 +128,7 @@ export const IdCellRenderer: TableCellRenderer = ({ cellData }) => {
 export const Change24hCellRenderer: TableCellRenderer = ({ cellData }) => {
   return (
     <TableCell component="div">
-      <RiseOrFall value={cellData} />
+      <RiseOrFall value={cellData} variant="body2" />
     </TableCell>
   )
 }

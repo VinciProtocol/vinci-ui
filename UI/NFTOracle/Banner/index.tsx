@@ -53,7 +53,7 @@ const Banner: FC = () => {
           <Typography variant="h4" color="common.white">
             {t('banner.title')}
           </Typography>
-          <Typography variant="body1" color="#C4C4C4">
+          <Typography variant="body1" color="grey.400">
             {t('banner.subTitle')}
           </Typography>
           <Button

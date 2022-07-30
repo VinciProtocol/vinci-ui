@@ -13,21 +13,24 @@ const RiseOrFall: FC<{ value: any } & TypographyTypeMap<{}, 'span'>['props']> = 
   const isZero = useMemo(() => bn.isNaN() || bn.isZero(), [bn])
   const color = useMemo(() => {
     if (isZero) return theme.palette.text.primary
-    if (bn.gt(0)) return theme.palette.error.main
-    return theme.palette.success.main
+    if (bn.gt(0)) return theme.palette.success.main
+    return theme.palette.error.main
   }, [bn, isZero, theme.palette.error.main, theme.palette.success.main, theme.palette.text.primary])
   return (
     <Typography {...props} color={color}>
       {isZero ? (
-        <span>0</span>
+        <span>0%</span>
       ) : (
-        <NumberDisplay
-          value={value}
-          options="percent"
-          numberFormatOptions={{
-            maximumFractionDigits: 2,
-          }}
-        />
+        <>
+          {bn.gt(0) && <span>+</span>}
+          <NumberDisplay
+            value={value}
+            options="percent"
+            numberFormatOptions={{
+              maximumFractionDigits: 2,
+            }}
+          />
+        </>
       )}
     </Typography>
   )
