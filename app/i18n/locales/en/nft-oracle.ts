@@ -25,6 +25,10 @@ const locale = {
     change24h: '24h%',
     lastUpdate: 'Last Update',
     trend: '7-Day Trend',
+    functionButtons: 'Action',
+    actions: {
+      details: 'Details',
+    },
   },
 }
 

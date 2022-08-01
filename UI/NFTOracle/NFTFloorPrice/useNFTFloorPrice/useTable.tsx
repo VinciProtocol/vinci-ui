@@ -1,6 +1,10 @@
-import { useMemo } from 'react'
+import { useCallback, useMemo } from 'react'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
+import TableCell from '@mui/material/TableCell'
+import Stack from '@mui/material/Stack'
+import Button from '@mui/material/Button'
+import type { TableCellRenderer } from 'react-virtualized'
 
 import type { BasicTableProps, TableColumnsProps } from 'lib/table/BasicTable/types'
 import {
@@ -18,6 +22,33 @@ import { useTableSearch } from './useTableSearch'
 export const useTable = () => {
   const router = useRouter()
   const { t } = useTranslation('nft-oracle')
+
+  const FunctionButtonsCellRenderer: TableCellRenderer = useCallback(
+    ({ rowData }) => {
+      return (
+        <TableCell component="div">
+          <Stack spacing={2} direction="row">
+            <Button
+              variant="outlined"
+              size="small"
+              onClick={(e) => {
+                e.stopPropagation()
+                e.nativeEvent.stopImmediatePropagation()
+                router.push({
+                  pathname: '/nft-oracle/[id]',
+                  query: { id: rowData.underlyingAsset },
+                })
+              }}
+            >
+              {t('NFTFloorPrice.actions.details')}
+            </Button>
+          </Stack>
+        </TableCell>
+      )
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [t]
+  )
 
   const columns = useMemo(
     () =>
@@ -52,6 +83,12 @@ export const useTable = () => {
             width: 300,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: Oracle7TrendCellRenderer,
+          },
+          {
+            dataKey: 'functionButtons',
+            width: 150,
+            headerRenderer: leftHeaderRenderer,
+            cellRenderer: FunctionButtonsCellRenderer,
           },
         ] as Array<
           TableColumnsProps & {
