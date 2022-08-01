@@ -23,6 +23,10 @@
     "currentFloorPrice": "底价",
     "change24h": "24小时%",
     "lastUpdate": "最后更新",
-    "trend": "7天趋势"
+    "trend": "7天趋势",
+    "functionButtons": "行动",
+    "actions": {
+      "details": "细节"
+    }
   }
 }

@@ -23,6 +23,10 @@
     "currentFloorPrice": "ราคาพื้น",
     "change24h": "24 ชม.%",
     "lastUpdate": "การปรับปรุงครั้งล่าสุด",
-    "trend": "เทรนด์ 7 วัน"
+    "trend": "เทรนด์ 7 วัน",
+    "functionButtons": "การกระทำ",
+    "actions": {
+      "details": "รายละเอียด"
+    }
   }
 }

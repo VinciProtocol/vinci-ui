@@ -23,6 +23,10 @@
     "currentFloorPrice": "أدنى سعر",
     "change24h": "24 ساعة٪",
     "lastUpdate": "اخر تحديث",
-    "trend": "اتجاه 7 أيام"
+    "trend": "اتجاه 7 أيام",
+    "functionButtons": "عمل",
+    "actions": {
+      "details": "تفاصيل"
+    }
   }
 }

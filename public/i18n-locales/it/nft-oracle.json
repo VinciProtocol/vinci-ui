@@ -23,6 +23,10 @@
     "currentFloorPrice": "Prezzo al piano",
     "change24h": "24 ore%",
     "lastUpdate": "Ultimo aggiornamento",
-    "trend": "Tendenza di 7 giorni"
+    "trend": "Tendenza di 7 giorni",
+    "functionButtons": "Azione",
+    "actions": {
+      "details": "Particolari"
+    }
   }
 }

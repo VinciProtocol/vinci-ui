@@ -23,6 +23,10 @@
     "currentFloorPrice": "Kat Fiyatı",
     "change24h": "24h%",
     "lastUpdate": "Son Güncelleme",
-    "trend": "7 Günlük Trend"
+    "trend": "7 Günlük Trend",
+    "functionButtons": "Eylem",
+    "actions": {
+      "details": "Detaylar"
+    }
   }
 }

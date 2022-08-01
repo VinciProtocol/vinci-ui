@@ -23,6 +23,10 @@
     "currentFloorPrice": "Bodenpreis",
     "change24h": "24h%",
     "lastUpdate": "Letztes Update",
-    "trend": "7-Tage-Trend"
+    "trend": "7-Tage-Trend",
+    "functionButtons": "Aktion",
+    "actions": {
+      "details": "Einzelheiten"
+    }
   }
 }

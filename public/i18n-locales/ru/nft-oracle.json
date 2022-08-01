@@ -23,6 +23,10 @@
     "currentFloorPrice": "Минимальная цена",
     "change24h": "24ч%",
     "lastUpdate": "Последнее обновление",
-    "trend": "7-дневный тренд"
+    "trend": "7-дневный тренд",
+    "functionButtons": "Действие",
+    "actions": {
+      "details": "Подробности"
+    }
   }
 }

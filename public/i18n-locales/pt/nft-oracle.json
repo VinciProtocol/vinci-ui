@@ -23,6 +23,10 @@
     "currentFloorPrice": "Preço mínimo",
     "change24h": "24h%",
     "lastUpdate": "Última atualização",
-    "trend": "Tendência de 7 dias"
+    "trend": "Tendência de 7 dias",
+    "functionButtons": "Ação",
+    "actions": {
+      "details": "Detalhes"
+    }
   }
 }

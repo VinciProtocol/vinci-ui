@@ -1,7 +1,7 @@
 {
   "banner": {
     "title": "NFT Oracle",
-    "subTitle": "Vinci NFT oracles là oracles giá sàn trên chuỗi cho hệ sinh thái DeFi được hỗ trợ bởi NFT."
+    "subTitle": "Vinci NFT oracles là oracles giá sàn trên chuỗi cho hệ sinh thái DeFi được NFT hỗ trợ."
   },
   "oracleCards": {
     "dataSources": {
@@ -23,6 +23,10 @@
     "currentFloorPrice": "Giá sàn",
     "change24h": "24h%",
     "lastUpdate": "Cập nhật cuối cùng",
-    "trend": "Xu hướng trong 7 ngày"
+    "trend": "Xu hướng trong 7 ngày",
+    "functionButtons": "Hoạt động",
+    "actions": {
+      "details": "Thông tin chi tiết"
+    }
   }
 }

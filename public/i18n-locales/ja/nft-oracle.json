@@ -23,6 +23,10 @@
     "currentFloorPrice": "最低料金",
     "change24h": "24時間%",
     "lastUpdate": "最後の更新",
-    "trend": "7日間のトレンド"
+    "trend": "7日間のトレンド",
+    "functionButtons": "アクション",
+    "actions": {
+      "details": "詳細"
+    }
   }
 }

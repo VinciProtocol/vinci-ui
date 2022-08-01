@@ -23,6 +23,10 @@
     "currentFloorPrice": "Prix plancher",
     "change24h": "24h%",
     "lastUpdate": "Dernière mise à jour",
-    "trend": "Tendance sur 7 jours"
+    "trend": "Tendance sur 7 jours",
+    "functionButtons": "Action",
+    "actions": {
+      "details": "Détails"
+    }
   }
 }
