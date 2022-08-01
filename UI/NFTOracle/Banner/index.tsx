@@ -58,7 +58,7 @@ const Banner: FC = () => {
           </Typography>
           <Button
             variant="outlined"
-            href="https://docs.vinci.io/nft-price-oracle/overview"
+            href="https://docs.vinci.io/protocol/nft-price-oracle/overview"
             target="_blank"
             style={{ width: '120px' }}
           >
