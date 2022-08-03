@@ -2,13 +2,15 @@ import { valueToBigNumber } from 'utils/math'
 
 const DayTime = 24 * 60 * 60
 
-export type OracleRecordsProps = {}
+export type OracleRecordsProps = {
+  thegraph: string
+}
 export const getOracleRecords = (props: OracleRecordsProps, { signal }: any) => {
   const now = `${Date.now()}`.slice(0, 10)
   const startTime = valueToBigNumber(now)
     .minus(DayTime * 90)
     .toString()
-  return fetch('https://api.thegraph.com/subgraphs/name/vinciprotocol/oracle', {
+  return fetch('https://api.thegraph.com/subgraphs/name/' + props.thegraph, {
     headers: {
       accept: '*/*',
       'content-type': 'application/json',
