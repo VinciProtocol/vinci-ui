@@ -2,20 +2,19 @@
   "LendingPoolAddressesProviderRegistry": "0x9360add623759fa9fe28ff544739113ea04d15b2",
   "WETHGateway": "0x3fdd1c30c5f61078a50f5b1823f6ec97b6144d2f",
   "WPUNKSGateway": "0x02eaae6c419b462b8e8c7c0b85f1dc0383f0d2e0",
-  "WalletBalanceProvider": "0x900357214460d6c51ace460beac3700940ab4285",
+  "WalletBalanceProvider": "0xf8407afd19426c4e6152b028891ba478b9faead1",
   "UiPoolDataProvider": "0x7ca68e4fd1644f6a46d86efbe4916d2d446c4d08",
-  "PriceOracle": "0x548955c95d28da83c409d2250ac0d51988cb1b95",
   "AaveOracle": "0xc9d086f46b9726871f01ae09d46f6488dcac37d3",
   "LendingRateOracle": "0x1e1015de8eda3d8e913da250a110893f8f9cb240",
-  "LendingPoolCollateralManagerImpl": "0x2cfec532824647da5b0563916d1ccf6e09bde974",
-  "LendingPoolCollateralManager": "0x2cfec532824647da5b0563916d1ccf6e09bde974",
+  "LendingPoolCollateralManagerImpl": "0x2ebb66ae53c3b32aebb5654917cfbad382eed0c1",
+  "LendingPoolCollateralManager": "0x2ebb66ae53c3b32aebb5654917cfbad382eed0c1",
   "NFTVaultLogic": "0x37206a476adc1a3a820a35be414d6bf39fc474d3",
   "GenericLogic": "0x8a2b212ee8ec8ede8a70af481f0950f7ff7c9ae1",
   "ValidationLogic": "0xb7e6fa926d1d027d36dd212981a98edfb66a34b8",
   "ReserveLogic": "0x8ba0b857ddc9602020ac95ad359717d94598e9de",
-  "LendingPoolImpl": "0xcc7134d34807ed6d7150670665723ea5386e4920",
-  "LendingPoolConfiguratorImpl": "0xc7edec8a047da8e6cdca2ee697e52713f68c0ee0",
-  "TimeLockableNToken": "0x6a3c3542402614efbecf53ff4b3290bfcd6df74e",
+  "LendingPoolImpl": "0xdce9833519c1ef5faf0ad22b25b317495c0404f3",
+  "LendingPoolConfiguratorImpl": "0x1673b2ac80eb1b748641ea14811c489918251efb",
+  "TimeLockableNToken": "0x7211bc9a1653c58dba6662238328de06803fd445",
   "VariableDebtToken": "0x9d7cfec9366bede52cc7443fd8414c4044c5d8b9",
   "VToken": "0x54d8d8ec5e331d2d266836c4ef814dc8c8dffd5d",
   "NToken": "0xbafba17955b3677b65abe3b09527a0342202df2e",
@@ -31,6 +30,10 @@
   "Meebits": "0x7bd29408f11d2bfc23c34f18275bbf23bb716bc7",
   "OTHR": "0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258",
   "PUNK": "0xb7f7f6c52f2e2fdb1963eab30438024864c313f6",
+  "NFTOracle": "0xd0f72d6c0b1dc8437ab1c5b706de34abf9b44a0b",
+  "IncentivesVaultImpl": "0x043f16fc19c9969e4ce2d89ee41474a1a7b2d630",
+  "IncentivesVault": "0xc316cb619de3894da5bcb34a5f3a2bc85d23e314",
+  "WETH": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
   "markets": {
     "VinciSandbox": {
       "LendingPoolAddressesProvider": "0x7d20bd87de4249eccc7fb955653c88ccc52e74dc",
@@ -47,6 +50,13 @@
       "LendingPoolConfigurator": "0x8c9b3f942378138affbb7542c652c6e0f9819771",
       "TimeLockableNToken": {
         "Azuki": "0x76bcabca7155237955d2fbd11aed65126b6903fe"
+      },
+      "rateStrategyWETH": "0x3f08b240ccc629f0019862bcc5ac0fff55b19cd7",
+      "VToken": {
+        "vWETH": "0x889b51778ce85f16dfc90c50c9185b95c0e64bfb"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0xa491f870e241bec66f3259bda04283fc757153ee"
       }
     },
     "VinciDOODLE": {
@@ -55,6 +65,13 @@
       "LendingPoolConfigurator": "0x9571533099d3cc93677fe218170b340c7ded6d60",
       "TimeLockableNToken": {
         "DOODLE": "0x72860b9697e845e5d4c620ee65a20ef08cfa423d"
+      },
+      "rateStrategyWETH": "0x0fccae3d4cdd62fc71b7e96fca25d187f12adf8d",
+      "VToken": {
+        "vWETH": "0xb66a6e40973d20282d069323d67bf49d9cf94755"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0x0ec8e35997d6c544c6e0662915620aaee8eca55b"
       }
     },
     "VinciBAYC": {
@@ -63,6 +80,13 @@
       "LendingPoolConfigurator": "0x7e4faf45786418b12a269a551b761f40cf08eb8e",
       "TimeLockableNToken": {
         "BAYC": "0xa2daa8f66437920d5d178bb676fee791cbf3ecc0"
+      },
+      "rateStrategyWETH": "0x9057b64a04fc6d1a6237c5fb471f2f731de01b83",
+      "VToken": {
+        "vWETH": "0xd4fd0d84000d2b8eeba6b24a05e589bc90fd47ad"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0x2320f019ee5be389e8fa0f597029eeedd9f46be5"
       }
     },
     "VinciCloneX": {
@@ -71,6 +95,13 @@
       "LendingPoolConfigurator": "0x8d5e9599719f2689b16e0dbfc5d3ee6fb5adebca",
       "TimeLockableNToken": {
         "CloneX": "0xed7d1b663b0a91fbf6b4417598cb872b8c62e5d2"
+      },
+      "rateStrategyWETH": "0x6eca11f4db950946ceb2470d6c46d9984950e590",
+      "VToken": {
+        "vWETH": "0x49650b69a668f8ca16393e9fb2d7da24b1ed88bd"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0x3630d3fb30960398f57ea770f11b7b9f297e07c4"
       }
     },
     "VinciDLAND": {
@@ -95,6 +126,13 @@
       "LendingPoolConfigurator": "0xa19cb199b1b1e82215565017d1935cb829c8c986",
       "TimeLockableNToken": {
         "MOONBIRD": "0xafed1dc8638c2c3fd2e7f71e937f7dd02db3e42e"
+      },
+      "rateStrategyWETH": "0x01d0538f184743643495a1b0661451a51cd44bfa",
+      "VToken": {
+        "vWETH": "0x03ee7152d78dde6c4fa9f89132fb73645a43ea73"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0xef6899bf9efbf1cdb6a9c81ecb11f46e50cb0e19"
       }
     },
     "VinciMAYC": {
@@ -103,6 +141,13 @@
       "LendingPoolConfigurator": "0x2c73124cbb21449942a98d8690e9e174c714014f",
       "TimeLockableNToken": {
         "MAYC": "0xbdc860ef39ba2f27757257bd29976d05081b6a0c"
+      },
+      "rateStrategyWETH": "0xbe46d61c06a69ae57acbbbceb5240c1246fb6d6a",
+      "VToken": {
+        "vWETH": "0x40c319f5fb967332b8d5013e8357e1fb2a5ccbeb"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0x7bcfd95c83005a7dc8d49bee7adf261c99e1fd1f"
       }
     },
     "VinciMeebits": {
@@ -119,6 +164,13 @@
       "LendingPoolConfigurator": "0xb279d9f006eb6c13c63e8153042f07ca95652cd8",
       "TimeLockableNToken": {
         "PUNK": "0xd303a478eacacbbb9868cfa5434559a6e1cdb0e9"
+      },
+      "rateStrategyWETH": "0x3c1eb429720d9122f40b99b09083ecf906040891",
+      "VToken": {
+        "vWETH": "0x1dd06fb74ffae6db2be72891ed97ec8c8d602e1c"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0x2c83edd1437b4015fbfac95d2e0c774dc654359a"
       }
     }
   }
