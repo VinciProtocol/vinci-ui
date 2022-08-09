@@ -56,7 +56,7 @@ export const useTable = (): BasicTableProps => {
         [
           {
             dataKey: 'symbol',
-            width: 200,
+            width: 210,
             headerRenderer: leftHeaderRenderer,
             cellRenderer: symbolCellRenderer,
           },
