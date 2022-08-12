@@ -8,7 +8,7 @@ import { ChainId } from '../chain/types'
 import { ethereumCryptoPunksMarket, getNFTInfo, rinkebyCryptoPunksMarket } from './NFTConfig'
 import type { MarketData, NFTSetting } from './types'
 
-const list: Record<ChainId, typeof vinci & Pick<MarketData, 'thegraph'>> = {
+const list: Record<ChainId, typeof vinci & Pick<MarketData, 'thegraph'> & { NFTOracle: string }> = {
   [ChainId.ethereum]: {
     CryptoPunksMarket: ethereumCryptoPunksMarket,
     vinciNFTProvider: '0x12483993167f6e652fd59cd173a495da0b80bdf2',
@@ -91,6 +91,7 @@ const getMarketsData = (chainId: ChainId): MarketData => {
       vinciNFTProvider: generateInfo.vinciNFTProvider,
       uiPoolDataProvider: generateInfo.UiPoolDataProvider,
       cryptoPunksMarket: generateInfo.CryptoPunksMarket,
+      NFTOracle: generateInfo.NFTOracle,
     },
     thegraph: generateInfo.thegraph,
     nfts,

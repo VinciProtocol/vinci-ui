@@ -4,7 +4,7 @@ const locale = {
     interval: 'Minumum interval',
     fluctuation: 'Maximum fluctuation',
     update: 'Last update',
-    address: 'Contract address',
+    address: 'Oracle address',
   },
   tips: {
     threshold:

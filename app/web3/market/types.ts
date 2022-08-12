@@ -30,6 +30,7 @@ export type MarketData = {
     vinciNFTProvider: string
     uiPoolDataProvider: string
     cryptoPunksMarket: string
+    NFTOracle: string
   }
   thegraph?: {
     oracleRecords: string

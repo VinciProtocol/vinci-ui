@@ -49,10 +49,11 @@ const NFTInfo: FC<NFTInfoProps> = () => {
   const { oracleAssets } = useThegraph()
   const nft = useMemo(() => {
     if (!nftSource || !oracleAssets || !oracleAssets.length) return {}
-    return oracleAssets.find((i) => i.NFT_ID === nftSource.NFT_ID)
+    return oracleAssets.find((i) => i.NFT_ID === nftSource.NFT_ID) || {}
   }, [nftSource, oracleAssets])
   const M = useMarket()
   const { market } = getNFTInfoByNFTID(M.market, nft.collection)
+  const oracleAddress = useMemo(() => M.market.addresses.NFTOracle, [M.market.addresses.NFTOracle])
 
   return (
     <ROOT variant="card">
@@ -126,16 +127,18 @@ const NFTInfo: FC<NFTInfoProps> = () => {
               <Typography variant="subtitle1">{safeGet(() => format(nft.lastUpdate, 'MM/dd hh:mm')) || '-'}</Typography>
             </Grid>
           </Grid>
-          <Grid container>
-            <Grid item xs>
-              <Typography variant="subtitle1">{t('info.address')}</Typography>
+          {!!oracleAddress && (
+            <Grid container>
+              <Grid item xs>
+                <Typography variant="subtitle1">{t('info.address')}</Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant="subtitle1">
+                  <LinkToAddress address={oracleAddress} />
+                </Typography>
+              </Grid>
             </Grid>
-            <Grid item>
-              <Typography variant="subtitle1">
-                <LinkToAddress address={nft.underlyingAsset} />
-              </Typography>
-            </Grid>
-          </Grid>
+          )}
         </InfoList>
       </Stack>
     </ROOT>

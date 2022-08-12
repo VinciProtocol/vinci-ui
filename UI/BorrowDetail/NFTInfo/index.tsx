@@ -56,7 +56,7 @@ const NFTInfo: FC<NFTInfoProps> = () => {
 
   const { nft } = useContractNFT()
   const M = useMarket()
-  const { market } = getNFTInfoByNFTID(M.market, nft.collection)
+  const { market } = getNFTInfoByNFTID(M.market, nft?.collection)
 
   return (
     <ROOT variant="card">
