@@ -92,8 +92,8 @@ const Oracle7Trend: FC<{ nft: any }> = ({ nft }) => {
           elements: {
             point: {
               radius: 2,
-            }
-          }
+            },
+          },
         },
       } as FloorPriceTrendsChartProps),
     [nft?.collection, nft.oracle7Trend, theme.palette.primary.main]
@@ -113,7 +113,7 @@ export const Oracle7TrendCellRenderer: TableCellRenderer = ({ rowData }) => {
 export const DateCellRenderer: TableCellRenderer = ({ cellData }) => {
   return (
     <TableCell component="div">
-      <span>{safeGet(() => format(cellData, 'MM/dd hh:mm')) || '-'}</span>
+      <span>{safeGet(() => format(cellData, 'MM/dd HH:mm')) || '-'}</span>
     </TableCell>
   )
 }
