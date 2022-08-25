@@ -6,7 +6,7 @@ export default async function init(): Promise<Connector> {
     web3ReactConnector() {
       return new WalletConnectConnector({
         qrcode: true,
-        infuraId: 'e33605b8ebd345fa914bd4cdfdfb401d',
+        infuraId: '1fe83aa589cd4ae3adfcbb2d7d411d4a',
       })
     },
     handleActivationError(error: Error) {
