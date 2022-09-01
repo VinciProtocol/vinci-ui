@@ -41,6 +41,12 @@ const MenuList = [
     linkTo: '/nft-oracle/[id]',
     hide: true,
   },
+  {
+    key: 'Audit',
+    linkTo: 'https://www.certik.com/projects/vinci-protocol',
+    target: '_blank',
+    onlyMobile: true
+  },
   // {
   //   key: 'Liquidation',
   //   linkTo: '/liquidation-marketplace',

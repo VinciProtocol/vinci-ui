@@ -19,7 +19,7 @@ const Menu = () => {
   const list = useMemo(
     () =>
       menuList
-        .filter((item) => !item.hide)
+        .filter((item) => !item.hide && !item.onlyMobile)
         .map(({ label, linkTo }) => (
           <Link href={linkTo} key={linkTo} passHref>
             <Button

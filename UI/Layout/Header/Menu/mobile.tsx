@@ -31,11 +31,13 @@ const MenuMobile = () => {
         <Divider />
         {menuList
           .filter((item) => !item.hide)
-          .map(({ label, linkTo, key }) => (
+          .map(({ label, linkTo, key, target }) => (
             <Link href={linkTo} key={linkTo} passHref>
-              <ListItem button selected={currentMenu.key === key} onClick={() => setOpenDrawer(false)}>
-                <ListItemText primary={label} />
-              </ListItem>
+              <a target={target}>
+                <ListItem button selected={currentMenu.key === key} onClick={() => setOpenDrawer(false)}>
+                  <ListItemText primary={label} style={{ color: 'rgba(0, 0, 0, 0.87)' }} />
+                </ListItem>
+              </a>
             </Link>
           ))}
         <Divider />

@@ -11,6 +11,7 @@ const locale = {
     NFTAirdrop: 'NFT Airdrop',
     NFTOracle: 'NFT Oracle',
     NFTOracleDetail: 'NFT Oracle Detail',
+    Audit: 'Audit',
   },
 }
 

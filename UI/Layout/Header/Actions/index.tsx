@@ -9,6 +9,7 @@ import ConnectButton from 'app/wallet/ConnectButton'
 import LanguageMenu from 'app/i18n/components/LanguageMenu'
 
 import NFTAirdropButton from './NFTAirdropButton'
+import Certik from './Certik'
 
 const Actions: FC = () => {
   const ROOT = useMemoEmpty(
@@ -20,6 +21,7 @@ const Actions: FC = () => {
 
   return (
     <ROOT direction="row" spacing={2}>
+      <Certik />
       <NFTAirdropButton />
       <ChainButton />
       <ConnectButton />
