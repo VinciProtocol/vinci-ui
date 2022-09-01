@@ -24,6 +24,17 @@ class MyDocument extends Document {
           })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');`,
             }}
           ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function hideEmblem() {
+              var el = document.createElement('style');
+              document.head.appendChild(el);
+              var styleSheet = el.sheet;
+              styleSheet.insertRule('.certik-emblem { display: none; }', 0);
+            })();`,
+            }}
+          ></script>
+          <script async src="https://emblem.certik-assets.com/script?pid=vinci-protocol&vid=a23f4b88"></script>
         </Head>
         <body>
           <noscript

@@ -8,6 +8,7 @@ import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import { RESPONSIVE_DESIGN } from 'styles/constants'
 
 import Logo from './Logo'
+import Certik from './Certik'
 
 const NProgress = dynamic(() => import('lib/nprogress/NProgress'), { ssr: false })
 const Menu = dynamic(() => import('./Menu'), { ssr: false })
@@ -40,6 +41,7 @@ const Header: FC = () => {
       <BODY sx={RESPONSIVE_DESIGN.display.GTSM('flex')}>
         <Stack spacing={2} direction="row">
           <Logo />
+          <Certik />
           <Menu />
         </Stack>
         <Actions />
