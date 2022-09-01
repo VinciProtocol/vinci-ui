@@ -4,7 +4,7 @@
     "interval": "Intervalo mínimo",
     "fluctuation": "Fluctuación máxima",
     "update": "Última actualización",
-    "address": "Dirección del contrato"
+    "address": "dirección de oráculo"
   },
   "tips": {
     "threshold": "Cuando los datos del precio mínimo fuera de la cadena superan el umbral de desviación, se activará una transacción en la cadena para escribir un nuevo precio en nuestro contrato inteligente de Oracle.",

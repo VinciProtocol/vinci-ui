@@ -4,7 +4,7 @@
     "interval": "Minumum interval",
     "fluctuation": "Maximum fluctuation",
     "update": "Last update",
-    "address": "Contract address"
+    "address": "Oracle address"
   },
   "tips": {
     "threshold": "When the off-chain floor price data moves more than deviation threshold, an on-chain transaction will be triggered to write a new price into our oracle smart contract.",

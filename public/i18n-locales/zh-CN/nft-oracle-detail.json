@@ -4,7 +4,7 @@
     "interval": "最小间隔",
     "fluctuation": "最大波动",
     "update": "最后更新",
-    "address": "合约地址"
+    "address": "甲骨文地址"
   },
   "tips": {
     "threshold": "当链下底价数据移动超过偏差阈值时，将触发链上交易以将新价格写入我们的预言机智能合约。",

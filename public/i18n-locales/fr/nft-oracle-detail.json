@@ -4,7 +4,7 @@
     "interval": "Intervalle minimal",
     "fluctuation": "Fluctuation maximale",
     "update": "Dernière mise à jour",
-    "address": "Adresse du contrat"
+    "address": "Adresse oracle"
   },
   "tips": {
     "threshold": "Lorsque les données de prix plancher hors chaîne dépassent le seuil d'écart, une transaction en chaîne sera déclenchée pour écrire un nouveau prix dans notre contrat intelligent oracle.",

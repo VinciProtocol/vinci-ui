@@ -10,6 +10,7 @@
     "App": "Приложение",
     "NFTAirdrop": "Аирдроп NFT",
     "NFTOracle": "НФТ-оракул",
-    "NFTOracleDetail": "Подробная информация об оракуле NFT"
+    "NFTOracleDetail": "Деталь NFT Oracle",
+    "Audit": "Аудит"
   }
 }

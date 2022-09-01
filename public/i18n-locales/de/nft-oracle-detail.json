@@ -4,7 +4,7 @@
     "interval": "Mindestintervall",
     "fluctuation": "Maximale Fluktuation",
     "update": "Letztes Update",
-    "address": "Vertragsadresse"
+    "address": "Oracle-Adresse"
   },
   "tips": {
     "threshold": "Wenn sich die Off-Chain-Mindestpreisdaten um mehr als die Abweichungsschwelle bewegen, wird eine On-Chain-Transaktion ausgelöst, um einen neuen Preis in unseren Orakel-Smart-Vertrag zu schreiben.",

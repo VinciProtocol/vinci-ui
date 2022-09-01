@@ -4,7 +4,7 @@
     "interval": "Intervalo mínimo",
     "fluctuation": "Flutuação máxima",
     "update": "Última atualização",
-    "address": "Endereço do contrato"
+    "address": "Endereço Oracle"
   },
   "tips": {
     "threshold": "Quando os dados de preço mínimo fora da cadeia se movem mais do que o limite de desvio, uma transação na cadeia será acionada para gravar um novo preço em nosso contrato inteligente oracle.",

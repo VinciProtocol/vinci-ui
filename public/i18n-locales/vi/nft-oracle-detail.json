@@ -4,7 +4,7 @@
     "interval": "Khoảng thời gian tối thiểu",
     "fluctuation": "Dao động tối đa",
     "update": "Cập nhật cuối cùng",
-    "address": "Địa chỉ hợp đồng"
+    "address": "Địa chỉ Oracle"
   },
   "tips": {
     "threshold": "Khi dữ liệu giá sàn ngoài chuỗi di chuyển nhiều hơn ngưỡng lệch, một giao dịch trên chuỗi sẽ được kích hoạt để ghi giá mới vào hợp đồng thông minh oracle của chúng tôi.",

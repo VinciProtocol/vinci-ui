@@ -10,6 +10,7 @@
     "App": "App",
     "NFTAirdrop": "NFT-Airdrop",
     "NFTOracle": "NFT-Orakel",
-    "NFTOracleDetail": "NFT-Oracle-Detail"
+    "NFTOracleDetail": "NFT-Oracle-Detail",
+    "Audit": "Prüfung"
   }
 }

@@ -4,7 +4,7 @@
     "interval": "Intervallo minimo",
     "fluctuation": "Massima fluttuazione",
     "update": "Ultimo aggiornamento",
-    "address": "Indirizzo del contratto"
+    "address": "Indirizzo Oracle"
   },
   "tips": {
     "threshold": "Quando i dati del prezzo iniziale off-chain si spostano oltre la soglia di deviazione, verrà attivata una transazione on-chain per scrivere un nuovo prezzo nel nostro smart contract Oracle.",

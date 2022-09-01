@@ -4,7 +4,7 @@
     "interval": "Minimum aralık",
     "fluctuation": "Maksimum dalgalanma",
     "update": "Son Güncelleme",
-    "address": "Sözleşme adresi"
+    "address": "Oracle adresi"
   },
   "tips": {
     "threshold": "Zincir dışı taban fiyat verileri sapma eşiğinden daha fazla hareket ettiğinde, Oracle akıllı sözleşmemize yeni bir fiyat yazmak için zincir üstü bir işlem tetiklenir.",
