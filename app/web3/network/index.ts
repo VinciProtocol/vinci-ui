@@ -8,11 +8,11 @@ export const networks: Record<ChainId, NetworkConfig> = {
     symbol: 'ETH',
     publicJsonRPCUrl: 'http://18.167.30.221:6357',
   },
-  [ChainId.rinkeby]: {
-    name: 'Rinkeby',
-    fullName: 'Rinkeby Testnet',
+  [ChainId.goerli]: {
+    name: 'Goerli',
+    fullName: 'Goerli Testnet',
     symbol: 'ETH',
-    publicJsonRPCUrl: ['https://rinkeby.infura.io/v3/1fe83aa589cd4ae3adfcbb2d7d411d4a'],
+    publicJsonRPCUrl: ['https://goerli.infura.io/v3/1fe83aa589cd4ae3adfcbb2d7d411d4a'],
   },
   [ChainId.ethereum]: {
     name: 'Ethereum',

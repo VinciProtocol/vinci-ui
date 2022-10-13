@@ -1,11 +1,11 @@
-import rinkeby from 'lib/protocol/generate/rinkeby.json'
+import goerli from 'lib/protocol/generate/goerli.json'
 import mainnet from 'lib/protocol/generate/mainnet.json'
 import vinci from 'lib/protocol/generate/vinci.json'
 
 import type { NFTGenerate } from 'lib/protocol/generate/types'
 
 import { ChainId } from '../chain/types'
-import { ethereumCryptoPunksMarket, getNFTInfo, rinkebyCryptoPunksMarket } from './NFTConfig'
+import { ethereumCryptoPunksMarket, getNFTInfo, goerliCryptoPunksMarket } from './NFTConfig'
 import type { MarketData, NFTSetting } from './types'
 
 const list: Record<ChainId, typeof vinci & Pick<MarketData, 'thegraph'> & { NFTOracle: string }> = {
@@ -17,11 +17,11 @@ const list: Record<ChainId, typeof vinci & Pick<MarketData, 'thegraph'> & { NFTO
       oracleRecords: 'vinciprotocol/oracle',
     },
   },
-  [ChainId.rinkeby]: {
-    CryptoPunksMarket: rinkebyCryptoPunksMarket,
-    ...rinkeby,
+  [ChainId.goerli]: {
+    CryptoPunksMarket: goerliCryptoPunksMarket,
+    ...goerli,
     thegraph: {
-      oracleRecords: 'vinciprotocol/oracle-rinkeby',
+      oracleRecords: 'vinciprotocol/oracle-goerli',
     },
   },
   [ChainId.vinci]: vinci,
@@ -109,7 +109,7 @@ const getMarketsData = (chainId: ChainId): MarketData => {
 
 export const MARKETS: Record<number, MarketData> = {
   [ChainId.ethereum]: getMarketsData(ChainId.ethereum),
-  [ChainId.rinkeby]: getMarketsData(ChainId.rinkeby),
+  [ChainId.goerli]: getMarketsData(ChainId.goerli),
 }
 export const defaultMarket = MARKETS[ChainId.ethereum]
 export const getMarket = (chainId: ChainId) => MARKETS[chainId] || defaultMarket
@@ -117,7 +117,7 @@ export const NFTs = {
   // ...getMarketsData(ChainId.localhost).nfts,
   // ...getMarketsData(ChainId.bsct).nfts,
   // ...getMarketsData(ChainId.vinci).nfts,
-  ...MARKETS[ChainId.rinkeby].nfts,
+  ...MARKETS[ChainId.goerli].nfts,
   ...MARKETS[ChainId.ethereum].nfts,
   // ...getMarketsData(ChainId.bsc).nfts,
   // ...getMarketsData(ChainId.ethereum).nfts,

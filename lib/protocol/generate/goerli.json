@@ -1,0 +1,138 @@
+{
+  "LendingPoolAddressesProviderRegistry": "0x687d7528fa96e009005e8fdec3696957e0d0002e",
+  "WETHGateway": "0x21c1ca432e94a9fd9fc4a48ba008ef6f0ba9ba7c",
+  "WPUNKSGateway": "0x35fd4a990b00e3531ca3889d5a25cb416111491f",
+  "WalletBalanceProvider": "0xf4b20280f2ed9eebe1e23c4ff112d9745055d74b",
+  "UiPoolDataProvider": "0x9a882442b68412f29e0c220dfccf40d47d36fc2f",
+  "NFTOracle": "0x975b5eb88ab4e438d6b10ddb3570e5c60062b18c",
+  "AaveOracle": "0x8328db944eea8ca1361560aaa03af14f0cd79981",
+  "LendingPoolCollateralManagerImpl": "0x9bff2716192322d4dd1be07b9720fe4e3ba600df",
+  "LendingPoolCollateralManager": "0x9bff2716192322d4dd1be07b9720fe4e3ba600df",
+  "ReserveLogic": "0x9544b8e5bb3b278b7b102e9434bb671de38807ad",
+  "NFTVaultLogic": "0xea5d259a9cf4ab7f4482e265deddedcda128025a",
+  "GenericLogic": "0x2dc441db5a56a9d5348d0c928ac9c6a8b7a2d289",
+  "ValidationLogic": "0x8b429f0d384bfafd4282d91529e47bdb83115713",
+  "LendingPoolImpl": "0x4181e1fb640d163c1d797ffbb0f39cfc01e82cd0",
+  "LendingPoolConfiguratorImpl": "0x87cdf84f1e765d0cbe260cf691092be1fe52db57",
+  "TimeLockableNToken": "0x45582f9213911b3fd152bd2a00238031cc4bb99a",
+  "VToken": "0x76b0c4b25229340450e9692d24de4100b7eee5b0",
+  "VariableDebtToken": "0x7c9b4175298872822214ae277b2126155a4f70fb",
+  "AllowAllEligibilityImpl": "0x4bad44e919f56634b26c4a6cb143e449386f86b6",
+  "IncentivesVaultImpl": "0xdbb7fd2c4f7b106a598eb895ccbb3481c890b100",
+  "IncentivesVault": "0x3f1e784ff705347f306252ccf33e96e4c238774e",
+  "BAYC": "0x99bfbc019bf11e847d288bd99181a360b53965dc",
+  "CloneX": "0x157d91f62b07bf8c6522c0c462ff3adbadde3fc4",
+  "DOODLE": "0x8b318c6cd4591305c266311ee6b59d7a6d85e173",
+  "MAYC": "0xf95a764c8f6e8a8e838138ec0a062e407c78bcc7",
+  "MOONBIRD": "0x739e74dfb5fe3fffef785e7d9c3784e280d86606",
+  "Azuki": "0xafc554d0d3b91e2c22b91efb86a2edeb95145387",
+  "PUNK": "0xcbc559fb34117af9cf1cfafce403b53f24125137",
+  "WETH": "0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6",
+  "markets": {
+    "VinciBAYC": {
+      "LendingPoolAddressesProvider": "0x6969dc0489ae461b53781585605f08d070e4a841",
+      "LendingPool": "0x1628e2b7a00a0818113986f1d723f60cf7d7de6c",
+      "LendingPoolConfigurator": "0x933402299db3a0d1a027f8e8bc3a0cf7b2d6d1d0",
+      "rateStrategyWETH": "0x6661208e5b2024522fcd1af5f4279bb3da735f2f",
+      "TimeLockableNToken": {
+        "BAYC": "0xe253e74d8ca74078814e88202e4d17e3542a85a9"
+      },
+      "VToken": {
+        "vWETH": "0xf8b317e56d529636c77316363db7228990cf27f5"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0xa8da2f738989b539a6f071d137d6e70a83c784cb"
+      }
+    },
+    "VinciCloneX": {
+      "LendingPoolAddressesProvider": "0x24ab3dee6b1e4898c00e807bfdc3148d6436ca7f",
+      "LendingPool": "0x9f9f34fc46b8483f02fc36864fe9e100031758e7",
+      "LendingPoolConfigurator": "0x5d2ef34c1e1f0baeafdf974714df495abecbf5ff",
+      "rateStrategyWETH": "0xc7be9045285b0c29ebe3d6046ce0611fb7893ccf",
+      "TimeLockableNToken": {
+        "CloneX": "0xddfa7a22f569c55cf5a5114b3ea745f31d0fc27f"
+      },
+      "VToken": {
+        "vWETH": "0xbf9fe602d6b19052909ea610ed5f26cdb6b67d67"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0x3707a137d81dfa5f8fa6112e301c47fb844fad49"
+      }
+    },
+    "VinciDOODLE": {
+      "LendingPoolAddressesProvider": "0xecc384738291893f622d23f1fcc51f46ce8ba3de",
+      "LendingPool": "0x4cad4c175745f84b573587fe63590e2d7549f18b",
+      "LendingPoolConfigurator": "0xbd7c6e666d4636ecfcd870d1a64648e1cae5e2ed",
+      "rateStrategyWETH": "0xfea512bae482dcfabbc831db83d7e033419e2d83",
+      "TimeLockableNToken": {
+        "DOODLE": "0xa681f69c044565da1941f210fe6c918650eabdf2"
+      },
+      "VToken": {
+        "vWETH": "0xa705a0c11269bd477151fb6b6924c67c40f0bb0c"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0x800a357e8047cad038b28a16d4b463c38027ed6e"
+      }
+    },
+    "VinciMAYC": {
+      "LendingPoolAddressesProvider": "0x269d5b561939b0471f24fc817b3b0f07cc2bf679",
+      "LendingPool": "0xcd1aed27b9f42396ef9854058b731fc6149f370a",
+      "LendingPoolConfigurator": "0xc54171406cc08731cabaf4e65424ddf3ee1d9152",
+      "rateStrategyWETH": "0xb5a7637ebf8c99f7fd92571dc8c577ab10314a16",
+      "TimeLockableNToken": {
+        "MAYC": "0xf93d8378c1b3638ef4fd786486dd31a150cff29a"
+      },
+      "VToken": {
+        "vWETH": "0x17449c5a9f5e1c40f84d66090d43e6e76e816f85"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0x2c007a273b861a8cf5b029350f198fe51632ea14"
+      }
+    },
+    "VinciMOONBIRD": {
+      "LendingPoolAddressesProvider": "0x3e15d85df1a25011d72acc636915bb9703aaa9b1",
+      "LendingPool": "0x91a140f797035e38b9f02cf5ed5bdf6591529b55",
+      "LendingPoolConfigurator": "0xa8b7488f7f16bb9da144c867d3c5b7249b15f4d3",
+      "rateStrategyWETH": "0x0ca39b86e30805458aeb0c1d474afa7aac1ea946",
+      "TimeLockableNToken": {
+        "MOONBIRD": "0x33b7fe9bf72fec2d88a721bf1ad7cd0109358e5d"
+      },
+      "VToken": {
+        "vWETH": "0x7796e32eb2b692c9cbcc088a1646a34e4dbff5a3"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0x17803f7b61723ba7abea084df3c0ef22e1b14a37"
+      }
+    },
+    "VinciAzuki": {
+      "LendingPoolAddressesProvider": "0xf2df697b71d8a88405d7563511a54bc8acdd330e",
+      "LendingPool": "0xfb2b7d0eb907d878bc9813f9237121c5152f8c19",
+      "LendingPoolConfigurator": "0x55106a3a1e58ca4a30312670657d6e23bc55a4e2",
+      "rateStrategyWETH": "0x6475e1fffc8205f022636c949f0ea2e32a19320d",
+      "TimeLockableNToken": {
+        "Azuki": "0x72202905af871921f60e841f52b3e415b8ca4db8"
+      },
+      "VToken": {
+        "vWETH": "0xd30b1fcfd6121c6703896bca30bf91f3799fa12e"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0x93a7731837b11463d87034beaae9367a2a4e6215"
+      }
+    },
+    "VinciPUNK": {
+      "LendingPoolAddressesProvider": "0x39c898df7e2260f42d2a4aa84ba87846ed0d2423",
+      "LendingPool": "0xfa23f0ba4c0a3b027afeed098653b4759c474126",
+      "LendingPoolConfigurator": "0xc12451c8740fbe8e0339928230192163d9b1b645",
+      "rateStrategyWETH": "0x81cb6dd8e7e95f46eaaea33971b0fe1350774ad6",
+      "TimeLockableNToken": {
+        "PUNK": "0x747f42c60010a483e23efa0f8f8185731c0487c3"
+      },
+      "VToken": {
+        "vWETH": "0xf20c309964f80d4b4114c8e34c8ace21acde305f"
+      },
+      "VariableDebtToken": {
+        "vDebtWETH": "0x9debc898143d65c88154c3423e4a28e3d98fe86a"
+      }
+    }
+  }
+}

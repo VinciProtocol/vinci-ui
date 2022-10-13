@@ -19,7 +19,6 @@ export enum ChainId {
   avalanche = 43114,
   fuji = 43113, // avalanche test network
   arbitrum_one = 42161,
-  arbitrum_rinkeby = 421611,
 }
 export type ConstantAddressesByNetwork = Record<
   string,

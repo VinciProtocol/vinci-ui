@@ -61,7 +61,7 @@ export function useMenu() {
   const menuList = useMemo(() => {
     return MenuList.filter((menu) => {
       if (__DEV__) return true
-      if (chainId === ChainId.rinkeby) {
+      if (chainId === ChainId.goerli) {
         return menu.key !== 'NFTAirdrop'
       }
       return true

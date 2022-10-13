@@ -4,7 +4,7 @@ import { groupBy } from 'lodash'
 
 import type { ChainId } from 'app/web3/chain/types'
 import { safeGet } from 'utils/get'
-import { rinkebyCryptoPunksMarket } from 'app/web3/market/NFTConfig'
+import { goerliCryptoPunksMarket } from 'app/web3/market/NFTConfig'
 
 export type WalletNFTProps = { chainId: ChainId; user: string; tokenAddresses: string[] }
 export const useWalletNFT = (
@@ -17,7 +17,7 @@ export const useWalletNFT = (
 > => {
   const { user, tokenAddresses, chainId } = props
   if (!user || !chainId || !tokenAddresses || !tokenAddresses.length) return Promise.reject()
-  if (tokenAddresses[0] === rinkebyCryptoPunksMarket) {
+  if (tokenAddresses[0] === goerliCryptoPunksMarket) {
     return fetch('https://api.thegraph.com/subgraphs/name/imsunhao/cryptopunks', {
       headers: {
         accept: '*/*',

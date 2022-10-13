@@ -181,4 +181,4 @@ export const getNFTInfo = (NFT_ID: string) => {
 }
 
 export const ethereumCryptoPunksMarket = '0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb'
-export const rinkebyCryptoPunksMarket = '0x2406c682c3f9720c5ae24bfa576a2351cccd008a'
+export const goerliCryptoPunksMarket = '0xc6406cada8696a4183b6ef9d00c4580bf31eeb78'
