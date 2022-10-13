@@ -45,7 +45,7 @@ const MenuList = [
     key: 'Audit',
     linkTo: 'https://www.certik.com/projects/vinci-protocol',
     target: '_blank',
-    onlyMobile: true
+    onlyMobile: true,
   },
   // {
   //   key: 'Liquidation',
