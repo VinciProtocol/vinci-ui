@@ -14,6 +14,7 @@ module.exports = {
     'nft-airdrop',
     'nft-oracle',
     'nft-oracle-detail',
+    'nft-finance',
   ],
   defaultNS: 'common',
 }

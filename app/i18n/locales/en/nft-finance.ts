@@ -1,0 +1,31 @@
+const locale = {
+  banner: {
+    title: 'NFT Finance',
+    subTitle: 'Vinci Protocol provides NFT-backed DeFi solutions designed for boosting liquidity.',
+    startBuilding: 'Start Building',
+    market: 'View Lending Market',
+  },
+  cards: {
+    poolModel: {
+      title: 'One Collection One Pool',
+      subTitle:
+        'You can provide any liquidity assets to any collection you select, building an exclusive pool to realize 100% risk isolation.',
+    },
+    listing: {
+      title: 'Limitless Collection Listing',
+      subTitle: 'It can open one lending pool for any NFT collection you want. Free integration, easy listing, and unlimited NFT collections.',
+    },
+    mechanism: {
+      title: 'Lending Pool Mechanism',
+      subTitle: 'Lending Pool Mechanism is much higher capital efficient with your NFT collaterals and liquidity than the Peer-to-peer model.',
+    },
+    permissionless: {
+      title: 'Non-custodial & Permissionless',
+      subTitle: 'Assets are controlled in your hands. It is a safe, open and secure protocol with fully auditing proving its highest security standards.',
+    },
+  },
+  title: 'Lending Market',
+  subTitle: 'Check out our live lending market for blue-chip NFT collections.',
+}
+
+export default locale

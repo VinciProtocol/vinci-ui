@@ -12,6 +12,7 @@ const locale = {
     NFTOracle: 'NFT Oracle',
     NFTOracleDetail: 'NFT Oracle Detail',
     Audit: 'Audit',
+    NFTFinance: 'NFT Finance',
   },
 }
 

@@ -33,6 +33,10 @@ const MenuList = [
     hide: true,
   },
   {
+    key: 'NFTFinance',
+    linkTo: '/nft-finance',
+  },
+  {
     key: 'NFTOracle',
     linkTo: '/nft-oracle',
   },

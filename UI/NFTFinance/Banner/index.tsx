@@ -12,17 +12,17 @@ import Button from '@mui/material/Button'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 
-import oracleBackground from './images/oracle-background.png'
-import oracleFramework from './images/oracle-framework.svg'
+import background from './images/finance-background.png'
+import financeImg from './images/finance-framework.svg'
 
 const Banner: FC = () => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('md'))
-  const { t } = useTranslation('nft-oracle')
+  const { t } = useTranslation('nft-finance')
   const ROOT = useMemo(
     () =>
       styled(Paper)(({ theme }) => ({
-        backgroundImage: `url(${oracleBackground.src})`,
+        backgroundImage: `url(${background.src})`,
         backgroundRepeat: matches ? 'round' : 'unset',
         height: '260px',
         marginTop: theme.spacing(4),
@@ -59,23 +59,23 @@ const Banner: FC = () => {
           <Stack spacing={2} direction='row'>
             <Button
               variant="contained"
-              href="https://docs.vinci.io/protocol/nft-price-oracle/overview"
-              target="_blank"
-              style={{ width: '150px' }}
-            >
-              {t('banner.apply')}
-            </Button>
-            <Button
-              variant="outlined"
-              href="https://docs.vinci.io/protocol/nft-price-oracle/overview"
+              href="https://docs.vinci.io/nft-finance/"
               target="_blank"
               style={{ width: '120px' }}
             >
-              {t('common:components.learnMore')}
+              {t('banner.startBuilding')}
+            </Button>
+            <Button
+              variant="outlined"
+              href="https://app.vinci.io/lending-market/"
+              target="_blank"
+              style={{ width: '150px' }}
+            >
+              {t('banner.market')}
             </Button>
           </Stack>
         </Title>
-        {matches && <Image src={oracleFramework} style={{ pointerEvents: 'none' }} alt="oracle framework" />}
+        {matches && <Image src={financeImg} style={{ pointerEvents: 'none' }} alt="Vinci NFT Finance" />}
       </Content>
     </ROOT>
   )
