@@ -4,7 +4,7 @@ import { useVinciContract } from '@vinci-protocol/domains'
 import { NFT_IDS } from 'app/web3/market'
 
 import type { MarketData } from 'app/web3/market/types'
-import { useObjectMemo } from 'app/hooks/useValues'
+import { useObjectMemo } from '@vinci-protocol/hooks'
 import { useRequestControllers } from 'store/contract/uiPool/walletBalances'
 import type { WalletBalancesUseRequestController } from 'store/contract/uiPool/walletBalances/utils/requestSliceHelper'
 import { useMarket } from 'domains'

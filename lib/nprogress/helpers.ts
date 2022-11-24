@@ -5,8 +5,8 @@ import { clamp, get } from 'lodash'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
 
-import { useLatest } from 'app/hooks/useLatest'
-import { useObjectMemo } from 'app/hooks/useValues'
+import { useLatest } from '@vinci-protocol/hooks'
+import { useObjectMemo } from '@vinci-protocol/hooks'
 import { createPromise } from 'utils/promise'
 
 const TRICKLE_SPEED = 800

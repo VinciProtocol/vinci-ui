@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useAppSelector } from 'store'
 
-import { useObjectMemo } from 'app/hooks/useValues'
+import { useObjectMemo } from '@vinci-protocol/hooks'
 import { NFT_IDS } from 'app/web3/market'
 
 import { selectDatas } from '..'

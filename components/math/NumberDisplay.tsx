@@ -6,7 +6,7 @@ import { TokenIcon } from 'app/web3/TokenIcon'
 import type { FC } from 'react'
 import { useMemo } from 'react'
 import { valueToBigNumber } from '@vinci-protocol/math'
-import type { BigNumberValue } from 'utils/math/types'
+import type { BigNumberValue } from '@vinci-protocol/math'
 
 type NumberDisplayProps = {
   value: BigNumberValue

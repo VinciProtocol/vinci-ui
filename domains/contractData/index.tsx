@@ -4,7 +4,7 @@ import { cloneDeep } from 'lodash'
 
 import { createContext } from 'utils/createContext'
 import { getCurrentTimestamp, RAY_DECIMALS, SECONDS_PER_YEAR } from '@vinci-protocol/math'
-import { useMemoLazy } from 'app/hooks/useMemoLazy'
+import { useMemoLazy } from '@vinci-protocol/hooks'
 import {
   getCompoundedBalance,
   getLinearBalance,

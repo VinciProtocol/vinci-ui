@@ -1,6 +1,6 @@
 import { useCallback, useState, useRef } from 'react'
 
-import { useObjectMemo } from 'app/hooks/useValues'
+import { useObjectMemo } from '@vinci-protocol/hooks'
 
 export function usePost<T, A extends Array<any>>(fn: (...args: A) => Promise<T>) {
   const [loading, setLoading] = useState(false)

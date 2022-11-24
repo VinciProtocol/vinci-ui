@@ -1302,10 +1302,23 @@
     "@vinci-protocol/math" "0.0.2-alpha.1"
     "@vinci-protocol/protocol" "0.0.2-alpha.1"
 
+"@vinci-protocol/hooks@0.0.2-alpha.2", "@vinci-protocol/hooks@^0.0.2-alpha.2":
+  version "0.0.2-alpha.2"
+  resolved "https://registry.npmjs.org/@vinci-protocol/hooks/-/hooks-0.0.2-alpha.2.tgz#05ae36393fc2e7ec6309683c4fdecc185c8743aa"
+  integrity sha512-4+42y+X+xIuWgHgy6SoDU8QxYyCT+6emtL5P3Ph/FnszeWJdO3bk4quRFaBLBdpUuPXFjmvEByx4OZKTj6qYVQ==
+
 "@vinci-protocol/math@0.0.2-alpha.1", "@vinci-protocol/math@^0.0.2-alpha.1":
   version "0.0.2-alpha.1"
   resolved "https://registry.npmjs.org/@vinci-protocol/math/-/math-0.0.2-alpha.1.tgz#425ceb03b66b1b99e451541d8f5e65318f7c25b3"
   integrity sha512-/29GtPSMrfhdDOUg0wax3Ve1WtI4wybT3Jzvf8s29XghbG1x+iCUAda2mTMhOb084tqzQ2/NiYnAfAnqUyqikA==
+  dependencies:
+    bignumber.js "^9.1.0"
+    ethers "^5.7.2"
+
+"@vinci-protocol/math@0.0.2-alpha.2":
+  version "0.0.2-alpha.2"
+  resolved "https://registry.npmjs.org/@vinci-protocol/math/-/math-0.0.2-alpha.2.tgz#75df43104dcdd57b5d0f1d6ba362a5b48f7d0cb0"
+  integrity sha512-FWIjkBJh66pnzresqu5ogXgcU1k95DnEdXd6oZm1CCadxQrb0IBTHHRCrsj/e+/diZJ+7SokGfpBrpfKEaGL7g==
   dependencies:
     bignumber.js "^9.1.0"
     ethers "^5.7.2"
@@ -1316,6 +1329,22 @@
   integrity sha512-pffBiR2KB9bYMS4OAoff/3JEIIzjBaq1Nk8/4GjKuVBcq3I79pV4corCiZagGxkKyKay5fOTMelaeFy/teY2hA==
   dependencies:
     "@vinci-protocol/math" "0.0.2-alpha.1"
+
+"@vinci-protocol/protocol@0.0.2-alpha.2":
+  version "0.0.2-alpha.2"
+  resolved "https://registry.npmjs.org/@vinci-protocol/protocol/-/protocol-0.0.2-alpha.2.tgz#57cdee2e05f2bd745492bf21ad3457ac9a99ec2b"
+  integrity sha512-k65I4JEulUas4mJHbS3wZ10kWQmLGMoGcaElnOZrEzIRgDU3X3/N+liSZue5aGdbj7d+AJxT2mi+MeFtKhlc4w==
+  dependencies:
+    "@vinci-protocol/math" "0.0.2-alpha.2"
+
+"@vinci-protocol/store@^0.0.2-alpha.2":
+  version "0.0.2-alpha.2"
+  resolved "https://registry.npmjs.org/@vinci-protocol/store/-/store-0.0.2-alpha.2.tgz#8251d05db01638c027260f09498379318b6f96bc"
+  integrity sha512-GYwjJaDjp1vfcqW0D0oszr/cZ1M5KAy5445sCyB0e/ObgvLcHtmYJvyWAOGBJb8ZTo19XBFAK3u1U7njD3bAMg==
+  dependencies:
+    "@vinci-protocol/hooks" "0.0.2-alpha.2"
+    "@vinci-protocol/math" "0.0.2-alpha.2"
+    "@vinci-protocol/protocol" "0.0.2-alpha.2"
 
 "@walletconnect/browser-utils@^1.6.6":
   version "1.6.6"
