@@ -1,5 +1,6 @@
 import { useWallet } from 'app/wallet'
-import { useRequestController } from 'store/contract/erc20/isApproved'
+import { vinciSDKReducers } from '@vinci-protocol/store'
+const { useRequestController } = vinciSDKReducers.contract.erc20.isApproved
 import { useEffect, useMemo } from 'react'
 import { useContractData } from 'domains'
 import { useVinciContract } from '@vinci-protocol/domains'

@@ -1,6 +1,7 @@
 import { createUseTabs } from 'utils/tabs'
 import { useAppSelector } from 'store'
-import { select } from 'store/contract/erc20/isApproved'
+import { vinciSDKReducers } from '@vinci-protocol/store'
+const { select } = vinciSDKReducers.contract.erc20.isApproved
 import { TabValue } from 'app/Dialogs/constants'
 import { useState, useCallback, useMemo } from 'react'
 

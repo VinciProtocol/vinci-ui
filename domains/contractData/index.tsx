@@ -16,8 +16,7 @@ import { log } from 'utils/dev'
 import { useMarket } from 'domains'
 import { safeGet } from 'utils/get'
 
-import { useReservesDatas } from 'store/contract/uiPool/reservesDataFromAllPools/hooks'
-import { useUserReservesDatas } from 'store/contract/uiPool/userReservesDataFromAllPools/hooks'
+import { useReservesDatas, useUserReservesDatas } from '@vinci-protocol/store'
 import { useWalletBalanceData } from 'store/contract/uiPool/walletBalances/hooks'
 import { useWalletNFTData } from 'store/contract/uiPool/walletNFT/hooks'
 

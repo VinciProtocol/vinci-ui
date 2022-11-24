@@ -1,4 +1,4 @@
-import type { WalletBalanceContract } from 'lib/protocol/wallet-balance'
+import type { WalletBalanceContract } from '@vinci-protocol/protocol'
 import { unzip } from 'lodash'
 
 export type WalletBalancesProps = { provider: string; user: string; wallet: WalletBalanceContract }

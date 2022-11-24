@@ -2,7 +2,8 @@ import { useCallback, useMemo } from 'react'
 import { useMarket } from 'domains'
 
 import { useVinciContract } from '@vinci-protocol/domains'
-import { useRequestController } from 'store/contract/uiPool/reservesDataFromAllPools'
+import { vinciSDKReducers } from '@vinci-protocol/store'
+const { useRequestController } = vinciSDKReducers.contract.uiPool.reservesDataFromAllPools
 
 export const useReservesDataController = () => {
   const { uiPool } = useVinciContract()
