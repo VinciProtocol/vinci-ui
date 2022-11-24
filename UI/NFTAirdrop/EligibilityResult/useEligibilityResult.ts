@@ -1,6 +1,6 @@
 import { useWallet } from 'app/wallet'
 import { useEffect, useMemo, useState } from 'react'
-import claimableNFT from 'lib/protocol/vinci-claimable-nft/fe.json'
+import claimableNFT from 'UI/NFTAirdrop/EligibilityResult/fe.json'
 
 const list: any = claimableNFT
 type EligibilityResultStatus = 'eligible' | 'notEligible' | 'needAccount'

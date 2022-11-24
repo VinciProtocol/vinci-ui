@@ -1,4 +1,4 @@
-import type { ComputedReserveData } from 'lib/protocol/ui-pool-data/types'
+import type { ComputedReserveData } from '@vinci-protocol/protocol'
 
 export class LendingPoolsProps {}
 export class UseTableProps {}

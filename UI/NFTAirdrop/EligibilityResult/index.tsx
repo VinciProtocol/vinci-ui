@@ -12,7 +12,7 @@ import DialogContent from '@mui/material/DialogContent'
 import DialogTitle from '@mui/material/DialogTitle'
 import { BigNumber as BN } from '@ethersproject/bignumber'
 import TextField from '@mui/material/TextField'
-import { useContract } from 'domains/contract'
+import { useVinciContract } from '@vinci-protocol/domains'
 import Alert from '@mui/material/Alert'
 
 import { useSendTransaction } from 'app/web3/hooks/sendTransaction'
@@ -22,7 +22,7 @@ import NFTCard from 'components/nft/NFTCard'
 import { textCenterEllipsis } from 'utils/string/text-center-ellipsis'
 import ConnectButton from 'app/wallet/ConnectButton'
 import { toast } from 'lib/toastify'
-import claimableNFT from 'lib/protocol/vinci-claimable-nft/fe.json'
+import claimableNFT from './fe.json'
 
 import { useEligibilityResult } from './useEligibilityResult'
 import NFTImage from './images/vinci NFT.jpg'
@@ -63,7 +63,7 @@ const Eligibility: FC<{ account: string }> = ({ account }) => {
       justify-content: center;
     `
   )
-  const { vinciNFT } = useContract()
+  const { vinciNFT } = useVinciContract()
   const sendTransaction = useSendTransaction()
 
   const onClick = useCallback(() => {

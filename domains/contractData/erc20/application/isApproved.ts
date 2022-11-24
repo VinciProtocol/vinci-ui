@@ -2,12 +2,12 @@ import { useWallet } from 'app/wallet'
 import { useRequestController } from 'store/contract/erc20/isApproved'
 import { useEffect, useMemo } from 'react'
 import { useContractData } from 'domains'
-import { useContract } from 'domains/contract'
+import { useVinciContract } from '@vinci-protocol/domains'
 
 export const useIsApproved = () => {
   const { generalAssets } = useContractData()
   const { networkAccount: account } = useWallet()
-  const { ERC20Service } = useContract()
+  const { ERC20Service } = useVinciContract()
   const { single } = useRequestController()
 
   const keys = useMemo(() => {

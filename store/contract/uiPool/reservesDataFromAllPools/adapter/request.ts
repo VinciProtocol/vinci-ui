@@ -1,5 +1,5 @@
-import type { UiPoolDataContract } from 'lib/protocol/ui-pool-data'
-import { getAddress, getString } from 'domains/contract/adapter/utils'
+import type { UiPoolDataContract } from '@vinci-protocol/protocol'
+import { getAddress, getString } from 'utils/adapter'
 
 export type ReservesDataProps = { registry: string; uiPool: UiPoolDataContract }
 export const useReservesDataFromAllPools = (props: ReservesDataProps) => {

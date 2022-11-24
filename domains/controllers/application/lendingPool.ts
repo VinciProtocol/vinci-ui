@@ -2,8 +2,8 @@ import { useState, useCallback } from 'react'
 
 import { usePost } from 'app/hooks/request'
 import { useSendTransaction } from 'app/web3/hooks/sendTransaction'
-import type { LendingPoolContract } from 'lib/protocol/lending-pool'
-import { useContract } from 'domains/contract'
+import type { LendingPoolContract } from '@vinci-protocol/protocol'
+import { useVinciContract } from '@vinci-protocol/domains'
 import { TransactionStatus, transaction } from '../adapter/transaction'
 
 type PropsType<T> = T extends (props: infer P) => any ? P : any
@@ -40,7 +40,7 @@ const useDepositNFT = createLendingPoolUse('depositNFT')
 const useWithdrawNFT = createLendingPoolUse('withdrawNFT')
 
 export const useLendingPoolController = () => {
-  const { lendingPool } = useContract()
+  const { lendingPool } = useVinciContract()
   const deposit = useDeposit(lendingPool)
   const withdraw = useWithdraw(lendingPool)
 

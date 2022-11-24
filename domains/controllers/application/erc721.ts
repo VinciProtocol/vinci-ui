@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react'
 
 import { usePost } from 'app/hooks/request'
-import type { ERC721Service } from 'lib/protocol/erc721-contract'
-import { useContract } from 'domains/contract'
+import type { ERC721Service } from '@vinci-protocol/protocol'
+import { useVinciContract } from '@vinci-protocol/domains'
 import { useSendTransaction } from 'app/web3/hooks/sendTransaction'
 import { TransactionStatus, transaction } from '../adapter/transaction'
 
@@ -38,7 +38,7 @@ const createERC721Use =
 const useSetApprovalForAll = createERC721Use('setApprovalForAll')
 
 export const useERC721Controller = () => {
-  const { ERC721Service } = useContract()
+  const { ERC721Service } = useVinciContract()
   const setApprovalForAll = useSetApprovalForAll(ERC721Service)
   const isApprovedForAll = ERC721Service.isApprovedForAll
 

@@ -1,5 +1,5 @@
 import type { SendTransaction } from 'app/web3/hooks/sendTransaction'
-import type { EthereumTransactionTypeExtended } from 'lib/protocol/commons/types'
+import type { EthereumTransactionTypeExtended } from '@vinci-protocol/protocol'
 import { toast } from 'lib/toastify'
 
 export enum TransactionStatus {

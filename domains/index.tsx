@@ -1,16 +1,16 @@
 import type { FC } from 'react'
 import SocketProvider from 'lib/dev/socket/domain'
 import MarketProvider, { createMarketContext } from 'domains/market'
-import ContractProvider from 'domains/contract'
 import ContractDataProvider, { createContractDataContext, createContractNFTContext } from './contractData'
 import ThegraphProvider, { createThegraphContext } from './thegraph'
 import DialogsProvider, { createDialogsContext } from './dialogs'
 import ControllersProvider, { createControllersContext } from './controllers'
+import VinciSDKProvider from './vinciSDK'
 
 const Provider: FC = ({ children }) => {
   return (
     <MarketProvider>
-      <ContractProvider>
+      <VinciSDKProvider>
         <ContractDataProvider>
           <ThegraphProvider>
             <ControllersProvider>
@@ -18,7 +18,7 @@ const Provider: FC = ({ children }) => {
             </ControllersProvider>
           </ThegraphProvider>
         </ContractDataProvider>
-      </ContractProvider>
+      </VinciSDKProvider>
     </MarketProvider>
   )
 }

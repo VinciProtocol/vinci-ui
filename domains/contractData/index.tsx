@@ -5,11 +5,14 @@ import { cloneDeep } from 'lodash'
 import { createContext } from 'utils/createContext'
 import { getCurrentTimestamp, RAY_DECIMALS, SECONDS_PER_YEAR } from 'app/App/constants'
 import { useMemoLazy } from 'app/hooks/useMemoLazy'
-import { getCompoundedBalance, getLinearBalance } from 'lib/protocol/ui-pool-data/pool-math'
-import { calculateReserveDebt } from 'lib/protocol/ui-pool-data/formatters/reserve/calculate-reserve-debt'
+import {
+  getCompoundedBalance,
+  getLinearBalance,
+  API_ETH_MOCK_ADDRESS,
+  calculateReserveDebt,
+} from '@vinci-protocol/protocol'
 import { normalizeBN, valueToBigNumber, valueToZDBigNumber } from 'utils/math'
 import { rayPow, RAY } from 'utils/math/ray'
-import { API_ETH_MOCK_ADDRESS } from 'lib/protocol/commons/utils'
 import { log } from 'utils/dev'
 import { useMarket } from 'domains'
 import { safeGet } from 'utils/get'

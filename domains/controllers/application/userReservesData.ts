@@ -3,10 +3,10 @@ import { useMarket } from 'domains'
 import { useWallet } from 'app/wallet'
 
 import { useRequestController } from 'store/contract/uiPool/userReservesDataFromAllPools'
-import { useContract } from 'domains/contract'
+import { useVinciContract } from '@vinci-protocol/domains'
 
 export const useUserReservesDataController = () => {
-  const { uiPool } = useContract()
+  const { uiPool } = useVinciContract()
   const { networkAccount: account } = useWallet()
   const { usePolling, polling, clearData } = useRequestController()
   const { market } = useMarket()

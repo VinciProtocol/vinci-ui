@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from 'react'
 import { useWallet } from 'app/wallet'
-import { useContract } from 'domains/contract'
+import { useVinciContract } from '@vinci-protocol/domains'
 import { NFT_IDS } from 'app/web3/market'
 
 import type { MarketData } from 'app/web3/market/types'
@@ -15,7 +15,7 @@ type CreateUseWalletBalanceController = ReturnType<typeof createUseWalletBalance
 
 const createUseWalletBalanceController =
   (getProvider: (market: MarketData) => string, useRequestController: UseRequestController) => () => {
-    const { wallet } = useContract()
+    const { wallet } = useVinciContract()
     const { networkAccount: account } = useWallet()
     const { usePolling, polling, clearData } = useRequestController()
     const { market } = useMarket()

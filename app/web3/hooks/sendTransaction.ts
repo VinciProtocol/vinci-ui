@@ -1,6 +1,6 @@
 import { BigNumber as BN } from '@ethersproject/bignumber'
 import { useWeb3React } from '@web3-react/core'
-import type { transactionType } from 'lib/protocol/commons/types'
+import type { transactionType } from '@vinci-protocol/protocol'
 import type { providers } from 'ethers'
 import { useCallback } from 'react'
 

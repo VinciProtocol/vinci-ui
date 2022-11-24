@@ -3,7 +3,7 @@ import type { TabPanelBaseProps } from 'app/hoc/tabs/withTabPanel'
 import { withTabPanel } from 'app/hoc/tabs/withTabPanel'
 import { TabValue } from 'app/Dialogs/constants'
 import { createUseTabpanel } from 'app/Dialogs/tabpanel/helpers'
-import { InterestRate } from 'lib/protocol/commons/types'
+import { InterestRate } from '@vinci-protocol/protocol'
 import { useMemo } from 'react'
 import { useTranslation } from 'next-i18next'
 

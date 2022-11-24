@@ -1,4 +1,4 @@
-import type { ApproveType, ERC20Service } from 'lib/protocol/erc20-contract'
+import type { ApproveType, ERC20Service } from '@vinci-protocol/protocol'
 
 export type IsApprovedProps = {
   erc20Service: ERC20Service

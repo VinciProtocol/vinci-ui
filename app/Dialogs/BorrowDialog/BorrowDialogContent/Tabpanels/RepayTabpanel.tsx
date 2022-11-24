@@ -4,7 +4,7 @@ import { withTabPanel } from 'app/hoc/tabs/withTabPanel'
 import { useControllers } from 'domains'
 import { TabValue } from 'app/Dialogs/constants'
 import { createUseTabpanel } from 'app/Dialogs/tabpanel/helpers'
-import { InterestRate } from 'lib/protocol/commons/types'
+import { InterestRate } from '@vinci-protocol/protocol'
 import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'next-i18next'
 
