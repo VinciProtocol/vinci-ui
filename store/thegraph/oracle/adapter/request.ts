@@ -1,4 +1,4 @@
-import { valueToBigNumber } from 'utils/math'
+import { valueToBigNumber } from '@vinci-protocol/math'
 
 const DayTime = 24 * 60 * 60
 

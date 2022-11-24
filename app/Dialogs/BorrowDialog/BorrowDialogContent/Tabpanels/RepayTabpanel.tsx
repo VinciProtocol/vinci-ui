@@ -9,7 +9,7 @@ import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'next-i18next'
 
 import InternalTabpanel from './InternalTabpanel'
-import { valueToBigNumber } from 'utils/math'
+import { valueToBigNumber } from '@vinci-protocol/math'
 
 const useTabpanel = createUseTabpanel({
   getPostProps: ({ lendingPoolAddress, user, amt, underlyingAsset, isMax }) => ({

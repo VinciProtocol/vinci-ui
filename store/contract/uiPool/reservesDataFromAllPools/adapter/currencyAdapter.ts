@@ -1,4 +1,4 @@
-import { normalizeBN } from 'utils/math'
+import { normalizeBN } from '@vinci-protocol/math'
 import type { ReservesData } from './request'
 
 export const getCurrency = ({

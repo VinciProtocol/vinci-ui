@@ -5,7 +5,7 @@ import { useWallet } from 'app/wallet'
 import { TokenIcon } from 'app/web3/TokenIcon'
 import type { FC } from 'react'
 import { useMemo } from 'react'
-import { valueToBigNumber } from 'utils/math'
+import { valueToBigNumber } from '@vinci-protocol/math'
 import type { BigNumberValue } from 'utils/math/types'
 
 type NumberDisplayProps = {

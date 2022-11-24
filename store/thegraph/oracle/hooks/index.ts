@@ -2,7 +2,7 @@ import { cloneDeep } from 'lodash'
 import { useMemo } from 'react'
 
 import { useAppSelector } from 'store'
-import { valueToBigNumber } from 'utils/math'
+import { valueToBigNumber } from '@vinci-protocol/math'
 
 import { selectData } from '..'
 import type { OracleRecordFixed } from '../adapter/request'

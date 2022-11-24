@@ -1,5 +1,5 @@
 import type { BigNumber } from 'bignumber.js'
-import { valueToBigNumber } from 'utils/math'
+import { valueToBigNumber } from '@vinci-protocol/math'
 
 import type { WalletBalances } from './request'
 

@@ -3,7 +3,7 @@ import { useMemo } from 'react'
 import { cloneDeep } from 'lodash'
 
 import { createContext } from 'utils/createContext'
-import { getCurrentTimestamp, RAY_DECIMALS, SECONDS_PER_YEAR } from 'app/App/constants'
+import { getCurrentTimestamp, RAY_DECIMALS, SECONDS_PER_YEAR } from '@vinci-protocol/math'
 import { useMemoLazy } from 'app/hooks/useMemoLazy'
 import {
   getCompoundedBalance,
@@ -11,8 +11,7 @@ import {
   API_ETH_MOCK_ADDRESS,
   calculateReserveDebt,
 } from '@vinci-protocol/protocol'
-import { normalizeBN, valueToBigNumber, valueToZDBigNumber } from 'utils/math'
-import { rayPow, RAY } from 'utils/math/ray'
+import { normalizeBN, valueToBigNumber, valueToZDBigNumber, rayPow, RAY } from '@vinci-protocol/math'
 import { log } from 'utils/dev'
 import { useMarket } from 'domains'
 import { safeGet } from 'utils/get'

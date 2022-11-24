@@ -12,7 +12,7 @@ import {
   headerRenderer,
 } from 'components/Table'
 import { safeGet } from 'utils/get'
-import { valueToBigNumber } from 'utils/math'
+import { valueToBigNumber } from '@vinci-protocol/math'
 
 export const useTable = (): BasicTableProps => {
   const { t } = useTranslation('nft-oracle-detail')

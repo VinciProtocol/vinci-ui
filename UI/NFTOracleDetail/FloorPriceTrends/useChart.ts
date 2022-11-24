@@ -3,7 +3,7 @@ import { useState, useMemo, useRef } from 'react'
 import { useTheme } from '@mui/material/styles'
 import { useContractNFT, useThegraph } from 'domains'
 
-import { valueToBigNumber } from 'utils/math'
+import { valueToBigNumber } from '@vinci-protocol/math'
 import { safeGet } from 'utils/get'
 
 import type { FloorPriceTrendsChartProps } from './types'

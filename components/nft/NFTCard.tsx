@@ -17,7 +17,7 @@ import LockClockTwoTone from '@mui/icons-material/LockClockTwoTone'
 import type { NFT } from 'UI/BorrowDetail/types'
 import NumberDisplay from 'components/math/NumberDisplay'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
-import { valueToBigNumber } from 'utils/math'
+import { valueToBigNumber } from '@vinci-protocol/math'
 import { useTheme } from '@mui/system'
 
 export type NFTCardProps = Partial<

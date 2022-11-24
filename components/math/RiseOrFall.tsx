@@ -5,7 +5,7 @@ import type { TypographyTypeMap } from '@mui/material'
 import { Typography } from '@mui/material'
 
 import NumberDisplay from './NumberDisplay'
-import { valueToBigNumber } from 'utils/math'
+import { valueToBigNumber } from '@vinci-protocol/math'
 
 const RiseOrFall: FC<{ value: any } & TypographyTypeMap<{}, 'span'>['props']> = ({ value, ...props }) => {
   const theme = useTheme()

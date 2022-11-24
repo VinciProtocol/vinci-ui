@@ -1,5 +1,5 @@
-import { LTV_PRECISION } from 'app/App/constants'
-import { normalizeBN, valueToBigNumber } from 'utils/math'
+import { LTV_PRECISION } from '@vinci-protocol/math'
+import { normalizeBN, valueToBigNumber } from '@vinci-protocol/math'
 import type { ReservesData } from './request'
 
 export const getNFTVaults = (nftVaultsData: ReservesData['nftVaultsData']) => {

@@ -5,7 +5,7 @@ import { cloneDeep } from 'lodash'
 import { createContext } from 'utils/createContext'
 import { useContractData, useMarket } from 'domains'
 import { useOracleRecords } from 'store/thegraph/oracle/hooks'
-import { valueToBigNumber } from 'utils/math'
+import { valueToBigNumber } from '@vinci-protocol/math'
 import { safeGet } from 'utils/get'
 
 const useThegraphService = () => {

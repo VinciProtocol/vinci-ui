@@ -1,4 +1,4 @@
-import { valueToBigNumber } from 'utils/math'
+import { valueToBigNumber } from '@vinci-protocol/math'
 import type { UserReservesData } from './request'
 
 const getCreateTime = (lockType: number, endTime: number) => {

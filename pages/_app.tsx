@@ -4,7 +4,7 @@ import Head from 'next/head'
 import CssBaseline from '@mui/material/CssBaseline'
 import store from 'store'
 
-import 'utils/math'
+import '@vinci-protocol/math'
 import { appWithTranslation, useI18nHMR } from 'app/i18n'
 import App from 'app/App'
 import ThemeProvider from 'app/Theme'
