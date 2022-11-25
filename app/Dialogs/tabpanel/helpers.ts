@@ -4,13 +4,21 @@ import BigNumber from 'bignumber.js'
 
 import { useWallet } from 'app/wallet'
 import { useControllers } from 'domains'
-import type { TransactionStatus } from 'domains/controllers/adapter/transaction'
 import type { TabPanelBaseProps } from 'app/hoc/tabs/withTabPanel'
 
 import type { TabValue } from '../constants'
 import { useInputSlider } from '../hooks/tab/useInputSlider'
 
 const defaultGetIsMax = (value: string, balance: string) => value === balance
+
+export enum TransactionStatus {
+  init = 'init',
+  ready = 'ready',
+  approval = 'approval',
+  action = 'action',
+  success = 'success',
+  error = 'error',
+}
 
 export type TabPanelProps = {
   tabpanelKey: TabValue

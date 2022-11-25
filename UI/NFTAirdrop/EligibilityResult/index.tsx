@@ -25,7 +25,7 @@ import { toast } from 'lib/toastify'
 import claimableNFT from './fe.json'
 
 import { useEligibilityResult } from './useEligibilityResult'
-import NFTImage from './images/vinci NFT.jpg'
+import NFTImage from './images/vinciNFT.jpg'
 import { useWallet } from 'app/wallet'
 
 const list: any = claimableNFT
