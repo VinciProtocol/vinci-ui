@@ -67,7 +67,7 @@ const Banner: FC = () => {
             </Button>
             <Button
               variant="outlined"
-              href="https://app.vinci.io/lending-market/"
+              href="https://app.vinci.io/dashboard/"
               target="_blank"
               style={{ width: '150px' }}
             >
