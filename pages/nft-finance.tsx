@@ -6,7 +6,7 @@ import NFTFinance from 'UI/NFTFinance'
 import { withStaticTranslations } from 'app/i18n/hoc'
 
 export const getStaticProps: GetStaticProps = withStaticTranslations((props) => ({ props }), {
-  namespaces: ['nft-finance','dashboard'],
+  namespaces: ['nft-finance', 'dashboard'],
 })
 
 const Page: NextPage = () => {

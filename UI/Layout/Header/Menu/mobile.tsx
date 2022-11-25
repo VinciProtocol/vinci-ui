@@ -15,6 +15,7 @@ import { useLinks } from 'UI/Layout/Footer/Links/useLinks'
 
 import Logo from '../Logo'
 import { useMenu } from './useMenu'
+import LinkButtonMobile from './components/LinkButtonMobile'
 
 const MenuMobile = () => {
   const { menuList, currentMenu } = useMenu()
@@ -31,14 +32,11 @@ const MenuMobile = () => {
         <Divider />
         {menuList
           .filter((item) => !item.hide)
-          .map(({ label, linkTo, key, target }) => (
-            <Link href={linkTo} key={linkTo} passHref>
-              <a target={target}>
-                <ListItem button selected={currentMenu.key === key} onClick={() => setOpenDrawer(false)}>
-                  <ListItemText primary={label} style={{ color: 'rgba(0, 0, 0, 0.87)' }} />
-                </ListItem>
-              </a>
-            </Link>
+          .map((menu) => (
+            <LinkButtonMobile
+              key={menu.linkTo}
+              {...{ ...menu, handleClose: () => setOpenDrawer(false), currentMenu }}
+            />
           ))}
         <Divider />
         {links.map(({ label, linkTo, icon }) => (
@@ -55,7 +53,7 @@ const MenuMobile = () => {
         </ListItem>
       </List>
     ),
-    [currentMenu.key, links, menuList]
+    [currentMenu, links, menuList]
   )
 
   return (

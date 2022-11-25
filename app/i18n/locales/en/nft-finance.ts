@@ -13,15 +13,18 @@ const locale = {
     },
     listing: {
       title: 'Limitless Collection Listing',
-      subTitle: 'It can open one lending pool for any NFT collection you want. Free integration, easy listing, and unlimited NFT collections.',
+      subTitle:
+        'It can open one lending pool for any NFT collection you want. Free integration, easy listing, and unlimited NFT collections.',
     },
     mechanism: {
       title: 'Lending Pool Mechanism',
-      subTitle: 'Lending Pool Mechanism is much higher capital efficient with your NFT collaterals and liquidity than the Peer-to-peer model.',
+      subTitle:
+        'Lending Pool Mechanism is much higher capital efficient with your NFT collaterals and liquidity than the Peer-to-peer model.',
     },
     permissionless: {
       title: 'Non-custodial & Permissionless',
-      subTitle: 'Assets are controlled in your hands. It is a safe, open and secure protocol with fully auditing proving its highest security standards.',
+      subTitle:
+        'Assets are controlled in your hands. It is a safe, open and secure protocol with fully auditing proving its highest security standards.',
     },
   },
   title: 'Lending Market',

@@ -56,7 +56,7 @@ const Banner: FC = () => {
           <Typography variant="body1" color="grey.400">
             {t('banner.subTitle')}
           </Typography>
-          <Stack spacing={2} direction='row'>
+          <Stack spacing={2} direction="row">
             <Button
               variant="contained"
               href="https://docs.vinci.io/protocol/nft-price-oracle/overview"

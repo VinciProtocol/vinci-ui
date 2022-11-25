@@ -11,16 +11,29 @@ const MenuList = [
     hide: true,
   },
   {
-    key: 'Dashboard',
-    linkTo: '/dashboard',
+    key: 'NFTFinance',
+    linkTo: '/nft-finance',
   },
   {
-    key: 'Lend',
-    linkTo: '/lend',
+    key: 'NFTOracle',
+    linkTo: '/nft-oracle',
   },
   {
-    key: 'Borrow',
-    linkTo: '/borrow',
+    key: 'LendingMarket',
+    menuChildren: [
+      {
+        key: 'Dashboard',
+        linkTo: '/dashboard',
+      },
+      {
+        key: 'Lend',
+        linkTo: '/lend',
+      },
+      {
+        key: 'Borrow',
+        linkTo: '/borrow',
+      },
+    ],
   },
   {
     key: 'BorrowDetail',
@@ -33,14 +46,6 @@ const MenuList = [
     hide: true,
   },
   {
-    key: 'NFTFinance',
-    linkTo: '/nft-finance',
-  },
-  {
-    key: 'NFTOracle',
-    linkTo: '/nft-oracle',
-  },
-  {
     key: 'NFTOracleDetail',
     linkTo: '/nft-oracle/[id]',
     hide: true,
@@ -50,6 +55,11 @@ const MenuList = [
     linkTo: 'https://www.certik.com/projects/vinci-protocol',
     target: '_blank',
     onlyMobile: true,
+  },
+  {
+    key: 'Documentation',
+    linkTo: 'https://docs.vinci.io/',
+    target: '_blank',
   },
   // {
   //   key: 'Liquidation',
@@ -63,18 +73,39 @@ export function useMenu() {
   const { chainId } = useWallet()
 
   const menuList = useMemo(() => {
-    return MenuList.filter((menu) => {
-      if (__DEV__) return true
-      if (chainId === ChainId.goerli) {
-        return menu.key !== 'NFTAirdrop'
-      }
-      return true
-    }).map((menu) => ({ ...menu, label: t('router:menu.' + menu.key) }))
+    const getMenuList = (list: any[]) => {
+      return list.map((menu) => {
+        if (menu.menuChildren) menu.menuChildren = getMenuList(menu.menuChildren)
+        return {
+          ...menu,
+          label: t('router:menu.' + menu.key),
+        }
+      })
+    }
+    return getMenuList(
+      MenuList.filter((menu) => {
+        if (__DEV__) return true
+        if (chainId === ChainId.goerli) {
+          return menu.key !== 'NFTAirdrop'
+        }
+        return true
+      })
+    )
   }, [chainId, t])
 
   const currentMenu = useMemo(() => {
     const linkTo = router.route
-    return menuList.find((item) => item.linkTo === linkTo) || ({} as undefined)
+    const getCurrentMenu = (list: any[]): any => {
+      for (let index = 0; index < list.length; index++) {
+        const menu = list[index]
+        if (menu.linkTo === linkTo) return menu
+        if (menu.menuChildren) {
+          const returnValue = getCurrentMenu(menu.menuChildren)
+          if (returnValue) return returnValue
+        }
+      }
+    }
+    return getCurrentMenu(menuList) || ({} as undefined)
   }, [menuList, router.route])
 
   return { menuList, currentMenu }

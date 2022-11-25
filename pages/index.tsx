@@ -1,17 +1,17 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Layout from 'UI/Layout'
-import Dashboard from 'UI/Dashboard'
+import NFTFinance from 'UI/NFTFinance'
 
 import { withStaticTranslations } from 'app/i18n/hoc'
 
 export const getStaticProps: GetStaticProps = withStaticTranslations((props) => ({ props }), {
-  namespaces: ['dashboard', 'lend'],
+  namespaces: ['nft-finance', 'dashboard'],
 })
 
 const Page: NextPage = () => {
   return (
-    <Layout title="Dashboard">
-      <Dashboard />
+    <Layout title="NFTFinance">
+      <NFTFinance />
     </Layout>
   )
 }
