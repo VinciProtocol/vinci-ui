@@ -6,6 +6,7 @@ import { useCallback, useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { useAppDispatch } from 'store'
 import { isEqual, get } from 'lodash'
+import { safeGet } from 'utils/get'
 
 export interface RequestSliceState<DATA = any, ERROR = any> {
   data: DATA
@@ -35,7 +36,7 @@ export const createRequestSlice = <SliceState extends RequestSliceState, Returne
   request: AsyncThunk<Returned, ThunkArg, {}>
 ) => {
   const {
-    actions: { setStatus, setData },
+    actions: { setStatus: setStatusAction, setData },
     reducer,
   } = createSlice({
     name: path,
@@ -71,18 +72,42 @@ export const createRequestSlice = <SliceState extends RequestSliceState, Returne
   const selectStatus = (state: any): REQUEST_STATUS => select(state).status
   const selectData = (state: any): SliceState['data'] => select(state).data
 
-  const usePolling = () => {
+  const useStatus = () => {
     const status = useSelector(selectStatus)
     const dispatch = useAppDispatch()
-    const abortFnRef = useRef<() => void>()
     const statusRef = useLatest(status)
+    const setStatus = useCallback(
+      (status: REQUEST_STATUS) => {
+        dispatch(setStatusAction(status))
+        statusRef.current = status
+      },
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      [dispatch]
+    )
+    const getStatus = useCallback(() => {
+      return statusRef.current
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
+    return {
+      setStatus,
+      getStatus,
+    }
+  }
+
+  const usePolling = () => {
+    const dispatch = useAppDispatch()
+    const { setStatus, getStatus } = useStatus()
+    const abortFnRef = useRef<() => void>()
     const timerRef = useRef<ReturnType<typeof setTimeout>>()
+    const propsRef = useRef({} as any)
     const run = useCallback(
       (props: ThunkArg, ms = 5000) => {
-        const status = statusRef.current
-        if (status !== REQUEST_STATUS.ready) return
+        propsRef.current = { ms, props }
+        const status = getStatus()
+        if (status !== REQUEST_STATUS.ready) return Promise.reject({ name: 'RunningError', message: 'Running' })
+        setStatus(REQUEST_STATUS.polling)
 
-        dispatch(setStatus(REQUEST_STATUS.polling))
         const fn = () => {
           const promise = dispatch(request(props))
           abortFnRef.current = () => promise.abort()
@@ -93,26 +118,28 @@ export const createRequestSlice = <SliceState extends RequestSliceState, Returne
         }
 
         fn()
+
+        return Promise.resolve()
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
       [dispatch]
     )
 
     const stop = useCallback(() => {
-      const status = statusRef.current
+      const status = getStatus()
       if (status !== REQUEST_STATUS.polling) return
 
-      dispatch(setStatus(REQUEST_STATUS.ready))
+      setStatus(REQUEST_STATUS.ready)
       if (abortFnRef.current) abortFnRef.current()
       clearTimeout(timerRef.current)
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dispatch])
 
-    const restart = useCallback((props: ThunkArg) => {
-      const status = statusRef.current
+    const restart = useCallback((props?: ThunkArg, ms?: number) => {
+      const status = getStatus()
       if (status !== REQUEST_STATUS.polling) return
       stop()
-      run(props)
+      run(props || propsRef.current.props, ms || propsRef.current.ms || 5000)
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
@@ -127,25 +154,24 @@ export const createRequestSlice = <SliceState extends RequestSliceState, Returne
   }
 
   const useSingle = () => {
-    const status = useSelector(selectStatus)
+    const { setStatus, getStatus } = useStatus()
     const dispatch = useAppDispatch()
     const abortFnRef = useRef<() => void>()
-    const statusRef = useLatest(status)
 
     const run = useCallback(
       (props: ThunkArg) => {
-        const status = statusRef.current
+        const status = getStatus()
         if (status !== REQUEST_STATUS.ready) return Promise.reject({ name: 'RunningError', message: 'Running' })
-        dispatch(setStatus(REQUEST_STATUS.single))
+        setStatus(REQUEST_STATUS.single)
         const promise = dispatch(request(props))
         abortFnRef.current = () => promise.abort()
         return promise
           .then((action: any) => {
             if (action.error) return Promise.reject(action)
-            return action.data
+            return safeGet(() => action.payload.data || action.payload)
           })
           .finally(() => {
-            dispatch(setStatus(REQUEST_STATUS.ready))
+            setStatus(REQUEST_STATUS.ready)
           })
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -153,10 +179,10 @@ export const createRequestSlice = <SliceState extends RequestSliceState, Returne
     )
 
     const stop = useCallback(() => {
-      const status = statusRef.current
+      const status = getStatus()
       if (status !== REQUEST_STATUS.single) return
 
-      dispatch(setStatus(REQUEST_STATUS.ready))
+      setStatus(REQUEST_STATUS.ready)
       if (abortFnRef.current) abortFnRef.current()
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dispatch])
@@ -179,11 +205,11 @@ export const createRequestSlice = <SliceState extends RequestSliceState, Returne
     }, [dispatch])
 
     const useAutoPolling = useCallback(
-      (query: ThunkArg, DoNotPolling: (query: ThunkArg) => boolean, ms: number, delay = 500) => {
+      (query: ThunkArg, isStop: (query: ThunkArg) => boolean, ms: number, delay = 500) => {
         // eslint-disable-next-line react-hooks/rules-of-hooks
         useEffect(() => {
-          if (DoNotPolling(query)) return
-          let timer = setTimeout(() => {
+          if (isStop(query)) return
+          const timer = setTimeout(() => {
             polling.run(query, ms)
           }, delay)
           return () => {
