@@ -2,7 +2,7 @@ const locale = {
   banner: {
     title: 'NFT Oracle',
     subTitle: 'Vinci NFT oracles are on-chain floor price oracles for the NFT-backed DeFi ecosystem.',
-    apply: 'Apply New Oracle',
+    apply: 'Request Custom Oracle',
   },
   oracleCards: {
     dataSources: {

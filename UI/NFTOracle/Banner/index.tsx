@@ -59,9 +59,9 @@ const Banner: FC = () => {
           <Stack spacing={2} direction="row">
             <Button
               variant="contained"
-              href="https://docs.vinci.io/protocol/nft-price-oracle/overview"
+              href="https://forms.gle/uPJVocqNJ3izcVyV8"
               target="_blank"
-              style={{ width: '150px' }}
+              style={{ width: '180px' }}
             >
               {t('banner.apply')}
             </Button>
