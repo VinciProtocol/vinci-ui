@@ -5,7 +5,8 @@ import type { TableCellRenderer } from 'react-virtualized'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import TableCell from '@mui/material/TableCell'
-import { useContractData, useDialogs } from 'domains'
+import { useVinciContractData } from '@vinci-protocol/domains'
+import { useDialogs } from 'domains'
 
 import { useWallet } from 'app/wallet'
 import {
@@ -21,7 +22,7 @@ import { TabValue } from 'app/Dialogs/constants'
 export const useTable = (): BasicTableProps => {
   const { t } = useTranslation()
   const { actions } = useDialogs()
-  const { generalAssets } = useContractData()
+  const { generalAssets } = useVinciContractData()
   const { networkAccount: account } = useWallet()
 
   const FunctionButtonsCellRenderer: TableCellRenderer = useCallback(

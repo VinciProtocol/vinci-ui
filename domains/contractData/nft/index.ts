@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useRouter } from 'next/router'
 import { createContext } from 'utils/createContext'
 
-import { useContractData } from 'domains'
+import { useVinciContractData } from '@vinci-protocol/domains'
 import { useNFTInfo } from './application/NFTInfo'
 import { log } from 'utils/dev'
 import { safeGet } from 'utils/get'
@@ -10,7 +10,7 @@ import { safeGet } from 'utils/get'
 const NFTRouterPath = ['/borrow/[id]', '/nft-lockdrop/[id]', '/nft-oracle/[id]']
 
 const useContractNFTService = () => {
-  const { generalAssets, nftAssets } = useContractData()
+  const { generalAssets, nftAssets } = useVinciContractData()
   const router = useRouter()
 
   const nft = useMemo(() => {

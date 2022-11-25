@@ -17,7 +17,7 @@ import InputAdornment from '@mui/material/InputAdornment'
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone'
 
 import { NFTIcon } from 'app/web3/TokenIcon'
-import { useContractData } from 'domains'
+import { useVinciContractData } from '@vinci-protocol/domains'
 import { cloneDeep } from 'lodash'
 import { valueToBigNumber } from '@vinci-protocol/math'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
@@ -27,7 +27,7 @@ import MultipleSelect from 'components/MultipleSelect'
 
 export const useTableSearch = () => {
   const theme = useTheme()
-  const { nftAssets } = useContractData()
+  const { nftAssets } = useVinciContractData()
   const ROOT = useMemoEmpty(() => styled(Stack)``)
   const source = useMemo(() => nftAssets.filter((nftAsset) => safeGet(() => nftAsset.reserves.length)), [nftAssets])
 
@@ -109,7 +109,7 @@ const useInput = (sourceData: any[]) => {
 
 const useSearchCollections = (sourceData: any[]) => {
   const { t } = useTranslation('borrow')
-  const { nftAssets } = useContractData()
+  const { nftAssets } = useVinciContractData()
   const source = useMemo(() => nftAssets.filter((nftAsset) => safeGet(() => nftAsset.reserves.length)), [nftAssets])
 
   const [values, setValues] = useState([])

@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import SocketProvider from 'lib/dev/socket/domain'
 import MarketProvider, { createMarketContext } from 'domains/market'
-import ContractDataProvider, { createContractDataContext, createContractNFTContext } from './contractData'
+import ContractDataProvider, { createContractNFTContext } from './contractData'
 import ThegraphProvider, { createThegraphContext } from './thegraph'
 import DialogsProvider, { createDialogsContext } from './dialogs'
 import ControllersProvider, { createControllersContext } from './controllers'
@@ -33,7 +33,6 @@ const DevProvider: FC = ({ children }) => {
 
 export default __DEV__ ? DevProvider : Provider
 
-export const useContractData = createContractDataContext()
 export const useContractNFT = createContractNFTContext()
 export const useThegraph = createThegraphContext()
 export const useDialogs = createDialogsContext()

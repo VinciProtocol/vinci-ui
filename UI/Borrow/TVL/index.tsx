@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles'
 import Stack from '@mui/material/Stack'
 import LockTwoTone from '@mui/icons-material/LockTwoTone'
 import MonetizationOnTwoTone from '@mui/icons-material/MonetizationOnTwoTone'
-import { useContractData } from 'domains'
+import { useVinciContractData } from '@vinci-protocol/domains'
 
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
 import NumberDisplay from 'components/math/NumberDisplay'
@@ -21,7 +21,7 @@ const TVL: FC<TVLProps> = () => {
     }))
   )
 
-  const { dashboard } = useContractData()
+  const { dashboard } = useVinciContractData()
 
   return (
     <ROOT direction={{ xs: 'column', sm: 'row' }} spacing={2}>

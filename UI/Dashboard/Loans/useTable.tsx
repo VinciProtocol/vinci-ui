@@ -1,7 +1,8 @@
 import React, { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { TableCellRenderer } from 'react-virtualized'
-import { useContractData, useDialogs } from 'domains'
+import { useVinciContractData } from '@vinci-protocol/domains'
+import { useDialogs } from 'domains'
 
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
@@ -22,7 +23,7 @@ import { TabValue } from 'app/Dialogs/constants'
 export const useTable = (): BasicTableProps => {
   const { t } = useTranslation()
 
-  const { nftAssets } = useContractData()
+  const { nftAssets } = useVinciContractData()
   const { actions } = useDialogs()
 
   const FunctionButtonsCellRenderer: TableCellRenderer = useCallback(

@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useRouter } from 'next/router'
 
 import { TabValue } from 'app/Dialogs/constants'
-import { useContractData } from 'domains'
+import { useVinciContractData } from '@vinci-protocol/domains'
 
 import { getUseDialog } from './adapter'
 import { createContext } from 'utils/createContext'
@@ -17,7 +17,7 @@ const useDepositDialog = getUseDialog({
 
 const useDialogsService = () => {
   const router = useRouter()
-  const { generalAssets } = useContractData()
+  const { generalAssets } = useVinciContractData()
 
   const deposit = useDepositDialog(generalAssets)
   const borrow = useBorrowDialog(generalAssets)

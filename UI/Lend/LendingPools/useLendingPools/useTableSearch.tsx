@@ -17,7 +17,7 @@ import InputAdornment from '@mui/material/InputAdornment'
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone'
 
 import { NFTIcon } from 'app/web3/TokenIcon'
-import { useContractData } from 'domains'
+import { useVinciContractData } from '@vinci-protocol/domains'
 import { cloneDeep } from 'lodash'
 import { valueToBigNumber } from '@vinci-protocol/math'
 import { useMemoEmpty } from 'app/hooks/useMemoEmpty'
@@ -26,7 +26,7 @@ import MultipleSelect from 'components/MultipleSelect'
 
 export const useTableSearch = () => {
   const theme = useTheme()
-  const { generalAssets } = useContractData()
+  const { generalAssets } = useVinciContractData()
   const ROOT = useMemoEmpty(() => styled(Stack)``)
 
   const input = useInput(generalAssets)
@@ -107,7 +107,7 @@ const useInput = (sourceData: any[]) => {
 
 const useSearchCollections = (sourceData: any[]) => {
   const { t } = useTranslation('lend')
-  const { generalAssets } = useContractData()
+  const { generalAssets } = useVinciContractData()
 
   const [values, setValues] = useState([])
 

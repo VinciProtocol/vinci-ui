@@ -1,19 +1,15 @@
 import { usePageProgressController } from 'store/progress/page'
+import { useVinciControllers } from '@vinci-protocol/domains'
 import { createContext } from 'utils/createContext'
 
 import { useChainIDChange } from './application/chainIDChange'
-import { useERC721Controller } from './application/erc721'
-import { useLendingPoolController } from './application/lendingPool'
-import { useReservesDataController } from './application/reservesData'
-import { useUserReservesDataController } from './application/userReservesData'
 import { useWalletBalanceControllers } from './application/walletBalance'
 import { useWalletNFTController } from './application/walletNFT'
 
 import { useOracleRecordsController } from './application/thegraph/oracleRecords'
 
 export const useControllersService = () => {
-  const reservesData = useReservesDataController()
-  const userReservesData = useUserReservesDataController()
+  const { reservesData, userReservesData, lendingPool, erc721 } = useVinciControllers()
   const walletBalances = useWalletBalanceControllers()
   const walletNFT = useWalletNFTController()
 
@@ -21,9 +17,6 @@ export const useControllersService = () => {
     controllers: [reservesData, userReservesData, walletNFT],
     ObjectControllers: [walletBalances],
   })
-
-  const lendingPool = useLendingPoolController()
-  const erc721 = useERC721Controller()
 
   const pageProcess = usePageProgressController()
   const oracleRecords = useOracleRecordsController()

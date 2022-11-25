@@ -3,7 +3,8 @@ import { useMemo } from 'react'
 import { cloneDeep } from 'lodash'
 
 import { createContext } from 'utils/createContext'
-import { useContractData, useMarket } from 'domains'
+import { useVinciContractData } from '@vinci-protocol/domains'
+import { useMarket } from 'domains'
 import { useOracleRecords } from 'store/thegraph/oracle/hooks'
 import { valueToBigNumber } from '@vinci-protocol/math'
 import { safeGet } from 'utils/get'
@@ -11,7 +12,7 @@ import { safeGet } from 'utils/get'
 const useThegraphService = () => {
   const { source: oracleRecordsSource, fixed: oracleRecordsFixed } = useOracleRecords()
   const { market } = useMarket()
-  const { nftAssets } = useContractData()
+  const { nftAssets } = useVinciContractData()
 
   const oracleRecords = useMemo(() => {
     if (!oracleRecordsFixed || !oracleRecordsFixed.length) return

@@ -5,7 +5,7 @@ import Table from '@mui/material/Table'
 import TableRow from '@mui/material/TableRow'
 import Typography from '@mui/material/Typography'
 import LockTwoTone from '@mui/icons-material/LockTwoTone'
-import { useContractData } from 'domains'
+import { useVinciContractData } from '@vinci-protocol/domains'
 
 import NumberDisplay from 'components/math/NumberDisplay'
 
@@ -17,7 +17,7 @@ import type { TVLProps } from './types'
 const PCTVL: FC<TVLProps> = () => {
   const { t } = useTranslation('dashboard')
 
-  const { dashboard } = useContractData()
+  const { dashboard } = useVinciContractData()
 
   return (
     <ROOT direction="row" spacing={2}>

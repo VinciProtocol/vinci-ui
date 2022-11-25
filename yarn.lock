@@ -1294,44 +1294,44 @@
     "@typescript-eslint/types" "5.10.0"
     eslint-visitor-keys "^3.0.0"
 
-"@vinci-protocol/domains@^v0.0.2-alpha.3":
-  version "0.0.2-alpha.3"
-  resolved "https://registry.npmjs.org/@vinci-protocol/domains/-/domains-0.0.2-alpha.3.tgz#3ed6b4f7a6fbcb0b024869eaea1b2e52f6236800"
-  integrity sha512-j5vQNZ8bdDrYhzspYFmFuzn32mrOFYq2gK0wIyvM5dnEgfhBRMIFcoSgrgkN9VTs59YWMBgnTPgd+XtP8Mc/eQ==
+"@vinci-protocol/domains@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@vinci-protocol/domains/-/domains-1.0.1.tgz#4bdeb0f0bc6ec14e087fb7ab0327dab633fb8694"
+  integrity sha512-q8tH0jnDEV6IQn490ssnz3xMEN05jVkicQfFyI/mskGOBxIUnOgPBpb78cNJk0i+iXhOp8rRBk10gLbSwfiL+Q==
   dependencies:
-    "@vinci-protocol/hooks" "0.0.2-alpha.3"
-    "@vinci-protocol/math" "0.0.2-alpha.3"
-    "@vinci-protocol/protocol" "0.0.2-alpha.3"
-    "@vinci-protocol/store" "0.0.2-alpha.3"
+    "@vinci-protocol/hooks" "1.0.1"
+    "@vinci-protocol/math" "1.0.1"
+    "@vinci-protocol/protocol" "1.0.1"
+    "@vinci-protocol/store" "1.0.1"
 
-"@vinci-protocol/hooks@0.0.2-alpha.3", "@vinci-protocol/hooks@^v0.0.2-alpha.3":
-  version "0.0.2-alpha.3"
-  resolved "https://registry.npmjs.org/@vinci-protocol/hooks/-/hooks-0.0.2-alpha.3.tgz#5ee6fd6a80ede4640c257c0876cc2aeb6f7644c0"
-  integrity sha512-tKugIY4X0KlXwwlX0uXJ9YPzySSzoR/wvwEjdmh3t/xAz/p9mYkPuz5AcGo+6iSxtV0YlCtJVDTGRJFf90LwVg==
+"@vinci-protocol/hooks@1.0.1", "@vinci-protocol/hooks@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@vinci-protocol/hooks/-/hooks-1.0.1.tgz#f3574ea6b4d162f38d37f305465ec8799fe9b257"
+  integrity sha512-XG3IFI5mixrnWJ3RKtYlCqzap2XjAWcrOQ77SiQN3q+h4NZGPlRw/uDeMVmn5EIB5Stsvxu5xVcD75OLIdbBCA==
 
-"@vinci-protocol/math@0.0.2-alpha.3", "@vinci-protocol/math@^v0.0.2-alpha.3":
-  version "0.0.2-alpha.3"
-  resolved "https://registry.npmjs.org/@vinci-protocol/math/-/math-0.0.2-alpha.3.tgz#f94ea0b45470add320f17587e8f8c5368a2b66bf"
-  integrity sha512-DIjwT5aIAB6kMzSG9Pmkcr+tIEQUNWVPgf5IiZt2ZPIhluUmRS6jbcGz60Z4tfgzi41DN15EwmOS4UsrDHyXkw==
+"@vinci-protocol/math@1.0.1", "@vinci-protocol/math@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@vinci-protocol/math/-/math-1.0.1.tgz#28cbca73e3e72ce1b7604c3503c18aa58db2b2a1"
+  integrity sha512-xRjwHdiyklAfm+aNe5X/EfOc/dMqvh0OXyoPuX+bYjYCEzmWYdIoKeG94MZz2MdXUNXpfAl2QugAUgyBQeTjhg==
   dependencies:
     bignumber.js "^9.1.0"
     ethers "^5.7.2"
 
-"@vinci-protocol/protocol@0.0.2-alpha.3", "@vinci-protocol/protocol@^v0.0.2-alpha.3":
-  version "0.0.2-alpha.3"
-  resolved "https://registry.npmjs.org/@vinci-protocol/protocol/-/protocol-0.0.2-alpha.3.tgz#c7bedc5610fef12410a5ce68d056b517b9f4d1c0"
-  integrity sha512-VDqk3wOsUGzK2oXqqj0sa7kcOcvix49Qnt+2pqqX3CoQtbf9Nhejw81DyOu+2gp4qR5EvTxjRHh1B1G3JMLeCQ==
+"@vinci-protocol/protocol@1.0.1", "@vinci-protocol/protocol@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@vinci-protocol/protocol/-/protocol-1.0.1.tgz#5153097940462365d46d9260d203a1da662302f5"
+  integrity sha512-emofxi+jk3CofD+9geXD8m5cILxKZtYLXf0H7cceWDeBVDhOGPy60RUVP+Io4xsqCH3XBssX9mLb2qPgBDIeoA==
   dependencies:
-    "@vinci-protocol/math" "0.0.2-alpha.3"
+    "@vinci-protocol/math" "1.0.1"
 
-"@vinci-protocol/store@0.0.2-alpha.3", "@vinci-protocol/store@^v0.0.2-alpha.3":
-  version "0.0.2-alpha.3"
-  resolved "https://registry.npmjs.org/@vinci-protocol/store/-/store-0.0.2-alpha.3.tgz#aa4920ccf1f231c05ad2ee6ae8226fbccdf4eb1b"
-  integrity sha512-cX4NleM8JlKmBIOtsxWNWa126G2L5rhHjqa7blJVNvpFY7gXuMj+GGBni/32COPjnCFhzsOahREi8G5IdX0uTw==
+"@vinci-protocol/store@1.0.1", "@vinci-protocol/store@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@vinci-protocol/store/-/store-1.0.1.tgz#f931bface03c0d7a1520b854e4bc6a38d0d251e0"
+  integrity sha512-bh4hxGSHqdPSujTAq1c9E8xXOVh8AnNslz34iaIZ2L29H9CieXqwoh2/UNhCZJlLlRvsqzqzfnd9E65uDC8ESA==
   dependencies:
-    "@vinci-protocol/hooks" "0.0.2-alpha.3"
-    "@vinci-protocol/math" "0.0.2-alpha.3"
-    "@vinci-protocol/protocol" "0.0.2-alpha.3"
+    "@vinci-protocol/hooks" "1.0.1"
+    "@vinci-protocol/math" "1.0.1"
+    "@vinci-protocol/protocol" "1.0.1"
 
 "@walletconnect/browser-utils@^1.6.6":
   version "1.6.6"
