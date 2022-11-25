@@ -11,6 +11,9 @@
     "NFTAirdrop": "Lanzamiento aéreo NFT",
     "NFTOracle": "Oráculo NFT",
     "NFTOracleDetail": "Detalle de Oracle NFT",
-    "Audit": "Auditoría"
+    "Audit": "Auditoría",
+    "NFTFinance": "Finanzas NFT",
+    "LendingMarket": "Mercado de préstamos",
+    "Documentation": "Documentación"
   }
 }

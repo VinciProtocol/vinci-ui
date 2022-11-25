@@ -11,6 +11,9 @@
     "NFTAirdrop": "NFT Airdrop",
     "NFTOracle": "NFT Oracle",
     "NFTOracleDetail": "تفاصيل NFT Oracle",
-    "Audit": "مراجعة"
+    "Audit": "مراجعة",
+    "NFTFinance": "NFT للتمويل",
+    "LendingMarket": "سوق الإقراض",
+    "Documentation": "توثيق"
   }
 }

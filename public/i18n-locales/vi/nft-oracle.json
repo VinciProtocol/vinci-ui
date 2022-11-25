@@ -1,29 +1,30 @@
 {
   "banner": {
-    "title": "NFT Oracle",
-    "subTitle": "Vinci NFT oracles là oracles giá sàn trên chuỗi cho hệ sinh thái DeFi được NFT hỗ trợ."
+    "title": "Oracle NFT",
+    "subTitle": "Các nhà tiên tri của Vinci NFT là các nhà tiên tri về giá sàn trên chuỗi cho hệ sinh thái DeFi được NFT hỗ trợ.",
+    "apply": "Áp dụng Oracle mới"
   },
   "oracleCards": {
     "dataSources": {
       "title": "Nhiều nguồn dữ liệu",
-      "subTitle": "Tất cả dữ liệu giá NFT được lấy từ nhiều thị trường NFT bằng cách theo dõi trực tiếp các API giá sàn của họ."
+      "subTitle": "Tất cả dữ liệu giá NFT được lấy từ nhiều thị trường NFT bằng cách giám sát trực tiếp các API giá sàn của họ."
     },
     "pricingStrategies": {
-      "title": "Các chiến lược định giá an toàn",
-      "subTitle": "Để giữ an toàn cho oracle của chúng tôi, chúng tôi đã thiết kế cả cơ chế bảo vệ dữ liệu ngoài chuỗi và trên chuỗi."
+      "title": "Chiến lược giá an toàn",
+      "subTitle": "Để giữ an toàn cho lời tiên tri của chúng tôi, chúng tôi đã thiết kế cả cơ chế bảo vệ dữ liệu ngoài chuỗi và trên chuỗi."
     },
     "dataFeeds": {
       "title": "Dễ dàng tích hợp",
-      "subTitle": "Oracles dễ dàng tích hợp vào các dự án DeFi được NFT hỗ trợ."
+      "subTitle": "Oracles rất dễ tích hợp vào các dự án DeFi được hỗ trợ bởi NFT."
     }
   },
   "NFTFloorPrice": {
-    "title": "Giá sàn NFT",
+    "title": "Giá Sàn NFT",
     "collection": "Bộ sưu tập",
     "currentFloorPrice": "Giá sàn",
     "change24h": "24h%",
     "lastUpdate": "Cập nhật cuối cùng",
-    "trend": "Xu hướng trong 7 ngày",
+    "trend": "Xu hướng 7 ngày",
     "functionButtons": "Hoạt động",
     "actions": {
       "details": "Thông tin chi tiết"

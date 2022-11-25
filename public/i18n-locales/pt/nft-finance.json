@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "Financiamento NFT",
+    "subTitle": "O protocolo Vinci fornece soluções DeFi apoiadas por NFT projetadas para aumentar a liquidez.",
+    "startBuilding": "Começar a Construir",
+    "market": "Ver Mercado de Empréstimos"
+  },
+  "cards": {
+    "poolModel": {
+      "title": "Uma Coleção Uma Piscina",
+      "subTitle": "Você pode fornecer quaisquer ativos de liquidez para qualquer coleção que selecionar, construindo um pool exclusivo para obter 100% de isolamento de risco."
+    },
+    "listing": {
+      "title": "Listagem de coleção ilimitada",
+      "subTitle": "Ele pode abrir um pool de empréstimos para qualquer coleção de NFT que você desejar. Integração gratuita, listagem fácil e coleções NFT ilimitadas."
+    },
+    "mechanism": {
+      "title": "Mecanismo de Conjunto de Empréstimos",
+      "subTitle": "O mecanismo de pool de empréstimos é muito mais eficiente em termos de capital com suas garantias NFT e liquidez do que o modelo ponto a ponto."
+    },
+    "permissionless": {
+      "title": "Sem custódia e sem permissão",
+      "subTitle": "Os ativos são controlados em suas mãos. É um protocolo seguro, aberto e protegido com auditoria completa, comprovando seus mais altos padrões de segurança."
+    }
+  },
+  "title": "Mercado de empréstimos",
+  "subTitle": "Confira nosso mercado de empréstimos ao vivo para coleções NFT de primeira linha."
+}

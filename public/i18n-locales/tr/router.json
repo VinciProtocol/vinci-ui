@@ -1,16 +1,19 @@
 {
   "menu": {
-    "Markets": "Piyasalar",
+    "Markets": "piyasalar",
     "Dashboard": "Gösterge Paneli",
     "Lend": "Ödünç vermek",
     "Borrow": "Ödünç almak",
-    "BorrowDetail": "Borç Detayı",
-    "Stake": "Bahis",
+    "BorrowDetail": "Ödünç Alma Detayı",
+    "Stake": "kazık",
     "Liquidation": "Tasfiye Pazarı",
     "App": "Uygulama",
-    "NFTAirdrop": "NFT Airdrop",
-    "NFTOracle": "NFT Oracle'ı",
-    "NFTOracleDetail": "NFT Oracle Ayrıntısı",
-    "Audit": "Denetim"
+    "NFTAirdrop": "NFT Airdrop'u",
+    "NFTOracle": "NFT Oracle",
+    "NFTOracleDetail": "NFT Oracle Detayı",
+    "Audit": "Denetim",
+    "NFTFinance": "NFT Finans",
+    "LendingMarket": "Borç Verme Piyasası",
+    "Documentation": "Belgeler"
   }
 }

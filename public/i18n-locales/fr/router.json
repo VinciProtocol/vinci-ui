@@ -8,9 +8,12 @@
     "Stake": "Pieu",
     "Liquidation": "Marché des liquidations",
     "App": "Application",
-    "NFTAirdrop": "Parachutage NFT",
+    "NFTAirdrop": "Airdrop NFT",
     "NFTOracle": "Oracle NFT",
     "NFTOracleDetail": "NFT Oracle Détail",
-    "Audit": "Audit"
+    "Audit": "Audit",
+    "NFTFinance": "Financement NFT",
+    "LendingMarket": "Marché des prêts",
+    "Documentation": "Documentation"
   }
 }

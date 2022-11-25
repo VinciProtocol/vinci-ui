@@ -11,6 +11,9 @@
     "NFTAirdrop": "NFT Airdrop",
     "NFTOracle": "NFT Oracle",
     "NFTOracleDetail": "NFT Oracle Detail",
-    "Audit": "Audit"
+    "Audit": "Audit",
+    "NFTFinance": "NFT Finance",
+    "LendingMarket": "Lending Market",
+    "Documentation": "Documentation"
   }
 }

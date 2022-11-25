@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "NFT金融",
+    "subTitle": "Vinci Protocol 提供 NFT 支持的 DeFi 解决方案，旨在提高流动性。",
+    "startBuilding": "开始建设",
+    "market": "查看借贷市场"
+  },
+  "cards": {
+    "poolModel": {
+      "title": "一集一池",
+      "subTitle": "您可以为您选择的任何集合提供任何流动性资产，构建专属资金池，实现100%风险隔离。"
+    },
+    "listing": {
+      "title": "无限收藏上市",
+      "subTitle": "它可以为你想要的任何 NFT 收藏打开一个借贷池。免费集成，轻松上币，无限NFT收藏。"
+    },
+    "mechanism": {
+      "title": "借贷池机制",
+      "subTitle": "与点对点模型相比，借贷池机制在您的 NFT 抵押品和流动性方面具有更高的资本效率。"
+    },
+    "permissionless": {
+      "title": "非托管和无许可",
+      "subTitle": "资产掌握在您手中。它是一个安全、开放和安全的协议，经过全面审计证明其最高安全标准。"
+    }
+  },
+  "title": "借贷市场",
+  "subTitle": "查看我们的蓝筹 NFT 收藏的实时借贷市场。"
+}

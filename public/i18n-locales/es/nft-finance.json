@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "Finanzas NFT",
+    "subTitle": "Vinci Protocol proporciona soluciones DeFi respaldadas por NFT diseñadas para aumentar la liquidez.",
+    "startBuilding": "Empezar a construir",
+    "market": "Ver mercado de préstamos"
+  },
+  "cards": {
+    "poolModel": {
+      "title": "Una colección Una piscina",
+      "subTitle": "Puede proporcionar cualquier activo de liquidez a cualquier colección que seleccione, creando un grupo exclusivo para lograr un aislamiento de riesgo del 100 %."
+    },
+    "listing": {
+      "title": "Listado de colección ilimitada",
+      "subTitle": "Puede abrir un grupo de préstamos para cualquier colección de NFT que desee. Integración gratuita, listado fácil y colecciones ilimitadas de NFT."
+    },
+    "mechanism": {
+      "title": "Mecanismo de fondo común de préstamos",
+      "subTitle": "El mecanismo de fondo común de préstamos es mucho más eficiente en términos de capital con sus garantías y liquidez NFT que el modelo entre pares."
+    },
+    "permissionless": {
+      "title": "Sin custodia y sin permiso",
+      "subTitle": "Los activos están controlados en sus manos. Es un protocolo seguro, abierto y protegido con auditoría completa que demuestra sus más altos estándares de seguridad."
+    }
+  },
+  "title": "Mercado de préstamos",
+  "subTitle": "Eche un vistazo a nuestro mercado de préstamos en vivo para cobros NFT de primer orden."
+}

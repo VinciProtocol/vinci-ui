@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "NFT Finans",
+    "subTitle": "Vinci Protocol, likiditeyi artırmak için tasarlanmış NFT destekli DeFi çözümleri sunar.",
+    "startBuilding": "İnşaata Başlayın",
+    "market": "Kredi Piyasasını Görüntüle"
+  },
+  "cards": {
+    "poolModel": {
+      "title": "Bir Koleksiyon Bir Havuz",
+      "subTitle": "%100 risk izolasyonu gerçekleştirmek için özel bir havuz oluşturarak seçtiğiniz herhangi bir koleksiyona herhangi bir likidite varlığı sağlayabilirsiniz."
+    },
+    "listing": {
+      "title": "Sınırsız Koleksiyon İlanı",
+      "subTitle": "İstediğiniz herhangi bir NFT koleksiyonu için bir borç verme havuzu açabilir. Ücretsiz entegrasyon, kolay listeleme ve sınırsız NFT koleksiyonu."
+    },
+    "mechanism": {
+      "title": "Ödünç Verme Havuzu Mekanizması",
+      "subTitle": "Borç Verme Havuzu Mekanizması, NFT teminatlarınız ve likiditenizle, Eşler Arası modele göre çok daha yüksek sermaye verimliliğine sahiptir."
+    },
+    "permissionless": {
+      "title": "Gözaltı Dışı ve İzinsiz",
+      "subTitle": "Varlıklar sizin elinizde kontrol edilir. En yüksek güvenlik standartlarını kanıtlayan tam denetim ile güvenli, açık ve güvenli bir protokoldür."
+    }
+  },
+  "title": "Borç Verme Piyasası",
+  "subTitle": "Birinci sınıf NFT koleksiyonları için canlı borç verme pazarımıza göz atın."
+}

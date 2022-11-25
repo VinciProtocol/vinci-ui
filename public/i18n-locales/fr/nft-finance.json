@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "Financement NFT",
+    "subTitle": "Vinci Protocol fournit des solutions DeFi soutenues par NFT conçues pour augmenter la liquidité.",
+    "startBuilding": "Commencer à construire",
+    "market": "Voir le marché des prêts"
+  },
+  "cards": {
+    "poolModel": {
+      "title": "Une Collection Une Piscine",
+      "subTitle": "Vous pouvez fournir tous les actifs liquides à n'importe quelle collection que vous sélectionnez, en créant un pool exclusif pour réaliser une isolation à 100% des risques."
+    },
+    "listing": {
+      "title": "Liste de collection illimitée",
+      "subTitle": "Il peut ouvrir un pool de prêt pour toute collection NFT que vous souhaitez. Intégration gratuite, liste facile et collections NFT illimitées."
+    },
+    "mechanism": {
+      "title": "Mécanisme de pool de prêt",
+      "subTitle": "Le mécanisme de pool de prêt est beaucoup plus efficace en termes de capital avec vos garanties NFT et vos liquidités que le modèle Peer-to-peer."
+    },
+    "permissionless": {
+      "title": "Non dépositaire et sans autorisation",
+      "subTitle": "Les actifs sont contrôlés entre vos mains. Il s'agit d'un protocole sûr, ouvert et sécurisé avec un audit complet prouvant ses normes de sécurité les plus élevées."
+    }
+  },
+  "title": "Marché des prêts",
+  "subTitle": "Découvrez notre marché de prêt en direct pour les collections NFT de premier ordre."
+}

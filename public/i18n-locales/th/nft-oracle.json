@@ -1,20 +1,21 @@
 {
   "banner": {
-    "title": "NFT Oracle",
-    "subTitle": "Vinci NFT oracles เป็นคำพยากรณ์ราคาพื้นในเครือข่ายสำหรับระบบนิเวศ DeFi ที่ได้รับการสนับสนุนจาก NFT"
+    "title": "NFT ออราเคิล",
+    "subTitle": "Vinci NFT oracles เป็นออราเคิลราคาพื้นบนเครือข่ายสำหรับระบบนิเวศ DeFi ที่รองรับ NFT",
+    "apply": "ใช้ Oracle ใหม่"
   },
   "oracleCards": {
     "dataSources": {
       "title": "แหล่งข้อมูลหลายแหล่ง",
-      "subTitle": "ข้อมูลราคา NFT ทั้งหมดมาจากตลาดกลาง NFT หลายแห่งโดยการตรวจสอบ API ราคาพื้นโดยตรง"
+      "subTitle": "ข้อมูลราคา NFT ทั้งหมดมาจากตลาด NFT หลายแห่งโดยการตรวจสอบ API ราคาพื้นโดยตรง"
     },
     "pricingStrategies": {
       "title": "กลยุทธ์การกำหนดราคาที่ปลอดภัย",
-      "subTitle": "เพื่อให้ oracle ของเราปลอดภัย เราได้ออกแบบกลไกการปกป้องข้อมูลทั้งแบบออฟไลน์และแบบ on-chain"
+      "subTitle": "เพื่อให้ oracle ของเราปลอดภัย เราได้ออกแบบกลไกการป้องกันข้อมูลทั้งแบบ off-chain และ on-chain"
     },
     "dataFeeds": {
-      "title": "ง่ายต่อการบูรณาการ",
-      "subTitle": "Oracles สามารถผสานรวมกับโปรเจ็กต์ DeFi ที่ได้รับการสนับสนุนจาก NFT ได้อย่างง่ายดาย"
+      "title": "ง่ายต่อการรวม",
+      "subTitle": "Oracles สามารถรวมเข้ากับโปรเจ็กต์ DeFi ที่รองรับ NFT ได้อย่างง่ายดาย"
     }
   },
   "NFTFloorPrice": {
@@ -23,7 +24,7 @@
     "currentFloorPrice": "ราคาพื้น",
     "change24h": "24 ชม.%",
     "lastUpdate": "การปรับปรุงครั้งล่าสุด",
-    "trend": "เทรนด์ 7 วัน",
+    "trend": "แนวโน้ม 7 วัน",
     "functionButtons": "การกระทำ",
     "actions": {
       "details": "รายละเอียด"

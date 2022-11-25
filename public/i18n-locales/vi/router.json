@@ -1,16 +1,19 @@
 {
   "menu": {
-    "Markets": "Thị trường",
+    "Markets": "thị trường",
     "Dashboard": "bảng điều khiển",
     "Lend": "Cho vay",
     "Borrow": "Vay",
-    "BorrowDetail": "Chi tiết Vay",
+    "BorrowDetail": "Chi Tiết Mượn",
     "Stake": "Cổ phần",
     "Liquidation": "Thị trường thanh lý",
     "App": "Ứng dụng",
-    "NFTAirdrop": "NFT Airdrop",
-    "NFTOracle": "NFT Oracle",
-    "NFTOracleDetail": "Chi tiết về NFT Oracle",
-    "Audit": "Kiểm toán"
+    "NFTAirdrop": "Airdrop NFT",
+    "NFTOracle": "Oracle NFT",
+    "NFTOracleDetail": "Chi tiết NFT Oracle",
+    "Audit": "Kiểm toán",
+    "NFTFinance": "Tài chính NFT",
+    "LendingMarket": "thị trường cho vay",
+    "Documentation": "Tài liệu"
   }
 }

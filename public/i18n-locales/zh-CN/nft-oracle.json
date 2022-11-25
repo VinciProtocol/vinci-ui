@@ -1,7 +1,8 @@
 {
   "banner": {
-    "title": "NFT 预言机",
-    "subTitle": "Vinci NFT 预言机是 NFT 支持的 DeFi 生态系统的链上底价预言机。"
+    "title": "NFT神谕",
+    "subTitle": "Vinci NFT 预言机是 NFT 支持的 DeFi 生态系统的链上底价预言机。",
+    "apply": "申请新甲骨文"
   },
   "oracleCards": {
     "dataSources": {
@@ -9,7 +10,7 @@
       "subTitle": "所有 NFT 价格数据均来自多个 NFT 市场，通过直接监控其底价 API。"
     },
     "pricingStrategies": {
-      "title": "安全的定价策略",
+      "title": "安全定价策略",
       "subTitle": "为了保证我们的预言机安全，我们设计了链下和链上数据保护机制。"
     },
     "dataFeeds": {
@@ -18,12 +19,12 @@
     }
   },
   "NFTFloorPrice": {
-    "title": "NFT 底价",
+    "title": "NFT底价",
     "collection": "收藏",
     "currentFloorPrice": "底价",
     "change24h": "24小时%",
     "lastUpdate": "最后更新",
-    "trend": "7天趋势",
+    "trend": "7 日趋势",
     "functionButtons": "行动",
     "actions": {
       "details": "细节"

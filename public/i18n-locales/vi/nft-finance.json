@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "Tài chính NFT",
+    "subTitle": "Giao thức Vinci cung cấp các giải pháp DeFi được hỗ trợ bởi NFT được thiết kế để tăng tính thanh khoản.",
+    "startBuilding": "Bắt đầu xây dựng",
+    "market": "Xem thị trường cho vay"
+  },
+  "cards": {
+    "poolModel": {
+      "title": "Một bộ sưu tập Một hồ bơi",
+      "subTitle": "Bạn có thể cung cấp bất kỳ tài sản thanh khoản nào cho bất kỳ bộ sưu tập nào bạn chọn, xây dựng một nhóm độc quyền để thực hiện cách ly rủi ro 100%."
+    },
+    "listing": {
+      "title": "Danh sách Bộ sưu tập Vô hạn",
+      "subTitle": "Nó có thể mở một nhóm cho vay cho bất kỳ bộ sưu tập NFT nào bạn muốn. Tích hợp miễn phí, liệt kê dễ dàng và bộ sưu tập NFT không giới hạn."
+    },
+    "mechanism": {
+      "title": "Cơ chế nhóm cho vay",
+      "subTitle": "Cơ chế nhóm cho vay có hiệu quả sử dụng vốn cao hơn nhiều với tài sản thế chấp NFT và tính thanh khoản của bạn so với mô hình ngang hàng."
+    },
+    "permissionless": {
+      "title": "Không giam giữ & Không được phép",
+      "subTitle": "Tài sản được kiểm soát trong tay của bạn. Đây là một giao thức an toàn, cởi mở và bảo mật với việc kiểm tra đầy đủ để chứng minh các tiêu chuẩn bảo mật cao nhất của nó."
+    }
+  },
+  "title": "thị trường cho vay",
+  "subTitle": "Kiểm tra thị trường cho vay trực tiếp của chúng tôi để biết các bộ sưu tập NFT blue-chip."
+}

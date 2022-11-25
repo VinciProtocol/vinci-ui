@@ -4,13 +4,16 @@
     "Dashboard": "Painel",
     "Lend": "Emprestar",
     "Borrow": "Pedir emprestado",
-    "BorrowDetail": "Detalhe do empréstimo",
+    "BorrowDetail": "Detalhes do Empréstimo",
     "Stake": "Estaca",
-    "Liquidation": "Mercado de liquidação",
+    "Liquidation": "mercado de liquidação",
     "App": "Aplicativo",
-    "NFTAirdrop": "Lançamento aéreo NFT",
-    "NFTOracle": "NFT Oracle",
-    "NFTOracleDetail": "Detalhe Oracle NFT",
-    "Audit": "Auditoria"
+    "NFTAirdrop": "Airdrop NFT",
+    "NFTOracle": "Oráculo NFT",
+    "NFTOracleDetail": "Detalhes do Oracle NFT",
+    "Audit": "auditoria",
+    "NFTFinance": "Financiamento NFT",
+    "LendingMarket": "Mercado de empréstimos",
+    "Documentation": "Documentação"
   }
 }

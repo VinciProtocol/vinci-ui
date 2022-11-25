@@ -1,12 +1,13 @@
 {
   "banner": {
-    "title": "NFT Oracle",
-    "subTitle": "Os oráculos Vinci NFT são oráculos de preço mínimo na cadeia para o ecossistema DeFi apoiado por NFT."
+    "title": "Oráculo NFT",
+    "subTitle": "Os oráculos Vinci NFT são oráculos de preço mínimo na cadeia para o ecossistema DeFi apoiado por NFT.",
+    "apply": "Aplicar Novo Oráculo"
   },
   "oracleCards": {
     "dataSources": {
       "title": "Várias fontes de dados",
-      "subTitle": "Todos os dados de preços NFT são provenientes de vários mercados NFT, monitorando diretamente suas APIs de preço mínimo."
+      "subTitle": "Todos os dados de preços NFT são provenientes de vários mercados NFT, monitorando diretamente suas APIs de preços mínimos."
     },
     "pricingStrategies": {
       "title": "Estratégias de preços seguras",
@@ -14,13 +15,13 @@
     },
     "dataFeeds": {
       "title": "Fácil de integrar",
-      "subTitle": "Os Oracles são fáceis de integrar a projetos DeFi apoiados por NFT."
+      "subTitle": "Os Oracles são fáceis de integrar a projetos DeFi baseados em NFT."
     }
   },
   "NFTFloorPrice": {
-    "title": "Preço mínimo da NFT",
+    "title": "Preço Piso NFT",
     "collection": "Coleção",
-    "currentFloorPrice": "Preço mínimo",
+    "currentFloorPrice": "Preço Piso",
     "change24h": "24h%",
     "lastUpdate": "Última atualização",
     "trend": "Tendência de 7 dias",

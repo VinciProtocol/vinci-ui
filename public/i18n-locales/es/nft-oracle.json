@@ -1,7 +1,8 @@
 {
   "banner": {
     "title": "Oráculo NFT",
-    "subTitle": "Los oráculos Vinci NFT son oráculos de precio mínimo en cadena para el ecosistema DeFi respaldado por NFT."
+    "subTitle": "Los oráculos Vinci NFT son oráculos de precio mínimo en cadena para el ecosistema DeFi respaldado por NFT.",
+    "apply": "Aplicar nuevo oráculo"
   },
   "oracleCards": {
     "dataSources": {

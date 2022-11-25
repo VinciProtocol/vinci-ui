@@ -11,6 +11,9 @@
     "NFTAirdrop": "Аирдроп NFT",
     "NFTOracle": "НФТ-оракул",
     "NFTOracleDetail": "Деталь NFT Oracle",
-    "Audit": "Аудит"
+    "Audit": "Аудит",
+    "NFTFinance": "НФТ Финансы",
+    "LendingMarket": "Кредитный рынок",
+    "Documentation": "Документация"
   }
 }

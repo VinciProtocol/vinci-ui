@@ -11,6 +11,9 @@
     "NFTAirdrop": "NFT エアドロップ",
     "NFTOracle": "NFTオラクル",
     "NFTOracleDetail": "NFTオラクル詳細",
-    "Audit": "監査"
+    "Audit": "監査",
+    "NFTFinance": "NFTファイナンス",
+    "LendingMarket": "貸出市場",
+    "Documentation": "ドキュメンテーション"
   }
 }

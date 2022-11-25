@@ -1,7 +1,8 @@
 {
   "banner": {
     "title": "NFTオラクル",
-    "subTitle": "ヴィンチ NFT オラクルは、NFT に裏打ちされた DeFi エコシステムのオンチェーン最低価格オラクルです。"
+    "subTitle": "ヴィンチ NFT オラクルは、NFT に裏打ちされた DeFi エコシステムのオンチェーン最低価格オラクルです。",
+    "apply": "新しいオラクルを適用"
   },
   "oracleCards": {
     "dataSources": {

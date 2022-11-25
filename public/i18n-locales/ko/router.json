@@ -4,13 +4,16 @@
     "Dashboard": "계기반",
     "Lend": "빌려주다",
     "Borrow": "빌리다",
-    "BorrowDetail": "세부 정보를 빌리다",
+    "BorrowDetail": "차입내역",
     "Stake": "말뚝",
     "Liquidation": "청산 시장",
     "App": "앱",
-    "NFTAirdrop": "NFT 에어드랍",
+    "NFTAirdrop": "NFT 에어드롭",
     "NFTOracle": "NFT 오라클",
-    "NFTOracleDetail": "NFT 오라클 세부 정보",
-    "Audit": "심사"
+    "NFTOracleDetail": "NFT 오라클 상세 정보",
+    "Audit": "심사",
+    "NFTFinance": "NFT 금융",
+    "LendingMarket": "대출 시장",
+    "Documentation": "선적 서류 비치"
   }
 }

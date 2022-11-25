@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "title": "NFT Finanzen",
+    "subTitle": "Vinci Protocol bietet NFT-unterstützte DeFi-Lösungen zur Steigerung der Liquidität.",
+    "startBuilding": "Beginnen Sie mit dem Bauen",
+    "market": "Kreditmarkt anzeigen"
+  },
+  "cards": {
+    "poolModel": {
+      "title": "Eine Kollektion, ein Pool",
+      "subTitle": "Sie können beliebige Liquiditätsanlagen für jede von Ihnen ausgewählte Sammlung bereitstellen und einen exklusiven Pool aufbauen, um eine 100-prozentige Risikoisolierung zu erreichen."
+    },
+    "listing": {
+      "title": "Unbegrenzte Sammlungsliste",
+      "subTitle": "Es kann einen Leihpool für jede gewünschte NFT-Sammlung eröffnen. Kostenlose Integration, einfache Auflistung und unbegrenzte NFT-Sammlungen."
+    },
+    "mechanism": {
+      "title": "Kreditpool-Mechanismus",
+      "subTitle": "Der Kreditpoolmechanismus ist mit Ihren NFT-Sicherheiten und Ihrer Liquidität viel kapitaleffizienter als das Peer-to-Peer-Modell."
+    },
+    "permissionless": {
+      "title": "Ohne Freiheitsentzug und ohne Erlaubnis",
+      "subTitle": "Vermögenswerte werden in Ihren Händen kontrolliert. Es ist ein sicheres, offenes und sicheres Protokoll mit vollständiger Prüfung, das seine höchsten Sicherheitsstandards beweist."
+    }
+  },
+  "title": "Kreditmarkt",
+  "subTitle": "Sehen Sie sich unseren Live-Leihmarkt für Blue-Chip-NFT-Sammlungen an."
+}

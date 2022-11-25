@@ -5,12 +5,15 @@
     "Lend": "ให้ยืม",
     "Borrow": "ยืม",
     "BorrowDetail": "รายละเอียดการยืม",
-    "Stake": "เดิมพัน",
+    "Stake": "เงินเดิมพัน",
     "Liquidation": "ตลาดการชำระบัญชี",
     "App": "แอป",
-    "NFTAirdrop": "NFT Airdrop",
-    "NFTOracle": "NFT Oracle",
-    "NFTOracleDetail": "NFT Oracle Detail",
-    "Audit": "การตรวจสอบ"
+    "NFTAirdrop": "NFT แอร์ดร็อป",
+    "NFTOracle": "NFT ออราเคิล",
+    "NFTOracleDetail": "รายละเอียด NFT Oracle",
+    "Audit": "การตรวจสอบ",
+    "NFTFinance": "การเงิน NFT",
+    "LendingMarket": "ตลาดสินเชื่อ",
+    "Documentation": "เอกสาร"
   }
 }
