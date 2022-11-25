@@ -2,7 +2,7 @@
   "banner": {
     "title": "NFT ออราเคิล",
     "subTitle": "Vinci NFT oracles เป็นออราเคิลราคาพื้นบนเครือข่ายสำหรับระบบนิเวศ DeFi ที่รองรับ NFT",
-    "apply": "ใช้ Oracle ใหม่"
+    "apply": "ขอ Oracle แบบกำหนดเอง"
   },
   "oracleCards": {
     "dataSources": {

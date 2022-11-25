@@ -2,7 +2,7 @@
   "banner": {
     "title": "Oracle NFT",
     "subTitle": "Các nhà tiên tri của Vinci NFT là các nhà tiên tri về giá sàn trên chuỗi cho hệ sinh thái DeFi được NFT hỗ trợ.",
-    "apply": "Áp dụng Oracle mới"
+    "apply": "Yêu cầu Oracle tùy chỉnh"
   },
   "oracleCards": {
     "dataSources": {

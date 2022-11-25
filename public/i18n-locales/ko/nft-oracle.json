@@ -2,7 +2,7 @@
   "banner": {
     "title": "NFT 오라클",
     "subTitle": "Vinci NFT 오라클은 NFT 지원 DeFi 생태계를 위한 온체인 가격 책정 오라클입니다.",
-    "apply": "새로운 오라클 적용"
+    "apply": "맞춤형 Oracle 요청"
   },
   "oracleCards": {
     "dataSources": {

@@ -2,7 +2,7 @@
   "banner": {
     "title": "NFT-Orakel",
     "subTitle": "Vinci-NFT-Orakel sind On-Chain-Bodenpreisorakel für das NFT-unterstützte DeFi-Ökosystem.",
-    "apply": "Wenden Sie Neues Orakel an"
+    "apply": "Fordern Sie benutzerdefiniertes Oracle an"
   },
   "oracleCards": {
     "dataSources": {
@@ -15,7 +15,7 @@
     },
     "dataFeeds": {
       "title": "Einfach zu integrieren",
-      "subTitle": "Oracles lassen sich einfach in NFT-unterstützte DeFi-Projekte integrieren."
+      "subTitle": "Oracles lassen sich leicht in NFT-unterstützte DeFi-Projekte integrieren."
     }
   },
   "NFTFloorPrice": {

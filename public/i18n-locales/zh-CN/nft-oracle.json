@@ -2,7 +2,7 @@
   "banner": {
     "title": "NFT神谕",
     "subTitle": "Vinci NFT 预言机是 NFT 支持的 DeFi 生态系统的链上底价预言机。",
-    "apply": "申请新甲骨文"
+    "apply": "请求自定义 Oracle"
   },
   "oracleCards": {
     "dataSources": {

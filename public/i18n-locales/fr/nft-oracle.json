@@ -2,7 +2,7 @@
   "banner": {
     "title": "Oracle NFT",
     "subTitle": "Les oracles Vinci NFT sont des oracles de prix plancher en chaîne pour l'écosystème DeFi soutenu par NFT.",
-    "apply": "Appliquer le nouvel Oracle"
+    "apply": "Demander un Oracle personnalisé"
   },
   "oracleCards": {
     "dataSources": {
