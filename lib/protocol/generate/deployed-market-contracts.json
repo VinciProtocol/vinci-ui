@@ -1,0 +1,48 @@
+{
+  "LendingPoolAddressesProvider": {
+    "localnet": {
+      "VinciBAYC": {
+        "address": "0xa1Ac4101940aa2FC1aA1922c7C84a6389f5A002c",
+        "deployer": "0x9B7eE18641C8E74C0f7002725AfC5f1C14D77BAA"
+      }
+    }
+  },
+  "LendingPool": {
+    "localnet": {
+      "VinciBAYC": {
+        "address": "0xbD92E70d3E19F45c8ED832E0A42F7c7F2F53aF2f"
+      }
+    }
+  },
+  "LendingPoolConfigurator": {
+    "localnet": {
+      "VinciBAYC": {
+        "address": "0x2f5cBF409fFB1ae3feF79bf51B019946AFcaFC68"
+      }
+    }
+  },
+  "StableAndVariableTokensHelper": {
+    "localnet": {
+      "VinciBAYC": {
+        "address": "0x926FdE2bA9E88F02333EadD76b97654A4003fB3a",
+        "deployer": "0x9B7eE18641C8E74C0f7002725AfC5f1C14D77BAA"
+      }
+    }
+  },
+  "VTokensAndRatesHelper": {
+    "localnet": {
+      "VinciBAYC": {
+        "address": "0xc0Cc758C78d4E62479EaAd31dC56c35362a46f97",
+        "deployer": "0x9B7eE18641C8E74C0f7002725AfC5f1C14D77BAA"
+      }
+    }
+  },
+  "rateStrategyWETH": {
+    "localnet": {
+      "VinciBAYC": {
+        "address": "0xcFc931448653A2DBc5654FdE93a4d11983480c51",
+        "deployer": "0x9B7eE18641C8E74C0f7002725AfC5f1C14D77BAA"
+      }
+    }
+  }
+}
