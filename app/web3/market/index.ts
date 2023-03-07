@@ -1,6 +1,7 @@
 import goerli from 'lib/protocol/generate/goerli.json'
 import mainnet from 'lib/protocol/generate/mainnet.json'
 import vinci from 'lib/protocol/generate/vinci.json'
+import arbitrum from 'lib/protocol/generate/arbitrum-goerli.json'
 
 import type { NFTGenerate } from 'lib/protocol/generate/types'
 
@@ -25,6 +26,7 @@ const list: Record<ChainId, typeof vinci & Pick<MarketData, 'thegraph'> & { NFTO
     },
   },
   [ChainId.vinci]: vinci,
+  [ChainId.arbitrum]: arbitrum,
 } as any
 
 export const NFT_ID_1 = 'BAYC'

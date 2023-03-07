@@ -19,6 +19,8 @@ export const ChainIcon: FC<ChainIconProps> = ({ chainName }) => {
         return <CircleIcon fontSize="small" sx={{ color: '#9064ff' }} />
       case 'Goerli':
         return <CircleIcon fontSize="small" sx={{ color: '#f6c343' }} />
+      case 'Arbitrum':
+          return <CircleIcon fontSize="small" sx={{ color: '#28A0F0' }} />
       default:
         return <CircleIcon fontSize="small" sx={{ color: 'grey' }} />
     }

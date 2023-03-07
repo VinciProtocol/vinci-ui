@@ -24,6 +24,15 @@ export const networks: Record<ChainId, NetworkConfig> = {
       'https://mainnet.infura.io/v3/ba81afa823ed4d3e952c8f1b4be63abb',
     ],
   },
+  [ChainId.arbitrum]: {
+    name: 'Arbitrum',
+    fullName: 'Arbitrum Goerli',
+    symbol: 'ETH',
+    // publicJsonRPCUrl: 'https://mainnet.infura.io/v3/e33605b8ebd345fa914bd4cdfdfb401d',
+    publicJsonRPCUrl: [
+      'https://arb-goerli.g.alchemy.com/v2/MIBofShcVl8idz7iS71832t8moPbdkZc',
+    ],
+  },
 }
 
 export function getNetwork(chainId: ChainId): NetworkConfig {
