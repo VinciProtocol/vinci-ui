@@ -45,6 +45,18 @@ const CHAIN_INFORMATION = new Map<number, ChainInformation | ChainType>([
       testnet: true,
     },
   ],
+  [
+    ChainId.arbitrum,
+    {
+      id: ChainId.arbitrum,
+      nativeCurrency: ETH,
+      type: 'arbitrum',
+      fullName: 'Arbitrum',
+      shortName: 'Arbitrum',
+      explorerUrl: `https://goerli.etherscan.io`,
+      testnet: true,
+    },
+  ],
 ])
 
 /**

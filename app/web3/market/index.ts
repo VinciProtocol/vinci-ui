@@ -44,6 +44,7 @@ export const NFT_ID_12 = 'PUNK'
 
 const getMarketsData = (chainId: ChainId): MarketData => {
   const generateInfo = list[chainId]
+
   if (!generateInfo) throw new Error(`[getMarketsData] error. chainId => ${chainId}`)
 
   const nfts: MarketData['nfts'] = {}
@@ -112,6 +113,7 @@ const getMarketsData = (chainId: ChainId): MarketData => {
 export const MARKETS: Record<number, MarketData> = {
   [ChainId.ethereum]: getMarketsData(ChainId.ethereum),
   [ChainId.goerli]: getMarketsData(ChainId.goerli),
+  [ChainId.arbitrum]: getMarketsData(ChainId.arbitrum),
 }
 export const defaultMarket = MARKETS[ChainId.ethereum]
 export const getMarket = (chainId: ChainId) => MARKETS[chainId] || defaultMarket
